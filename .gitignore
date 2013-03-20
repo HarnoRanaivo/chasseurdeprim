@@ -15,3 +15,11 @@
 *.exe
 *.out
 *.app
+
+# doc, obj and bin directories
+doc/
+obj/
+bin/
+
+# Vim swp files
+*.swp

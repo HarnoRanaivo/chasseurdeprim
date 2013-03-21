@@ -1,10 +1,10 @@
 #include "testliste.h"
 
-const char nom1[] = "abcde\0"
-const char nom12[] = "abcdf\0"
-const char nom2[] = "fghij\0"
-const char nom3[] = "klmno\0"
-const char nom4[] = "pqrst\0"
+char nom1[6] = "abcde\0";
+char nom12[6] = "abcdf\0";
+char nom2[6] = "fghij\0";
+char nom3[6] = "klmno\0";
+char nom4[6] = "pqrst\0";
 
 ListeArete l1 = NULL;
 ListeArete l2 = NULL;
@@ -97,12 +97,27 @@ int add_testliste(void)
         return CU_get_error();
     }
 
-    if (CU_add_test(pSuite, "Test listnouv", test_liste_listnouv) == NULL
-        || CU_add_test(pSuite, "Test listnouv", test_liste_ltaille) == NULL
-        || CU_add_test(pSuite, "Test listnouv", test_liste_lexar) == NULL
-        || CU_add_test(pSuite, "Test listnouv", test_liste_lpoids) == NULL
-        || CU_add_test(pSuite, "Test listnouv", test_liste_lajar) == NULL
-        )
+    if (CU_add_test(pSuite, "test_listnouv", test_liste_listnouv) == NULL)
+    {
+        CU_cleanup_registry();
+        return CU_get_error();
+    }
+    if (CU_add_test(pSuite, "test_ltaille", test_liste_ltaille) == NULL)
+    {
+        CU_cleanup_registry();
+        return CU_get_error();
+    }
+    if (CU_add_test(pSuite, "test_lpoids", test_liste_lpoids) == NULL)
+    {
+        CU_cleanup_registry();
+        return CU_get_error();
+    }
+    if (CU_add_test(pSuite, "test_lajar", test_liste_lajar) == NULL)
+    {
+        CU_cleanup_registry();
+        return CU_get_error();
+    }
+    if (CU_add_test(pSuite, "test_lexar", test_liste_lexar) == NULL)
     {
         CU_cleanup_registry();
         return CU_get_error();

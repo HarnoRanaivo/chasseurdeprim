@@ -9,4 +9,20 @@
 #include "base.h"
 #include "liste.h"
 
+int init_suiteListe(void);
+
+int clean_suiteListe(void);
+
+void test_liste_listnouv(void);
+
+void test_liste_ltaille(void);
+
+void test_liste_lexar(void);
+
+void test_liste_lpoids(void);
+
+void test_liste_lajar(void);
+
+int add_testliste(void);
+
 #endif /* __TESTLISTE_H */

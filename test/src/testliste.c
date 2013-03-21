@@ -40,6 +40,10 @@ int init_suiteListe(void)
 int clean_suiteListe(void)
 {
     free(l1);
+    free(l2);
+    free(l3);
+    free(l4);
+    free(l5);
 
     return 0;
 }

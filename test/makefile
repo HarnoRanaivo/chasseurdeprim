@@ -18,7 +18,7 @@ testliste.o : testliste.c testliste.h base.h liste.h
 testsommet.o : testsommet.c testsommet.h base.h sommet.h
 liste.o : liste.c liste.h sommet.h base.h
 sommet.o : sommet.c sommet.h base.h
-main.o : main.c base.h 
+main.o : main.c base.h testsommet.h testliste.h
 
 %.o : %.c | obj
 	$(CC) $(CFLAGS) -o $(OPATH)$@ -c $< $(IFLAGS)

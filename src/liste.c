@@ -25,16 +25,16 @@ ListeArete lsupar (ListeArete l, Sommet s){
 		ListeArete ln = l;
 		ListeArete ls;
 		
-		if (ln->v == s){
+		if (egalSom(ln->v, s)){
 			l = l->s;
 			free(ln);
 		}
 		else{
-			while (!lest_vide(ln->s) || ln->s->v != s){
+			while (!lest_vide(ln->s) && !egalSom(ln->s->v, s)){
 				ln = ln->s;
 			}
 		
-			if (ln->s->v == s){	
+			if (!lest_vide(ln->s) && egalSom(ln->s->v, s)){	
 				ls = ln->s;	
 				ln->s = ln->s->s;
 				free(ls);
@@ -58,7 +58,7 @@ Bool lexar (ListeArete l, Sommet s){
 }
 
 Ent lpoids(ListeArete l, Sommet s){
-	while (l->v != s)
+	while (!egalSom(l->v, s))
 		l = l->s;
 	return l->poids;
 }

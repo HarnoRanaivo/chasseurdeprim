@@ -11,8 +11,8 @@ ListeArete listnouv(){
 }
 
 ListeArete lajar (ListeArete l, Sommet s, Ent x){
-    l1 = NULL;
-	ListeArete l1 = (ListeArete)MALLOC(l1);
+    ListeArete l1 = NULL;
+	l1 = (ListeArete)MALLOC(l1);
 	l1->poids = x;
 	l1->v = s;
 	l1->s = l;

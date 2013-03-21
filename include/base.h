@@ -55,4 +55,7 @@ OP(Rat)
 
 #undef OP
 
+static inline void* MALLOC (void * p) { return malloc(sizeof(*p)) ; }
+static inline void* MALLOCN (void * p, Nat n) { return malloc(n*sizeof(*p)) ; }
+
 #endif /* __BASE_H */

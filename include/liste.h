@@ -89,3 +89,5 @@ Ent lpoids (ListeArete l, Sommet s);
  * \return Nombre d'arcs de l
  */
 Nat ltaille (ListeArete l);
+
+#endif /* __LISTE_H */

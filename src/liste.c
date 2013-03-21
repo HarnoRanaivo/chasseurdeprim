@@ -11,6 +11,7 @@ ListeArete listnouv(){
 }
 
 ListeArete lajar (ListeArete l, Sommet s, Ent x){
+    l1 = NULL;
 	ListeArete l1 = (ListeArete)MALLOC(l1);
 	l1->poids = x;
 	l1->v = s;
@@ -48,7 +49,7 @@ Bool lest_vide (ListeArete l){ return l==NULL; }
 
 Bool lexar (ListeArete l, Sommet s){
 	while (!lest_vide(l)){
-		if (l->v)
+		if (egalSom(l->v, s))
 			return VRAI;
 		else
 			l = l->s;

@@ -62,6 +62,8 @@ void test_liste_ltaille(void)
 
 void test_liste_lexar(void)
 {
+    CU_ASSERT(lexar(listnouv(), nom1) == FAUX);
+
     CU_ASSERT(lexar(l1, nom1) == VRAI);
     CU_ASSERT(lexar(l1, nom2) == FAUX);
 
@@ -82,9 +84,31 @@ void test_liste_lpoids(void)
 
 void test_liste_lajar(void)
 {
-    l5 = lajar(listnouv(), "azert", 100);
-    CU_ASSERT(ltaille(l5) == 1);
+    l5 = lajar(lajar(listnouv(), "azert", 100), "qsdf", 200);
+    CU_ASSERT(ltaille(l5) == 2);
+    CU_ASSERT(lexar(l5, "azert") == VRAI);
+    CU_ASSERT(lexar(l5, "qsdf") == VRAI);
     CU_ASSERT(lpoids(l5, "azert") == 100);
+    CU_ASSERT(lpoids(l5, "qsdf") == 200);
+}
+
+void test_liste_lsupar(void)
+{
+    l5 = lsupar(l5, "qsdf");
+    CU_ASSERT(ltaille(l5) == 1);
+    CU_ASSERT(lexar(l5, "azert") == VRAI);
+    CU_ASSERT(lexar(l5, "qsdf") == FAUX);
+    CU_ASSERT(lpoids(l5, "azert") == 100);
+
+    l5 = lsupar(l5, "qsdf");
+    CU_ASSERT(ltaille(l5) == 1);
+    CU_ASSERT(lexar(l5, "qsdf") == FAUX);
+    CU_ASSERT(lexar(l5, "azert") == VRAI);
+    CU_ASSERT(lpoids(l5, "azert") == 100);
+
+    l5 = lsupar(l5, "azert");
+    CU_ASSERT(ltaille(l5) == 0);
+    CU_ASSERT(lexar(l5, "azert") == FAUX);
 }
 
 int add_testliste(void)
@@ -97,27 +121,13 @@ int add_testliste(void)
         return CU_get_error();
     }
 
-    if (CU_add_test(pSuite, "test_listnouv", test_liste_listnouv) == NULL)
-    {
-        CU_cleanup_registry();
-        return CU_get_error();
-    }
-    if (CU_add_test(pSuite, "test_ltaille", test_liste_ltaille) == NULL)
-    {
-        CU_cleanup_registry();
-        return CU_get_error();
-    }
-    if (CU_add_test(pSuite, "test_lpoids", test_liste_lpoids) == NULL)
-    {
-        CU_cleanup_registry();
-        return CU_get_error();
-    }
-    if (CU_add_test(pSuite, "test_lajar", test_liste_lajar) == NULL)
-    {
-        CU_cleanup_registry();
-        return CU_get_error();
-    }
-    if (CU_add_test(pSuite, "test_lexar", test_liste_lexar) == NULL)
+    if (CU_add_test(pSuite, "Test listnouv", test_liste_listnouv) == NULL
+        || CU_add_test(pSuite, "Test ltaille", test_liste_ltaille) == NULL
+        || CU_add_test(pSuite, "Test lpoids", test_liste_lpoids) == NULL
+        || CU_add_test(pSuite, "Test lexar", test_liste_lexar) == NULL
+        || CU_add_test(pSuite, "Test lajar", test_liste_lajar) == NULL
+        || CU_add_test(pSuite, "Test lsupar", test_liste_lsupar) == NULL
+        )
     {
         CU_cleanup_registry();
         return CU_get_error();

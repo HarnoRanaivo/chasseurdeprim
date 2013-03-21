@@ -13,6 +13,7 @@ vpath main bin/
 main : main.o | bin
 	$(CC) $(CFLAGS) $(LFLAGS) -o $(BPATH)main $(OPATH)main.o
 
+liste.o : liste.c liste.h base.h sommet.h
 sommet.o : sommet.c sommet.h base.h
 main.o : main.c base.h 
 

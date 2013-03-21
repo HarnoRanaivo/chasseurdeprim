@@ -30,7 +30,7 @@ ListeArete lsupar (ListeArete l, Sommet s){
 			free(ln);
 		}
 		else{
-			while (!lest_vide(ln->s) || !egalSom(ln->s->v, s)){
+			while (!lest_vide(ln->s) && !egalSom(ln->s->v, s)){
 				ln = ln->s;
 			}
 		

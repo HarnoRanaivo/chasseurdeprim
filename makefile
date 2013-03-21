@@ -10,7 +10,7 @@ vpath %.h include/
 vpath %.o obj/
 vpath main bin/
 
-main : main.o | bin
+main : main.o sommet.o liste.o graphe.o | bin
 	$(CC) $(CFLAGS) $(LFLAGS) -o $(BPATH)main $(OPATH)main.o
 
 graphe.o : graphe.c graphe.h liste.h sommet.h base.h

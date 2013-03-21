@@ -8,10 +8,11 @@
 #ifndef __SOMMET_H
 #define __SOMMET_H
 
-#include "base.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+#include "base.h"
 
 /**
  * \typedef Sommet
@@ -26,4 +27,6 @@ typedef Chaine Sommet;
  * \relatesalso Sommet
  * \return VRAI si les sommets sont égaux, FAUX sinon
  */
- Bool egalSom (Sommet a, Sommet b);
+Bool egalSom (Sommet a, Sommet b);
+
+#endif /* __SOMMET_H */

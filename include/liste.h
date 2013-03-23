@@ -108,4 +108,14 @@ ListeArete lliberer(ListeArete l);
  */
 ListeArete lcopie(const ListeArete l);
 
+/**
+ * \fn ListeArete lmod(ListeArete l, const Sommet s, Ent x)
+ * \brief Modifier le poids d'une arête.
+ * \param l (ListeArete)
+ * \param s (Sommet)
+ * \param x Nouveau poids.
+ * \return ListeArete avec l'arête modifiée.
+ */
+ListeArete lmod(ListeArete l, const Sommet s, Ent x);
+
 #endif /* __LISTE_H */

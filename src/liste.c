@@ -75,3 +75,33 @@ Nat ltaille (ListeArete l){
 	
 	return cmpt;
 }
+
+ListeArete lliberer(ListeArete l)
+{
+    ListeArete l0 = NULL;
+
+    while (l != NULL)
+    {
+        l0 = l->s;
+        l->v = libererSommet(l->v);
+        free(l);
+        l = l0;
+    }
+
+    return l;
+}
+
+ListeArete lcopie(const ListeArete l)
+{
+    ListeArete l0 = l;
+    ListeArete copie = listnouv();
+
+    while (l0 != NULL)
+    {
+        copie = lajar(copie, l0->v, l0->poids);
+        l0 = l0->s;
+    }
+
+    return copie;
+
+}

@@ -90,4 +90,22 @@ Ent lpoids (ListeArete l, const Sommet s);
  */
 Nat ltaille (ListeArete l);
 
+/**
+ * \fn ListeArete lliberer(ListeArete l)
+ * \brief Libérer une liste d'arêtes.
+ * \param l (ListeArete)
+ * \relatesalso ListeArete
+ * \return NULL
+ */
+ListeArete lliberer(ListeArete l);
+
+/**
+ * \fn ListeArete lcopie(const ListeArete l)
+ * \brief Copier une liste d'arêtes.
+ * \param l (ListeArete)
+ * \relatesalso ListeArete
+ * \return copie de la liste d'arêtes.
+ */
+ListeArete lcopie(const ListeArete l);
+
 #endif /* __LISTE_H */

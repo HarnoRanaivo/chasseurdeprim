@@ -37,7 +37,6 @@ Graphe gNouv(void);
  * \relatesalso Graphe
  * \param g Graphe où ajouter le sommet.
  * \param s Sommet à ajouter.
- * \pre !gExisteSommet(g, s).
  * \return Graphe
  */
 Graphe gAjoutSommet(Graphe g, const Sommet s);
@@ -49,7 +48,6 @@ Graphe gAjoutSommet(Graphe g, const Sommet s);
  * \param a Éxtrémité de l'arête.
  * \param b Éxtrémité de l'arête.
  * \param p Poids de l'arête.
- * \pre gExisteSommet(g, a) || gExisteSommet(g, b).
  * \return Graphe
  */
 Graphe gAjoutArete(Graphe g, const Sommet a, const Sommet b, Ent p);
@@ -70,7 +68,6 @@ Graphe gSupprimerSommet(Graphe g, const Sommet s);
  * \param g Graphe où supprimer l'arête.
  * \param a Éxtrémité de l'arête.
  * \param b Éxtrémité de l'arête.
- * \pre gExisteSommet(g, a) && gExisteSommet(g, b).
  * \return Graphe
  */
 Graphe gSupprimerArete(Graphe g, const Sommet a, const Sommet b);
@@ -82,7 +79,6 @@ Graphe gSupprimerArete(Graphe g, const Sommet a, const Sommet b);
  * \param a Éxtrémité de l'arête.
  * \param b Éxtrémité de l'arête.
  * \param p Nouveau poids de l'arête.
- * \pre gExisteSommet(g, a) && gExisteSommet(g, b).
  * \return Graphe
  */
 Graphe gModifierArete(Graphe g, const Sommet a, const Sommet b, Ent p);
@@ -164,5 +160,21 @@ Nat gNombreVoisins(const Graphe g, const Sommet s);
  * \return (pointeur vers) Sommet s dans le graphe.
  */
 Graphe gPSommet(const Graphe g, const Sommet s);
+
+/**
+ * \brief Copie d'un graphe.
+ * \relatesalso Graphe
+ * \param g Graphe.
+ * \return Copie du graphe.
+ */
+Graphe gCopie(const Graphe g);
+
+/**
+ * \brief Libération d'un graphe.
+ * \relatesalso Graphe
+ * \param g Graphe.
+ * \return NULL
+ */
+Graphe gLiberer(Graphe g);
 
 #endif /* __GRAPHE_H */

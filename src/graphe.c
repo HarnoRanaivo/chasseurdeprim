@@ -32,9 +32,9 @@ Graphe gAjoutArete(Graphe g, const Sommet a, const Sommet b, Ent p)
 {
     Graphe ga, gb;
 
-    if (!gExisteSommet(g, a) && gExisteSommet(g, b))
+    if (!gExisteSommet(g, a))
         g = gAjoutSommet(g, a);
-    else if (!gExisteSommet(g, b) && gExisteSommet(g, b))
+    if (!gExisteSommet(g, b))
         g = gAjoutSommet(g, b);
 
     ga = gPSommet(g, a);
@@ -53,22 +53,65 @@ static Graphe gPrecedent(const Graphe g, const Sommet s)
     else return gPrecedent(g->suivant, s);
 }
 
-/* TODO. */
-Graphe gSupprimerSommet(Graphe g, const Sommet s);
-
-Graphe gSupprimerArete(Graphe g, const Sommet a, const Sommet b)
+Graphe gSupprimerSommet(Graphe g, const Sommet s)
 {
-    Graphe ga = gPSommet(g, a);
-    Graphe gb = gPSommet(g, b);
+    if (!gAArete(g, s))
+    {
+        Graphe gp = gPrecedent(g, s);
 
-    ga->listeadjacence = lsupar(ga->listeadjacence, b);
-    gb->listeadjacence = lsupar(gb->listeadjacence, a);
+        if (gp == NULL)
+        {
+            g->sommet = libererSommet(s);
+            free(g);
+            g = NULL;
+        }
+        else
+        {
+            Graphe gps = g->suivant->suivant;
+
+            gp->suivant->sommet = libererSommet(gp->suivant->sommet);
+            free(gp->suivant);
+            gp->suivant = gps;
+        }
+    }
 
     return g;
 }
 
-/* TODO. */
-Graphe gModifierArete(Graphe g, const Sommet a, const Sommet b, Ent p);
+Graphe gSupprimerArete(Graphe g, const Sommet a, const Sommet b)
+{
+    if (gExisteSommet(g, a) && gExisteSommet(g, b))
+    {
+        Graphe ga = gPSommet(g, a);
+        Graphe gb = gPSommet(g, b);
+
+        ga->listeadjacence = lsupar(ga->listeadjacence, b);
+        gb->listeadjacence = lsupar(gb->listeadjacence, a);
+    }
+
+    return g;
+}
+
+Graphe gModifierArete(Graphe g, const Sommet a, const Sommet b, Ent p)
+{
+    if (!gExisteSommet(g, a))
+        g = gAjoutSommet(g, a);
+    if (!gExisteSommet(g, b))
+        g = gAjoutSommet(g, b);
+
+    if (!gExisteArete(g, a, b))
+        gAjoutArete(g, a, b, p);
+    else
+    {
+        Graphe ga = gPSommet(g, a);
+        Graphe gb = gPSommet(g, b);
+
+        ga->listeadjacence = lmod(gAdjacenceSommet(g, a), b, p);
+        gb->listeadjacence = lmod(gAdjacenceSommet(g, b), a, p);
+    }
+
+    return g;
+}
 
 Bool gEstVide(const Graphe g)
 {
@@ -129,10 +172,51 @@ Nat gNombreVoisins(const Graphe g, const Sommet s)
 
 Graphe gPSommet(const Graphe g, const Sommet s)
 {
-    if (gEstVide(g))
-        return NULL;
-    else if (egalSom(g->sommet, s))
-        return g;
+    if (gEstVide(g)) return NULL;
+    else if (egalSom(g->sommet, s)) return g;
+    else return gPSommet(g->suivant, s);
+}
+
+static Graphe gCopieSommets(Graphe copie, Graphe g)
+{
+    if (g == NULL) return copie;
+    else return gCopieSommets(gAjoutSommet(copie, g->sommet), g->suivant);
+}
+
+static Graphe gCopieAretes(Graphe copie, Graphe g)
+{
+    Graphe copie0 = copie;
+
+    while (copie0 != NULL)
+    {
+        copie0->listeadjacence = lcopie(g->listeadjacence);
+        copie0 = copie0->suivant;
+        g = g->suivant;
+    }
+
+    return copie;
+}
+
+Graphe gCopie(const Graphe g)
+{
+    Graphe copie = NULL;
+
+    copie = gCopieSommets(copie, g);
+    copie = gCopieAretes(copie, g);
+
+    return copie;
+}
+
+Graphe gLiberer(Graphe g)
+{
+    if (g == NULL) return NULL;
     else
-        return gPSommet(g->suivant, s);
+    {
+        Graphe g0 = g->suivant;
+        g->sommet = libererSommet(g->sommet);
+        g->listeadjacence = lliberer(g->listeadjacence);
+        free(g);
+
+        return gLiberer(g0);
+    }
 }

@@ -27,6 +27,8 @@ void test_liste_lliberer(void);
 
 void test_liste_lcopie(void);
 
+void test_liste_lmod(void);
+
 int add_testliste(void);
 
 #endif /* __TESTLISTE_H */

@@ -131,6 +131,23 @@ void test_liste_lcopie(void)
     CU_ASSERT(lpoids(l8, "azer") == 1);
     CU_ASSERT(lpoids(l8, "qsdf") == 2);
     CU_ASSERT(lpoids(l8, "wxcv") == 3);
+
+    l7 = lliberer(l7);
+    l8 = lliberer(l8);
+}
+
+void test_liste_lmod(void)
+{
+    ListeArete l9 = lajar(lajar(lajar(listnouv(), "azer", 1), "qsdf", 2), "wxcv", 3);
+    l9 = lmod(l9, "qsdf", 42);
+
+    CU_ASSERT(ltaille(l9) == 3);
+    CU_ASSERT(lexar(l9, "azer") == VRAI);
+    CU_ASSERT(lexar(l9, "qsdf") == VRAI);
+    CU_ASSERT(lexar(l9, "wxcv") == VRAI);
+    CU_ASSERT(lpoids(l9, "azer") == 1);
+    CU_ASSERT(lpoids(l9, "qsdf") == 42);
+    CU_ASSERT(lpoids(l9, "wxcv") == 3);
 }
 
 int add_testliste(void)
@@ -151,6 +168,7 @@ int add_testliste(void)
         || CU_add_test(pSuite, "Test lsupar", test_liste_lsupar) == NULL
         || CU_add_test(pSuite, "Test lliberer", test_liste_lliberer) == NULL
         || CU_add_test(pSuite, "Test lcopie", test_liste_lcopie) == NULL
+        || CU_add_test(pSuite, "Test lmod", test_liste_lmod) == NULL
         )
     {
         CU_cleanup_registry();

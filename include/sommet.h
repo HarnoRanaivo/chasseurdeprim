@@ -29,4 +29,12 @@ typedef Chaine Sommet;
  */
 Bool egalSom (Sommet a, Sommet b);
 
+/**
+ * \brief Retourne une copie de s, allouée dynamiquement.
+ * \param s Sommet à copier.
+ * \relatesalso Sommet
+ * \return (pointeur vers) la copie de s, NULL en cas d'erreur.
+ */
+Sommet copieSommet(Sommet s);
+
 #endif /* __SOMMET_H */

@@ -105,3 +105,16 @@ ListeArete lcopie(const ListeArete l)
     return copie;
 
 }
+
+ListeArete lmod(ListeArete l, const Sommet s, Ent x)
+{
+    ListeArete l0 = l;
+
+    while (l0 != NULL && !egalSom(l0->v, s))
+        l0 = l0->s;
+    
+    if (egalSom(l0->v, s))
+        l0->poids = x;
+
+    return l;
+}

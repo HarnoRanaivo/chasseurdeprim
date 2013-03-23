@@ -14,7 +14,7 @@ ListeArete lajar (ListeArete l, Sommet s, Ent x){
     ListeArete l1 = NULL;
 	l1 = (ListeArete)MALLOC(l1);
 	l1->poids = x;
-	l1->v = s;
+	l1->v = copieSommet(s);
 	l1->s = l;
 	
 	return l1;
@@ -27,6 +27,7 @@ ListeArete lsupar (ListeArete l, Sommet s){
 		
 		if (egalSom(ln->v, s)){
 			l = l->s;
+			ln->v = libererSommet(ln->v);
 			free(ln);
 		}
 		else{
@@ -37,6 +38,7 @@ ListeArete lsupar (ListeArete l, Sommet s){
 			if (!lest_vide(ln->s) && egalSom(ln->s->v, s)){	
 				ls = ln->s;	
 				ln->s = ln->s->s;
+				ls->v = libererSommet(ls->v);
 				free(ls);
 			}
 		

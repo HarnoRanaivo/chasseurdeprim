@@ -1,6 +1,7 @@
 #include "testsommet.h"
 
 Sommet a;
+Sommet b;
 
 int init_suiteSommet(void)
 {
@@ -29,6 +30,19 @@ void test_sommet_copieSommet(void)
     CU_ASSERT(egalSom(a, "abcdf") == FAUX);
 }
 
+void test_sommet_modSommet(void)
+{
+    Sommet c;
+    b = copieSommet("abcde");
+    c = modSommet(b, "fghijkl");
+    if (c != NULL)
+    {
+        CU_ASSERT(egalSom(c, "abcde") == FAUX);
+        CU_ASSERT(egalSom(c, "fghijkl") == VRAI);
+        CU_ASSERT(b == NULL);
+    }
+}
+
 int add_testsommets(void)
 {
     CU_pSuite pSuite = NULL;
@@ -41,6 +55,7 @@ int add_testsommets(void)
 
     if (CU_add_test(pSuite, "test_egalSom", test_sommet_egalSom) == NULL
         || CU_add_test(pSuite, "Test copieSommet", test_sommet_copieSommet) == NULL
+        || CU_add_test(pSuite, "Test modSommet", test_sommet_modSommet) == NULL
         )
     {
         CU_cleanup_registry();

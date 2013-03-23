@@ -39,7 +39,7 @@ ListeArete listnouv ();
  * \relatesalso ListeArete
  * \return ListeArete + Sommet s
  */
-ListeArete lajar (ListeArete l, Sommet s, Ent x);
+ListeArete lajar (ListeArete l, const Sommet s, Ent x);
 
 /**
  * \fn ListeArete lsupar (ListeArete l, Sommet s)
@@ -49,7 +49,7 @@ ListeArete lajar (ListeArete l, Sommet s, Ent x);
  * \relatesalso ListeArete
  * \return l sans l'arête s
  */
-ListeArete lsupar (ListeArete l, Sommet s);
+ListeArete lsupar (ListeArete l, const Sommet s);
 
 /**
  * \fn Bool lest_vide (ListeArete l)
@@ -68,7 +68,7 @@ Bool lest_vide (ListeArete l);
  * \relatesalso ListeArete
  * \return VRAI si l'arête existe, FAUX sinon
  */
-Bool lexar (ListeArete l, Sommet s);
+Bool lexar (ListeArete l, const Sommet s);
 
 /**
  * \fn Ent lpoids (ListeArete l, Sommet s)
@@ -79,7 +79,7 @@ Bool lexar (ListeArete l, Sommet s);
  * \relatesalso ListeArete
  * \return le poids de l'arête
  */
-Ent lpoids (ListeArete l, Sommet s);
+Ent lpoids (ListeArete l, const Sommet s);
 
 /**
  * \fn Nat ltaille (ListeArete l)
@@ -89,5 +89,23 @@ Ent lpoids (ListeArete l, Sommet s);
  * \return Nombre d'arcs de l
  */
 Nat ltaille (ListeArete l);
+
+/**
+ * \fn ListeArete lliberer(ListeArete l)
+ * \brief Libérer une liste d'arêtes.
+ * \param l (ListeArete)
+ * \relatesalso ListeArete
+ * \return NULL
+ */
+ListeArete lliberer(ListeArete l);
+
+/**
+ * \fn ListeArete lcopie(const ListeArete l)
+ * \brief Copier une liste d'arêtes.
+ * \param l (ListeArete)
+ * \relatesalso ListeArete
+ * \return copie de la liste d'arêtes.
+ */
+ListeArete lcopie(const ListeArete l);
 
 #endif /* __LISTE_H */

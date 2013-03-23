@@ -6,14 +6,14 @@
 
 #include "sommet.h"
 
-Bool egalSom (Sommet a, Sommet b){
+Bool egalSom (const Sommet a, const Sommet b){
 	if (strcmp(a,b) == 0)
 		return VRAI;
 	else
 		return FAUX;
 }
 
-Sommet copieSommet(Sommet s)
+Sommet copieSommet(const Sommet s)
 {
     Sommet copie = NULL;
 
@@ -22,4 +22,24 @@ Sommet copieSommet(Sommet s)
         copie = strcpy(copie, s);
 
     return copie;
+}
+
+Sommet libererSommet(Sommet s)
+{
+    free(s);
+    return NULL;
+}
+
+Sommet modSommet(Sommet s, const Sommet t)
+{
+    Sommet nouveau = NULL;
+
+    nouveau = copieSommet(t);
+    if (nouveau != NULL)
+    {
+        libererSommet(s);
+        nouveau = copieSommet(t);
+    }
+
+    return nouveau;
 }

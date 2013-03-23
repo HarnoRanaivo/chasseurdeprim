@@ -10,7 +10,7 @@ ListeArete listnouv(){
 	return (ListeArete)NULL;
 }
 
-ListeArete lajar (ListeArete l, Sommet s, Ent x){
+ListeArete lajar (ListeArete l, const Sommet s, Ent x){
     ListeArete l1 = NULL;
 	l1 = (ListeArete)MALLOC(l1);
 	l1->poids = x;
@@ -20,7 +20,7 @@ ListeArete lajar (ListeArete l, Sommet s, Ent x){
 	return l1;
 }
 
-ListeArete lsupar (ListeArete l, Sommet s){
+ListeArete lsupar (ListeArete l, const Sommet s){
 	if (!lest_vide(l)){
 		ListeArete ln = l;
 		ListeArete ls;
@@ -49,7 +49,7 @@ ListeArete lsupar (ListeArete l, Sommet s){
 
 Bool lest_vide (ListeArete l){ return l==NULL; }
 
-Bool lexar (ListeArete l, Sommet s){
+Bool lexar (ListeArete l, const Sommet s){
 	while (!lest_vide(l)){
 		if (egalSom(l->v, s))
 			return VRAI;
@@ -59,7 +59,7 @@ Bool lexar (ListeArete l, Sommet s){
 	return FAUX;
 }
 
-Ent lpoids(ListeArete l, Sommet s){
+Ent lpoids(ListeArete l, const Sommet s){
 	while (!egalSom(l->v, s))
 		l = l->s;
 	return l->poids;

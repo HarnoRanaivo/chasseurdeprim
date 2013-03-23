@@ -118,3 +118,21 @@ ListeArete lmod(ListeArete l, const Sommet s, Ent x)
 
     return l;
 }
+
+Bool lega(ListeArete l, ListeArete m)
+{
+    if (ltaille(l) != ltaille(m))
+        return FAUX;
+    else
+    {
+        while (m != NULL)
+        {
+            if (!lexar(l, m->v) || lpoids(l, m->v) != m->poids)
+                return FAUX;
+            else
+                m = m->s;
+        }
+
+        return VRAI;
+    }
+}

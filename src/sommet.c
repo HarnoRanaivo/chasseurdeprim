@@ -12,3 +12,14 @@ Bool egalSom (Sommet a, Sommet b){
 	else
 		return FAUX;
 }
+
+Sommet copieSommet(Sommet s)
+{
+    Sommet copie = NULL;
+
+    copie = MALLOCN(copie, strlen(s) + 1);
+    if (copie != NULL)
+        copie = strcpy(copie, s);
+
+    return copie;
+}

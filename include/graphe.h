@@ -40,7 +40,7 @@ Graphe gNouv(void);
  * \pre !gExisteSommet(g, s).
  * \return Graphe
  */
-Graphe gAjoutSommet(Graphe g, Sommet s);
+Graphe gAjoutSommet(Graphe g, const Sommet s);
 
 /**
  * \brief Ajout d'une arête dans un graphe.
@@ -52,7 +52,7 @@ Graphe gAjoutSommet(Graphe g, Sommet s);
  * \pre gExisteSommet(g, a) || gExisteSommet(g, b).
  * \return Graphe
  */
-Graphe gAjoutArete(Graphe g, Sommet a, Sommet b, Ent p);
+Graphe gAjoutArete(Graphe g, const Sommet a, const Sommet b, Ent p);
 
 /**
  * \brief Suppression d'un sommet dans un graphe.
@@ -62,7 +62,7 @@ Graphe gAjoutArete(Graphe g, Sommet a, Sommet b, Ent p);
  * \pre !gAArete(g, s).
  * \return Graphe
  */
-Graphe gSupprimerSommet(Graphe g, Sommet s);
+Graphe gSupprimerSommet(Graphe g, const Sommet s);
 
 /**
  * \brief Suppression d'une arête dans un graphe.
@@ -73,7 +73,7 @@ Graphe gSupprimerSommet(Graphe g, Sommet s);
  * \pre gExisteSommet(g, a) && gExisteSommet(g, b).
  * \return Graphe
  */
-Graphe gSupprimerArete(Graphe g, Sommet a, Sommet b);
+Graphe gSupprimerArete(Graphe g, const Sommet a, const Sommet b);
 
 /**
  * \brief Modification d'une arête dans un graphe.
@@ -85,7 +85,7 @@ Graphe gSupprimerArete(Graphe g, Sommet a, Sommet b);
  * \pre gExisteSommet(g, a) && gExisteSommet(g, b).
  * \return Graphe
  */
-Graphe gModifierArete(Graphe g, Sommet a, Sommet b, Ent p);
+Graphe gModifierArete(Graphe g, const Sommet a, const Sommet b, Ent p);
 
 /**
  * \brief Test de vacuité d'un graphe.
@@ -93,7 +93,7 @@ Graphe gModifierArete(Graphe g, Sommet a, Sommet b, Ent p);
  * \param g Graphe.
  * \return (booléen) VRAI si le graphe est vide, FAUX sinon.
  */
-Bool gEstVide(Graphe g);
+Bool gEstVide(const Graphe g);
 
 /**
  * \brief Test d'existence d'un sommet dans un graphe.
@@ -102,16 +102,16 @@ Bool gEstVide(Graphe g);
  * \param s Sommet.
  * \return (booléen) VRAI si le sommet est dans le graphe, FAUX sinon.
  */
-Bool gExisteSommet(Graphe g, Sommet s);
+Bool gExisteSommet(const Graphe g, const Sommet s);
 
 /**
- * \brief Test d'existence d'un sommet dans un graphe.
+ * \brief Test d'existence de voisins d'un sommet dans un graphe.
  * \relatesalso Graphe
  * \param g Graphe.
  * \param s Sommet.
  * \return (booléen) VRAI si le sommet est dans le graphe, FAUX sinon.
  */
-Bool gAArete(Graphe g, Sommet s);
+Bool gAArete(const Graphe g, const Sommet s);
 
 /**
  * \brief Test d'existence d'une arete dans un graphe.
@@ -121,7 +121,7 @@ Bool gAArete(Graphe g, Sommet s);
  * \param b Sommet.
  * \return (booléen) VRAI si l'arête est dans le graphe, FAUX sinon.
  */
-Bool gExisteArete(Graphe g, Sommet a, Sommet b);
+Bool gExisteArete(const Graphe g, const Sommet a, const Sommet b);
 
 /**
  * \brief Liste d'adjacence d'un sommet.
@@ -131,7 +131,7 @@ Bool gExisteArete(Graphe g, Sommet a, Sommet b);
  * \param s Sommet.
  * \return (booléen) VRAI si le sommet est dans le graphe, FAUX sinon.
  */
-ListeArete gAdjacenceSommet(Graphe g, Sommet s);
+ListeArete gAdjacenceSommet(const Graphe g, const Sommet s);
 
 /**
  * \brief Nombre de sommets dans un graphe.
@@ -139,7 +139,7 @@ ListeArete gAdjacenceSommet(Graphe g, Sommet s);
  * \param g Graphe.
  * \return Nombre de sommets dans un graphe.
  */
-Nat gNombreSommets(Graphe g);
+Nat gNombreSommets(const Graphe g);
 
 /**
  * \brief Nombre d'arêtes dans un graphe.
@@ -147,7 +147,7 @@ Nat gNombreSommets(Graphe g);
  * \param g Graphe.
  * \return Nombre d'arêtes dans un graphe.
  */
-Nat gNombreAretes(Graphe g);
+Nat gNombreAretes(const Graphe g);
 
 /**
  * \brief Nombre de voisins d'un sommet.
@@ -155,7 +155,7 @@ Nat gNombreAretes(Graphe g);
  * \param g Graphe.
  * \return Nombre de voisins d'un sommet.
  */
-Nat gNombreVoisins(Graphe g, Sommet s);
+Nat gNombreVoisins(const Graphe g, const Sommet s);
 
 /**
  * \brief Obtenir Un sommet d'un graphe.
@@ -163,6 +163,6 @@ Nat gNombreVoisins(Graphe g, Sommet s);
  * \param g Graphe.
  * \return (pointeur vers) Sommet s dans le graphe.
  */
-Graphe gPSommet(Graphe g, Sommet s);
+Graphe gPSommet(const Graphe g, const Sommet s);
 
 #endif /* __GRAPHE_H */

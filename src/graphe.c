@@ -10,7 +10,7 @@ Graphe gNouv(void)
     return NULL;
 }
 
-Graphe gAjoutSommet(Graphe g, Sommet s)
+Graphe gAjoutSommet(Graphe g, const Sommet s)
 {
     if (!gExisteSommet(g, s))
     {
@@ -18,7 +18,7 @@ Graphe gAjoutSommet(Graphe g, Sommet s)
         g0 = MALLOC(g0);
         if (g0 != NULL)
         {
-            g0->sommet = s;
+            g0->sommet = copieSommet(s);
             g0->listeadjacence = listnouv();
             g0->suivant = g;
             g = g0;
@@ -28,27 +28,24 @@ Graphe gAjoutSommet(Graphe g, Sommet s)
     return g;
 }
 
-Graphe gAjoutArete(Graphe g, Sommet a, Sommet b, Ent p)
+Graphe gAjoutArete(Graphe g, const Sommet a, const Sommet b, Ent p)
 {
-    if (!gExisteArete(g, a, b))
-    {
-        Graphe ga, gb;
+    Graphe ga, gb;
 
-        if (!gExisteSommet(g, a) && gExisteSommet(g, b))
-            g = gAjoutSommet(g, a);
-        else if (!gExisteSommet(g, b) && gExisteSommet(g, b))
-            g = gAjoutSommet(g, b);
+    if (!gExisteSommet(g, a) && gExisteSommet(g, b))
+        g = gAjoutSommet(g, a);
+    else if (!gExisteSommet(g, b) && gExisteSommet(g, b))
+        g = gAjoutSommet(g, b);
 
-        ga = gPSommet(g, a);
-        ga->listeadjacence = lajar(ga->listeadjacence, b, p);
-        gb = gPSommet(g, b);
-        gb->listeadjacence = lajar(gb->listeadjacence, a, p);
-    }
+    ga = gPSommet(g, a);
+    ga->listeadjacence = lajar(ga->listeadjacence, b, p);
+    gb = gPSommet(g, b);
+    gb->listeadjacence = lajar(gb->listeadjacence, a, p);
 
     return g;
 }
 
-static Graphe gPrecedent(Graphe g, Sommet s)
+static Graphe gPrecedent(const Graphe g, const Sommet s)
 {
     if (gEstVide(g)) return NULL;
     else if (gEstVide(g->suivant)) return NULL;
@@ -57,9 +54,9 @@ static Graphe gPrecedent(Graphe g, Sommet s)
 }
 
 /* TODO. */
-Graphe gSupprimerSommet(Graphe g, Sommet s);
+Graphe gSupprimerSommet(Graphe g, const Sommet s);
 
-Graphe gSupprimerArete(Graphe g, Sommet a, Sommet b)
+Graphe gSupprimerArete(Graphe g, const Sommet a, const Sommet b)
 {
     Graphe ga = gPSommet(g, a);
     Graphe gb = gPSommet(g, b);
@@ -71,66 +68,66 @@ Graphe gSupprimerArete(Graphe g, Sommet a, Sommet b)
 }
 
 /* TODO. */
-Graphe gModifierArete(Graphe g, Sommet a, Sommet b, Ent p);
+Graphe gModifierArete(Graphe g, const Sommet a, const Sommet b, Ent p);
 
-Bool gEstVide(Graphe g)
+Bool gEstVide(const Graphe g)
 {
     return g == NULL;
 }
 
-Bool gExisteSommet(Graphe g, Sommet s)
+Bool gExisteSommet(const Graphe g, const Sommet s)
 {
     if (gEstVide(g)) return FAUX;
     else if (egalSom(g->sommet, s)) return VRAI;
     else return gExisteSommet(g->suivant, s);
 }
 
-Bool gAArete(Graphe g, Sommet s)
+Bool gAArete(const Graphe g, const Sommet s)
 {
     return !lest_vide(gAdjacenceSommet(g, s));
 }
 
-Bool gExisteArete(Graphe g, Sommet a, Sommet b)
+Bool gExisteArete(const Graphe g, const Sommet a, const Sommet b)
 {
     return lexar(gAdjacenceSommet(g, a), b);
 }
 
-ListeArete gAdjacenceSommet(Graphe g, Sommet s)
+ListeArete gAdjacenceSommet(const Graphe g, const Sommet s)
 {
     Graphe g0 = gPSommet(g, s);
     return g0->listeadjacence;
 }
 
 /* Fonction auxiliaire pour que la récursivité soit terminale. */
-static Nat gNombreSommetsAux(Graphe g, Nat n)
+static Nat gNombreSommetsAux(const Graphe g, Nat n)
 {
     if (gEstVide(g)) return n;
     else return gNombreSommetsAux(g->suivant, n+1);
 }
 
-Nat gNombreSommets(Graphe g)
+Nat gNombreSommets(const Graphe g)
 {
     return gNombreSommetsAux(g, 0);
 }
 
 /* Fonction auxiliaire pour que la récursivité soit terminale. */
-static Nat gNombreAretesAux(Graphe g, Nat n)
+static Nat gNombreAretesAux(const Graphe g, Nat n)
 {
     if (gEstVide(g)) return n;
     else return gNombreAretesAux(g->suivant, n + ltaille(g->listeadjacence));
 }
 
-Nat gNombreAretes(Graphe g)
+Nat gNombreAretes(const Graphe g)
 {
     return gNombreAretesAux(g, 0) / 2;
 }
 
-Nat gNombreVoisins(Graphe g, Sommet s)
+Nat gNombreVoisins(const Graphe g, const Sommet s)
 {
     return ltaille(gAdjacenceSommet(g, s));
 }
 
-Graphe gPSommet(Graphe g, Sommet s)
+Graphe gPSommet(const Graphe g, const Sommet s)
 {
     if (gEstVide(g))
         return NULL;

@@ -148,6 +148,31 @@ void test_liste_lmod(void)
     CU_ASSERT(lpoids(l9, "azer") == 1);
     CU_ASSERT(lpoids(l9, "qsdf") == 42);
     CU_ASSERT(lpoids(l9, "wxcv") == 3);
+
+    l9 = lliberer(l9);
+}
+
+void test_liste_lega(void)
+{
+    ListeArete l10 = lajar(lajar(lajar(listnouv(), "azer", 1), "qsdf", 2), "wxcv", 3);
+    ListeArete l11 = lajar(lajar(lajar(listnouv(), "qsdf", 2), "wxcv", 3), "azer", 1);
+    ListeArete l12 = lajar(lajar(lajar(listnouv(), "azer", 1), "qsdf", 2), "wxcv", 4);
+    ListeArete l13 = lajar(lajar(lajar(listnouv(), "azer", 1), "qsdf", 2), "uiop", 3);
+    ListeArete l14 = lajar(lajar(lajar(lajar(listnouv(), "azer", 1), "qsdf", 2), "wxcv", 3), "uiop", 4);
+    ListeArete l15 = lajar(lajar(listnouv(), "azer", 1), "qsdf", 2);
+
+    CU_ASSERT(lega(l10, l11) == VRAI);
+    CU_ASSERT(lega(l10, l12) == FAUX);
+    CU_ASSERT(lega(l10, l13) == FAUX);
+    CU_ASSERT(lega(l10, l14) == FAUX);
+    CU_ASSERT(lega(l10, l15) == FAUX);
+
+    l10 = lliberer(l10);
+    l11 = lliberer(l11);
+    l12 = lliberer(l12);
+    l13 = lliberer(l13);
+    l14 = lliberer(l14);
+    l15 = lliberer(l15);
 }
 
 int add_testliste(void)
@@ -169,6 +194,7 @@ int add_testliste(void)
         || CU_add_test(pSuite, "Test lliberer", test_liste_lliberer) == NULL
         || CU_add_test(pSuite, "Test lcopie", test_liste_lcopie) == NULL
         || CU_add_test(pSuite, "Test lmod", test_liste_lmod) == NULL
+        || CU_add_test(pSuite, "Test lega", test_liste_lega) == NULL
         )
     {
         CU_cleanup_registry();

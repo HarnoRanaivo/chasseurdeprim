@@ -118,4 +118,13 @@ ListeArete lcopie(const ListeArete l);
  */
 ListeArete lmod(ListeArete l, const Sommet s, Ent x);
 
+/**
+ * \fn Bool lega(ListeArete l, ListeArete m)
+ * \brief Teste l'égalité de deux listes d'arêtes
+ * \param l (ListeArete)
+ * \param m (ListeArete)
+ * \return VRAI si les listes sont égales, FAUX sinon.
+ */
+Bool lega(ListeArete l, ListeArete m);
+
 #endif /* __LISTE_H */

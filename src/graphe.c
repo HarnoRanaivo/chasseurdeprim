@@ -177,6 +177,15 @@ Graphe gPSommet(const Graphe g, const Sommet s)
     else return gPSommet(g->suivant, s);
 }
 
+Bool gEgal(const Graphe g, const Graphe h)
+{
+    if (gNombreSommets(g) != gNombreSommets(h) || gNombreAretes(g) != gNombreAretes(h))
+        return FAUX;
+    else
+        /* TODO !!! */
+        return VRAI;
+}
+
 static Graphe gCopieSommets(Graphe copie, Graphe g)
 {
     if (g == NULL) return copie;

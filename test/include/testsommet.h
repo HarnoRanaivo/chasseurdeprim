@@ -15,6 +15,10 @@ int clean_suiteSommet(void);
 
 void test_sommet_egalSom(void);
 
+void test_sommet_copieSommet(void);
+
+void test_sommet_modSommet(void);
+
 int add_testsommets(void);
 
 #endif /* __TESTSOMMET_H */

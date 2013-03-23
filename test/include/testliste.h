@@ -23,6 +23,10 @@ void test_liste_lpoids(void);
 
 void test_liste_lajar(void);
 
+void test_liste_lliberer(void);
+
+void test_liste_lcopie(void);
+
 int add_testliste(void);
 
 #endif /* __TESTLISTE_H */

@@ -38,6 +38,7 @@ Sommet modSommet(Sommet s, const Sommet t)
     if (nouveau != NULL)
     {
         libererSommet(s);
+        s = NULL;
         nouveau = copieSommet(t);
     }
 

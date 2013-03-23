@@ -39,7 +39,6 @@ void test_sommet_modSommet(void)
     {
         CU_ASSERT(egalSom(c, "abcde") == FAUX);
         CU_ASSERT(egalSom(c, "fghijkl") == VRAI);
-        CU_ASSERT(b == NULL);
     }
 }
 

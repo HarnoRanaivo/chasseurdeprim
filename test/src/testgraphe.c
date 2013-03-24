@@ -1,16 +1,16 @@
 #include "testgraphe.h"
 
 /* Variables globales. */
-Graphe g0 = NULL;
-Graphe g1 = NULL;
-Graphe g2 = NULL;
-Graphe g3 = NULL;
-Graphe g4 = NULL;
-Graphe g5 = NULL;
-ListeArete l2 = NULL;
-ListeArete l3 = NULL;
-ListeArete l4 = NULL;
-ListeArete l5 = NULL;
+static Graphe g0 = NULL;
+static Graphe g1 = NULL;
+static Graphe g2 = NULL;
+static Graphe g3 = NULL;
+static Graphe g4 = NULL;
+static Graphe g5 = NULL;
+static ListeArete l2 = NULL;
+static ListeArete l3 = NULL;
+static ListeArete l4 = NULL;
+static ListeArete l5 = NULL;
 
 int init_suiteGraphe(void)
 {
@@ -20,7 +20,7 @@ int init_suiteGraphe(void)
     g1->listeadjacence = listnouv();
     g1->suivant = NULL;
 
-    /* Pour tester gExisteSommet. */
+    /* Pour tester les sélecteurs. */
     g2 = MALLOC(g2);
     g3 = MALLOC(g3);
     g4 = MALLOC(g4);
@@ -42,11 +42,27 @@ int init_suiteGraphe(void)
     g3->listeadjacence = l3;
     g2->listeadjacence = l2;
 
+
     return 0;
 }
 
 int clean_suiteGraphe(void)
 {
+    g1->sommet = libererSommet(g1->sommet);
+    g2->sommet = libererSommet(g2->sommet);
+    g3->sommet = libererSommet(g3->sommet);
+    g4->sommet = libererSommet(g4->sommet);
+    g5->sommet = libererSommet(g5->sommet);
+    l2 = lliberer(l2);
+    l3 = lliberer(l3);
+    l4 = lliberer(l4);
+    l5 = lliberer(l5);
+    free(g1);
+    free(g2);
+    free(g3);
+    free(g4);
+    free(g5);
+
     return 0;
 }
 
@@ -91,7 +107,7 @@ void test_graphe_gExisteSommet(void)
 
 void test_graphe_gAArete(void)
 {
-    CU_ASSERT(gAArete(g5 "azer") == VRAI);
+    CU_ASSERT(gAArete(g5, "azer") == VRAI);
     CU_ASSERT(gAArete(g5, "wxcv") == VRAI);
     CU_ASSERT(gAArete(g5, "qsdf") == VRAI);
     CU_ASSERT(gAArete(g5, "uiop") == FAUX);
@@ -119,11 +135,30 @@ void test_graphe_gAdjacenceSommet(void)
     CU_ASSERT(lega(gAdjacenceSommet(g5, "hjkl"), l2) == FAUX);
 }
 
-void test_graphe_gNombreSommets(void);
+void test_graphe_gNombreSommets(void)
+{
+    CU_ASSERT(gNombreSommets(g0) == 0);
+    CU_ASSERT(gNombreSommets(g1) == 1);
+    CU_ASSERT(gNombreSommets(g2) == 1);
+    CU_ASSERT(gNombreSommets(g3) == 2);
+    CU_ASSERT(gNombreSommets(g4) == 3);
+    CU_ASSERT(gNombreSommets(g5) == 4);
+}
 
-void test_graphe_gNombreAretes(void);
+void test_graphe_gNombreAretes(void)
+{
+    CU_ASSERT(gNombreAretes(g0) == 0);
+    CU_ASSERT(gNombreAretes(g1) == 0);
+    CU_ASSERT(gNombreAretes(g5) == 2);
+}
 
-void test_graphe_gNombreVoisins(void);
+void test_graphe_gNombreVoisins(void)
+{
+    CU_ASSERT(gNombreVoisins(g5, "azer") == 1);
+    CU_ASSERT(gNombreVoisins(g5, "qsdf") == 2);
+    CU_ASSERT(gNombreVoisins(g5, "wxcv") == 1);
+    CU_ASSERT(gNombreVoisins(g5, "uiop") == 0);
+}
 
 void test_graphe_gPSommet(void)
 {
@@ -185,7 +220,19 @@ int add_testgraphe(void)
         return CU_get_error();
     }
 
+    /* gPSommet est utilisé par gAdjacenceSommet qui est utilisé par gAArete,
+     * gExisteArete et gNombreVoisins. À tester dans cet ordre !
+     */
     if (CU_add_test(pSuite, "Test gNouv", test_graphe_gNouv) == NULL
+        || CU_add_test(pSuite, "Test gEstVide", test_graphe_gEstVide) == NULL
+        || CU_add_test(pSuite, "Test gExisteSommet", test_graphe_gExisteSommet) == NULL
+        || CU_add_test(pSuite, "Test gPSommet", test_graphe_gPSommet) == NULL
+        || CU_add_test(pSuite, "Test gAdjacenceSommet", test_graphe_gAdjacenceSommet) == NULL
+        || CU_add_test(pSuite, "Test gAArete", test_graphe_gAArete) == NULL
+        || CU_add_test(pSuite, "Test gExisteArete", test_graphe_gExisteArete) == NULL
+        || CU_add_test(pSuite, "Test gNombreVoisins", test_graphe_gNombreVoisins) == NULL
+        || CU_add_test(pSuite, "Test gNombreSommets", test_graphe_gNombreSommets) == NULL
+        || CU_add_test(pSuite, "Test gNombreAretes", test_graphe_gNombreAretes) == NULL
         )
     {
         CU_cleanup_registry();

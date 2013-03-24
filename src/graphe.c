@@ -66,13 +66,13 @@ Graphe gSupprimerSommet(Graphe g, const Sommet s)
         {
             while (!lest_vide(g->listeadjacence))
                 g = gSupprimerArete(g, s, g->listeadjacence->v);
-            g->sommet = libererSommet(s);
+            g->sommet = libererSommet(g->sommet);
             free(g);
             g = NULL;
         }
         else
         {
-            Graphe gps = g->suivant->suivant;
+            Graphe gps = gp->suivant->suivant;
 
             while (!lest_vide(gp->listeadjacence))
                 g = gSupprimerArete(g, s, g->listeadjacence->v);

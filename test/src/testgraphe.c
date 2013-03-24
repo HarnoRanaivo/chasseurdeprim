@@ -12,6 +12,7 @@ static ListeArete l3 = NULL;
 static ListeArete l4 = NULL;
 static ListeArete l5 = NULL;
 static Graphe g6 = NULL;
+static Graphe g7 = NULL;
 
 int init_suiteGraphe(void)
 {
@@ -46,7 +47,7 @@ int init_suiteGraphe(void)
     /* Pour tester les générateurs. */
     g6 = gAjoutSommet(gAjoutSommet(gNouv(), "azer"), "qsdf");
     g7 = gAjoutSommet(gAjoutSommet(gAjoutSommet(gAjoutSommet(gNouv(), "azer"), "qsdf"), "wxcv"), "uiop");
-    g7 = gAjoutArete(gAjoutArete(gAjoutArete(g6, "azer", "wxcv"), "azer", "azer"), "qsdf", "azer");
+    g7 = gAjoutArete(gAjoutArete(gAjoutArete(g6, "azer", "wxcv", 1), "azer", "azer", 2), "qsdf", "azer", 3);
 
 
     return 0;
@@ -69,6 +70,7 @@ int clean_suiteGraphe(void)
     free(g4);
     free(g5);
     g6 = gLiberer(g6);
+    g7 = gLiberer(g7);
 
     return 0;
 }
@@ -262,6 +264,8 @@ int add_testgraphe(void)
         || CU_add_test(pSuite, "Test gNombreVoisins", test_graphe_gNombreVoisins) == NULL
         || CU_add_test(pSuite, "Test gNombreSommets", test_graphe_gNombreSommets) == NULL
         || CU_add_test(pSuite, "Test gNombreAretes", test_graphe_gNombreAretes) == NULL
+        || CU_add_test(pSuite, "Test gAjoutSommet", test_graphe_gAjoutSommet) == NULL
+        || CU_add_test(pSuite, "Test gAjoutArete", test_graphe_gAjoutArete) == NULL
         )
     {
         CU_cleanup_registry();

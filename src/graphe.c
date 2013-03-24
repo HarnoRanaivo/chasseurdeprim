@@ -58,20 +58,24 @@ static Graphe gPrecedent(const Graphe g, const Sommet s)
 
 Graphe gSupprimerSommet(Graphe g, const Sommet s)
 {
-    if (!gEstVide(g) && gExisteSommet(g, s) && !gAArete(g, s))
+    if (!gEstVide(g) && gExisteSommet(g, s))
     {
         Graphe gp = gPrecedent(g, s);
 
         if (gp == NULL)
         {
-            g->sommet = libererSommet(s);
+            while (!lest_vide(g->listeadjacence))
+                g = gSupprimerArete(g, s, g->listeadjacence->v);
+            g->sommet = libererSommet(g->sommet);
             free(g);
             g = NULL;
         }
         else
         {
-            Graphe gps = g->suivant->suivant;
+            Graphe gps = gp->suivant->suivant;
 
+            while (!lest_vide(gp->suivant->listeadjacence))
+                g = gSupprimerArete(g, s, gp->suivant->listeadjacence->v);
             gp->suivant->sommet = libererSommet(gp->suivant->sommet);
             free(gp->suivant);
             gp->suivant = gps;

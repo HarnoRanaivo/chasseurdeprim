@@ -74,7 +74,7 @@ int init_suiteGraphe(void)
     g9 = gSupprimerSommet(g9, "azer");
 
     g10 = gAjouterSommet(gAjouterSommet(gAjouterSommet(gAjouterSommet(gNouv(), "azer"), "qsdf"), "wxcv"), "uiop");
-    g10 = gAjouterArete(gAjouterArete(gAjouterArete(g10, "azer", "wxcv", 1), "azer", "azer", 2), "qsdf", "azer", 3);
+    g10 = gAjouterArete(gAjouterArete(gAjouterArete(g10, "azer", "wxcv", 1), "azer", "azer", 2), "qsdf", "wxcv", 3);
     g10 = gSupprimerSommet(g10, "azer");
 
     /* gSupprimerArete. */
@@ -323,9 +323,9 @@ void test_graphe_gSupprimerSommet(void)
     CU_ASSERT(gNombreSommets(g9) == 1);
     CU_ASSERT(gExisteSommet(g9, "azer") == FAUX);
     CU_ASSERT(gExisteSommet(g9, "qsdf") == VRAI);
-    CU_ASSERT(gNombreSommets(g10) == 4);
-    CU_ASSERT(gNombreAretes(g10) == 3);
-    CU_ASSERT(gExisteSommet(g10, "azer") == VRAI);
+    CU_ASSERT(gNombreSommets(g10) == 3);
+    CU_ASSERT(gNombreAretes(g10) == 1);
+    CU_ASSERT(gExisteSommet(g10, "azer") == FAUX);
     CU_ASSERT(gExisteSommet(g10, "qsdf") == VRAI);
     CU_ASSERT(gExisteSommet(g10, "wxcv") == VRAI);
     CU_ASSERT(gExisteSommet(g10, "uiop") == VRAI);

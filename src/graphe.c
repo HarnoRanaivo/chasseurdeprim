@@ -55,7 +55,7 @@ static Graphe gPrecedent(const Graphe g, const Sommet s)
 
 Graphe gSupprimerSommet(Graphe g, const Sommet s)
 {
-    if (!gEstVide(g) && !gAArete(g, s))
+    if (!gEstVide(g) && gExisteSommet(g, s) && !gAArete(g, s))
     {
         Graphe gp = gPrecedent(g, s);
 

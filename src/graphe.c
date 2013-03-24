@@ -138,7 +138,11 @@ Bool gExisteArete(const Graphe g, const Sommet a, const Sommet b)
 ListeArete gAdjacenceSommet(const Graphe g, const Sommet s)
 {
     Graphe g0 = gPSommet(g, s);
-    return g0->listeadjacence;
+
+    if (g0 != NULL)
+        return g0->listeadjacence;
+    else
+        return NULL;
 }
 
 /* Fonction auxiliaire pour que la récursivité soit terminale. */
@@ -187,8 +191,6 @@ static Bool gEgaliteAux(const Graphe g, const Graphe h)
 
 Bool gEgalite(const Graphe g, const Graphe h)
 {
-    Graphe g0 = g;
-
     if (gNombreSommets(g) != gNombreSommets(h) || gNombreAretes(g) != gNombreAretes(h))
         return FAUX;
     else
@@ -227,7 +229,8 @@ Graphe gCopie(const Graphe g)
 
 Graphe gLiberer(Graphe g)
 {
-    if (g == NULL) return NULL;
+    if (g == NULL)
+        return NULL;
     else
     {
         Graphe g0 = g->suivant;

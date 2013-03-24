@@ -11,6 +11,7 @@ static ListeArete l2 = NULL;
 static ListeArete l3 = NULL;
 static ListeArete l4 = NULL;
 static ListeArete l5 = NULL;
+static Graphe g6 = NULL;
 
 int init_suiteGraphe(void)
 {
@@ -42,6 +43,11 @@ int init_suiteGraphe(void)
     g3->listeadjacence = l3;
     g2->listeadjacence = l2;
 
+    /* Pour tester les générateurs. */
+    g6 = gAjoutSommet(gAjoutSommet(gNouv(), "azer"), "qsdf");
+    g7 = gAjoutSommet(gAjoutSommet(gAjoutSommet(gAjoutSommet(gNouv(), "azer"), "qsdf"), "wxcv"), "uiop");
+    g7 = gAjoutArete(gAjoutArete(gAjoutArete(g6, "azer", "wxcv"), "azer", "azer"), "qsdf", "azer");
+
 
     return 0;
 }
@@ -62,6 +68,7 @@ int clean_suiteGraphe(void)
     free(g3);
     free(g4);
     free(g5);
+    g6 = gLiberer(g6);
 
     return 0;
 }
@@ -193,9 +200,34 @@ void test_graphe_gPSommet(void)
     CU_ASSERT(gPSommet(g0, "hjkl") == NULL);
 }
 
-void test_graphe_gAjoutSommet(void);
+void test_graphe_gAjoutSommet(void)
+{
+    CU_ASSERT(gNombreSommets(g6) == 2);
+    CU_ASSERT(gNombreAretes(g6) == 0);
+    CU_ASSERT(gExisteSommet(g6, "azer") == VRAI);
+    CU_ASSERT(gExisteSommet(g6, "qsdf") == VRAI);
+    CU_ASSERT(gExisteSommet(g6, "wxcv") == VRAI);
+    CU_ASSERT(gAArete(g6, "azer") == FAUX);
+    CU_ASSERT(gAArete(g6, "qsdf") == FAUX);
+}
 
-void test_graphe_gAjoutArete(void);
+void test_graphe_gAjoutArete(void)
+{
+    CU_ASSERT(gNombreSommets(g7) == 4);
+    CU_ASSERT(gNombreAretes(g7) == 3);
+    CU_ASSERT(gExisteSommet(g7, "azer") == VRAI);
+    CU_ASSERT(gExisteSommet(g7, "qsdf") == VRAI);
+    CU_ASSERT(gExisteSommet(g7, "wxcv") == VRAI);
+    CU_ASSERT(gExisteSommet(g7, "uiop") == VRAI);
+    CU_ASSERT(gAArete(g7, "azer") == VRAI);
+    CU_ASSERT(gAArete(g7, "qsdf") == VRAI);
+    CU_ASSERT(gAArete(g7, "wxcv") == VRAI);
+    CU_ASSERT(gAArete(g7, "uiop") == FAUX);
+    CU_ASSERT(gNombreVoisins(g7, "azer") == 3);
+    CU_ASSERT(gNombreVoisins(g7, "wxcv") == 1);
+    CU_ASSERT(gNombreVoisins(g7, "qsdf") == 1);
+    CU_ASSERT(gNombreVoisins(g7, "uiop") == 1);
+}
 
 void test_graphe_gSupprimerSommet(void);
 
@@ -206,9 +238,6 @@ void test_graphe_gModifierArete(void);
 void test_graphe_gEgalite(void);
 
 void test_graphe_gCopie(void);
-
-
-
 
 int add_testgraphe(void)
 {

@@ -214,12 +214,12 @@ static Graphe gCopieSommets(Graphe copie, Graphe g)
 
 static Graphe gCopieAretes(Graphe copie, Graphe g)
 {
-    Graphe copie0 = copie;
+    Graphe c == NULL;
 
-    while (copie0 != NULL)
+    while (g != NULL)
     {
-        copie0->listeadjacence = lcopie(g->listeadjacence);
-        copie0 = copie0->suivant;
+        c = gPSommet(copie, g->sommet);
+        c->listeadjacence = lcopie(g->listeadjacence);
         g = g->suivant;
     }
 
@@ -228,12 +228,7 @@ static Graphe gCopieAretes(Graphe copie, Graphe g)
 
 Graphe gCopie(const Graphe g)
 {
-    Graphe copie = NULL;
-
-    copie = gCopieSommets(copie, g);
-    copie = gCopieAretes(copie, g);
-
-    return copie;
+    return gCopieAretes(gCopieSommets(gNouv(), g), g);
 }
 
 Graphe gLiberer(Graphe g)

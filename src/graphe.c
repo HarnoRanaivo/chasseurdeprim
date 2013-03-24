@@ -37,10 +37,13 @@ Graphe gAjouterArete(Graphe g, const Sommet a, const Sommet b, Ent p)
     if (!gExisteSommet(g, b))
         g = gAjouterSommet(g, b);
 
-    ga = gPSommet(g, a);
-    ga->listeadjacence = lajar(ga->listeadjacence, b, p);
-    gb = gPSommet(g, b);
-    gb->listeadjacence = lajar(gb->listeadjacence, a, p);
+    if (!gExisteArete(g, a, b))
+    {
+        ga = gPSommet(g, a);
+        ga->listeadjacence = lajar(ga->listeadjacence, b, p);
+        gb = gPSommet(g, b);
+        gb->listeadjacence = lajar(gb->listeadjacence, a, p);
+    }
 
     return g;
 }

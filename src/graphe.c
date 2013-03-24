@@ -10,7 +10,7 @@ Graphe gNouv(void)
     return NULL;
 }
 
-Graphe gAjoutSommet(Graphe g, const Sommet s)
+Graphe gAjouterSommet(Graphe g, const Sommet s)
 {
     if (!gExisteSommet(g, s))
     {
@@ -28,14 +28,14 @@ Graphe gAjoutSommet(Graphe g, const Sommet s)
     return g;
 }
 
-Graphe gAjoutArete(Graphe g, const Sommet a, const Sommet b, Ent p)
+Graphe gAjouterArete(Graphe g, const Sommet a, const Sommet b, Ent p)
 {
     Graphe ga, gb;
 
     if (!gExisteSommet(g, a))
-        g = gAjoutSommet(g, a);
+        g = gAjouterSommet(g, a);
     if (!gExisteSommet(g, b))
-        g = gAjoutSommet(g, b);
+        g = gAjouterSommet(g, b);
 
     ga = gPSommet(g, a);
     ga->listeadjacence = lajar(ga->listeadjacence, b, p);
@@ -95,12 +95,12 @@ Graphe gSupprimerArete(Graphe g, const Sommet a, const Sommet b)
 Graphe gModifierArete(Graphe g, const Sommet a, const Sommet b, Ent p)
 {
     if (!gExisteSommet(g, a))
-        g = gAjoutSommet(g, a);
+        g = gAjouterSommet(g, a);
     if (!gExisteSommet(g, b))
-        g = gAjoutSommet(g, b);
+        g = gAjouterSommet(g, b);
 
     if (!gExisteArete(g, a, b))
-        gAjoutArete(g, a, b, p);
+        gAjouterArete(g, a, b, p);
     else
     {
         Graphe ga = gPSommet(g, a);
@@ -206,13 +206,13 @@ Bool gEgalite(const Graphe g, const Graphe h)
         return gEgaliteAux(g, h);
 }
 
-static Graphe gCopieSommets(Graphe copie, Graphe g)
+static Graphe gCopierSommets(Graphe copie, Graphe g)
 {
     if (g == NULL) return copie;
-    else return gCopieSommets(gAjoutSommet(copie, g->sommet), g->suivant);
+    else return gCopierSommets(gAjouterSommet(copie, g->sommet), g->suivant);
 }
 
-static Graphe gCopieAretes(Graphe copie, Graphe g)
+static Graphe gCopierAretes(Graphe copie, Graphe g)
 {
     Graphe c = NULL;
 
@@ -226,9 +226,9 @@ static Graphe gCopieAretes(Graphe copie, Graphe g)
     return copie;
 }
 
-Graphe gCopie(const Graphe g)
+Graphe gCopier(const Graphe g)
 {
-    return gCopieAretes(gCopieSommets(gNouv(), g), g);
+    return gCopierAretes(gCopierSommets(gNouv(), g), g);
 }
 
 Graphe gLiberer(Graphe g)

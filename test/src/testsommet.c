@@ -56,7 +56,7 @@ int add_testsommets(void)
         return CU_get_error();
     }
 
-    if (CU_add_test(pSuite, "test_egalSom", test_sommet_egalSom) == NULL
+    if (CU_add_test(pSuite, "Test egalSom", test_sommet_egalSom) == NULL
         || CU_add_test(pSuite, "Test copieSommet", test_sommet_copieSommet) == NULL
         || CU_add_test(pSuite, "Test modSommet", test_sommet_modSommet) == NULL
         )

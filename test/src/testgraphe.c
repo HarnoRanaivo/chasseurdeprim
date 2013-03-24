@@ -47,7 +47,7 @@ int init_suiteGraphe(void)
     /* Pour tester les générateurs. */
     g6 = gAjoutSommet(gAjoutSommet(gNouv(), "azer"), "qsdf");
     g7 = gAjoutSommet(gAjoutSommet(gAjoutSommet(gAjoutSommet(gNouv(), "azer"), "qsdf"), "wxcv"), "uiop");
-    g7 = gAjoutArete(gAjoutArete(gAjoutArete(g6, "azer", "wxcv", 1), "azer", "azer", 2), "qsdf", "azer", 3);
+    g7 = gAjoutArete(gAjoutArete(gAjoutArete(g7, "azer", "wxcv", 1), "azer", "azer", 2), "qsdf", "azer", 3);
 
 
     return 0;
@@ -208,7 +208,7 @@ void test_graphe_gAjoutSommet(void)
     CU_ASSERT(gNombreAretes(g6) == 0);
     CU_ASSERT(gExisteSommet(g6, "azer") == VRAI);
     CU_ASSERT(gExisteSommet(g6, "qsdf") == VRAI);
-    CU_ASSERT(gExisteSommet(g6, "wxcv") == VRAI);
+    CU_ASSERT(gExisteSommet(g6, "wxcv") == FAUX);
     CU_ASSERT(gAArete(g6, "azer") == FAUX);
     CU_ASSERT(gAArete(g6, "qsdf") == FAUX);
 }
@@ -228,7 +228,7 @@ void test_graphe_gAjoutArete(void)
     CU_ASSERT(gNombreVoisins(g7, "azer") == 3);
     CU_ASSERT(gNombreVoisins(g7, "wxcv") == 1);
     CU_ASSERT(gNombreVoisins(g7, "qsdf") == 1);
-    CU_ASSERT(gNombreVoisins(g7, "uiop") == 1);
+    CU_ASSERT(gNombreVoisins(g7, "uiop") == 0);
 }
 
 void test_graphe_gSupprimerSommet(void);

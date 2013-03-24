@@ -39,7 +39,7 @@ Graphe gNouv(void);
  * \param s Sommet à ajouter.
  * \return Graphe
  */
-Graphe gAjoutSommet(Graphe g, const Sommet s);
+Graphe gAjouterSommet(Graphe g, const Sommet s);
 
 /**
  * \brief Ajout d'une arête dans un graphe.
@@ -50,7 +50,7 @@ Graphe gAjoutSommet(Graphe g, const Sommet s);
  * \param p Poids de l'arête.
  * \return Graphe
  */
-Graphe gAjoutArete(Graphe g, const Sommet a, const Sommet b, Ent p);
+Graphe gAjouterArete(Graphe g, const Sommet a, const Sommet b, Ent p);
 
 /**
  * \brief Suppression d'un sommet dans un graphe.
@@ -186,7 +186,7 @@ Bool gEgalite(const Graphe g, const Graphe h);
  * \param g Graphe.
  * \return Copie du graphe.
  */
-Graphe gCopie(const Graphe g);
+Graphe gCopier(const Graphe g);
 
 /**
  * \brief Libération d'un graphe.

@@ -37,9 +37,9 @@ void test_graphe_gNombreVoisins(void);
 
 void test_graphe_gPSommet(void);
 
-void test_graphe_gAjoutSommet(void);
+void test_graphe_gAjouterSommet(void);
 
-void test_graphe_gAjoutArete(void);
+void test_graphe_gAjouterArete(void);
 
 void test_graphe_gSupprimerSommet(void);
 
@@ -49,7 +49,7 @@ void test_graphe_gModifierArete(void);
 
 void test_graphe_gEgalite(void);
 
-void test_graphe_gCopie(void);
+void test_graphe_gCopier(void);
 
 int add_testgraphe(void);
 

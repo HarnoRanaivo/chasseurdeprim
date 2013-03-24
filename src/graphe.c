@@ -177,13 +177,22 @@ Graphe gPSommet(const Graphe g, const Sommet s)
     else return gPSommet(g->suivant, s);
 }
 
-Bool gEgal(const Graphe g, const Graphe h)
+static Bool gEgaliteAux(const Graphe g, const Graphe h)
 {
+    if (g == NULL) return VRAI;
+    else if (!gExisteSommet(h, g->sommet)) return FAUX;
+    else if (!lega(gAdjacenceSommet(h, g->sommet), g->listeadjacence)) return FAUX;
+    else return gEgaliteAux(g->suivant, h);
+}
+
+Bool gEgalite(const Graphe g, const Graphe h)
+{
+    Graphe g0 = g;
+
     if (gNombreSommets(g) != gNombreSommets(h) || gNombreAretes(g) != gNombreAretes(h))
         return FAUX;
     else
-        /* TODO !!! */
-        return VRAI;
+        return gEgaliteAux(g, h);
 }
 
 static Graphe gCopieSommets(Graphe copie, Graphe g)

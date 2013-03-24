@@ -161,6 +161,8 @@ Nat gNombreVoisins(const Graphe g, const Sommet s);
  */
 Graphe gPSommet(const Graphe g, const Sommet s);
 
+Bool gEgalite(const Graphe g, const Graphe h);
+
 /**
  * \brief Copie d'un graphe.
  * \relatesalso Graphe

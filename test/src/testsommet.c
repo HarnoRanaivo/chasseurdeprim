@@ -5,12 +5,23 @@ Sommet b;
 
 int init_suiteSommet(void)
 {
+    Sommet c;
+
+    /* Pour tester copieSommet. */
+    a = copieSommet("abcde");
+
+    /* Pour tester modSommet. */
+    b = copieSommet("abcde");
+    c = modSommet(b, "fghijkl");
+    if (c != NULL) b = c;
+
     return 0;
 }
 
 int clean_suiteSommet(void)
 {
     free(a);
+    free(b);
 
     return 0;
 }
@@ -25,21 +36,14 @@ void test_sommet_egalSom(void)
 
 void test_sommet_copieSommet(void)
 {
-    a = copieSommet("abcde");
     CU_ASSERT(egalSom(a, "abcde") == VRAI);
     CU_ASSERT(egalSom(a, "abcdf") == FAUX);
 }
 
 void test_sommet_modSommet(void)
 {
-    Sommet c;
-    b = copieSommet("abcde");
-    c = modSommet(b, "fghijkl");
-    if (c != NULL)
-    {
-        CU_ASSERT(egalSom(c, "abcde") == FAUX);
-        CU_ASSERT(egalSom(c, "fghijkl") == VRAI);
-    }
+    CU_ASSERT(egalSom(b, "abcde") == FAUX);
+    CU_ASSERT(egalSom(b, "fghijkl") == VRAI);
 }
 
 int add_testsommets(void)

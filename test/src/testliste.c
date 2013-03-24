@@ -11,9 +11,20 @@ ListeArete l2 = NULL;
 ListeArete l3 = NULL;
 ListeArete l4 = NULL;
 ListeArete l5 = NULL;
+ListeArete l6 = NULL;
+ListeArete l7 = NULL;
+ListeArete l8 = NULL;
+ListeArete l9 = NULL;
+ListeArete l10 = NULL;
+ListeArete l11 = NULL;
+ListeArete l12 = NULL;
+ListeArete l13 = NULL;
+ListeArete l14 = NULL;
+ListeArete l15 = NULL;
 
 int init_suiteListe(void)
 {
+    /* Pour les tests de quelques sélecteurs. */
     l1 = MALLOC(l1);
     l1->s = NULL;
     l1->poids = 10;
@@ -34,6 +45,31 @@ int init_suiteListe(void)
     l4->poids = 360;
     l4->v = nom4;
 
+    /* Pour les tests des générateurs et autres sélecteurs. À tester après quelques
+     * sélecteurs : on peut utiliser les sélecteurs validés dans les tests. */
+
+    /* Pour tester lajar. */
+    l5 = lajar(lajar(listnouv(), "azert", 100), "qsdf", 200);
+
+    /* Pour tester lsupar. */
+    l6 = lajar(lajar(listnouv(), "azert", 100), "qsdf", 200);
+
+    /* Pour tester lcopie. */
+    l7 = lajar(lajar(lajar(listnouv(), "azer", 1), "qsdf", 2), "wxcv", 3);
+    l8 = lcopie(l7);
+
+    /* Pour tester lmod. */
+    l9 = lajar(lajar(lajar(listnouv(), "azer", 1), "qsdf", 2), "wxcv", 3);
+    l9 = lmod(l9, "qsdf", 42);
+
+    /* Pour tester lega. */
+    l10 = lajar(lajar(lajar(listnouv(), "azer", 1), "qsdf", 2), "wxcv", 3);
+    l11 = lajar(lajar(lajar(listnouv(), "qsdf", 2), "wxcv", 3), "azer", 1);
+    l12 = lajar(lajar(lajar(listnouv(), "azer", 1), "qsdf", 2), "wxcv", 4);
+    l13 = lajar(lajar(lajar(listnouv(), "azer", 1), "qsdf", 2), "uiop", 3);
+    l14 = lajar(lajar(lajar(lajar(listnouv(), "azer", 1), "qsdf", 2), "wxcv", 3), "uiop", 4);
+    l15 = lajar(lajar(listnouv(), "azer", 1), "qsdf", 2);
+
     return 0;
 }
 
@@ -43,7 +79,17 @@ int clean_suiteListe(void)
     free(l2);
     free(l3);
     free(l4);
-    free(l5);
+    l5 = lliberer(l5);
+    l6 = lliberer(l6);
+    l7 = lliberer(l7);
+    l8 = lliberer(l8);
+    l9 = lliberer(l9);
+    l10 = lliberer(l10);
+    l11 = lliberer(l11);
+    l12 = lliberer(l12);
+    l13 = lliberer(l13);
+    l14 = lliberer(l14);
+    l15 = lliberer(l15);
 
     return 0;
 }
@@ -84,7 +130,6 @@ void test_liste_lpoids(void)
 
 void test_liste_lajar(void)
 {
-    l5 = lajar(lajar(listnouv(), "azert", 100), "qsdf", 200);
     CU_ASSERT(ltaille(l5) == 2);
     CU_ASSERT(lexar(l5, "azert") == VRAI);
     CU_ASSERT(lexar(l5, "qsdf") == VRAI);
@@ -94,36 +139,25 @@ void test_liste_lajar(void)
 
 void test_liste_lsupar(void)
 {
-    l5 = lsupar(l5, "qsdf");
-    CU_ASSERT(ltaille(l5) == 1);
-    CU_ASSERT(lexar(l5, "azert") == VRAI);
-    CU_ASSERT(lexar(l5, "qsdf") == FAUX);
-    CU_ASSERT(lpoids(l5, "azert") == 100);
+    l6 = lsupar(l6, "qsdf");
+    CU_ASSERT(ltaille(l6) == 1);
+    CU_ASSERT(lexar(l6, "azert") == VRAI);
+    CU_ASSERT(lexar(l6, "qsdf") == FAUX);
+    CU_ASSERT(lpoids(l6, "azert") == 100);
 
-    l5 = lsupar(l5, "qsdf");
-    CU_ASSERT(ltaille(l5) == 1);
-    CU_ASSERT(lexar(l5, "qsdf") == FAUX);
-    CU_ASSERT(lexar(l5, "azert") == VRAI);
-    CU_ASSERT(lpoids(l5, "azert") == 100);
+    l6 = lsupar(l6, "qsdf");
+    CU_ASSERT(ltaille(l6) == 1);
+    CU_ASSERT(lexar(l6, "qsdf") == FAUX);
+    CU_ASSERT(lexar(l6, "azert") == VRAI);
+    CU_ASSERT(lpoids(l6, "azert") == 100);
 
-    l5 = lsupar(l5, "azert");
-    CU_ASSERT(ltaille(l5) == 0);
-    CU_ASSERT(lexar(l5, "azert") == FAUX);
-}
-
-void test_liste_lliberer(void)
-{
-    ListeArete l6 = lajar(lajar(lajar(listnouv(), "azer", 1), "qsdf", 2), "wxcv", 3);
-    l6 = lliberer(l6);
-
+    l6 = lsupar(l6, "azert");
     CU_ASSERT(ltaille(l6) == 0);
+    CU_ASSERT(lexar(l6, "azert") == FAUX);
 }
 
 void test_liste_lcopie(void)
 {
-    ListeArete l7 = lajar(lajar(lajar(listnouv(), "azer", 1), "qsdf", 2), "wxcv", 3);
-    ListeArete l8 = lcopie(l7);
-
     CU_ASSERT(ltaille(l8) == ltaille(l7));
     CU_ASSERT(lexar(l8, "azer") == VRAI);
     CU_ASSERT(lexar(l8, "qsdf") == VRAI);
@@ -131,16 +165,10 @@ void test_liste_lcopie(void)
     CU_ASSERT(lpoids(l8, "azer") == 1);
     CU_ASSERT(lpoids(l8, "qsdf") == 2);
     CU_ASSERT(lpoids(l8, "wxcv") == 3);
-
-    l7 = lliberer(l7);
-    l8 = lliberer(l8);
 }
 
 void test_liste_lmod(void)
 {
-    ListeArete l9 = lajar(lajar(lajar(listnouv(), "azer", 1), "qsdf", 2), "wxcv", 3);
-    l9 = lmod(l9, "qsdf", 42);
-
     CU_ASSERT(ltaille(l9) == 3);
     CU_ASSERT(lexar(l9, "azer") == VRAI);
     CU_ASSERT(lexar(l9, "qsdf") == VRAI);
@@ -148,6 +176,16 @@ void test_liste_lmod(void)
     CU_ASSERT(lpoids(l9, "azer") == 1);
     CU_ASSERT(lpoids(l9, "qsdf") == 42);
     CU_ASSERT(lpoids(l9, "wxcv") == 3);
+}
+
+void test_liste_lega(void)
+{
+    CU_ASSERT(lega(l10, l11) == VRAI);
+    CU_ASSERT(lega(l10, l12) == FAUX);
+    CU_ASSERT(lega(l10, l13) == FAUX);
+    CU_ASSERT(lega(l10, l14) == FAUX);
+    CU_ASSERT(lega(l10, l15) == FAUX);
+
 }
 
 int add_testliste(void)
@@ -166,9 +204,9 @@ int add_testliste(void)
         || CU_add_test(pSuite, "Test lexar", test_liste_lexar) == NULL
         || CU_add_test(pSuite, "Test lajar", test_liste_lajar) == NULL
         || CU_add_test(pSuite, "Test lsupar", test_liste_lsupar) == NULL
-        || CU_add_test(pSuite, "Test lliberer", test_liste_lliberer) == NULL
         || CU_add_test(pSuite, "Test lcopie", test_liste_lcopie) == NULL
         || CU_add_test(pSuite, "Test lmod", test_liste_lmod) == NULL
+        || CU_add_test(pSuite, "Test lega", test_liste_lega) == NULL
         )
     {
         CU_cleanup_registry();

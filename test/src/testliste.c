@@ -1,26 +1,26 @@
 #include "testliste.h"
 
-char nom1[6] = "abcde\0";
-char nom12[6] = "abcdf\0";
-char nom2[6] = "fghij\0";
-char nom3[6] = "klmno\0";
-char nom4[6] = "pqrst\0";
+static char nom1[6] = "abcde\0";
+static char nom12[6] = "abcdf\0";
+static char nom2[6] = "fghij\0";
+static char nom3[6] = "klmno\0";
+static char nom4[6] = "pqrst\0";
 
-ListeArete l1 = NULL;
-ListeArete l2 = NULL;
-ListeArete l3 = NULL;
-ListeArete l4 = NULL;
-ListeArete l5 = NULL;
-ListeArete l6 = NULL;
-ListeArete l7 = NULL;
-ListeArete l8 = NULL;
-ListeArete l9 = NULL;
-ListeArete l10 = NULL;
-ListeArete l11 = NULL;
-ListeArete l12 = NULL;
-ListeArete l13 = NULL;
-ListeArete l14 = NULL;
-ListeArete l15 = NULL;
+static ListeArete l1 = NULL;
+static ListeArete l2 = NULL;
+static ListeArete l3 = NULL;
+static ListeArete l4 = NULL;
+static ListeArete l5 = NULL;
+static ListeArete l6 = NULL;
+static ListeArete l7 = NULL;
+static ListeArete l8 = NULL;
+static ListeArete l9 = NULL;
+static ListeArete l10 = NULL;
+static ListeArete l11 = NULL;
+static ListeArete l12 = NULL;
+static ListeArete l13 = NULL;
+static ListeArete l14 = NULL;
+static ListeArete l15 = NULL;
 
 int init_suiteListe(void)
 {

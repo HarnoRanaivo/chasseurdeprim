@@ -11,11 +11,13 @@ vpath %.h include/ ../include/
 vpath %.o obj/
 vpath main bin/
 
-main : main.o testsommet.o sommet.o testliste.o liste.o | bin
-	$(CC) $(CFLAGS) -o $(BPATH)main $(OPATH)main.o $(OPATH)testsommet.o $(OPATH)sommet.o $(OPATH)testliste.o $(OPATH)liste.o $(LFLAGS) -lcunit
+main : main.o testsommet.o sommet.o testliste.o liste.o graphe.o testgraphe.o | bin
+	$(CC) $(CFLAGS) -o $(BPATH)main $(OPATH)main.o $(OPATH)testsommet.o $(OPATH)sommet.o $(OPATH)testliste.o $(OPATH)liste.o $(OPATH)graphe.o $(OPATH)testgraphe.o $(LFLAGS) -lcunit
 
+testgraphe.o : testgraphe.c testgraphe.h base.h graphe.h
 testliste.o : testliste.c testliste.h base.h liste.h
 testsommet.o : testsommet.c testsommet.h base.h sommet.h
+graphe.o : graphe.c graphe.h liste.h sommet.h base.h
 liste.o : liste.c liste.h sommet.h base.h
 sommet.o : sommet.c sommet.h base.h
 main.o : main.c base.h testsommet.h testliste.h

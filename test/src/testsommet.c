@@ -1,7 +1,7 @@
 #include "testsommet.h"
 
-Sommet a;
-Sommet b;
+static Sommet a;
+static Sommet b;
 
 int init_suiteSommet(void)
 {

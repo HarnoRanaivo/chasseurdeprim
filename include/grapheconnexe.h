@@ -19,7 +19,7 @@
  * \typedef GrapheConnexe
  * \brief GrapheConnexe
  */
-typedef Graphe GrapheConnexe
+typedef Graphe GrapheConnexe;
 
 /**
  * \brief Nouveau graphe.

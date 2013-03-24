@@ -178,6 +178,11 @@ Nat gNombreVoisins(const Graphe g, const Sommet s)
         return ltaille(gAdjacenceSommet(g, s));
 }
 
+Ent gPoidsArete(const Graphe g, const Sommet a, const Sommet b)
+{
+    return lpoids(gAdjacenceSommet(g, a), b);
+}
+
 Graphe gPSommet(const Graphe g, const Sommet s)
 {
     if (gEstVide(g)) return NULL;

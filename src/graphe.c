@@ -75,7 +75,7 @@ Graphe gSupprimerSommet(Graphe g, const Sommet s)
             Graphe gps = gp->suivant->suivant;
 
             while (!lest_vide(gp->listeadjacence))
-                g = gSupprimerArete(g, s, g->listeadjacence->v);
+                g = gSupprimerArete(g, s, gp->listeadjacence->v);
             gp->suivant->sommet = libererSommet(gp->suivant->sommet);
             free(gp->suivant);
             gp->suivant = gps;

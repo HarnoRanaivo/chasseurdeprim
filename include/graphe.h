@@ -146,6 +146,17 @@ Nat gNombreSommets(const Graphe g);
 Nat gNombreAretes(const Graphe g);
 
 /**
+ * \brief Poids d'une arête.
+ * \relatesalso Graphe
+ * \param g Grape.
+ * \param a Extrémité de l'arête.
+ * \param b Extrémité de l'arête.
+ * \pre gExisteArete(g, a, b)
+ * \return Poids de l'arête (a, b).
+ */
+Ent gPoidsArete(const Graphe g, const Sommet a, const Sommet b);
+
+/**
  * \brief Nombre de voisins d'un sommet.
  * \relatesalso Graphe
  * \param g Graphe.
@@ -161,6 +172,12 @@ Nat gNombreVoisins(const Graphe g, const Sommet s);
  */
 Graphe gPSommet(const Graphe g, const Sommet s);
 
+/**
+ * \brief Égalité de deux graphes.
+ * \param g Graphe.
+ * \param h Graphe.
+ * \return VRAI si les graphes sont égaux, FAUX sinon.
+ */
 Bool gEgalite(const Graphe g, const Graphe h);
 
 /**

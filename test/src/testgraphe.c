@@ -128,7 +128,7 @@ void test_graphe_gExisteArete(void)
 void test_graphe_gAdjacenceSommet(void)
 {
     CU_ASSERT(lega(gAdjacenceSommet(g5, "azer"), l2) == VRAI);
-    CU_ASSERT(lega(gAdjacenceSommet(g5, "qsfd"), l3) == VRAI);
+    CU_ASSERT(lega(gAdjacenceSommet(g5, "qsdf"), l3) == VRAI);
     CU_ASSERT(lega(gAdjacenceSommet(g5, "wxcv"), l4) == VRAI);
     CU_ASSERT(lega(gAdjacenceSommet(g5, "uiop"), l5) == VRAI);
     CU_ASSERT(lega(gAdjacenceSommet(g5, "azer"), l3) == FAUX);

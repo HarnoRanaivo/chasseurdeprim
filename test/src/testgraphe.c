@@ -23,6 +23,9 @@ static Graphe g14 = NULL;
 static Graphe g15 = NULL;
 static Graphe g16 = NULL;
 static Graphe g17 = NULL;
+static Graphe g18 = NULL;
+static Graphe g19 = NULL;
+static Graphe g20 = NULL;
 
 int init_suiteGraphe(void)
 {
@@ -82,8 +85,6 @@ int init_suiteGraphe(void)
     g12 = gAjoutArete(gAjoutArete(gAjoutArete(g12, "azer", "wxcv", 1), "azer", "azer", 2), "qsdf", "azer", 3);
     g12 = gSupprimerArete(g12, "azer", "qsdf");
 
-    /* gModifierArete. */
-    /* TODO. Pas de sélecteur pour le poids d'une arête ! */
 
     /* gEgalite. */
     g13 = gAjoutSommet(gAjoutSommet(gAjoutSommet(gAjoutSommet(gNouv(), "azer"), "qsdf"), "wxcv"), "uiop");
@@ -93,10 +94,24 @@ int init_suiteGraphe(void)
     g15 = gAjoutSommet(gAjoutSommet(gAjoutSommet(gNouv(), "hjkl"), "qsdf"), "azer");
     g15 = gAjoutArete(gAjoutArete(gAjoutArete(g15, "azer", "azer", 2), "azer", "hjkl", 1), "qsdf", "azer", 3);
 
-    /* gCopie. */
+    /* gModifierArete. */
     g16 = gAjoutSommet(gAjoutSommet(gAjoutSommet(gAjoutSommet(gNouv(), "azer"), "qsdf"), "wxcv"), "uiop");
     g16 = gAjoutArete(gAjoutArete(gAjoutArete(g16, "azer", "wxcv", 1), "azer", "azer", 2), "qsdf", "azer", 3);
-    g17 = gCopie(g16);
+    g16 = gModifierArete(g16, "azer", "qsdf", 42);
+
+    g17 = gAjoutSommet(gAjoutSommet(gAjoutSommet(gAjoutSommet(gNouv(), "azer"), "qsdf"), "wxcv"), "uiop");
+    g17 = gAjoutArete(gAjoutArete(gAjoutArete(g17, "azer", "wxcv", 1), "azer", "azer", 2), "qsdf", "azer", 3);
+    g17 = gModifierArete(g17, "uiop", "azer", 67);
+
+    g18 = gAjoutSommet(gAjoutSommet(gAjoutSommet(gAjoutSommet(gNouv(), "azer"), "qsdf"), "wxcv"), "uiop");
+    g18 = gAjoutArete(gAjoutArete(gAjoutArete(g18, "azer", "wxcv", 1), "azer", "azer", 2), "qsdf", "azer", 3);
+    g18 = gModifierArete(g18, "hjkl", "uiop", 123);
+
+
+    /* gCopie. */
+    g19 = gAjoutSommet(gAjoutSommet(gAjoutSommet(gAjoutSommet(gNouv(), "azer"), "qsdf"), "wxcv"), "uiop");
+    g19 = gAjoutArete(gAjoutArete(gAjoutArete(g19, "azer", "wxcv", 1), "azer", "azer", 2), "qsdf", "azer", 3);
+    g20 = gCopie(g19);
 
     return 0;
 }
@@ -129,6 +144,9 @@ int clean_suiteGraphe(void)
     g15 = gLiberer(g15);
     g16 = gLiberer(g16);
     g17 = gLiberer(g17);
+    g18 = gLiberer(g18);
+    g19 = gLiberer(g19);
+    g20 = gLiberer(g20);
 
     return 0;
 }
@@ -200,6 +218,14 @@ void test_graphe_gAdjacenceSommet(void)
     CU_ASSERT(lega(gAdjacenceSommet(g5, "uiop"), l5) == VRAI);
     CU_ASSERT(lega(gAdjacenceSommet(g5, "azer"), l3) == FAUX);
     CU_ASSERT(lega(gAdjacenceSommet(g5, "hjkl"), l2) == FAUX);
+}
+
+void test_graphe_gPoidsArete(void)
+{
+    CU_ASSERT(gPoidsArete(g5, "qsdf", "azer") == 3);
+    CU_ASSERT(gPoidsArete(g5, "azer", "qsdf") == gPoidsArete(g5, "qsdf", "azer"));
+    CU_ASSERT(gPoidsArete(g5, "qsdf", "wxcv") == 2);
+    CU_ASSERT(gPoidsArete(g5, "wxcv", "qsdf") == gPoidsArete(g5, "qsdf", "wxcv"));
 }
 
 void test_graphe_gNombreSommets(void)
@@ -314,7 +340,31 @@ void test_graphe_gSupprimerArete(void)
     CU_ASSERT(gNombreVoisins(g12, "azer") == 2);
 }
 
-void test_graphe_gModifierArete(void);
+void test_graphe_gModifierArete(void)
+{
+    CU_ASSERT(gNombreSommets(g16) == 4);
+    CU_ASSERT(gNombreAretes(g16) == 3);
+    CU_ASSERT(gPoidsArete(g16, "azer", "wxcv") == 1);
+    CU_ASSERT(gPoidsArete(g16, "azer", "azer") == 2);
+    CU_ASSERT(gPoidsArete(g16, "azer", "qsdf") == 42);
+
+    CU_ASSERT(gNombreSommets(g17) == 4);
+    CU_ASSERT(gNombreAretes(g17) == 4);
+    CU_ASSERT(gPoidsArete(g17, "azer", "wxcv") == 1);
+    CU_ASSERT(gPoidsArete(g17, "azer", "azer") == 2);
+    CU_ASSERT(gPoidsArete(g17, "azer", "qsdf") == 3);
+    CU_ASSERT(gExisteArete(g17, "uiop", "azer") == VRAI);
+    CU_ASSERT(gPoidsArete(g17, "uiop", "azer") == 67);
+
+    CU_ASSERT(gNombreSommets(g18) == 5);
+    CU_ASSERT(gNombreAretes(g18) == 4);
+    CU_ASSERT(gPoidsArete(g18, "azer", "wxcv") == 1);
+    CU_ASSERT(gPoidsArete(g18, "azer", "azer") == 2);
+    CU_ASSERT(gPoidsArete(g18, "azer", "qsdf") == 3);
+    CU_ASSERT(gExisteSommet(g18, "hjkl") == VRAI);
+    CU_ASSERT(gExisteArete(g18, "hjkl", "uiop") == VRAI);
+    CU_ASSERT(gPoidsArete(g18, "hjkl", "uiop") == 123);
+}
 
 void test_graphe_gEgalite(void)
 {
@@ -326,7 +376,7 @@ void test_graphe_gEgalite(void)
 
 void test_graphe_gCopie(void)
 {
-    CU_ASSERT(gEgalite(g16, g17) == VRAI);
+    CU_ASSERT(gEgalite(g19, g20) == VRAI);
 }
 
 int add_testgraphe(void)
@@ -347,6 +397,7 @@ int add_testgraphe(void)
         || CU_add_test(pSuite, "Test gExisteSommet", test_graphe_gExisteSommet) == NULL
         || CU_add_test(pSuite, "Test gPSommet", test_graphe_gPSommet) == NULL
         || CU_add_test(pSuite, "Test gAdjacenceSommet", test_graphe_gAdjacenceSommet) == NULL
+        || CU_add_test(pSuite, "Test gPoidsArete", test_graphe_gPoidsArete) == NULL
         || CU_add_test(pSuite, "Test gAArete", test_graphe_gAArete) == NULL
         || CU_add_test(pSuite, "Test gExisteArete", test_graphe_gExisteArete) == NULL
         || CU_add_test(pSuite, "Test gNombreVoisins", test_graphe_gNombreVoisins) == NULL
@@ -356,6 +407,7 @@ int add_testgraphe(void)
         || CU_add_test(pSuite, "Test gAjoutArete", test_graphe_gAjoutArete) == NULL
         || CU_add_test(pSuite, "Test gSupprimerSommet", test_graphe_gSupprimerSommet) == NULL
         || CU_add_test(pSuite, "Test gSupprimerArete", test_graphe_gSupprimerArete) == NULL
+        || CU_add_test(pSuite, "Test gModifierArete", test_graphe_gModifierArete) == NULL
         || CU_add_test(pSuite, "Test gEgalite", test_graphe_gEgalite) == NULL
         || CU_add_test(pSuite, "Test gCopie", test_graphe_gCopie) == NULL
         )

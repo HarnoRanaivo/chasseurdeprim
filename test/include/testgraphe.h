@@ -27,6 +27,8 @@ void test_graphe_gExisteArete(void);
 
 void test_graphe_gAdjacenceSommet(void);
 
+void test_graphe_gPoidsArete(void);
+
 void test_graphe_gNombreSommets(void);
 
 void test_graphe_gNombreAretes(void);

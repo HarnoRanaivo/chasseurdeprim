@@ -7,6 +7,8 @@
 #include <CUnit/Basic.h>
 
 #include "base.h"
+#include "sommet.h"
+#include "liste.h"
 #include "graphe.h"
 
 int init_suiteGraphe(void);
@@ -15,7 +17,7 @@ int clean_suiteGraphe(void);
 
 void test_graphe_gNouv(void);
 
-void test_graphegEstVide(void);
+void test_graphe_gEstVide(void);
 
 void test_graphe_gExisteSommet(void);
 
@@ -43,9 +45,9 @@ void test_graphe_gSupprimerArete(void);
 
 void test_graphe_gModifierArete(void);
 
-void test_graphe_gCopie(void);
+void test_graphe_gEgalite(void);
 
-void test_graphe_gLiberer(void);
+void test_graphe_gCopie(void);
 
 int add_testgraphe(void);
 

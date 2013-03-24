@@ -63,7 +63,6 @@ int init_suiteGraphe(void)
     g7 = gAjoutSommet(gAjoutSommet(gAjoutSommet(gAjoutSommet(gNouv(), "azer"), "qsdf"), "wxcv"), "uiop");
     g7 = gAjoutArete(gAjoutArete(gAjoutArete(g7, "azer", "wxcv", 1), "azer", "azer", 2), "qsdf", "azer", 3);
 
-    printf("SUP\n");
     /* gSupprimerSommet. */
     g8 = gAjoutSommet(gAjoutSommet(gNouv(), "azer"), "qsdf");
     g8 = gSupprimerSommet(g8, "wxcv");
@@ -75,7 +74,6 @@ int init_suiteGraphe(void)
     g10 = gAjoutArete(gAjoutArete(gAjoutArete(g10, "azer", "wxcv", 1), "azer", "azer", 2), "qsdf", "azer", 3);
     g10 = gSupprimerSommet(g10, "azer");
 
-    printf("SUP2\n");
     /* gSupprimerArete. */
     g11 = gAjoutSommet(gAjoutSommet(gNouv(), "azer"), "qsdf");
     g11 = gSupprimerArete(g11, "azer", "qsdf");
@@ -87,7 +85,6 @@ int init_suiteGraphe(void)
     /* gModifierArete. */
     /* TODO. Pas de sélecteur pour le poids d'une arête ! */
 
-    printf("Ega\n");
     /* gEgalite. */
     g13 = gAjoutSommet(gAjoutSommet(gAjoutSommet(gAjoutSommet(gNouv(), "azer"), "qsdf"), "wxcv"), "uiop");
     g13 = gAjoutArete(gAjoutArete(gAjoutArete(g13, "azer", "wxcv", 1), "azer", "azer", 2), "qsdf", "azer", 3);
@@ -96,7 +93,6 @@ int init_suiteGraphe(void)
     g15 = gAjoutSommet(gAjoutSommet(gAjoutSommet(gNouv(), "hjkl"), "qsdf"), "azer");
     g15 = gAjoutArete(gAjoutArete(gAjoutArete(g15, "azer", "azer", 2), "azer", "hjkl", 1), "qsdf", "azer", 3);
 
-    printf("COP\n");
     /* gCopie. */
     g16 = gAjoutSommet(gAjoutSommet(gAjoutSommet(gAjoutSommet(gNouv(), "azer"), "qsdf"), "wxcv"), "uiop");
     g16 = gAjoutArete(gAjoutArete(gAjoutArete(g16, "azer", "wxcv", 1), "azer", "azer", 2), "qsdf", "azer", 3);

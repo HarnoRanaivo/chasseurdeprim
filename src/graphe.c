@@ -55,7 +55,7 @@ static Graphe gPrecedent(const Graphe g, const Sommet s)
 
 Graphe gSupprimerSommet(Graphe g, const Sommet s)
 {
-    if (!gAArete(g, s))
+    if (!gEstVide(g) && !gAArete(g, s))
     {
         Graphe gp = gPrecedent(g, s);
 
@@ -171,7 +171,11 @@ Nat gNombreAretes(const Graphe g)
 
 Nat gNombreVoisins(const Graphe g, const Sommet s)
 {
-    return ltaille(gAdjacenceSommet(g, s));
+    ListeArete adjacence = gAdjacenceSommet(g, s);
+    if (lexar(adjacence, s))
+        return ltaille(gAdjacenceSommet(g, s)) - 1;
+    else
+        return ltaille(gAdjacenceSommet(g, s));
 }
 
 Graphe gPSommet(const Graphe g, const Sommet s)

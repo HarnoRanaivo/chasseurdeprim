@@ -214,7 +214,7 @@ static Graphe gCopieSommets(Graphe copie, Graphe g)
 
 static Graphe gCopieAretes(Graphe copie, Graphe g)
 {
-    Graphe c == NULL;
+    Graphe c = NULL;
 
     while (g != NULL)
     {

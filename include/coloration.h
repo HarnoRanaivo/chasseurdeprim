@@ -50,6 +50,12 @@ Couleur cgCouleurTete(const CouleursGraphe cg);
 
 Couleur cgCouleurSommet(const CouleursGraphe cg, const Sommet s);
 
+Sommet cgPremierSommetNoir(const CouleursGraphe cg);
+
+Sommet cgPremierSommetGris(const CouleursGraphe cg);
+
+Sommet cgPremierSommetBlanc(const CouleursGraphe cg);
+
 Nat cgNombreSommetsNoirs(const CouleursGraphe cg);
 
 Nat cgNombreSommetsGris(const CouleursGraphe cg);

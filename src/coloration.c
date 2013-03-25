@@ -1,3 +1,9 @@
+/**
+ * \file coloration.c
+ * \brief Coloration d'un graphe (code)
+ * \author Harenome RAZANAJATO
+ */
+
 #include "coloration.h"
 
 CouleursGraphe cgNouv(void)
@@ -97,6 +103,28 @@ Couleur cgCouleurTete(const CouleursGraphe cg)
 Couleur cgCouleurSommet(const CouleursGraphe cg, const Sommet s)
 {
     return cgCouleurTete(cgPSommet(cg, s));
+}
+
+static Sommet cgPremierSommetCouleur(const CouleursGraphe cg, Couleur c)
+{
+    if (cgEstVide(cg)) return NULL;
+    else if (cgCouleurTete(cg) == c) return cgSommetTete(cg);
+    else return cgPremierSommetCouleur(cgSuivant(cg), c);
+}
+
+Sommet cgPremierSommetNoir(const CouleursGraphe cg)
+{
+    return cgPremierSommetCouleur(cg, NOIR);
+}
+
+Sommet cgPremierSommetGris(const CouleursGraphe cg)
+{
+    return cgPremierSommetCouleur(cg, GRIS);
+}
+
+Sommet cgPremierSommetBlanc(const CouleursGraphe cg)
+{
+    return cgPremierSommetCouleur(cg, BLANC);
 }
 
 static Nat cgNombreSommetsCouleur(const CouleursGraphe cg, Couleur c, Nat n)

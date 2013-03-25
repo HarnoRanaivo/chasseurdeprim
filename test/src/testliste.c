@@ -102,6 +102,15 @@ void test_liste_listnouv(void)
     CU_ASSERT(listnouv() == NULL);
 }
 
+void test_liste_lest_vide(void)
+{
+    CU_ASSERT(lest_vide(listnouv()) == VRAI);
+    CU_ASSERT(lest_vide(l1) == FAUX);
+    CU_ASSERT(lest_vide(l2) == FAUX);
+    CU_ASSERT(lest_vide(l3) == FAUX);
+    CU_ASSERT(lest_vide(l4) == FAUX);
+}
+
 void test_liste_ltaille(void)
 {
     CU_ASSERT(ltaille(listnouv()) == 0);
@@ -226,6 +235,7 @@ int add_testliste(void)
     }
 
     if (CU_add_test(pSuite, "Test listnouv", test_liste_listnouv) == NULL
+        || CU_add_test(pSuite, "Test lest_vide", test_liste_lest_vide) == NULL
         || CU_add_test(pSuite, "Test lsommet_tete", test_liste_lsommet_tete) == NULL
         || CU_add_test(pSuite, "Test lpoids_tete", test_liste_lpoids_tete) == NULL
         || CU_add_test(pSuite, "Test lsuiv", test_liste_lsuiv) == NULL

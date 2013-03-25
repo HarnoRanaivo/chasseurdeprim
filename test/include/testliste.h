@@ -16,6 +16,8 @@ int clean_suiteListe(void);
 
 void test_liste_listnouv(void);
 
+void test_liste_lest_vide(void);
+
 void test_liste_lsommet_tete(void);
 
 void test_liste_lpoids_tete(void);

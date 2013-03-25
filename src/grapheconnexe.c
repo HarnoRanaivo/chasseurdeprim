@@ -22,27 +22,45 @@ GrapheConnexe gcAjouterArete(GrapheConnexe g, const Sommet a, const Sommet b, En
 {
     if (!gExisteArete(g, a, b) && (gExisteSommet(g, a) || gExisteSommet(g, b)))
     {
-        GrapheConnexe ga, gb;
-
         if (!gExisteSommet(g, a))
             g = gAjouterSommet(g, a);
         else if (!gExisteSommet(g, b))
             g = gAjouterSommet(g, b);
 
-        ga = gPSommet(g, a);
-        ga->listeadjacence = lajar(ga->listeadjacence, b, p);
-        gb = gPSommet(g, b);
-        gb->listeadjacence = lajar(gb->listeadjacence, a, p);
+        g = gModifierArete(g, a, b, p);
     }
 
     return g;
 }
 
-/* TODO. */
-GrapheConnexe gcSupprimerSommet(GrapheConnexe g, const Sommet s);
+GrapheConnexe gcSupprimerSommet(GrapheConnexe g, const Sommet s)
+{
+    GrapheConnexe g0 = gSupprimerSommet(gCopier(g), s);
 
-/* TODO. */
-GrapheConnexe gcSupprimerArete(GrapheConnexe g, const Sommet a, const Sommet b);
+    if (gEstConnexe(g0))
+    {
+        g = gLiberer(g);
+
+        return g0;
+    }
+    else
+    {
+        g0 = gLiberer(g);
+
+        return g;
+    }
+}
+
+GrapheConnexe gcSupprimerArete(GrapheConnexe g, const Sommet a, const Sommet b)
+{
+    Ent p = gPoidsArete(g, a, b);
+    g = gSupprimerArete(g, a, b);
+
+    if (gEstConnexe(g))
+        return g;
+    else
+        return gAjouterArete(g, a, b, p);
+}
 
 GrapheConnexe gcModifierArete(GrapheConnexe g, const Sommet a, const Sommet b, Ent p)
 {

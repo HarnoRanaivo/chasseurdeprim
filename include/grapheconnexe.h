@@ -14,6 +14,7 @@
 #include "sommet.h"
 #include "liste.h"
 #include "graphe.h"
+#include "parcours.h"
 
 /**
  * \typedef GrapheConnexe

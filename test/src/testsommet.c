@@ -56,9 +56,9 @@ int add_testsommets(void)
         return CU_get_error();
     }
 
-    if (CU_add_test(pSuite, "Test egalSom", test_sommet_egalSom) == NULL
-        || CU_add_test(pSuite, "Test copieSommet", test_sommet_copieSommet) == NULL
-        || CU_add_test(pSuite, "Test modSommet", test_sommet_modSommet) == NULL
+    if (CU_add_test(pSuite, "egalSom", test_sommet_egalSom) == NULL
+        || CU_add_test(pSuite, "copieSommet", test_sommet_copieSommet) == NULL
+        || CU_add_test(pSuite, "modSommet", test_sommet_modSommet) == NULL
         )
     {
         CU_cleanup_registry();

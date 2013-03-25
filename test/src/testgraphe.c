@@ -419,27 +419,27 @@ int add_testgraphe(void)
     /* gPSommet est utilisé par gAdjacenceSommet qui est utilisé par gAArete,
      * gExisteArete et gNombreVoisins. À tester dans cet ordre !
      */
-    if (CU_add_test(pSuite, "Test gNouv", test_graphe_gNouv) == NULL
-        || CU_add_test(pSuite, "Test gEstVide", test_graphe_gEstVide) == NULL
-        || CU_add_test(pSuite, "Test gSuivant", test_graphe_gSuivant) == NULL
-        || CU_add_test(pSuite, "Test gSommetTete", test_graphe_gSommetTete) == NULL
-        || CU_add_test(pSuite, "Test gAdjacenceTete", test_graphe_gAdjacenceTete) == NULL
-        || CU_add_test(pSuite, "Test gExisteSommet", test_graphe_gExisteSommet) == NULL
-        || CU_add_test(pSuite, "Test gPSommet", test_graphe_gPSommet) == NULL
-        || CU_add_test(pSuite, "Test gAdjacenceSommet", test_graphe_gAdjacenceSommet) == NULL
-        || CU_add_test(pSuite, "Test gPoidsArete", test_graphe_gPoidsArete) == NULL
-        || CU_add_test(pSuite, "Test gAArete", test_graphe_gAArete) == NULL
-        || CU_add_test(pSuite, "Test gExisteArete", test_graphe_gExisteArete) == NULL
-        || CU_add_test(pSuite, "Test gNombreVoisins", test_graphe_gNombreVoisins) == NULL
-        || CU_add_test(pSuite, "Test gNombreSommets", test_graphe_gNombreSommets) == NULL
-        || CU_add_test(pSuite, "Test gNombreAretes", test_graphe_gNombreAretes) == NULL
-        || CU_add_test(pSuite, "Test gAjouterSommet", test_graphe_gAjouterSommet) == NULL
-        || CU_add_test(pSuite, "Test gAjouterArete", test_graphe_gAjouterArete) == NULL
-        || CU_add_test(pSuite, "Test gSupprimerSommet", test_graphe_gSupprimerSommet) == NULL
-        || CU_add_test(pSuite, "Test gSupprimerArete", test_graphe_gSupprimerArete) == NULL
-        || CU_add_test(pSuite, "Test gModifierArete", test_graphe_gModifierArete) == NULL
-        || CU_add_test(pSuite, "Test gEgalite", test_graphe_gEgalite) == NULL
-        || CU_add_test(pSuite, "Test gCopier", test_graphe_gCopier) == NULL
+    if (CU_add_test(pSuite, "gNouv", test_graphe_gNouv) == NULL
+        || CU_add_test(pSuite, "gEstVide", test_graphe_gEstVide) == NULL
+        || CU_add_test(pSuite, "gSuivant", test_graphe_gSuivant) == NULL
+        || CU_add_test(pSuite, "gSommetTete", test_graphe_gSommetTete) == NULL
+        || CU_add_test(pSuite, "gAdjacenceTete", test_graphe_gAdjacenceTete) == NULL
+        || CU_add_test(pSuite, "gExisteSommet", test_graphe_gExisteSommet) == NULL
+        || CU_add_test(pSuite, "gPSommet", test_graphe_gPSommet) == NULL
+        || CU_add_test(pSuite, "gAdjacenceSommet", test_graphe_gAdjacenceSommet) == NULL
+        || CU_add_test(pSuite, "gPoidsArete", test_graphe_gPoidsArete) == NULL
+        || CU_add_test(pSuite, "gAArete", test_graphe_gAArete) == NULL
+        || CU_add_test(pSuite, "gExisteArete", test_graphe_gExisteArete) == NULL
+        || CU_add_test(pSuite, "gNombreVoisins", test_graphe_gNombreVoisins) == NULL
+        || CU_add_test(pSuite, "gNombreSommets", test_graphe_gNombreSommets) == NULL
+        || CU_add_test(pSuite, "gNombreAretes", test_graphe_gNombreAretes) == NULL
+        || CU_add_test(pSuite, "gAjouterSommet", test_graphe_gAjouterSommet) == NULL
+        || CU_add_test(pSuite, "gAjouterArete", test_graphe_gAjouterArete) == NULL
+        || CU_add_test(pSuite, "gSupprimerSommet", test_graphe_gSupprimerSommet) == NULL
+        || CU_add_test(pSuite, "gSupprimerArete", test_graphe_gSupprimerArete) == NULL
+        || CU_add_test(pSuite, "gModifierArete", test_graphe_gModifierArete) == NULL
+        || CU_add_test(pSuite, "gEgalite", test_graphe_gEgalite) == NULL
+        || CU_add_test(pSuite, "gCopier", test_graphe_gCopier) == NULL
         )
     {
         CU_cleanup_registry();

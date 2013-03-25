@@ -234,19 +234,19 @@ int add_testliste(void)
         return CU_get_error();
     }
 
-    if (CU_add_test(pSuite, "Test listnouv", test_liste_listnouv) == NULL
-        || CU_add_test(pSuite, "Test lest_vide", test_liste_lest_vide) == NULL
-        || CU_add_test(pSuite, "Test lsommet_tete", test_liste_lsommet_tete) == NULL
-        || CU_add_test(pSuite, "Test lpoids_tete", test_liste_lpoids_tete) == NULL
-        || CU_add_test(pSuite, "Test lsuiv", test_liste_lsuiv) == NULL
-        || CU_add_test(pSuite, "Test ltaille", test_liste_ltaille) == NULL
-        || CU_add_test(pSuite, "Test lpoids", test_liste_lpoids) == NULL
-        || CU_add_test(pSuite, "Test lexar", test_liste_lexar) == NULL
-        || CU_add_test(pSuite, "Test lajar", test_liste_lajar) == NULL
-        || CU_add_test(pSuite, "Test lsupar", test_liste_lsupar) == NULL
-        || CU_add_test(pSuite, "Test lcopie", test_liste_lcopie) == NULL
-        || CU_add_test(pSuite, "Test lmod", test_liste_lmod) == NULL
-        || CU_add_test(pSuite, "Test lega", test_liste_lega) == NULL
+    if (CU_add_test(pSuite, "listnouv", test_liste_listnouv) == NULL
+        || CU_add_test(pSuite, "lest_vide", test_liste_lest_vide) == NULL
+        || CU_add_test(pSuite, "lsommet_tete", test_liste_lsommet_tete) == NULL
+        || CU_add_test(pSuite, "lpoids_tete", test_liste_lpoids_tete) == NULL
+        || CU_add_test(pSuite, "lsuiv", test_liste_lsuiv) == NULL
+        || CU_add_test(pSuite, "ltaille", test_liste_ltaille) == NULL
+        || CU_add_test(pSuite, "lpoids", test_liste_lpoids) == NULL
+        || CU_add_test(pSuite, "lexar", test_liste_lexar) == NULL
+        || CU_add_test(pSuite, "lajar", test_liste_lajar) == NULL
+        || CU_add_test(pSuite, "lsupar", test_liste_lsupar) == NULL
+        || CU_add_test(pSuite, "lcopie", test_liste_lcopie) == NULL
+        || CU_add_test(pSuite, "lmod", test_liste_lmod) == NULL
+        || CU_add_test(pSuite, "lega", test_liste_lega) == NULL
         )
     {
         CU_cleanup_registry();

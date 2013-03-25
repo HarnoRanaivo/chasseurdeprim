@@ -19,6 +19,12 @@ void test_graphe_gNouv(void);
 
 void test_graphe_gEstVide(void);
 
+void test_graphe_gSuivant(void);
+
+void test_graphe_gSommetTete(void);
+
+void test_graphe_gAdjacenceTete(void);
+
 void test_graphe_gExisteSommet(void);
 
 void test_graphe_gAArete(void);

@@ -7,6 +7,7 @@
 #include <CUnit/Basic.h>
 
 #include "base.h"
+#include "sommet.h"
 #include "liste.h"
 
 int init_suiteListe(void);
@@ -14,6 +15,14 @@ int init_suiteListe(void);
 int clean_suiteListe(void);
 
 void test_liste_listnouv(void);
+
+void test_liste_lest_vide(void);
+
+void test_liste_lsommet_tete(void);
+
+void test_liste_lpoids_tete(void);
+
+void test_liste_lsuiv(void);
 
 void test_liste_ltaille(void);
 

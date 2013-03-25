@@ -163,6 +163,33 @@ void test_graphe_gEstVide(void)
     CU_ASSERT(gEstVide(g1) == FAUX);
 }
 
+void test_graphe_gSuivant(void)
+{
+    CU_ASSERT(gSuivant(g1) == NULL);
+    CU_ASSERT(gSuivant(g5) == g4);
+    CU_ASSERT(gSuivant(g4) == g3);
+    CU_ASSERT(gSuivant(g3) == g2);
+    CU_ASSERT(gSuivant(g2) == NULL);
+}
+
+void test_graphe_gSommetTete(void)
+{
+    CU_ASSERT(egalSom(gSommetTete(g1), "azer") == VRAI);
+    CU_ASSERT(egalSom(gSommetTete(g5), "uiop") == VRAI);
+    CU_ASSERT(egalSom(gSommetTete(g4), "wxcv") == VRAI);
+    CU_ASSERT(egalSom(gSommetTete(g3), "qsdf") == VRAI);
+    CU_ASSERT(egalSom(gSommetTete(g2), "azer") == VRAI);
+}
+
+void test_graphe_gAdjacenceTete(void)
+{
+    CU_ASSERT(gAdjacenceTete(g1) == NULL);
+    CU_ASSERT(gAdjacenceTete(g2) == l2);
+    CU_ASSERT(gAdjacenceTete(g3) == l3);
+    CU_ASSERT(gAdjacenceTete(g4) == l4);
+    CU_ASSERT(gAdjacenceTete(g5) == l5);
+}
+
 void test_graphe_gExisteSommet(void)
 {
     CU_ASSERT(gExisteSommet(g5, "uiop") == VRAI);
@@ -394,6 +421,9 @@ int add_testgraphe(void)
      */
     if (CU_add_test(pSuite, "Test gNouv", test_graphe_gNouv) == NULL
         || CU_add_test(pSuite, "Test gEstVide", test_graphe_gEstVide) == NULL
+        || CU_add_test(pSuite, "Test gSuivant", test_graphe_gSuivant) == NULL
+        || CU_add_test(pSuite, "Test gSommetTete", test_graphe_gSommetTete) == NULL
+        || CU_add_test(pSuite, "Test gAdjacenceTete", test_graphe_gAdjacenceTete) == NULL
         || CU_add_test(pSuite, "Test gExisteSommet", test_graphe_gExisteSommet) == NULL
         || CU_add_test(pSuite, "Test gPSommet", test_graphe_gPSommet) == NULL
         || CU_add_test(pSuite, "Test gAdjacenceSommet", test_graphe_gAdjacenceSommet) == NULL

@@ -1,7 +1,6 @@
 #include "testliste.h"
 
 static char nom1[6] = "abcde\0";
-static char nom12[6] = "abcdf\0";
 static char nom2[6] = "fghij\0";
 static char nom3[6] = "klmno\0";
 static char nom4[6] = "pqrst\0";
@@ -28,22 +27,22 @@ int init_suiteListe(void)
     l1 = MALLOC(l1);
     l1->s = NULL;
     l1->poids = 10;
-    l1->v = nom1;
+    l1->v = copieSommet(nom1);
 
     l2 = MALLOC(l2);
     l2->s = NULL;
     l2->poids = 5367;
-    l2->v = nom2;
+    l2->v = copieSommet(nom2);
 
     l3 = MALLOC(l3);
     l3->s = l2;
     l3->poids = 42;
-    l3->v = nom3;
+    l3->v = copieSommet(nom3);
 
     l4 = MALLOC(l4);
     l4->s = l3;
     l4->poids = 360;
-    l4->v = nom4;
+    l4->v = copieSommet(nom4);
 
     /* Pour les tests des générateurs et autres sélecteurs. À tester après quelques
      * sélecteurs : on peut utiliser les sélecteurs validés dans les tests. */
@@ -75,6 +74,10 @@ int init_suiteListe(void)
 
 int clean_suiteListe(void)
 {
+    l1->v = libererSommet(l1->v);
+    l2->v = libererSommet(l2->v);
+    l3->v = libererSommet(l3->v);
+    l4->v = libererSommet(l4->v);
     free(l1);
     free(l2);
     free(l3);
@@ -99,11 +102,44 @@ void test_liste_listnouv(void)
     CU_ASSERT(listnouv() == NULL);
 }
 
+void test_liste_lest_vide(void)
+{
+    CU_ASSERT(lest_vide(listnouv()) == VRAI);
+    CU_ASSERT(lest_vide(l1) == FAUX);
+    CU_ASSERT(lest_vide(l2) == FAUX);
+    CU_ASSERT(lest_vide(l3) == FAUX);
+    CU_ASSERT(lest_vide(l4) == FAUX);
+}
+
 void test_liste_ltaille(void)
 {
     CU_ASSERT(ltaille(listnouv()) == 0);
     CU_ASSERT(ltaille(l1) == 1);
     CU_ASSERT(ltaille(l4) == 3);
+}
+
+void test_liste_lsommet_tete(void)
+{
+    CU_ASSERT(egalSom(lsommet_tete(l1), nom1) == VRAI);
+    CU_ASSERT(egalSom(lsommet_tete(l2), nom2) == VRAI);
+    CU_ASSERT(egalSom(lsommet_tete(l3), nom3) == VRAI);
+    CU_ASSERT(egalSom(lsommet_tete(l4), nom4) == VRAI);
+}
+
+void test_liste_lpoids_tete(void)
+{
+    CU_ASSERT(lpoids_tete(l1) == 10);
+    CU_ASSERT(lpoids_tete(l2) == 5367);
+    CU_ASSERT(lpoids_tete(l3) == 42);
+    CU_ASSERT(lpoids_tete(l4) == 360);
+}
+
+void test_liste_lsuiv(void)
+{
+    CU_ASSERT(lsuiv(l1) == NULL);
+    CU_ASSERT(lsuiv(l4) == l3);
+    CU_ASSERT(lsuiv(l3) == l2);
+    CU_ASSERT(lsuiv(l2) == NULL);
 }
 
 void test_liste_lexar(void)
@@ -199,6 +235,10 @@ int add_testliste(void)
     }
 
     if (CU_add_test(pSuite, "Test listnouv", test_liste_listnouv) == NULL
+        || CU_add_test(pSuite, "Test lest_vide", test_liste_lest_vide) == NULL
+        || CU_add_test(pSuite, "Test lsommet_tete", test_liste_lsommet_tete) == NULL
+        || CU_add_test(pSuite, "Test lpoids_tete", test_liste_lpoids_tete) == NULL
+        || CU_add_test(pSuite, "Test lsuiv", test_liste_lsuiv) == NULL
         || CU_add_test(pSuite, "Test ltaille", test_liste_ltaille) == NULL
         || CU_add_test(pSuite, "Test lpoids", test_liste_lpoids) == NULL
         || CU_add_test(pSuite, "Test lexar", test_liste_lexar) == NULL

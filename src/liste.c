@@ -130,7 +130,7 @@ Bool lega(ListeArete l, ListeArete m){
 }
 
 ListeArete lsuiv(const ListeArete l){
-    if (l != NULL)
+    if (!lest_vide(l))
         return l->s;
     else
         return NULL;

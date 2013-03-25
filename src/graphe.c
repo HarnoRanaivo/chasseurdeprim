@@ -125,6 +125,24 @@ Bool gEstVide(const Graphe g)
     return g == NULL;
 }
 
+Graphe gSuivant(const Graphe g)
+{
+    if (!gEstVide(g))
+        return g->suivant;
+    else
+        return NULL;
+}
+
+Sommet gSommetTete(const Graphe g)
+{
+    return g->sommet;
+}
+
+ListeArete gAdjacenceTete(const Graphe g)
+{
+    return g->listeadjacence;
+}
+
 Bool gExisteSommet(const Graphe g, const Sommet s)
 {
     if (gEstVide(g)) return FAUX;

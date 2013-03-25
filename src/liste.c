@@ -76,12 +76,10 @@ Nat ltaille (ListeArete l){
 	return cmpt;
 }
 
-ListeArete lliberer(ListeArete l)
-{
+ListeArete lliberer(ListeArete l){
     ListeArete l0 = NULL;
 
-    while (l != NULL)
-    {
+    while (l != NULL){
         l0 = l->s;
         l->v = libererSommet(l->v);
         free(l);
@@ -91,13 +89,11 @@ ListeArete lliberer(ListeArete l)
     return l;
 }
 
-ListeArete lcopie(const ListeArete l)
-{
+ListeArete lcopie(const ListeArete l){
     ListeArete l0 = l;
     ListeArete copie = listnouv();
 
-    while (l0 != NULL)
-    {
+    while (l0 != NULL){
         copie = lajar(copie, l0->v, l0->poids);
         l0 = l0->s;
     }
@@ -106,8 +102,7 @@ ListeArete lcopie(const ListeArete l)
 
 }
 
-ListeArete lmod(ListeArete l, const Sommet s, Ent x)
-{
+ListeArete lmod(ListeArete l, const Sommet s, Ent x){
     ListeArete l0 = l;
 
     while (l0 != NULL && !egalSom(l0->v, s))
@@ -119,14 +114,11 @@ ListeArete lmod(ListeArete l, const Sommet s, Ent x)
     return l;
 }
 
-Bool lega(ListeArete l, ListeArete m)
-{
+Bool lega(ListeArete l, ListeArete m){
     if (ltaille(l) != ltaille(m))
         return FAUX;
-    else
-    {
-        while (m != NULL)
-        {
+    else{
+        while (m != NULL){
             if (!lexar(l, m->v) || lpoids(l, m->v) != m->poids)
                 return FAUX;
             else
@@ -135,4 +127,19 @@ Bool lega(ListeArete l, ListeArete m)
 
         return VRAI;
     }
+}
+
+ListeArete lsuiv(const ListeArete l){
+    if (!lest_vide(l))
+        return l->s;
+    else
+        return NULL;
+}
+
+Sommet lsommet_tete(const ListeArete l){
+    return l->v;
+}
+
+Ent lpoids_tete(const ListeArete l){
+    return l->poids;
 }

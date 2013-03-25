@@ -127,4 +127,30 @@ ListeArete lmod(ListeArete l, const Sommet s, Ent x);
  */
 Bool lega(ListeArete l, ListeArete m);
 
+/**
+ * \fn ListeArete lsuiv(const ListeArete l)
+ * \brief Arête suivante
+ * \param l (ListeArete)
+ * \pre !lest_vide(l)
+ */
+ListeArete lsuiv(const ListeArete l);
+
+/**
+ * \fn Sommet lsommet_tete(const ListeArete l)
+ * \brief Extrémité de l'arête en tête de liste
+ * \param l (ListeArete)
+ * \pre !lest_vide(l)
+ * \return Sommet
+ */
+Sommet lsommet_tete(const ListeArete l);
+
+/**
+ * \fn Ent lpoids_tete(const ListeArete l)
+ * \brief Poids de l'arête en tête de liste
+ * \param l (ListeArete)
+ * \pre !lest_vide(l)
+ * \return Poids de l'arête
+ */
+Ent lpoids_tete(const ListeArete l);
+
 #endif /* __LISTE_H */

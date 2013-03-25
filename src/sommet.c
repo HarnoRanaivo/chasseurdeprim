@@ -7,7 +7,11 @@
 #include "sommet.h"
 
 Bool egalSom (const Sommet a, const Sommet b){
-	if (strcmp(a,b) == 0)
+    if (a == NULL && b == NULL)
+        return VRAI;
+    else if (a == NULL || b == NULL)
+        return FAUX;
+    else if (strcmp(a,b) == 0)
 		return VRAI;
 	else
 		return FAUX;

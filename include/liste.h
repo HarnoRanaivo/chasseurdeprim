@@ -114,6 +114,7 @@ ListeArete lcopie(const ListeArete l);
  * \param l (ListeArete)
  * \param s (Sommet)
  * \param x Nouveau poids.
+ * \relatesalso ListeArete
  * \return ListeArete avec l'arête modifiée.
  */
 ListeArete lmod(ListeArete l, const Sommet s, Ent x);
@@ -123,6 +124,7 @@ ListeArete lmod(ListeArete l, const Sommet s, Ent x);
  * \brief Teste l'égalité de deux listes d'arêtes
  * \param l (ListeArete)
  * \param m (ListeArete)
+ * \relatesalso ListeArete
  * \return VRAI si les listes sont égales, FAUX sinon.
  */
 Bool lega(ListeArete l, ListeArete m);
@@ -131,6 +133,7 @@ Bool lega(ListeArete l, ListeArete m);
  * \fn ListeArete lsuiv(const ListeArete l)
  * \brief Arête suivante
  * \param l (ListeArete)
+ * \relatesalso ListeArete
  * \pre !lest_vide(l)
  */
 ListeArete lsuiv(const ListeArete l);
@@ -140,6 +143,7 @@ ListeArete lsuiv(const ListeArete l);
  * \brief Extrémité de l'arête en tête de liste
  * \param l (ListeArete)
  * \pre !lest_vide(l)
+ * \relatesalso ListeArete
  * \return Sommet
  */
 Sommet lsommet_tete(const ListeArete l);
@@ -149,6 +153,7 @@ Sommet lsommet_tete(const ListeArete l);
  * \brief Poids de l'arête en tête de liste
  * \param l (ListeArete)
  * \pre !lest_vide(l)
+ * \relatesalso ListeArete
  * \return Poids de l'arête
  */
 Ent lpoids_tete(const ListeArete l);

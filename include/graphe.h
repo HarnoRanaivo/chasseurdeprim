@@ -92,6 +92,33 @@ Graphe gModifierArete(Graphe g, const Sommet a, const Sommet b, Ent p);
 Bool gEstVide(const Graphe g);
 
 /**
+ * \brief Sommet suivant dans le graphe.
+ * \relatesalso Graphe
+ * \param g Graphe.
+ * \return (pointeur vers) Sommet suivant dans le graphe.
+ */
+Graphe gSuivant(const Graphe g);
+
+/**
+ * \brief Premier sommet dans la liste de sommets.
+ * \relatesalso Graphe
+ * \param g Graphe.
+ * \pre !gEstVide(g)
+ * \return Sommet.
+ */
+Sommet gSommetTete(const Graphe g);
+
+/**
+ * \brief Liste d'adjacence du sommet en tête de liste.
+ * \relatesalso Graphe
+ * \relatesalso ListeArete
+ * \param g Graphe.
+ * \pre !gEstVide(g)
+ * \return Liste d'ajacence de la tête.
+ */
+ListeArete gAdjacenceTete(const Graphe g);
+
+/**
  * \brief Test d'existence d'un sommet dans un graphe.
  * \relatesalso Graphe
  * \param g Graphe.

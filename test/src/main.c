@@ -6,6 +6,7 @@
 #include "testsommet.h"
 #include "testliste.h"
 #include "testgraphe.h"
+#include "testcoloration.h"
 
 int main(int argc, char ** argv)
 {
@@ -15,6 +16,7 @@ int main(int argc, char ** argv)
     add_testsommets();
     add_testliste();
     add_testgraphe();
+    add_testcoloration();
 
     CU_basic_set_mode(CU_BRM_VERBOSE);
     CU_basic_run_tests();

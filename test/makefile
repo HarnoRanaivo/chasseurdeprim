@@ -12,10 +12,11 @@ vpath %.h include/ ../include/
 vpath %.o obj/
 vpath main bin/
 
-main : main.o libgraphes.a testsommet.o testliste.o testgraphe.o | bin
-	$(CC) $(CFLAGS) -o $(BPATH)main $(OPATH)main.o $(OPATH)testsommet.o $(OPATH)testliste.o $(OPATH)testgraphe.o $(LFLAGS) -lcunit -lgraphes
+main : main.o libgraphes.a testsommet.o testliste.o testgraphe.o testcoloration.o | bin
+	$(CC) $(CFLAGS) -o $(BPATH)main $(OPATH)main.o $(OPATH)testsommet.o $(OPATH)testliste.o $(OPATH)testgraphe.o $(OPATH)testcoloration.o $(LFLAGS) -lcunit -lgraphes
 
-testgraphe.o : testgraphe.c testgraphe.h base.h graphe.h
+testcoloration.o : testcoloration.c testcoloration.h base.h sommet.h graphe.h coloration.h
+testgraphe.o : testgraphe.c testgraphe.h base.h graphe.h liste.h
 testliste.o : testliste.c testliste.h base.h liste.h
 testsommet.o : testsommet.c testsommet.h base.h sommet.h
 

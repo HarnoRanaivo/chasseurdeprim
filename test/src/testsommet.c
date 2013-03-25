@@ -32,6 +32,9 @@ void test_sommet_egalSom(void)
     CU_ASSERT(egalSom("abcde", "abcd") == FAUX);
     CU_ASSERT(egalSom("abcde", "abcdr") == FAUX);
     CU_ASSERT(egalSom("abcde", "azert") == FAUX);
+    CU_ASSERT(egalSom("abcde", NULL) == FAUX);
+    CU_ASSERT(egalSom(NULL, "abcde") == FAUX);
+    CU_ASSERT(egalSom(NULL, NULL) == VRAI);
 }
 
 void test_sommet_copieSommet(void)

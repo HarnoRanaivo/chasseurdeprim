@@ -6,9 +6,18 @@ static CouleursGraphe cg2 = NULL;
 static CouleursGraphe cg3 = NULL;
 static CouleursGraphe cg4 = NULL;
 static CouleursGraphe cg5 = NULL;
+static CouleursGraphe cg6 = NULL;
+static CouleursGraphe cg7 = NULL;
+static CouleursGraphe cg8 = NULL;
+static CouleursGraphe cg9 = NULL;
+static Graphe g0 = NULL;
+static Graphe g1 = NULL;
+static CouleursGraphe cg10 = NULL;
+static CouleursGraphe cg11 = NULL;
 
 int init_suiteColoration(void)
 {
+    /* Tests sélecteurs. */
     cg1 = MALLOC(cg1);
     cg1->sommet = copieSommet("azer");
     cg1->couleur = BLANC;
@@ -31,6 +40,29 @@ int init_suiteColoration(void)
     cg4->suivant = cg3;
     cg5->suivant = cg4;
 
+    /* Tests générateurs. */
+    cg6 = cgAjouterSommet(cgAjouterSommet(cgAjouterSommet(cgNouv(), "azer", BLANC), "qsdf", NOIR), "wxcv", GRIS);
+    cg6 = cgAjouterSommet(cgAjouterSommet(cgAjouterSommet(cg6, "uiop", GRIS), "hjkl", BLANC), "tyui", BLANC);
+
+    cg7 = cgAjouterSommet(cgAjouterSommet(cgAjouterSommet(cgNouv(), "azer", BLANC), "qsdf", NOIR), "wxcv", GRIS);
+    cg7 = cgAjouterSommet(cgAjouterSommet(cgAjouterSommet(cg7, "uiop", GRIS), "hjkl", BLANC), "tyui", BLANC);
+    cg7 = cgSupprimerTete(cg7);
+
+    cg8 = cgAjouterSommet(cgAjouterSommet(cgAjouterSommet(cgNouv(), "azer", BLANC), "qsdf", NOIR), "wxcv", GRIS);
+    cg8 = cgAjouterSommet(cgAjouterSommet(cgAjouterSommet(cg8, "uiop", GRIS), "hjkl", BLANC), "tyui", BLANC);
+    cg8 = cgSupprimerSommet(cg8, "uiop");
+
+    cg9 = cgAjouterSommet(cgAjouterSommet(cgAjouterSommet(cgNouv(), "azer", BLANC), "qsdf", NOIR), "wxcv", GRIS);
+    cg9 = cgAjouterSommet(cgAjouterSommet(cgAjouterSommet(cg9, "uiop", GRIS), "hjkl", BLANC), "tyui", BLANC);
+    cg9 = cgModifierSommet(cg9, "wxcv", NOIR);
+
+    g0 = gNouv();
+    cg10 = cgInit(g0);
+
+    g1 = gAjouterSommet(gAjouterSommet(gAjouterSommet(gNouv(), "azer"), "qsdf"), "wxcv");
+    g1 = gAjouterSommet(gAjouterSommet(gAjouterSommet(g1, "uiop"), "hjkl"), "tyui");
+    cg11 = cgInit(g1);
+
     return 0;
 }
 
@@ -48,6 +80,10 @@ int clean_suiteColoration(void)
     cg5->sommet = libererSommet(cg5->sommet);
     free(cg5);
 
+    cg6 = cgLiberer(cg6);
+    cg7 = cgLiberer(cg7);
+    cg8 = cgLiberer(cg8);
+
     return 0;
 }
 
@@ -56,15 +92,93 @@ void test_couleursgraphe_cgNouv(void)
     CU_ASSERT(cgNouv() == NULL);
 }
 
-void test_couleursgraphe_cgAjouterSommet(void);
+void test_couleursgraphe_cgAjouterSommet(void)
+{
+    CU_ASSERT(cgEstVide(cg6) == FAUX);
+    CU_ASSERT(cgNombreSommetsNoirs(cg6) == 1);
+    CU_ASSERT(cgNombreSommetsGris(cg6) == 2);
+    CU_ASSERT(cgNombreSommetsBlancs(cg6) == 3);
+    CU_ASSERT(egalSom(cgPremierSommetNoir(cg6), "qsdf") == VRAI);
+    CU_ASSERT(egalSom(cgPremierSommetGris(cg6), "uiop") == VRAI);
+    CU_ASSERT(egalSom(cgPremierSommetBlanc(cg6), "tyui") == VRAI);
+    CU_ASSERT(egalSom(cgSommetTete(cg6), "tyui") == VRAI);
+    CU_ASSERT(cgCouleurTete(cg6) == BLANC);
+    CU_ASSERT(cgCouleurSommet(cg6, "azer") == BLANC);
+    CU_ASSERT(cgCouleurSommet(cg6, "qsdf") == NOIR);
+    CU_ASSERT(cgCouleurSommet(cg6, "wxcv") == GRIS);
+    CU_ASSERT(cgCouleurSommet(cg6, "uiop") == GRIS);
+    CU_ASSERT(cgCouleurSommet(cg6, "hjkl") == BLANC);
+    CU_ASSERT(cgCouleurSommet(cg6, "tyui") == BLANC);
+}
 
-void test_couleursgraphe_cgSupprimerTete(void);
+void test_couleursgraphe_cgSupprimerTete(void)
+{
+    CU_ASSERT(cgEstVide(cg7) == FAUX);
+    CU_ASSERT(cgNombreSommetsNoirs(cg7) == 1);
+    CU_ASSERT(cgNombreSommetsGris(cg7) == 2);
+    CU_ASSERT(cgNombreSommetsBlancs(cg7) == 2);
+    CU_ASSERT(egalSom(cgPremierSommetNoir(cg7), "qsdf") == VRAI);
+    CU_ASSERT(egalSom(cgPremierSommetGris(cg7), "uiop") == VRAI);
+    CU_ASSERT(egalSom(cgPremierSommetBlanc(cg7), "tyui") == FAUX);
+    CU_ASSERT(egalSom(cgPremierSommetBlanc(cg7), "hjkl") == VRAI);
+    CU_ASSERT(egalSom(cgSommetTete(cg7), "tyui") == FAUX);
+    CU_ASSERT(egalSom(cgSommetTete(cg7), "hjkl") == VRAI);
+    CU_ASSERT(cgCouleurTete(cg7) == BLANC);
+    CU_ASSERT(cgCouleurSommet(cg7, "azer") == BLANC);
+    CU_ASSERT(cgCouleurSommet(cg7, "qsdf") == NOIR);
+    CU_ASSERT(cgCouleurSommet(cg7, "wxcv") == GRIS);
+    CU_ASSERT(cgCouleurSommet(cg7, "uiop") == GRIS);
+    CU_ASSERT(cgCouleurSommet(cg7, "hjkl") == BLANC);
+}
 
-void test_couleursgraphe_cgSupprimerSommet(void);
+void test_couleursgraphe_cgSupprimerSommet(void)
+{
+    CU_ASSERT(cgEstVide(cg8) == FAUX);
+    CU_ASSERT(cgNombreSommetsNoirs(cg8) == 1);
+    CU_ASSERT(cgNombreSommetsGris(cg8) == 1);
+    CU_ASSERT(cgNombreSommetsBlancs(cg8) == 3);
+    CU_ASSERT(egalSom(cgPremierSommetNoir(cg8), "qsdf") == VRAI);
+    CU_ASSERT(egalSom(cgPremierSommetGris(cg8), "uiop") == FAUX);
+    CU_ASSERT(egalSom(cgPremierSommetGris(cg8), "wxcv") == VRAI)
+    CU_ASSERT(egalSom(cgPremierSommetBlanc(cg8), "tyui") == VRAI);
+    CU_ASSERT(egalSom(cgSommetTete(cg8), "tyui") == VRAI);
+    CU_ASSERT(cgCouleurTete(cg8) == BLANC);
+    CU_ASSERT(cgCouleurSommet(cg8, "azer") == BLANC);
+    CU_ASSERT(cgCouleurSommet(cg8, "qsdf") == NOIR);
+    CU_ASSERT(cgCouleurSommet(cg8, "wxcv") == GRIS);
+    CU_ASSERT(cgCouleurSommet(cg8, "hjkl") == BLANC);
+    CU_ASSERT(cgCouleurSommet(cg8, "tyui") == BLANC);
+}
 
-void test_couleursgraphe_cgModifierSommet(void);
+void test_couleursgraphe_cgModifierSommet(void)
+{
+    CU_ASSERT(cgEstVide(cg9) == FAUX);
+    CU_ASSERT(cgNombreSommetsNoirs(cg9) == 2);
+    CU_ASSERT(cgNombreSommetsGris(cg9) == 1);
+    CU_ASSERT(cgNombreSommetsBlancs(cg9) == 3);
+    CU_ASSERT(egalSom(cgPremierSommetNoir(cg9), "qsdf") == FAUX);
+    CU_ASSERT(egalSom(cgPremierSommetNoir(cg9), "wxcv") == VRAI);
+    CU_ASSERT(egalSom(cgPremierSommetGris(cg9), "uiop") == VRAI);
+    CU_ASSERT(egalSom(cgPremierSommetBlanc(cg9), "tyui") == VRAI);
+    CU_ASSERT(egalSom(cgSommetTete(cg9), "tyui") == VRAI);
+    CU_ASSERT(cgCouleurTete(cg9) == BLANC);
+    CU_ASSERT(cgCouleurSommet(cg9, "azer") == BLANC);
+    CU_ASSERT(cgCouleurSommet(cg9, "qsdf") == NOIR);
+    CU_ASSERT(cgCouleurSommet(cg9, "wxcv") == NOIR);
+    CU_ASSERT(cgCouleurSommet(cg9, "uiop") == GRIS);
+    CU_ASSERT(cgCouleurSommet(cg9, "hjkl") == BLANC);
+    CU_ASSERT(cgCouleurSommet(cg9, "tyui") == BLANC);
+}
 
-void test_couleursgraphe_cgInit(void);
+void test_couleursgraphe_cgInit(void)
+{
+    CU_ASSERT(cgEstVide(cg10) == VRAI);
+
+    CU_ASSERT(cgEstVide(cg11) == FAUX);
+    CU_ASSERT(cgNombreSommetsNoirs(cg11) == 0);
+    CU_ASSERT(cgNombreSommetsGris(cg11) == 0);
+    CU_ASSERT(cgNombreSommetsBlancs(cg11) == 6);
+}
 
 void test_couleursgraphe_cgEstVide(void)
 {
@@ -239,6 +353,9 @@ int add_testcoloration(void)
         || CU_add_test(pSuite, "cgNombreSommetsNoirs", test_couleursgraphe_cgNombreSommetsNoirs) == NULL
         || CU_add_test(pSuite, "cgNombreSommetsGris", test_couleursgraphe_cgNombreSommetsGris) == NULL
         || CU_add_test(pSuite, "cgNombreSommetsBlancs", test_couleursgraphe_cgNombreSommetsBlancs) == NULL
+        || CU_add_test(pSuite, "cgAjouterSommet", test_couleursgraphe_cgAjouterSommet) == NULL
+        || CU_add_test(pSuite, "cgSupprimerTete", test_couleursgraphe_cgSupprimerTete) == NULL
+        || CU_add_test(pSuite, "cgInit", test_couleursgraphe_cgInit) == NULL
         )
     {
         CU_cleanup_registry();

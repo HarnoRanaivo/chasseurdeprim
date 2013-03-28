@@ -57,7 +57,7 @@ Bool gACycle(const Graphe g)
             if (cgCouleurSommet(cg, s2) == BLANC)
                 cg = cgModifierSommet(cg, s2, GRIS);
             else if (cgCouleurSommet(cg, s2) == GRIS)
-                return FAUX.
+                return FAUX;
             l = lsuiv(l);
         }
         cg = cgModifierSommet(cg, s1, NOIR);

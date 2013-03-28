@@ -19,6 +19,6 @@ CouleursGraphe gParcoursLargeur(Graphe g);
 
 Bool gEstConnexe(Graphe g);
 
-Bool gACycle(const Graphe g)
+Bool gACycle(const Graphe g);
 
 #endif /* __PARCOURS_H */

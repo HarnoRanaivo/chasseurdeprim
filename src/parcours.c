@@ -40,3 +40,31 @@ Bool gEstConnexe(const Graphe g)
 
     return gNombreSommets(g) == n;
 }
+
+Bool gACycle(const Graphe g)
+{
+    Sommet s1;
+    CouleursGraphe cg = cgInit(g);
+
+    cg = cgModifierSommet(cg, gSommetTete(g), GRIS);
+
+    while((s1 = cgPremierSommetGris(cg)) != NULL)
+    {
+        ListeArete l;
+        while(!lest_vide((l = gAdjacenceSommet(g, s1))))
+        {
+            Sommet s2 = lsommet_tete(l);
+            if (cgCouleurSommet(cg, s2) == BLANC)
+                cg = cgModifierSommet(cg, s2, GRIS);
+            else if (cgCouleurSommet(cg, s2) == GRIS)
+                return FAUX.
+            l = lsuiv(l);
+        }
+        cg = cgModifierSommet(cg, s1, NOIR);
+    }
+
+    cg = cgLiberer(cg);
+
+    return VRAI;
+
+}

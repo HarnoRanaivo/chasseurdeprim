@@ -29,6 +29,8 @@ void test_couleursgraphe_cgInit(void);
 
 void test_couleursgraphe_cgEstVide(void);
 
+void test_couleursgraphe_cgExisteSommet(void);
+
 void test_couleursgraphe_cgSuivant(void);
 
 void test_couleursgraphe_cgSommetTete(void);
@@ -42,6 +44,8 @@ void test_couleursgraphe_cgPremierSommetNoir(void);
 void test_couleursgraphe_cgPremierSommetGris(void);
 
 void test_couleursgraphe_cgPremierSommetBlanc(void);
+
+void test_couleursgraphe_cgNombreSommets(void);
 
 void test_couleursgraphe_cgNombreSommetsNoirs(void);
 

@@ -191,6 +191,32 @@ void test_couleursgraphe_cgEstVide(void)
     CU_ASSERT(cgEstVide(cg5) == FAUX);
 }
 
+void test_couleursgraphe_cgExisteSommet(void)
+{
+    CU_ASSERT(cgExisteSommmet(cg1, "azer") == VRAI);
+    CU_ASSERT(cgExisteSommmet(cg1, "qsdf") == FAUX);
+
+    CU_ASSERT(cgExisteSommmet(cg5, "azer") == VRAI);
+    CU_ASSERT(cgExisteSommmet(cg5, "qsdf") == VRAI);
+    CU_ASSERT(cgExisteSommmet(cg5, "wxcv") == VRAI);
+    CU_ASSERT(cgExisteSommmet(cg5, "uiop") == VRAI);
+
+    CU_ASSERT(cgExisteSommmet(cg4, "azer") == VRAI);
+    CU_ASSERT(cgExisteSommmet(cg4, "qsdf") == VRAI);
+    CU_ASSERT(cgExisteSommmet(cg4, "wxcv") == VRAI);
+    CU_ASSERT(cgExisteSommmet(cg4, "uiop") == FAUX);
+
+    CU_ASSERT(cgExisteSommmet(cg3, "azer") == VRAI);
+    CU_ASSERT(cgExisteSommmet(cg3, "qsdf") == VRAI);
+    CU_ASSERT(cgExisteSommmet(cg3, "wxcv") == FAUX);
+    CU_ASSERT(cgExisteSommmet(cg3, "uiop") == FAUX);
+
+    CU_ASSERT(cgExisteSommmet(cg2, "azer") == VRAI);
+    CU_ASSERT(cgExisteSommmet(cg2, "qsdf") == FAUX);
+    CU_ASSERT(cgExisteSommmet(cg2, "wxcv") == FAUX);
+    CU_ASSERT(cgExisteSommmet(cg2, "uiop") == FAUX);
+}
+
 void test_couleursgraphe_cgSuivant(void)
 {
     CU_ASSERT(cgSuivant(cgNouv()) == NULL);
@@ -273,6 +299,16 @@ void test_couleursgraphe_cgPremierSommetBlanc(void)
     CU_ASSERT(egalSom(cgPremierSommetBlanc(cg5), "wxcv") == VRAI);
 }
 
+void test_couleursgraphe_cgNombreSommets(void)
+{
+
+    CU_ASSERT(cgNombreSommets(cg1) == 1);
+    CU_ASSERT(cgNombreSommets(cg5) == 4);
+    CU_ASSERT(cgNombreSommets(cg4) == 3);
+    CU_ASSERT(cgNombreSommets(cg3) == 2);
+    CU_ASSERT(cgNombreSommets(cg2) == 1);
+}
+
 void test_couleursgraphe_cgNombreSommetsNoirs(void)
 {
     CU_ASSERT(cgNombreSommetsNoirs(cg0) == 0);
@@ -344,12 +380,14 @@ int add_testcoloration(void)
     if (CU_add_test(pSuite, "cgNouv", test_couleursgraphe_cgNouv) == NULL
         || CU_add_test(pSuite, "cgEstVide", test_couleursgraphe_cgEstVide) == NULL
         || CU_add_test(pSuite, "cgSuivant", test_couleursgraphe_cgSuivant) == NULL
+        || CU_add_test(pSuite, "cgExisteSommmet", test_couleursgraphe_cgExisteSommet) == NULL
         || CU_add_test(pSuite, "cgSommetTete", test_couleursgraphe_cgSommetTete) == NULL
         || CU_add_test(pSuite, "cgCouleurTete", test_couleursgraphe_cgCouleurTete) == NULL
         || CU_add_test(pSuite, "cgPSommet", test_couleursgraphe_cgPSommet) == NULL
         || CU_add_test(pSuite, "cgPremierSommetNoir", test_couleursgraphe_cgPremierSommetNoir) == NULL
         || CU_add_test(pSuite, "cgPremierSommetGris", test_couleursgraphe_cgPremierSommetGris) == NULL
         || CU_add_test(pSuite, "cgPremierSommetBlanc", test_couleursgraphe_cgPremierSommetBlanc) == NULL
+        || CU_add_test(pSuite, "cgNombreSommets", test_couleursgraphe_cgNombreSommets) == NULL
         || CU_add_test(pSuite, "cgNombreSommetsNoirs", test_couleursgraphe_cgNombreSommetsNoirs) == NULL
         || CU_add_test(pSuite, "cgNombreSommetsGris", test_couleursgraphe_cgNombreSommetsGris) == NULL
         || CU_add_test(pSuite, "cgNombreSommetsBlancs", test_couleursgraphe_cgNombreSommetsBlancs) == NULL

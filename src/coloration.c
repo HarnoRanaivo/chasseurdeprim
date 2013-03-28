@@ -29,11 +29,15 @@ CouleursGraphe cgAjouterSommet(CouleursGraphe cg, const Sommet s, Couleur c)
 
 CouleursGraphe cgSupprimerTete(CouleursGraphe cg)
 {
-    CouleursGraphe cg0 = cg->suivant;
-    cg->sommet = libererSommet(cg->sommet);
-    free(cg);
+    if (!cgEstVide(cg))
+    {
+        CouleursGraphe cg0 = cg;
+        cg = cgSuivant(cg);
+        cg0->sommet = libererSommet(cg0->sommet);
+        free(cg0);
+    }
 
-    return cg0;
+    return cg;
 }
 
 static CouleursGraphe cgPrecedent(const CouleursGraphe cg, const Sommet s)
@@ -46,14 +50,17 @@ static CouleursGraphe cgPrecedent(const CouleursGraphe cg, const Sommet s)
 
 CouleursGraphe cgSupprimerSommet(CouleursGraphe cg, const Sommet s)
 {
-    CouleursGraphe cgp = cgPrecedent(cg, s);
-
-    if (cgp != NULL)
+    if (egalSom(cgSommetTete(cg), s))
+        return cgSupprimerTete(cg);
+    else
     {
-        cgp->suivant = cgSupprimerTete(cgSuivant(cgp));
-    }
+        CouleursGraphe cgp = cgPrecedent(cg, s);
 
-    return cg;
+        if (cgp != NULL)
+            cgp->suivant = cgSupprimerTete(cgSuivant(cgp));
+
+        return cg;
+    }
 }
 
 CouleursGraphe cgModifierSommet(CouleursGraphe cg, const Sommet s, Couleur c)
@@ -80,6 +87,13 @@ CouleursGraphe cgInit(const Graphe g)
 Bool cgEstVide(const CouleursGraphe cg)
 {
     return cg == NULL;
+}
+
+Bool cgExisteSommmet(const CouleursGraphe cg, const Sommet s)
+{
+    if (cgEstVide(cg)) return FAUX;
+    else if (egalSom(cgSommetTete(cg), s)) return VRAI;
+    else return cgExisteSommmet(cgSuivant(cg), s);
 }
 
 CouleursGraphe cgSuivant(const CouleursGraphe cg)
@@ -125,6 +139,17 @@ Sommet cgPremierSommetGris(const CouleursGraphe cg)
 Sommet cgPremierSommetBlanc(const CouleursGraphe cg)
 {
     return cgPremierSommetCouleur(cg, BLANC);
+}
+
+static Nat cgNombreSommetsAux(const CouleursGraphe cg, Nat n)
+{
+    if (cgEstVide(cg)) return n;
+    else return cgNombreSommetsAux(cgSuivant(cg), n+1);
+}
+
+Nat cgNombreSommets(const CouleursGraphe cg)
+{
+    return cgNombreSommetsAux(cg, 0);
 }
 
 static Nat cgNombreSommetsCouleur(const CouleursGraphe cg, Couleur c, Nat n)

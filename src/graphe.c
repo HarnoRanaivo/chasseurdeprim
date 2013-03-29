@@ -60,18 +60,18 @@ Graphe gSupprimerSommet(Graphe g, const Sommet s)
 {
     if (!gEstVide(g) && gExisteSommet(g, s))
     {
-        Graphe gp = gPrecedent(g, s);
-
-        if (gp == NULL)
+        if (egalSom(gSommetTete(g), s))
         {
+            Graphe gs = gSuivant(g);
             while (!lest_vide(gAdjacenceTete(g)))
                 g = gSupprimerArete(g, s, lsommet_tete(gAdjacenceTete(g)));
             g->sommet = libererSommet(gSommetTete(g));
             free(g);
-            g = NULL;
+            g = gs;
         }
         else
         {
+            Graphe gp = gPrecedent(g, s);
             Graphe gps = gSuivant(gSuivant(gp));
 
             while (!lest_vide(gAdjacenceTete(gSuivant(gp))))

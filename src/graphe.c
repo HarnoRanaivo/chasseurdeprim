@@ -40,9 +40,9 @@ Graphe gAjouterArete(Graphe g, const Sommet a, const Sommet b, Ent p)
             g = gAjouterSommet(g, b);
 
         ga = gPSommet(g, a);
-        ga->listeadjacence = lajar(ga->listeadjacence, b, p);
+        ga->listeadjacence = lajar(gAdjacenceTete(ga), b, p);
         gb = gPSommet(g, b);
-        gb->listeadjacence = lajar(gb->listeadjacence, a, p);
+        gb->listeadjacence = lajar(gAdjacenceTete(gb), a, p);
     }
 
     return g;
@@ -51,9 +51,9 @@ Graphe gAjouterArete(Graphe g, const Sommet a, const Sommet b, Ent p)
 static Graphe gPrecedent(const Graphe g, const Sommet s)
 {
     if (gEstVide(g)) return NULL;
-    else if (gEstVide(g->suivant)) return NULL;
-    else if (egalSom(g->suivant->sommet, s)) return g;
-    else return gPrecedent(g->suivant, s);
+    else if (gEstVide(gSuivant(g))) return NULL;
+    else if (egalSom(gSommetTete(gSuivant(g)), s)) return g;
+    else return gPrecedent(gSuivant(g), s);
 }
 
 Graphe gSupprimerSommet(Graphe g, const Sommet s)
@@ -64,20 +64,20 @@ Graphe gSupprimerSommet(Graphe g, const Sommet s)
 
         if (gp == NULL)
         {
-            while (!lest_vide(g->listeadjacence))
-                g = gSupprimerArete(g, s, g->listeadjacence->v);
-            g->sommet = libererSommet(g->sommet);
+            while (!lest_vide(gAdjacenceTete(g)))
+                g = gSupprimerArete(g, s, lsommet_tete(gAdjacenceTete(g)));
+            g->sommet = libererSommet(gSommetTete(g));
             free(g);
             g = NULL;
         }
         else
         {
-            Graphe gps = gp->suivant->suivant;
+            Graphe gps = gSuivant(gSuivant(gp));
 
-            while (!lest_vide(gp->suivant->listeadjacence))
-                g = gSupprimerArete(g, s, gp->suivant->listeadjacence->v);
-            gp->suivant->sommet = libererSommet(gp->suivant->sommet);
-            free(gp->suivant);
+            while (!lest_vide(gAdjacenceTete(gSuivant(gp))))
+                g = gSupprimerArete(g, s, lsommet_tete(gAdjacenceTete(gSuivant(gp))));
+            gp->suivant->sommet = libererSommet(gSommetTete(gSuivant(gp)));
+            free(gSuivant(gp));
             gp->suivant = gps;
         }
     }
@@ -92,8 +92,8 @@ Graphe gSupprimerArete(Graphe g, const Sommet a, const Sommet b)
         Graphe ga = gPSommet(g, a);
         Graphe gb = gPSommet(g, b);
 
-        ga->listeadjacence = lsupar(ga->listeadjacence, b);
-        gb->listeadjacence = lsupar(gb->listeadjacence, a);
+        ga->listeadjacence = lsupar(gAdjacenceTete(ga), b);
+        gb->listeadjacence = lsupar(gAdjacenceTete(gb), a);
     }
 
     return g;
@@ -106,8 +106,8 @@ Graphe gModifierArete(Graphe g, const Sommet a, const Sommet b, Ent p)
         Graphe ga = gPSommet(g, a);
         Graphe gb = gPSommet(g, b);
 
-        ga->listeadjacence = lmod(gAdjacenceSommet(g, a), b, p);
-        gb->listeadjacence = lmod(gAdjacenceSommet(g, b), a, p);
+        ga->listeadjacence = lmod(gAdjacenceTete(ga), b, p);
+        gb->listeadjacence = lmod(gAdjacenceTete(gb), a, p);
     }
 
     return g;
@@ -139,8 +139,8 @@ ListeArete gAdjacenceTete(const Graphe g)
 Bool gExisteSommet(const Graphe g, const Sommet s)
 {
     if (gEstVide(g)) return FAUX;
-    else if (egalSom(g->sommet, s)) return VRAI;
-    else return gExisteSommet(g->suivant, s);
+    else if (egalSom(gSommetTete(g), s)) return VRAI;
+    else return gExisteSommet(gSuivant(g), s);
 }
 
 Bool gAArete(const Graphe g, const Sommet s)
@@ -167,7 +167,7 @@ ListeArete gAdjacenceSommet(const Graphe g, const Sommet s)
 static Nat gNombreSommetsAux(const Graphe g, Nat n)
 {
     if (gEstVide(g)) return n;
-    else return gNombreSommetsAux(g->suivant, n+1);
+    else return gNombreSommetsAux(gSuivant(g), n+1);
 }
 
 Nat gNombreSommets(const Graphe g)
@@ -179,7 +179,7 @@ Nat gNombreSommets(const Graphe g)
 static Nat gNombreAretesAux(const Graphe g, Nat n)
 {
     if (gEstVide(g)) return n;
-    else return gNombreAretesAux(g->suivant, n + ltaille(g->listeadjacence));
+    else return gNombreAretesAux(gSuivant(g), n + ltaille(gAdjacenceTete(g)));
 }
 
 Nat gNombreAretes(const Graphe g)
@@ -204,16 +204,16 @@ Ent gPoidsArete(const Graphe g, const Sommet a, const Sommet b)
 Graphe gPSommet(const Graphe g, const Sommet s)
 {
     if (gEstVide(g)) return NULL;
-    else if (egalSom(g->sommet, s)) return g;
-    else return gPSommet(g->suivant, s);
+    else if (egalSom(gSommetTete(g), s)) return g;
+    else return gPSommet(gSuivant(g), s);
 }
 
 static Bool gEgaliteAux(const Graphe g, const Graphe h)
 {
     if (g == NULL) return VRAI;
-    else if (!gExisteSommet(h, g->sommet)) return FAUX;
-    else if (!lega(gAdjacenceSommet(h, g->sommet), g->listeadjacence)) return FAUX;
-    else return gEgaliteAux(g->suivant, h);
+    else if (!gExisteSommet(h, gSommetTete(g))) return FAUX;
+    else if (!lega(gAdjacenceSommet(h, gSommetTete(g)), gAdjacenceTete(g))) return FAUX;
+    else return gEgaliteAux(gSuivant(g), h);
 }
 
 Bool gEgalite(const Graphe g, const Graphe h)
@@ -227,7 +227,7 @@ Bool gEgalite(const Graphe g, const Graphe h)
 static Graphe gCopierSommets(Graphe copie, Graphe g)
 {
     if (g == NULL) return copie;
-    else return gCopierSommets(gAjouterSommet(copie, g->sommet), g->suivant);
+    else return gCopierSommets(gAjouterSommet(copie, gSommetTete(g)), gSuivant(g));
 }
 
 static Graphe gCopierAretes(Graphe copie, Graphe g)
@@ -236,9 +236,9 @@ static Graphe gCopierAretes(Graphe copie, Graphe g)
 
     while (g != NULL)
     {
-        c = gPSommet(copie, g->sommet);
-        c->listeadjacence = lcopie(g->listeadjacence);
-        g = g->suivant;
+        c = gPSommet(copie, gSommetTete(g));
+        c->listeadjacence = lcopie(gAdjacenceTete(g));
+        g = gSuivant(g);
     }
 
     return copie;
@@ -255,9 +255,9 @@ Graphe gLiberer(Graphe g)
         return NULL;
     else
     {
-        Graphe g0 = g->suivant;
-        g->sommet = libererSommet(g->sommet);
-        g->listeadjacence = lliberer(g->listeadjacence);
+        Graphe g0 = gSuivant(g);
+        g->sommet = libererSommet(gSommetTete(g));
+        g->listeadjacence = lliberer(gAdjacenceTete(g));
         free(g);
 
         return gLiberer(g0);

@@ -106,9 +106,7 @@ Graphe gModifierArete(Graphe g, const Sommet a, const Sommet b, Ent p)
     if (!gExisteSommet(g, b))
         g = gAjouterSommet(g, b);
 
-    if (!gExisteArete(g, a, b))
-        gAjouterArete(g, a, b, p);
-    else
+    if (gExisteArete(g, a, b))
     {
         Graphe ga = gPSommet(g, a);
         Graphe gb = gPSommet(g, b);

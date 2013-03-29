@@ -20,10 +20,8 @@ GrapheConnexe gcAjouterSommet(GrapheConnexe g, const Sommet s)
 
 GrapheConnexe gcAjouterArete(GrapheConnexe g, const Sommet a, const Sommet b, Ent p)
 {
-    if (gExisteSommet(g, a) || gExisteSommet(g, b))
-    {
+    if (gEstVide(g) || gExisteSommet(g, a) || gExisteSommet(g, b))
         g = gAjouterArete(g, a, b, p);
-    }
 
     return g;
 }

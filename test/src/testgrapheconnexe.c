@@ -14,14 +14,12 @@ static GrapheConnexe gc10 = NULL;
 static GrapheConnexe gc11 = NULL;
 static GrapheConnexe gc12 = NULL;
 
-
 int init_suiteGrapheConnexe(void)
 {
     gc0 = gcNouv();
 
     gc1 = gcAjouterSommet(gcNouv(), "a");
     gc2 = gcAjouterSommet(gcAjouterSommet(gcNouv(), "a"), "b");
-
 
     gc3 = gcAjouterSommet(gcNouv(), "a");
     gc3 = gcAjouterArete(gcAjouterArete(gc3, "a", "b", 1), "a", "c", 2);
@@ -35,7 +33,7 @@ int init_suiteGrapheConnexe(void)
     gc5 = gcAjouterArete(gcAjouterArete(gc5, "b", "d", 1), "a", "c", 4);
 
     gc6 = gcAjouterSommet(gcNouv(), "a");
-    gc6 = gcAjouterArete(gcAjouterArete(gc6, "a", "b", 1), "b", "c", 2);
+    gc6 = gcAjouterArete(gcAjouterArete(gc6, "a", "b", 1), "a", "c", 2);
     gc6 = gcAjouterArete(gcAjouterArete(gc6, "b", "d", 1), "e", "f", 2);
 
     gc7 = gcAjouterArete(gcAjouterArete(gcNouv(), "a", "b", 1), "a", "c", 2);
@@ -136,6 +134,7 @@ void test_grapheconnexe_gcAjouterArete(void)
     CU_ASSERT(gPoidsArete(gc4, "a", "c") == 2);
     CU_ASSERT(gPoidsArete(gc4, "b", "d") == 1);
 
+
     CU_ASSERT(gEstVide(gc5) == FAUX);
     CU_ASSERT(gEstConnexe(gc5) == VRAI);
     CU_ASSERT(gNombreSommets(gc5) == 4);
@@ -151,6 +150,7 @@ void test_grapheconnexe_gcAjouterArete(void)
     CU_ASSERT(gPoidsArete(gc5, "a", "c") == 2);
     CU_ASSERT(gPoidsArete(gc5, "b", "d") == 1);
     CU_ASSERT(gPoidsArete(gc5, "a", "c") != 4);
+
 
     CU_ASSERT(gEstVide(gc6) == FAUX);
     CU_ASSERT(gEstConnexe(gc6) == VRAI);

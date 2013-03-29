@@ -376,21 +376,19 @@ void test_graphe_gModifierArete(void)
     CU_ASSERT(gPoidsArete(g16, "azer", "qsdf") == 42);
 
     CU_ASSERT(gNombreSommets(g17) == 4);
-    CU_ASSERT(gNombreAretes(g17) == 4);
+    CU_ASSERT(gNombreAretes(g17) == 3);
     CU_ASSERT(gPoidsArete(g17, "azer", "wxcv") == 1);
     CU_ASSERT(gPoidsArete(g17, "azer", "azer") == 2);
     CU_ASSERT(gPoidsArete(g17, "azer", "qsdf") == 3);
-    CU_ASSERT(gExisteArete(g17, "uiop", "azer") == VRAI);
-    CU_ASSERT(gPoidsArete(g17, "uiop", "azer") == 67);
+    CU_ASSERT(gExisteArete(g17, "uiop", "azer") == FAUX);
 
-    CU_ASSERT(gNombreSommets(g18) == 5);
-    CU_ASSERT(gNombreAretes(g18) == 4);
+    CU_ASSERT(gNombreSommets(g18) == 4);
+    CU_ASSERT(gNombreAretes(g18) == 3);
     CU_ASSERT(gPoidsArete(g18, "azer", "wxcv") == 1);
     CU_ASSERT(gPoidsArete(g18, "azer", "azer") == 2);
     CU_ASSERT(gPoidsArete(g18, "azer", "qsdf") == 3);
-    CU_ASSERT(gExisteSommet(g18, "hjkl") == VRAI);
-    CU_ASSERT(gExisteArete(g18, "hjkl", "uiop") == VRAI);
-    CU_ASSERT(gPoidsArete(g18, "hjkl", "uiop") == 123);
+    CU_ASSERT(gExisteSommet(g18, "hjkl") == FAUX);
+    CU_ASSERT(gExisteArete(g18, "hjkl", "uiop") == FAUX);
 }
 
 void test_graphe_gEgalite(void)

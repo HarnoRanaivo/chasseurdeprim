@@ -20,14 +20,9 @@ GrapheConnexe gcAjouterSommet(GrapheConnexe g, const Sommet s)
 
 GrapheConnexe gcAjouterArete(GrapheConnexe g, const Sommet a, const Sommet b, Ent p)
 {
-    if (!gExisteArete(g, a, b) && (gExisteSommet(g, a) || gExisteSommet(g, b)))
+    if (gExisteSommet(g, a) || gExisteSommet(g, b))
     {
-        if (!gExisteSommet(g, a))
-            g = gAjouterSommet(g, a);
-        else if (!gExisteSommet(g, b))
-            g = gAjouterSommet(g, b);
-
-        g = gModifierArete(g, a, b, p);
+        g = gAjouterArete(g, a, b, p);
     }
 
     return g;

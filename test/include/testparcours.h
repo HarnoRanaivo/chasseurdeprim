@@ -16,6 +16,10 @@ int init_suiteParcours(void);
 
 int clean_suiteParcours(void);
 
+void test_parcours_gEstConnexe(void);
+
+void test_parcours_gACycle(void);
+
 int add_testparcours(void);
 
 #endif /* __TEST_PARCOURS_H */

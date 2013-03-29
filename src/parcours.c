@@ -40,7 +40,7 @@ Bool gEstConnexe(const Graphe g)
         return FAUX;
     else if (n == 1)
     {
-        return gExisteArete(g, gSommetTete(g), gSommetTete(g));
+        return VRAI;
     }
     else
     {

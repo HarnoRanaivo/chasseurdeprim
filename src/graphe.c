@@ -60,18 +60,18 @@ Graphe gSupprimerSommet(Graphe g, const Sommet s)
 {
     if (!gEstVide(g) && gExisteSommet(g, s))
     {
-        Graphe gp = gPrecedent(g, s);
-
-        if (gp == NULL)
+        if (egalSom(gSommetTete(g), s))
         {
+            Graphe gs = gSuivant(g);
             while (!lest_vide(gAdjacenceTete(g)))
                 g = gSupprimerArete(g, s, lsommet_tete(gAdjacenceTete(g)));
             g->sommet = libererSommet(gSommetTete(g));
             free(g);
-            g = NULL;
+            g = gs;
         }
         else
         {
+            Graphe gp = gPrecedent(g, s);
             Graphe gps = gSuivant(gSuivant(gp));
 
             while (!lest_vide(gAdjacenceTete(gSuivant(gp))))
@@ -224,29 +224,25 @@ Bool gEgalite(const Graphe g, const Graphe h)
         return gEgaliteAux(g, h);
 }
 
-static Graphe gCopierSommets(Graphe copie, Graphe g)
+Graphe gCopier(const Graphe g)
 {
-    if (g == NULL) return copie;
-    else return gCopierSommets(gAjouterSommet(copie, gSommetTete(g)), gSuivant(g));
-}
+    Graphe g0 = g;
+    Graphe copie = gNouv();
 
-static Graphe gCopierAretes(Graphe copie, Graphe g)
-{
-    Graphe c = NULL;
-
-    while (g != NULL)
+    while (!gEstVide(g0))
     {
-        c = gPSommet(copie, gSommetTete(g));
-        c->listeadjacence = lcopie(gAdjacenceTete(g));
-        g = gSuivant(g);
+        Sommet s = gSommetTete(g0);
+        copie = gAjouterSommet(copie, s);
+        ListeArete l = gAdjacenceTete(g0);
+        while (!lest_vide(l))
+        {
+            copie = gAjouterArete(copie, s, lsommet_tete(l), lpoids_tete(l));
+            l = lsuiv(l);
+        }
+        g0 = gSuivant(g0);
     }
 
     return copie;
-}
-
-Graphe gCopier(const Graphe g)
-{
-    return gCopierAretes(gCopierSommets(gNouv(), g), g);
 }
 
 Graphe gLiberer(Graphe g)

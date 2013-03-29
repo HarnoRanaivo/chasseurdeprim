@@ -70,21 +70,27 @@ Bool gACycle(const Graphe g)
         Sommet s1;
         CouleursGraphe cg = cgInit(g);
 
-        cg = cgModifierSommet(cg, gSommetTete(g), GRIS);
-
-        while((s1 = cgPremierSommetGris(cg)) != NULL)
+        while (cgNombreSommetsBlancs(cg) > 0)
         {
-            ListeArete l = gAdjacenceSommet(g, s1);
-            while(!lest_vide(l))
+            cg = cgModifierSommet(cg, cgPremierSommetBlanc(cg), GRIS);
+
+            while((s1 = cgPremierSommetGris(cg)) != NULL)
             {
-                Sommet s2 = lsommet_tete(l);
-                if (cgCouleurSommet(cg, s2) == BLANC)
-                    cg = cgModifierSommet(cg, s2, GRIS);
-                else if (cgCouleurSommet(cg, s2) == GRIS)
-                    return VRAI;
-                l = lsuiv(l);
+                ListeArete l = gAdjacenceSommet(g, s1);
+                while(!lest_vide(l))
+                {
+                    Sommet s2 = lsommet_tete(l);
+                    if (cgCouleurSommet(cg, s2) == BLANC)
+                        cg = cgModifierSommet(cg, s2, GRIS);
+                    else if (cgCouleurSommet(cg, s2) == GRIS)
+                    {
+                        cg = cgLiberer(cg);
+                        return VRAI;
+                    }
+                    l = lsuiv(l);
+                }
+                cg = cgModifierSommet(cg, s1, NOIR);
             }
-            cg = cgModifierSommet(cg, s1, NOIR);
         }
 
         cg = cgLiberer(cg);

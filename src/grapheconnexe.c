@@ -38,7 +38,7 @@ GrapheConnexe gcSupprimerSommet(GrapheConnexe g, const Sommet s)
     }
     else
     {
-        g0 = gLiberer(g);
+        g0 = gLiberer(g0);
 
         return g;
     }

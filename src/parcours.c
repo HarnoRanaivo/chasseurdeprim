@@ -11,19 +11,22 @@ CouleursGraphe gParcoursLargeur(const Graphe g)
     Sommet s1;
     CouleursGraphe cg = cgInit(g);
 
-    cg = cgModifierSommet(cg, gSommetTete(g), GRIS);
-
-    while((s1 = cgPremierSommetGris(cg)) != NULL)
+    if (!gEstVide(g))
     {
-        ListeArete l;
-        while(!lest_vide((l = gAdjacenceSommet(g, s1))))
+        cg = cgModifierSommet(cg, gSommetTete(g), GRIS);
+
+        while((s1 = cgPremierSommetGris(cg)) != NULL)
         {
-            Sommet s2 = lsommet_tete(l);
-            if (cgCouleurSommet(cg, s2) == BLANC)
-                cg = cgModifierSommet(cg, s2, GRIS);
-            l = lsuiv(l);
+            ListeArete l;
+            while(!lest_vide((l = gAdjacenceSommet(g, s1))))
+            {
+                Sommet s2 = lsommet_tete(l);
+                if (cgCouleurSommet(cg, s2) == BLANC)
+                    cg = cgModifierSommet(cg, s2, GRIS);
+                l = lsuiv(l);
+            }
+            cg = cgModifierSommet(cg, s1, NOIR);
         }
-        cg = cgModifierSommet(cg, s1, NOIR);
     }
 
     return cg;
@@ -31,40 +34,62 @@ CouleursGraphe gParcoursLargeur(const Graphe g)
 
 Bool gEstConnexe(const Graphe g)
 {
-    int n;
-    CouleursGraphe cg;
+    int n = gNombreSommets(g);
 
-    cg = gParcoursLargeur(g);
-    n = cgNombreSommetsNoirs(cg);
-    cg = cgLiberer(cg);
+    if (n == 0)
+        return FAUX;
+    else if (n == 1)
+    {
+        return gExisteArete(g, gSommetTete(g), gSommetTete(g));
+    }
+    else
+    {
+        int noirs;
+        CouleursGraphe cg;
 
-    return gNombreSommets(g) == n;
+        cg = gParcoursLargeur(g);
+        noirs = cgNombreSommetsNoirs(cg);
+        cg = cgLiberer(cg);
+
+        return gNombreSommets(g) == noirs;
+    }
 }
 
 Bool gACycle(const Graphe g)
 {
-    Sommet s1;
-    CouleursGraphe cg = cgInit(g);
+    int n = gNombreSommets(g);
 
-    cg = cgModifierSommet(cg, gSommetTete(g), GRIS);
-
-    while((s1 = cgPremierSommetGris(cg)) != NULL)
+    if (n == 0)
+        return FAUX;
+    else if (n == 1)
     {
-        ListeArete l;
-        while(!lest_vide((l = gAdjacenceSommet(g, s1))))
-        {
-            Sommet s2 = lsommet_tete(l);
-            if (cgCouleurSommet(cg, s2) == BLANC)
-                cg = cgModifierSommet(cg, s2, GRIS);
-            else if (cgCouleurSommet(cg, s2) == GRIS)
-                return FAUX;
-            l = lsuiv(l);
-        }
-        cg = cgModifierSommet(cg, s1, NOIR);
+        return gExisteArete(g, gSommetTete(g), gSommetTete(g));
     }
+    else
+    {
+        Sommet s1;
+        CouleursGraphe cg = cgInit(g);
 
-    cg = cgLiberer(cg);
+        cg = cgModifierSommet(cg, gSommetTete(g), GRIS);
 
-    return VRAI;
+        while((s1 = cgPremierSommetGris(cg)) != NULL)
+        {
+            ListeArete l;
+            while(!lest_vide((l = gAdjacenceSommet(g, s1))))
+            {
+                Sommet s2 = lsommet_tete(l);
+                if (cgCouleurSommet(cg, s2) == BLANC)
+                    cg = cgModifierSommet(cg, s2, GRIS);
+                else if (cgCouleurSommet(cg, s2) == GRIS)
+                    return FAUX;
+                l = lsuiv(l);
+            }
+            cg = cgModifierSommet(cg, s1, NOIR);
+        }
+
+        cg = cgLiberer(cg);
+
+        return VRAI;
+    }
 
 }

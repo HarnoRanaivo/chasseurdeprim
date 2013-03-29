@@ -32,13 +32,13 @@ Graphe gAjouterArete(Graphe g, const Sommet a, const Sommet b, Ent p)
 {
     Graphe ga, gb;
 
-    if (!gExisteSommet(g, a))
-        g = gAjouterSommet(g, a);
-    if (!gExisteSommet(g, b))
-        g = gAjouterSommet(g, b);
-
     if (!gExisteArete(g, a, b))
     {
+        if (!gExisteSommet(g, a))
+            g = gAjouterSommet(g, a);
+        if (!gExisteSommet(g, b))
+            g = gAjouterSommet(g, b);
+
         ga = gPSommet(g, a);
         ga->listeadjacence = lajar(ga->listeadjacence, b, p);
         gb = gPSommet(g, b);
@@ -101,11 +101,6 @@ Graphe gSupprimerArete(Graphe g, const Sommet a, const Sommet b)
 
 Graphe gModifierArete(Graphe g, const Sommet a, const Sommet b, Ent p)
 {
-    if (!gExisteSommet(g, a))
-        g = gAjouterSommet(g, a);
-    if (!gExisteSommet(g, b))
-        g = gAjouterSommet(g, b);
-
     if (gExisteArete(g, a, b))
     {
         Graphe ga = gPSommet(g, a);

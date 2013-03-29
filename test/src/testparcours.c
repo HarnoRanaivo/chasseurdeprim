@@ -5,22 +5,25 @@ static Graphe g1 = NULL;
 static Graphe g2 = NULL;
 static Graphe g3 = NULL;
 static Graphe g4 = NULL;
+static Graphe g5 = NULL;
 
 int init_suiteParcours(void)
 {
     g0 = gNouv();
 
-    g1 = gAjouterSommet(gAjouterSommet(gAjouterSommet(gAjouterSommet(gNouv(), "a"), "b"), "c"), "d");
-    g1 = gAjouterArete(gAjouterArete(g1, "a", "b", 1), "a", "c", 2);
+    g1 = gAjouterSommet(gNouv(), "a");
 
     g2 = gAjouterSommet(gAjouterSommet(gAjouterSommet(gAjouterSommet(gNouv(), "a"), "b"), "c"), "d");
-    g2 = gAjouterArete(gAjouterArete(gAjouterArete(g2, "a", "b", 1), "a", "c", 2), "b", "d", 3);
+    g2 = gAjouterArete(gAjouterArete(g2, "a", "b", 1), "a", "c", 2);
 
     g3 = gAjouterSommet(gAjouterSommet(gAjouterSommet(gAjouterSommet(gNouv(), "a"), "b"), "c"), "d");
-    g3 = gAjouterArete(gAjouterArete(gAjouterArete(g3, "a", "b", 1), "a", "c", 2), "b", "c", 3);
+    g3 = gAjouterArete(gAjouterArete(gAjouterArete(g3, "a", "b", 1), "a", "c", 2), "b", "d", 3);
 
     g4 = gAjouterSommet(gAjouterSommet(gAjouterSommet(gAjouterSommet(gNouv(), "a"), "b"), "c"), "d");
-    g4 = gAjouterArete(gAjouterArete(gAjouterArete(gAjouterArete(g4, "a", "b", 1), "a", "c", 2), "b", "c", 3), "b", "d", 4);
+    g4 = gAjouterArete(gAjouterArete(gAjouterArete(g4, "a", "b", 1), "a", "c", 2), "b", "c", 3);
+
+    g5 = gAjouterSommet(gAjouterSommet(gAjouterSommet(gAjouterSommet(gNouv(), "a"), "b"), "c"), "d");
+    g5 = gAjouterArete(gAjouterArete(gAjouterArete(gAjouterArete(g5, "a", "b", 1), "a", "c", 2), "b", "c", 3), "b", "d", 4);
 
     return 0;
 }
@@ -32,6 +35,7 @@ int clean_suiteParcours(void)
     g2 = gLiberer(g2);
     g3 = gLiberer(g3);
     g4 = gLiberer(g4);
+    g5 = gLiberer(g5);
 
     return 0;
 }
@@ -39,19 +43,19 @@ int clean_suiteParcours(void)
 void test_parcours_gEstConnexe(void)
 {
     CU_ASSERT(gEstConnexe(g0) == FAUX);
-    CU_ASSERT(gEstConnexe(g1) == FAUX);
-    CU_ASSERT(gEstConnexe(g2) == VRAI);
-    CU_ASSERT(gEstConnexe(g3) == FAUX);
-    CU_ASSERT(gEstConnexe(g4) == VRAI);
+    CU_ASSERT(gEstConnexe(g2) == FAUX);
+    CU_ASSERT(gEstConnexe(g3) == VRAI);
+    CU_ASSERT(gEstConnexe(g4) == FAUX);
+    CU_ASSERT(gEstConnexe(g5) == VRAI);
 }
 
 void test_parcours_gACycle(void)
 {
     CU_ASSERT(gACycle(g0) == FAUX);
-    CU_ASSERT(gACycle(g1) == FAUX);
     CU_ASSERT(gACycle(g2) == FAUX);
-    CU_ASSERT(gACycle(g3) == VRAI);
+    CU_ASSERT(gACycle(g3) == FAUX);
     CU_ASSERT(gACycle(g4) == VRAI);
+    CU_ASSERT(gACycle(g5) == VRAI);
 }
 
 int add_testparcours(void)

@@ -17,8 +17,8 @@ CouleursGraphe gParcoursLargeur(const Graphe g)
 
         while((s1 = cgPremierSommetGris(cg)) != NULL)
         {
-            ListeArete l;
-            while(!lest_vide((l = gAdjacenceSommet(g, s1))))
+            ListeArete l = gAdjacenceSommet(g, s1);
+            while(!lest_vide(l));
             {
                 Sommet s2 = lsommet_tete(l);
                 if (cgCouleurSommet(cg, s2) == BLANC)
@@ -74,8 +74,8 @@ Bool gACycle(const Graphe g)
 
         while((s1 = cgPremierSommetGris(cg)) != NULL)
         {
-            ListeArete l;
-            while(!lest_vide((l = gAdjacenceSommet(g, s1))))
+            ListeArete l = gAdjacenceSommet(g, s1);
+            while(!lest_vide(l));
             {
                 Sommet s2 = lsommet_tete(l);
                 if (cgCouleurSommet(cg, s2) == BLANC)

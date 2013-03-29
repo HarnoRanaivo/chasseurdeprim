@@ -83,6 +83,11 @@ int clean_suiteColoration(void)
     cg6 = cgLiberer(cg6);
     cg7 = cgLiberer(cg7);
     cg8 = cgLiberer(cg8);
+    cg9 = cgLiberer(cg9);
+    g0 = gLiberer(g0);
+    g1 = gLiberer(g1);
+    cg10 = cgLiberer(cg10);
+    cg11 = cgLiberer(cg11);
 
     return 0;
 }

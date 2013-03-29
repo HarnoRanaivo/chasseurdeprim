@@ -17,7 +17,7 @@ int init_suiteParcours(void)
     g2 = gAjouterArete(gAjouterArete(gAjouterArete(g2, "a", "b", 1), "a", "c", 2), "b", "d", 3);
 
     g3 = gAjouterSommet(gAjouterSommet(gAjouterSommet(gAjouterSommet(gNouv(), "a"), "b"), "c"), "d");
-    g3 = gAjouterArete(gAjouterArete(gAjouterArete(g2, "a", "b", 1), "a", "c", 2), "b", "c", 3);
+    g3 = gAjouterArete(gAjouterArete(gAjouterArete(g3, "a", "b", 1), "a", "c", 2), "b", "c", 3);
 
     g4 = gAjouterSommet(gAjouterSommet(gAjouterSommet(gAjouterSommet(gNouv(), "a"), "b"), "c"), "d");
     g4 = gAjouterArete(gAjouterArete(gAjouterArete(gAjouterArete(g4, "a", "b", 1), "a", "c", 2), "b", "c", 3), "b", "d", 4);

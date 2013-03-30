@@ -10,6 +10,7 @@
 #include "testcoloration.h"
 #include "testparcours.h"
 #include "testgrapheconnexe.h"
+#include "testfiletriee.h"
 
 int main(int argc, char ** argv)
 {
@@ -18,6 +19,7 @@ int main(int argc, char ** argv)
 
     add_testsommets();
     add_testarete();
+    add_testfiletriee();
     add_testliste();
     add_testgraphe();
     add_testcoloration();

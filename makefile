@@ -13,8 +13,8 @@ vpath %.o obj/
 vpath main bin/
 vpath %.a lib/
 
-main : main.o libgraphes.a | bin
-	$(CC) $(CFLAGS) $(LFLAGS) -o $(BPATH)main $(OPATH)main.o -lgraphes
+main : main.o libgraphes.a libprim.a | bin
+	$(CC) $(CFLAGS) $(LFLAGS) -o $(BPATH)main $(OPATH)main.o -lprim -lgraphes
 
 filetriee.o : filetriee.c filetriee.h base.h sommet.h arete.h
 grapheconnexe.o : grapheconnexe.c grapheconnexe.h parcours.h graphe.h liste.h sommet.h base.h
@@ -29,9 +29,13 @@ main.o : main.c base.h
 %.o : %.c | obj
 	$(CC) $(CFLAGS) -o $(OPATH)$@ -c $< $(IFLAGS)
 
-libgraphes.a : sommet.o arete.o liste.o graphe.o coloration.o parcours.o grapheconnexe.o filetriee.o | lib
-	ar -crv $(LPATH)libgraphes.a $(OPATH)sommet.o $(OPATH)arete.o $(OPATH)liste.o $(OPATH)graphe.o $(OPATH)coloration.o $(OPATH)parcours.o $(OPATH)grapheconnexe.o $(OPATH)filetriee.o
+libgraphes.a : sommet.o liste.o graphe.o coloration.o parcours.o grapheconnexe.o | lib
+	ar -crv $(LPATH)libgraphes.a $(OPATH)sommet.o $(OPATH)liste.o $(OPATH)graphe.o $(OPATH)coloration.o $(OPATH)parcours.o $(OPATH)grapheconnexe.o
 	ranlib $(LPATH)libgraphes.a
+
+libprim.a : arete.o filetriee.o | lib
+	ar -crv $(LPATH)libprim.a $(OPATH)arete.o $(OPATH)filetriee.o
+	ranlib $(LPATH)libprim.a
 
 obj :
 	mkdir obj

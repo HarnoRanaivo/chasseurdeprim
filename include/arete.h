@@ -29,7 +29,9 @@ Ent aPoids(const Arete a);
 
 Bool aAreteEgaleS2(const Arete a, const Arete b);
 
-Bool aAreteEgaleP(const Arete a, const Arete b);
+Bool aAreteEgaleP(const Arete a, const Sommet s, const Sommet t, Ent poids);
+
+Bool aAreteEgaleP2(const Arete a, const Arete b);
 
 Bool aAreteEgaleS(const Arete a, const Sommet s, const Sommet t);
 

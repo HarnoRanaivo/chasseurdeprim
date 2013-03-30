@@ -40,9 +40,14 @@ Bool aAreteEgaleS2(const Arete a, const Arete b)
     return aAreteEgaleS(a, aA(b), aB(b));
 }
 
-Bool aAreteEgaleP(const Arete a, const Arete b)
+Bool aAreteEgaleP(const Arete a, const Sommet s, const Sommet t, Ent poids)
 {
-    return aAreteEgaleS2(a, b) && (aPoids(a) == aPoids(b));
+    return aAreteEgaleS(a, s, t) && (aPoids(a) == poids);
+}
+
+Bool aAreteEgaleP2(const Arete a, const Arete b)
+{
+    return aAreteEgaleP(a, aA(b), aB(b), aPoids(b));
 }
 
 Bool aAreteEgaleS(const Arete a, const Sommet s, const Sommet t)

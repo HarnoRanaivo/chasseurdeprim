@@ -16,6 +16,7 @@ vpath %.a lib/
 main : main.o libgraphes.a | bin
 	$(CC) $(CFLAGS) $(LFLAGS) -o $(BPATH)main $(OPATH)main.o -lgraphes
 
+filetriee.o : filetriee.c filetriee.h base.h sommet.h arete.h
 grapheconnexe.o : grapheconnexe.c grapheconnexe.h parcours.h graphe.h liste.h sommet.h base.h
 parcours.o : parcours.c parcours.h coloration.h graphe.h sommet.h base.h
 coloration.o : coloration.c coloration.h graphe.h sommet.h base.h
@@ -28,8 +29,8 @@ main.o : main.c base.h
 %.o : %.c | obj
 	$(CC) $(CFLAGS) -o $(OPATH)$@ -c $< $(IFLAGS)
 
-libgraphes.a : sommet.o arete.o liste.o graphe.o coloration.o parcours.o grapheconnexe.o | lib
-	ar -crv $(LPATH)libgraphes.a $(OPATH)sommet.o $(OPATH)arete.o $(OPATH)liste.o $(OPATH)graphe.o $(OPATH)coloration.o $(OPATH)parcours.o $(OPATH)grapheconnexe.o
+libgraphes.a : sommet.o arete.o liste.o graphe.o coloration.o parcours.o grapheconnexe.o filetriee.o | lib
+	ar -crv $(LPATH)libgraphes.a $(OPATH)sommet.o $(OPATH)arete.o $(OPATH)liste.o $(OPATH)graphe.o $(OPATH)coloration.o $(OPATH)parcours.o $(OPATH)grapheconnexe.o $(OPATH)filetriee.o
 	ranlib $(LPATH)libgraphes.a
 
 obj :

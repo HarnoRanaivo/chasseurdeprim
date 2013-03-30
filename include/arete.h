@@ -27,6 +27,12 @@ Sommet aB(const Arete a);
 
 Ent aPoids(const Arete a);
 
+Bool aAreteEgaleS2(const Arete a, const Arete b);
+
+Bool aAreteEgaleP(const Arete a, const Arete b);
+
+Bool aAreteEgaleS(const Arete a, const Sommet s, const Sommet t);
+
 Arete aLiberer(Arete a);
 
 #endif /* __ARETE_H */

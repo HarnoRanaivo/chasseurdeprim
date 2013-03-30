@@ -4,6 +4,7 @@
 
 #include "base.h"
 #include "testsommet.h"
+#include "testarete.h"
 #include "testliste.h"
 #include "testgraphe.h"
 #include "testcoloration.h"
@@ -16,6 +17,7 @@ int main(int argc, char ** argv)
         return CU_get_error();
 
     add_testsommets();
+    add_testarete();
     add_testliste();
     add_testgraphe();
     add_testcoloration();

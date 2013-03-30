@@ -35,6 +35,21 @@ Ent aPoids(const Arete a)
     return a->poids;
 }
 
+Bool aAreteEgaleS2(const Arete a, const Arete b)
+{
+    return aAreteEgaleS(a, aA(b), aB(b));
+}
+
+Bool aAreteEgaleP(const Arete a, const Arete b)
+{
+    return aAreteEgaleS2(a, b) && (aPoids(a) == aPoids(b));
+}
+
+Bool aAreteEgaleS(const Arete a, const Sommet s, const Sommet t)
+{
+    return (egalSom(aA(a), s) && egalSom(aB(a), t)) || (egalSom(aA(a), t) && egalSom(aB(a), s));
+}
+
 Arete aLiberer(Arete a)
 {
     if (a != NULL)

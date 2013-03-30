@@ -107,7 +107,10 @@ Arete ftAreteTete(const FileTriee f)
 
 FileTriee ftSuivante(const FileTriee f)
 {
-    return f->suivante;
+    if (!ftEstVide(f))
+        return f->suivante;
+    else
+        return NULL;
 }
 
 FileTriee ftLiberer(FileTriee f)

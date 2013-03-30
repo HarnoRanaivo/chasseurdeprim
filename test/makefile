@@ -12,8 +12,8 @@ vpath %.h include/ ../include/
 vpath %.o obj/
 vpath main bin/
 
-main : main.o libgraphes.a testsommet.o testarete.o testliste.o testgraphe.o testcoloration.o testparcours.o testgrapheconnexe.o testfiletriee.o | bin
-	$(CC) $(CFLAGS) -o $(BPATH)main $(OPATH)main.o $(OPATH)testsommet.o $(OPATH)testarete.o $(OPATH)testliste.o $(OPATH)testgraphe.o $(OPATH)testcoloration.o $(OPATH)testparcours.o $(OPATH)testgrapheconnexe.o $(OPATH)testfiletriee.o $(LFLAGS) -lcunit -lgraphes
+main : main.o libtests.a libgraphes.a | bin
+	$(CC) $(CFLAGS) -o $(BPATH)main $(OPATH)main.o $(LFLAGS) -lcunit -ltests -lgraphes
 
 testfiletriee.o : testfiletriee.c testfiletriee.h filetriee.h sommet.h arete.h base.h
 testgrapheconnexe.o : testgrapheconnexe.c testgrapheconnexe.h grapheconnexe.h parcours.h graphe.h base.h
@@ -41,6 +41,10 @@ main.o : main.c base.h
 libgraphes.a : sommet.o arete.o liste.o graphe.o coloration.o parcours.o grapheconnexe.o filetriee.o | lib
 	ar -crv $(LPATH)libgraphes.a $(OPATH)sommet.o $(OPATH)arete.o $(OPATH)liste.o $(OPATH)graphe.o $(OPATH)coloration.o $(OPATH)parcours.o $(OPATH)grapheconnexe.o $(OPATH)filetriee.o
 	ranlib $(LPATH)libgraphes.a
+
+libtests.a : testsommet.o testarete.o testliste.o testgraphe.o testcoloration.o testparcours.o testgrapheconnexe.o testfiletriee.o | lib
+	ar -crv $(LPATH)libtests.a $(OPATH)testsommet.o $(OPATH)testarete.o $(OPATH)testliste.o $(OPATH)testgraphe.o $(OPATH)testcoloration.o $(OPATH)testparcours.o $(OPATH)testgrapheconnexe.o $(OPATH)testfiletriee.o
+	ranlib $(LPATH)libtests.a
 
 obj :
 	mkdir obj

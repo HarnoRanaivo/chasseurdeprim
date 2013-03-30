@@ -81,6 +81,78 @@ void test_arete_aPoids(void)
     CU_ASSERT(aPoids(a2) == 42);
 }
 
+void test_arete_aAreteEgaleS(void)
+{
+    CU_ASSERT(aAreteEgaleS(a0, "a", "b") == VRAI);
+    CU_ASSERT(aAreteEgaleS(a0, "b", "a") == VRAI);
+    CU_ASSERT(aAreteEgaleS(a0, "e", "g") == FAUX);
+    CU_ASSERT(aAreteEgaleS(a0, "g", "e") == FAUX);
+    CU_ASSERT(aAreteEgaleS(a0, "a", "g") == FAUX);
+    CU_ASSERT(aAreteEgaleS(a0, "g", "a") == FAUX);
+
+    CU_ASSERT(aAreteEgaleS(a1, "a", "b") == VRAI);
+    CU_ASSERT(aAreteEgaleS(a1, "b", "a") == VRAI);
+    CU_ASSERT(aAreteEgaleS(a1, "e", "g") == FAUX);
+    CU_ASSERT(aAreteEgaleS(a1, "g", "e") == FAUX);
+    CU_ASSERT(aAreteEgaleS(a1, "a", "g") == FAUX);
+    CU_ASSERT(aAreteEgaleS(a1, "g", "a") == FAUX);
+
+    CU_ASSERT(aAreteEgaleS(a2, "azer", "qsdf") == VRAI);
+    CU_ASSERT(aAreteEgaleS(a2, "qsdf", "azer") == VRAI);
+    CU_ASSERT(aAreteEgaleS(a2, "hjkl", "qsdf") == FAUX);
+    CU_ASSERT(aAreteEgaleS(a2, "qsdf", "hjkl") == FAUX);
+    CU_ASSERT(aAreteEgaleS(a2, "hjkl", "wxcv") == FAUX);
+    CU_ASSERT(aAreteEgaleS(a2, "wxcv", "hjkl") == FAUX);
+}
+
+void test_arete_aAreteEgaleS2(void)
+{
+    CU_ASSERT(aAreteEgaleS2(a0, a0) == VRAI);
+    CU_ASSERT(aAreteEgaleS2(a0, a1) == VRAI);
+    CU_ASSERT(aAreteEgaleS2(a0, a2) == FAUX);
+
+    CU_ASSERT(aAreteEgaleS2(a1, a1) == VRAI);
+    CU_ASSERT(aAreteEgaleS2(a1, a0) == VRAI);
+    CU_ASSERT(aAreteEgaleS2(a1, a2) == FAUX);
+
+    CU_ASSERT(aAreteEgaleS2(a2, a2) == VRAI);
+    CU_ASSERT(aAreteEgaleS2(a2, a0) == FAUX);
+    CU_ASSERT(aAreteEgaleS2(a2, a1) == FAUX);
+}
+
+void test_arete_aAreteEgaleP(void)
+{
+    CU_ASSERT(aAreteEgaleP(a0, "a", "b", 1) == VRAI);
+    CU_ASSERT(aAreteEgaleP(a0, "a", "b", 2) == FAUX);
+    CU_ASSERT(aAreteEgaleP(a0, "a", "c", 1) == FAUX);
+    CU_ASSERT(aAreteEgaleP(a0, "c", "c", 1) == FAUX);
+
+    CU_ASSERT(aAreteEgaleP(a1, "a", "b", 2) == VRAI);
+    CU_ASSERT(aAreteEgaleP(a1, "a", "b", 1) == FAUX);
+    CU_ASSERT(aAreteEgaleP(a1, "a", "c", 2) == FAUX);
+    CU_ASSERT(aAreteEgaleP(a1, "c", "b", 2) == FAUX);
+
+    CU_ASSERT(aAreteEgaleP(a2, "azer", "qsdf", 42) == VRAI);
+    CU_ASSERT(aAreteEgaleP(a2, "azer", "qsdf", 1) == FAUX);
+    CU_ASSERT(aAreteEgaleP(a2, "hjkl", "qsdf", 42) == FAUX);
+    CU_ASSERT(aAreteEgaleP(a2, "azer", "hjkl", 42) == FAUX);
+}
+
+void test_arete_aAreteEgaleP2(void)
+{
+    CU_ASSERT(aAreteEgaleP2(a0, a0) == VRAI);
+    CU_ASSERT(aAreteEgaleP2(a0, a1) == FAUX);
+    CU_ASSERT(aAreteEgaleP2(a0, a2) == FAUX);
+
+    CU_ASSERT(aAreteEgaleP2(a1, a1) == VRAI);
+    CU_ASSERT(aAreteEgaleP2(a1, a0) == FAUX);
+    CU_ASSERT(aAreteEgaleP2(a1, a2) == FAUX);
+
+    CU_ASSERT(aAreteEgaleP2(a2, a2) == VRAI);
+    CU_ASSERT(aAreteEgaleP2(a2, a0) == FAUX);
+    CU_ASSERT(aAreteEgaleP2(a2, a1) == FAUX);
+}
+
 int add_testarete(void)
 {
     CU_pSuite pSuite = NULL;
@@ -95,6 +167,10 @@ int add_testarete(void)
         || CU_add_test(pSuite, "aA", test_arete_aA) == NULL
         || CU_add_test(pSuite, "aB", test_arete_aB) == NULL
         || CU_add_test(pSuite, "aPoids", test_arete_aPoids) == NULL
+        || CU_add_test(pSuite, "aAreteEgaleS", test_arete_aAreteEgaleS) == NULL
+        || CU_add_test(pSuite, "aAreteEgaleS2", test_arete_aAreteEgaleS2) == NULL
+        || CU_add_test(pSuite, "aAreteEgaleP", test_arete_aAreteEgaleP) == NULL
+        || CU_add_test(pSuite, "aAreteEgaleP2", test_arete_aAreteEgaleP2) == NULL
         )
     {
         CU_cleanup_registry();

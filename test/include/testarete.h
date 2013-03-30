@@ -22,6 +22,14 @@ void test_arete_aB(void);
 
 void test_arete_aPoids(void);
 
+void test_arete_aAreteEgaleS(void);
+
+void test_arete_aAreteEgaleS2(void);
+
+void test_arete_aAreteEgaleP(void);
+
+void test_arete_aAreteEgaleP2(void);
+
 int add_testarete(void);
 
 #endif /* __TESTARETE_H */

@@ -13,26 +13,29 @@ FileTriee ftNouv(void)
 
 FileTriee ftAjouterArete(FileTriee f, const Sommet s, const Sommet t, Ent poids)
 {
-    FileTriee f0 = MALLOC(f0);
-    f0->arete = aNouv(s, t, poids);
+    if (!ftExisteArete(f, s, t))
+    {
+        FileTriee f0 = MALLOC(f0);
+        f0->arete = aNouv(s, t, poids);
 
-    if (ftEstVide(f))
-    {
-        f0->suivante = NULL;
-        f = f0;
-    }
-    else if (aPoids(ftAreteTete(f)) >= poids)
-    {
-        f0->suivante = f;
-        f = f0;
-    }
-    else
-    {
-        FileTriee fs = f;
-        while (!ftEstVide(ftSuivante(fs)) && aPoids(ftAreteTete(ftSuivante(fs))) < poids)
-            fs = ftSuivante(f);
-        f0->suivante = fs->suivante;
-        fs->suivante = f0;
+        if (ftEstVide(f))
+        {
+            f0->suivante = NULL;
+            f = f0;
+        }
+        else if (aPoids(ftAreteTete(f)) >= poids)
+        {
+            f0->suivante = f;
+            f = f0;
+        }
+        else
+        {
+            FileTriee fs = f;
+            while (!ftEstVide(ftSuivante(fs)) && aPoids(ftAreteTete(ftSuivante(fs))) < poids)
+                fs = ftSuivante(fs);
+            f0->suivante = fs->suivante;
+            fs->suivante = f0;
+        }
     }
 
     return f;

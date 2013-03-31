@@ -11,6 +11,7 @@
 #include "testparcours.h"
 #include "testgrapheconnexe.h"
 #include "testfiletriee.h"
+#include "testprim.h"
 
 int main(int argc, char ** argv)
 {

@@ -37,8 +37,7 @@ Graphe charger_graphe (char* source){
 	Ent poids;
 	char buffer2[100]; // sommet d'arrivée de 100 caractères maximum
 	
-	while (fgets (line, sizeof line, pfile) != NULL){ // vérifie si la ligne n'est pas vide
-		fscanf(source,"%s",&buffer1);
+	while (fscanf(source,"%s",&buffer1) != EOF){ // vérifie si la ligne n'est pas la fin du fichier
 		fscanf(source,"%d",&poids);
 		fscanf(source,"%s",&buffer2);
 		g = gAjouterSommet(g,buffer1); // ajoute le sommet de début de ligne

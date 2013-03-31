@@ -13,15 +13,17 @@ CouleursGraphe cgNouv(void)
 
 CouleursGraphe cgAjouterSommet(CouleursGraphe cg, const Sommet s, Couleur c)
 {
-    CouleursGraphe cg0 = NULL;
-
-    cg0 = MALLOC(cg0);
-    if (cg0 != NULL)
+    if (!cgExisteSommmet(cg, s))
     {
-        cg0->sommet = copieSommet(s);
-        cg0->couleur = c;
-        cg0->suivant = cg;
-        cg = cg0;
+        CouleursGraphe cg0 = MALLOC(cg0);
+
+        if (cg0 != NULL)
+        {
+            cg0->sommet = copieSommet(s);
+            cg0->couleur = c;
+            cg0->suivant = cg;
+            cg = cg0;
+        }
     }
 
     return cg;

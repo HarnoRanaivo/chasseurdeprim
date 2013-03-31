@@ -15,20 +15,45 @@
  * \enum Bool
  * \brief Simulation des booléens.
  */
+/**
+ * \typedef Bool
+ * \brief Simulation des booléens.
+ */
 typedef enum
 {
-    FAUX,   /** Faux. */
-    VRAI    /** Vrai. */
+    FAUX,   /**<- Faux. */
+    VRAI    /**<- Vrai. */
 } Bool;
 
-/*
- * Types de base.
+/**
+ * \typedef Nat
+ * \brief Entiers naturels.
  */
 typedef unsigned int Nat;
+/**
+ * \typedef Ent
+ * \brief Entiers relatifs.
+ */
 typedef int Ent;
+/**
+ * \typedef Reel
+ * \brief Nombres réels.
+ */
 typedef float Reel;
+/**
+ * \typedef Rat
+ * \brief Nombres rationnels.
+ */
 typedef float Rat;
+/**
+ * \typedef Car
+ * \brief Caractères.
+ */
 typedef char Car;
+/**
+ * \typedef Chaine
+ * \brief Chaîne de caractères
+ */
 typedef Car * Chaine;
 
 /**
@@ -55,7 +80,18 @@ OP(Rat)
 
 #undef OP
 
+/**
+ * \def MALLOC(P)
+ * \brief Allouer de la mémoire.
+ * \param P Pointeur.
+ */
 #define MALLOC(P) malloc(sizeof *(P))
+/**
+ * \def MALLOCN(P, N)
+ * \brief Allouer un tableau de taille N.
+ * \param P Pointeur.
+ * \param N Taille du tableau.
+ */
 #define MALLOCN(P, N) malloc((N) * sizeof *(P))
 //static inline void* MALLOC (void * p) { return malloc(sizeof(*p)) ; }
 //static inline void* MALLOCN (void * p, Nat n) { return malloc(n*sizeof(*p)) ; }

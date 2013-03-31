@@ -25,10 +25,10 @@ Graphe pArbreCouvrantMinimum(const Graphe g, const Sommet s)
 {
     Nat aretes = 0;
     Nat n = gNombreSommets(g);
-    CouleursGraphe cg = cgInit(g);
-    cg = cgModifierSommet(cg, s, NOIR);
-    Graphe arbre = gAjouterSommet(gNouv(), s);
+    CouleursGraphe cg = cgModifierSommet(cgInit(g), s, NOIR);
     FileTriee ft = pAjouterAretesIncidentes(ftNouv(), g, cg, s);
+
+    Graphe arbre = gAjouterSommet(gNouv(), s);
 
     while (aretes < n -1 && !ftEstVide(ft))
     {
@@ -54,6 +54,9 @@ Graphe pArbreCouvrantMinimum(const Graphe g, const Sommet s)
         }
         ft = ftSupprimerArete(ft, a, b);
     }
+    
+    cg = cgLiberer(cg);
+    ft = ftLiberer(ft);
 
     return arbre;
 }

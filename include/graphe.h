@@ -15,19 +15,23 @@
 #include "liste.h"
 
 /**
- * \struct graphe
- * \brief Graphe
+ * \struct Graphe
+ * \brief Graphe.
  */
-typedef struct strgraphe
+/**
+ * \typedef Graphe
+ * \brief Graphe.
+ */
+typedef struct Graphe 
 {
-    Sommet sommet;                  /** Sommet. */
-    ListeArete listeadjacence;      /** Liste d'adjacence du sommet. */
-    struct strgraphe * suivant;     /** Sommet suivant. */
-} StrGraphe, *Graphe;
+    Sommet sommet;                  /**<- Sommet. */
+    ListeArete listeadjacence;      /**<- Liste d'adjacence du sommet. */
+    struct Graphe * suivant;     /**<- Sommet suivant. */
+} *Graphe;
 
 /**
  * \brief Nouveau graphe.
- * \relatesalso graphe
+ * \relatesalso Graphe
  * \return NULL
  */
 Graphe gNouv(void);
@@ -57,7 +61,6 @@ Graphe gAjouterArete(Graphe g, const Sommet a, const Sommet b, Ent p);
  * \relatesalso Graphe
  * \param g Graphe où supprimer le sommet.
  * \param s Sommet à supprimer.
- * \pre !gAArete(g, s).
  * \return Graphe
  */
 Graphe gSupprimerSommet(Graphe g, const Sommet s);
@@ -132,7 +135,7 @@ Bool gExisteSommet(const Graphe g, const Sommet s);
  * \relatesalso Graphe
  * \param g Graphe.
  * \param s Sommet.
- * \return (booléen) VRAI si le sommet est dans le graphe, FAUX sinon.
+ * \return (booléen) VRAI si le sommet existe et a des voisins dans le graphe, FAUX sinon.
  */
 Bool gAArete(const Graphe g, const Sommet s);
 
@@ -152,7 +155,7 @@ Bool gExisteArete(const Graphe g, const Sommet a, const Sommet b);
  * \relatesalso ListeArete
  * \param g Graphe.
  * \param s Sommet.
- * \return (booléen) VRAI si le sommet est dans le graphe, FAUX sinon.
+ * \return Liste d'adjacence du sommet, s'il existe.
  */
 ListeArete gAdjacenceSommet(const Graphe g, const Sommet s);
 
@@ -187,7 +190,8 @@ Ent gPoidsArete(const Graphe g, const Sommet a, const Sommet b);
  * \brief Nombre de voisins d'un sommet.
  * \relatesalso Graphe
  * \param g Graphe.
- * \return Nombre de voisins d'un sommet.
+ * \param s Sommet.
+ * \return Nombre de voisins d'un sommet. Retournera 0 si le sommet n'existe pas.
  */
 Nat gNombreVoisins(const Graphe g, const Sommet s);
 
@@ -195,6 +199,7 @@ Nat gNombreVoisins(const Graphe g, const Sommet s);
  * \brief Obtenir Un sommet d'un graphe.
  * \relatesalso Graphe
  * \param g Graphe.
+ * \param s Sommet.
  * \return (pointeur vers) Sommet s dans le graphe.
  */
 Graphe gPSommet(const Graphe g, const Sommet s);
@@ -203,7 +208,7 @@ Graphe gPSommet(const Graphe g, const Sommet s);
  * \brief Égalité de deux graphes.
  * \param g Graphe.
  * \param h Graphe.
- * \return VRAI si les graphes sont égaux, FAUX sinon.
+ * \return VRAI si les graphes sont identiques, à l'ordre des sommets près, FAUX sinon.
  */
 Bool gEgalite(const Graphe g, const Graphe h);
 

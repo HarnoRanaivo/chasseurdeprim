@@ -16,6 +16,7 @@
 
 /**
  * \typedef Sommet
+ * \brief Sommet (chaîne de caractères.)
  */
 typedef Chaine Sommet;
 

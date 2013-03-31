@@ -14,8 +14,7 @@ Graphe gAjouterSommet(Graphe g, const Sommet s)
 {
     if (!gExisteSommet(g, s))
     {
-        Graphe g0 = NULL;
-        g0 = MALLOC(g0);
+        Graphe g0 = MALLOC(g0);
         if (g0 != NULL)
         {
             g0->sommet = copieSommet(s);

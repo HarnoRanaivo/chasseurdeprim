@@ -24,59 +24,59 @@ typedef Graphe GrapheConnexe;
 
 /**
  * \brief Nouveau graphe.
- * \relatesalso graphe
+ * \relatesalso Graphe
  * \return NULL
  */
 GrapheConnexe gcNouv(void);
 
 /**
- * \brief Ajout d'un sommet dans un graphe.
+ * \brief Ajout d'un sommet dans un graphe connexe.
  * \relatesalso GrapheConnexe
  * \param g GrapheConnexe où ajouter le sommet.
  * \param s Sommet à ajouter.
- * \return GrapheConnexe
+ * \return GrapheConnexe.
  */
 GrapheConnexe gcAjouterSommet(GrapheConnexe g, const Sommet s);
 
 /**
- * \brief Ajout d'une arête dans un graphe.
+ * \brief Ajout d'une arête dans un graphe connexe.
  * \relatesalso GrapheConnexe
  * \param g GrapheConnexe où ajouter l'arête.
  * \param a Éxtrémité de l'arête.
  * \param b Éxtrémité de l'arête.
  * \param p Poids de l'arête.
- * \return GrapheConnexe
+ * \return GrapheConnexe.
  */
 GrapheConnexe gcAjouterArete(GrapheConnexe g, const Sommet a, const Sommet b, Ent p);
 
 /**
- * \brief Suppression d'un sommet dans un graphe.
+ * \brief Suppression d'un sommet dans un graphe connexe.
  * \relatesalso GrapheConnexe
  * \param g GrapheConnexe où supprimer le sommet.
  * \param s Sommet à supprimer.
  * \pre !gAArete(g, s).
- * \return GrapheConnexe
+ * \return GrapheConnexe.
  */
 GrapheConnexe gcSupprimerSommet(GrapheConnexe g, const Sommet s);
 
 /**
- * \brief Suppression d'une arête dans un graphe.
+ * \brief Suppression d'une arête dans un graphe connexe.
  * \relatesalso GrapheConnexe
  * \param g GrapheConnexe où supprimer l'arête.
  * \param a Éxtrémité de l'arête.
  * \param b Éxtrémité de l'arête.
- * \return GrapheConnexe
+ * \return GrapheConnexe.
  */
 GrapheConnexe gcSupprimerArete(GrapheConnexe g, const Sommet a, const Sommet b);
 
 /**
- * \brief Modification d'une arête dans un graphe.
+ * \brief Modification d'une arête dans un graphe connexe.
  * \relatesalso GrapheConnexe
  * \param g GrapheConnexe où modifier l'arête.
  * \param a Éxtrémité de l'arête.
  * \param b Éxtrémité de l'arête.
  * \param p Nouveau poids de l'arête.
- * \return GrapheConnexe
+ * \return GrapheConnexe.
  */
 GrapheConnexe gcModifierArete(GrapheConnexe g, const Sommet a, const Sommet b, Ent p);
 

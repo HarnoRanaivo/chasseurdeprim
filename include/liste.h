@@ -16,11 +16,15 @@
  * \struct ListeArete
  * \brief Structure des listes d'arêtes par rapport à un sommet
  */
-typedef struct sliste{
-	struct sliste * s; /**<- Pointeur sur la structure de liste*/
+/**
+ * \typedef ListeArete
+ * \brief Structure des listes d'arêtes par rapport à un sommet
+ */
+typedef struct ListeArete{
+	struct ListeArete * s; /**<- Pointeur sur la structure de liste*/
 	Ent poids; /**<- Poids de l'arête*/
 	Sommet v; /**<- Sommet de l'arête*/
-}StrListeArete,*ListeArete;
+}*ListeArete;
 
 /**
  * \fn ListeArete listnouv ()

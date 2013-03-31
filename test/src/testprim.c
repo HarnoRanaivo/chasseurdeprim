@@ -13,6 +13,8 @@ static Graphe a2 = NULL;
 static Graphe a3 = NULL;
 static Graphe a4 = NULL;
 static Graphe a5 = NULL;
+static Graphe a6 = NULL;
+static Graphe a7 = NULL;
 
 int init_suitePrim(void)
 {
@@ -41,7 +43,7 @@ int init_suitePrim(void)
     a0 = gAjouterSommet(gAjouterSommet(gAjouterSommet(gNouv(), "a"), "b"), "c");
     a0 = gAjouterSommet(gAjouterSommet(gAjouterSommet(a0, "d"), "e"), "f");
     a0 = gAjouterArete(gAjouterArete(a0, "a", "b", 1), "a", "d", 1);
-    a0 = gAjouterArete(gAjouterArete(a0, "a", "b", 1), "b", "c", 2);
+    a0 = gAjouterArete(gAjouterArete(a0, "a", "e", 1), "b", "c", 2);
     a0 = gAjouterArete(a0, "e", "f", 3);
 
     g1 = gAjouterSommet(gAjouterSommet(gAjouterSommet(gNouv(), "a"), "b"), "c");
@@ -49,7 +51,7 @@ int init_suitePrim(void)
     g1 = gAjouterArete(gAjouterArete(g1, "a", "b", 2), "a", "c", 1);
     g1 = gAjouterArete(gAjouterArete(g1, "a", "d", 3), "a", "f", 5);
     g1 = gAjouterArete(gAjouterArete(g1, "b", "c", 2), "b", "d", 1);
-    g1 = gAjouterArete(gAjouterArete(g1, "b", "e", 1), "c", "a", 1);
+    g1 = gAjouterArete(gAjouterArete(g1, "b", "e", 1), "c", "e", 1);
     g1 = gAjouterArete(gAjouterArete(g1, "c", "f", 2), "d", "e", 1);
     g1 = gAjouterArete(gAjouterArete(g1, "d", "f", 1), "e", "f", 1);
 
@@ -71,8 +73,20 @@ int init_suitePrim(void)
     a3 = gAjouterArete(gAjouterArete(a3, "b", "e", 1), "e", "d", 1);
     a3 = gAjouterArete(a3, "d", "f", 1);
 
-    a4 = pArbreCouvrantMinimum(g0, "a");
-    a5 = pArbreCouvrantMinimum(g1, "b");
+    a4 = gAjouterSommet(gAjouterSommet(gAjouterSommet(gNouv(), "a"), "b"), "c");
+    a4 = gAjouterSommet(gAjouterSommet(gAjouterSommet(a4, "d"), "e"), "f");
+    a4 = gAjouterArete(gAjouterArete(a4, "a", "c", 1), "c", "e", 1);
+    a4 = gAjouterArete(gAjouterArete(a4, "b", "d", 1), "e", "d", 1);
+    a4 = gAjouterArete(a4, "e", "f", 1);
+
+    a5 = gAjouterSommet(gAjouterSommet(gAjouterSommet(gNouv(), "a"), "b"), "c");
+    a5 = gAjouterSommet(gAjouterSommet(gAjouterSommet(a5, "d"), "e"), "f");
+    a5 = gAjouterArete(gAjouterArete(a5, "a", "c", 1), "c", "e", 1);
+    a5 = gAjouterArete(gAjouterArete(a5, "b", "d", 1), "e", "d", 1);
+    a5 = gAjouterArete(a5, "d", "f", 1);
+
+    a6 = pArbreCouvrantMinimum(g0, "a");
+    a7 = pArbreCouvrantMinimum(g1, "b");
 
     return 0;
 }
@@ -92,6 +106,8 @@ int clean_suitePrim(void)
     a3 = gLiberer(a3);
     a4 = gLiberer(a4);
     a5 = gLiberer(a5);
+    a6 = gLiberer(a6);
+    a7 = gLiberer(a7);
 
     return 0;
 }
@@ -104,6 +120,9 @@ void test_prim_pAjouterAretesIncidentes(void)
     CU_ASSERT(ftExisteArete(ft0, "a", "c") == VRAI);
     CU_ASSERT(ftExisteArete(ft0, "a", "d") == VRAI);
     CU_ASSERT(ftExisteArete(ft0, "a", "e") == VRAI);
+    CU_ASSERT(aPoids(ftAreteTete(ft0)) == 1);
+    CU_ASSERT(aPoids(ftAreteTete(ftSuivante(ft0))) == 1);
+    CU_ASSERT(aPoids(ftAreteTete(ftSuivante(ftSuivante(ft0)))) == 1);
     CU_ASSERT(aAreteEgaleP(ftAreteTete(ftSuivante(ftSuivante(ftSuivante(ft0)))), "a", "c", 3) == VRAI);
 
     CU_ASSERT(ftEstVide(ft1) == FAUX);
@@ -125,26 +144,30 @@ void test_prim_pAjouterAretesIncidentes(void)
     CU_ASSERT(ftExisteArete(ft2, "e", "c") == VRAI);
     CU_ASSERT(ftExisteArete(ft2, "e", "d") == VRAI);
     CU_ASSERT(ftExisteArete(ft2, "e", "f") == VRAI);
+    CU_ASSERT(aPoids(ftAreteTete(ft2)) == 1);
+    CU_ASSERT(aPoids(ftAreteTete(ftSuivante(ft2))) == 1);
     CU_ASSERT(aAreteEgaleP(ftAreteTete(ftSuivante(ftSuivante(ft2))), "e", "d", 2) == VRAI);
+    CU_ASSERT(aPoids(ftAreteTete(ftSuivante(ftSuivante(ftSuivante(ft2))))) == 3);
+    CU_ASSERT(aPoids(ftAreteTete(ftSuivante(ftSuivante(ftSuivante(ftSuivante(ft2)))))) == 3);
     CU_ASSERT(aAreteEgaleP(ftAreteTete(ftSuivante(ftSuivante(ftSuivante(ftSuivante(ftSuivante(ft2)))))), "e", "c", 5) == VRAI);
 }
 
 void test_prim_pArbreCouvrantMinimum(void)
 {
-    CU_ASSERT(gEstVide(a4) == FAUX);
-    CU_ASSERT(gNombreSommets(a4) == gNombreSommets(g0));
-    CU_ASSERT(gNombreAretes(a4) == gNombreSommets(a4) - 1);
-    CU_ASSERT(gEstConnexe(a4) == VRAI);
-    CU_ASSERT(gACycle(a4) == FAUX);
-    CU_ASSERT(gEgalite(a0, a4) == VRAI);
+    CU_ASSERT(gEstVide(a6) == FAUX);
+    CU_ASSERT(gNombreSommets(a6) == gNombreSommets(g0));
+    CU_ASSERT(gNombreAretes(a6) == gNombreSommets(a6) - 1);
+    CU_ASSERT(gEstConnexe(a6) == VRAI);
+    CU_ASSERT(gACycle(a6) == FAUX);
+    CU_ASSERT(gEgalite(a0, a6) == VRAI);
 
-    CU_ASSERT(gEstVide(a5) == FAUX);
-    CU_ASSERT(gNombreSommets(a5) == gNombreSommets(g1));
-    CU_ASSERT(gNombreAretes(a5) == gNombreSommets(a5) - 1);
-    CU_ASSERT(gEstConnexe(a5) == VRAI);
-    CU_ASSERT(gACycle(a5) == FAUX);
-    CU_ASSERT(gNombreSommets(a5) == gNombreSommets(g1));
-    CU_ASSERT(gEgalite(a5, a1) || gEgalite(a5, a2) || gEgalite(a5, a3) == VRAI);
+    CU_ASSERT(gEstVide(a7) == FAUX);
+    CU_ASSERT(gNombreSommets(a7) == gNombreSommets(g1));
+    CU_ASSERT(gNombreAretes(a7) == gNombreSommets(a7) - 1);
+    CU_ASSERT(gEstConnexe(a7) == VRAI);
+    CU_ASSERT(gACycle(a7) == FAUX);
+    CU_ASSERT(gNombreSommets(a7) == gNombreSommets(g1));
+    CU_ASSERT(gEgalite(a7, a1) || gEgalite(a7, a2) || gEgalite(a7, a3) || gEgalite(a7, a4) || gEgalite(a7, a5) == VRAI);
 }
 
 int add_testprim(void)

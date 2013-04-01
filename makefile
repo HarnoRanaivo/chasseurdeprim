@@ -13,9 +13,10 @@ vpath %.o obj/
 vpath main bin/
 vpath %.a lib/
 
-main : main.o libgraphes.a libprim.a | bin
+main : main.o libgraphes.a libprim.a io.o | bin
 	$(CC) $(CFLAGS) $(LFLAGS) -o $(BPATH)main $(OPATH)main.o -lprim -lgraphes
 
+io.o : io.c io.h
 prim.o : prim.c prim.h base.h sommet.h graphe.h coloration.h filetriee.h
 filetriee.o : filetriee.c filetriee.h base.h sommet.h arete.h
 grapheconnexe.o : grapheconnexe.c grapheconnexe.h parcours.h graphe.h liste.h sommet.h base.h

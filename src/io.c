@@ -13,10 +13,11 @@ void sauvegarder_graphe (Graphe g, char* destination){
 	
 	Nat i, j;
 	
-	for (i=0 ; i< (gNombreSommets(g)) ; i++){ // boucle pour chaque sommet de g
+	Nat tailleg = gNombreSommets(g);
+	for (i=0 ; i< tailleg ; i++){ // boucle pour chaque sommet de g
 	    ListeArete l = gAdjacenceTete(g);
 	    Nat taille = ltaille(l);
-		for (j=0 ; j< taille; j++){ // boucle pour chaque arête dans la liste d'arêtes de g
+		for (j=0 ; j< taillel; j++){ // boucle pour chaque arête dans la liste d'arêtes de g
 			fprintf(pfile,"%s\t%d\t%s\n",gSommetTete(g),lpoids_tete(l),lsommet_tete(l));		
 			l = lsuiv(l); // on regarde l'arête suivante
 		}

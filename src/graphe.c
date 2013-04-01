@@ -189,10 +189,11 @@ Nat gNombreAretes(const Graphe * g)
 Nat gNombreVoisins(const Graphe * g, const Sommet * s)
 {
     ListeAdjacence * adjacence = gAdjacenceSommet(g, s);
+
     if (lexar(adjacence, s))
-        return ltaille(gAdjacenceSommet(g, s)) - 1;
+        return ltaille(adjacence) - 1;
     else
-        return ltaille(gAdjacenceSommet(g, s));
+        return ltaille(adjacence);
 }
 
 Ent gPoidsArete(const Graphe * g, const Sommet * a, const Sommet * b)
@@ -227,17 +228,15 @@ Graphe * gCopier(const Graphe * g)
 {
     Graphe * copie = gNouv();
 
-    while (!gEstVide(g))
+    for (g = g; !gEstVide(g); g = gSuivant(g))
     {
+        ListeAdjacence * l;
+
         Sommet * s = gSommetTete(g);
         copie = gAjouterSommet(copie, s);
-        ListeAdjacence * l = gAdjacenceTete(g);
-        while (!lest_vide(l))
-        {
+
+        for (l = gAdjacenceTete(g); !lest_vide(l); l = lsuiv(l))
             copie = gAjouterArete(copie, s, lsommet_tete(l), lpoids_tete(l));
-            l = lsuiv(l);
-        }
-        g = gSuivant(g);
     }
 
     return copie;

@@ -18,7 +18,7 @@ main : main.o libgraphes.a libprim.a libtests.a | bin
 	$(CC) $(CFLAGS) -o $(BPATH)main $(OPATH)main.o $(LFLAGS) -lcunit -ltests -lprim -lgraphes
 
 testio : testio.o io.o libgraphes.a
-	$(CC) $(CFLAGS) -o $(BPATH)main $(OPATH)testio.o $(OPATH)io.o $(LFLAGS) -lgraphes
+	$(CC) $(CFLAGS) -o $(BPATH)testio $(OPATH)testio.o $(OPATH)io.o $(LFLAGS) -lgraphes
 
 testio.o : testio.c testio.h io.h graphe.h liste.h sommet.h base.h
 testprim.o : testprim.c testprim.h prim.h arete.h filetriee.h coloration.h graphe.h base.h sommet.h

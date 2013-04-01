@@ -30,9 +30,9 @@ Graphe * gArbreCouvrantMinimum(const Graphe * g, const Sommet * s)
 
     Graphe * arbre = gAjouterSommet(gNouv(), s);
 
-    while (aretes < n -1 && !ftEstVide(ft))
+    while (aretes < n -1 && !larEstVide(ft))
     {
-        Arete * tete = ftAreteTete(ft);
+        Arete * tete = larAreteTete(ft);
         Sommet * a = aA(tete);
         Sommet * b = aB(tete);
 
@@ -52,11 +52,11 @@ Graphe * gArbreCouvrantMinimum(const Graphe * g, const Sommet * s)
                 cg = cgModifierSommet(cg, b, NOIR);
             }
         }
-        ft = ftSupprimerArete(ft, a, b);
+        ft = larSupprimerArete(ft, a, b);
     }
     
     cg = cgLiberer(cg);
-    ft = ftLiberer(ft);
+    ft = larLiberer(ft);
 
     return arbre;
 }

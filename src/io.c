@@ -14,9 +14,11 @@ void sauvegarder_graphe (Graphe g, char* destination){
 	Nat i, j;
 	
 	for (i=0 ; i< (gNombreSommets(g)) ; i++){ // boucle pour chaque sommet de g
-		for (j=0 ; j< (ltaille(gAdjacenceTete(g))) ; j++){ // boucle pour chaque arête dans la liste d'arêtes de g
-			fprintf(pfile,"%s\t%d\t%s\n",gSommetTete(g),lpoids_tete(gAdjacenceTete(g)),lsommet_tete(gAdjacenceTete(g)));		
-			gAdjacenceTete(g) = lsuiv(gAdjacenceTete(g)); // on regarde l'arête suivante
+	    ListeArete l = gAdjacenceTete(g);
+	    Nat taille = ltaille(l);
+		for (j=0 ; j< taille; j++){ // boucle pour chaque arête dans la liste d'arêtes de g
+			fprintf(pfile,"%s\t%d\t%s\n",gSommetTete(g),lpoids_tete(l),lsommet_tete(l));		
+			l = lsuiv(l); // on regarde l'arête suivante
 		}
 		g = gSuivant(g); // on regarde le sommet suivant
 	}
@@ -35,9 +37,9 @@ Graphe charger_graphe (char* source){
 	Ent poids;
 	char buffer2[100]; // sommet d'arrivée de 100 caractères maximum
 	
-	while (fscanf(pfile,"%s",&buffer1) != EOF){ // vérifie si la ligne n'est pas la fin du fichier
+	while (fscanf(pfile,"%s",buffer1) != EOF){ // vérifie si la ligne n'est pas la fin du fichier
 		fscanf(pfile,"%d",&poids);
-		fscanf(pfile,"%s",&buffer2);
+		fscanf(pfile,"%s",buffer2);
 		g = gAjouterArete(g,buffer1,buffer2,poids); // ajoute l'arc à partir des valeurs de la ligne
 	}
 	printf("Fin de lecture.\n\n");

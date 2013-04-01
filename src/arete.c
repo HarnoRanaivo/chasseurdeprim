@@ -10,7 +10,7 @@ Arete * aNouv(const Sommet * a, const Sommet * b, Ent poids)
 {
     Arete * a0 = MALLOC(a0);
 
-    if (a0 != NULL)
+    if (a0 != NULL || a == NULL || b == NULL)
     {
         a0->a = copieSommet(a);
         a0->b = copieSommet(b);
@@ -37,22 +37,30 @@ Ent aPoids(const Arete * a)
 
 Bool aAreteEgaleS2(const Arete * a, const Arete * b)
 {
-    return aAreteEgaleS(a, aA(b), aB(b));
+    if (a == NULL && b == NULL) return VRAI;
+    else if (a == NULL || b == NULL) return FAUX;
+    else return aAreteEgaleS(a, aA(b), aB(b));
 }
 
 Bool aAreteEgaleP(const Arete * a, const Sommet * s, const Sommet * t, Ent poids)
 {
+    if (a == NULL && s == NULL && t == NULL && poids == 0) return VRAI;
+    else if (a == NULL) return FAUX;
     return aAreteEgaleS(a, s, t) && (aPoids(a) == poids);
 }
 
 Bool aAreteEgaleP2(const Arete * a, const Arete * b)
 {
-    return aAreteEgaleP(a, aA(b), aB(b), aPoids(b));
+    if (a == NULL && b == NULL) return VRAI;
+    else if (a == NULL || b == NULL) return FAUX;
+    else return aAreteEgaleP(a, aA(b), aB(b), aPoids(b));
 }
 
 Bool aAreteEgaleS(const Arete * a, const Sommet * s, const Sommet * t)
 {
-    return (egalSom(aA(a), s) && egalSom(aB(a), t)) || (egalSom(aA(a), t) && egalSom(aB(a), s));
+    if (a == NULL && s == NULL && t == NULL) return VRAI;
+    else if (a == NULL) return FAUX;
+    else return (egalSom(aA(a), s) && egalSom(aB(a), t)) || (egalSom(aA(a), t) && egalSom(aB(a), s));
 }
 
 Arete * aLiberer(Arete * a)

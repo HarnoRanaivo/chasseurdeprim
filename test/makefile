@@ -12,9 +12,15 @@ vpath %.h include/ ../include/
 vpath %.o obj/
 vpath main bin/
 
+all: main testio
+
 main : main.o libgraphes.a libprim.a libtests.a | bin
 	$(CC) $(CFLAGS) -o $(BPATH)main $(OPATH)main.o $(LFLAGS) -lcunit -ltests -lprim -lgraphes
 
+testio : testio.o io.o libgraphes.a
+	$(CC) $(CFLAGS) -o $(BPATH)testio $(OPATH)testio.o $(OPATH)io.o $(LFLAGS) -lgraphes
+
+testio.o : testio.c testio.h io.h graphe.h liste.h sommet.h base.h
 testprim.o : testprim.c testprim.h prim.h arete.h filetriee.h coloration.h graphe.h base.h sommet.h
 testfiletriee.o : testfiletriee.c testfiletriee.h filetriee.h sommet.h arete.h base.h
 testgrapheconnexe.o : testgrapheconnexe.c testgrapheconnexe.h grapheconnexe.h parcours.h graphe.h base.h
@@ -25,6 +31,7 @@ testliste.o : testliste.c testliste.h base.h liste.h
 testarete.o : testarete.c testarete.h base.h sommet.h arete.h
 testsommet.o : testsommet.c testsommet.h base.h sommet.h
 
+io.o : io.c io.h sommet.h graphe.h liste.h base.h
 prim.o : prim.c prim.h base.h sommet.h graphe.h coloration.h filetriee.h
 filetriee.o : filetriee.c filetriee.h base.h sommet.h arete.h
 grapheconnexe.o : grapheconnexe.c grapheconnexe.h parcours.h graphe.h liste.h sommet.h base.h

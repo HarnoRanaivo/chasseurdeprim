@@ -15,8 +15,8 @@ void sauvegarder_graphe (const Graphe * g, const char* destination){
 	
 	Nat tailleg = gNombreSommets(g);
 	for (i=0 ; i< tailleg ; i++){ // boucle pour chaque sommet de g
-	    ListeAdjacence * l = gAdjacenceTete(g);
-	    Nat taillel = ltaille(l);
+	    ListeArete * l = gAretes(g);
+	    Nat taillel = larNombreAretes(l);
 		for (j=0 ; j< taillel; j++){ // boucle pour chaque arête dans la liste d'arêtes de g
 			fprintf(pfile,"%s\t%d\t%s\n",gSommetTete(g),lpoids_tete(l),lsommet_tete(l));		
 			l = lsuiv(l); // on regarde l'arête suivante

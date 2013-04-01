@@ -1,21 +1,21 @@
 /**
- * \file filetriee.c
+ * \file filearetetriee.c
  * \brief File triée d'arêtes (code)
  * \author Harenome RAZANAJATO
  */
 
-#include "filetriee.h"
+#include "filearetetriee.h"
 
-FileTriee ftNouv(void)
+FileAreteTriee * ftNouv(void)
 {
     return NULL;
 }
 
-FileTriee ftAjouterArete(FileTriee f, const Sommet s, const Sommet t, Ent poids)
+FileAreteTriee * ftAjouterArete(FileAreteTriee * f, const Sommet * s, const Sommet * t, Ent poids)
 {
     if (!ftExisteArete(f, s, t))
     {
-        FileTriee f0 = MALLOC(f0);
+        FileAreteTriee * f0 = MALLOC(f0);
         f0->arete = aNouv(s, t, poids);
 
         if (ftEstVide(f))
@@ -30,7 +30,7 @@ FileTriee ftAjouterArete(FileTriee f, const Sommet s, const Sommet t, Ent poids)
         }
         else
         {
-            FileTriee fs = f;
+            FileAreteTriee * fs = f;
             while (!ftEstVide(ftSuivante(fs)) && aPoids(ftAreteTete(ftSuivante(fs))) < poids)
                 fs = ftSuivante(fs);
             f0->suivante = fs->suivante;
@@ -41,11 +41,11 @@ FileTriee ftAjouterArete(FileTriee f, const Sommet s, const Sommet t, Ent poids)
     return f;
 }
 
-FileTriee ftSupprimerTete(FileTriee f)
+FileAreteTriee * ftSupprimerTete(FileAreteTriee * f)
 {
     if (!ftEstVide(f))
     {
-        FileTriee fs = ftSuivante(f);
+        FileAreteTriee * fs = ftSuivante(f);
         f->arete = aLiberer(ftAreteTete(f));
         free(f);
         f = fs;
@@ -54,7 +54,7 @@ FileTriee ftSupprimerTete(FileTriee f)
     return f;
 }
 
-static FileTriee ftPrecedente(FileTriee f, const Sommet a, const Sommet b)
+static FileAreteTriee * ftPrecedente(FileAreteTriee * f, const Sommet * a, const Sommet * b)
 {
     if (ftEstVide(f)) return NULL;
     else if (ftEstVide(ftSuivante(f))) return NULL;
@@ -62,7 +62,7 @@ static FileTriee ftPrecedente(FileTriee f, const Sommet a, const Sommet b)
     else return ftPrecedente(ftSuivante(f), a, b);
 }
 
-FileTriee ftSupprimerArete(FileTriee f, const Sommet a, const Sommet b)
+FileAreteTriee * ftSupprimerArete(FileAreteTriee * f, const Sommet * a, const Sommet * b)
 {
     if (!ftEstVide(f))
     {
@@ -70,7 +70,7 @@ FileTriee ftSupprimerArete(FileTriee f, const Sommet a, const Sommet b)
             f = ftSupprimerTete(f);
         else
         {
-            FileTriee fp = ftPrecedente(f, a, b);
+            FileAreteTriee * fp = ftPrecedente(f, a, b);
 
             if (fp != NULL)
                 fp->suivante = ftSupprimerTete(ftSuivante(fp));
@@ -80,35 +80,35 @@ FileTriee ftSupprimerArete(FileTriee f, const Sommet a, const Sommet b)
     return f;
 }
 
-Bool ftEstVide(const FileTriee f)
+Bool ftEstVide(const FileAreteTriee * f)
 {
     return f == NULL;
 }
 
-Bool ftExisteArete(const FileTriee f, const Sommet a, const Sommet b)
+Bool ftExisteArete(const FileAreteTriee * f, const Sommet * a, const Sommet * b)
 {
     if (ftEstVide(f)) return FAUX;
     else if (aAreteEgaleS(ftAreteTete(f), a, b)) return VRAI;
     else return ftExisteArete(ftSuivante(f), a, b);
 }
 
-static Nat ftNombreAretesAux(const FileTriee f, Nat n)
+static Nat ftNombreAretesAux(const FileAreteTriee * f, Nat n)
 {
     if (ftEstVide(f)) return n;
     else return ftNombreAretesAux(ftSuivante(f), n+1);
 }
 
-Nat ftNombreAretes(const FileTriee f)
+Nat ftNombreAretes(const FileAreteTriee * f)
 {
     return ftNombreAretesAux(f, 0);
 }
 
-Arete ftAreteTete(const FileTriee f)
+Arete * ftAreteTete(const FileAreteTriee * f)
 {
     return f->arete;
 }
 
-FileTriee ftSuivante(const FileTriee f)
+FileAreteTriee * ftSuivante(const FileAreteTriee * f)
 {
     if (!ftEstVide(f))
         return f->suivante;
@@ -116,13 +116,13 @@ FileTriee ftSuivante(const FileTriee f)
         return NULL;
 }
 
-FileTriee ftLiberer(FileTriee f)
+FileAreteTriee * ftLiberer(FileAreteTriee * f)
 {
     if (ftEstVide(f))
         return NULL;
     else
     {
-        FileTriee fs = ftSuivante(f);
+        FileAreteTriee * fs = ftSuivante(f);
         f->arete = aLiberer(ftAreteTete(f));
         free(f);
 

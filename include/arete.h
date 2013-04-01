@@ -22,10 +22,10 @@
  */
 typedef struct Arete
 {
-    Sommet a;   /**<- Extrémité a de l'arête. */
-    Sommet b;   /**<- Extrémité b de l'arête. */
+    Sommet * a;   /**<- Extrémité a de l'arête. */
+    Sommet * b;   /**<- Extrémité b de l'arête. */
     Ent poids;  /**<- Poids de l'arête. */
-} *Arete;
+} Arete;
 
 /**
  * \brief Nouvelle arête.
@@ -35,7 +35,7 @@ typedef struct Arete
  * \param poids Poids de l'arête.
  * \return (pointeur vers) Nouvelle arête (a, b) de poids poids.
  */
-Arete aNouv(const Sommet a, const Sommet b, Ent poids);
+Arete * aNouv(const Sommet * a, const Sommet * b, Ent poids);
 
 /**
  * \brief Extrémité a de l'arête.
@@ -43,7 +43,7 @@ Arete aNouv(const Sommet a, const Sommet b, Ent poids);
  * \param a Arete.
  * \return Sommet à l'extrémité a de l'arête.
  */
-Sommet aA(const Arete a);
+Sommet * aA(const Arete * a);
 
 /**
  * \brief Extrémité b de l'arête.
@@ -51,7 +51,7 @@ Sommet aA(const Arete a);
  * \param a Arete.
  * \return Sommet b l'extrémité a de l'arête.
  */
-Sommet aB(const Arete a);
+Sommet * aB(const Arete * a);
 
 /**
  * \brief Poids de l'arête.
@@ -59,7 +59,7 @@ Sommet aB(const Arete a);
  * \param a Arete.
  * \return Poids de l'arête.
  */
-Ent aPoids(const Arete a);
+Ent aPoids(const Arete * a);
 
 /**
  * \brief Test d'égalité de deux arêtes, sans se préoccuper du poids.
@@ -69,7 +69,7 @@ Ent aPoids(const Arete a);
  * \param t Autre extrémité.
  * \return VRAI si les extrémités de a correspondent à s et t, FAUX sinon.
  */
-Bool aAreteEgaleS(const Arete a, const Sommet s, const Sommet t);
+Bool aAreteEgaleS(const Arete * a, const Sommet * s, const Sommet * t);
 
 /**
  * \brief Test d'égalité de deux arêtes, sans se préoccuper du poids.
@@ -78,7 +78,7 @@ Bool aAreteEgaleS(const Arete a, const Sommet s, const Sommet t);
  * \param b Arete.
  * \return VRAI si les extrémités de a et b sont identiques, FAUX sinon.
  */
-Bool aAreteEgaleS2(const Arete a, const Arete b);
+Bool aAreteEgaleS2(const Arete * a, const Arete * b);
 
 /**
  * \brief Test d'égalité de deux arêtes, sensible au poids.
@@ -89,7 +89,7 @@ Bool aAreteEgaleS2(const Arete a, const Arete b);
  * \param poids Poids.
  * \return VRAI si les extrémités de a correspondent à s et t et si le poids est le même, FAUX sinon.
  */
-Bool aAreteEgaleP(const Arete a, const Sommet s, const Sommet t, Ent poids);
+Bool aAreteEgaleP(const Arete * a, const Sommet * s, const Sommet * t, Ent poids);
 
 /**
  * \brief Test d'égalité de deux arêtes, sans se préoccuper du poids.
@@ -98,7 +98,7 @@ Bool aAreteEgaleP(const Arete a, const Sommet s, const Sommet t, Ent poids);
  * \param b Arete.
  * \return VRAI si les extrémités et les poids de a et b sont identiques, FAUX sinon.
  */
-Bool aAreteEgaleP2(const Arete a, const Arete b);
+Bool aAreteEgaleP2(const Arete * a, const Arete * b);
 
 /**
  * \brief Libérer une arête.
@@ -106,6 +106,6 @@ Bool aAreteEgaleP2(const Arete a, const Arete b);
  * \param a Arete à libérer.
  * \return NULL
  */
-Arete aLiberer(Arete a);
+Arete * aLiberer(Arete * a);
 
 #endif /* __ARETE_H */

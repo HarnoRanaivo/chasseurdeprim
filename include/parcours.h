@@ -20,7 +20,7 @@
  * \param g Graphe.
  * \return Sommets marqués par le parcours.
  */
-CouleursGraphe gParcoursLargeur(Graphe g);
+CouleursGraphe * gParcoursLargeur(const Graphe * g);
 
 /**
  * \brief Test de connexité d'un graphe.
@@ -28,7 +28,7 @@ CouleursGraphe gParcoursLargeur(Graphe g);
  * \param g Graphe.
  * \return VRAI si le graphe est connexe, FAUX sinon.
  */
-Bool gEstConnexe(Graphe g);
+Bool gEstConnexe(const Graphe * g);
 
 /**
  * \brief Test d'existence de cycles dans un graphe.
@@ -36,6 +36,6 @@ Bool gEstConnexe(Graphe g);
  * \param g Graphe.
  * \return VRAI si le graphe contient des cycles, FAUX sinon.
  */
-Bool gACycle(const Graphe g);
+Bool gACycle(const Graphe * g);
 
 #endif /* __PARCOURS_H */

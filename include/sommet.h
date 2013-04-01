@@ -28,7 +28,7 @@ typedef Chaine Sommet;
  * \relatesalso Sommet
  * \return VRAI si les sommets sont égaux, FAUX sinon
  */
-Bool egalSom (const Sommet a, const Sommet b);
+Bool egalSom (const Sommet * a, const Sommet * b);
 
 /**
  * \brief Retourne une copie de s, allouée dynamiquement.
@@ -36,7 +36,7 @@ Bool egalSom (const Sommet a, const Sommet b);
  * \relatesalso Sommet
  * \return (pointeur vers) la copie de s, NULL en cas d'erreur.
  */
-Sommet copieSommet(const Sommet s);
+Sommet * copieSommet(const Sommet * s);
 
 /**
  * \brief Libérer un sommet qui avait été alloué dynamiquement.
@@ -44,15 +44,15 @@ Sommet copieSommet(const Sommet s);
  * \relatesalso Sommet
  * \return NULL
  */
-Sommet libererSommet(Sommet s);
+Sommet * libererSommet(Sommet * s);
 
 /**
  * \brief Modifier un sommet
  * \param s Sommet à modifier.
  * \param t Nouveau sommet.
  * \relatesalso Sommet
- * \return (pointeur vers) le nouveau sommet, s sera libéré. En cas d'erreur, NULL (il ne pas écraser s directement).
+ * \return (pointeur vers) le nouveau sommet, s sera libéré. En cas d'erreur, NULL (il ne faut pas écraser s directement).
  */
-Sommet modSommet(Sommet s, const Sommet t);
+Sommet * modSommet(Sommet * s, const Sommet * t);
 
 #endif /* __SOMMET_H */

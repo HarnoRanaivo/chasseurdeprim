@@ -1,18 +1,18 @@
 /**
- * \file liste.h
- * \brief Gestion de la sorte Liste (code source)
+ * \file adjacence.c
+ * \brief Gestion des listes d'adjacence (code source)
  * \author Meyer Jérémy
  */
 
-#include "liste.h"
+#include "adjacence.h"
 
-ListeArete listnouv(){
-	return (ListeArete)NULL;
+ListeAdjacence * listnouv(){
+	return (ListeAdjacence *)NULL;
 }
 
-ListeArete lajar (ListeArete l, const Sommet s, Ent x){
-    ListeArete l1 = NULL;
-	l1 = (ListeArete)MALLOC(l1);
+ListeAdjacence * lajar (ListeAdjacence * l, const Sommet * s, Ent x){
+    ListeAdjacence * l1 = NULL;
+	l1 = (ListeAdjacence *)MALLOC(l1);
 	l1->poids = x;
 	l1->v = copieSommet(s);
 	l1->s = l;
@@ -20,10 +20,10 @@ ListeArete lajar (ListeArete l, const Sommet s, Ent x){
 	return l1;
 }
 
-ListeArete lsupar (ListeArete l, const Sommet s){
+ListeAdjacence * lsupar (ListeAdjacence * l, const Sommet * s){
 	if (!lest_vide(l)){
-		ListeArete ln = l;
-		ListeArete ls;
+		ListeAdjacence * ln = l;
+		ListeAdjacence * ls;
 		
 		if (egalSom(ln->v, s)){
 			l = l->s;
@@ -47,9 +47,9 @@ ListeArete lsupar (ListeArete l, const Sommet s){
 	return l;
 }
 
-Bool lest_vide (ListeArete l){ return l==NULL; }
+Bool lest_vide (const ListeAdjacence * l){ return l==NULL; }
 
-Bool lexar (ListeArete l, const Sommet s){
+Bool lexar (const ListeAdjacence * l, const Sommet * s){
 	while (!lest_vide(l)){
 		if (egalSom(l->v, s))
 			return VRAI;
@@ -59,13 +59,13 @@ Bool lexar (ListeArete l, const Sommet s){
 	return FAUX;
 }
 
-Ent lpoids(ListeArete l, const Sommet s){
+Ent lpoids(const ListeAdjacence * l, const Sommet * s){
 	while (!egalSom(l->v, s))
 		l = l->s;
 	return l->poids;
 }
 
-Nat ltaille (ListeArete l){
+Nat ltaille (const ListeAdjacence * l){
 	Nat cmpt = 0;
 	
 	while (!lest_vide(l)){
@@ -76,8 +76,8 @@ Nat ltaille (ListeArete l){
 	return cmpt;
 }
 
-ListeArete lliberer(ListeArete l){
-    ListeArete l0 = NULL;
+ListeAdjacence * lliberer(ListeAdjacence * l){
+    ListeAdjacence * l0 = NULL;
 
     while (l != NULL){
         l0 = l->s;
@@ -89,21 +89,20 @@ ListeArete lliberer(ListeArete l){
     return l;
 }
 
-ListeArete lcopie(const ListeArete l){
-    ListeArete l0 = l;
-    ListeArete copie = listnouv();
+ListeAdjacence * lcopie(const ListeAdjacence * l){
+    ListeAdjacence * copie = listnouv();
 
-    while (l0 != NULL){
-        copie = lajar(copie, l0->v, l0->poids);
-        l0 = l0->s;
+    while (l != NULL){
+        copie = lajar(copie, l->v, l->poids);
+        l = l->s;
     }
 
     return copie;
 
 }
 
-ListeArete lmod(ListeArete l, const Sommet s, Ent x){
-    ListeArete l0 = l;
+ListeAdjacence * lmod(ListeAdjacence * l, const Sommet * s, Ent x){
+    ListeAdjacence * l0 = l;
 
     while (l0 != NULL && !egalSom(l0->v, s))
         l0 = l0->s;
@@ -114,7 +113,7 @@ ListeArete lmod(ListeArete l, const Sommet s, Ent x){
     return l;
 }
 
-Bool lega(ListeArete l, ListeArete m){
+Bool lega(const ListeAdjacence * l, const ListeAdjacence * m){
     if (ltaille(l) != ltaille(m))
         return FAUX;
     else{
@@ -129,17 +128,17 @@ Bool lega(ListeArete l, ListeArete m){
     }
 }
 
-ListeArete lsuiv(const ListeArete l){
+ListeAdjacence * lsuiv(const ListeAdjacence * l){
     if (!lest_vide(l))
         return l->s;
     else
         return NULL;
 }
 
-Sommet lsommet_tete(const ListeArete l){
+Sommet * lsommet_tete(const ListeAdjacence * l){
     return l->v;
 }
 
-Ent lpoids_tete(const ListeArete l){
+Ent lpoids_tete(const ListeAdjacence * l){
     return l->poids;
 }

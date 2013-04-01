@@ -9,6 +9,7 @@
 #include "base.h"
 #include "sommet.h"
 #include "adjacence.h"
+#include "listearete.h"
 #include "graphe.h"
 
 int init_suiteGraphe(void);
@@ -54,6 +55,8 @@ void test_graphe_gSupprimerArete(void);
 void test_graphe_gModifierArete(void);
 
 void test_graphe_gEgalite(void);
+
+void test_graphe_gAretes(void);
 
 void test_graphe_gCopier(void);
 

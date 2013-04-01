@@ -9,14 +9,14 @@ int main(int argc, char ** argv)
     else
     {
         int i;
-        for (i = 1; i <= argc; i++)
+        for (i = 1; i < argc; i++)
         {
             /* Chargement du graphe. */
             Graphe g1 = charger_graphe(argv[i]);
 
             /* Sauvegarde du graphe précédemment chargé. */
             char * copie = malloc((strlen(argv[i]) + 7) * sizeof *copie);
-            sprintf(copie, "%s_copie", argv[1]);
+            sprintf(copie, "%s_copie", argv[i]);
             sauvegarder_graphe(g1, copie);
 
             /* Chargement de la sauvegarde et comparaison des deux graphes. */

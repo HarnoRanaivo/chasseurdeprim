@@ -8,14 +8,13 @@
 
 FileAreteTriee * ftAjouterAretesIncidentes(FileAreteTriee * ft, const Graphe * g, const CouleursGraphe * cg, const Sommet * s)
 {
-    ListeAdjacence * adjacence = gAdjacenceSommet(g, s);
+    ListeAdjacence * l;
 
-    while (!lest_vide(adjacence))
+    for (l = gAdjacenceSommet(g, s); !lest_vide(l); l = lsuiv(l))
     {
-        Sommet * t = lsommet_tete(adjacence);
+        Sommet * t = lsommet_tete(l);
         if (cgCouleurSommet(cg, t) == BLANC)
-            ft = ftAjouterArete(ft, s, t, lpoids_tete(adjacence));
-        adjacence = lsuiv(adjacence);
+            ft = ftAjouterArete(ft, s, t, lpoids_tete(l));
     }
 
     return ft;

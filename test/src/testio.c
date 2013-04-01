@@ -4,7 +4,7 @@ int main(int argc, char ** argv)
 {
     if (argc < 2)
     {
-        fprintf("Usage : %s [fichiers]", argv[0]);
+        fprintf(stderr, "Usage : %s <ficher1> ...\n", argv[0]);
     }
     else
     {
@@ -15,8 +15,8 @@ int main(int argc, char ** argv)
             Graphe g1 = charger_graphe(argv[i]);
 
             /* Sauvegarde du graphe précédemment chargé. */
-            char * copie = malloc((strlen(argv[i]) + 12) * sizeof *copie);
-            sprintf(copie, "/tmp/%s_copie", argv[1]);
+            char * copie = malloc((strlen(argv[i]) + 7) * sizeof *copie);
+            sprintf(copie, "%s_copie", argv[1]);
             sauvegarder_graphe(g1, copie);
 
             /* Chargement de la sauvegarde et comparaison des deux graphes. */

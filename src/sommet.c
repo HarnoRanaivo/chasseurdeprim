@@ -6,7 +6,7 @@
 
 #include "sommet.h"
 
-Bool egalSom (const Sommet a, const Sommet b){
+Bool egalSom (const Sommet * a, const Sommet * b){
     if (a == NULL && b == NULL)
         return VRAI;
     else if (a == NULL || b == NULL)
@@ -17,9 +17,9 @@ Bool egalSom (const Sommet a, const Sommet b){
 		return FAUX;
 }
 
-Sommet copieSommet(const Sommet s)
+Sommet * copieSommet(const Sommet * s)
 {
-    Sommet copie = NULL;
+    Sommet * copie = NULL;
 
     copie = MALLOCN(copie, strlen(s) + 1);
     if (copie != NULL)
@@ -28,15 +28,15 @@ Sommet copieSommet(const Sommet s)
     return copie;
 }
 
-Sommet libererSommet(Sommet s)
+Sommet * libererSommet(Sommet * s)
 {
     free(s);
     return NULL;
 }
 
-Sommet modSommet(Sommet s, const Sommet t)
+Sommet * modSommet(Sommet * s, const Sommet * t)
 {
-    Sommet nouveau = NULL;
+    Sommet * nouveau = NULL;
 
     nouveau = copieSommet(t);
     if (nouveau != NULL)

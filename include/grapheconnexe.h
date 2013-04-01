@@ -12,7 +12,7 @@
 
 #include "base.h"
 #include "sommet.h"
-#include "liste.h"
+#include "adjacence.h"
 #include "graphe.h"
 #include "parcours.h"
 
@@ -27,7 +27,7 @@ typedef Graphe GrapheConnexe;
  * \relatesalso Graphe
  * \return NULL
  */
-GrapheConnexe gcNouv(void);
+GrapheConnexe * gcNouv(void);
 
 /**
  * \brief Ajout d'un sommet dans un graphe connexe.
@@ -36,7 +36,7 @@ GrapheConnexe gcNouv(void);
  * \param s Sommet à ajouter.
  * \return GrapheConnexe.
  */
-GrapheConnexe gcAjouterSommet(GrapheConnexe g, const Sommet s);
+GrapheConnexe * gcAjouterSommet(GrapheConnexe * g, const Sommet * s);
 
 /**
  * \brief Ajout d'une arête dans un graphe connexe.
@@ -47,7 +47,7 @@ GrapheConnexe gcAjouterSommet(GrapheConnexe g, const Sommet s);
  * \param p Poids de l'arête.
  * \return GrapheConnexe.
  */
-GrapheConnexe gcAjouterArete(GrapheConnexe g, const Sommet a, const Sommet b, Ent p);
+GrapheConnexe * gcAjouterArete(GrapheConnexe * g, const Sommet * a, const Sommet * b, Ent p);
 
 /**
  * \brief Suppression d'un sommet dans un graphe connexe.
@@ -57,7 +57,7 @@ GrapheConnexe gcAjouterArete(GrapheConnexe g, const Sommet a, const Sommet b, En
  * \pre !gAArete(g, s).
  * \return GrapheConnexe.
  */
-GrapheConnexe gcSupprimerSommet(GrapheConnexe g, const Sommet s);
+GrapheConnexe * gcSupprimerSommet(GrapheConnexe * g, const Sommet * s);
 
 /**
  * \brief Suppression d'une arête dans un graphe connexe.
@@ -67,7 +67,7 @@ GrapheConnexe gcSupprimerSommet(GrapheConnexe g, const Sommet s);
  * \param b Éxtrémité de l'arête.
  * \return GrapheConnexe.
  */
-GrapheConnexe gcSupprimerArete(GrapheConnexe g, const Sommet a, const Sommet b);
+GrapheConnexe * gcSupprimerArete(GrapheConnexe * g, const Sommet * a, const Sommet * b);
 
 /**
  * \brief Modification d'une arête dans un graphe connexe.
@@ -78,6 +78,6 @@ GrapheConnexe gcSupprimerArete(GrapheConnexe g, const Sommet a, const Sommet b);
  * \param p Nouveau poids de l'arête.
  * \return GrapheConnexe.
  */
-GrapheConnexe gcModifierArete(GrapheConnexe g, const Sommet a, const Sommet b, Ent p);
+GrapheConnexe * gcModifierArete(GrapheConnexe * g, const Sommet * a, const Sommet * b, Ent p);
 
 #endif /* __GRAPHECONNEXE_H */

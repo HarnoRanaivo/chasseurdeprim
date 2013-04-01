@@ -13,19 +13,19 @@
 #include "sommet.h"
 #include "graphe.h"
 #include "coloration.h"
-#include "filetriee.h"
+#include "filearetetriee.h"
 #include "arete.h"
 
 /**
  * \brief Ajouter les arêtes incidentes à un sommet.
- * \relatesalso FileTriee
- * \param ft FileTriee.
+ * \relatesalso FileAreteTriee
+ * \param ft FileAreteTriee.
  * \param g Graphe.
  * \param cg Marquage des sommets.
  * \param s  Sommet.
- * \return FileTriee.
+ * \return FileAreteTriee.
  */
-FileTriee pAjouterAretesIncidentes(FileTriee ft, const Graphe g, const CouleursGraphe cg, const Sommet s);
+FileAreteTriee * ftAjouterAretesIncidentes(FileAreteTriee * ft, const Graphe * g, const CouleursGraphe * cg, const Sommet * s);
 
 /**
  * \brief Calcul de l'arbre couvrant minimum d'un graphe connexe en partant d'un sommet.
@@ -34,6 +34,6 @@ FileTriee pAjouterAretesIncidentes(FileTriee ft, const Graphe g, const CouleursG
  * \param s Sommet.
  * \return Arbre Couvrant Minimum
  */
-Graphe pArbreCouvrantMinimum(const Graphe g, const Sommet s);
+Graphe * gArbreCouvrantMinimum(const Graphe * g, const Sommet * s);
 
 #endif /* __PRIM_H */

@@ -6,10 +6,10 @@
 
 #include "parcours.h"
 
-CouleursGraphe gParcoursLargeur(const Graphe g)
+CouleursGraphe * gParcoursLargeur(const Graphe * g)
 {
-    Sommet s1;
-    CouleursGraphe cg = cgInit(g);
+    Sommet * s1;
+    CouleursGraphe * cg = cgInit(g);
 
     if (!gEstVide(g))
     {
@@ -17,10 +17,10 @@ CouleursGraphe gParcoursLargeur(const Graphe g)
 
         while((s1 = cgPremierSommetGris(cg)) != NULL)
         {
-            ListeArete l = gAdjacenceSommet(g, s1);
+            ListeAdjacence * l = gAdjacenceSommet(g, s1);
             while(!lest_vide(l))
             {
-                Sommet s2 = lsommet_tete(l);
+                Sommet * s2 = lsommet_tete(l);
                 if (cgCouleurSommet(cg, s2) == BLANC)
                     cg = cgModifierSommet(cg, s2, GRIS);
                 l = lsuiv(l);
@@ -32,7 +32,7 @@ CouleursGraphe gParcoursLargeur(const Graphe g)
     return cg;
 }
 
-Bool gEstConnexe(const Graphe g)
+Bool gEstConnexe(const Graphe * g)
 {
     int n = gNombreSommets(g);
 
@@ -45,7 +45,7 @@ Bool gEstConnexe(const Graphe g)
     else
     {
         int noirs;
-        CouleursGraphe cg;
+        CouleursGraphe * cg;
 
         cg = gParcoursLargeur(g);
         noirs = cgNombreSommetsNoirs(cg);
@@ -55,7 +55,7 @@ Bool gEstConnexe(const Graphe g)
     }
 }
 
-Bool gACycle(const Graphe g)
+Bool gACycle(const Graphe * g)
 {
     int n = gNombreSommets(g);
 
@@ -67,8 +67,8 @@ Bool gACycle(const Graphe g)
     }
     else
     {
-        Sommet s1;
-        CouleursGraphe cg = cgInit(g);
+        Sommet * s1;
+        CouleursGraphe * cg = cgInit(g);
 
         while (cgNombreSommetsBlancs(cg) > 0)
         {
@@ -76,10 +76,10 @@ Bool gACycle(const Graphe g)
 
             while((s1 = cgPremierSommetGris(cg)) != NULL)
             {
-                ListeArete l = gAdjacenceSommet(g, s1);
+                ListeAdjacence * l = gAdjacenceSommet(g, s1);
                 while(!lest_vide(l))
                 {
-                    Sommet s2 = lsommet_tete(l);
+                    Sommet * s2 = lsommet_tete(l);
                     if (cgCouleurSommet(cg, s2) == BLANC)
                         cg = cgModifierSommet(cg, s2, GRIS);
                     else if (cgCouleurSommet(cg, s2) == GRIS)

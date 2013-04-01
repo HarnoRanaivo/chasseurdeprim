@@ -5,12 +5,12 @@
  */
 #include "grapheconnexe.h"
 
-GrapheConnexe gcNouv(void)
+GrapheConnexe * gcNouv(void)
 {
     return gNouv();
 }
 
-GrapheConnexe gcAjouterSommet(GrapheConnexe g, const Sommet s)
+GrapheConnexe * gcAjouterSommet(GrapheConnexe * g, const Sommet * s)
 {
     if (gEstVide(g))
         return gAjouterSommet(g, s);
@@ -18,7 +18,7 @@ GrapheConnexe gcAjouterSommet(GrapheConnexe g, const Sommet s)
         return g;
 }
 
-GrapheConnexe gcAjouterArete(GrapheConnexe g, const Sommet a, const Sommet b, Ent p)
+GrapheConnexe * gcAjouterArete(GrapheConnexe * g, const Sommet * a, const Sommet * b, Ent p)
 {
     if (gEstVide(g) || gExisteSommet(g, a) || gExisteSommet(g, b))
         g = gAjouterArete(g, a, b, p);
@@ -26,9 +26,9 @@ GrapheConnexe gcAjouterArete(GrapheConnexe g, const Sommet a, const Sommet b, En
     return g;
 }
 
-GrapheConnexe gcSupprimerSommet(GrapheConnexe g, const Sommet s)
+GrapheConnexe * gcSupprimerSommet(GrapheConnexe * g, const Sommet * s)
 {
-    GrapheConnexe g0 = gSupprimerSommet(gCopier(g), s);
+    GrapheConnexe * g0 = gSupprimerSommet(gCopier(g), s);
 
     if (gEstConnexe(g0))
     {
@@ -44,7 +44,7 @@ GrapheConnexe gcSupprimerSommet(GrapheConnexe g, const Sommet s)
     }
 }
 
-GrapheConnexe gcSupprimerArete(GrapheConnexe g, const Sommet a, const Sommet b)
+GrapheConnexe * gcSupprimerArete(GrapheConnexe * g, const Sommet * a, const Sommet * b)
 {
     Ent p = gPoidsArete(g, a, b);
     g = gSupprimerArete(g, a, b);
@@ -55,7 +55,7 @@ GrapheConnexe gcSupprimerArete(GrapheConnexe g, const Sommet a, const Sommet b)
         return gAjouterArete(g, a, b, p);
 }
 
-GrapheConnexe gcModifierArete(GrapheConnexe g, const Sommet a, const Sommet b, Ent p)
+GrapheConnexe * gcModifierArete(GrapheConnexe * g, const Sommet * a, const Sommet * b, Ent p)
 {
     return gModifierArete(g, a, b, p);
 }

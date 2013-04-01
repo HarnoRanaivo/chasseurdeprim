@@ -39,17 +39,17 @@ typedef enum Couleur
  */
 typedef struct CouleursGraphe
 {
-    Sommet sommet;                       /**<- Sommet */
+    Sommet * sommet;                       /**<- Sommet */
     Couleur couleur;                     /**<- Couleur du sommet */
     struct CouleursGraphe * suivant;     /**<- Sommet suivant */
-} *CouleursGraphe;
+} CouleursGraphe;
 
 /**
  * \brief Nouvelle liste.
  * \relatesalso CouleursGraphe
  * \return NULL
  */
-CouleursGraphe cgNouv(void);
+CouleursGraphe * cgNouv(void);
 
 /**
  * \brief Ajouter un sommet à la liste.
@@ -59,7 +59,7 @@ CouleursGraphe cgNouv(void);
  * \param c Couleur du sommet.
  * \return (pointeur vers) CouleursGraphe.
  */
-CouleursGraphe cgAjouterSommet(CouleursGraphe cg, const Sommet s, Couleur c);
+CouleursGraphe * cgAjouterSommet(CouleursGraphe * cg, const Sommet * s, Couleur c);
 
 /**
  * \brief Supprimer la tête de liste.
@@ -67,7 +67,7 @@ CouleursGraphe cgAjouterSommet(CouleursGraphe cg, const Sommet s, Couleur c);
  * \param cg Liste.
  * \return (pointeur vers) CouleursGraphe.
  */
-CouleursGraphe cgSupprimerTete(CouleursGraphe cg);
+CouleursGraphe * cgSupprimerTete(CouleursGraphe * cg);
 
 /**
  * \brief Supprimer un sommet de la liste.
@@ -77,7 +77,7 @@ CouleursGraphe cgSupprimerTete(CouleursGraphe cg);
  * \param s Sommet.
  * \return (pointeur vers) CouleursGraphe.
  */
-CouleursGraphe cgSupprimerSommet(CouleursGraphe cg, const Sommet s);
+CouleursGraphe * cgSupprimerSommet(CouleursGraphe * cg, const Sommet * s);
 
 /**
  * \brief Modifier un sommet de la liste.
@@ -87,7 +87,7 @@ CouleursGraphe cgSupprimerSommet(CouleursGraphe cg, const Sommet s);
  * \param c Couleur.
  * \return (pointeur vers) CouleursGraphe.
  */
-CouleursGraphe cgModifierSommet(CouleursGraphe cg, const Sommet s, Couleur c);
+CouleursGraphe * cgModifierSommet(CouleursGraphe * cg, const Sommet * s, Couleur c);
 
 /**
  * \brief Initialiser les couleurs des sommets d'un graphe à BLANC.
@@ -95,7 +95,7 @@ CouleursGraphe cgModifierSommet(CouleursGraphe cg, const Sommet s, Couleur c);
  * \param g Graphe.
  * \return (pointeur vers) CouleursGraphe.
  */
-CouleursGraphe cgInit(const Graphe g);
+CouleursGraphe * cgInit(const Graphe * g);
 
 /**
  * \brief Test de vacuité d'une liste de couleurs.
@@ -103,7 +103,7 @@ CouleursGraphe cgInit(const Graphe g);
  * \param cg CouleursGraphe.
  * \return VRAI si la liste est vide, FAUX sinon.
  */
-Bool cgEstVide(const CouleursGraphe cg);
+Bool cgEstVide(const CouleursGraphe * cg);
 
 /**
  * \brief Test d'existence d'un sommet.
@@ -113,7 +113,7 @@ Bool cgEstVide(const CouleursGraphe cg);
  * \param s Sommet.
  * \return VRAI si le sommet existe, FAUX sinon.
  */
-Bool cgExisteSommmet(const CouleursGraphe cg, const Sommet s);
+Bool cgExisteSommmet(const CouleursGraphe * cg, const Sommet * s);
 
 /**
  * \brief Sommet suivant dans la liste.
@@ -121,7 +121,7 @@ Bool cgExisteSommmet(const CouleursGraphe cg, const Sommet s);
  * \param cg CouleursGraphe.
  * \return (pointeur vers) le sommet suivant dans la liste.
  */
-CouleursGraphe cgSuivant(const CouleursGraphe cg);
+CouleursGraphe * cgSuivant(const CouleursGraphe * cg);
 
 /**
  * \brief Sommet en tête de liste.
@@ -130,7 +130,7 @@ CouleursGraphe cgSuivant(const CouleursGraphe cg);
  * \pre !cgEstVide(cg)
  * \return Sommet.
  */
-Sommet cgSommetTete(const CouleursGraphe cg);
+Sommet * cgSommetTete(const CouleursGraphe * cg);
 
 /**
  * \brief Couleur du sommet en tête de liste.
@@ -139,7 +139,7 @@ Sommet cgSommetTete(const CouleursGraphe cg);
  * \pre !cgEstVide(cg)
  * \return Couleur.
  */
-Couleur cgCouleurTete(const CouleursGraphe cg);
+Couleur cgCouleurTete(const CouleursGraphe * cg);
 
 /**
  * \brief Couleur du sommet.
@@ -150,7 +150,7 @@ Couleur cgCouleurTete(const CouleursGraphe cg);
  * \pre cgExisteSommmet(cg)
  * \return Couleur.
  */
-Couleur cgCouleurSommet(const CouleursGraphe cg, const Sommet s);
+Couleur cgCouleurSommet(const CouleursGraphe * cg, const Sommet * s);
 
 /**
  * \brief Premier sommet noir dans la liste.
@@ -158,7 +158,7 @@ Couleur cgCouleurSommet(const CouleursGraphe cg, const Sommet s);
  * \param cg CouleursGraphe.
  * \return Premier sommet noir, NULL s'il n'y en a pas.
  */
-Sommet cgPremierSommetNoir(const CouleursGraphe cg);
+Sommet * cgPremierSommetNoir(const CouleursGraphe * cg);
 
 /**
  * \brief Premier sommet gris dans la liste.
@@ -166,7 +166,7 @@ Sommet cgPremierSommetNoir(const CouleursGraphe cg);
  * \param cg CouleursGraphe.
  * \return Premier sommet gris, NULL s'il n'y en a pas.
  */
-Sommet cgPremierSommetGris(const CouleursGraphe cg);
+Sommet * cgPremierSommetGris(const CouleursGraphe * cg);
 
 /**
  * \brief Premier sommet blanc dans la liste.
@@ -174,7 +174,7 @@ Sommet cgPremierSommetGris(const CouleursGraphe cg);
  * \param cg CouleursGraphe.
  * \return Premier sommet blanc, NULL s'il n'y en a pas.
  */
-Sommet cgPremierSommetBlanc(const CouleursGraphe cg);
+Sommet * cgPremierSommetBlanc(const CouleursGraphe * cg);
 
 /**
  * \brief Nombre de sommets dans la liste.
@@ -182,7 +182,7 @@ Sommet cgPremierSommetBlanc(const CouleursGraphe cg);
  * \param cg CouleursGraphe.
  * \return Nombre de sommets.
  */
-Nat cgNombreSommets(const CouleursGraphe cg);
+Nat cgNombreSommets(const CouleursGraphe * cg);
 
 /**
  * \brief Nombre de sommets noirs dans la liste.
@@ -190,7 +190,7 @@ Nat cgNombreSommets(const CouleursGraphe cg);
  * \param cg CouleursGraphe.
  * \return Nombre de sommets noirs.
  */
-Nat cgNombreSommetsNoirs(const CouleursGraphe cg);
+Nat cgNombreSommetsNoirs(const CouleursGraphe * cg);
 
 /**
  * \brief Nombre de sommets gris dans la liste.
@@ -198,7 +198,7 @@ Nat cgNombreSommetsNoirs(const CouleursGraphe cg);
  * \param cg CouleursGraphe.
  * \return Nombre de sommets gris.
  */
-Nat cgNombreSommetsGris(const CouleursGraphe cg);
+Nat cgNombreSommetsGris(const CouleursGraphe * cg);
 
 /**
  * \brief Nombre de sommets blancs dans la liste.
@@ -206,7 +206,7 @@ Nat cgNombreSommetsGris(const CouleursGraphe cg);
  * \param cg CouleursGraphe.
  * \return Nombre de sommets blancs.
  */
-Nat cgNombreSommetsBlancs(const CouleursGraphe cg);
+Nat cgNombreSommetsBlancs(const CouleursGraphe * cg);
 
 /**
  * \brief Pointeur vers le sommet.
@@ -215,7 +215,7 @@ Nat cgNombreSommetsBlancs(const CouleursGraphe cg);
  * \param s Sommet
  * \return (pointeur vers) le sommet dans la liste, NULL s'il n'existe pas.
  */
-CouleursGraphe cgPSommet(const CouleursGraphe cg, const Sommet s);
+CouleursGraphe * cgPSommet(const CouleursGraphe * cg, const Sommet * s);
 
 /**
  * \brief Libérer une liste de couleurs.
@@ -223,6 +223,6 @@ CouleursGraphe cgPSommet(const CouleursGraphe cg, const Sommet s);
  * \param cg CouleursGraphe.
  * \return NULL
  */
-CouleursGraphe cgLiberer(CouleursGraphe cg);
+CouleursGraphe * cgLiberer(CouleursGraphe * cg);
 
 #endif /* __COLORATION_H */

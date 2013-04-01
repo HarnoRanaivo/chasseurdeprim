@@ -1,31 +1,31 @@
 #include "testgraphe.h"
 
 /* Variables globales. */
-static Graphe g0 = NULL;
-static Graphe g1 = NULL;
-static Graphe g2 = NULL;
-static Graphe g3 = NULL;
-static Graphe g4 = NULL;
-static Graphe g5 = NULL;
-static ListeArete l2 = NULL;
-static ListeArete l3 = NULL;
-static ListeArete l4 = NULL;
-static ListeArete l5 = NULL;
-static Graphe g6 = NULL;
-static Graphe g7 = NULL;
-static Graphe g8 = NULL;
-static Graphe g9 = NULL;
-static Graphe g10 = NULL;
-static Graphe g11 = NULL;
-static Graphe g12 = NULL;
-static Graphe g13 = NULL;
-static Graphe g14 = NULL;
-static Graphe g15 = NULL;
-static Graphe g16 = NULL;
-static Graphe g17 = NULL;
-static Graphe g18 = NULL;
-static Graphe g19 = NULL;
-static Graphe g20 = NULL;
+static Graphe * g0 = NULL;
+static Graphe * g1 = NULL;
+static Graphe * g2 = NULL;
+static Graphe * g3 = NULL;
+static Graphe * g4 = NULL;
+static Graphe * g5 = NULL;
+static ListeAdjacence * l2 = NULL;
+static ListeAdjacence * l3 = NULL;
+static ListeAdjacence * l4 = NULL;
+static ListeAdjacence * l5 = NULL;
+static Graphe * g6 = NULL;
+static Graphe * g7 = NULL;
+static Graphe * g8 = NULL;
+static Graphe * g9 = NULL;
+static Graphe * g10 = NULL;
+static Graphe * g11 = NULL;
+static Graphe * g12 = NULL;
+static Graphe * g13 = NULL;
+static Graphe * g14 = NULL;
+static Graphe * g15 = NULL;
+static Graphe * g16 = NULL;
+static Graphe * g17 = NULL;
+static Graphe * g18 = NULL;
+static Graphe * g19 = NULL;
+static Graphe * g20 = NULL;
 
 int init_suiteGraphe(void)
 {
@@ -404,7 +404,7 @@ void test_graphe_gCopier(void)
     CU_ASSERT(gEgalite(g19, g20) == VRAI);
 }
 
-int add_testgraphe(void)
+int add_testGraphe(void)
 {
     CU_pSuite pSuite = NULL;
     pSuite = CU_add_suite("Tests Graphes", init_suiteGraphe, clean_suiteGraphe);

@@ -1,17 +1,17 @@
-#include "testfiletriee.h"
+#include "testfilearetetriee.h"
 
-static FileTriee ft0 = NULL;
-static FileTriee ft1 = NULL;
-static FileTriee ft2 = NULL;
-static FileTriee ft3 = NULL;
-static FileTriee ft4 = NULL;
-static FileTriee ft5 = NULL;
-static FileTriee ft6 = NULL;
-static FileTriee ft7 = NULL;
-static FileTriee ft8 = NULL;
-static FileTriee ft9 = NULL;
+static FileAreteTriee * ft0 = NULL;
+static FileAreteTriee * ft1 = NULL;
+static FileAreteTriee * ft2 = NULL;
+static FileAreteTriee * ft3 = NULL;
+static FileAreteTriee * ft4 = NULL;
+static FileAreteTriee * ft5 = NULL;
+static FileAreteTriee * ft6 = NULL;
+static FileAreteTriee * ft7 = NULL;
+static FileAreteTriee * ft8 = NULL;
+static FileAreteTriee * ft9 = NULL;
 
-int init_suiteFileTriee(void)
+int init_suiteFileAreteTriee(void)
 {
     ft0 = NULL;
 
@@ -51,7 +51,7 @@ int init_suiteFileTriee(void)
     return 0;
 }
 
-int clean_suiteFileTriee(void)
+int clean_suiteFileAreteTriee(void)
 {
     ft1->arete = aLiberer(ft1->arete);
     free(ft1);
@@ -71,13 +71,13 @@ int clean_suiteFileTriee(void)
     return 0;
 }
 
-void test_filetriee_ftNouv(void)
+void test_filearetetriee_ftNouv(void)
 {
     CU_ASSERT(ftEstVide(ftNouv()) == VRAI);
     CU_ASSERT(ftNombreAretes(ftNouv()) == 0);
 }
 
-void test_filetriee_ftAjouterArete(void)
+void test_filearetetriee_ftAjouterArete(void)
 {
     CU_ASSERT(ftEstVide(ft5) == FAUX);
     CU_ASSERT(ftNombreAretes(ft5) == 4);
@@ -91,7 +91,7 @@ void test_filetriee_ftAjouterArete(void)
     CU_ASSERT(aAreteEgaleP(ftAreteTete(ftSuivante(ftSuivante(ftSuivante(ft5)))), "e", "f", 5) == VRAI);
 }
 
-void test_filetriee_ftSupprimerTete(void)
+void test_filearetetriee_ftSupprimerTete(void)
 {
     CU_ASSERT(ftEstVide(ft6) == FAUX);
     CU_ASSERT(ftNombreAretes(ft6) == 3);
@@ -107,7 +107,7 @@ void test_filetriee_ftSupprimerTete(void)
     CU_ASSERT(ftEstVide(ft7) == VRAI);
 }
 
-void test_filetriee_ftSupprimerArete(void)
+void test_filearetetriee_ftSupprimerArete(void)
 {
     CU_ASSERT(ftEstVide(ft8) == FAUX);
     CU_ASSERT(ftNombreAretes(ft8) == 3);
@@ -132,7 +132,7 @@ void test_filetriee_ftSupprimerArete(void)
     CU_ASSERT(aAreteEgaleP(ftAreteTete(ftSuivante(ftSuivante(ftSuivante(ft9)))), "e", "f", 5) == VRAI);
 }
 
-void test_filetriee_ftEstVide(void)
+void test_filearetetriee_ftEstVide(void)
 {
     CU_ASSERT(ftEstVide(ft0) == VRAI);
     CU_ASSERT(ftEstVide(ft1) == FAUX);
@@ -141,7 +141,7 @@ void test_filetriee_ftEstVide(void)
     CU_ASSERT(ftEstVide(ft4) == FAUX);
 }
 
-void test_filetriee_ftExisteArete(void)
+void test_filearetetriee_ftExisteArete(void)
 {
     CU_ASSERT(ftExisteArete(ft0, "a", "b") == FAUX);
     CU_ASSERT(ftExisteArete(ft1, "a", "b") == VRAI);
@@ -168,7 +168,7 @@ void test_filetriee_ftExisteArete(void)
     CU_ASSERT(ftExisteArete(ft2, "f", "e") == VRAI);
 }
 
-void test_filetriee_ftNombreAretes(void)
+void test_filearetetriee_ftNombreAretes(void)
 {
     CU_ASSERT(ftNombreAretes(ft0) == 0);
     CU_ASSERT(ftNombreAretes(ft1) == 1);
@@ -177,7 +177,7 @@ void test_filetriee_ftNombreAretes(void)
     CU_ASSERT(ftNombreAretes(ft4) == 3);
 }
 
-void test_filetriee_ftAreteTete(void)
+void test_filearetetriee_ftAreteTete(void)
 {
     CU_ASSERT(aAreteEgaleP(ftAreteTete(ft1), "a", "b", 1) == VRAI);
     CU_ASSERT(aAreteEgaleP(ftAreteTete(ft2), "e", "f", 8) == VRAI);
@@ -191,7 +191,7 @@ void test_filetriee_ftAreteTete(void)
     CU_ASSERT(aAreteEgaleS(ftAreteTete(ft2), "a", "b") == FAUX);
 }
 
-void test_filetriee_ftSuivante(void)
+void test_filearetetriee_ftSuivante(void)
 {
     CU_ASSERT(ftSuivante(ft0) == NULL);
     CU_ASSERT(ftSuivante(ft1) == NULL);
@@ -200,25 +200,25 @@ void test_filetriee_ftSuivante(void)
     CU_ASSERT(ftSuivante(ft4) == ft3);
 }
 
-int add_testfiletriee(void)
+int add_testFileAreteTriee(void)
 {
     CU_pSuite pSuite = NULL;
-    pSuite = CU_add_suite("Tests Files Triées", init_suiteFileTriee, clean_suiteFileTriee);
+    pSuite = CU_add_suite("Tests Files Triées", init_suiteFileAreteTriee, clean_suiteFileAreteTriee);
     if (pSuite == NULL)
     {
         CU_cleanup_registry();
         return CU_get_error();
     }
 
-    if (CU_add_test(pSuite, "ftNouv", test_filetriee_ftNouv) == NULL
-        || CU_add_test(pSuite, "ftEstVide", test_filetriee_ftEstVide) == NULL
-        || CU_add_test(pSuite, "ftExisteArete", test_filetriee_ftExisteArete) == NULL
-        || CU_add_test(pSuite, "ftNombreAretes", test_filetriee_ftNombreAretes) == NULL
-        || CU_add_test(pSuite, "ftAreteTete", test_filetriee_ftAreteTete) == NULL
-        || CU_add_test(pSuite, "ftSuivante", test_filetriee_ftSuivante) == NULL
-        || CU_add_test(pSuite, "ftAjouterArete", test_filetriee_ftAjouterArete) == NULL
-        || CU_add_test(pSuite, "ftSupprimerTete", test_filetriee_ftSupprimerTete) == NULL
-        || CU_add_test(pSuite, "ftSupprimerArete", test_filetriee_ftSupprimerArete) == NULL
+    if (CU_add_test(pSuite, "ftNouv", test_filearetetriee_ftNouv) == NULL
+        || CU_add_test(pSuite, "ftEstVide", test_filearetetriee_ftEstVide) == NULL
+        || CU_add_test(pSuite, "ftExisteArete", test_filearetetriee_ftExisteArete) == NULL
+        || CU_add_test(pSuite, "ftNombreAretes", test_filearetetriee_ftNombreAretes) == NULL
+        || CU_add_test(pSuite, "ftAreteTete", test_filearetetriee_ftAreteTete) == NULL
+        || CU_add_test(pSuite, "ftSuivante", test_filearetetriee_ftSuivante) == NULL
+        || CU_add_test(pSuite, "ftAjouterArete", test_filearetetriee_ftAjouterArete) == NULL
+        || CU_add_test(pSuite, "ftSupprimerTete", test_filearetetriee_ftSupprimerTete) == NULL
+        || CU_add_test(pSuite, "ftSupprimerArete", test_filearetetriee_ftSupprimerArete) == NULL
         )
     {
         CU_cleanup_registry();

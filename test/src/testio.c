@@ -12,7 +12,7 @@ int main(int argc, char ** argv)
         for (i = 1; i < argc; i++)
         {
             /* Chargement du graphe. */
-            Graphe g1 = charger_graphe(argv[i]);
+            Graphe * g1 = charger_graphe(argv[i]);
 
             /* Sauvegarde du graphe précédemment chargé. */
             char * copie = malloc((strlen(argv[i]) + 7) * sizeof *copie);
@@ -20,7 +20,7 @@ int main(int argc, char ** argv)
             sauvegarder_graphe(g1, copie);
 
             /* Chargement de la sauvegarde et comparaison des deux graphes. */
-            Graphe g2 = charger_graphe(copie);
+            Graphe * g2 = charger_graphe(copie);
             printf("%s : %s\n", argv[i], gEgalite(g1, g2) ? "OK" : "Échec");
 
             g1 = gLiberer(g1);

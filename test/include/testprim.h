@@ -10,7 +10,7 @@
 #include "sommet.h"
 #include "graphe.h"
 #include "coloration.h"
-#include "filetriee.h"
+#include "filearetetriee.h"
 #include "arete.h"
 #include "prim.h"
 #include "parcours.h"
@@ -23,6 +23,6 @@ void test_prim_pAjouterAretesIncidentes(void);
 
 void test_prim_pArbreCouvrantMinimum(void);
 
-int add_testprim(void);
+int add_testPrim(void);
 
 #endif /* __TESTPRIM_H */

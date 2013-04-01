@@ -1,11 +1,11 @@
 #include "testparcours.h"
 
-static Graphe g0 = NULL;
-static Graphe g1 = NULL;
-static Graphe g2 = NULL;
-static Graphe g3 = NULL;
-static Graphe g4 = NULL;
-static Graphe g5 = NULL;
+static Graphe * g0 = NULL;
+static Graphe * g1 = NULL;
+static Graphe * g2 = NULL;
+static Graphe * g3 = NULL;
+static Graphe * g4 = NULL;
+static Graphe * g5 = NULL;
 
 int init_suiteParcours(void)
 {
@@ -58,7 +58,7 @@ void test_parcours_gACycle(void)
     CU_ASSERT(gACycle(g5) == VRAI);
 }
 
-int add_testparcours(void)
+int add_testParcours(void)
 {
     CU_pSuite pSuite = NULL;
     pSuite = CU_add_suite("Tests Parcours", init_suiteParcours, clean_suiteParcours);

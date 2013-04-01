@@ -1,20 +1,20 @@
 #include "testprim.h"
 
-static Graphe g0 = NULL;
-static CouleursGraphe cg0 = NULL;
-static CouleursGraphe cg1 = NULL;
-static FileTriee ft0 = NULL;
-static FileTriee ft1 = NULL;
-static FileTriee ft2 = NULL;
-static Graphe a0 = NULL;
-static Graphe g1 = NULL;
-static Graphe a1 = NULL;
-static Graphe a2 = NULL;
-static Graphe a3 = NULL;
-static Graphe a4 = NULL;
-static Graphe a5 = NULL;
-static Graphe a6 = NULL;
-static Graphe a7 = NULL;
+static Graphe * g0 = NULL;
+static CouleursGraphe * cg0 = NULL;
+static CouleursGraphe * cg1 = NULL;
+static FileAreteTriee * ft0 = NULL;
+static FileAreteTriee * ft1 = NULL;
+static FileAreteTriee * ft2 = NULL;
+static Graphe * a0 = NULL;
+static Graphe * g1 = NULL;
+static Graphe * a1 = NULL;
+static Graphe * a2 = NULL;
+static Graphe * a3 = NULL;
+static Graphe * a4 = NULL;
+static Graphe * a5 = NULL;
+static Graphe * a6 = NULL;
+static Graphe * a7 = NULL;
 
 int init_suitePrim(void)
 {
@@ -32,13 +32,13 @@ int init_suitePrim(void)
     cg1 = cgInit(g0);
     cg1 = cgModifierSommet(cgModifierSommet(cg1, "a", NOIR), "e", NOIR);
 
-    ft0 = pAjouterAretesIncidentes(ft0, g0, cg0, "a");
+    ft0 = ftAjouterAretesIncidentes(ft0, g0, cg0, "a");
 
-    ft1 = pAjouterAretesIncidentes(ft1, g0, cg1, "e");
+    ft1 = ftAjouterAretesIncidentes(ft1, g0, cg1, "e");
 
-    ft2 = pAjouterAretesIncidentes(ft2, g0, cg0, "a");
+    ft2 = ftAjouterAretesIncidentes(ft2, g0, cg0, "a");
     ft2 = ftSupprimerArete(ft2, "a", "e");
-    ft2 = pAjouterAretesIncidentes(ft2, g0, cg1, "e");
+    ft2 = ftAjouterAretesIncidentes(ft2, g0, cg1, "e");
 
     a0 = gAjouterSommet(gAjouterSommet(gAjouterSommet(gNouv(), "a"), "b"), "c");
     a0 = gAjouterSommet(gAjouterSommet(gAjouterSommet(a0, "d"), "e"), "f");
@@ -85,8 +85,8 @@ int init_suitePrim(void)
     a5 = gAjouterArete(gAjouterArete(a5, "b", "d", 1), "e", "d", 1);
     a5 = gAjouterArete(a5, "d", "f", 1);
 
-    a6 = pArbreCouvrantMinimum(g0, "a");
-    a7 = pArbreCouvrantMinimum(g1, "b");
+    a6 = gArbreCouvrantMinimum(g0, "a");
+    a7 = gArbreCouvrantMinimum(g1, "b");
 
     return 0;
 }
@@ -112,7 +112,7 @@ int clean_suitePrim(void)
     return 0;
 }
 
-void test_prim_pAjouterAretesIncidentes(void)
+void test_prim_ftAjouterAretesIncidentes(void)
 {
     CU_ASSERT(ftEstVide(ft0) == FAUX);
     CU_ASSERT(ftNombreAretes(ft0) == 4);
@@ -152,7 +152,7 @@ void test_prim_pAjouterAretesIncidentes(void)
     CU_ASSERT(aAreteEgaleP(ftAreteTete(ftSuivante(ftSuivante(ftSuivante(ftSuivante(ftSuivante(ft2)))))), "e", "c", 5) == VRAI);
 }
 
-void test_prim_pArbreCouvrantMinimum(void)
+void test_prim_gArbreCouvrantMinimum(void)
 {
     CU_ASSERT(gEstVide(a6) == FAUX);
     CU_ASSERT(gNombreSommets(a6) == gNombreSommets(g0));
@@ -170,7 +170,7 @@ void test_prim_pArbreCouvrantMinimum(void)
     CU_ASSERT(gEgalite(a7, a1) || gEgalite(a7, a2) || gEgalite(a7, a3) || gEgalite(a7, a4) || gEgalite(a7, a5) == VRAI);
 }
 
-int add_testprim(void)
+int add_testPrim(void)
 {
     CU_pSuite pSuite = NULL;
     pSuite = CU_add_suite("Tests Prim", init_suitePrim, clean_suitePrim);
@@ -180,8 +180,8 @@ int add_testprim(void)
         return CU_get_error();
     }
 
-    if (CU_add_test(pSuite, "pAjouterAretesIncidentes", test_prim_pAjouterAretesIncidentes) == NULL
-        || CU_add_test(pSuite, "pArbreCouvrantMinimum", test_prim_pArbreCouvrantMinimum) == NULL
+    if (CU_add_test(pSuite, "ftAjouterAretesIncidentes", test_prim_ftAjouterAretesIncidentes) == NULL
+        || CU_add_test(pSuite, "gArbreCouvrantMinimum", test_prim_gArbreCouvrantMinimum) == NULL
         )
     {
         CU_cleanup_registry();

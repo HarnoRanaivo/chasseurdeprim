@@ -30,6 +30,6 @@ void test_arete_aAreteEgaleP(void);
 
 void test_arete_aAreteEgaleP2(void);
 
-int add_testarete(void);
+int add_testArete(void);
 
 #endif /* __TESTARETE_H */

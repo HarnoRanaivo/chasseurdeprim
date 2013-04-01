@@ -8,7 +8,7 @@
 
 #include "base.h"
 #include "sommet.h"
-#include "liste.h"
+#include "adjacence.h"
 #include "graphe.h"
 #include "parcours.h"
 #include "grapheconnexe.h"
@@ -29,6 +29,6 @@ void test_grapheconnexe_gcSupprimerArete(void);
 
 void test_grapheconnexe_gcModifierArete(void);
 
-int add_testgrapheconnexe(void);
+int add_testGrapheConnexe(void);
 
 #endif /* __TESTGRAPHECONNEXE_H */

@@ -243,6 +243,20 @@ Graphe * gCopier(const Graphe * g)
     return copie;
 }
 
+ListeArete * gAretes(const Graphe * g)
+{
+    ListeArete * aretes = larNouv();
+
+    for (g = g; !gEstVide(g); g = gSuivant(g))
+    {
+        ListeAdjacence * l;
+        for (l = gAdjacenceTete(g); !lest_vide(l); l = lsuiv(l))
+            aretes = larAjouterAreteTete(aretes, gSommetTete(g), lsommet_tete(l), lpoids_tete(l));
+    }
+
+    return aretes;
+}
+
 Graphe * gLiberer(Graphe * g)
 {
     if (g == NULL)

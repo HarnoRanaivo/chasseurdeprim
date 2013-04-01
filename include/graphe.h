@@ -13,6 +13,7 @@
 #include "base.h"
 #include "sommet.h"
 #include "adjacence.h"
+#include "listearete.h"
 
 /**
  * \struct Graphe
@@ -219,6 +220,14 @@ Bool gEgalite(const Graphe * g, const Graphe * h);
  * \return Copie du graphe.
  */
 Graphe * gCopier(const Graphe * g);
+
+/**
+ * \brief Liste des arêtes d'un graphe.
+ * \relatesalso Graphe
+ * \param g Graphe.
+ * \return Liste des arêtes.
+ */
+ListeArete * gAretes(const Graphe * g);
 
 /**
  * \brief Libération d'un graphe.

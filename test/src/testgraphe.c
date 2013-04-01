@@ -26,6 +26,10 @@ static Graphe * g17 = NULL;
 static Graphe * g18 = NULL;
 static Graphe * g19 = NULL;
 static Graphe * g20 = NULL;
+static Graphe * g21 = NULL;
+static ListeArete * lar21 = NULL;
+static Graphe * g22 = NULL;
+static ListeArete * lar22 = NULL;
 
 int init_suiteGraphe(void)
 {
@@ -113,6 +117,19 @@ int init_suiteGraphe(void)
     g19 = gAjouterArete(gAjouterArete(gAjouterArete(g19, "azer", "wxcv", 1), "azer", "azer", 2), "qsdf", "azer", 3);
     g20 = gCopier(g19);
 
+    g21 = gAjouterArete(gAjouterArete(gNouv(), "a", "b", 2), "a", "c", 5);
+    g21 = gAjouterArete(gAjouterArete(g21, "b", "d", 1), "a", "e", 9);
+    g21 = gAjouterArete(gAjouterArete(g21, "c", "e", 7), "b", "f", 6);
+    g21 = gAjouterArete(gAjouterArete(g21, "f", "a", 3), "d", "e", 4);
+
+    lar21 = gAretes(g21);
+
+    g22 = gAjouterArete(gAjouterArete(gNouv(), "a", "b", 1), "a", "c", 1);
+    g22 = gAjouterArete(gAjouterArete(g22, "b", "c", 3), "d", "e", 2);
+    g22 = gAjouterArete(g22, "e", "f", 3);
+
+    lar22 = gAretes(g22);
+
     return 0;
 }
 
@@ -147,6 +164,10 @@ int clean_suiteGraphe(void)
     g18 = gLiberer(g18);
     g19 = gLiberer(g19);
     g20 = gLiberer(g20);
+    g21 = gLiberer(g21);
+    lar21 = larLiberer(lar21);
+    g22 = gLiberer(g22);
+    lar22 = larLiberer(lar22);
 
     return 0;
 }
@@ -404,6 +425,41 @@ void test_graphe_gCopier(void)
     CU_ASSERT(gEgalite(g19, g20) == VRAI);
 }
 
+void test_graphe_gAretes(void)
+{
+    CU_ASSERT(larEstVide(lar21) == FAUX);
+    CU_ASSERT(larNombreAretes(lar21) == 8);
+    CU_ASSERT(larExisteArete(lar21, "a", "b") == VRAI);
+    CU_ASSERT(larExisteArete(lar21, "a", "c") == VRAI);
+    CU_ASSERT(larExisteArete(lar21, "b", "d") == VRAI);
+    CU_ASSERT(larExisteArete(lar21, "a", "e") == VRAI);
+    CU_ASSERT(larExisteArete(lar21, "c", "e") == VRAI);
+    CU_ASSERT(larExisteArete(lar21, "b", "f") == VRAI);
+    CU_ASSERT(larExisteArete(lar21, "f", "a") == VRAI);
+    CU_ASSERT(larExisteArete(lar21, "d", "e") == VRAI);
+    CU_ASSERT(aPoids(larAreteTete(larPArete(lar21, "a", "b"))) == 2);
+    CU_ASSERT(aPoids(larAreteTete(larPArete(lar21, "a", "c"))) == 5);
+    CU_ASSERT(aPoids(larAreteTete(larPArete(lar21, "b", "d"))) == 1);
+    CU_ASSERT(aPoids(larAreteTete(larPArete(lar21, "a", "e"))) == 9);
+    CU_ASSERT(aPoids(larAreteTete(larPArete(lar21, "c", "e"))) == 7);
+    CU_ASSERT(aPoids(larAreteTete(larPArete(lar21, "b", "f"))) == 6);
+    CU_ASSERT(aPoids(larAreteTete(larPArete(lar21, "f", "a"))) == 3);
+    CU_ASSERT(aPoids(larAreteTete(larPArete(lar21, "d", "e"))) == 4);
+
+    CU_ASSERT(larEstVide(lar22) == FAUX);
+    CU_ASSERT(larNombreAretes(lar22) == 5);
+    CU_ASSERT(larExisteArete(lar22, "a", "b") == VRAI);
+    CU_ASSERT(larExisteArete(lar22, "a", "c") == VRAI);
+    CU_ASSERT(larExisteArete(lar22, "b", "c") == VRAI);
+    CU_ASSERT(larExisteArete(lar22, "d", "e") == VRAI);
+    CU_ASSERT(larExisteArete(lar22, "e", "f") == VRAI);
+    CU_ASSERT(aPoids(larAreteTete(larPArete(lar22, "a", "b"))) == 1);
+    CU_ASSERT(aPoids(larAreteTete(larPArete(lar22, "a", "c"))) == 1);
+    CU_ASSERT(aPoids(larAreteTete(larPArete(lar22, "b", "c"))) == 3);
+    CU_ASSERT(aPoids(larAreteTete(larPArete(lar22, "d", "e"))) == 2);
+    CU_ASSERT(aPoids(larAreteTete(larPArete(lar22, "e", "f"))) == 3);
+}
+
 int add_testGraphe(void)
 {
     CU_pSuite pSuite = NULL;
@@ -438,6 +494,7 @@ int add_testGraphe(void)
         || CU_add_test(pSuite, "gModifierArete", test_graphe_gModifierArete) == NULL
         || CU_add_test(pSuite, "gEgalite", test_graphe_gEgalite) == NULL
         || CU_add_test(pSuite, "gCopier", test_graphe_gCopier) == NULL
+        || CU_add_test(pSuite, "gAretes", test_graphe_gAretes) == NULL
         )
     {
         CU_cleanup_registry();

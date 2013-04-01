@@ -5,6 +5,7 @@
 #include "base.h"
 #include "testsommet.h"
 #include "testarete.h"
+#include "testlistearete.h"
 #include "testadjacence.h"
 #include "testgraphe.h"
 #include "testcoloration.h"
@@ -20,6 +21,7 @@ int main(int argc, char ** argv)
 
     add_testSommet();
     add_testArete();
+    add_testListeArete();
     add_testFileAreteTriee();
     add_testAdjacence();
     add_testGraphe();

@@ -37,7 +37,7 @@ int init_suitePrim(void)
     ft1 = ftAjouterAretesIncidentes(ft1, g0, cg1, "e");
 
     ft2 = ftAjouterAretesIncidentes(ft2, g0, cg0, "a");
-    ft2 = ftSupprimerArete(ft2, "a", "e");
+    ft2 = larSupprimerArete(ft2, "a", "e");
     ft2 = ftAjouterAretesIncidentes(ft2, g0, cg1, "e");
 
     a0 = gAjouterSommet(gAjouterSommet(gAjouterSommet(gNouv(), "a"), "b"), "c");
@@ -96,9 +96,9 @@ int clean_suitePrim(void)
     g0 = gLiberer(g0);
     cg0 = cgLiberer(cg0);
     cg1 = cgLiberer(cg1);
-    ft0 = ftLiberer(ft0);
-    ft1 = ftLiberer(ft1);
-    ft2 = ftLiberer(ft2);
+    ft0 = larLiberer(ft0);
+    ft1 = larLiberer(ft1);
+    ft2 = larLiberer(ft2);
     a0 = gLiberer(a0);
     g1 = gLiberer(g1);
     a1 = gLiberer(a1);
@@ -114,42 +114,42 @@ int clean_suitePrim(void)
 
 void test_prim_ftAjouterAretesIncidentes(void)
 {
-    CU_ASSERT(ftEstVide(ft0) == FAUX);
-    CU_ASSERT(ftNombreAretes(ft0) == 4);
-    CU_ASSERT(ftExisteArete(ft0, "a", "b") == VRAI);
-    CU_ASSERT(ftExisteArete(ft0, "a", "c") == VRAI);
-    CU_ASSERT(ftExisteArete(ft0, "a", "d") == VRAI);
-    CU_ASSERT(ftExisteArete(ft0, "a", "e") == VRAI);
-    CU_ASSERT(aPoids(ftAreteTete(ft0)) == 1);
-    CU_ASSERT(aPoids(ftAreteTete(ftSuivante(ft0))) == 1);
-    CU_ASSERT(aPoids(ftAreteTete(ftSuivante(ftSuivante(ft0)))) == 1);
-    CU_ASSERT(aAreteEgaleP(ftAreteTete(ftSuivante(ftSuivante(ftSuivante(ft0)))), "a", "c", 3) == VRAI);
+    CU_ASSERT(larEstVide(ft0) == FAUX);
+    CU_ASSERT(larNombreAretes(ft0) == 4);
+    CU_ASSERT(larExisteArete(ft0, "a", "b") == VRAI);
+    CU_ASSERT(larExisteArete(ft0, "a", "c") == VRAI);
+    CU_ASSERT(larExisteArete(ft0, "a", "d") == VRAI);
+    CU_ASSERT(larExisteArete(ft0, "a", "e") == VRAI);
+    CU_ASSERT(aPoids(larAreteTete(ft0)) == 1);
+    CU_ASSERT(aPoids(larAreteTete(larSuivante(ft0))) == 1);
+    CU_ASSERT(aPoids(larAreteTete(larSuivante(larSuivante(ft0)))) == 1);
+    CU_ASSERT(aAreteEgaleP(larAreteTete(larSuivante(larSuivante(larSuivante(ft0)))), "a", "c", 3) == VRAI);
 
-    CU_ASSERT(ftEstVide(ft1) == FAUX);
-    CU_ASSERT(ftNombreAretes(ft1) == 3);
-    CU_ASSERT(ftExisteArete(ft1, "e", "a") == FAUX);
-    CU_ASSERT(ftExisteArete(ft1, "e", "c") == VRAI);
-    CU_ASSERT(ftExisteArete(ft1, "e", "d") == VRAI);
-    CU_ASSERT(ftExisteArete(ft1, "e", "f") == VRAI);
-    CU_ASSERT(aAreteEgaleP(ftAreteTete(ft1), "e", "d", 2) == VRAI);
-    CU_ASSERT(aAreteEgaleP(ftAreteTete(ftSuivante(ft1)), "e", "f", 3) == VRAI);
-    CU_ASSERT(aAreteEgaleP(ftAreteTete(ftSuivante(ftSuivante(ft1))), "e", "c", 5) == VRAI);
+    CU_ASSERT(larEstVide(ft1) == FAUX);
+    CU_ASSERT(larNombreAretes(ft1) == 3);
+    CU_ASSERT(larExisteArete(ft1, "e", "a") == FAUX);
+    CU_ASSERT(larExisteArete(ft1, "e", "c") == VRAI);
+    CU_ASSERT(larExisteArete(ft1, "e", "d") == VRAI);
+    CU_ASSERT(larExisteArete(ft1, "e", "f") == VRAI);
+    CU_ASSERT(aAreteEgaleP(larAreteTete(ft1), "e", "d", 2) == VRAI);
+    CU_ASSERT(aAreteEgaleP(larAreteTete(larSuivante(ft1)), "e", "f", 3) == VRAI);
+    CU_ASSERT(aAreteEgaleP(larAreteTete(larSuivante(larSuivante(ft1))), "e", "c", 5) == VRAI);
 
-    CU_ASSERT(ftEstVide(ft2) == FAUX);
-    CU_ASSERT(ftNombreAretes(ft2) == 6);
-    CU_ASSERT(ftExisteArete(ft2, "e", "a") == FAUX);
-    CU_ASSERT(ftExisteArete(ft2, "a", "b") == VRAI);
-    CU_ASSERT(ftExisteArete(ft2, "a", "c") == VRAI);
-    CU_ASSERT(ftExisteArete(ft2, "a", "d") == VRAI);
-    CU_ASSERT(ftExisteArete(ft2, "e", "c") == VRAI);
-    CU_ASSERT(ftExisteArete(ft2, "e", "d") == VRAI);
-    CU_ASSERT(ftExisteArete(ft2, "e", "f") == VRAI);
-    CU_ASSERT(aPoids(ftAreteTete(ft2)) == 1);
-    CU_ASSERT(aPoids(ftAreteTete(ftSuivante(ft2))) == 1);
-    CU_ASSERT(aAreteEgaleP(ftAreteTete(ftSuivante(ftSuivante(ft2))), "e", "d", 2) == VRAI);
-    CU_ASSERT(aPoids(ftAreteTete(ftSuivante(ftSuivante(ftSuivante(ft2))))) == 3);
-    CU_ASSERT(aPoids(ftAreteTete(ftSuivante(ftSuivante(ftSuivante(ftSuivante(ft2)))))) == 3);
-    CU_ASSERT(aAreteEgaleP(ftAreteTete(ftSuivante(ftSuivante(ftSuivante(ftSuivante(ftSuivante(ft2)))))), "e", "c", 5) == VRAI);
+    CU_ASSERT(larEstVide(ft2) == FAUX);
+    CU_ASSERT(larNombreAretes(ft2) == 6);
+    CU_ASSERT(larExisteArete(ft2, "e", "a") == FAUX);
+    CU_ASSERT(larExisteArete(ft2, "a", "b") == VRAI);
+    CU_ASSERT(larExisteArete(ft2, "a", "c") == VRAI);
+    CU_ASSERT(larExisteArete(ft2, "a", "d") == VRAI);
+    CU_ASSERT(larExisteArete(ft2, "e", "c") == VRAI);
+    CU_ASSERT(larExisteArete(ft2, "e", "d") == VRAI);
+    CU_ASSERT(larExisteArete(ft2, "e", "f") == VRAI);
+    CU_ASSERT(aPoids(larAreteTete(ft2)) == 1);
+    CU_ASSERT(aPoids(larAreteTete(larSuivante(ft2))) == 1);
+    CU_ASSERT(aAreteEgaleP(larAreteTete(larSuivante(larSuivante(ft2))), "e", "d", 2) == VRAI);
+    CU_ASSERT(aPoids(larAreteTete(larSuivante(larSuivante(larSuivante(ft2))))) == 3);
+    CU_ASSERT(aPoids(larAreteTete(larSuivante(larSuivante(larSuivante(larSuivante(ft2)))))) == 3);
+    CU_ASSERT(aAreteEgaleP(larAreteTete(larSuivante(larSuivante(larSuivante(larSuivante(larSuivante(ft2)))))), "e", "c", 5) == VRAI);
 }
 
 void test_prim_gArbreCouvrantMinimum(void)

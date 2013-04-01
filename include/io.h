@@ -14,27 +14,27 @@
 
 #include "base.h"
 #include "sommet.h"
-#include "liste.h"
+#include "adjacence.h"
 #include "graphe.h"
 
 /**
- * \fn void sauvegarder_graphe (Graphe g, char* destination)
+ * \fn void sauvegarder_graphe (const Graphe * g, const char* destination)
  * \brief Permet de sauvegarder le graphe dans un fichier passé en argument
  * \param g (Graphe)
  * \param destination (fichier de sauvegarde)
  * \relatesalso Graphe
  * \return \b void
  */
-void sauvegarder_graphe (Graphe g, char* filename);
+void sauvegarder_graphe (const Graphe * g, const char* destination);
 
 /**
- * \fn Graphe charger_graphe (char* source)
+ * \fn Graphe * charger_graphe (const char* source)
  * \brief Permet de charger un graphe dans un fichier texte
  * \param source (fichier de chargement)
  * \relatesalso Graphe
  * \return Graphe du fichier
  */
-Graphe charger_graphe (char* source);
+Graphe * charger_graphe (const char* source);
 
 
 #endif /* __IO_H */

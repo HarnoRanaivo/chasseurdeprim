@@ -6,7 +6,7 @@
  
 #include "io.h"
 
-void sauvegarder_graphe (Graphe g, char* destination){
+void sauvegarder_graphe (const Graphe * g, const char* destination){
 	FILE * pfile = NULL;
 	pfile = fopen(destination, "w"); // crée le fichier destination s'il n'existe pas sinon le réécrit
 	assert (pfile != NULL);
@@ -15,7 +15,7 @@ void sauvegarder_graphe (Graphe g, char* destination){
 	
 	Nat tailleg = gNombreSommets(g);
 	for (i=0 ; i< tailleg ; i++){ // boucle pour chaque sommet de g
-	    ListeArete l = gAdjacenceTete(g);
+	    ListeAdjacence * l = gAdjacenceTete(g);
 	    Nat taillel = ltaille(l);
 		for (j=0 ; j< taillel; j++){ // boucle pour chaque arête dans la liste d'arêtes de g
 			fprintf(pfile,"%s\t%d\t%s\n",gSommetTete(g),lpoids_tete(l),lsommet_tete(l));		
@@ -28,11 +28,11 @@ void sauvegarder_graphe (Graphe g, char* destination){
 	return;
 }
 
-Graphe charger_graphe (char* source){
+Graphe * charger_graphe (const char* source){
 	FILE * pfile = NULL;
 	pfile = fopen(source, "r"); // lit le fichier source
 	assert (pfile != NULL);
-	Graphe g = gNouv();
+	Graphe * g = gNouv();
 	
 	char buffer1[100]; // sommet de départ de 100 caractères maximum
 	Ent poids;

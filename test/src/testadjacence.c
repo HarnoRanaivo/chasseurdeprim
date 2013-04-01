@@ -1,27 +1,27 @@
-#include "testliste.h"
+#include "testadjacence.h"
 
 static char nom1[6] = "abcde\0";
 static char nom2[6] = "fghij\0";
 static char nom3[6] = "klmno\0";
 static char nom4[6] = "pqrst\0";
 
-static ListeArete l1 = NULL;
-static ListeArete l2 = NULL;
-static ListeArete l3 = NULL;
-static ListeArete l4 = NULL;
-static ListeArete l5 = NULL;
-static ListeArete l6 = NULL;
-static ListeArete l7 = NULL;
-static ListeArete l8 = NULL;
-static ListeArete l9 = NULL;
-static ListeArete l10 = NULL;
-static ListeArete l11 = NULL;
-static ListeArete l12 = NULL;
-static ListeArete l13 = NULL;
-static ListeArete l14 = NULL;
-static ListeArete l15 = NULL;
+static ListeAdjacence * l1 = NULL;
+static ListeAdjacence * l2 = NULL;
+static ListeAdjacence * l3 = NULL;
+static ListeAdjacence * l4 = NULL;
+static ListeAdjacence * l5 = NULL;
+static ListeAdjacence * l6 = NULL;
+static ListeAdjacence * l7 = NULL;
+static ListeAdjacence * l8 = NULL;
+static ListeAdjacence * l9 = NULL;
+static ListeAdjacence * l10 = NULL;
+static ListeAdjacence * l11 = NULL;
+static ListeAdjacence * l12 = NULL;
+static ListeAdjacence * l13 = NULL;
+static ListeAdjacence * l14 = NULL;
+static ListeAdjacence * l15 = NULL;
 
-int init_suiteListe(void)
+int init_suiteAdjacence(void)
 {
     /* Pour les tests de quelques sélecteurs. */
     l1 = MALLOC(l1);
@@ -72,7 +72,7 @@ int init_suiteListe(void)
     return 0;
 }
 
-int clean_suiteListe(void)
+int clean_suiteAdjacence(void)
 {
     l1->v = libererSommet(l1->v);
     l2->v = libererSommet(l2->v);
@@ -97,12 +97,12 @@ int clean_suiteListe(void)
     return 0;
 }
 
-void test_liste_listnouv(void)
+void test_adjacencelistnouv(void)
 {
     CU_ASSERT(listnouv() == NULL);
 }
 
-void test_liste_lest_vide(void)
+void test_adjacencelest_vide(void)
 {
     CU_ASSERT(lest_vide(listnouv()) == VRAI);
     CU_ASSERT(lest_vide(l1) == FAUX);
@@ -111,14 +111,14 @@ void test_liste_lest_vide(void)
     CU_ASSERT(lest_vide(l4) == FAUX);
 }
 
-void test_liste_ltaille(void)
+void test_adjacenceltaille(void)
 {
     CU_ASSERT(ltaille(listnouv()) == 0);
     CU_ASSERT(ltaille(l1) == 1);
     CU_ASSERT(ltaille(l4) == 3);
 }
 
-void test_liste_lsommet_tete(void)
+void test_adjacencelsommet_tete(void)
 {
     CU_ASSERT(egalSom(lsommet_tete(l1), nom1) == VRAI);
     CU_ASSERT(egalSom(lsommet_tete(l2), nom2) == VRAI);
@@ -126,7 +126,7 @@ void test_liste_lsommet_tete(void)
     CU_ASSERT(egalSom(lsommet_tete(l4), nom4) == VRAI);
 }
 
-void test_liste_lpoids_tete(void)
+void test_adjacencelpoids_tete(void)
 {
     CU_ASSERT(lpoids_tete(l1) == 10);
     CU_ASSERT(lpoids_tete(l2) == 5367);
@@ -134,7 +134,7 @@ void test_liste_lpoids_tete(void)
     CU_ASSERT(lpoids_tete(l4) == 360);
 }
 
-void test_liste_lsuiv(void)
+void test_adjacencelsuiv(void)
 {
     CU_ASSERT(lsuiv(l1) == NULL);
     CU_ASSERT(lsuiv(l4) == l3);
@@ -142,7 +142,7 @@ void test_liste_lsuiv(void)
     CU_ASSERT(lsuiv(l2) == NULL);
 }
 
-void test_liste_lexar(void)
+void test_adjacencelexar(void)
 {
     CU_ASSERT(lexar(listnouv(), nom1) == FAUX);
 
@@ -155,7 +155,7 @@ void test_liste_lexar(void)
     CU_ASSERT(lexar(l4, nom4) == VRAI);
 }
 
-void test_liste_lpoids(void)
+void test_adjacencelpoids(void)
 {
     CU_ASSERT(lpoids(l1, nom1) == 10);
 
@@ -164,7 +164,7 @@ void test_liste_lpoids(void)
     CU_ASSERT(lpoids(l4, nom4) == 360);
 }
 
-void test_liste_lajar(void)
+void test_adjacencelajar(void)
 {
     CU_ASSERT(ltaille(l5) == 2);
     CU_ASSERT(lexar(l5, "azert") == VRAI);
@@ -173,7 +173,7 @@ void test_liste_lajar(void)
     CU_ASSERT(lpoids(l5, "qsdf") == 200);
 }
 
-void test_liste_lsupar(void)
+void test_adjacencelsupar(void)
 {
     l6 = lsupar(l6, "qsdf");
     CU_ASSERT(ltaille(l6) == 1);
@@ -192,7 +192,7 @@ void test_liste_lsupar(void)
     CU_ASSERT(lexar(l6, "azert") == FAUX);
 }
 
-void test_liste_lcopie(void)
+void test_adjacencelcopie(void)
 {
     CU_ASSERT(ltaille(l8) == ltaille(l7));
     CU_ASSERT(lexar(l8, "azer") == VRAI);
@@ -203,7 +203,7 @@ void test_liste_lcopie(void)
     CU_ASSERT(lpoids(l8, "wxcv") == 3);
 }
 
-void test_liste_lmod(void)
+void test_adjacencelmod(void)
 {
     CU_ASSERT(ltaille(l9) == 3);
     CU_ASSERT(lexar(l9, "azer") == VRAI);
@@ -214,7 +214,7 @@ void test_liste_lmod(void)
     CU_ASSERT(lpoids(l9, "wxcv") == 3);
 }
 
-void test_liste_lega(void)
+void test_adjacencelega(void)
 {
     CU_ASSERT(lega(l10, l11) == VRAI);
     CU_ASSERT(lega(l10, l12) == FAUX);
@@ -224,29 +224,29 @@ void test_liste_lega(void)
 
 }
 
-int add_testliste(void)
+int add_testAdjacence(void)
 {
     CU_pSuite pSuite = NULL;
-    pSuite = CU_add_suite("Tests Liste", init_suiteListe, clean_suiteListe);
+    pSuite = CU_add_suite("Tests Liste d'Adjacence", init_suiteAdjacence, clean_suiteAdjacence);
     if (pSuite == NULL)
     {
         CU_cleanup_registry();
         return CU_get_error();
     }
 
-    if (CU_add_test(pSuite, "listnouv", test_liste_listnouv) == NULL
-        || CU_add_test(pSuite, "lest_vide", test_liste_lest_vide) == NULL
-        || CU_add_test(pSuite, "lsommet_tete", test_liste_lsommet_tete) == NULL
-        || CU_add_test(pSuite, "lpoids_tete", test_liste_lpoids_tete) == NULL
-        || CU_add_test(pSuite, "lsuiv", test_liste_lsuiv) == NULL
-        || CU_add_test(pSuite, "ltaille", test_liste_ltaille) == NULL
-        || CU_add_test(pSuite, "lpoids", test_liste_lpoids) == NULL
-        || CU_add_test(pSuite, "lexar", test_liste_lexar) == NULL
-        || CU_add_test(pSuite, "lajar", test_liste_lajar) == NULL
-        || CU_add_test(pSuite, "lsupar", test_liste_lsupar) == NULL
-        || CU_add_test(pSuite, "lcopie", test_liste_lcopie) == NULL
-        || CU_add_test(pSuite, "lmod", test_liste_lmod) == NULL
-        || CU_add_test(pSuite, "lega", test_liste_lega) == NULL
+    if (CU_add_test(pSuite, "listnouv", test_adjacencelistnouv) == NULL
+        || CU_add_test(pSuite, "lest_vide", test_adjacencelest_vide) == NULL
+        || CU_add_test(pSuite, "lsommet_tete", test_adjacencelsommet_tete) == NULL
+        || CU_add_test(pSuite, "lpoids_tete", test_adjacencelpoids_tete) == NULL
+        || CU_add_test(pSuite, "lsuiv", test_adjacencelsuiv) == NULL
+        || CU_add_test(pSuite, "ltaille", test_adjacenceltaille) == NULL
+        || CU_add_test(pSuite, "lpoids", test_adjacencelpoids) == NULL
+        || CU_add_test(pSuite, "lexar", test_adjacencelexar) == NULL
+        || CU_add_test(pSuite, "lajar", test_adjacencelajar) == NULL
+        || CU_add_test(pSuite, "lsupar", test_adjacencelsupar) == NULL
+        || CU_add_test(pSuite, "lcopie", test_adjacencelcopie) == NULL
+        || CU_add_test(pSuite, "lmod", test_adjacencelmod) == NULL
+        || CU_add_test(pSuite, "lega", test_adjacencelega) == NULL
         )
     {
         CU_cleanup_registry();

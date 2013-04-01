@@ -1,12 +1,11 @@
 #include "testsommet.h"
 
-static Sommet a;
-static Sommet b;
+static Sommet * a;
+static Sommet * b;
 
 int init_suiteSommet(void)
 {
-    Sommet c;
-
+    Sommet * c;
     /* Pour tester copieSommet. */
     a = copieSommet("abcde");
 
@@ -20,8 +19,8 @@ int init_suiteSommet(void)
 
 int clean_suiteSommet(void)
 {
-    free(a);
-    free(b);
+    a = libererSommet(a);
+    b = libererSommet(b);
 
     return 0;
 }
@@ -49,7 +48,7 @@ void test_sommet_modSommet(void)
     CU_ASSERT(egalSom(b, "fghijkl") == VRAI);
 }
 
-int add_testsommets(void)
+int add_testSommet(void)
 {
     CU_pSuite pSuite = NULL;
     pSuite = CU_add_suite("Tests Sommet", init_suiteSommet, clean_suiteSommet);

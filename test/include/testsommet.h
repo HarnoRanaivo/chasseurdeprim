@@ -19,6 +19,6 @@ void test_sommet_copieSommet(void);
 
 void test_sommet_modSommet(void);
 
-int add_testsommets(void);
+int add_testSommet(void);
 
 #endif /* __TESTSOMMET_H */

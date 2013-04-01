@@ -1,19 +1,19 @@
 #include "testcoloration.h"
 
-static CouleursGraphe cg0 = NULL;
-static CouleursGraphe cg1 = NULL;
-static CouleursGraphe cg2 = NULL;
-static CouleursGraphe cg3 = NULL;
-static CouleursGraphe cg4 = NULL;
-static CouleursGraphe cg5 = NULL;
-static CouleursGraphe cg6 = NULL;
-static CouleursGraphe cg7 = NULL;
-static CouleursGraphe cg8 = NULL;
-static CouleursGraphe cg9 = NULL;
-static Graphe g0 = NULL;
-static Graphe g1 = NULL;
-static CouleursGraphe cg10 = NULL;
-static CouleursGraphe cg11 = NULL;
+static CouleursGraphe * cg0 = NULL;
+static CouleursGraphe * cg1 = NULL;
+static CouleursGraphe * cg2 = NULL;
+static CouleursGraphe * cg3 = NULL;
+static CouleursGraphe * cg4 = NULL;
+static CouleursGraphe * cg5 = NULL;
+static CouleursGraphe * cg6 = NULL;
+static CouleursGraphe * cg7 = NULL;
+static CouleursGraphe * cg8 = NULL;
+static CouleursGraphe * cg9 = NULL;
+static Graphe * g0 = NULL;
+static Graphe * g1 = NULL;
+static CouleursGraphe * cg10 = NULL;
+static CouleursGraphe * cg11 = NULL;
 
 int init_suiteColoration(void)
 {
@@ -372,7 +372,7 @@ void test_couleursgraphe_cgPSommet(void)
     CU_ASSERT(cgPSommet(cg2, "hjkl") == NULL);
 }
 
-int add_testcoloration(void)
+int add_testColoration(void)
 {
     CU_pSuite pSuite = NULL;
     pSuite = CU_add_suite("Tests Coloration", init_suiteColoration, clean_suiteColoration);

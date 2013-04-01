@@ -54,7 +54,10 @@ typedef char Car;
  * \typedef Chaine
  * \brief Chaîne de caractères
  */
-typedef Car * Chaine;
+typedef Car Chaine;
+/* Simplement pour différencier un Caractère d'une Chaîne.
+ * Pas de pointeur dans le typedef : pouvoir utiliser le mot-clé const correctement.
+ */
 
 /**
  * \def OP(T)
@@ -93,7 +96,19 @@ OP(Rat)
  * \param N Taille du tableau.
  */
 #define MALLOCN(P, N) malloc((N) * sizeof *(P))
-//static inline void* MALLOC (void * p) { return malloc(sizeof(*p)) ; }
-//static inline void* MALLOCN (void * p, Nat n) { return malloc(n*sizeof(*p)) ; }
+/**
+ * \def CALLOC(P, N)
+ * \brief Allouer un tableau de taille N et l'initialiser à 0.
+ * \param P Pointeur.
+ * \param N Taille du tableau.
+ */
+#define CALLOC(P, N) calloc((N), sizeof *(P))
+/**
+ * \def REALLOC(P, N)
+ * \brief Réallouer un tableau.
+ * \param P Pointeur.
+ * \param N Nouvelle taille du tableau.
+ */
+#define REALLOC(P, N) realloc((P), (N) * sizeof *(P))
 
 #endif /* __BASE_H */

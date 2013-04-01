@@ -1,18 +1,18 @@
 #include "testgrapheconnexe.h"
 
-static GrapheConnexe gc0 = NULL;
-static GrapheConnexe gc1 = NULL;
-static GrapheConnexe gc2 = NULL;
-static GrapheConnexe gc3 = NULL;
-static GrapheConnexe gc4 = NULL;
-static GrapheConnexe gc5 = NULL;
-static GrapheConnexe gc6 = NULL;
-static GrapheConnexe gc7 = NULL;
-static GrapheConnexe gc8 = NULL;
-static GrapheConnexe gc9 = NULL;
-static GrapheConnexe gc10 = NULL;
-static GrapheConnexe gc11 = NULL;
-static GrapheConnexe gc12 = NULL;
+static GrapheConnexe * gc0 = NULL;
+static GrapheConnexe * gc1 = NULL;
+static GrapheConnexe * gc2 = NULL;
+static GrapheConnexe * gc3 = NULL;
+static GrapheConnexe * gc4 = NULL;
+static GrapheConnexe * gc5 = NULL;
+static GrapheConnexe * gc6 = NULL;
+static GrapheConnexe * gc7 = NULL;
+static GrapheConnexe * gc8 = NULL;
+static GrapheConnexe * gc9 = NULL;
+static GrapheConnexe * gc10 = NULL;
+static GrapheConnexe * gc11 = NULL;
+static GrapheConnexe * gc12 = NULL;
 
 int init_suiteGrapheConnexe(void)
 {
@@ -298,7 +298,7 @@ void test_grapheconnexe_gcModifierArete(void)
     CU_ASSERT(gPoidsArete(gc12, "a", "d") == 10);
 }
 
-int add_testgrapheconnexe(void)
+int add_testGrapheConnexe(void)
 {
     CU_pSuite pSuite = NULL;
     pSuite = CU_add_suite("Tests Graphes Connexes", init_suiteGrapheConnexe, clean_suiteGrapheConnexe);

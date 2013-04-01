@@ -1,9 +1,9 @@
 #include "testarete.h"
 
-static Arete a0 = NULL;
-static Arete a1 = NULL;
-static Arete a2 = NULL;
-static Arete a3 = NULL;
+static Arete * a0 = NULL;
+static Arete * a1 = NULL;
+static Arete * a2 = NULL;
+static Arete * a3 = NULL;
 
 int init_suiteArete(void)
 {
@@ -153,7 +153,7 @@ void test_arete_aAreteEgaleP2(void)
     CU_ASSERT(aAreteEgaleP2(a2, a1) == FAUX);
 }
 
-int add_testarete(void)
+int add_testArete(void)
 {
     CU_pSuite pSuite = NULL;
     pSuite = CU_add_suite("Tests Arete", init_suiteArete, clean_suiteArete);

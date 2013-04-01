@@ -20,6 +20,6 @@ void test_parcours_gEstConnexe(void);
 
 void test_parcours_gACycle(void);
 
-int add_testparcours(void);
+int add_testParcours(void);
 
 #endif /* __TEST_PARCOURS_H */

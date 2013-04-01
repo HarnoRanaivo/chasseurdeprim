@@ -8,7 +8,8 @@
 
 #include "base.h"
 #include "sommet.h"
-#include "liste.h"
+#include "adjacence.h"
+#include "listearete.h"
 #include "graphe.h"
 
 int init_suiteGraphe(void);
@@ -55,8 +56,10 @@ void test_graphe_gModifierArete(void);
 
 void test_graphe_gEgalite(void);
 
+void test_graphe_gAretes(void);
+
 void test_graphe_gCopier(void);
 
-int add_testgraphe(void);
+int add_testGraphe(void);
 
 #endif /* __TESTGRAPHE_H */

@@ -7,7 +7,7 @@
 
 #include "base.h"
 #include "sommet.h"
-#include "liste.h"
+#include "adjacence.h"
 #include "graphe.h"
 #include "io.h"
 

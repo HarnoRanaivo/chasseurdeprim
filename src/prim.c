@@ -6,35 +6,34 @@
 
 #include "prim.h"
 
-FileTriee pAjouterAretesIncidentes(FileTriee ft, const Graphe g, const CouleursGraphe cg, const Sommet s)
+FileAreteTriee * ftAjouterAretesIncidentes(FileAreteTriee * ft, const Graphe * g, const CouleursGraphe * cg, const Sommet * s)
 {
-    ListeArete adjacence = gAdjacenceSommet(g, s);
+    ListeAdjacence * l;
 
-    while (!lest_vide(adjacence))
+    for (l = gAdjacenceSommet(g, s); !lest_vide(l); l = lsuiv(l))
     {
-        Sommet t = lsommet_tete(adjacence);
+        Sommet * t = lsommet_tete(l);
         if (cgCouleurSommet(cg, t) == BLANC)
-            ft = ftAjouterArete(ft, s, t, lpoids_tete(adjacence));
-        adjacence = lsuiv(adjacence);
+            ft = ftAjouterArete(ft, s, t, lpoids_tete(l));
     }
 
     return ft;
 }
 
-Graphe pArbreCouvrantMinimum(const Graphe g, const Sommet s)
+Graphe * gArbreCouvrantMinimum(const Graphe * g, const Sommet * s)
 {
     Nat aretes = 0;
     Nat n = gNombreSommets(g);
-    CouleursGraphe cg = cgModifierSommet(cgInit(g), s, NOIR);
-    FileTriee ft = pAjouterAretesIncidentes(ftNouv(), g, cg, s);
+    CouleursGraphe * cg = cgModifierSommet(cgInit(g), s, NOIR);
+    FileAreteTriee * ft = ftAjouterAretesIncidentes(ftNouv(), g, cg, s);
 
-    Graphe arbre = gAjouterSommet(gNouv(), s);
+    Graphe * arbre = gAjouterSommet(gNouv(), s);
 
-    while (aretes < n -1 && !ftEstVide(ft))
+    while (aretes < n -1 && !larEstVide(ft))
     {
-        Arete tete = ftAreteTete(ft);
-        Sommet a = aA(tete);
-        Sommet b = aB(tete);
+        Arete * tete = larAreteTete(ft);
+        Sommet * a = aA(tete);
+        Sommet * b = aB(tete);
 
         if (cgCouleurSommet(cg, a) == BLANC || cgCouleurSommet(cg, b) == BLANC)
         {
@@ -43,20 +42,20 @@ Graphe pArbreCouvrantMinimum(const Graphe g, const Sommet s)
 
             if (cgCouleurSommet(cg, a) == BLANC)
             {
-                ft = pAjouterAretesIncidentes(ft, g, cg, a);
+                ft = ftAjouterAretesIncidentes(ft, g, cg, a);
                 cg = cgModifierSommet(cg, a, NOIR);
             }
             else
             {
-                ft = pAjouterAretesIncidentes(ft, g, cg, b);
+                ft = ftAjouterAretesIncidentes(ft, g, cg, b);
                 cg = cgModifierSommet(cg, b, NOIR);
             }
         }
-        ft = ftSupprimerArete(ft, a, b);
+        ft = larSupprimerArete(ft, a, b);
     }
     
     cg = cgLiberer(cg);
-    ft = ftLiberer(ft);
+    ft = larLiberer(ft);
 
     return arbre;
 }

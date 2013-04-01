@@ -5,12 +5,13 @@
 #include "base.h"
 #include "testsommet.h"
 #include "testarete.h"
-#include "testliste.h"
+#include "testlistearete.h"
+#include "testadjacence.h"
 #include "testgraphe.h"
 #include "testcoloration.h"
 #include "testparcours.h"
 #include "testgrapheconnexe.h"
-#include "testfiletriee.h"
+#include "testfilearetetriee.h"
 #include "testprim.h"
 
 int main(int argc, char ** argv)
@@ -18,15 +19,16 @@ int main(int argc, char ** argv)
     if (CUE_SUCCESS != CU_initialize_registry())
         return CU_get_error();
 
-    add_testsommets();
-    add_testarete();
-    add_testfiletriee();
-    add_testliste();
-    add_testgraphe();
-    add_testcoloration();
-    add_testparcours();
-    add_testgrapheconnexe();
-    add_testprim();
+    add_testSommet();
+    add_testArete();
+    add_testListeArete();
+    add_testFileAreteTriee();
+    add_testAdjacence();
+    add_testGraphe();
+    add_testColoration();
+    add_testParcours();
+    add_testGrapheConnexe();
+    add_testPrim();
 
     CU_basic_set_mode(CU_BRM_VERBOSE);
     CU_basic_run_tests();

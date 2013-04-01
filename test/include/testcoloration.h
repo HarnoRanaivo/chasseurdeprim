@@ -55,6 +55,6 @@ void test_couleursgraphe_cgNombreSommetsBlancs(void);
 
 void test_couleursgraphe_cgPSommet(void);
 
-int add_testcoloration(void);
+int add_testColoration(void);
 
 #endif /* __TESTCOLORATION_H */

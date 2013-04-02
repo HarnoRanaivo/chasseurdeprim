@@ -18,7 +18,7 @@
 
 /**
  * \brief Ajouter les arêtes incidentes à un sommet.
- * \relatesalso FileAreteTriee
+ * \relatesalso ListeArete
  * \param ft FileAreteTriee.
  * \param g Graphe.
  * \param cg Marquage des sommets.

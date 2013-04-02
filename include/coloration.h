@@ -18,31 +18,33 @@
  * \enum Couleur
  * \brief Coloration des sommets d'un graphe.
  */
-/**
- * \typedef Couleur
- * \brief Coloration des sommets d'un graphe.
- */
-typedef enum Couleur
+enum Couleur
 {
     NOIR,   /**<- Sommet visité */
     GRIS,   /**<- Sommet en cours de visite */
     BLANC   /**<- Sommet non visité */
-} Couleur;
+};
+
+/**
+ * \brief Coloration des sommets d'un graphe.
+ */
+typedef enum Couleur Couleur;
 
 /**
  * \struct CouleursGraphe
  * \brief Liste des couleurs des sommets d'un graphe.
  */
-/**
- * \typedef CouleursGraphe
- * \brief Liste des couleurs des sommets d'un graphe.
- */
-typedef struct CouleursGraphe
+struct CouleursGraphe
 {
     Sommet * sommet;                       /**<- Sommet */
     Couleur couleur;                     /**<- Couleur du sommet */
     struct CouleursGraphe * suivant;     /**<- Sommet suivant */
-} CouleursGraphe;
+};
+
+/**
+ * \brief Liste des couleurs des sommets d'un graphe.
+ */
+typedef struct CouleursGraphe CouleursGraphe;
 
 /**
  * \brief Nouvelle liste.

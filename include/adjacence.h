@@ -16,15 +16,16 @@
  * \struct ListeAdjacence
  * \brief Structure des listes d'arêtes par rapport à un sommet
  */
-/**
- * \typedef ListeAdjacence
- * \brief Structure des listes d'arêtes par rapport à un sommet
- */
-typedef struct ListeAdjacence{
+struct ListeAdjacence{
 	struct ListeAdjacence * s; /**<- Pointeur sur la structure de liste*/
 	Ent poids; /**<- Poids de l'arête*/
 	Sommet * v; /**<- Sommet de l'arête*/
-}ListeAdjacence;
+};
+
+/**
+ * \brief Structure des listes d'arêtes par rapport à un sommet
+ */
+typedef struct ListeAdjacence ListeAdjacence;
 
 /**
  * \fn ListeAdjacence * listnouv ()

@@ -15,25 +15,20 @@
 #include "listearete.h"
 
 /**
- * \struct FileAreteTriee
- * \brief File triée par ordre croissant d'arêtes.
- */
-/**
- * \typedef FileAreteTriee
  * \brief File triée par ordre croissant d'arêtes.
  */
 typedef ListeArete FileAreteTriee;
 
 /**
  * \brief Nouvelle file triée.
- * \relatesalso FileAreteTriee
+ * \relatesalso ListeArete
  * \return NULL
  */
 FileAreteTriee * ftNouv(void);
 
 /**
  * \brief Ajouter une arête dans la file triée.
- * \relatesalso FileAreteTriee
+ * \relatesalso ListeArete
  * \param f FileAreteTriee.
  * \param s Extrémité a de l'arête.
  * \param t Extrémité t de l'arête.

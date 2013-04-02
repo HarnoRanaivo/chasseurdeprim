@@ -19,16 +19,17 @@
  * \struct Graphe
  * \brief Graphe.
  */
-/**
- * \typedef Graphe
- * \brief Graphe.
- */
-typedef struct Graphe 
+struct Graphe 
 {
     Sommet * sommet;                  /**<- Sommet. */
     ListeAdjacence * listeadjacence;      /**<- Liste d'adjacence du sommet. */
     struct Graphe * suivant;     /**<- Sommet suivant. */
-} Graphe;
+};
+
+/**
+ * \brief Graphe.
+ */
+typedef struct Graphe Graphe;
 
 /**
  * \brief Nouveau graphe.

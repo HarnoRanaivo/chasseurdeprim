@@ -16,16 +16,19 @@
  * \struct Arete
  * \brief Arête d'extrémités a et b et de poids p.
  */
-/**
- * \typedef Arete
- * \brief Arête d'extrémités a et b et de poids p.
- */
-typedef struct Arete
+struct Arete
 {
     Sommet * a;   /**<- Extrémité a de l'arête. */
     Sommet * b;   /**<- Extrémité b de l'arête. */
     Ent poids;  /**<- Poids de l'arête. */
-} Arete;
+};
+
+/**
+ * \brief Arête d'extrémités a et b et de poids p.
+ */
+typedef struct Arete Arete;
+
+
 
 /**
  * \brief Nouvelle arête.

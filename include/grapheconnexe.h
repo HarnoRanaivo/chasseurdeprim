@@ -17,7 +17,6 @@
 #include "parcours.h"
 
 /**
- * \typedef GrapheConnexe
  * \brief GrapheConnexe
  */
 typedef Graphe GrapheConnexe;
@@ -31,7 +30,7 @@ GrapheConnexe * gcNouv(void);
 
 /**
  * \brief Ajout d'un sommet dans un graphe connexe.
- * \relatesalso GrapheConnexe
+ * \relatesalso Graphe
  * \param g GrapheConnexe où ajouter le sommet.
  * \param s Sommet à ajouter.
  * \return GrapheConnexe.
@@ -40,7 +39,7 @@ GrapheConnexe * gcAjouterSommet(GrapheConnexe * g, const Sommet * s);
 
 /**
  * \brief Ajout d'une arête dans un graphe connexe.
- * \relatesalso GrapheConnexe
+ * \relatesalso Graphe
  * \param g GrapheConnexe où ajouter l'arête.
  * \param a Éxtrémité de l'arête.
  * \param b Éxtrémité de l'arête.
@@ -51,7 +50,7 @@ GrapheConnexe * gcAjouterArete(GrapheConnexe * g, const Sommet * a, const Sommet
 
 /**
  * \brief Suppression d'un sommet dans un graphe connexe.
- * \relatesalso GrapheConnexe
+ * \relatesalso Graphe
  * \param g GrapheConnexe où supprimer le sommet.
  * \param s Sommet à supprimer.
  * \pre !gAArete(g, s).
@@ -61,7 +60,7 @@ GrapheConnexe * gcSupprimerSommet(GrapheConnexe * g, const Sommet * s);
 
 /**
  * \brief Suppression d'une arête dans un graphe connexe.
- * \relatesalso GrapheConnexe
+ * \relatesalso Graphe
  * \param g GrapheConnexe où supprimer l'arête.
  * \param a Éxtrémité de l'arête.
  * \param b Éxtrémité de l'arête.
@@ -71,7 +70,7 @@ GrapheConnexe * gcSupprimerArete(GrapheConnexe * g, const Sommet * a, const Somm
 
 /**
  * \brief Modification d'une arête dans un graphe connexe.
- * \relatesalso GrapheConnexe
+ * \relatesalso Graphe
  * \param g GrapheConnexe où modifier l'arête.
  * \param a Éxtrémité de l'arête.
  * \param b Éxtrémité de l'arête.

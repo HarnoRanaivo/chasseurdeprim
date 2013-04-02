@@ -15,38 +15,49 @@
 #include "base.h"
 
 /**
- * \brief Sommet (chaîne de caractères.)
+ * \brief Sommet dans un Graphe (chaîne de caractères.)
+ *
+ * Un ::Sommet valide est une chaîne de caractères valide (donc terminée par '\\0').
+ * Un ::Sommet vide est un (::Sommet *) égal à \c NULL.
  */
 typedef Chaine Sommet;
 
 /**
- * \fn Bool egalSom (const Sommet * a, const Sommet * b)
- * \brief Teste l'égalité entre deux sommets.
- * \param a (Sommet)
- * \param b (Sommet)
- * \return VRAI si les sommets sont égaux, FAUX sinon
+ * \brief Teste l'égalité entre deux ::Sommet.
+ * \param a (::Sommet)
+ * \param b (::Sommet)
+ * \return \c VRAI si les ::Sommet sont égaux, \c FAUX sinon
+ *
+ * La fonction gère les ::Sommet vides.
  */
 Bool egalSom (const Sommet * a, const Sommet * b);
 
 /**
- * \brief Retourne une copie de s, allouée dynamiquement.
- * \param s Sommet à copier.
- * \return (pointeur vers) la copie de s, NULL en cas d'erreur.
+ * \brief Retourne une copie de \a s, allouée dynamiquement.
+ * \param s ::Sommet à copier.
+ * \return (pointeur vers) la copie de \a s, \c NULL en cas d'erreur.
+ *
+ * La fonction alloue de la mémoire et fait une copie du ::Sommet \a s. En cas d'erreur, un ::Sommet vide est retourné.
  */
 Sommet * copieSommet(const Sommet * s);
 
 /**
- * \brief Libérer un sommet qui avait été alloué dynamiquement.
- * \param s Sommet à libérer.
- * \return NULL
+ * \brief Libérer un ::Sommet qui avait été alloué dynamiquement.
+ * \param s ::Sommet à libérer.
+ * \return \c NULL
+ *
+ * Libère la mémoire occupée par un ::Sommet et retourne \c NULL. Comportement similaire à free : gère les ::Sommet vides, mais pas les ::Sommet déjà libérés.
+ * Il faut donc toujours affecter le retour à l'ancien pointeur du ::Sommet qu'on cherche à libérer.
  */
 Sommet * libererSommet(Sommet * s);
 
 /**
- * \brief Modifier un sommet
- * \param s Sommet à modifier.
- * \param t Nouveau sommet.
- * \return (pointeur vers) le nouveau sommet, s sera libéré. En cas d'erreur, NULL (il ne faut pas écraser s directement).
+ * \brief Modifier un ::Sommet
+ * \param s ::Sommet à modifier.
+ * \param t Nouveau ::Sommet.
+ * \return (pointeur vers) le nouveau ::Sommet. En cas d'erreur, \c NULL.
+ *
+ * Comportement similaire à realloc : Si la modification du ::Sommet s a fonctionné, le ::Sommet \a s sera libéré. Sinon, la fonction retourne un ::Sommet vide, et \a s reste intact.
  */
 Sommet * modSommet(Sommet * s, const Sommet * t);
 

@@ -18,12 +18,55 @@
 /**
  * \struct Graphe
  * \brief Graphe.
+ *
+ * Un Graphe associe un ::Sommet à une ListeAdjacence :
+ * - #sommet : ::Sommet.
+ * - #listeadjacence : ListeAdjacence correspondant à ce ::Sommet.
+ * - #suivant : ::Sommet et ListeAdjacence suivants dans le Graphe.
+ *
+ * Les générateurs sont :
+ * - gNouv()
+ * - gAjouterSommet()
+ * - gAjouterArete()
+ * - gModifierArete()
+ * - gCopier
+ * Les destructeurs sont :
+ * - gSupprimerSommet()
+ * - gSupprimerArete()
+ * - gLiberer()
+ * Les sélecteurs sont :
+ * - gEstVide()
+ * - gSuivant()
+ * - gSommetTete()
+ * - gAdjacenceTete()
+ * - gExisteSommet()
+ * - gAArete()
+ * - gExisteArete()
+ * - gAdjacenceSommet()
+ * - gNombreSommets()
+ * - gNombreAretes()
+ * - gPoidsArete()
+ * - gNombreVoisins()
+ * - gPSommet()
+ * - gEgalite()
+ * - gAretes()
+ *
+ * Un type est défini à partir de cette structure : ::GrapheConnexe (voir Grapheconnexe.h), et dispose de générateurs spécifiques :
+ * - gcNouv()
+ * - gcAjouterSommet()
+ * - gcAjouterArete()
+ * - gcModifierArete()
+ * Ainsi que de destructeurs spécifiques :
+ * - gcSupprimerSommet()
+ * - gcSupprimerArete()
+ *
+ * Tous les sélecteurs, ainsi que gCopier() et gLiberer() peuvent être utilisés indifférement avec un Graphe ou un ::GrapheConnexe.
  */
 struct Graphe 
 {
-    Sommet * sommet;                  /**<- Sommet. */
-    ListeAdjacence * listeadjacence;      /**<- Liste d'adjacence du sommet. */
-    struct Graphe * suivant;     /**<- Sommet suivant. */
+    Sommet * sommet;                     /**<- Sommet. */
+    ListeAdjacence * listeadjacence;     /**<- Liste d'adjacence du sommet. */
+    struct Graphe * suivant;             /**<- Sommet suivant. */
 };
 
 /**
@@ -32,53 +75,61 @@ struct Graphe
 typedef struct Graphe Graphe;
 
 /**
- * \brief Nouveau graphe.
+ * \brief Nouveau Graphe.
  * \relatesalso Graphe
  * \return NULL
  */
 Graphe * gNouv(void);
 
 /**
- * \brief Ajout d'un sommet dans un graphe.
+ * \brief Ajout d'un sommet dans un Graphe.
  * \relatesalso Graphe
  * \param g Graphe où ajouter le sommet.
  * \param s Sommet à ajouter.
  * \return Graphe
+ *
+ * Ajout du ::Sommet \a s dans le Graphe \a g. Si le ::Sommet existe déjà, ou bien en cas d'erreur lors de l'ajout, le Graphe reste intact.
  */
 Graphe * gAjouterSommet(Graphe * g, const Sommet * s);
 
 /**
- * \brief Ajout d'une arête dans un graphe.
+ * \brief Ajout d'une arête dans un Graphe.
  * \relatesalso Graphe
  * \param g Graphe où ajouter l'arête.
  * \param a Éxtrémité de l'arête.
  * \param b Éxtrémité de l'arête.
  * \param p Poids de l'arête.
  * \return Graphe
+ *
+ * Ajout d'une arête dans le Graphe \a g. Si l'un des ::Sommets n'existe pas encore, il est ajouté avant d'ajouter l'arête. Si l'arête entre \a a et \a b existe déjà, ou bien en cas d'erreur lors de l'ajout, le Graphe reste intact.
  */
 Graphe * gAjouterArete(Graphe * g, const Sommet * a, const Sommet * b, Ent p);
 
 /**
- * \brief Suppression d'un sommet dans un graphe.
+ * \brief Suppression d'un sommet dans un Graphe.
  * \relatesalso Graphe
  * \param g Graphe où supprimer le sommet.
  * \param s Sommet à supprimer.
  * \return Graphe
+ *
+ * Suppression du ::Sommet \a s dans le Graphe \a g. La suppression du ::Sommet \a s implique la suppression de toutes les arêtes incidentes à \a s.
  */
 Graphe * gSupprimerSommet(Graphe * g, const Sommet * s);
 
 /**
- * \brief Suppression d'une arête dans un graphe.
+ * \brief Suppression d'une arête dans un Graphe.
  * \relatesalso Graphe
  * \param g Graphe où supprimer l'arête.
  * \param a Éxtrémité de l'arête.
  * \param b Éxtrémité de l'arête.
  * \return Graphe
+ *
+ * Suppression de l'arête entre \a a \a b dans le Graphe \a g. Si l'arête ou au moins l'un des ::Sommet n'existe pas, le Graphe reste intact.
  */
 Graphe * gSupprimerArete(Graphe * g, const Sommet * a, const Sommet * b);
 
 /**
- * \brief Modification d'une arête dans un graphe.
+ * \brief Modification d'une arête dans un Graphe.
  * \relatesalso Graphe
  * \param g Graphe où modifier l'arête.
  * \param a Éxtrémité de l'arête.
@@ -89,18 +140,18 @@ Graphe * gSupprimerArete(Graphe * g, const Sommet * a, const Sommet * b);
 Graphe * gModifierArete(Graphe * g, const Sommet * a, const Sommet * b, Ent p);
 
 /**
- * \brief Test de vacuité d'un graphe.
+ * \brief Test de vacuité d'un Graphe.
  * \relatesalso Graphe
  * \param g Graphe.
- * \return (booléen) VRAI si le graphe est vide, FAUX sinon.
+ * \return (booléen) VRAI si le Graphe est vide, FAUX sinon.
  */
 Bool gEstVide(const Graphe * g);
 
 /**
- * \brief Sommet suivant dans le graphe.
+ * \brief Sommet suivant dans le Graphe.
  * \relatesalso Graphe
  * \param g Graphe.
- * \return (pointeur vers) Sommet suivant dans le graphe.
+ * \return (pointeur vers) Sommet suivant dans le Graphe.
  */
 Graphe * gSuivant(const Graphe * g);
 
@@ -124,30 +175,30 @@ Sommet * gSommetTete(const Graphe * g);
 ListeAdjacence * gAdjacenceTete(const Graphe * g);
 
 /**
- * \brief Test d'existence d'un sommet dans un graphe.
+ * \brief Test d'existence d'un sommet dans un Graphe.
  * \relatesalso Graphe
  * \param g Graphe.
  * \param s Sommet.
- * \return (booléen) VRAI si le sommet est dans le graphe, FAUX sinon.
+ * \return (booléen) VRAI si le sommet est dans le Graphe, FAUX sinon.
  */
 Bool gExisteSommet(const Graphe * g, const Sommet * s);
 
 /**
- * \brief Test d'existence de voisins d'un sommet dans un graphe.
+ * \brief Test d'existence de voisins d'un sommet dans un Graphe.
  * \relatesalso Graphe
  * \param g Graphe.
  * \param s Sommet.
- * \return (booléen) VRAI si le sommet existe et a des voisins dans le graphe, FAUX sinon.
+ * \return (booléen) VRAI si le sommet existe et a des voisins dans le Graphe, FAUX sinon.
  */
 Bool gAArete(const Graphe * g, const Sommet * s);
 
 /**
- * \brief Test d'existence d'une arete dans un graphe.
+ * \brief Test d'existence d'une arete dans un Graphe.
  * \relatesalso Graphe
  * \param g Graphe.
  * \param a Sommet.
  * \param b Sommet.
- * \return (booléen) VRAI si l'arête est dans le graphe, FAUX sinon.
+ * \return (booléen) VRAI si l'arête est dans le Graphe, FAUX sinon.
  */
 Bool gExisteArete(const Graphe * g, const Sommet * a, const Sommet  *b);
 
@@ -162,18 +213,18 @@ Bool gExisteArete(const Graphe * g, const Sommet * a, const Sommet  *b);
 ListeAdjacence * gAdjacenceSommet(const Graphe * g, const Sommet * s);
 
 /**
- * \brief Nombre de sommets dans un graphe.
+ * \brief Nombre de sommets dans un Graphe.
  * \relatesalso Graphe
  * \param g Graphe.
- * \return Nombre de sommets dans un graphe.
+ * \return Nombre de sommets dans un Graphe.
  */
 Nat gNombreSommets(const Graphe * g);
 
 /**
- * \brief Nombre d'arêtes dans un graphe.
+ * \brief Nombre d'arêtes dans un Graphe.
  * \relatesalso Graphe
  * \param g Graphe.
- * \return Nombre d'arêtes dans un graphe.
+ * \return Nombre d'arêtes dans un Graphe.
  */
 Nat gNombreAretes(const Graphe * g);
 
@@ -198,32 +249,32 @@ Ent gPoidsArete(const Graphe * g, const Sommet * a, const Sommet * b);
 Nat gNombreVoisins(const Graphe * g, const Sommet * s);
 
 /**
- * \brief Obtenir Un sommet d'un graphe.
+ * \brief Obtenir Un sommet d'un Graphe.
  * \relatesalso Graphe
  * \param g Graphe.
  * \param s Sommet.
- * \return (pointeur vers) Sommet s dans le graphe.
+ * \return (pointeur vers) Sommet s dans le Graphe.
  */
 Graphe * gPSommet(const Graphe * g, const Sommet * s);
 
 /**
- * \brief Égalité de deux graphes.
+ * \brief Égalité de deux Graphes.
  * \param g Graphe.
  * \param h Graphe.
- * \return VRAI si les graphes sont identiques, à l'ordre des sommets près, FAUX sinon.
+ * \return VRAI si les Graphes sont identiques, à l'ordre des sommets près, FAUX sinon.
  */
 Bool gEgalite(const Graphe * g, const Graphe * h);
 
 /**
- * \brief Copie d'un graphe.
+ * \brief Copie d'un Graphe.
  * \relatesalso Graphe
  * \param g Graphe.
- * \return Copie du graphe.
+ * \return Copie du Graphe.
  */
 Graphe * gCopier(const Graphe * g);
 
 /**
- * \brief Liste des arêtes d'un graphe.
+ * \brief Liste des arêtes d'un Graphe.
  * \relatesalso Graphe
  * \param g Graphe.
  * \return Liste des arêtes.
@@ -231,7 +282,7 @@ Graphe * gCopier(const Graphe * g);
 ListeArete * gAretes(const Graphe * g);
 
 /**
- * \brief Libération d'un graphe.
+ * \brief Libération d'un Graphe.
  * \relatesalso Graphe
  * \param g Graphe.
  * \return NULL

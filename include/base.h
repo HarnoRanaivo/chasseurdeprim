@@ -2,7 +2,7 @@
  * \file base.h
  * \brief Base (header)
  * \author Harenome RAZANAJATO
- * \version 1.2
+ * \version 1.3
  */
 
 #ifndef __BASE_H
@@ -51,13 +51,13 @@ typedef float Rat;
  */
 typedef char Car;
 
+/* Simplement pour différencier un Caractère d'une Chaîne.
+ * Pas de pointeur dans le typedef : pouvoir utiliser le mot-clé const correctement.
+ */
 /**
  * \brief Chaîne de caractères
  */
 typedef Car Chaine;
-/* Simplement pour différencier un Caractère d'une Chaîne.
- * Pas de pointeur dans le typedef : pouvoir utiliser le mot-clé const correctement.
- */
 
 /**
  * \brief Opérations de base pour un type donné.

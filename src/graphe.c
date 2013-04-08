@@ -38,10 +38,14 @@ Graphe * gAjouterArete(Graphe * g, const Sommet * a, const Sommet * b, Ent p)
         if (!gExisteSommet(g, b))
             g = gAjouterSommet(g, b);
 
-        ga = gPSommet(g, a);
-        ga->listeadjacence = lajar(gAdjacenceTete(ga), b, p);
-        gb = gPSommet(g, b);
-        gb->listeadjacence = lajar(gAdjacenceTete(gb), a, p);
+        if (gExisteSommet(g, a) && gExisteSommet(g, b))
+        {
+            ga = gPSommet(g, a);
+            ga->listeadjacence = lajar(gAdjacenceTete(ga), b, p);
+            gb = gPSommet(g, b);
+            gb->listeadjacence = lajar(gAdjacenceTete(gb), a, p);
+        }
+
     }
 
     return g;

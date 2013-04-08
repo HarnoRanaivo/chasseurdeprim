@@ -1,3 +1,8 @@
+/**
+ * \file listearete.c
+ * \brief Liste d'arêtes (header)
+ * \author Harenome RAZANAJATO
+ */
 #include "listearete.h"
 
 ListeArete * larNouv(void)

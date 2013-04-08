@@ -24,6 +24,8 @@
  * \param cg Marquage des sommets.
  * \param s  Sommet.
  * \return FileAreteTriee.
+ *
+ * Ajouter les Arete incidentes à un ::Sommet \a s dans un Graphe \a g à la ::FileAreteTriee \a ft, en ne prenant que les Arete d'extrémités \a s et \a t pour tout sommet \a t n'étant pas marqué comme visité dans la CouleursGraphe \a cg.
  */
 FileAreteTriee * ftAjouterAretesIncidentes(FileAreteTriee * ft, const Graphe * g, const CouleursGraphe * cg, const Sommet * s);
 

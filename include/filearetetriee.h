@@ -34,6 +34,8 @@ FileAreteTriee * ftNouv(void);
  * \param t Extrémité t de l'arête.
  * \param poids Poids de l'arête.
  * \return (pointeur vers) FileAreteTriee.
+ *
+ * Ajoute l'Arete entre \a s et \a t dans la ::FileAreteTriee \a f en gardant \a f triée selon les poids.
  */
 FileAreteTriee * ftAjouterArete(FileAreteTriee * f, const Sommet * s, const Sommet * t, Ent poids);
 

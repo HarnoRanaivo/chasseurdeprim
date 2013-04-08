@@ -28,8 +28,6 @@ struct Arete
  */
 typedef struct Arete Arete;
 
-
-
 /**
  * \brief Nouvelle Arete.
  * \relatesalso Arete

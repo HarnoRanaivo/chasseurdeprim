@@ -36,7 +36,7 @@ typedef enum Couleur Couleur;
  * \struct CouleursGraphe
  * \brief Liste des couleurs des sommets d'un graphe.
  *
- * Liste d'associations de #Couleur à un ::Sommet.
+ * Liste d'associations de #Couleur à un ::Sommet d'un Graphe.
  */
 struct CouleursGraphe
 {
@@ -239,7 +239,7 @@ CouleursGraphe * cgPSommet(const CouleursGraphe * cg, const Sommet * s);
  * \brief Libérer une liste de couleurs.
  * \relatesalso CouleursGraphe
  * \param cg CouleursGraphe.
- * \return NULL
+ * \return \a NULL
  */
 CouleursGraphe * cgLiberer(CouleursGraphe * cg);
 

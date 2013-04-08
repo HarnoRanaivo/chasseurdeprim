@@ -16,6 +16,31 @@
 /**
  * \struct ListeArete
  * \brief Liste d'arêtes.
+ *
+ * Liste d'Arete.
+ *
+ * Les générateurs sont :
+ * - larNouv()
+ * - larAjouterAreteTete()
+ *
+ * Les destructeurs sont :
+ * - larSupprimerTete()
+ * - larSupprimerArete()
+ * - larLiberer()
+ *
+ * Les sélecteurs sont :
+ * larEstVide()
+ * larExisteArete()
+ * larNombreAretes()
+ * larAreteTete()
+ * larPArete()
+ * larSuivante()
+ *
+ * Un type est défini à partir de ListeArete : ::FileAreteTriee (voir filearetetriee.h), et dispose de générateurs spécifiques :
+ * - ftNouv()
+ * - ftAjouterArete()
+ *
+ * Les sélecteurs et destructeurs peuvent être utilisés indifféremnt sur les ListeArete et ::FileAreteTriee.
  */
 struct ListeArete
 {
@@ -39,10 +64,12 @@ ListeArete * larNouv(void);
  * \brief Ajouter une arête dans la file liste.
  * \relatesalso ListeArete
  * \param l ListeArete.
- * \param a Extrémité a de l'arête.
- * \param b Extrémité t de l'arête.
+ * \param a Extrémité \a a de l'arête.
+ * \param b Extrémité \a t de l'arête.
  * \param poids Poids de l'arête.
  * \return (pointeur vers) ListeArete.
+ *
+ * Ajoute une Arete dans la liste \a l. S'il existe déjà une Arete entre \a et \b dans la liste, ou bien en cas d'erreur lors de l'ajout, \a l reste intacte.
  */
 ListeArete * larAjouterAreteTete(ListeArete * l, const Sommet * a, const Sommet * b, Ent poids);
 
@@ -51,6 +78,8 @@ ListeArete * larAjouterAreteTete(ListeArete * l, const Sommet * a, const Sommet 
  * \relatesalso ListeArete
  * \param l ListeArete.
  * \return (pointeur vers) ListeArete.
+ *
+ * Suppression de l'Arete en tête de liste, si celle-ci y existe. Sinon, \a l reste intacte.
  */
 ListeArete * larSupprimerTete(ListeArete * l);
 
@@ -61,6 +90,8 @@ ListeArete * larSupprimerTete(ListeArete * l);
  * \param a Extrémité de l'arête à supprimer.
  * \param b Autre extrémité de l'arête à supprimer.
  * \return (pointeur vers) ListeArete.
+ *
+ * Suppression de la liste de l'Arete entre \a et \b, si celle-ci y existe. Sinon, \a l reste intacte.
  */
 ListeArete * larSupprimerArete(ListeArete * l, const Sommet * a, const Sommet * b);
 
@@ -69,6 +100,8 @@ ListeArete * larSupprimerArete(ListeArete * l, const Sommet * a, const Sommet * 
  * \relatesalso ListeArete
  * \param l ListeArete.
  * \return VRAI si la file est vide, FAUX sinon.
+ *
+ * La ListeArete est vide si \a l pointe vers \a NULL.
  */
 Bool larEstVide(const ListeArete * l);
 
@@ -96,6 +129,8 @@ Nat larNombreAretes(const ListeArete * l);
  * \param l ListeArete.
  * \pre !larEstVide(f)
  * \return Arête.
+ *
+ * Retourne un pointeur vers l'Arete se trouvant en tête de la ListeArete \a l.
  */
 Arete * larAreteTete(const ListeArete * l);
 
@@ -106,6 +141,8 @@ Arete * larAreteTete(const ListeArete * l);
  * \param a Extrémité de l'arête.
  * \param b Autre extrémité de l'arête.
  * \return (pointeur vers) Sous-liste commençant par (a, b)
+ *
+ * Retourne un pointeur vers la sous-liste de \a l qui commence par l'Arete entre \a a et \a b. Retourne \a NULL si l'Arete n'est pas présente dans \a l.
  */
 ListeArete * larPArete(const ListeArete *l, const Sommet * a, const Sommet *b);
 
@@ -114,6 +151,8 @@ ListeArete * larPArete(const ListeArete *l, const Sommet * a, const Sommet *b);
  * \relatesalso ListeArete
  * \param l ListeArete.
  * \return (pointeur vers) Arête suivante.
+ *
+ * Retourne un pointeur vers la sous-liste de \a l privée de la tête de \a l. Peut retourner une liste vide si \a l ne contient qu'un seul élément.
  */
 ListeArete * larSuivante(const ListeArete * l);
 
@@ -122,6 +161,8 @@ ListeArete * larSuivante(const ListeArete * l);
  * \relatesalso ListeArete
  * \param l ListeArete.
  * \return NULL
+ *
+ * Libère la mémoire occuppée par une ListeArete : libère aussi les Arete contenues dans la ListeArete.
  */
 ListeArete * larLiberer(ListeArete * l);
 

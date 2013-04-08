@@ -17,47 +17,55 @@
 /**
  * \enum Couleur
  * \brief Coloration des sommets d'un graphe.
+ *
+ * Permet de marquer un ::Sommet selon qu'il a déjà été visité (#NOIR), qu'il est en cours de visite (#GRIS), ou qu'il n'a pas encore été visité (#BLANC).
  */
-/**
- * \typedef Couleur
- * \brief Coloration des sommets d'un graphe.
- */
-typedef enum Couleur
+enum Couleur
 {
     NOIR,   /**<- Sommet visité */
     GRIS,   /**<- Sommet en cours de visite */
     BLANC   /**<- Sommet non visité */
-} Couleur;
+};
+
+/**
+ * \brief Coloration des sommets d'un graphe.
+ */
+typedef enum Couleur Couleur;
 
 /**
  * \struct CouleursGraphe
  * \brief Liste des couleurs des sommets d'un graphe.
+ *
+ * Liste d'associations de #Couleur à un ::Sommet d'un Graphe.
  */
+struct CouleursGraphe
+{
+    Sommet * sommet;                     /**<- ::Sommet */
+    Couleur couleur;                     /**<- #Couleur du ::Sommet */
+    struct CouleursGraphe * suivant;     /**<- Élément suivant */
+};
+
 /**
- * \typedef CouleursGraphe
  * \brief Liste des couleurs des sommets d'un graphe.
  */
-typedef struct CouleursGraphe
-{
-    Sommet * sommet;                       /**<- Sommet */
-    Couleur couleur;                     /**<- Couleur du sommet */
-    struct CouleursGraphe * suivant;     /**<- Sommet suivant */
-} CouleursGraphe;
+typedef struct CouleursGraphe CouleursGraphe;
 
 /**
  * \brief Nouvelle liste.
- * \relatesalso CouleursGraphe
- * \return NULL
+ * \relatesalso Graphe
+ * \return \a NULL
  */
 CouleursGraphe * cgNouv(void);
 
 /**
- * \brief Ajouter un sommet à la liste.
+ * \brief Ajouter un ::Sommet à la liste.
  * \relatesalso CouleursGraphe
- * \param cg Liste.
- * \param s Sommet.
- * \param c Couleur du sommet.
+ * \param cg CouleursGraphe.
+ * \param s ::Sommet.
+ * \param c #Couleur du ::Sommet.
  * \return (pointeur vers) CouleursGraphe.
+ *
+ * Ajoute un ::Sommet à la liste. N'ajoute pas le ::Sommet s'il y est déjà présent.
  */
 CouleursGraphe * cgAjouterSommet(CouleursGraphe * cg, const Sommet * s, Couleur c);
 
@@ -66,26 +74,31 @@ CouleursGraphe * cgAjouterSommet(CouleursGraphe * cg, const Sommet * s, Couleur 
  * \relatesalso CouleursGraphe
  * \param cg Liste.
  * \return (pointeur vers) CouleursGraphe.
+ *
+ * Supprime la tête de liste, si celle-ci n'est pas vide. Ne fait rien si la liste est déjà vide.
  */
 CouleursGraphe * cgSupprimerTete(CouleursGraphe * cg);
 
 /**
  * \brief Supprimer un sommet de la liste.
- * \relatesalso CouleursGraphe
- * \relatesalso Sommet
+ * \relatesalso Graphe
  * \param cg CouleursGraphe.
  * \param s Sommet.
  * \return (pointeur vers) CouleursGraphe.
+ *
+ * Supprime le ::Sommet \a s, si celui-ci existe. Si le ::Sommet \a s n'existe pas, \a cg reste intact.
  */
 CouleursGraphe * cgSupprimerSommet(CouleursGraphe * cg, const Sommet * s);
 
 /**
  * \brief Modifier un sommet de la liste.
- * \relatesalso CouleursGraphe
+ * \relatesalso Graphe
  * \param cg CouleursGraphe.
  * \param s Sommet.
  * \param c Couleur.
  * \return (pointeur vers) CouleursGraphe.
+ *
+ * Modifie la #Couleur du ::Sommet \a s par \a c, si le ::Sommet existe dans \a cg.
  */
 CouleursGraphe * cgModifierSommet(CouleursGraphe * cg, const Sommet * s, Couleur c);
 
@@ -94,6 +107,8 @@ CouleursGraphe * cgModifierSommet(CouleursGraphe * cg, const Sommet * s, Couleur
  * \relatesalso CouleursGraphe
  * \param g Graphe.
  * \return (pointeur vers) CouleursGraphe.
+ *
+ * Retourne une liste CouleursGraphe contenant tous les ::Sommet du Graphe \a g, et initialisés à #BLANC.
  */
 CouleursGraphe * cgInit(const Graphe * g);
 
@@ -101,14 +116,15 @@ CouleursGraphe * cgInit(const Graphe * g);
  * \brief Test de vacuité d'une liste de couleurs.
  * \relatesalso CouleursGraphe
  * \param cg CouleursGraphe.
- * \return VRAI si la liste est vide, FAUX sinon.
+ * \return #VRAI si la liste est vide, #FAUX sinon.
+ *
+ * Une liste CouleursGraphe \a cg est vide si \a cg pointe vers \a NULL.
  */
 Bool cgEstVide(const CouleursGraphe * cg);
 
 /**
  * \brief Test d'existence d'un sommet.
  * \relatesalso CouleursGraphe
- * \relatesalso Sommet
  * \param cg CouleursGraphe.
  * \param s Sommet.
  * \return VRAI si le sommet existe, FAUX sinon.
@@ -120,11 +136,13 @@ Bool cgExisteSommmet(const CouleursGraphe * cg, const Sommet * s);
  * \relatesalso CouleursGraphe
  * \param cg CouleursGraphe.
  * \return (pointeur vers) le sommet suivant dans la liste.
+ *
+ * Retourne un pointeur vers l'élément suivant dans la liste \a cg. Peut retourner une liste CouleursGraphe vide.
  */
 CouleursGraphe * cgSuivant(const CouleursGraphe * cg);
 
 /**
- * \brief Sommet en tête de liste.
+ * \brief ::Sommet en tête de liste.
  * \relatesalso CouleursGraphe
  * \param cg CouleursGraphe.
  * \pre !cgEstVide(cg)
@@ -133,7 +151,7 @@ CouleursGraphe * cgSuivant(const CouleursGraphe * cg);
 Sommet * cgSommetTete(const CouleursGraphe * cg);
 
 /**
- * \brief Couleur du sommet en tête de liste.
+ * \brief #Couleur du ::Sommet en tête de liste.
  * \relatesalso CouleursGraphe
  * \param cg CouleursGraphe.
  * \pre !cgEstVide(cg)
@@ -142,78 +160,78 @@ Sommet * cgSommetTete(const CouleursGraphe * cg);
 Couleur cgCouleurTete(const CouleursGraphe * cg);
 
 /**
- * \brief Couleur du sommet.
+ * \brief #Couleur du Sommet \a s.
  * \relatesalso CouleursGraphe
- * \relatesalso Sommet
  * \param cg CouleursGraphe.
- * \param s Sommet.
+ * \param s ::Sommet.
  * \pre cgExisteSommmet(cg)
- * \return Couleur.
+ * \return #Couleur de \a s.
  */
 Couleur cgCouleurSommet(const CouleursGraphe * cg, const Sommet * s);
 
 /**
- * \brief Premier sommet noir dans la liste.
+ * \brief Premier ::Sommet #NOIR dans \a cg.
  * \relatesalso CouleursGraphe
  * \param cg CouleursGraphe.
- * \return Premier sommet noir, NULL s'il n'y en a pas.
+ * \return Premier ::Sommet #NOIR, \a NULL s'il n'y en a pas.
  */
 Sommet * cgPremierSommetNoir(const CouleursGraphe * cg);
 
 /**
- * \brief Premier sommet gris dans la liste.
+ * \brief Premier ::Sommet #GRIS dans \a cg.
  * \relatesalso CouleursGraphe
  * \param cg CouleursGraphe.
- * \return Premier sommet gris, NULL s'il n'y en a pas.
+ * \return Premier ::Sommet #GRIS, \a NULL s'il n'y en a pas.
  */
 Sommet * cgPremierSommetGris(const CouleursGraphe * cg);
 
 /**
- * \brief Premier sommet blanc dans la liste.
+ * \brief Premier ::Sommet #BLANC dans \a cg.
  * \relatesalso CouleursGraphe
  * \param cg CouleursGraphe.
- * \return Premier sommet blanc, NULL s'il n'y en a pas.
+ * \return Premier ::Sommet #BLANC, \a NULL s'il n'y en a pas.
  */
 Sommet * cgPremierSommetBlanc(const CouleursGraphe * cg);
 
 /**
- * \brief Nombre de sommets dans la liste.
+ * \brief Nombre de ::Sommet dans \a cg.
  * \relatesalso CouleursGraphe
  * \param cg CouleursGraphe.
- * \return Nombre de sommets.
+ * \return Nombre de ::Sommet.
  */
 Nat cgNombreSommets(const CouleursGraphe * cg);
 
 /**
- * \brief Nombre de sommets noirs dans la liste.
+ * \brief Nombre de ::Sommet #NOIR dans \a cg.
  * \relatesalso CouleursGraphe
  * \param cg CouleursGraphe.
- * \return Nombre de sommets noirs.
+ * \return Nombre de ::Sommet #NOIR.
  */
 Nat cgNombreSommetsNoirs(const CouleursGraphe * cg);
 
 /**
- * \brief Nombre de sommets gris dans la liste.
+ * \brief Nombre de ::Sommet #GRIS dans \a cg.
  * \relatesalso CouleursGraphe
  * \param cg CouleursGraphe.
- * \return Nombre de sommets gris.
+ * \return Nombre de ::Sommet #GRIS.
  */
 Nat cgNombreSommetsGris(const CouleursGraphe * cg);
 
 /**
- * \brief Nombre de sommets blancs dans la liste.
+ * \brief Nombre de ::Sommet #BLANC dans \a cg.
  * \relatesalso CouleursGraphe
  * \param cg CouleursGraphe.
- * \return Nombre de sommets blancs.
+ * \return Nombre de ::Sommet #BLANC.
+ommets blancs.
  */
 Nat cgNombreSommetsBlancs(const CouleursGraphe * cg);
 
 /**
- * \brief Pointeur vers le sommet.
+ * \brief Pointeur vers le sommet \a s.
  * \relatesalso CouleursGraphe
  * \param cg CouleursGraphe
- * \param s Sommet
- * \return (pointeur vers) le sommet dans la liste, NULL s'il n'existe pas.
+ * \param s ::Sommet
+ * \return (pointeur vers) le sommet dans la liste, \a NULL s'il n'existe pas.
  */
 CouleursGraphe * cgPSommet(const CouleursGraphe * cg, const Sommet * s);
 
@@ -221,7 +239,7 @@ CouleursGraphe * cgPSommet(const CouleursGraphe * cg, const Sommet * s);
  * \brief Libérer une liste de couleurs.
  * \relatesalso CouleursGraphe
  * \param cg CouleursGraphe.
- * \return NULL
+ * \return \a NULL
  */
 CouleursGraphe * cgLiberer(CouleursGraphe * cg);
 

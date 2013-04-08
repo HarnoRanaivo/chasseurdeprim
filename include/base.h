@@ -2,7 +2,7 @@
  * \file base.h
  * \brief Base (header)
  * \author Harenome RAZANAJATO
- * \version 1.2
+ * \version 1.3
  */
 
 #ifndef __BASE_H
@@ -15,52 +15,51 @@
  * \enum Bool
  * \brief Simulation des booléens.
  */
-/**
- * \typedef Bool
- * \brief Simulation des booléens.
- */
-typedef enum
+enum Bool
 {
     FAUX,   /**<- Faux. */
     VRAI    /**<- Vrai. */
-} Bool;
+};
 
 /**
- * \typedef Nat
+ * \brief Simulation des booléens.
+ */
+typedef enum Bool Bool;
+
+/**
  * \brief Entiers naturels.
  */
 typedef unsigned int Nat;
+
 /**
- * \typedef Ent
  * \brief Entiers relatifs.
  */
 typedef int Ent;
+
 /**
- * \typedef Reel
  * \brief Nombres réels.
  */
 typedef float Reel;
+
 /**
- * \typedef Rat
  * \brief Nombres rationnels.
  */
 typedef float Rat;
+
 /**
- * \typedef Car
  * \brief Caractères.
  */
 typedef char Car;
-/**
- * \typedef Chaine
- * \brief Chaîne de caractères
- */
-typedef Car Chaine;
+
 /* Simplement pour différencier un Caractère d'une Chaîne.
  * Pas de pointeur dans le typedef : pouvoir utiliser le mot-clé const correctement.
  */
+/**
+ * \brief Chaîne de caractères
+ */
+typedef Car Chaine;
 
 /**
- * \def OP(T)
  * \brief Opérations de base pour un type donné.
  * \param T Type.
  */
@@ -84,27 +83,26 @@ OP(Rat)
 #undef OP
 
 /**
- * \def MALLOC(P)
  * \brief Allouer de la mémoire.
  * \param P Pointeur.
  */
 #define MALLOC(P) malloc(sizeof *(P))
+
 /**
- * \def MALLOCN(P, N)
  * \brief Allouer un tableau de taille N.
  * \param P Pointeur.
  * \param N Taille du tableau.
  */
 #define MALLOCN(P, N) malloc((N) * sizeof *(P))
+
 /**
- * \def CALLOC(P, N)
  * \brief Allouer un tableau de taille N et l'initialiser à 0.
  * \param P Pointeur.
  * \param N Taille du tableau.
  */
 #define CALLOC(P, N) calloc((N), sizeof *(P))
+
 /**
- * \def REALLOC(P, N)
  * \brief Réallouer un tableau.
  * \param P Pointeur.
  * \param N Nouvelle taille du tableau.

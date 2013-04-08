@@ -18,7 +18,7 @@
 /**
  * \brief Parcours en largeur d'un graphe
  * \param g Graphe.
- * \return Sommets marqués par le parcours.
+ * \return Liste des ::Sommet marqués par le parcours.
  */
 CouleursGraphe * gParcoursLargeur(const Graphe * g);
 
@@ -26,7 +26,7 @@ CouleursGraphe * gParcoursLargeur(const Graphe * g);
  * \brief Test de connexité d'un graphe.
  * \relatesalso Graphe
  * \param g Graphe.
- * \return VRAI si le graphe est connexe, FAUX sinon.
+ * \return #VRAI si le Graphe est connexe, #FAUX sinon.
  */
 Bool gEstConnexe(const Graphe * g);
 
@@ -34,7 +34,7 @@ Bool gEstConnexe(const Graphe * g);
  * \brief Test d'existence de cycles dans un graphe.
  * \relatesalso Graphe
  * \param g Graphe.
- * \return VRAI si le graphe contient des cycles, FAUX sinon.
+ * \return #VRAI si le Graphe contient des cycles, #FAUX sinon.
  */
 Bool gACycle(const Graphe * g);
 

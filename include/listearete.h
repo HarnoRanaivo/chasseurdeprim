@@ -91,7 +91,7 @@ ListeArete * larSupprimerTete(ListeArete * l);
  * \param b Autre extrémité de l'arête à supprimer.
  * \return (pointeur vers) ListeArete.
  *
- * Suppression de la liste de l'Arete entre \a et \b, si celle-ci y existe. Sinon, \a l reste intacte.
+ * Suppression de la liste de l'Arete entre \a a et \a b, si celle-ci y existe. Sinon, \a l reste intacte.
  */
 ListeArete * larSupprimerArete(ListeArete * l, const Sommet * a, const Sommet * b);
 

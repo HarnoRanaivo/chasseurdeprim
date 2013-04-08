@@ -34,14 +34,17 @@ Graphe * charger_graphe (const char* source){
 	assert (pfile != NULL);
 	Graphe * g = gNouv();
 	
+	int retourFs;
 	char buffer1[100]; // sommet de départ de 100 caractères maximum
 	Ent poids;
 	char buffer2[100]; // sommet d'arrivée de 100 caractères maximum
 	
-	while (fscanf(pfile,"%s",buffer1) != EOF){ // vérifie si la ligne n'est pas la fin du fichier
-		fscanf(pfile,"%d",&poids);
-		fscanf(pfile,"%s",buffer2);
-		g = gAjouterArete(g,buffer1,buffer2,poids); // ajoute l'arc à partir des valeurs de la ligne
+	while ((retourFs = fscanf(pfile,"%99s\t%d\t%99s",buffer1,&poids,buffer2)) != EOF){ // vérifie si la ligne n'est pas la fin du fichier
+		if (retourFs == 3)
+			g = gAjouterArete(g,buffer1,buffer2,poids); // ajoute l'arc à partir des valeurs de la ligne
+		else // cas où la lecture a raté
+			fprintf(stderr,"Le fichier a mal été écrit, veuillez s'il vous plait respecter le code d'écriture qui :\nSommet d'entrée \\t Poids \\t Sommet d'arrivée\\n\n");
+			// à méditer si l'on quitte le prog ou pas
 	}
 	printf("Fin de lecture.\n\n");
 	

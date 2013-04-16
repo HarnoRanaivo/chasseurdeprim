@@ -2,7 +2,11 @@
  * \file main.c
  * \brief Main
  */
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
 
+#include "io.h"
 /**
  * \brief Main.
  */

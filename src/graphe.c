@@ -14,7 +14,7 @@ Graphe * gAjouterSommet(Graphe * g, const Sommet * s)
 {
     if (!gExisteSommet(g, s))
     {
-        Graphe * g0 = MALLOC(g0);
+        Graphe * const g0 = MALLOC(g0);
         if (g0 != NULL)
         {
             g0->sommet = copieSommet(s);
@@ -29,8 +29,6 @@ Graphe * gAjouterSommet(Graphe * g, const Sommet * s)
 
 Graphe * gAjouterArete(Graphe * g, const Sommet * a, const Sommet * b, Ent p)
 {
-    Graphe * ga, * gb;
-
     if (!gExisteArete(g, a, b))
     {
         if (!gExisteSommet(g, a))
@@ -40,12 +38,12 @@ Graphe * gAjouterArete(Graphe * g, const Sommet * a, const Sommet * b, Ent p)
 
         if (gExisteSommet(g, a) && gExisteSommet(g, b))
         {
-            ga = gPSommet(g, a);
+            Graphe * const ga = gPSommet(g, a);
+            Graphe * const gb = gPSommet(g, b);
+
             ga->listeadjacence = lajar(gAdjacenceTete(ga), b, p);
-            gb = gPSommet(g, b);
             gb->listeadjacence = lajar(gAdjacenceTete(gb), a, p);
         }
-
     }
 
     return g;
@@ -65,7 +63,7 @@ Graphe * gSupprimerSommet(Graphe * g, const Sommet * s)
     {
         if (egalSom(gSommetTete(g), s))
         {
-            Graphe * gs = gSuivant(g);
+            Graphe * const gs = gSuivant(g);
             while (!lest_vide(gAdjacenceTete(g)))
                 g = gSupprimerArete(g, s, lsommet_tete(gAdjacenceTete(g)));
             g->sommet = libererSommet(gSommetTete(g));
@@ -74,8 +72,8 @@ Graphe * gSupprimerSommet(Graphe * g, const Sommet * s)
         }
         else
         {
-            Graphe * gp = gPrecedent(g, s);
-            Graphe * gps = gSuivant(gSuivant(gp));
+            Graphe * const gp = gPrecedent(g, s);
+            Graphe * const gps = gSuivant(gSuivant(gp));
 
             while (!lest_vide(gAdjacenceTete(gSuivant(gp))))
                 g = gSupprimerArete(g, s, lsommet_tete(gAdjacenceTete(gSuivant(gp))));
@@ -92,8 +90,8 @@ Graphe * gSupprimerArete(Graphe * g, const Sommet * a, const Sommet * b)
 {
     if (gExisteSommet(g, a) && gExisteSommet(g, b))
     {
-        Graphe * ga = gPSommet(g, a);
-        Graphe * gb = gPSommet(g, b);
+        Graphe * const ga = gPSommet(g, a);
+        Graphe * const gb = gPSommet(g, b);
 
         ga->listeadjacence = lsupar(gAdjacenceTete(ga), b);
         gb->listeadjacence = lsupar(gAdjacenceTete(gb), a);
@@ -106,8 +104,8 @@ Graphe * gModifierArete(Graphe * g, const Sommet * a, const Sommet * b, Ent p)
 {
     if (gExisteArete(g, a, b))
     {
-        Graphe * ga = gPSommet(g, a);
-        Graphe * gb = gPSommet(g, b);
+        Graphe * const ga = gPSommet(g, a);
+        Graphe * const gb = gPSommet(g, b);
 
         ga->listeadjacence = lmod(gAdjacenceTete(ga), b, p);
         gb->listeadjacence = lmod(gAdjacenceTete(gb), a, p);
@@ -158,7 +156,7 @@ Bool gExisteArete(const Graphe * g, const Sommet * a, const Sommet * b)
 
 ListeAdjacence * gAdjacenceSommet(const Graphe * g, const Sommet * s)
 {
-    Graphe * g0 = gPSommet(g, s);
+    Graphe * const g0 = gPSommet(g, s);
 
     if (g0 != NULL)
         return g0->listeadjacence;
@@ -192,7 +190,7 @@ Nat gNombreAretes(const Graphe * g)
 
 Nat gNombreVoisins(const Graphe * g, const Sommet * s)
 {
-    ListeAdjacence * adjacence = gAdjacenceSommet(g, s);
+    const ListeAdjacence * const adjacence = gAdjacenceSommet(g, s);
 
     if (lexar(adjacence, s))
         return ltaille(adjacence) - 1;
@@ -252,8 +250,7 @@ ListeArete * gAretes(const Graphe * g)
 
     for (g = g; !gEstVide(g); g = gSuivant(g))
     {
-        ListeAdjacence * l;
-        for (l = gAdjacenceTete(g); !lest_vide(l); l = lsuiv(l))
+        for (const ListeAdjacence * l = gAdjacenceTete(g); !lest_vide(l); l = lsuiv(l))
             aretes = larAjouterAreteTete(aretes, gSommetTete(g), lsommet_tete(l), lpoids_tete(l));
     }
 

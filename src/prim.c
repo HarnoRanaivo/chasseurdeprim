@@ -8,9 +8,7 @@
 
 FileAreteTriee * ftAjouterAretesIncidentes(FileAreteTriee * ft, const Graphe * g, const CouleursGraphe * cg, const Sommet * s)
 {
-    ListeAdjacence * l;
-
-    for (l = gAdjacenceSommet(g, s); !lest_vide(l); l = lsuiv(l))
+    for (const ListeAdjacence * l = gAdjacenceSommet(g, s); !lest_vide(l); l = lsuiv(l))
     {
         Sommet * t = lsommet_tete(l);
         if (cgCouleurSommet(cg, t) == BLANC)

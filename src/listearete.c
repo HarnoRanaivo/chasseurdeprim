@@ -14,7 +14,7 @@ ListeArete * larAjouterAreteTete(ListeArete * l, const Sommet * a, const Sommet 
 {
     if (!larExisteArete(l, a, b))
     {
-        ListeArete * l0 = MALLOC(l0);
+        ListeArete * const l0 = MALLOC(l0);
 
         if (l0 != NULL)
         {

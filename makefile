@@ -16,6 +16,7 @@ vpath %.a lib/
 main : main.o libgraphes.a libprim.a io.o | bin
 	$(CC) $(CFLAGS) $(LFLAGS) -o $(BPATH)main $(OPATH)main.o -lprim -lgraphes
 
+generation.o : generation.c generation.h graphe.h listearete.h arete.h base.h
 io.o : io.c io.h
 prim.o : prim.c prim.h base.h sommet.h graphe.h coloration.h filearetetriee.h
 filearetetriee.o : filearetetriee.c filearetetriee.h base.h sommet.h arete.h listearete.h
@@ -32,8 +33,8 @@ main.o : main.c base.h
 %.o : %.c | obj
 	$(CC) $(CFLAGS) -o $(OPATH)$@ -c $< $(IFLAGS)
 
-libgraphes.a : sommet.o adjacence.o arete.o listearete.o graphe.o coloration.o parcours.o grapheconnexe.o | lib
-	ar -crv $(LPATH)libgraphes.a $(OPATH)sommet.o $(OPATH)arete.o $(OPATH)listearete.o $(OPATH)adjacence.o $(OPATH)graphe.o $(OPATH)coloration.o $(OPATH)parcours.o $(OPATH)grapheconnexe.o
+libgraphes.a : sommet.o adjacence.o arete.o listearete.o graphe.o coloration.o parcours.o grapheconnexe.o generation.o | lib
+	ar -crv $(LPATH)libgraphes.a $(OPATH)sommet.o $(OPATH)arete.o $(OPATH)listearete.o $(OPATH)adjacence.o $(OPATH)graphe.o $(OPATH)coloration.o $(OPATH)parcours.o $(OPATH)grapheconnexe.o $(OPATH)generation.o
 	ranlib $(LPATH)libgraphes.a
 
 libprim.a : filearetetriee.o prim.o | lib

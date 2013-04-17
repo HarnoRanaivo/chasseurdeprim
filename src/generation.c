@@ -25,11 +25,10 @@ static int printDebut(FILE * const fichier)
 
 static int printSommets(const Graphe * g, FILE * const fichier)
 {
-    int i;
     int erreurs = 0;
     Nat n = 360 / gNombreSommets(g);
 
-    for (g = g, i = 0; !gEstVide(g); g = gSuivant(g), i++)
+    for (int i = 0; !gEstVide(g); g = gSuivant(g), i++)
     {
         int succes = fprintf(fichier,
                             "\\node[draw] (%s) at (%d:%d) {%s};\n",
@@ -52,13 +51,13 @@ static int printSommets(const Graphe * g, FILE * const fichier)
 static int printAretes(const Graphe * g, FILE * const fichier)
 {
     int erreurs = 0;
-    const ListeArete * l = gAretes(g);
 
-    for (l = l; !larEstVide(l); l = larSuivante(l))
+    for (const ListeArete * l = gAretes(g); !larEstVide(l); l = larSuivante(l))
     {
+        const Arete * const a = larAreteTete(l);
         int succes = fprintf(fichier,
-                            "\\draw (%s) -- (%s);\n",
-                            aA(larAreteTete(l)), aB(larAreteTete(l)));
+                            "\\draw (%s) -- (%s) node [midway] {%d};\n",
+                            aA(a), aB(a), aPoids(a));
         if (succes < 0)
         {
             fprintf(stderr,

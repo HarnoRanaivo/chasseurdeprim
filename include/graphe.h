@@ -29,7 +29,7 @@
  * - gAjouterSommet()
  * - gAjouterArete()
  * - gModifierArete()
- * - gCopier
+ * - gCopier()
  *
  * Les destructeurs sont :
  * - gSupprimerSommet()

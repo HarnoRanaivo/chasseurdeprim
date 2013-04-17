@@ -56,7 +56,7 @@ static int printAretes(const Graphe * g, FILE * const fichier)
     {
         const Arete * const a = larAreteTete(l);
         int succes = fprintf(fichier,
-                            "\\draw (%s) -- (%s) node [midway] {%d};\n",
+                            "\\draw (%s) -- (%s) node [pos=0.25, above] {%d};\n",
                             aA(a), aB(a), aPoids(a));
         if (succes < 0)
         {

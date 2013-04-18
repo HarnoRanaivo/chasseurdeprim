@@ -15,7 +15,7 @@ CouleursGraphe * cgAjouterSommet(CouleursGraphe * cg, const Sommet * s, Couleur 
 {
     if (!cgExisteSommmet(cg, s))
     {
-        CouleursGraphe * cg0 = MALLOC(cg0);
+        CouleursGraphe * const cg0 = MALLOC(cg0);
 
         if (cg0 != NULL)
         {
@@ -56,7 +56,7 @@ CouleursGraphe * cgSupprimerSommet(CouleursGraphe * cg, const Sommet * s)
         return cgSupprimerTete(cg);
     else
     {
-        CouleursGraphe * cgp = cgPrecedent(cg, s);
+        CouleursGraphe * const cgp = cgPrecedent(cg, s);
 
         if (cgp != NULL)
             cgp->suivant = cgSupprimerTete(cgSuivant(cgp));
@@ -67,7 +67,7 @@ CouleursGraphe * cgSupprimerSommet(CouleursGraphe * cg, const Sommet * s)
 
 CouleursGraphe * cgModifierSommet(CouleursGraphe * cg, const Sommet * s, Couleur c)
 {
-    CouleursGraphe * cg0 = cgPSommet(cg, s);
+    CouleursGraphe * const cg0 = cgPSommet(cg, s);
 
     if (cg0 != NULL)
         cg0->couleur = c;

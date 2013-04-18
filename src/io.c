@@ -10,20 +10,13 @@ void sauvegarder_graphe (const Graphe * g, const char* destination){
 	FILE * pfile = NULL;
 	pfile = fopen(destination, "w"); // crée le fichier destination s'il n'existe pas sinon le réécrit
 	assert (pfile != NULL);
-	
-	Nat i, j;
-	
-	Nat tailleg = gNombreSommets(g);
-	for (i=0 ; i< tailleg ; i++){ // boucle pour chaque sommet de g
-	    ListeAdjacence * l = gAdjacenceTete(g);
-	    Nat taillel = ltaille(l);
-		for (j=0 ; j< taillel; j++){ // boucle pour chaque arête dans la liste d'arêtes de g
-			fprintf(pfile,"%s\t%d\t%s\n",gSommetTete(g),lpoids_tete(l),lsommet_tete(l));		
-			l = lsuiv(l); // on regarde l'arête suivante
-		}
-		g = gSuivant(g); // on regarde le sommet suivant
-	}
-	
+
+    for (const ListeArete * l = gAretes(g); !larEstVide(l); l = larSuivante(l))
+    {
+        const Arete * const a = larAreteTete(l);
+        fprintf(pfile, "%s\t%d\t%s\n", aA(a), aPoids(a), aB(a));
+    }
+
 	fclose (pfile); // ferme le fichier
 	return;
 }

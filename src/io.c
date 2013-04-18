@@ -18,8 +18,8 @@ void sauvegarder_graphe (const Graphe * g, const char* destination){
 	    ListeArete * l = gAretes(g);
 	    Nat taillel = larNombreAretes(l);
 		for (j=0 ; j< taillel; j++){ // boucle pour chaque arête dans la liste d'arêtes de g
-			fprintf(pfile,"%s\t%d\t%s\n",gSommetTete(g),lpoids_tete(l),lsommet_tete(l));		
-			l = lsuiv(l); // on regarde l'arête suivante
+			fprintf(pfile,"%s\t%d\t%s\n",aA(larAreteTete(l)),aPoids(larAreteTete(l)),aB(larAreteTete(l));		
+			l = larSuivante(l); // on regarde l'arête suivante
 		}
 		g = gSuivant(g); // on regarde le sommet suivant
 	}

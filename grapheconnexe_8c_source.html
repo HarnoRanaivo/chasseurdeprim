@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Chasseur de Prim:  Fichier source de src/grapheconnexe.c</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Chasseur de Prim
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Généré par Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li><a href="dirs.html"><span>Répertoires</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="dir_307baa3f0b4442ad1de385c197155be8.html">src</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">grapheconnexe.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="grapheconnexe_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00006"></a>00006 <span class="preprocessor">#include &quot;<a class="code" href="grapheconnexe_8h.html" title="GrapheConnexes connexes (header)">grapheconnexe.h</a>&quot;</span>
+<a name="l00007"></a>00007 
+<a name="l00008"></a><a class="code" href="grapheconnexe_8c.html#a2746c747f7ca032eb775adf03d09c5c5">00008</a> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">GrapheConnexe</a> * <a class="code" href="structGraphe.html#ae3c20f35151773d15b4d5a34afd8fb0e" title="Nouveau GrapheConnexe.">gcNouv</a>(<span class="keywordtype">void</span>)
+<a name="l00009"></a>00009 {
+<a name="l00010"></a>00010     <span class="keywordflow">return</span> <a class="code" href="structGraphe.html#aaf6e3b452d5d36e54cdebf1f9bdbdb14" title="Nouveau Graphe.">gNouv</a>();
+<a name="l00011"></a>00011 }
+<a name="l00012"></a>00012 
+<a name="l00013"></a><a class="code" href="grapheconnexe_8c.html#aff062a1149a228a87e0859e64746bb57">00013</a> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">GrapheConnexe</a> * <a class="code" href="structGraphe.html#a68ebf61cca80e41197a48f6b576c32da" title="Ajout d&#39;un sommet dans un graphe connexe.">gcAjouterSommet</a>(<a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">GrapheConnexe</a> * g, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s)
+<a name="l00014"></a>00014 {
+<a name="l00015"></a>00015     <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe.">gEstVide</a>(g))
+<a name="l00016"></a>00016         <span class="keywordflow">return</span> <a class="code" href="structGraphe.html#a420bc7f2ad2301c4565dce8c29a14286" title="Ajout d&#39;un sommet dans un Graphe.">gAjouterSommet</a>(g, s);
+<a name="l00017"></a>00017     <span class="keywordflow">else</span>
+<a name="l00018"></a>00018         <span class="keywordflow">return</span> g;
+<a name="l00019"></a>00019 }
+<a name="l00020"></a>00020 
+<a name="l00021"></a><a class="code" href="grapheconnexe_8c.html#a064998f9e6af964d70d8e48baad19e77">00021</a> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">GrapheConnexe</a> * <a class="code" href="structGraphe.html#ad7f46b1f66764538930a9ea33a746961" title="Ajout d&#39;une arête dans un graphe connexe.">gcAjouterArete</a>(<a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">GrapheConnexe</a> * g, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * a, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * b, <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> p)
+<a name="l00022"></a>00022 {
+<a name="l00023"></a>00023     <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe.">gEstVide</a>(g) || <a class="code" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe.">gExisteSommet</a>(g, a) || <a class="code" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe.">gExisteSommet</a>(g, b))
+<a name="l00024"></a>00024         g = <a class="code" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe.">gAjouterArete</a>(g, a, b, p);
+<a name="l00025"></a>00025 
+<a name="l00026"></a>00026     <span class="keywordflow">return</span> g;
+<a name="l00027"></a>00027 }
+<a name="l00028"></a>00028 
+<a name="l00029"></a><a class="code" href="grapheconnexe_8c.html#a17ac17df5298266d7dfed5f4999964d9">00029</a> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">GrapheConnexe</a> * <a class="code" href="structGraphe.html#ac3d2bf2bf83d8206bb018726506e9df2" title="Suppression d&#39;un sommet dans un graphe connexe.">gcSupprimerSommet</a>(<a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">GrapheConnexe</a> * g, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s)
+<a name="l00030"></a>00030 {
+<a name="l00031"></a>00031     <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">GrapheConnexe</a> * g0 = <a class="code" href="structGraphe.html#a0aa5aacc4cc9cb1e489a7bb295dcead4" title="Suppression d&#39;un sommet dans un Graphe.">gSupprimerSommet</a>(<a class="code" href="structGraphe.html#a023f0542e3b7c6b7716d3984b0361453" title="Copie d&#39;un Graphe.">gCopier</a>(g), s);
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033     <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe.">gEstConnexe</a>(g0))
+<a name="l00034"></a>00034     {
+<a name="l00035"></a>00035         g = <a class="code" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe.">gLiberer</a>(g);
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037         <span class="keywordflow">return</span> g0;
+<a name="l00038"></a>00038     }
+<a name="l00039"></a>00039     <span class="keywordflow">else</span>
+<a name="l00040"></a>00040     {
+<a name="l00041"></a>00041         g0 = <a class="code" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe.">gLiberer</a>(g0);
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043         <span class="keywordflow">return</span> g;
+<a name="l00044"></a>00044     }
+<a name="l00045"></a>00045 }
+<a name="l00046"></a>00046 
+<a name="l00047"></a><a class="code" href="grapheconnexe_8c.html#a90dad6597b46ad207a693a3b633f4fbf">00047</a> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">GrapheConnexe</a> * <a class="code" href="structGraphe.html#a426658bb7e74364f25137659827422a2" title="suppression d&#39;une arête dans un graphe connexe.">gcSupprimerArete</a>(<a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">GrapheConnexe</a> * g, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * a, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * b)
+<a name="l00048"></a>00048 {
+<a name="l00049"></a>00049     <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> p = <a class="code" href="structGraphe.html#a50bed59aba5c8e5843e16932aabcbd2a" title="Poids d&#39;une arête.">gPoidsArete</a>(g, a, b);
+<a name="l00050"></a>00050     g = <a class="code" href="structGraphe.html#a183405c1312d76628db9de7079b0beaa" title="Suppression d&#39;une arête dans un Graphe.">gSupprimerArete</a>(g, a, b);
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052     <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe.">gEstConnexe</a>(g))
+<a name="l00053"></a>00053         <span class="keywordflow">return</span> g;
+<a name="l00054"></a>00054     <span class="keywordflow">else</span>
+<a name="l00055"></a>00055         <span class="keywordflow">return</span> <a class="code" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe.">gAjouterArete</a>(g, a, b, p);
+<a name="l00056"></a>00056 }
+<a name="l00057"></a>00057 
+<a name="l00058"></a><a class="code" href="grapheconnexe_8c.html#a9a4321feb2936b914fb979d5d6b0efbf">00058</a> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">GrapheConnexe</a> * <a class="code" href="structGraphe.html#ac01b4181e185122d26b569dc5d5b0eb9" title="Modification d&#39;une arête dans un GrapheConnexe.">gcModifierArete</a>(<a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">GrapheConnexe</a> * g, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * a, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * b, <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> p)
+<a name="l00059"></a>00059 {
+<a name="l00060"></a>00060     <span class="keywordflow">return</span> <a class="code" href="structGraphe.html#a64fd41af976a8447604e9e95d93b71cf" title="Modification d&#39;une arête dans un Graphe.">gModifierArete</a>(g, a, b, p);
+<a name="l00061"></a>00061 }
+</pre></div></div><!-- contents -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+
+<hr class="footer"/><address class="footer"><small>
+Généré le Vendredi Avril 19 2013 18:08:38 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

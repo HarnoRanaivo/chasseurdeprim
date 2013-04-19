@@ -1,0 +1,630 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Chasseur de Prim: Référence du fichier include/arete.h</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Chasseur de Prim
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Généré par Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li><a href="dirs.html"><span>Répertoires</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="dir_d027f5d2eee5f38b54bb3db43d132c50.html">include</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier arete.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Arêtes (header)  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br/>
+<code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="base_8h_source.html">base.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="sommet_8h_source.html">sommet.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de arete.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="arete_8h__incl.png" border="0" usemap="#include_2arete_8h" alt=""/></div>
+<map name="include_2arete_8h" id="include_2arete_8h">
+<area shape="rect" id="node7" href="base_8h.html" title="Base (header)" alt="" coords="20,160,81,189"/><area shape="rect" id="node11" href="sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="88,83,168,112"/></map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="arete_8h__dep__incl.png" border="0" usemap="#include_2arete_8hdep" alt=""/></div>
+<map name="include_2arete_8hdep" id="include_2arete_8hdep">
+<area shape="rect" id="node3" href="listearete_8h.html" title="Liste d&#39;arêtes (header)" alt="" coords="359,83,489,112"/><area shape="rect" id="node17" href="prim_8h.html" title="Algorithme de Prim (header)" alt="" coords="155,315,256,344"/><area shape="rect" id="node23" href="generation_8h.html" title="Generation d&#39;un fichier latex (header)" alt="" coords="768,237,907,267"/><area shape="rect" id="node38" href="filearetetriee_8h.html" title="File triée d&#39;arêtes (header)" alt="" coords="5,160,155,189"/><area shape="rect" id="node49" href="arete_8c.html" title="Aretes (code)" alt="" coords="676,83,759,112"/><area shape="rect" id="node5" href="graphe_8h.html" title="Graphes (header)" alt="" coords="433,160,551,189"/><area shape="rect" id="node44" href="listearete_8c.html" title="Liste d&#39;arêtes (header)" alt="" coords="303,160,409,189"/><area shape="rect" id="node7" href="coloration_8h.html" title="Coloration d&#39;un graphe (header)" alt="" coords="280,237,413,267"/><area shape="rect" id="node9" href="parcours_8h.html" title="Parcours d&#39;un graphe (header)" alt="" coords="488,315,616,344"/><area shape="rect" id="node11" href="grapheconnexe_8h.html" title="GrapheConnexes connexes (header)" alt="" coords="368,392,533,421"/><area shape="rect" id="node29" href="io_8h.html" title="Entrées/Sorties (header)" alt="" coords="656,237,744,267"/><area shape="rect" id="node36" href="graphe_8c.html" title="Graphes (code)" alt="" coords="488,237,581,267"/><area shape="rect" id="node21" href="coloration_8c.html" title="Coloration d&#39;un graphe (code)" alt="" coords="292,315,401,344"/><area shape="rect" id="node15" href="parcours_8c.html" title="Parcours d&#39;un graphe (code)" alt="" coords="557,392,661,421"/><area shape="rect" id="node13" href="grapheconnexe_8c.html" title="GrapheConnexes (code)" alt="" coords="380,469,521,499"/><area shape="rect" id="node19" href="prim_8c.html" title="Algorithme de Prim (code)" alt="" coords="165,392,245,421"/><area shape="rect" id="node25" href="generation_8c.html" title="Generation d&#39;un fichier latex (code)" alt="" coords="835,315,949,344"/><area shape="rect" id="node31" href="io_8c.html" title="Entrées/Sorties (code source)" alt="" coords="747,315,811,344"/><area shape="rect" id="node33" href="main_8c.html" title="Main." alt="" coords="640,315,723,344"/><area shape="rect" id="node41" href="filearetetriee_8c.html" title="File triée d&#39;arêtes (code)" alt="" coords="29,237,155,267"/></map>
+</div>
+</div>
+<p><a href="arete_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structArete.html">Arete</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Arête d'extrémités a et b et de poids p.  <a href="structArete.html#details">Plus de détails...</a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structArete.html">Arete</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arete_8h.html#a4e1649a2efddbc5c338e10d7d0eb2c79">aNouv</a> (const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *a, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *b, <a class="el" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c">Ent</a> poids)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Nouvelle <a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>.  <a href="#a4e1649a2efddbc5c338e10d7d0eb2c79"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arete_8h.html#a510d26105fec391651847798d4fbaddd">aA</a> (const <a class="el" href="structArete.html">Arete</a> *a)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Extrémité a de l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>.  <a href="#a510d26105fec391651847798d4fbaddd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arete_8h.html#ac2c6bcac1f84ddcae438bcb3ab2bf522">aB</a> (const <a class="el" href="structArete.html">Arete</a> *a)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Extrémité b de l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>.  <a href="#ac2c6bcac1f84ddcae438bcb3ab2bf522"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c">Ent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arete_8h.html#aee57c994798f0be50c557ccdae4c191b">aPoids</a> (const <a class="el" href="structArete.html">Arete</a> *a)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Poids de l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>.  <a href="#aee57c994798f0be50c557ccdae4c191b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arete_8h.html#a0356483cd626e097c86d8fa2ba262383">aAreteEgaleS</a> (const <a class="el" href="structArete.html">Arete</a> *a, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *s, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *t)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Test d'égalité de deux Aretes, sans se préoccuper du poids.  <a href="#a0356483cd626e097c86d8fa2ba262383"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arete_8h.html#a760d5f0ae6b007045eafbd2ad7dc505e">aAreteEgaleS2</a> (const <a class="el" href="structArete.html">Arete</a> *a, const <a class="el" href="structArete.html">Arete</a> *b)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Test d'égalité de deux Aretes, sans se préoccuper du poids.  <a href="#a760d5f0ae6b007045eafbd2ad7dc505e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arete_8h.html#aca43ce84ea6e710ec5e5ea9bc1b5c715">aAreteEgaleP</a> (const <a class="el" href="structArete.html">Arete</a> *a, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *s, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *t, <a class="el" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c">Ent</a> poids)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Test d'égalité de deux Aretes, sensible au poids.  <a href="#aca43ce84ea6e710ec5e5ea9bc1b5c715"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arete_8h.html#a1416f0eb3aae838b414046a80ce93b93">aAreteEgaleP2</a> (const <a class="el" href="structArete.html">Arete</a> *a, const <a class="el" href="structArete.html">Arete</a> *b)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Test d'égalité de deux Aretes, sans se préoccuper du poids.  <a href="#a1416f0eb3aae838b414046a80ce93b93"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structArete.html">Arete</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="arete_8h.html#a44d1b48e6c172e01d893056315a7ed87">aLiberer</a> (<a class="el" href="structArete.html">Arete</a> *a)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Libérer une <a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>.  <a href="#a44d1b48e6c172e01d893056315a7ed87"></a><br/></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>Description détaillée</h2>
+<div class="textblock"><p>Arêtes (header) </p>
+<dl class="author"><dt><b>Auteur:</b></dt><dd>Harenome RAZANAJATO </dd></dl>
+
+<p>Définition dans le fichier <a class="el" href="arete_8h_source.html">arete.h</a>.</p>
+</div><hr/><h2>Documentation des fonctions</h2>
+<a class="anchor" id="a510d26105fec391651847798d4fbaddd"></a><!-- doxytag: member="arete.h::aA" ref="a510d26105fec391651847798d4fbaddd" args="(const Arete *a)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> * <a class="el" href="structArete.html#a510d26105fec391651847798d4fbaddd">aA</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structArete.html">Arete</a> *&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Extrémité a de l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td><a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> à l'extrémité <em>a</em> de l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> <em>a</em>. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="arete_8c_source.html#l00023">23</a> du fichier <a class="el" href="arete_8c_source.html">arete.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">return</span> a-&gt;<a class="code" href="structArete.html#ac272cb6d7f453d95786f67417694bc41">a</a>;
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="aca43ce84ea6e710ec5e5ea9bc1b5c715"></a><!-- doxytag: member="arete.h::aAreteEgaleP" ref="aca43ce84ea6e710ec5e5ea9bc1b5c715" args="(const Arete *a, const Sommet *s, const Sommet *t, Ent poids)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a> <a class="el" href="structArete.html#aca43ce84ea6e710ec5e5ea9bc1b5c715">aAreteEgaleP</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structArete.html">Arete</a> *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c">Ent</a>&#160;</td>
+          <td class="paramname"><em>poids</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Test d'égalité de deux Aretes, sensible au poids. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td><a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>. </td></tr>
+    <tr><td class="paramname">s</td><td>Extrémité. </td></tr>
+    <tr><td class="paramname">t</td><td>Autre extrémité. </td></tr>
+    <tr><td class="paramname">poids</td><td>Poids. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>VRAI si les extrémités de a correspondent à s et t et si le poids est le même, FAUX sinon.</dd></dl>
+<p>Compare les extrémités de l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> <em>a</em> à <em>s</em> et <em>t</em> et le poids de l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> à <em>poids</em>. </p>
+
+<p>Définition à la ligne <a class="el" href="arete_8c_source.html#l00045">45</a> du fichier <a class="el" href="arete_8c_source.html">arete.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (a == NULL &amp;&amp; s == NULL &amp;&amp; t == NULL &amp;&amp; poids == 0) <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
+    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (a == NULL) <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+    <span class="keywordflow">return</span> <a class="code" href="structArete.html#a0356483cd626e097c86d8fa2ba262383" title="Test d&#39;égalité de deux Aretes, sans se préoccuper du poids.">aAreteEgaleS</a>(a, s, t) &amp;&amp; (<a class="code" href="structArete.html#aee57c994798f0be50c557ccdae4c191b" title="Poids de l&#39;Arete.">aPoids</a>(a) == poids);
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="arete_8h_aca43ce84ea6e710ec5e5ea9bc1b5c715_cgraph.png" border="0" usemap="#arete_8h_aca43ce84ea6e710ec5e5ea9bc1b5c715_cgraph" alt=""/></div>
+<map name="arete_8h_aca43ce84ea6e710ec5e5ea9bc1b5c715_cgraph" id="arete_8h_aca43ce84ea6e710ec5e5ea9bc1b5c715_cgraph">
+<area shape="rect" id="node3" href="structArete.html#a0356483cd626e097c86d8fa2ba262383" title="Test d&#39;égalité de deux Aretes, sans se préoccuper du poids." alt="" coords="157,5,299,35"/><area shape="rect" id="node5" href="structArete.html#aee57c994798f0be50c557ccdae4c191b" title="Poids de l&#39;Arete." alt="" coords="177,59,279,88"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1416f0eb3aae838b414046a80ce93b93"></a><!-- doxytag: member="arete.h::aAreteEgaleP2" ref="a1416f0eb3aae838b414046a80ce93b93" args="(const Arete *a, const Arete *b)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a> <a class="el" href="structArete.html#a1416f0eb3aae838b414046a80ce93b93">aAreteEgaleP2</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structArete.html">Arete</a> *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structArete.html">Arete</a> *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Test d'égalité de deux Aretes, sans se préoccuper du poids. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td><a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>. </td></tr>
+    <tr><td class="paramname">b</td><td><a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>VRAI si les extrémités et les poids de a et b sont identiques, FAUX sinon.</dd></dl>
+<p>Compare les extrémités et les poids des <a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> <em>a</em> et <em>b</em>. </p>
+
+<p>Définition à la ligne <a class="el" href="arete_8c_source.html#l00052">52</a> du fichier <a class="el" href="arete_8c_source.html">arete.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (a == NULL &amp;&amp; b == NULL) <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
+    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (a == NULL || b == NULL) <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+    <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code" href="structArete.html#aca43ce84ea6e710ec5e5ea9bc1b5c715" title="Test d&#39;égalité de deux Aretes, sensible au poids.">aAreteEgaleP</a>(a, <a class="code" href="structArete.html#a510d26105fec391651847798d4fbaddd" title="Extrémité a de l&#39;Arete.">aA</a>(b), <a class="code" href="structArete.html#ac2c6bcac1f84ddcae438bcb3ab2bf522" title="Extrémité b de l&#39;Arete.">aB</a>(b), <a class="code" href="structArete.html#aee57c994798f0be50c557ccdae4c191b" title="Poids de l&#39;Arete.">aPoids</a>(b));
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="arete_8h_a1416f0eb3aae838b414046a80ce93b93_cgraph.png" border="0" usemap="#arete_8h_a1416f0eb3aae838b414046a80ce93b93_cgraph" alt=""/></div>
+<map name="arete_8h_a1416f0eb3aae838b414046a80ce93b93_cgraph" id="arete_8h_a1416f0eb3aae838b414046a80ce93b93_cgraph">
+<area shape="rect" id="node3" href="structArete.html#aca43ce84ea6e710ec5e5ea9bc1b5c715" title="Test d&#39;égalité de deux Aretes, sensible au poids." alt="" coords="163,5,304,35"/><area shape="rect" id="node5" href="structArete.html#a510d26105fec391651847798d4fbaddd" title="Extrémité a de l&#39;Arete." alt="" coords="195,59,272,88"/><area shape="rect" id="node7" href="structArete.html#ac2c6bcac1f84ddcae438bcb3ab2bf522" title="Extrémité b de l&#39;Arete." alt="" coords="195,112,272,141"/><area shape="rect" id="node9" href="structArete.html#aee57c994798f0be50c557ccdae4c191b" title="Poids de l&#39;Arete." alt="" coords="183,165,284,195"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0356483cd626e097c86d8fa2ba262383"></a><!-- doxytag: member="arete.h::aAreteEgaleS" ref="a0356483cd626e097c86d8fa2ba262383" args="(const Arete *a, const Sommet *s, const Sommet *t)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a> <a class="el" href="structArete.html#a0356483cd626e097c86d8fa2ba262383">aAreteEgaleS</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structArete.html">Arete</a> *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>t</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Test d'égalité de deux Aretes, sans se préoccuper du poids. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td><a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>. </td></tr>
+    <tr><td class="paramname">s</td><td>Extrémité. </td></tr>
+    <tr><td class="paramname">t</td><td>Autre extrémité. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> si les extrémités de l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> <em>a</em> correspondent à <em>s</em> et <em>t</em>, FAUX sinon.</dd></dl>
+<p>Le poids de l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> n'a pas d'importance. Compare les extrémités de <em>a</em> à <em>s</em> et <em>t</em>. </p>
+
+<p>Définition à la ligne <a class="el" href="arete_8c_source.html#l00059">59</a> du fichier <a class="el" href="arete_8c_source.html">arete.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (a == NULL &amp;&amp; s == NULL &amp;&amp; t == NULL) <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
+    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (a == NULL) <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+    <span class="keywordflow">else</span> <span class="keywordflow">return</span> (<a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(<a class="code" href="structArete.html#a510d26105fec391651847798d4fbaddd" title="Extrémité a de l&#39;Arete.">aA</a>(a), s) &amp;&amp; <a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(<a class="code" href="structArete.html#ac2c6bcac1f84ddcae438bcb3ab2bf522" title="Extrémité b de l&#39;Arete.">aB</a>(a), t)) || (<a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(<a class="code" href="structArete.html#a510d26105fec391651847798d4fbaddd" title="Extrémité a de l&#39;Arete.">aA</a>(a), t) &amp;&amp; <a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(<a class="code" href="structArete.html#ac2c6bcac1f84ddcae438bcb3ab2bf522" title="Extrémité b de l&#39;Arete.">aB</a>(a), s));
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="arete_8h_a0356483cd626e097c86d8fa2ba262383_cgraph.png" border="0" usemap="#arete_8h_a0356483cd626e097c86d8fa2ba262383_cgraph" alt=""/></div>
+<map name="arete_8h_a0356483cd626e097c86d8fa2ba262383_cgraph" id="arete_8h_a0356483cd626e097c86d8fa2ba262383_cgraph">
+<area shape="rect" id="node3" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet." alt="" coords="160,5,232,35"/><area shape="rect" id="node5" href="structArete.html#a510d26105fec391651847798d4fbaddd" title="Extrémité a de l&#39;Arete." alt="" coords="157,59,235,88"/><area shape="rect" id="node7" href="structArete.html#ac2c6bcac1f84ddcae438bcb3ab2bf522" title="Extrémité b de l&#39;Arete." alt="" coords="157,112,235,141"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a760d5f0ae6b007045eafbd2ad7dc505e"></a><!-- doxytag: member="arete.h::aAreteEgaleS2" ref="a760d5f0ae6b007045eafbd2ad7dc505e" args="(const Arete *a, const Arete *b)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a> <a class="el" href="structArete.html#a760d5f0ae6b007045eafbd2ad7dc505e">aAreteEgaleS2</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structArete.html">Arete</a> *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structArete.html">Arete</a> *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Test d'égalité de deux Aretes, sans se préoccuper du poids. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td><a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>. </td></tr>
+    <tr><td class="paramname">b</td><td><a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>VRAI si les extrémités de a et b sont identiques, FAUX sinon.</dd></dl>
+<p>Les poids des <a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> n'importent pas, on ne compare que les extrémités des <a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> <em>a</em> et <em>b</em>. L'ordre des extrémités n'importe pas non plus. </p>
+
+<p>Définition à la ligne <a class="el" href="arete_8c_source.html#l00038">38</a> du fichier <a class="el" href="arete_8c_source.html">arete.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (a == NULL &amp;&amp; b == NULL) <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
+    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (a == NULL || b == NULL) <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+    <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code" href="structArete.html#a0356483cd626e097c86d8fa2ba262383" title="Test d&#39;égalité de deux Aretes, sans se préoccuper du poids.">aAreteEgaleS</a>(a, <a class="code" href="structArete.html#a510d26105fec391651847798d4fbaddd" title="Extrémité a de l&#39;Arete.">aA</a>(b), <a class="code" href="structArete.html#ac2c6bcac1f84ddcae438bcb3ab2bf522" title="Extrémité b de l&#39;Arete.">aB</a>(b));
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="arete_8h_a760d5f0ae6b007045eafbd2ad7dc505e_cgraph.png" border="0" usemap="#arete_8h_a760d5f0ae6b007045eafbd2ad7dc505e_cgraph" alt=""/></div>
+<map name="arete_8h_a760d5f0ae6b007045eafbd2ad7dc505e_cgraph" id="arete_8h_a760d5f0ae6b007045eafbd2ad7dc505e_cgraph">
+<area shape="rect" id="node3" href="structArete.html#a0356483cd626e097c86d8fa2ba262383" title="Test d&#39;égalité de deux Aretes, sans se préoccuper du poids." alt="" coords="163,5,304,35"/><area shape="rect" id="node5" href="structArete.html#a510d26105fec391651847798d4fbaddd" title="Extrémité a de l&#39;Arete." alt="" coords="195,59,272,88"/><area shape="rect" id="node7" href="structArete.html#ac2c6bcac1f84ddcae438bcb3ab2bf522" title="Extrémité b de l&#39;Arete." alt="" coords="195,112,272,141"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac2c6bcac1f84ddcae438bcb3ab2bf522"></a><!-- doxytag: member="arete.h::aB" ref="ac2c6bcac1f84ddcae438bcb3ab2bf522" args="(const Arete *a)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> * <a class="el" href="structArete.html#ac2c6bcac1f84ddcae438bcb3ab2bf522">aB</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structArete.html">Arete</a> *&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Extrémité b de l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td><a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> à l'extrémité <em>b</em> de l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> <em>a</em>. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="arete_8c_source.html#l00028">28</a> du fichier <a class="el" href="arete_8c_source.html">arete.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">return</span> a-&gt;<a class="code" href="structArete.html#a93419920455216fd7d3b46551b94e866">b</a>;
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a44d1b48e6c172e01d893056315a7ed87"></a><!-- doxytag: member="arete.h::aLiberer" ref="a44d1b48e6c172e01d893056315a7ed87" args="(Arete *a)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structArete.html">Arete</a> * <a class="el" href="structArete.html#a44d1b48e6c172e01d893056315a7ed87">aLiberer</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structArete.html">Arete</a> *&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Libérer une <a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td><a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> à libérer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>NULL</dd></dl>
+<p>Libère la mémoire occupée par l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> a : libère aussi la mémoire occupée par les <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> extrémités de <em>a</em>. </p>
+
+<p>Définition à la ligne <a class="el" href="arete_8c_source.html#l00066">66</a> du fichier <a class="el" href="arete_8c_source.html">arete.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (a != NULL)
+    {
+        a-&gt;<a class="code" href="structArete.html#ac272cb6d7f453d95786f67417694bc41">a</a> = <a class="code" href="sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement.">libererSommet</a>(<a class="code" href="structArete.html#a510d26105fec391651847798d4fbaddd" title="Extrémité a de l&#39;Arete.">aA</a>(a));
+        a-&gt;<a class="code" href="structArete.html#a93419920455216fd7d3b46551b94e866">b</a> = <a class="code" href="sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement.">libererSommet</a>(<a class="code" href="structArete.html#ac2c6bcac1f84ddcae438bcb3ab2bf522" title="Extrémité b de l&#39;Arete.">aB</a>(a));
+        free(a);
+        a = NULL;
+    }
+
+    <span class="keywordflow">return</span> a;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="arete_8h_a44d1b48e6c172e01d893056315a7ed87_cgraph.png" border="0" usemap="#arete_8h_a44d1b48e6c172e01d893056315a7ed87_cgraph" alt=""/></div>
+<map name="arete_8h_a44d1b48e6c172e01d893056315a7ed87_cgraph" id="arete_8h_a44d1b48e6c172e01d893056315a7ed87_cgraph">
+<area shape="rect" id="node3" href="sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement." alt="" coords="123,5,229,35"/><area shape="rect" id="node5" href="structArete.html#a510d26105fec391651847798d4fbaddd" title="Extrémité a de l&#39;Arete." alt="" coords="137,59,215,88"/><area shape="rect" id="node7" href="structArete.html#ac2c6bcac1f84ddcae438bcb3ab2bf522" title="Extrémité b de l&#39;Arete." alt="" coords="137,112,215,141"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4e1649a2efddbc5c338e10d7d0eb2c79"></a><!-- doxytag: member="arete.h::aNouv" ref="a4e1649a2efddbc5c338e10d7d0eb2c79" args="(const Sommet *a, const Sommet *b, Ent poids)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structArete.html">Arete</a> * <a class="el" href="structArete.html#a4e1649a2efddbc5c338e10d7d0eb2c79">aNouv</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c">Ent</a>&#160;</td>
+          <td class="paramname"><em>poids</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Nouvelle <a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Extrémité a de l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>. </td></tr>
+    <tr><td class="paramname">b</td><td>Extrémité b de l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>. </td></tr>
+    <tr><td class="paramname">poids</td><td>Poids de l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>(pointeur vers) Nouvelle <a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> (<em>a</em>, <em>b</em>) de poids <em>poids</em>. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="arete_8c_source.html#l00009">9</a> du fichier <a class="el" href="arete_8c_source.html">arete.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> * <span class="keyword">const</span> a0 = <a class="code" href="base_8h.html#aed83343b5b2cdb908229b4fac27cd282" title="Allouer de la mémoire.">MALLOC</a>(a0);
+
+    <span class="keywordflow">if</span> (a0 != NULL &amp;&amp; a != NULL &amp;&amp; b != NULL)
+    {
+        a0-&gt;<a class="code" href="structArete.html#ac272cb6d7f453d95786f67417694bc41">a</a> = <a class="code" href="sommet_8h.html#a98c119f316a62e6ce2b2858f000b8e06" title="Retourne une copie de s, allouée dynamiquement.">copieSommet</a>(a);
+        a0-&gt;<a class="code" href="structArete.html#a93419920455216fd7d3b46551b94e866">b</a> = <a class="code" href="sommet_8h.html#a98c119f316a62e6ce2b2858f000b8e06" title="Retourne une copie de s, allouée dynamiquement.">copieSommet</a>(b);
+        a0-&gt;<a class="code" href="structArete.html#aa1a45b15f3947c133a73fa4a25e37b0c">poids</a> = poids;
+    }
+
+    <span class="keywordflow">return</span> a0;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="arete_8h_a4e1649a2efddbc5c338e10d7d0eb2c79_cgraph.png" border="0" usemap="#arete_8h_a4e1649a2efddbc5c338e10d7d0eb2c79_cgraph" alt=""/></div>
+<map name="arete_8h_a4e1649a2efddbc5c338e10d7d0eb2c79_cgraph" id="arete_8h_a4e1649a2efddbc5c338e10d7d0eb2c79_cgraph">
+<area shape="rect" id="node3" href="sommet_8h.html#a98c119f316a62e6ce2b2858f000b8e06" title="Retourne une copie de s, allouée dynamiquement." alt="" coords="116,5,217,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aee57c994798f0be50c557ccdae4c191b"></a><!-- doxytag: member="arete.h::aPoids" ref="aee57c994798f0be50c557ccdae4c191b" args="(const Arete *a)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c">Ent</a> <a class="el" href="structArete.html#aee57c994798f0be50c557ccdae4c191b">aPoids</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structArete.html">Arete</a> *&#160;</td>
+          <td class="paramname"><em>a</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Poids de l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td><a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Poids de l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> <em>a</em>. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="arete_8c_source.html#l00033">33</a> du fichier <a class="el" href="arete_8c_source.html">arete.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">return</span> a-&gt;<a class="code" href="structArete.html#aa1a45b15f3947c133a73fa4a25e37b0c">poids</a>;
+}
+</pre></div>
+</div>
+</div>
+</div><!-- contents -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+
+<hr class="footer"/><address class="footer"><small>
+Généré le Vendredi Avril 19 2013 18:08:38 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

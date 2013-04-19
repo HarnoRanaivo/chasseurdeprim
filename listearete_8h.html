@@ -1,0 +1,717 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Chasseur de Prim: Référence du fichier include/listearete.h</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Chasseur de Prim
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Généré par Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li><a href="dirs.html"><span>Répertoires</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="dir_d027f5d2eee5f38b54bb3db43d132c50.html">include</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Structures de données</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier listearete.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Liste d'arêtes (header)  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br/>
+<code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="base_8h_source.html">base.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="sommet_8h_source.html">sommet.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="arete_8h_source.html">arete.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de listearete.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="listearete_8h__incl.png" border="0" usemap="#include_2listearete_8h" alt=""/></div>
+<map name="include_2listearete_8h" id="include_2listearete_8h">
+<area shape="rect" id="node7" href="base_8h.html" title="Base (header)" alt="" coords="218,237,280,267"/><area shape="rect" id="node11" href="sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="64,160,144,189"/><area shape="rect" id="node18" href="arete_8h.html" title="Arêtes (header)" alt="" coords="166,83,228,112"/></map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="listearete_8h__dep__incl.png" border="0" usemap="#include_2listearete_8hdep" alt=""/></div>
+<map name="include_2listearete_8hdep" id="include_2listearete_8hdep">
+<area shape="rect" id="node3" href="graphe_8h.html" title="Graphes (header)" alt="" coords="453,83,570,112"/><area shape="rect" id="node21" href="generation_8h.html" title="Generation d&#39;un fichier latex (header)" alt="" coords="711,160,850,189"/><area shape="rect" id="node36" href="filearetetriee_8h.html" title="File triée d&#39;arêtes (header)" alt="" coords="11,83,161,112"/><area shape="rect" id="node42" href="listearete_8c.html" title="Liste d&#39;arêtes (header)" alt="" coords="645,83,751,112"/><area shape="rect" id="node5" href="coloration_8h.html" title="Coloration d&#39;un graphe (header)" alt="" coords="341,160,474,189"/><area shape="rect" id="node7" href="parcours_8h.html" title="Parcours d&#39;un graphe (header)" alt="" coords="397,237,525,267"/><area shape="rect" id="node9" href="grapheconnexe_8h.html" title="GrapheConnexes connexes (header)" alt="" coords="479,315,645,344"/><area shape="rect" id="node15" href="prim_8h.html" title="Algorithme de Prim (header)" alt="" coords="138,237,239,267"/><area shape="rect" id="node27" href="io_8h.html" title="Entrées/Sorties (header)" alt="" coords="599,160,687,189"/><area shape="rect" id="node34" href="graphe_8c.html" title="Graphes (code)" alt="" coords="173,160,266,189"/><area shape="rect" id="node19" href="coloration_8c.html" title="Coloration d&#39;un graphe (code)" alt="" coords="263,237,373,267"/><area shape="rect" id="node13" href="parcours_8c.html" title="Parcours d&#39;un graphe (code)" alt="" coords="351,315,455,344"/><area shape="rect" id="node11" href="grapheconnexe_8c.html" title="GrapheConnexes (code)" alt="" coords="491,392,633,421"/><area shape="rect" id="node17" href="prim_8c.html" title="Algorithme de Prim (code)" alt="" coords="149,315,229,344"/><area shape="rect" id="node23" href="generation_8c.html" title="Generation d&#39;un fichier latex (code)" alt="" coords="794,237,909,267"/><area shape="rect" id="node29" href="io_8c.html" title="Entrées/Sorties (code source)" alt="" coords="599,237,663,267"/><area shape="rect" id="node31" href="main_8c.html" title="Main." alt="" coords="687,237,770,267"/><area shape="rect" id="node39" href="filearetetriee_8c.html" title="File triée d&#39;arêtes (code)" alt="" coords="23,160,149,189"/></map>
+</div>
+</div>
+<p><a href="listearete_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="nested-classes"></a>
+Structures de données</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structListeArete.html">ListeArete</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Liste d'arêtes.  <a href="structListeArete.html#details">Plus de détails...</a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structListeArete.html">ListeArete</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="listearete_8h.html#a4b3acdc91e28dbbd885968b16a05e57e">larNouv</a> (void)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Nouvelle liste d'arêtes.  <a href="#a4b3acdc91e28dbbd885968b16a05e57e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structListeArete.html">ListeArete</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="listearete_8h.html#a2b83d484c2c6e028c18c1b2533c0dc51">larAjouterAreteTete</a> (<a class="el" href="structListeArete.html">ListeArete</a> *l, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *a, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *b, <a class="el" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c">Ent</a> poids)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajouter une arête dans la file liste.  <a href="#a2b83d484c2c6e028c18c1b2533c0dc51"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structListeArete.html">ListeArete</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="listearete_8h.html#afd562a9130916110f6c783dbe200fc87">larSupprimerTete</a> (<a class="el" href="structListeArete.html">ListeArete</a> *l)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Supprimer l'arête en tête de liste.  <a href="#afd562a9130916110f6c783dbe200fc87"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structListeArete.html">ListeArete</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="listearete_8h.html#a89de2732f9e53aeba1fd29c645fdaa5d">larSupprimerArete</a> (<a class="el" href="structListeArete.html">ListeArete</a> *l, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *a, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *b)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Supprimer une arête dans la liste.  <a href="#a89de2732f9e53aeba1fd29c645fdaa5d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="listearete_8h.html#a93f3be3eac648b91fd055fb44771f9f5">larEstVide</a> (const <a class="el" href="structListeArete.html">ListeArete</a> *l)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Test de vacuité d'une liste d'arêtes.  <a href="#a93f3be3eac648b91fd055fb44771f9f5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="listearete_8h.html#ad86e48457c41a61508583fef666992c4">larExisteArete</a> (const <a class="el" href="structListeArete.html">ListeArete</a> *l, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *a, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *b)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Test d'existence d'une arête.  <a href="#ad86e48457c41a61508583fef666992c4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683">Nat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="listearete_8h.html#aa067d1952e548be91bb2d26bd204db05">larNombreAretes</a> (const <a class="el" href="structListeArete.html">ListeArete</a> *l)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre d'arêtes dans la liste.  <a href="#aa067d1952e548be91bb2d26bd204db05"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structArete.html">Arete</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="listearete_8h.html#a6797b32b731e6988f276ce6a0493cbf6">larAreteTete</a> (const <a class="el" href="structListeArete.html">ListeArete</a> *l)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Arête en tête de liste.  <a href="#a6797b32b731e6988f276ce6a0493cbf6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structListeArete.html">ListeArete</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="listearete_8h.html#acc89ff07336146ba511fac9bb635268a">larPArete</a> (const <a class="el" href="structListeArete.html">ListeArete</a> *l, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *a, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *b)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointeur vers la sous-liste commençant par l'arête a,b.  <a href="#acc89ff07336146ba511fac9bb635268a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structListeArete.html">ListeArete</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="listearete_8h.html#a36f1394356a54a87aea7ed4b7becc73f">larSuivante</a> (const <a class="el" href="structListeArete.html">ListeArete</a> *l)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Arête suivante dans la liste.  <a href="#a36f1394356a54a87aea7ed4b7becc73f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structListeArete.html">ListeArete</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="listearete_8h.html#ada58497f99418f22b04c25525485b4be">larLiberer</a> (<a class="el" href="structListeArete.html">ListeArete</a> *l)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Libérer une liste d'arêtes.  <a href="#ada58497f99418f22b04c25525485b4be"></a><br/></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>Description détaillée</h2>
+<div class="textblock"><p>Liste d'arêtes (header) </p>
+<dl class="author"><dt><b>Auteur:</b></dt><dd>Harenome RAZANAJATO </dd></dl>
+
+<p>Définition dans le fichier <a class="el" href="listearete_8h_source.html">listearete.h</a>.</p>
+</div><hr/><h2>Documentation des fonctions</h2>
+<a class="anchor" id="a2b83d484c2c6e028c18c1b2533c0dc51"></a><!-- doxytag: member="listearete.h::larAjouterAreteTete" ref="a2b83d484c2c6e028c18c1b2533c0dc51" args="(ListeArete *l, const Sommet *a, const Sommet *b, Ent poids)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structListeArete.html">ListeArete</a> * <a class="el" href="structListeArete.html#a2b83d484c2c6e028c18c1b2533c0dc51">larAjouterAreteTete</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structListeArete.html">ListeArete</a> *&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c">Ent</a>&#160;</td>
+          <td class="paramname"><em>poids</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ajouter une arête dans la file liste. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td><a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a>. </td></tr>
+    <tr><td class="paramname">a</td><td>Extrémité <em>a</em> de l'arête. </td></tr>
+    <tr><td class="paramname">b</td><td>Extrémité <em>t</em> de l'arête. </td></tr>
+    <tr><td class="paramname">poids</td><td>Poids de l'arête. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>(pointeur vers) <a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a>.</dd></dl>
+<p>Ajoute une <a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> dans la liste <em>l</em>. S'il existe déjà une <a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> entre <em>et</em> <b>dans</b> la liste, ou bien en cas d'erreur lors de l'ajout, <em>l</em> reste intacte. </p>
+
+<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00013">13</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (!<a class="code" href="structListeArete.html#ad86e48457c41a61508583fef666992c4" title="Test d&#39;existence d&#39;une arête.">larExisteArete</a>(l, a, b))
+    {
+        <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * <span class="keyword">const</span> l0 = <a class="code" href="base_8h.html#aed83343b5b2cdb908229b4fac27cd282" title="Allouer de la mémoire.">MALLOC</a>(l0);
+
+        <span class="keywordflow">if</span> (l0 != NULL)
+        {
+            l0-&gt;<a class="code" href="structListeArete.html#af81f3d6033e744d199ff07a69c6e97ff">arete</a> = <a class="code" href="structArete.html#a4e1649a2efddbc5c338e10d7d0eb2c79" title="Nouvelle Arete.">aNouv</a>(a, b, poids);
+            l0-&gt;<a class="code" href="structListeArete.html#a80298de757d53b2f7c605b6b38b4aa51">suivante</a> = l;
+            l = l0;
+        }
+    }
+    <span class="keywordflow">return</span> l;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="listearete_8h_a2b83d484c2c6e028c18c1b2533c0dc51_cgraph.png" border="0" usemap="#listearete_8h_a2b83d484c2c6e028c18c1b2533c0dc51_cgraph" alt=""/></div>
+<map name="listearete_8h_a2b83d484c2c6e028c18c1b2533c0dc51_cgraph" id="listearete_8h_a2b83d484c2c6e028c18c1b2533c0dc51_cgraph">
+<area shape="rect" id="node3" href="structListeArete.html#ad86e48457c41a61508583fef666992c4" title="Test d&#39;existence d&#39;une arête." alt="" coords="189,5,360,35"/><area shape="rect" id="node5" href="structArete.html#a4e1649a2efddbc5c338e10d7d0eb2c79" title="Nouvelle Arete." alt="" coords="225,59,324,88"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6797b32b731e6988f276ce6a0493cbf6"></a><!-- doxytag: member="listearete.h::larAreteTete" ref="a6797b32b731e6988f276ce6a0493cbf6" args="(const ListeArete *l)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structArete.html">Arete</a> * <a class="el" href="structListeArete.html#a6797b32b731e6988f276ce6a0493cbf6">larAreteTete</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structListeArete.html">ListeArete</a> *&#160;</td>
+          <td class="paramname"><em>l</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Arête en tête de liste. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td><a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="pre"><dt><b>Précondition:</b></dt><dd>!larEstVide(f) </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Arête.</dd></dl>
+<p>Retourne un pointeur vers l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> se trouvant en tête de la <a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> <em>l</em>. </p>
+
+<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00091">91</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">return</span> l-&gt;<a class="code" href="structListeArete.html#af81f3d6033e744d199ff07a69c6e97ff">arete</a>;
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a93f3be3eac648b91fd055fb44771f9f5"></a><!-- doxytag: member="listearete.h::larEstVide" ref="a93f3be3eac648b91fd055fb44771f9f5" args="(const ListeArete *l)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a> <a class="el" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5">larEstVide</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structListeArete.html">ListeArete</a> *&#160;</td>
+          <td class="paramname"><em>l</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Test de vacuité d'une liste d'arêtes. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td><a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>VRAI si la file est vide, FAUX sinon.</dd></dl>
+<p>La <a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> est vide si <em>l</em> pointe vers <em>NULL</em>. </p>
+
+<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00068">68</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">return</span> l == NULL;
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="ad86e48457c41a61508583fef666992c4"></a><!-- doxytag: member="listearete.h::larExisteArete" ref="ad86e48457c41a61508583fef666992c4" args="(const ListeArete *l, const Sommet *a, const Sommet *b)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a> <a class="el" href="structListeArete.html#ad86e48457c41a61508583fef666992c4">larExisteArete</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structListeArete.html">ListeArete</a> *&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Test d'existence d'une arête. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td><a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a>. </td></tr>
+    <tr><td class="paramname">a</td><td>Extrémité de l'arête. </td></tr>
+    <tr><td class="paramname">b</td><td>Autre extrémité de l'arête. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>VRAI si l'arête existe, FAUX sinon. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00073">73</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (<a class="code" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes.">larEstVide</a>(l)) <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="structArete.html#a0356483cd626e097c86d8fa2ba262383" title="Test d&#39;égalité de deux Aretes, sans se préoccuper du poids.">aAreteEgaleS</a>(<a class="code" href="structListeArete.html#a6797b32b731e6988f276ce6a0493cbf6" title="Arête en tête de liste.">larAreteTete</a>(l), a, b)) <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
+    <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code" href="structListeArete.html#ad86e48457c41a61508583fef666992c4" title="Test d&#39;existence d&#39;une arête.">larExisteArete</a>(<a class="code" href="structListeArete.html#a36f1394356a54a87aea7ed4b7becc73f" title="Arête suivante dans la liste.">larSuivante</a>(l), a, b);
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="listearete_8h_ad86e48457c41a61508583fef666992c4_cgraph.png" border="0" usemap="#listearete_8h_ad86e48457c41a61508583fef666992c4_cgraph" alt=""/></div>
+<map name="listearete_8h_ad86e48457c41a61508583fef666992c4_cgraph" id="listearete_8h_ad86e48457c41a61508583fef666992c4_cgraph">
+<area shape="rect" id="node3" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes." alt="" coords="168,5,317,35"/><area shape="rect" id="node5" href="structArete.html#a0356483cd626e097c86d8fa2ba262383" title="Test d&#39;égalité de deux Aretes, sans se préoccuper du poids." alt="" coords="172,59,313,88"/><area shape="rect" id="node7" href="structListeArete.html#a6797b32b731e6988f276ce6a0493cbf6" title="Arête en tête de liste." alt="" coords="163,112,323,141"/><area shape="rect" id="node9" href="structListeArete.html#ad86e48457c41a61508583fef666992c4" title="Test d&#39;existence d&#39;une arête." alt="" coords="157,165,328,195"/><area shape="rect" id="node11" href="structListeArete.html#a36f1394356a54a87aea7ed4b7becc73f" title="Arête suivante dans la liste." alt="" coords="165,219,320,248"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ada58497f99418f22b04c25525485b4be"></a><!-- doxytag: member="listearete.h::larLiberer" ref="ada58497f99418f22b04c25525485b4be" args="(ListeArete *l)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structListeArete.html">ListeArete</a> * <a class="el" href="structListeArete.html#ada58497f99418f22b04c25525485b4be">larLiberer</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structListeArete.html">ListeArete</a> *&#160;</td>
+          <td class="paramname"><em>l</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Libérer une liste d'arêtes. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td><a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>NULL</dd></dl>
+<p>Libère la mémoire occuppée par une <a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> : libère aussi les <a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> contenues dans la <a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a>. </p>
+
+<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00112">112</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">while</span> (!<a class="code" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes.">larEstVide</a>(l))
+        l = <a class="code" href="structListeArete.html#afd562a9130916110f6c783dbe200fc87" title="Supprimer l&#39;arête en tête de liste.">larSupprimerTete</a>(l);
+
+    <span class="keywordflow">return</span> l;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="listearete_8h_ada58497f99418f22b04c25525485b4be_cgraph.png" border="0" usemap="#listearete_8h_ada58497f99418f22b04c25525485b4be_cgraph" alt=""/></div>
+<map name="listearete_8h_ada58497f99418f22b04c25525485b4be_cgraph" id="listearete_8h_ada58497f99418f22b04c25525485b4be_cgraph">
+<area shape="rect" id="node3" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes." alt="" coords="148,5,297,35"/><area shape="rect" id="node5" href="structListeArete.html#afd562a9130916110f6c783dbe200fc87" title="Supprimer l&#39;arête en tête de liste." alt="" coords="129,59,316,88"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa067d1952e548be91bb2d26bd204db05"></a><!-- doxytag: member="listearete.h::larNombreAretes" ref="aa067d1952e548be91bb2d26bd204db05" args="(const ListeArete *l)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683">Nat</a> <a class="el" href="structListeArete.html#aa067d1952e548be91bb2d26bd204db05">larNombreAretes</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structListeArete.html">ListeArete</a> *&#160;</td>
+          <td class="paramname"><em>l</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Nombre d'arêtes dans la liste. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td><a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Nombre d'arêtes. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00086">86</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">return</span> larNombreAretesAux(l, 0);
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a4b3acdc91e28dbbd885968b16a05e57e"></a><!-- doxytag: member="listearete.h::larNouv" ref="a4b3acdc91e28dbbd885968b16a05e57e" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structListeArete.html">ListeArete</a> * <a class="el" href="structListeArete.html#a4b3acdc91e28dbbd885968b16a05e57e">larNouv</a> </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Nouvelle liste d'arêtes. </p>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>NULL </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00008">8</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">return</span> NULL;
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="acc89ff07336146ba511fac9bb635268a"></a><!-- doxytag: member="listearete.h::larPArete" ref="acc89ff07336146ba511fac9bb635268a" args="(const ListeArete *l, const Sommet *a, const Sommet *b)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structListeArete.html">ListeArete</a> * <a class="el" href="structListeArete.html#acc89ff07336146ba511fac9bb635268a">larPArete</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structListeArete.html">ListeArete</a> *&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Pointeur vers la sous-liste commençant par l'arête a,b. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td><a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a>. </td></tr>
+    <tr><td class="paramname">a</td><td>Extrémité de l'arête. </td></tr>
+    <tr><td class="paramname">b</td><td>Autre extrémité de l'arête. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>(pointeur vers) Sous-liste commençant par (a, b)</dd></dl>
+<p>Retourne un pointeur vers la sous-liste de <em>l</em> qui commence par l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> entre <em>a</em> et <em>b</em>. Retourne <em>NULL</em> si l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> n'est pas présente dans <em>l</em>. </p>
+
+<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00104">104</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (<a class="code" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes.">larEstVide</a>(l)) <span class="keywordflow">return</span> NULL;
+    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="structArete.html#a0356483cd626e097c86d8fa2ba262383" title="Test d&#39;égalité de deux Aretes, sans se préoccuper du poids.">aAreteEgaleS</a>(<a class="code" href="structListeArete.html#a6797b32b731e6988f276ce6a0493cbf6" title="Arête en tête de liste.">larAreteTete</a>(l), a, b)) <span class="keywordflow">return</span> (<a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> *)l;
+    <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code" href="structListeArete.html#acc89ff07336146ba511fac9bb635268a" title="Pointeur vers la sous-liste commençant par l&#39;arête a,b.">larPArete</a>(<a class="code" href="structListeArete.html#a36f1394356a54a87aea7ed4b7becc73f" title="Arête suivante dans la liste.">larSuivante</a>(l), a, b);
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="listearete_8h_acc89ff07336146ba511fac9bb635268a_cgraph.png" border="0" usemap="#listearete_8h_acc89ff07336146ba511fac9bb635268a_cgraph" alt=""/></div>
+<map name="listearete_8h_acc89ff07336146ba511fac9bb635268a_cgraph" id="listearete_8h_acc89ff07336146ba511fac9bb635268a_cgraph">
+<area shape="rect" id="node3" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes." alt="" coords="136,5,285,35"/><area shape="rect" id="node5" href="structArete.html#a0356483cd626e097c86d8fa2ba262383" title="Test d&#39;égalité de deux Aretes, sans se préoccuper du poids." alt="" coords="140,59,281,88"/><area shape="rect" id="node7" href="structListeArete.html#a6797b32b731e6988f276ce6a0493cbf6" title="Arête en tête de liste." alt="" coords="131,112,291,141"/><area shape="rect" id="node9" href="structListeArete.html#acc89ff07336146ba511fac9bb635268a" title="Pointeur vers la sous&#45;liste commençant par l&#39;arête a,b." alt="" coords="140,165,281,195"/><area shape="rect" id="node11" href="structListeArete.html#a36f1394356a54a87aea7ed4b7becc73f" title="Arête suivante dans la liste." alt="" coords="133,219,288,248"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a36f1394356a54a87aea7ed4b7becc73f"></a><!-- doxytag: member="listearete.h::larSuivante" ref="a36f1394356a54a87aea7ed4b7becc73f" args="(const ListeArete *l)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structListeArete.html">ListeArete</a> * <a class="el" href="structListeArete.html#a36f1394356a54a87aea7ed4b7becc73f">larSuivante</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structListeArete.html">ListeArete</a> *&#160;</td>
+          <td class="paramname"><em>l</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Arête suivante dans la liste. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td><a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>(pointeur vers) Arête suivante.</dd></dl>
+<p>Retourne un pointeur vers la sous-liste de <em>l</em> privée de la tête de <em>l</em>. Peut retourner une liste vide si <em>l</em> ne contient qu'un seul élément. </p>
+
+<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00096">96</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (!<a class="code" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes.">larEstVide</a>(l))
+        <span class="keywordflow">return</span> l-&gt;<a class="code" href="structListeArete.html#a80298de757d53b2f7c605b6b38b4aa51">suivante</a>;
+    <span class="keywordflow">else</span>
+        <span class="keywordflow">return</span> NULL;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="listearete_8h_a36f1394356a54a87aea7ed4b7becc73f_cgraph.png" border="0" usemap="#listearete_8h_a36f1394356a54a87aea7ed4b7becc73f_cgraph" alt=""/></div>
+<map name="listearete_8h_a36f1394356a54a87aea7ed4b7becc73f_cgraph" id="listearete_8h_a36f1394356a54a87aea7ed4b7becc73f_cgraph">
+<area shape="rect" id="node3" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes." alt="" coords="141,5,291,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a89de2732f9e53aeba1fd29c645fdaa5d"></a><!-- doxytag: member="listearete.h::larSupprimerArete" ref="a89de2732f9e53aeba1fd29c645fdaa5d" args="(ListeArete *l, const Sommet *a, const Sommet *b)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structListeArete.html">ListeArete</a> * <a class="el" href="structListeArete.html#a89de2732f9e53aeba1fd29c645fdaa5d">larSupprimerArete</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structListeArete.html">ListeArete</a> *&#160;</td>
+          <td class="paramname"><em>l</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Supprimer une arête dans la liste. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td><a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a>. </td></tr>
+    <tr><td class="paramname">a</td><td>Extrémité de l'arête à supprimer. </td></tr>
+    <tr><td class="paramname">b</td><td>Autre extrémité de l'arête à supprimer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>(pointeur vers) <a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a>.</dd></dl>
+<p>Suppression de la liste de l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> entre <em>a</em> et <em>b</em>, si celle-ci y existe. Sinon, <em>l</em> reste intacte. </p>
+
+<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00050">50</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (!<a class="code" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes.">larEstVide</a>(l))
+    {
+        <span class="keywordflow">if</span> (<a class="code" href="structArete.html#a0356483cd626e097c86d8fa2ba262383" title="Test d&#39;égalité de deux Aretes, sans se préoccuper du poids.">aAreteEgaleS</a>(<a class="code" href="structListeArete.html#a6797b32b731e6988f276ce6a0493cbf6" title="Arête en tête de liste.">larAreteTete</a>(l), a, b))
+            l = <a class="code" href="structListeArete.html#afd562a9130916110f6c783dbe200fc87" title="Supprimer l&#39;arête en tête de liste.">larSupprimerTete</a>(l);
+        <span class="keywordflow">else</span>
+        {
+            <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * lp = larPrecedente(l, a, b);
+
+            <span class="keywordflow">if</span> (lp != NULL)
+                lp-&gt;<a class="code" href="structListeArete.html#a80298de757d53b2f7c605b6b38b4aa51">suivante</a> = <a class="code" href="structListeArete.html#afd562a9130916110f6c783dbe200fc87" title="Supprimer l&#39;arête en tête de liste.">larSupprimerTete</a>(<a class="code" href="structListeArete.html#a36f1394356a54a87aea7ed4b7becc73f" title="Arête suivante dans la liste.">larSuivante</a>(lp));
+        }
+    }
+
+    <span class="keywordflow">return</span> l;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="listearete_8h_a89de2732f9e53aeba1fd29c645fdaa5d_cgraph.png" border="0" usemap="#listearete_8h_a89de2732f9e53aeba1fd29c645fdaa5d_cgraph" alt=""/></div>
+<map name="listearete_8h_a89de2732f9e53aeba1fd29c645fdaa5d_cgraph" id="listearete_8h_a89de2732f9e53aeba1fd29c645fdaa5d_cgraph">
+<area shape="rect" id="node3" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes." alt="" coords="201,5,351,35"/><area shape="rect" id="node5" href="structArete.html#a0356483cd626e097c86d8fa2ba262383" title="Test d&#39;égalité de deux Aretes, sans se préoccuper du poids." alt="" coords="205,59,347,88"/><area shape="rect" id="node7" href="structListeArete.html#a6797b32b731e6988f276ce6a0493cbf6" title="Arête en tête de liste." alt="" coords="196,112,356,141"/><area shape="rect" id="node9" href="structListeArete.html#afd562a9130916110f6c783dbe200fc87" title="Supprimer l&#39;arête en tête de liste." alt="" coords="183,165,369,195"/><area shape="rect" id="node11" href="structListeArete.html#a36f1394356a54a87aea7ed4b7becc73f" title="Arête suivante dans la liste." alt="" coords="199,219,353,248"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="afd562a9130916110f6c783dbe200fc87"></a><!-- doxytag: member="listearete.h::larSupprimerTete" ref="afd562a9130916110f6c783dbe200fc87" args="(ListeArete *l)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structListeArete.html">ListeArete</a> * <a class="el" href="structListeArete.html#afd562a9130916110f6c783dbe200fc87">larSupprimerTete</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structListeArete.html">ListeArete</a> *&#160;</td>
+          <td class="paramname"><em>l</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Supprimer l'arête en tête de liste. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td><a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>(pointeur vers) <a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a>.</dd></dl>
+<p>Suppression de l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> en tête de liste, si celle-ci y existe. Sinon, <em>l</em> reste intacte. </p>
+
+<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00029">29</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (!<a class="code" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes.">larEstVide</a>(l))
+    {
+        <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * ls = <a class="code" href="structListeArete.html#a36f1394356a54a87aea7ed4b7becc73f" title="Arête suivante dans la liste.">larSuivante</a>(l);
+        l-&gt;<a class="code" href="structListeArete.html#af81f3d6033e744d199ff07a69c6e97ff">arete</a> = <a class="code" href="structArete.html#a44d1b48e6c172e01d893056315a7ed87" title="Libérer une Arete.">aLiberer</a>(<a class="code" href="structListeArete.html#a6797b32b731e6988f276ce6a0493cbf6" title="Arête en tête de liste.">larAreteTete</a>(l));
+        free(l);
+        l = ls;
+    }
+
+    <span class="keywordflow">return</span> l;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="listearete_8h_afd562a9130916110f6c783dbe200fc87_cgraph.png" border="0" usemap="#listearete_8h_afd562a9130916110f6c783dbe200fc87_cgraph" alt=""/></div>
+<map name="listearete_8h_afd562a9130916110f6c783dbe200fc87_cgraph" id="listearete_8h_afd562a9130916110f6c783dbe200fc87_cgraph">
+<area shape="rect" id="node3" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes." alt="" coords="181,5,331,35"/><area shape="rect" id="node5" href="structListeArete.html#a36f1394356a54a87aea7ed4b7becc73f" title="Arête suivante dans la liste." alt="" coords="179,59,333,88"/><area shape="rect" id="node7" href="structArete.html#a44d1b48e6c172e01d893056315a7ed87" title="Libérer une Arete." alt="" coords="203,112,309,141"/><area shape="rect" id="node9" href="structListeArete.html#a6797b32b731e6988f276ce6a0493cbf6" title="Arête en tête de liste." alt="" coords="176,165,336,195"/></map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+
+<hr class="footer"/><address class="footer"><small>
+Généré le Vendredi Avril 19 2013 18:08:38 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

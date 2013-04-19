@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Chasseur de Prim:  Fichier source de include/base.h</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Chasseur de Prim
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Généré par Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li><a href="dirs.html"><span>Répertoires</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="dir_d027f5d2eee5f38b54bb3db43d132c50.html">include</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">base.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="base_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00008"></a>00008 <span class="preprocessor">#ifndef __BASE_H</span>
+<a name="l00009"></a>00009 <span class="preprocessor"></span><span class="preprocessor">#define __BASE_H</span>
+<a name="l00010"></a>00010 <span class="preprocessor"></span>
+<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
+<a name="l00013"></a>00013 
+<a name="l00018"></a><a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309">00018</a> <span class="keyword">enum</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a>
+<a name="l00019"></a>00019 {
+<a name="l00020"></a><a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">00020</a>     <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>,   
+<a name="l00021"></a><a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">00021</a>     <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>    
+<a name="l00022"></a>00022 };
+<a name="l00023"></a>00023 
+<a name="l00027"></a><a class="code" href="base_8h.html#a1dd386e0aa6c8c13c1f9d1896d7fd75c">00027</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a>;
+<a name="l00028"></a>00028 
+<a name="l00032"></a><a class="code" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683">00032</a> <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683" title="Entiers naturels.">Nat</a>;
+<a name="l00033"></a>00033 
+<a name="l00037"></a><a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c">00037</a> <span class="keyword">typedef</span> <span class="keywordtype">int</span> <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a>;
+<a name="l00038"></a>00038 
+<a name="l00042"></a><a class="code" href="base_8h.html#a2e8f87cefc0f761e3eb7a268e64b8e2a">00042</a> <span class="keyword">typedef</span> <span class="keywordtype">float</span> <a class="code" href="base_8h.html#a2e8f87cefc0f761e3eb7a268e64b8e2a" title="Nombres réels.">Reel</a>;
+<a name="l00043"></a>00043 
+<a name="l00047"></a><a class="code" href="base_8h.html#ace7c149023aead181f2ed07a0fc2d8ab">00047</a> <span class="keyword">typedef</span> <span class="keywordtype">float</span> <a class="code" href="base_8h.html#ace7c149023aead181f2ed07a0fc2d8ab" title="Nombres rationnels.">Rat</a>;
+<a name="l00048"></a>00048 
+<a name="l00052"></a><a class="code" href="base_8h.html#a243ab5e172a862312b8aa5a737f989a1">00052</a> <span class="keyword">typedef</span> <span class="keywordtype">char</span> <a class="code" href="base_8h.html#a243ab5e172a862312b8aa5a737f989a1" title="Caractères.">Car</a>;
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054 <span class="comment">/* Simplement pour différencier un Caractère d&#39;une Chaîne.</span>
+<a name="l00055"></a>00055 <span class="comment"> * Pas de pointeur dans le typedef : pouvoir utiliser le mot-clé const correctement.</span>
+<a name="l00056"></a>00056 <span class="comment"> */</span>
+<a name="l00060"></a><a class="code" href="base_8h.html#a56ae010f6d70d2740d8a75c28cf8bce4">00060</a> <span class="keyword">typedef</span> <a class="code" href="base_8h.html#a243ab5e172a862312b8aa5a737f989a1" title="Caractères.">Car</a> <a class="code" href="base_8h.html#a56ae010f6d70d2740d8a75c28cf8bce4" title="Chaîne de caractères.">Chaine</a>;
+<a name="l00061"></a>00061 
+<a name="l00066"></a><a class="code" href="base_8h.html#a37c11e7c4dd32c6cedfd023e9457d192">00066</a> <span class="preprocessor">#define OP(T) \</span>
+<a name="l00067"></a>00067 <span class="preprocessor">static inline Bool T ## _eq(T a, T b) { return a == b ? VRAI : FAUX; } \</span>
+<a name="l00068"></a>00068 <span class="preprocessor">static inline Bool T ## _neq(T a, T b) { return !T ## _eq(a, b); } \</span>
+<a name="l00069"></a>00069 <span class="preprocessor">static inline Bool T ## _inf(T a, T b) { return a &lt; b ? VRAI : FAUX; } \</span>
+<a name="l00070"></a>00070 <span class="preprocessor">static inline Bool T ## _supT(T a, T b) { return !T ## _inf(a, b); } \</span>
+<a name="l00071"></a>00071 <span class="preprocessor">static inline Bool T ## _infeq(T a, T b) { return a &lt;= b ? VRAI : FAUX; } \</span>
+<a name="l00072"></a>00072 <span class="preprocessor">static inline Bool T ## _supeq(T a, T b) { return a &gt;= b ? VRAI : FAUX; } \</span>
+<a name="l00073"></a>00073 <span class="preprocessor">static inline T T ## _min(T a, T b) { return a &lt;= b ? a : b; } \</span>
+<a name="l00074"></a>00074 <span class="preprocessor">static inline T T ## _max(T a, T b) { return a &gt;= b ? a : b; }</span>
+<a name="l00075"></a>00075 <span class="preprocessor"></span>
+<a name="l00076"></a>00076 <a class="code" href="base_8h.html#a37c11e7c4dd32c6cedfd023e9457d192" title="Opérations de base pour un type donné.">OP</a>(<span class="keywordtype">int</span>)
+<a name="l00077"></a>00077 <a class="code" href="base_8h.html#a37c11e7c4dd32c6cedfd023e9457d192" title="Opérations de base pour un type donné.">OP</a>(<span class="keywordtype">float</span>)
+<a name="l00078"></a>00078 <a class="code" href="base_8h.html#a37c11e7c4dd32c6cedfd023e9457d192" title="Opérations de base pour un type donné.">OP</a>(<a class="code" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683" title="Entiers naturels.">Nat</a>)
+<a name="l00079"></a>00079 <a class="code" href="base_8h.html#a37c11e7c4dd32c6cedfd023e9457d192" title="Opérations de base pour un type donné.">OP</a>(<a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a>)
+<a name="l00080"></a>00080 <a class="code" href="base_8h.html#a37c11e7c4dd32c6cedfd023e9457d192" title="Opérations de base pour un type donné.">OP</a>(<a class="code" href="base_8h.html#a2e8f87cefc0f761e3eb7a268e64b8e2a" title="Nombres réels.">Reel</a>)
+<a name="l00081"></a>00081 <a class="code" href="base_8h.html#a37c11e7c4dd32c6cedfd023e9457d192" title="Opérations de base pour un type donné.">OP</a>(<a class="code" href="base_8h.html#ace7c149023aead181f2ed07a0fc2d8ab" title="Nombres rationnels.">Rat</a>)
+<a name="l00082"></a>00082 
+<a name="l00083"></a>00083 <span class="preprocessor">#undef OP</span>
+<a name="l00084"></a>00084 <span class="preprocessor"></span>
+<a name="l00089"></a><a class="code" href="base_8h.html#aed83343b5b2cdb908229b4fac27cd282">00089</a> <span class="preprocessor">#define MALLOC(P) malloc(sizeof *(P))</span>
+<a name="l00090"></a>00090 <span class="preprocessor"></span>
+<a name="l00096"></a><a class="code" href="base_8h.html#a66f86b7a62cf1c6c9afeaa47c610b750">00096</a> <span class="preprocessor">#define MALLOCN(P, N) malloc((N) * sizeof *(P))</span>
+<a name="l00097"></a>00097 <span class="preprocessor"></span>
+<a name="l00103"></a><a class="code" href="base_8h.html#af922fd327c2210d0370347b9fff379a6">00103</a> <span class="preprocessor">#define CALLOC(P, N) calloc((N), sizeof *(P))</span>
+<a name="l00104"></a>00104 <span class="preprocessor"></span>
+<a name="l00110"></a><a class="code" href="base_8h.html#a0ea8b2de16c878e04660c90bb72be010">00110</a> <span class="preprocessor">#define REALLOC(P, N) realloc((P), (N) * sizeof *(P))</span>
+<a name="l00111"></a>00111 <span class="preprocessor"></span>
+<a name="l00112"></a>00112 <span class="preprocessor">#endif </span><span class="comment">/* __BASE_H */</span>
+</pre></div></div><!-- contents -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+
+<hr class="footer"/><address class="footer"><small>
+Généré le Vendredi Avril 19 2013 18:08:37 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

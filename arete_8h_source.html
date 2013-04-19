@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Chasseur de Prim:  Fichier source de include/arete.h</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Chasseur de Prim
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Généré par Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li><a href="dirs.html"><span>Répertoires</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="dir_d027f5d2eee5f38b54bb3db43d132c50.html">include</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">arete.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="arete_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00006"></a>00006 <span class="preprocessor">#ifndef __ARETE_H</span>
+<a name="l00007"></a>00007 <span class="preprocessor"></span><span class="preprocessor">#define __ARETE_H</span>
+<a name="l00008"></a>00008 <span class="preprocessor"></span>
+<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
+<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
+<a name="l00011"></a>00011 
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="base_8h.html" title="Base (header)">base.h</a>&quot;</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="sommet_8h.html" title="Gestion de la sorte Sommet (header)">sommet.h</a>&quot;</span>
+<a name="l00014"></a>00014 
+<a name="l00019"></a><a class="code" href="structArete.html">00019</a> <span class="keyword">struct </span><a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>
+<a name="l00020"></a>00020 {
+<a name="l00021"></a><a class="code" href="structArete.html#ac272cb6d7f453d95786f67417694bc41">00021</a>     <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * <a class="code" href="structArete.html#ac272cb6d7f453d95786f67417694bc41">a</a>;   
+<a name="l00022"></a><a class="code" href="structArete.html#a93419920455216fd7d3b46551b94e866">00022</a>     <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * <a class="code" href="structArete.html#a93419920455216fd7d3b46551b94e866">b</a>;   
+<a name="l00023"></a><a class="code" href="structArete.html#aa1a45b15f3947c133a73fa4a25e37b0c">00023</a>     <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> <a class="code" href="structArete.html#aa1a45b15f3947c133a73fa4a25e37b0c">poids</a>;    
+<a name="l00024"></a>00024 };
+<a name="l00025"></a>00025 
+<a name="l00029"></a>00029 <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> <a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a>;
+<a name="l00030"></a>00030 
+<a name="l00039"></a>00039 <a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> * <a class="code" href="structArete.html#a4e1649a2efddbc5c338e10d7d0eb2c79" title="Nouvelle Arete.">aNouv</a>(<span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * <a class="code" href="structArete.html#ac272cb6d7f453d95786f67417694bc41">a</a>, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * <a class="code" href="structArete.html#a93419920455216fd7d3b46551b94e866">b</a>, <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> <a class="code" href="structArete.html#aa1a45b15f3947c133a73fa4a25e37b0c">poids</a>);
+<a name="l00040"></a>00040 
+<a name="l00047"></a>00047 <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * <a class="code" href="structArete.html#a510d26105fec391651847798d4fbaddd" title="Extrémité a de l&#39;Arete.">aA</a>(<span class="keyword">const</span> <a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> * <a class="code" href="structArete.html#ac272cb6d7f453d95786f67417694bc41">a</a>);
+<a name="l00048"></a>00048 
+<a name="l00055"></a>00055 <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * <a class="code" href="structArete.html#ac2c6bcac1f84ddcae438bcb3ab2bf522" title="Extrémité b de l&#39;Arete.">aB</a>(<span class="keyword">const</span> <a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> * <a class="code" href="structArete.html#ac272cb6d7f453d95786f67417694bc41">a</a>);
+<a name="l00056"></a>00056 
+<a name="l00063"></a>00063 <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> <a class="code" href="structArete.html#aee57c994798f0be50c557ccdae4c191b" title="Poids de l&#39;Arete.">aPoids</a>(<span class="keyword">const</span> <a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> * <a class="code" href="structArete.html#ac272cb6d7f453d95786f67417694bc41">a</a>);
+<a name="l00064"></a>00064 
+<a name="l00075"></a>00075 <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="structArete.html#a0356483cd626e097c86d8fa2ba262383" title="Test d&#39;égalité de deux Aretes, sans se préoccuper du poids.">aAreteEgaleS</a>(<span class="keyword">const</span> <a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> * <a class="code" href="structArete.html#ac272cb6d7f453d95786f67417694bc41">a</a>, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * t);
+<a name="l00076"></a>00076 
+<a name="l00086"></a>00086 <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="structArete.html#a760d5f0ae6b007045eafbd2ad7dc505e" title="Test d&#39;égalité de deux Aretes, sans se préoccuper du poids.">aAreteEgaleS2</a>(<span class="keyword">const</span> <a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> * <a class="code" href="structArete.html#ac272cb6d7f453d95786f67417694bc41">a</a>, <span class="keyword">const</span> <a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> * <a class="code" href="structArete.html#a93419920455216fd7d3b46551b94e866">b</a>);
+<a name="l00087"></a>00087 
+<a name="l00099"></a>00099 <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="structArete.html#aca43ce84ea6e710ec5e5ea9bc1b5c715" title="Test d&#39;égalité de deux Aretes, sensible au poids.">aAreteEgaleP</a>(<span class="keyword">const</span> <a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> * <a class="code" href="structArete.html#ac272cb6d7f453d95786f67417694bc41">a</a>, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * t, <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> <a class="code" href="structArete.html#aa1a45b15f3947c133a73fa4a25e37b0c">poids</a>);
+<a name="l00100"></a>00100 
+<a name="l00110"></a>00110 <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="structArete.html#a1416f0eb3aae838b414046a80ce93b93" title="Test d&#39;égalité de deux Aretes, sans se préoccuper du poids.">aAreteEgaleP2</a>(<span class="keyword">const</span> <a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> * <a class="code" href="structArete.html#ac272cb6d7f453d95786f67417694bc41">a</a>, <span class="keyword">const</span> <a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> * <a class="code" href="structArete.html#a93419920455216fd7d3b46551b94e866">b</a>);
+<a name="l00111"></a>00111 
+<a name="l00120"></a>00120 <a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> * <a class="code" href="structArete.html#a44d1b48e6c172e01d893056315a7ed87" title="Libérer une Arete.">aLiberer</a>(<a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> * <a class="code" href="structArete.html#ac272cb6d7f453d95786f67417694bc41">a</a>);
+<a name="l00121"></a>00121 
+<a name="l00122"></a>00122 <span class="preprocessor">#endif </span><span class="comment">/* __ARETE_H */</span>
+</pre></div></div><!-- contents -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+
+<hr class="footer"/><address class="footer"><small>
+Généré le Vendredi Avril 19 2013 18:08:37 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

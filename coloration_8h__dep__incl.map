@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$parcours_8h.html" title="Parcours d&#39;un graphe (header)" alt="" coords="171,83,299,112"/>
+<area shape="rect" id="node11" href="$prim_8h.html" title="Algorithme de Prim (header)" alt="" coords="323,83,424,112"/>
+<area shape="rect" id="node15" href="$coloration_8c.html" title="Coloration d&#39;un graphe (code)" alt="" coords="448,83,557,112"/>
+<area shape="rect" id="node5" href="$grapheconnexe_8h.html" title="GrapheConnexes connexes (header)" alt="" coords="5,160,171,189"/>
+<area shape="rect" id="node9" href="$parcours_8c.html" title="Parcours d&#39;un graphe (code)" alt="" coords="195,160,299,189"/>
+<area shape="rect" id="node7" href="$grapheconnexe_8c.html" title="GrapheConnexes (code)" alt="" coords="17,237,159,267"/>
+<area shape="rect" id="node13" href="$prim_8c.html" title="Algorithme de Prim (code)" alt="" coords="333,160,413,189"/>
+</map>

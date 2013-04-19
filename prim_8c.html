@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Chasseur de Prim: Référence du fichier src/prim.c</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Chasseur de Prim
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Généré par Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li><a href="dirs.html"><span>Répertoires</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="dir_307baa3f0b4442ad1de385c197155be8.html">src</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier prim.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Algorithme de Prim (code)  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="prim_8h_source.html">prim.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de prim.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="prim_8c__incl.png" border="0" usemap="#src_2prim_8c" alt=""/></div>
+<map name="src_2prim_8c" id="src_2prim_8c">
+<area shape="rect" id="node3" href="prim_8h.html" title="Algorithme de Prim (header)" alt="" coords="564,83,623,112"/><area shape="rect" id="node9" href="base_8h.html" title="Base (header)" alt="" coords="867,547,928,576"/><area shape="rect" id="node13" href="sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="389,469,469,499"/><area shape="rect" id="node20" href="graphe_8h.html" title="Graphes (header)" alt="" coords="325,237,397,267"/><area shape="rect" id="node40" href="arete_8h.html" title="Arêtes (header)" alt="" coords="816,392,877,421"/><area shape="rect" id="node46" href="coloration_8h.html" title="Coloration d&#39;un graphe (header)" alt="" coords="468,160,556,189"/><area shape="rect" id="node53" href="filearetetriee_8h.html" title="File triée d&#39;arêtes (header)" alt="" coords="651,237,755,267"/><area shape="rect" id="node27" href="adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)" alt="" coords="144,392,235,421"/><area shape="rect" id="node34" href="listearete_8h.html" title="Liste d&#39;arêtes (header)" alt="" coords="660,315,745,344"/></map>
+</div>
+</div>
+<p><a href="prim_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="filearetetriee_8h.html#a119e1365e04fa50917f6de8f1a53de0c">FileAreteTriee</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prim_8c.html#add200cb199275679a09eb24bfdf3075b">ftAjouterAretesIncidentes</a> (<a class="el" href="filearetetriee_8h.html#a119e1365e04fa50917f6de8f1a53de0c">FileAreteTriee</a> *ft, const <a class="el" href="structGraphe.html">Graphe</a> *g, const <a class="el" href="structCouleursGraphe.html">CouleursGraphe</a> *cg, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *s)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajouter les arêtes incidentes à un sommet.  <a href="#add200cb199275679a09eb24bfdf3075b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="prim_8c.html#a146f5763132b19eb63ad6a7ca22d2cef">gArbreCouvrantMinimum</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *s)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcul de l'arbre couvrant minimum d'un graphe connexe en partant d'un sommet.  <a href="#a146f5763132b19eb63ad6a7ca22d2cef"></a><br/></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>Description détaillée</h2>
+<div class="textblock"><p>Algorithme de Prim (code) </p>
+<dl class="author"><dt><b>Auteur:</b></dt><dd>Harenome RAZANAJATO </dd></dl>
+
+<p>Définition dans le fichier <a class="el" href="prim_8c_source.html">prim.c</a>.</p>
+</div><hr/><h2>Documentation des fonctions</h2>
+<a class="anchor" id="add200cb199275679a09eb24bfdf3075b"></a><!-- doxytag: member="prim.c::ftAjouterAretesIncidentes" ref="add200cb199275679a09eb24bfdf3075b" args="(FileAreteTriee *ft, const Graphe *g, const CouleursGraphe *cg, const Sommet *s)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="filearetetriee_8h.html#a119e1365e04fa50917f6de8f1a53de0c">FileAreteTriee</a>* <a class="el" href="structListeArete.html#a4d77cbda301eba7752c66a642e1999cb">ftAjouterAretesIncidentes</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="filearetetriee_8h.html#a119e1365e04fa50917f6de8f1a53de0c">FileAreteTriee</a> *&#160;</td>
+          <td class="paramname"><em>ft</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structCouleursGraphe.html">CouleursGraphe</a> *&#160;</td>
+          <td class="paramname"><em>cg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ajouter les arêtes incidentes à un sommet. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ft</td><td>FileAreteTriee. </td></tr>
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+    <tr><td class="paramname">cg</td><td>Marquage des sommets. </td></tr>
+    <tr><td class="paramname">s</td><td>Sommet. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>FileAreteTriee.</dd></dl>
+<p>Ajouter les <a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> incidentes à un <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <em>s</em> dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> <em>g</em> à la <a class="el" href="filearetetriee_8h.html#a119e1365e04fa50917f6de8f1a53de0c" title="File triée par ordre croissant d&#39;arêtes.">FileAreteTriee</a> <em>ft</em>, en ne prenant que les <a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> d'extrémités <em>s</em> et <em>t</em> pour tout sommet <em>t</em> n'étant pas marqué comme visité dans la <a class="el" href="structCouleursGraphe.html" title="Liste des couleurs des sommets d&#39;un graphe.">CouleursGraphe</a> <em>cg</em>. </p>
+
+<p>Définition à la ligne <a class="el" href="prim_8c_source.html#l00009">9</a> du fichier <a class="el" href="prim_8c_source.html">prim.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l = <a class="code" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet.">gAdjacenceSommet</a>(g, s); !<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(l); l = <a class="code" href="structListeAdjacence.html#a3ff1a663a7b0eb00e5049d2891e2b18a" title="Arête suivante.">lsuiv</a>(l))
+    {
+        <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * t = <a class="code" href="structListeAdjacence.html#a36c937228d06a462ff42df578b3dbe0d" title="Extrémité de l&#39;arête en tête de liste.">lsommet_tete</a>(l);
+        <span class="keywordflow">if</span> (<a class="code" href="structCouleursGraphe.html#a8f24db15b7e11b1871679300af373a4d" title="Couleur du Sommet s.">cgCouleurSommet</a>(cg, t) == <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a35653913ced93d8199f0378ec538a0c7">BLANC</a>)
+            ft = <a class="code" href="structListeArete.html#a9e15a5b2d47991095d1a242d41f08b82" title="Ajouter une arête dans la file triée.">ftAjouterArete</a>(ft, s, t, <a class="code" href="structListeAdjacence.html#ae34eced2405c4cf25465290a128d768f" title="Poids de l&#39;arête en tête de liste.">lpoids_tete</a>(l));
+    }
+
+    <span class="keywordflow">return</span> ft;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="prim_8c_add200cb199275679a09eb24bfdf3075b_cgraph.png" border="0" usemap="#prim_8c_add200cb199275679a09eb24bfdf3075b_cgraph" alt=""/></div>
+<map name="prim_8c_add200cb199275679a09eb24bfdf3075b_cgraph" id="prim_8c_add200cb199275679a09eb24bfdf3075b_cgraph">
+<area shape="rect" id="node3" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet." alt="" coords="245,5,435,35"/><area shape="rect" id="node5" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide." alt="" coords="255,59,425,88"/><area shape="rect" id="node7" href="structListeAdjacence.html#a3ff1a663a7b0eb00e5049d2891e2b18a" title="Arête suivante." alt="" coords="267,112,413,141"/><area shape="rect" id="node9" href="structListeAdjacence.html#a36c937228d06a462ff42df578b3dbe0d" title="Extrémité de l&#39;arête en tête de liste." alt="" coords="241,165,439,195"/><area shape="rect" id="node11" href="structCouleursGraphe.html#a8f24db15b7e11b1871679300af373a4d" title="Couleur du Sommet s." alt="" coords="224,219,456,248"/><area shape="rect" id="node13" href="structListeArete.html#a9e15a5b2d47991095d1a242d41f08b82" title="Ajouter une arête dans la file triée." alt="" coords="256,272,424,301"/><area shape="rect" id="node15" href="structListeAdjacence.html#ae34eced2405c4cf25465290a128d768f" title="Poids de l&#39;arête en tête de liste." alt="" coords="249,325,431,355"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a146f5763132b19eb63ad6a7ca22d2cef"></a><!-- doxytag: member="prim.c::gArbreCouvrantMinimum" ref="a146f5763132b19eb63ad6a7ca22d2cef" args="(const Graphe *g, const Sommet *s)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structGraphe.html">Graphe</a>* <a class="el" href="structGraphe.html#a363d4c3de24663a378322111f71e51cf">gArbreCouvrantMinimum</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Calcul de l'arbre couvrant minimum d'un graphe connexe en partant d'un sommet. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+    <tr><td class="paramname">s</td><td>Sommet. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Arbre Couvrant Minimum </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="prim_8c_source.html#l00021">21</a> du fichier <a class="el" href="prim_8c_source.html">prim.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <a class="code" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683" title="Entiers naturels.">Nat</a> aretes = 0;
+    <a class="code" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683" title="Entiers naturels.">Nat</a> n = <a class="code" href="structGraphe.html#ae08239d1436fe3268b62c42ab13470d4" title="Nombre de sommets dans un Graphe.">gNombreSommets</a>(g);
+    <a class="code" href="structCouleursGraphe.html" title="Liste des couleurs des sommets d&#39;un graphe.">CouleursGraphe</a> * cg = <a class="code" href="structGraphe.html#a27054ead26f2d98f65c717eed6ee8740" title="Modifier un sommet de la liste.">cgModifierSommet</a>(<a class="code" href="structCouleursGraphe.html#a5cd274818f796ec1c2984bcfbfa81b07" title="Initialiser les couleurs des sommets d&#39;un graphe à BLANC.">cgInit</a>(g), s, <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a59e3323a198f0162330111165caaf367">NOIR</a>);
+    <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">FileAreteTriee</a> * ft = <a class="code" href="structListeArete.html#a4d77cbda301eba7752c66a642e1999cb" title="Ajouter les arêtes incidentes à un sommet.">ftAjouterAretesIncidentes</a>(<a class="code" href="structListeArete.html#acb9fa39ef00e7f971149a2765c0223aa" title="Nouvelle file triée.">ftNouv</a>(), g, cg, s);
+
+    <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * arbre = <a class="code" href="structGraphe.html#a420bc7f2ad2301c4565dce8c29a14286" title="Ajout d&#39;un sommet dans un Graphe.">gAjouterSommet</a>(<a class="code" href="structGraphe.html#aaf6e3b452d5d36e54cdebf1f9bdbdb14" title="Nouveau Graphe.">gNouv</a>(), s);
+
+    <span class="keywordflow">while</span> (aretes &lt; n -1 &amp;&amp; !<a class="code" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes.">larEstVide</a>(ft))
+    {
+        <a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> * tete = <a class="code" href="structListeArete.html#a6797b32b731e6988f276ce6a0493cbf6" title="Arête en tête de liste.">larAreteTete</a>(ft);
+        <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * a = <a class="code" href="structArete.html#a510d26105fec391651847798d4fbaddd" title="Extrémité a de l&#39;Arete.">aA</a>(tete);
+        <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * b = <a class="code" href="structArete.html#ac2c6bcac1f84ddcae438bcb3ab2bf522" title="Extrémité b de l&#39;Arete.">aB</a>(tete);
+
+        <span class="keywordflow">if</span> (<a class="code" href="structCouleursGraphe.html#a8f24db15b7e11b1871679300af373a4d" title="Couleur du Sommet s.">cgCouleurSommet</a>(cg, a) == <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a35653913ced93d8199f0378ec538a0c7">BLANC</a> || <a class="code" href="structCouleursGraphe.html#a8f24db15b7e11b1871679300af373a4d" title="Couleur du Sommet s.">cgCouleurSommet</a>(cg, b) == <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a35653913ced93d8199f0378ec538a0c7">BLANC</a>)
+        {
+            aretes++;
+            arbre = <a class="code" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe.">gAjouterArete</a>(arbre, a, b, <a class="code" href="structArete.html#aee57c994798f0be50c557ccdae4c191b" title="Poids de l&#39;Arete.">aPoids</a>(tete));
+
+            <span class="keywordflow">if</span> (<a class="code" href="structCouleursGraphe.html#a8f24db15b7e11b1871679300af373a4d" title="Couleur du Sommet s.">cgCouleurSommet</a>(cg, a) == <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a35653913ced93d8199f0378ec538a0c7">BLANC</a>)
+            {
+                ft = <a class="code" href="structListeArete.html#a4d77cbda301eba7752c66a642e1999cb" title="Ajouter les arêtes incidentes à un sommet.">ftAjouterAretesIncidentes</a>(ft, g, cg, a);
+                cg = <a class="code" href="structGraphe.html#a27054ead26f2d98f65c717eed6ee8740" title="Modifier un sommet de la liste.">cgModifierSommet</a>(cg, a, <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a59e3323a198f0162330111165caaf367">NOIR</a>);
+            }
+            <span class="keywordflow">else</span>
+            {
+                ft = <a class="code" href="structListeArete.html#a4d77cbda301eba7752c66a642e1999cb" title="Ajouter les arêtes incidentes à un sommet.">ftAjouterAretesIncidentes</a>(ft, g, cg, b);
+                cg = <a class="code" href="structGraphe.html#a27054ead26f2d98f65c717eed6ee8740" title="Modifier un sommet de la liste.">cgModifierSommet</a>(cg, b, <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a59e3323a198f0162330111165caaf367">NOIR</a>);
+            }
+        }
+        ft = <a class="code" href="structListeArete.html#a89de2732f9e53aeba1fd29c645fdaa5d" title="Supprimer une arête dans la liste.">larSupprimerArete</a>(ft, a, b);
+    }
+    
+    cg = <a class="code" href="structCouleursGraphe.html#aa23bf05908ea1185cb2248b833c68d6e" title="Libérer une liste de couleurs.">cgLiberer</a>(cg);
+    ft = <a class="code" href="structListeArete.html#ada58497f99418f22b04c25525485b4be" title="Libérer une liste d&#39;arêtes.">larLiberer</a>(ft);
+
+    <span class="keywordflow">return</span> arbre;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="prim_8c_a146f5763132b19eb63ad6a7ca22d2cef_cgraph.png" border="0" usemap="#prim_8c_a146f5763132b19eb63ad6a7ca22d2cef_cgraph" alt=""/></div>
+<map name="prim_8c_a146f5763132b19eb63ad6a7ca22d2cef_cgraph" id="prim_8c_a146f5763132b19eb63ad6a7ca22d2cef_cgraph">
+<area shape="rect" id="node3" href="structGraphe.html#ae08239d1436fe3268b62c42ab13470d4" title="Nombre de sommets dans un Graphe." alt="" coords="249,5,431,35"/><area shape="rect" id="node5" href="structGraphe.html#a27054ead26f2d98f65c717eed6ee8740" title="Modifier un sommet de la liste." alt="" coords="249,59,431,88"/><area shape="rect" id="node7" href="structCouleursGraphe.html#a5cd274818f796ec1c2984bcfbfa81b07" title="Initialiser les couleurs des sommets d&#39;un graphe à BLANC." alt="" coords="263,112,417,141"/><area shape="rect" id="node9" href="structListeArete.html#a4d77cbda301eba7752c66a642e1999cb" title="Ajouter les arêtes incidentes à un sommet." alt="" coords="223,165,457,195"/><area shape="rect" id="node11" href="structListeArete.html#acb9fa39ef00e7f971149a2765c0223aa" title="Nouvelle file triée." alt="" coords="276,219,404,248"/><area shape="rect" id="node13" href="structGraphe.html#a420bc7f2ad2301c4565dce8c29a14286" title="Ajout d&#39;un sommet dans un Graphe." alt="" coords="256,272,424,301"/><area shape="rect" id="node15" href="structGraphe.html#aaf6e3b452d5d36e54cdebf1f9bdbdb14" title="Nouveau Graphe." alt="" coords="285,325,395,355"/><area shape="rect" id="node17" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes." alt="" coords="265,379,415,408"/><area shape="rect" id="node19" href="structListeArete.html#a6797b32b731e6988f276ce6a0493cbf6" title="Arête en tête de liste." alt="" coords="260,432,420,461"/><area shape="rect" id="node21" href="structArete.html#a510d26105fec391651847798d4fbaddd" title="Extrémité a de l&#39;Arete." alt="" coords="301,485,379,515"/><area shape="rect" id="node23" href="structArete.html#ac2c6bcac1f84ddcae438bcb3ab2bf522" title="Extrémité b de l&#39;Arete." alt="" coords="301,539,379,568"/><area shape="rect" id="node25" href="structCouleursGraphe.html#a8f24db15b7e11b1871679300af373a4d" title="Couleur du Sommet s." alt="" coords="224,592,456,621"/><area shape="rect" id="node27" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe." alt="" coords="265,645,415,675"/><area shape="rect" id="node29" href="structArete.html#aee57c994798f0be50c557ccdae4c191b" title="Poids de l&#39;Arete." alt="" coords="289,699,391,728"/><area shape="rect" id="node31" href="structListeArete.html#a89de2732f9e53aeba1fd29c645fdaa5d" title="Supprimer une arête dans la liste." alt="" coords="244,752,436,781"/><area shape="rect" id="node33" href="structCouleursGraphe.html#aa23bf05908ea1185cb2248b833c68d6e" title="Libérer une liste de couleurs." alt="" coords="252,805,428,835"/><area shape="rect" id="node35" href="structListeArete.html#ada58497f99418f22b04c25525485b4be" title="Libérer une liste d&#39;arêtes." alt="" coords="269,859,411,888"/></map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+
+<hr class="footer"/><address class="footer"><small>
+Généré le Vendredi Avril 19 2013 18:08:39 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

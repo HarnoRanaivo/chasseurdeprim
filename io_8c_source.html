@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Chasseur de Prim:  Fichier source de src/io.c</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Chasseur de Prim
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Généré par Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li><a href="dirs.html"><span>Répertoires</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="dir_307baa3f0b4442ad1de385c197155be8.html">src</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">io.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="io_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="io_8h.html" title="Entrées/Sorties (header)">io.h</a>&quot;</span>
+<a name="l00008"></a>00008 
+<a name="l00009"></a><a class="code" href="io_8c.html#aca158a023def8433061cca3075d09311">00009</a> <span class="keywordtype">void</span> <a class="code" href="structGraphe.html#aca158a023def8433061cca3075d09311" title="Permet de sauvegarder le graphe dans un fichier passé en argument.">sauvegarder_graphe</a> (<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g, <span class="keyword">const</span> <span class="keywordtype">char</span>* destination){
+<a name="l00010"></a>00010     FILE * pfile = NULL;
+<a name="l00011"></a>00011     pfile = fopen(destination, <span class="stringliteral">&quot;w&quot;</span>); <span class="comment">// crée le fichier destination s&#39;il n&#39;existe pas sinon le réécrit</span>
+<a name="l00012"></a>00012     assert (pfile != NULL);
+<a name="l00013"></a>00013 
+<a name="l00014"></a>00014     <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * l = <a class="code" href="structGraphe.html#a6fa9c62a87c903c64daa6282fca731e4" title="Liste des arêtes d&#39;un Graphe.">gAretes</a>(g); !<a class="code" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes.">larEstVide</a>(l); l = <a class="code" href="structListeArete.html#a36f1394356a54a87aea7ed4b7becc73f" title="Arête suivante dans la liste.">larSuivante</a>(l))
+<a name="l00015"></a>00015     {
+<a name="l00016"></a>00016         <span class="keyword">const</span> <a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> * <span class="keyword">const</span> a = <a class="code" href="structListeArete.html#a6797b32b731e6988f276ce6a0493cbf6" title="Arête en tête de liste.">larAreteTete</a>(l);
+<a name="l00017"></a>00017         fprintf(pfile, <span class="stringliteral">&quot;%s\t%d\t%s\n&quot;</span>, <a class="code" href="structArete.html#a510d26105fec391651847798d4fbaddd" title="Extrémité a de l&#39;Arete.">aA</a>(a), <a class="code" href="structArete.html#aee57c994798f0be50c557ccdae4c191b" title="Poids de l&#39;Arete.">aPoids</a>(a), <a class="code" href="structArete.html#ac2c6bcac1f84ddcae438bcb3ab2bf522" title="Extrémité b de l&#39;Arete.">aB</a>(a));
+<a name="l00018"></a>00018     }
+<a name="l00019"></a>00019 
+<a name="l00020"></a>00020     fclose (pfile); <span class="comment">// ferme le fichier</span>
+<a name="l00021"></a>00021     <span class="keywordflow">return</span>;
+<a name="l00022"></a>00022 }
+<a name="l00023"></a>00023 
+<a name="l00024"></a><a class="code" href="io_8c.html#a80d78fef8f986ce18ebdc87fb7c986e6">00024</a> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * <a class="code" href="structGraphe.html#a1a93b1ef000c27e4d43c871faff3c2a3" title="Permet de charger un graphe dans un fichier texte.">charger_graphe</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* source){
+<a name="l00025"></a>00025     FILE * pfile = NULL;
+<a name="l00026"></a>00026     pfile = fopen(source, <span class="stringliteral">&quot;r&quot;</span>); <span class="comment">// lit le fichier source</span>
+<a name="l00027"></a>00027     assert (pfile != NULL);
+<a name="l00028"></a>00028     <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g = <a class="code" href="structGraphe.html#aaf6e3b452d5d36e54cdebf1f9bdbdb14" title="Nouveau Graphe.">gNouv</a>();
+<a name="l00029"></a>00029     
+<a name="l00030"></a>00030     <span class="keywordtype">int</span> retourFs;
+<a name="l00031"></a>00031     <span class="keywordtype">char</span> buffer1[100]; <span class="comment">// sommet de départ de 100 caractères maximum</span>
+<a name="l00032"></a>00032     <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> poids;
+<a name="l00033"></a>00033     <span class="keywordtype">char</span> buffer2[100]; <span class="comment">// sommet d&#39;arrivée de 100 caractères maximum</span>
+<a name="l00034"></a>00034     
+<a name="l00035"></a>00035     <span class="keywordflow">while</span> ((retourFs = fscanf(pfile,<span class="stringliteral">&quot;%99s\t%d\t%99s&quot;</span>,buffer1,&amp;poids,buffer2)) != EOF){ <span class="comment">// vérifie si la ligne n&#39;est pas la fin du fichier</span>
+<a name="l00036"></a>00036         <span class="keywordflow">if</span> (retourFs == 3)
+<a name="l00037"></a>00037             g = <a class="code" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe.">gAjouterArete</a>(g,buffer1,buffer2,poids); <span class="comment">// ajoute l&#39;arc à partir des valeurs de la ligne</span>
+<a name="l00038"></a>00038         <span class="keywordflow">else</span> <span class="comment">// cas où la lecture a raté</span>
+<a name="l00039"></a>00039             fprintf(stderr,<span class="stringliteral">&quot;Le fichier a mal été écrit, veuillez s&#39;il vous plait respecter le code d&#39;écriture qui :\nSommet d&#39;entrée \\t Poids \\t Sommet d&#39;arrivée\\n\n&quot;</span>);
+<a name="l00040"></a>00040             <span class="comment">// à méditer si l&#39;on quitte le prog ou pas</span>
+<a name="l00041"></a>00041     }
+<a name="l00042"></a>00042     printf(<span class="stringliteral">&quot;Fin de lecture.\n\n&quot;</span>);
+<a name="l00043"></a>00043     
+<a name="l00044"></a>00044     fclose (pfile);
+<a name="l00045"></a>00045     <span class="keywordflow">return</span> g;
+<a name="l00046"></a>00046 }
+</pre></div></div><!-- contents -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+
+<hr class="footer"/><address class="footer"><small>
+Généré le Vendredi Avril 19 2013 18:08:38 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

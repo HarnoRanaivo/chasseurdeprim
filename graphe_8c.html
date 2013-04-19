@@ -1,0 +1,1389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Chasseur de Prim: Référence du fichier src/graphe.c</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Chasseur de Prim
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Généré par Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li><a href="dirs.html"><span>Répertoires</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="dir_307baa3f0b4442ad1de385c197155be8.html">src</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier graphe.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Graphes (code)  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="graphe_8h_source.html">graphe.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de graphe.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c__incl.png" border="0" usemap="#src_2graphe_8c" alt=""/></div>
+<map name="src_2graphe_8c" id="src_2graphe_8c">
+<area shape="rect" id="node3" href="graphe_8h.html" title="Graphes (header)" alt="" coords="437,83,509,112"/><area shape="rect" id="node11" href="base_8h.html" title="Base (header)" alt="" coords="203,392,264,421"/><area shape="rect" id="node15" href="sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="409,315,489,344"/><area shape="rect" id="node21" href="adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)" alt="" coords="564,237,655,267"/><area shape="rect" id="node28" href="listearete_8h.html" title="Liste d&#39;arêtes (header)" alt="" coords="296,160,381,189"/><area shape="rect" id="node34" href="arete_8h.html" title="Arêtes (header)" alt="" coords="273,237,335,267"/></map>
+</div>
+</div>
+<p><a href="graphe_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#ac47e6f03920d6978871efc1fbbf876d9">gNouv</a> (void)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Nouveau <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>.  <a href="#ac47e6f03920d6978871efc1fbbf876d9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#ae2c3b24feb6e3b77564fe41b3671ff55">gAjouterSommet</a> (<a class="el" href="structGraphe.html">Graphe</a> *g, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *s)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajout d'un sommet dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>.  <a href="#ae2c3b24feb6e3b77564fe41b3671ff55"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#aa730f51a75d135905ac1b4c1ec2f72c2">gAjouterArete</a> (<a class="el" href="structGraphe.html">Graphe</a> *g, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *a, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *b, <a class="el" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c">Ent</a> p)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ajout d'une arête dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>.  <a href="#aa730f51a75d135905ac1b4c1ec2f72c2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a19862f69a8a5b6bc2734eef29a385d7e">gSupprimerSommet</a> (<a class="el" href="structGraphe.html">Graphe</a> *g, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *s)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Suppression d'un sommet dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>.  <a href="#a19862f69a8a5b6bc2734eef29a385d7e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a006061dedebd8a37e7aba077756ccf80">gSupprimerArete</a> (<a class="el" href="structGraphe.html">Graphe</a> *g, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *a, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *b)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Suppression d'une arête dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>.  <a href="#a006061dedebd8a37e7aba077756ccf80"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a4ccbbc14f47df1d6f57d31f6884f003b">gModifierArete</a> (<a class="el" href="structGraphe.html">Graphe</a> *g, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *a, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *b, <a class="el" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c">Ent</a> p)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Modification d'une arête dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>.  <a href="#a4ccbbc14f47df1d6f57d31f6884f003b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a95dd658a8d935309266b77cf7ab2e6a8">gEstVide</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Test de vacuité d'un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>.  <a href="#a95dd658a8d935309266b77cf7ab2e6a8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a4a707cae33e8b5cc50df8d5ab816a9b0">gSuivant</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sommet suivant dans le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>.  <a href="#a4a707cae33e8b5cc50df8d5ab816a9b0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#aa670233643a667af85404c855ce88655">gSommetTete</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Premier <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> dans la liste de sommets.  <a href="#aa670233643a667af85404c855ce88655"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structListeAdjacence.html">ListeAdjacence</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a272876c82b37980554dd3b530d957833">gAdjacenceTete</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Liste d'adjacence du sommet en tête de liste.  <a href="#a272876c82b37980554dd3b530d957833"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#ae8c2549afb375bb18ecfbe2caecd4af3">gExisteSommet</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *s)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Test d'existence d'un <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>.  <a href="#ae8c2549afb375bb18ecfbe2caecd4af3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#aa81e772015dccea36be07c77cb0f16db">gAArete</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *s)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Test d'existence de voisins d'un <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>.  <a href="#aa81e772015dccea36be07c77cb0f16db"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#ae65367d5c27ee9f83eee9f7f0bfdd238">gExisteArete</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *a, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *b)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Test d'existence d'une arete dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>.  <a href="#ae65367d5c27ee9f83eee9f7f0bfdd238"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structListeAdjacence.html">ListeAdjacence</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a4443e5e29820edcb76943ac919403a8b">gAdjacenceSommet</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *s)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Liste d'adjacence d'un sommet.  <a href="#a4443e5e29820edcb76943ac919403a8b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683">Nat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#ae08239d1436fe3268b62c42ab13470d4">gNombreSommets</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre de sommets dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>.  <a href="#ae08239d1436fe3268b62c42ab13470d4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683">Nat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a6f09c58349b36721b241fc1c2bda4121">gNombreAretes</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre d'arêtes dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>.  <a href="#a6f09c58349b36721b241fc1c2bda4121"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683">Nat</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a137c4ea82b8d27f1953a8e4757561e09">gNombreVoisins</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *s)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre de voisins d'un sommet.  <a href="#a137c4ea82b8d27f1953a8e4757561e09"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c">Ent</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a50bed59aba5c8e5843e16932aabcbd2a">gPoidsArete</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *a, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *b)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Poids d'une arête.  <a href="#a50bed59aba5c8e5843e16932aabcbd2a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a954fb1b598ce373ec95a813f1b6e84e0">gPSommet</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *s)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtenir Un sommet d'un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>.  <a href="#a954fb1b598ce373ec95a813f1b6e84e0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a91e23236ef1cde4f7fcdd988f482a39e">gEgalite</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g, const <a class="el" href="structGraphe.html">Graphe</a> *h)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Égalité de deux Graphes.  <a href="#a91e23236ef1cde4f7fcdd988f482a39e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18">gCopier</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Copie d'un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>.  <a href="#a11aa64fc8d60cd70be5ca8fd2e116e18"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structListeArete.html">ListeArete</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#acfcf3da168eac84806f30277b17e8a29">gAretes</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Liste des arêtes d'un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>.  <a href="#acfcf3da168eac84806f30277b17e8a29"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="graphe_8c.html#a9834e48c452c65f170140ce2dae32fae">gLiberer</a> (<a class="el" href="structGraphe.html">Graphe</a> *g)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Libération d'un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>.  <a href="#a9834e48c452c65f170140ce2dae32fae"></a><br/></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>Description détaillée</h2>
+<div class="textblock"><p>Graphes (code) </p>
+<dl class="author"><dt><b>Auteur:</b></dt><dd>Harenome RAZANAJATO </dd></dl>
+
+<p>Définition dans le fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+</div><hr/><h2>Documentation des fonctions</h2>
+<a class="anchor" id="aa81e772015dccea36be07c77cb0f16db"></a><!-- doxytag: member="graphe.c::gAArete" ref="aa81e772015dccea36be07c77cb0f16db" args="(const Graphe *g, const Sommet *s)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a> <a class="el" href="structGraphe.html#aa81e772015dccea36be07c77cb0f16db">gAArete</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Test d'existence de voisins d'un <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+    <tr><td class="paramname">s</td><td><a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>(booléen) <a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> si le sommet existe et a des voisins dans le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>, <a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a> sinon. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00147">147</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">return</span> !<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(<a class="code" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet.">gAdjacenceSommet</a>(g, s));
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_aa81e772015dccea36be07c77cb0f16db_cgraph.png" border="0" usemap="#graphe_8c_aa81e772015dccea36be07c77cb0f16db_cgraph" alt=""/></div>
+<map name="graphe_8c_aa81e772015dccea36be07c77cb0f16db_cgraph" id="graphe_8c_aa81e772015dccea36be07c77cb0f16db_cgraph">
+<area shape="rect" id="node3" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide." alt="" coords="132,5,303,35"/><area shape="rect" id="node5" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet." alt="" coords="123,59,312,88"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4443e5e29820edcb76943ac919403a8b"></a><!-- doxytag: member="graphe.c::gAdjacenceSommet" ref="a4443e5e29820edcb76943ac919403a8b" args="(const Graphe *g, const Sommet *s)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structListeAdjacence.html">ListeAdjacence</a>* <a class="el" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80">gAdjacenceSommet</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Liste d'adjacence d'un sommet. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+    <tr><td class="paramname">s</td><td><a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Liste d'adjacence du sommet, s'il existe.</dd></dl>
+<p>Retourne la <a class="el" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> associée au <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <em>s</em>. Attention : si ce <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> n'a pas de voisins, la <a class="el" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> sera vide. </p>
+
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00157">157</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * <span class="keyword">const</span> g0 = <a class="code" href="structGraphe.html#a301f937afb679ca1a158308c085fee43" title="Obtenir Un sommet d&#39;un Graphe.">gPSommet</a>(g, s);
+
+    <span class="keywordflow">if</span> (g0 != NULL)
+        <span class="keywordflow">return</span> g0-&gt;<a class="code" href="structGraphe.html#a5492f11dad7b7e9b7b2dfbed15fff767">listeadjacence</a>;
+    <span class="keywordflow">else</span>
+        <span class="keywordflow">return</span> NULL;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_a4443e5e29820edcb76943ac919403a8b_cgraph.png" border="0" usemap="#graphe_8c_a4443e5e29820edcb76943ac919403a8b_cgraph" alt=""/></div>
+<map name="graphe_8c_a4443e5e29820edcb76943ac919403a8b_cgraph" id="graphe_8c_a4443e5e29820edcb76943ac919403a8b_cgraph">
+<area shape="rect" id="node3" href="structGraphe.html#a301f937afb679ca1a158308c085fee43" title="Obtenir Un sommet d&#39;un Graphe." alt="" coords="193,5,329,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a272876c82b37980554dd3b530d957833"></a><!-- doxytag: member="graphe.c::gAdjacenceTete" ref="a272876c82b37980554dd3b530d957833" args="(const Graphe *g)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structListeAdjacence.html">ListeAdjacence</a>* <a class="el" href="structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25">gAdjacenceTete</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Liste d'adjacence du sommet en tête de liste. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="pre"><dt><b>Précondition:</b></dt><dd>!gEstVide(g) </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Liste d'ajacence de la tête.</dd></dl>
+<p>Retourne la <a class="el" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> associée au <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> en tête de liste. Attention : si ce <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> n'a pas de voisins, la <a class="el" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> sera vide. </p>
+
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00135">135</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">return</span> g-&gt;<a class="code" href="structGraphe.html#a5492f11dad7b7e9b7b2dfbed15fff767">listeadjacence</a>;
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="aa730f51a75d135905ac1b4c1ec2f72c2"></a><!-- doxytag: member="graphe.c::gAjouterArete" ref="aa730f51a75d135905ac1b4c1ec2f72c2" args="(Graphe *g, const Sommet *a, const Sommet *b, Ent p)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structGraphe.html">Graphe</a>* <a class="el" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1">gAjouterArete</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c">Ent</a>&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ajout d'une arête dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> où ajouter l'arête. </td></tr>
+    <tr><td class="paramname">a</td><td>Éxtrémité de l'arête. </td></tr>
+    <tr><td class="paramname">b</td><td>Éxtrémité de l'arête. </td></tr>
+    <tr><td class="paramname">p</td><td>Poids de l'arête. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a></dd></dl>
+<p>Ajout d'une arête dans le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> <em>g</em>. Si l'un des <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> n'existe pas encore, il est ajouté avant d'ajouter l'arête. Si l'arête entre <em>a</em> et <em>b</em> existe déjà, ou bien en cas d'erreur lors de l'ajout, le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> reste intact. </p>
+
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00030">30</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (!<a class="code" href="structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe.">gExisteArete</a>(g, a, b))
+    {
+        <span class="keywordflow">if</span> (!<a class="code" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe.">gExisteSommet</a>(g, a))
+            g = <a class="code" href="structGraphe.html#a420bc7f2ad2301c4565dce8c29a14286" title="Ajout d&#39;un sommet dans un Graphe.">gAjouterSommet</a>(g, a);
+        <span class="keywordflow">if</span> (!<a class="code" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe.">gExisteSommet</a>(g, b))
+            g = <a class="code" href="structGraphe.html#a420bc7f2ad2301c4565dce8c29a14286" title="Ajout d&#39;un sommet dans un Graphe.">gAjouterSommet</a>(g, b);
+
+        <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe.">gExisteSommet</a>(g, a) &amp;&amp; <a class="code" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe.">gExisteSommet</a>(g, b))
+        {
+            <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * <span class="keyword">const</span> ga = <a class="code" href="structGraphe.html#a301f937afb679ca1a158308c085fee43" title="Obtenir Un sommet d&#39;un Graphe.">gPSommet</a>(g, a);
+            <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * <span class="keyword">const</span> gb = <a class="code" href="structGraphe.html#a301f937afb679ca1a158308c085fee43" title="Obtenir Un sommet d&#39;un Graphe.">gPSommet</a>(g, b);
+
+            ga-&gt;<a class="code" href="structGraphe.html#a5492f11dad7b7e9b7b2dfbed15fff767">listeadjacence</a> = <a class="code" href="structListeAdjacence.html#a12ebd05a5557ea011da705926c8d8138" title="Ajoute une arête à la liste avec son poids.">lajar</a>(<a class="code" href="structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste.">gAdjacenceTete</a>(ga), b, p);
+            gb-&gt;<a class="code" href="structGraphe.html#a5492f11dad7b7e9b7b2dfbed15fff767">listeadjacence</a> = <a class="code" href="structListeAdjacence.html#a12ebd05a5557ea011da705926c8d8138" title="Ajoute une arête à la liste avec son poids.">lajar</a>(<a class="code" href="structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste.">gAdjacenceTete</a>(gb), a, p);
+        }
+    }
+
+    <span class="keywordflow">return</span> g;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_aa730f51a75d135905ac1b4c1ec2f72c2_cgraph.png" border="0" usemap="#graphe_8c_aa730f51a75d135905ac1b4c1ec2f72c2_cgraph" alt=""/></div>
+<map name="graphe_8c_aa730f51a75d135905ac1b4c1ec2f72c2_cgraph" id="graphe_8c_aa730f51a75d135905ac1b4c1ec2f72c2_cgraph">
+<area shape="rect" id="node3" href="structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe." alt="" coords="188,5,335,35"/><area shape="rect" id="node5" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe." alt="" coords="179,59,344,88"/><area shape="rect" id="node7" href="structGraphe.html#a420bc7f2ad2301c4565dce8c29a14286" title="Ajout d&#39;un sommet dans un Graphe." alt="" coords="177,112,345,141"/><area shape="rect" id="node9" href="structGraphe.html#a301f937afb679ca1a158308c085fee43" title="Obtenir Un sommet d&#39;un Graphe." alt="" coords="193,165,329,195"/><area shape="rect" id="node11" href="structListeAdjacence.html#a12ebd05a5557ea011da705926c8d8138" title="Ajoute une arête à la liste avec son poids." alt="" coords="191,219,332,248"/><area shape="rect" id="node13" href="structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste." alt="" coords="155,272,368,301"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae2c3b24feb6e3b77564fe41b3671ff55"></a><!-- doxytag: member="graphe.c::gAjouterSommet" ref="ae2c3b24feb6e3b77564fe41b3671ff55" args="(Graphe *g, const Sommet *s)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structGraphe.html">Graphe</a>* <a class="el" href="structGraphe.html#a420bc7f2ad2301c4565dce8c29a14286">gAjouterSommet</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ajout d'un sommet dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> où ajouter le sommet. </td></tr>
+    <tr><td class="paramname">s</td><td><a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> à ajouter. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a></dd></dl>
+<p>Ajout du <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <em>s</em> dans le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> <em>g</em>. Si le <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> existe déjà, ou bien en cas d'erreur lors de l'ajout, le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> reste intact. </p>
+
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00013">13</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (!<a class="code" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe.">gExisteSommet</a>(g, s))
+    {
+        <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * <span class="keyword">const</span> g0 = <a class="code" href="base_8h.html#aed83343b5b2cdb908229b4fac27cd282" title="Allouer de la mémoire.">MALLOC</a>(g0);
+        <span class="keywordflow">if</span> (g0 != NULL)
+        {
+            g0-&gt;<a class="code" href="structGraphe.html#aec1abb3b903cd11c4ad5ec6af43a5300">sommet</a> = <a class="code" href="sommet_8h.html#a98c119f316a62e6ce2b2858f000b8e06" title="Retourne une copie de s, allouée dynamiquement.">copieSommet</a>(s);
+            g0-&gt;<a class="code" href="structGraphe.html#a5492f11dad7b7e9b7b2dfbed15fff767">listeadjacence</a> = <a class="code" href="structListeAdjacence.html#a7dc0752d2383f098164ce927ff814374" title="Crée une nouvelle ListeAdjacence vide.">listnouv</a>();
+            g0-&gt;<a class="code" href="structGraphe.html#aab27941b38d48cde4960f439405226f3">suivant</a> = g;
+            g = g0;
+        }
+    }
+
+    <span class="keywordflow">return</span> g;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_ae2c3b24feb6e3b77564fe41b3671ff55_cgraph.png" border="0" usemap="#graphe_8c_ae2c3b24feb6e3b77564fe41b3671ff55_cgraph" alt=""/></div>
+<map name="graphe_8c_ae2c3b24feb6e3b77564fe41b3671ff55_cgraph" id="graphe_8c_ae2c3b24feb6e3b77564fe41b3671ff55_cgraph">
+<area shape="rect" id="node3" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe." alt="" coords="173,5,339,35"/><area shape="rect" id="node5" href="sommet_8h.html#a98c119f316a62e6ce2b2858f000b8e06" title="Retourne une copie de s, allouée dynamiquement." alt="" coords="205,59,307,88"/><area shape="rect" id="node7" href="structListeAdjacence.html#a7dc0752d2383f098164ce927ff814374" title="Crée une nouvelle ListeAdjacence vide." alt="" coords="175,112,337,141"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="acfcf3da168eac84806f30277b17e8a29"></a><!-- doxytag: member="graphe.c::gAretes" ref="acfcf3da168eac84806f30277b17e8a29" args="(const Graphe *g)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structListeArete.html">ListeArete</a>* <a class="el" href="structGraphe.html#a6fa9c62a87c903c64daa6282fca731e4">gAretes</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Liste des arêtes d'un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Liste des arêtes.</dd></dl>
+<p>Retourne une <a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> des arêtes d'un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </p>
+
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00247">247</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * aretes = <a class="code" href="structListeArete.html#a4b3acdc91e28dbbd885968b16a05e57e" title="Nouvelle liste d&#39;arêtes.">larNouv</a>();
+
+    <span class="keywordflow">for</span> (g = g; !<a class="code" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe.">gEstVide</a>(g); g = <a class="code" href="structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe.">gSuivant</a>(g))
+    {
+        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l = <a class="code" href="structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste.">gAdjacenceTete</a>(g); !<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(l); l = <a class="code" href="structListeAdjacence.html#a3ff1a663a7b0eb00e5049d2891e2b18a" title="Arête suivante.">lsuiv</a>(l))
+            aretes = <a class="code" href="structListeArete.html#a2b83d484c2c6e028c18c1b2533c0dc51" title="Ajouter une arête dans la file liste.">larAjouterAreteTete</a>(aretes, <a class="code" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets.">gSommetTete</a>(g), <a class="code" href="structListeAdjacence.html#a36c937228d06a462ff42df578b3dbe0d" title="Extrémité de l&#39;arête en tête de liste.">lsommet_tete</a>(l), <a class="code" href="structListeAdjacence.html#ae34eced2405c4cf25465290a128d768f" title="Poids de l&#39;arête en tête de liste.">lpoids_tete</a>(l));
+    }
+
+    <span class="keywordflow">return</span> aretes;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_acfcf3da168eac84806f30277b17e8a29_cgraph.png" border="0" usemap="#graphe_8c_acfcf3da168eac84806f30277b17e8a29_cgraph" alt=""/></div>
+<map name="graphe_8c_acfcf3da168eac84806f30277b17e8a29_cgraph" id="graphe_8c_acfcf3da168eac84806f30277b17e8a29_cgraph">
+<area shape="rect" id="node3" href="structListeArete.html#a4b3acdc91e28dbbd885968b16a05e57e" title="Nouvelle liste d&#39;arêtes." alt="" coords="160,5,293,35"/><area shape="rect" id="node5" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe." alt="" coords="164,59,289,88"/><area shape="rect" id="node7" href="structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe." alt="" coords="165,112,288,141"/><area shape="rect" id="node9" href="structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste." alt="" coords="120,165,333,195"/><area shape="rect" id="node11" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide." alt="" coords="141,219,312,248"/><area shape="rect" id="node13" href="structListeAdjacence.html#a3ff1a663a7b0eb00e5049d2891e2b18a" title="Arête suivante." alt="" coords="153,272,300,301"/><area shape="rect" id="node15" href="structListeArete.html#a2b83d484c2c6e028c18c1b2533c0dc51" title="Ajouter une arête dans la file liste." alt="" coords="127,325,327,355"/><area shape="rect" id="node17" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets." alt="" coords="149,379,304,408"/><area shape="rect" id="node19" href="structListeAdjacence.html#a36c937228d06a462ff42df578b3dbe0d" title="Extrémité de l&#39;arête en tête de liste." alt="" coords="128,432,325,461"/><area shape="rect" id="node21" href="structListeAdjacence.html#ae34eced2405c4cf25465290a128d768f" title="Poids de l&#39;arête en tête de liste." alt="" coords="136,485,317,515"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a11aa64fc8d60cd70be5ca8fd2e116e18"></a><!-- doxytag: member="graphe.c::gCopier" ref="a11aa64fc8d60cd70be5ca8fd2e116e18" args="(const Graphe *g)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structGraphe.html">Graphe</a>* <a class="el" href="structGraphe.html#a023f0542e3b7c6b7716d3984b0361453">gCopier</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Copie d'un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Copie du <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>.</dd></dl>
+<p>Retourne un nouveau <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> égal au <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> <em>g</em>. </p>
+
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00229">229</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * copie = <a class="code" href="structGraphe.html#aaf6e3b452d5d36e54cdebf1f9bdbdb14" title="Nouveau Graphe.">gNouv</a>();
+
+    <span class="keywordflow">for</span> (g = g; !<a class="code" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe.">gEstVide</a>(g); g = <a class="code" href="structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe.">gSuivant</a>(g))
+    {
+        <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l;
+
+        <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s = <a class="code" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets.">gSommetTete</a>(g);
+        copie = <a class="code" href="structGraphe.html#a420bc7f2ad2301c4565dce8c29a14286" title="Ajout d&#39;un sommet dans un Graphe.">gAjouterSommet</a>(copie, s);
+
+        <span class="keywordflow">for</span> (l = <a class="code" href="structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste.">gAdjacenceTete</a>(g); !<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(l); l = <a class="code" href="structListeAdjacence.html#a3ff1a663a7b0eb00e5049d2891e2b18a" title="Arête suivante.">lsuiv</a>(l))
+            copie = <a class="code" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe.">gAjouterArete</a>(copie, s, <a class="code" href="structListeAdjacence.html#a36c937228d06a462ff42df578b3dbe0d" title="Extrémité de l&#39;arête en tête de liste.">lsommet_tete</a>(l), <a class="code" href="structListeAdjacence.html#ae34eced2405c4cf25465290a128d768f" title="Poids de l&#39;arête en tête de liste.">lpoids_tete</a>(l));
+    }
+
+    <span class="keywordflow">return</span> copie;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_a11aa64fc8d60cd70be5ca8fd2e116e18_cgraph.png" border="0" usemap="#graphe_8c_a11aa64fc8d60cd70be5ca8fd2e116e18_cgraph" alt=""/></div>
+<map name="graphe_8c_a11aa64fc8d60cd70be5ca8fd2e116e18_cgraph" id="graphe_8c_a11aa64fc8d60cd70be5ca8fd2e116e18_cgraph">
+<area shape="rect" id="node3" href="structGraphe.html#aaf6e3b452d5d36e54cdebf1f9bdbdb14" title="Nouveau Graphe." alt="" coords="172,5,281,35"/><area shape="rect" id="node5" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe." alt="" coords="164,59,289,88"/><area shape="rect" id="node7" href="structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe." alt="" coords="165,112,288,141"/><area shape="rect" id="node9" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets." alt="" coords="149,165,304,195"/><area shape="rect" id="node11" href="structGraphe.html#a420bc7f2ad2301c4565dce8c29a14286" title="Ajout d&#39;un sommet dans un Graphe." alt="" coords="143,219,311,248"/><area shape="rect" id="node13" href="structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste." alt="" coords="120,272,333,301"/><area shape="rect" id="node15" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide." alt="" coords="141,325,312,355"/><area shape="rect" id="node17" href="structListeAdjacence.html#a3ff1a663a7b0eb00e5049d2891e2b18a" title="Arête suivante." alt="" coords="153,379,300,408"/><area shape="rect" id="node19" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe." alt="" coords="152,432,301,461"/><area shape="rect" id="node21" href="structListeAdjacence.html#a36c937228d06a462ff42df578b3dbe0d" title="Extrémité de l&#39;arête en tête de liste." alt="" coords="128,485,325,515"/><area shape="rect" id="node23" href="structListeAdjacence.html#ae34eced2405c4cf25465290a128d768f" title="Poids de l&#39;arête en tête de liste." alt="" coords="136,539,317,568"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a91e23236ef1cde4f7fcdd988f482a39e"></a><!-- doxytag: member="graphe.c::gEgalite" ref="a91e23236ef1cde4f7fcdd988f482a39e" args="(const Graphe *g, const Graphe *h)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a> <a class="el" href="graphe_8c.html#a91e23236ef1cde4f7fcdd988f482a39e">gEgalite</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>h</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Égalité de deux Graphes. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+    <tr><td class="paramname">h</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> si les Graphes sont identiques, à l'ordre des sommets près, <a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a> sinon.</dd></dl>
+<p>Deux Graphes sont considérés égaux s'ils ont le même nombre de sommets, le même nombre d'arêtes, les mêmes <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> et les mêmes arêtes. L'ordre dans lequel sont ordonnés les <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> ou les arêtes n'a pas d'importance. </p>
+
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00221">221</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#ae08239d1436fe3268b62c42ab13470d4" title="Nombre de sommets dans un Graphe.">gNombreSommets</a>(g) != <a class="code" href="structGraphe.html#ae08239d1436fe3268b62c42ab13470d4" title="Nombre de sommets dans un Graphe.">gNombreSommets</a>(h) || <a class="code" href="structGraphe.html#a6f09c58349b36721b241fc1c2bda4121" title="Nombre d&#39;arêtes dans un Graphe.">gNombreAretes</a>(g) != <a class="code" href="structGraphe.html#a6f09c58349b36721b241fc1c2bda4121" title="Nombre d&#39;arêtes dans un Graphe.">gNombreAretes</a>(h))
+        <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+    <span class="keywordflow">else</span>
+        <span class="keywordflow">return</span> gEgaliteAux(g, h);
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_a91e23236ef1cde4f7fcdd988f482a39e_cgraph.png" border="0" usemap="#graphe_8c_a91e23236ef1cde4f7fcdd988f482a39e_cgraph" alt=""/></div>
+<map name="graphe_8c_a91e23236ef1cde4f7fcdd988f482a39e_cgraph" id="graphe_8c_a91e23236ef1cde4f7fcdd988f482a39e_cgraph">
+<area shape="rect" id="node3" href="structGraphe.html#ae08239d1436fe3268b62c42ab13470d4" title="Nombre de sommets dans un Graphe." alt="" coords="123,5,304,35"/><area shape="rect" id="node5" href="structGraphe.html#a6f09c58349b36721b241fc1c2bda4121" title="Nombre d&#39;arêtes dans un Graphe." alt="" coords="132,59,295,88"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a95dd658a8d935309266b77cf7ab2e6a8"></a><!-- doxytag: member="graphe.c::gEstVide" ref="a95dd658a8d935309266b77cf7ab2e6a8" args="(const Graphe *g)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a> <a class="el" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8">gEstVide</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Test de vacuité d'un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>(booléen) <a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> si le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> est vide, <a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a> sinon.</dd></dl>
+<p>Le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> est vide si <em>g</em> pointe vers <em>NULL</em>. </p>
+
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00117">117</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">return</span> g == NULL;
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="ae65367d5c27ee9f83eee9f7f0bfdd238"></a><!-- doxytag: member="graphe.c::gExisteArete" ref="ae65367d5c27ee9f83eee9f7f0bfdd238" args="(const Graphe *g, const Sommet *a, const Sommet *b)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a> <a class="el" href="structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238">gExisteArete</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Test d'existence d'une arete dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+    <tr><td class="paramname">a</td><td>Extrémité de l'arête. </td></tr>
+    <tr><td class="paramname">b</td><td>Autre extrémité de l'arête. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>(booléen) <a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> si l'arête est dans le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>, <a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a> sinon. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00152">152</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">return</span> <a class="code" href="structListeAdjacence.html#a1be47cfef3d6c1a3a8bdf0ca0a1d93d9" title="Vérifie l&#39;existence d&#39;une arête.">lexar</a>(<a class="code" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet.">gAdjacenceSommet</a>(g, a), b);
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_ae65367d5c27ee9f83eee9f7f0bfdd238_cgraph.png" border="0" usemap="#graphe_8c_ae65367d5c27ee9f83eee9f7f0bfdd238_cgraph" alt=""/></div>
+<map name="graphe_8c_ae65367d5c27ee9f83eee9f7f0bfdd238_cgraph" id="graphe_8c_ae65367d5c27ee9f83eee9f7f0bfdd238_cgraph">
+<area shape="rect" id="node3" href="structListeAdjacence.html#a1be47cfef3d6c1a3a8bdf0ca0a1d93d9" title="Vérifie l&#39;existence d&#39;une arête." alt="" coords="173,5,320,35"/><area shape="rect" id="node5" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet." alt="" coords="152,59,341,88"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae8c2549afb375bb18ecfbe2caecd4af3"></a><!-- doxytag: member="graphe.c::gExisteSommet" ref="ae8c2549afb375bb18ecfbe2caecd4af3" args="(const Graphe *g, const Sommet *s)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a> <a class="el" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3">gExisteSommet</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Test d'existence d'un <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+    <tr><td class="paramname">s</td><td><a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>(booléen) <a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> si le <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> est dans le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>, <a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a> sinon. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00140">140</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe.">gEstVide</a>(g)) <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(<a class="code" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets.">gSommetTete</a>(g), s)) <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
+    <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe.">gExisteSommet</a>(<a class="code" href="structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe.">gSuivant</a>(g), s);
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_ae8c2549afb375bb18ecfbe2caecd4af3_cgraph.png" border="0" usemap="#graphe_8c_ae8c2549afb375bb18ecfbe2caecd4af3_cgraph" alt=""/></div>
+<map name="graphe_8c_ae8c2549afb375bb18ecfbe2caecd4af3_cgraph" id="graphe_8c_ae8c2549afb375bb18ecfbe2caecd4af3_cgraph">
+<area shape="rect" id="node3" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe." alt="" coords="188,5,313,35"/><area shape="rect" id="node5" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet." alt="" coords="215,59,287,88"/><area shape="rect" id="node7" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets." alt="" coords="173,112,328,141"/><area shape="rect" id="node9" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe." alt="" coords="168,165,333,195"/><area shape="rect" id="node11" href="structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe." alt="" coords="189,219,312,248"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a9834e48c452c65f170140ce2dae32fae"></a><!-- doxytag: member="graphe.c::gLiberer" ref="a9834e48c452c65f170140ce2dae32fae" args="(Graphe *g)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structGraphe.html">Graphe</a>* <a class="el" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527">gLiberer</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Libération d'un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>NULL</dd></dl>
+<p>Libère la mémoire occupée par un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> : libère tous les <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> ansi que leurs <a class="el" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a>. </p>
+
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00260">260</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (g == NULL)
+        <span class="keywordflow">return</span> NULL;
+    <span class="keywordflow">else</span>
+    {
+        <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g0 = <a class="code" href="structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe.">gSuivant</a>(g);
+        g-&gt;<a class="code" href="structGraphe.html#aec1abb3b903cd11c4ad5ec6af43a5300">sommet</a> = <a class="code" href="sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement.">libererSommet</a>(<a class="code" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets.">gSommetTete</a>(g));
+        g-&gt;<a class="code" href="structGraphe.html#a5492f11dad7b7e9b7b2dfbed15fff767">listeadjacence</a> = <a class="code" href="structListeAdjacence.html#a12dbe07676e59a2aafe10eb964d07798" title="Libérer une liste d&#39;arêtes.">lliberer</a>(<a class="code" href="structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste.">gAdjacenceTete</a>(g));
+        free(g);
+
+        <span class="keywordflow">return</span> <a class="code" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe.">gLiberer</a>(g0);
+    }
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_a9834e48c452c65f170140ce2dae32fae_cgraph.png" border="0" usemap="#graphe_8c_a9834e48c452c65f170140ce2dae32fae_cgraph" alt=""/></div>
+<map name="graphe_8c_a9834e48c452c65f170140ce2dae32fae_cgraph" id="graphe_8c_a9834e48c452c65f170140ce2dae32fae_cgraph">
+<area shape="rect" id="node3" href="structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe." alt="" coords="168,5,291,35"/><area shape="rect" id="node5" href="sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement." alt="" coords="176,59,283,88"/><area shape="rect" id="node7" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets." alt="" coords="152,112,307,141"/><area shape="rect" id="node9" href="structListeAdjacence.html#a12dbe07676e59a2aafe10eb964d07798" title="Libérer une liste d&#39;arêtes." alt="" coords="151,165,308,195"/><area shape="rect" id="node11" href="structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste." alt="" coords="123,219,336,248"/><area shape="rect" id="node13" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe." alt="" coords="171,272,288,301"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4ccbbc14f47df1d6f57d31f6884f003b"></a><!-- doxytag: member="graphe.c::gModifierArete" ref="a4ccbbc14f47df1d6f57d31f6884f003b" args="(Graphe *g, const Sommet *a, const Sommet *b, Ent p)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structGraphe.html">Graphe</a>* <a class="el" href="structGraphe.html#a64fd41af976a8447604e9e95d93b71cf">gModifierArete</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>b</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c">Ent</a>&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Modification d'une arête dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> où modifier l'arête. </td></tr>
+    <tr><td class="paramname">a</td><td>Extrémité de l'arête. </td></tr>
+    <tr><td class="paramname">b</td><td>Autre extrémité de l'arête. </td></tr>
+    <tr><td class="paramname">p</td><td>Nouveau poids de l'arête. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a></dd></dl>
+<p>Modification du poids de l'arête entre <em>a</em> et <em>b</em>. Si l'arête ou au moins l'un des <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> n'exsite pas, le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> reste intact. </p>
+
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00103">103</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe.">gExisteArete</a>(g, a, b))
+    {
+        <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * <span class="keyword">const</span> ga = <a class="code" href="structGraphe.html#a301f937afb679ca1a158308c085fee43" title="Obtenir Un sommet d&#39;un Graphe.">gPSommet</a>(g, a);
+        <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * <span class="keyword">const</span> gb = <a class="code" href="structGraphe.html#a301f937afb679ca1a158308c085fee43" title="Obtenir Un sommet d&#39;un Graphe.">gPSommet</a>(g, b);
+
+        ga-&gt;<a class="code" href="structGraphe.html#a5492f11dad7b7e9b7b2dfbed15fff767">listeadjacence</a> = <a class="code" href="structListeAdjacence.html#a50102d59bc1a65570e1a339caee9cec9" title="Modifier le poids d&#39;une arête.">lmod</a>(<a class="code" href="structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste.">gAdjacenceTete</a>(ga), b, p);
+        gb-&gt;<a class="code" href="structGraphe.html#a5492f11dad7b7e9b7b2dfbed15fff767">listeadjacence</a> = <a class="code" href="structListeAdjacence.html#a50102d59bc1a65570e1a339caee9cec9" title="Modifier le poids d&#39;une arête.">lmod</a>(<a class="code" href="structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste.">gAdjacenceTete</a>(gb), a, p);
+    }
+
+    <span class="keywordflow">return</span> g;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_a4ccbbc14f47df1d6f57d31f6884f003b_cgraph.png" border="0" usemap="#graphe_8c_a4ccbbc14f47df1d6f57d31f6884f003b_cgraph" alt=""/></div>
+<map name="graphe_8c_a4ccbbc14f47df1d6f57d31f6884f003b_cgraph" id="graphe_8c_a4ccbbc14f47df1d6f57d31f6884f003b_cgraph">
+<area shape="rect" id="node3" href="structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe." alt="" coords="193,5,340,35"/><area shape="rect" id="node5" href="structGraphe.html#a301f937afb679ca1a158308c085fee43" title="Obtenir Un sommet d&#39;un Graphe." alt="" coords="199,59,335,88"/><area shape="rect" id="node7" href="structListeAdjacence.html#a50102d59bc1a65570e1a339caee9cec9" title="Modifier le poids d&#39;une arête." alt="" coords="193,112,340,141"/><area shape="rect" id="node9" href="structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste." alt="" coords="160,165,373,195"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a6f09c58349b36721b241fc1c2bda4121"></a><!-- doxytag: member="graphe.c::gNombreAretes" ref="a6f09c58349b36721b241fc1c2bda4121" args="(const Graphe *g)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683">Nat</a> <a class="el" href="structGraphe.html#a6f09c58349b36721b241fc1c2bda4121">gNombreAretes</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Nombre d'arêtes dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Nombre d'arêtes dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00186">186</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">return</span> gNombreAretesAux(g, 0) / 2;
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="ae08239d1436fe3268b62c42ab13470d4"></a><!-- doxytag: member="graphe.c::gNombreSommets" ref="ae08239d1436fe3268b62c42ab13470d4" args="(const Graphe *g)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683">Nat</a> <a class="el" href="structGraphe.html#ae08239d1436fe3268b62c42ab13470d4">gNombreSommets</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Nombre de sommets dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Nombre de sommets dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00174">174</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">return</span> gNombreSommetsAux(g, 0);
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a137c4ea82b8d27f1953a8e4757561e09"></a><!-- doxytag: member="graphe.c::gNombreVoisins" ref="a137c4ea82b8d27f1953a8e4757561e09" args="(const Graphe *g, const Sommet *s)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683">Nat</a> <a class="el" href="structGraphe.html#a137c4ea82b8d27f1953a8e4757561e09">gNombreVoisins</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Nombre de voisins d'un sommet. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+    <tr><td class="paramname">s</td><td>Sommet. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="pre"><dt><b>Précondition:</b></dt><dd>gExisteSommet(g, s) </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Nombre de voisins d'un sommet. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00191">191</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * <span class="keyword">const</span> adjacence = <a class="code" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet.">gAdjacenceSommet</a>(g, s);
+
+    <span class="keywordflow">if</span> (<a class="code" href="structListeAdjacence.html#a1be47cfef3d6c1a3a8bdf0ca0a1d93d9" title="Vérifie l&#39;existence d&#39;une arête.">lexar</a>(adjacence, s))
+        <span class="keywordflow">return</span> <a class="code" href="structListeAdjacence.html#a3732102391b1ae2bc865c55d79d7b2d3" title="Retourne le nombre d&#39;arêtes dans la ListeAdjacence l.">ltaille</a>(adjacence) - 1;
+    <span class="keywordflow">else</span>
+        <span class="keywordflow">return</span> <a class="code" href="structListeAdjacence.html#a3732102391b1ae2bc865c55d79d7b2d3" title="Retourne le nombre d&#39;arêtes dans la ListeAdjacence l.">ltaille</a>(adjacence);
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_a137c4ea82b8d27f1953a8e4757561e09_cgraph.png" border="0" usemap="#graphe_8c_a137c4ea82b8d27f1953a8e4757561e09_cgraph" alt=""/></div>
+<map name="graphe_8c_a137c4ea82b8d27f1953a8e4757561e09_cgraph" id="graphe_8c_a137c4ea82b8d27f1953a8e4757561e09_cgraph">
+<area shape="rect" id="node3" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet." alt="" coords="173,5,363,35"/><area shape="rect" id="node5" href="structListeAdjacence.html#a1be47cfef3d6c1a3a8bdf0ca0a1d93d9" title="Vérifie l&#39;existence d&#39;une arête." alt="" coords="195,59,341,88"/><area shape="rect" id="node7" href="structListeAdjacence.html#a3732102391b1ae2bc865c55d79d7b2d3" title="Retourne le nombre d&#39;arêtes dans la ListeAdjacence l." alt="" coords="193,112,343,141"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac47e6f03920d6978871efc1fbbf876d9"></a><!-- doxytag: member="graphe.c::gNouv" ref="ac47e6f03920d6978871efc1fbbf876d9" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structGraphe.html">Graphe</a>* <a class="el" href="structGraphe.html#aaf6e3b452d5d36e54cdebf1f9bdbdb14">gNouv</a> </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Nouveau <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </p>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>NULL </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00008">8</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">return</span> NULL;
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a50bed59aba5c8e5843e16932aabcbd2a"></a><!-- doxytag: member="graphe.c::gPoidsArete" ref="a50bed59aba5c8e5843e16932aabcbd2a" args="(const Graphe *g, const Sommet *a, const Sommet *b)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c">Ent</a> <a class="el" href="structGraphe.html#a50bed59aba5c8e5843e16932aabcbd2a">gPoidsArete</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Poids d'une arête. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>Grape. </td></tr>
+    <tr><td class="paramname">a</td><td>Extrémité de l'arête. </td></tr>
+    <tr><td class="paramname">b</td><td>Extrémité de l'arête. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="pre"><dt><b>Précondition:</b></dt><dd>gExisteArete(g, a, b) </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Poids de l'arête (a, b). </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00201">201</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">return</span> <a class="code" href="structListeAdjacence.html#a59b84fdf31dbca03bdc25ba0763d9e84" title="Renvoie le poids d&#39;une arête.">lpoids</a>(<a class="code" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet.">gAdjacenceSommet</a>(g, a), b);
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_a50bed59aba5c8e5843e16932aabcbd2a_cgraph.png" border="0" usemap="#graphe_8c_a50bed59aba5c8e5843e16932aabcbd2a_cgraph" alt=""/></div>
+<map name="graphe_8c_a50bed59aba5c8e5843e16932aabcbd2a_cgraph" id="graphe_8c_a50bed59aba5c8e5843e16932aabcbd2a_cgraph">
+<area shape="rect" id="node3" href="structListeAdjacence.html#a59b84fdf31dbca03bdc25ba0763d9e84" title="Renvoie le poids d&#39;une arête." alt="" coords="165,5,317,35"/><area shape="rect" id="node5" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet." alt="" coords="147,59,336,88"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a954fb1b598ce373ec95a813f1b6e84e0"></a><!-- doxytag: member="graphe.c::gPSommet" ref="a954fb1b598ce373ec95a813f1b6e84e0" args="(const Graphe *g, const Sommet *s)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structGraphe.html">Graphe</a>* <a class="el" href="structGraphe.html#a301f937afb679ca1a158308c085fee43">gPSommet</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Obtenir Un sommet d'un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+    <tr><td class="paramname">s</td><td>Sommet. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>(pointeur vers) Sommet s dans le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>.</dd></dl>
+<p>Pointeur vers l'élément de la liste correspondant au <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <em>s</em>. Retourne <em>NULL</em> si <em>s</em> n'existe pas. </p>
+
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00206">206</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe.">gEstVide</a>(g)) <span class="keywordflow">return</span> NULL;
+    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(<a class="code" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets.">gSommetTete</a>(g), s)) <span class="keywordflow">return</span> (<a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> *)g;
+    <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code" href="structGraphe.html#a301f937afb679ca1a158308c085fee43" title="Obtenir Un sommet d&#39;un Graphe.">gPSommet</a>(<a class="code" href="structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe.">gSuivant</a>(g), s);
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_a954fb1b598ce373ec95a813f1b6e84e0_cgraph.png" border="0" usemap="#graphe_8c_a954fb1b598ce373ec95a813f1b6e84e0_cgraph" alt=""/></div>
+<map name="graphe_8c_a954fb1b598ce373ec95a813f1b6e84e0_cgraph" id="graphe_8c_a954fb1b598ce373ec95a813f1b6e84e0_cgraph">
+<area shape="rect" id="node3" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe." alt="" coords="156,5,281,35"/><area shape="rect" id="node5" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet." alt="" coords="183,59,255,88"/><area shape="rect" id="node7" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets." alt="" coords="141,112,296,141"/><area shape="rect" id="node9" href="structGraphe.html#a301f937afb679ca1a158308c085fee43" title="Obtenir Un sommet d&#39;un Graphe." alt="" coords="151,165,287,195"/><area shape="rect" id="node11" href="structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe." alt="" coords="157,219,280,248"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa670233643a667af85404c855ce88655"></a><!-- doxytag: member="graphe.c::gSommetTete" ref="aa670233643a667af85404c855ce88655" args="(const Graphe *g)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a>* <a class="el" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299">gSommetTete</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Premier <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> dans la liste de sommets. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="pre"><dt><b>Précondition:</b></dt><dd>!gEstVide(g) </dd></dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a>. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00130">130</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">return</span> g-&gt;<a class="code" href="structGraphe.html#aec1abb3b903cd11c4ad5ec6af43a5300">sommet</a>;
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a4a707cae33e8b5cc50df8d5ab816a9b0"></a><!-- doxytag: member="graphe.c::gSuivant" ref="a4a707cae33e8b5cc50df8d5ab816a9b0" args="(const Graphe *g)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structGraphe.html">Graphe</a>* <a class="el" href="structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82">gSuivant</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Sommet suivant dans le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>(pointeur vers) Élément suivant dans le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>.</dd></dl>
+<p>Pointeur vers l'élément suivant dans le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. S'il n'y a plus de Sommet, retourne <em>NULL</em>. </p>
+
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00122">122</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (!<a class="code" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe.">gEstVide</a>(g))
+        <span class="keywordflow">return</span> g-&gt;<a class="code" href="structGraphe.html#aab27941b38d48cde4960f439405226f3">suivant</a>;
+    <span class="keywordflow">else</span>
+        <span class="keywordflow">return</span> NULL;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_a4a707cae33e8b5cc50df8d5ab816a9b0_cgraph.png" border="0" usemap="#graphe_8c_a4a707cae33e8b5cc50df8d5ab816a9b0_cgraph" alt=""/></div>
+<map name="graphe_8c_a4a707cae33e8b5cc50df8d5ab816a9b0_cgraph" id="graphe_8c_a4a707cae33e8b5cc50df8d5ab816a9b0_cgraph">
+<area shape="rect" id="node3" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe." alt="" coords="128,5,253,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a006061dedebd8a37e7aba077756ccf80"></a><!-- doxytag: member="graphe.c::gSupprimerArete" ref="a006061dedebd8a37e7aba077756ccf80" args="(Graphe *g, const Sommet *a, const Sommet *b)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structGraphe.html">Graphe</a>* <a class="el" href="structGraphe.html#a183405c1312d76628db9de7079b0beaa">gSupprimerArete</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Suppression d'une arête dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> où supprimer l'arête. </td></tr>
+    <tr><td class="paramname">a</td><td>Extrémité de l'arête. </td></tr>
+    <tr><td class="paramname">b</td><td>Autre extrémité de l'arête. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a></dd></dl>
+<p>Suppression de l'arête entre <em>a</em> <em>b</em> dans le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> <em>g</em>. Si l'arête ou au moins l'un des <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> n'existe pas, le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> reste intact. </p>
+
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00089">89</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe.">gExisteSommet</a>(g, a) &amp;&amp; <a class="code" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe.">gExisteSommet</a>(g, b))
+    {
+        <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * <span class="keyword">const</span> ga = <a class="code" href="structGraphe.html#a301f937afb679ca1a158308c085fee43" title="Obtenir Un sommet d&#39;un Graphe.">gPSommet</a>(g, a);
+        <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * <span class="keyword">const</span> gb = <a class="code" href="structGraphe.html#a301f937afb679ca1a158308c085fee43" title="Obtenir Un sommet d&#39;un Graphe.">gPSommet</a>(g, b);
+
+        ga-&gt;<a class="code" href="structGraphe.html#a5492f11dad7b7e9b7b2dfbed15fff767">listeadjacence</a> = <a class="code" href="structListeAdjacence.html#a644fd666d73fd378ea209aa707c99462" title="Supprime une arête de la ListeAdjacence l.">lsupar</a>(<a class="code" href="structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste.">gAdjacenceTete</a>(ga), b);
+        gb-&gt;<a class="code" href="structGraphe.html#a5492f11dad7b7e9b7b2dfbed15fff767">listeadjacence</a> = <a class="code" href="structListeAdjacence.html#a644fd666d73fd378ea209aa707c99462" title="Supprime une arête de la ListeAdjacence l.">lsupar</a>(<a class="code" href="structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste.">gAdjacenceTete</a>(gb), a);
+    }
+
+    <span class="keywordflow">return</span> g;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_a006061dedebd8a37e7aba077756ccf80_cgraph.png" border="0" usemap="#graphe_8c_a006061dedebd8a37e7aba077756ccf80_cgraph" alt=""/></div>
+<map name="graphe_8c_a006061dedebd8a37e7aba077756ccf80_cgraph" id="graphe_8c_a006061dedebd8a37e7aba077756ccf80_cgraph">
+<area shape="rect" id="node3" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe." alt="" coords="197,5,363,35"/><area shape="rect" id="node5" href="structGraphe.html#a301f937afb679ca1a158308c085fee43" title="Obtenir Un sommet d&#39;un Graphe." alt="" coords="212,59,348,88"/><area shape="rect" id="node7" href="structListeAdjacence.html#a644fd666d73fd378ea209aa707c99462" title="Supprime une arête de la ListeAdjacence l." alt="" coords="203,112,357,141"/><area shape="rect" id="node9" href="structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste." alt="" coords="173,165,387,195"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a19862f69a8a5b6bc2734eef29a385d7e"></a><!-- doxytag: member="graphe.c::gSupprimerSommet" ref="a19862f69a8a5b6bc2734eef29a385d7e" args="(Graphe *g, const Sommet *s)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structGraphe.html">Graphe</a>* <a class="el" href="structGraphe.html#a0aa5aacc4cc9cb1e489a7bb295dcead4">gSupprimerSommet</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Suppression d'un sommet dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> où supprimer le sommet. </td></tr>
+    <tr><td class="paramname">s</td><td><a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> à supprimer. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a></dd></dl>
+<p>Suppression du <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <em>s</em> dans le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> <em>g</em>. La suppression du <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <em>s</em> implique la suppression de toutes les arêtes incidentes à <em>s</em>. </p>
+
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00060">60</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordflow">if</span> (!<a class="code" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe.">gEstVide</a>(g) &amp;&amp; <a class="code" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe.">gExisteSommet</a>(g, s))
+    {
+        <span class="keywordflow">if</span> (<a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(<a class="code" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets.">gSommetTete</a>(g), s))
+        {
+            <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * <span class="keyword">const</span> gs = <a class="code" href="structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe.">gSuivant</a>(g);
+            <span class="keywordflow">while</span> (!<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(<a class="code" href="structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste.">gAdjacenceTete</a>(g)))
+                g = <a class="code" href="structGraphe.html#a183405c1312d76628db9de7079b0beaa" title="Suppression d&#39;une arête dans un Graphe.">gSupprimerArete</a>(g, s, <a class="code" href="structListeAdjacence.html#a36c937228d06a462ff42df578b3dbe0d" title="Extrémité de l&#39;arête en tête de liste.">lsommet_tete</a>(<a class="code" href="structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste.">gAdjacenceTete</a>(g)));
+            g-&gt;<a class="code" href="structGraphe.html#aec1abb3b903cd11c4ad5ec6af43a5300">sommet</a> = <a class="code" href="sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement.">libererSommet</a>(<a class="code" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets.">gSommetTete</a>(g));
+            free(g);
+            g = gs;
+        }
+        <span class="keywordflow">else</span>
+        {
+            <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * <span class="keyword">const</span> gp = gPrecedent(g, s);
+            <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * <span class="keyword">const</span> gps = <a class="code" href="structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe.">gSuivant</a>(<a class="code" href="structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe.">gSuivant</a>(gp));
+
+            <span class="keywordflow">while</span> (!<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(<a class="code" href="structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste.">gAdjacenceTete</a>(<a class="code" href="structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe.">gSuivant</a>(gp))))
+                g = <a class="code" href="structGraphe.html#a183405c1312d76628db9de7079b0beaa" title="Suppression d&#39;une arête dans un Graphe.">gSupprimerArete</a>(g, s, <a class="code" href="structListeAdjacence.html#a36c937228d06a462ff42df578b3dbe0d" title="Extrémité de l&#39;arête en tête de liste.">lsommet_tete</a>(<a class="code" href="structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste.">gAdjacenceTete</a>(<a class="code" href="structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe.">gSuivant</a>(gp))));
+            gp-&gt;<a class="code" href="structGraphe.html#aab27941b38d48cde4960f439405226f3">suivant</a>-&gt;<a class="code" href="structGraphe.html#aec1abb3b903cd11c4ad5ec6af43a5300">sommet</a> = <a class="code" href="sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement.">libererSommet</a>(<a class="code" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets.">gSommetTete</a>(<a class="code" href="structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe.">gSuivant</a>(gp)));
+            free(<a class="code" href="structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe.">gSuivant</a>(gp));
+            gp-&gt;<a class="code" href="structGraphe.html#aab27941b38d48cde4960f439405226f3">suivant</a> = gps;
+        }
+    }
+
+    <span class="keywordflow">return</span> g;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="graphe_8c_a19862f69a8a5b6bc2734eef29a385d7e_cgraph.png" border="0" usemap="#graphe_8c_a19862f69a8a5b6bc2734eef29a385d7e_cgraph" alt=""/></div>
+<map name="graphe_8c_a19862f69a8a5b6bc2734eef29a385d7e_cgraph" id="graphe_8c_a19862f69a8a5b6bc2734eef29a385d7e_cgraph">
+<area shape="rect" id="node3" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe." alt="" coords="236,5,361,35"/><area shape="rect" id="node5" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe." alt="" coords="216,59,381,88"/><area shape="rect" id="node7" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet." alt="" coords="263,112,335,141"/><area shape="rect" id="node9" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets." alt="" coords="221,165,376,195"/><area shape="rect" id="node11" href="structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe." alt="" coords="237,219,360,248"/><area shape="rect" id="node13" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide." alt="" coords="213,272,384,301"/><area shape="rect" id="node15" href="structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste." alt="" coords="192,325,405,355"/><area shape="rect" id="node17" href="structGraphe.html#a183405c1312d76628db9de7079b0beaa" title="Suppression d&#39;une arête dans un Graphe." alt="" coords="215,379,383,408"/><area shape="rect" id="node19" href="structListeAdjacence.html#a36c937228d06a462ff42df578b3dbe0d" title="Extrémité de l&#39;arête en tête de liste." alt="" coords="200,432,397,461"/><area shape="rect" id="node21" href="sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement." alt="" coords="245,485,352,515"/></map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+
+<hr class="footer"/><address class="footer"><small>
+Généré le Vendredi Avril 19 2013 18:08:39 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

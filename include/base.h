@@ -1,8 +1,13 @@
+/* This program is free software. It comes WITHOUT ANY WARRANTY, to
+* the extent permitted by applicable law. You can redistribute it
+* and/or modify it under the terms of the Do What The Fuck You Want
+* To Public License, Version 2, as published by Sam Hocevar. See
+* http://wtfpl.net for more details. */
 /**
  * \file base.h
  * \brief Base (header)
  * \author Harenome RAZANAJATO
- * \version 1.2
+ * \version 1.3
  */
 
 #ifndef __BASE_H
@@ -15,24 +20,51 @@
  * \enum Bool
  * \brief Simulation des booléens.
  */
-typedef enum
+enum Bool
 {
-    FAUX,   /** Faux. */
-    VRAI    /** Vrai. */
-} Bool;
-
-/*
- * Types de base.
- */
-typedef unsigned int Nat;
-typedef int Ent;
-typedef float Reel;
-typedef float Rat;
-typedef char Car;
-typedef Car * Chaine;
+    FAUX,   /**<- Faux. */
+    VRAI    /**<- Vrai. */
+};
 
 /**
- * \def OP(T)
+ * \brief Simulation des booléens.
+ */
+typedef enum Bool Bool;
+
+/**
+ * \brief Entiers naturels.
+ */
+typedef unsigned int Nat;
+
+/**
+ * \brief Entiers relatifs.
+ */
+typedef int Ent;
+
+/**
+ * \brief Nombres réels.
+ */
+typedef float Reel;
+
+/**
+ * \brief Nombres rationnels.
+ */
+typedef float Rat;
+
+/**
+ * \brief Caractères.
+ */
+typedef char Car;
+
+/* Simplement pour différencier un Caractère d'une Chaîne.
+ * Pas de pointeur dans le typedef : pouvoir utiliser le mot-clé const correctement.
+ */
+/**
+ * \brief Chaîne de caractères
+ */
+typedef Car Chaine;
+
+/**
  * \brief Opérations de base pour un type donné.
  * \param T Type.
  */
@@ -54,5 +86,32 @@ OP(Reel)
 OP(Rat)
 
 #undef OP
+
+/**
+ * \brief Allouer de la mémoire.
+ * \param P Pointeur.
+ */
+#define MALLOC(P) malloc(sizeof *(P))
+
+/**
+ * \brief Allouer un tableau de taille N.
+ * \param P Pointeur.
+ * \param N Taille du tableau.
+ */
+#define MALLOCN(P, N) malloc((N) * sizeof *(P))
+
+/**
+ * \brief Allouer un tableau de taille N et l'initialiser à 0.
+ * \param P Pointeur.
+ * \param N Taille du tableau.
+ */
+#define CALLOC(P, N) calloc((N), sizeof *(P))
+
+/**
+ * \brief Réallouer un tableau.
+ * \param P Pointeur.
+ * \param N Nouvelle taille du tableau.
+ */
+#define REALLOC(P, N) realloc((P), (N) * sizeof *(P))
 
 #endif /* __BASE_H */

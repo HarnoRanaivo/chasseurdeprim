@@ -6,11 +6,12 @@
 #include <stdlib.h>
 #include <errno.h>
 
-#include "io.h"
+#include "prompt.h"
 /**
  * \brief Main.
  */
 int main(int argc, char ** argv)
 {
+    prompt();
     return 0;
 }

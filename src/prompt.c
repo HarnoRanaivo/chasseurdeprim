@@ -10,11 +10,61 @@
  */
 #include "prompt.h"
 
+static const char * AIDE_CHG = "\tch, charger <fichier>\n\
+\t\tCharger un graphe depuis un fichier.\n\
+\t\tLe graphe actuel ne sera pas conservé.\n\n";
+
+static const char * AIDE_SAV = "\tsv, sauvegarder <fichier>\n\
+\t\tSauvegarder un graphe dans un fichier.\n\n";
+
+static const char * AIDE_MOD = "\tm, modifier <sommet> <sommet> <poids>\n\
+\t\tModifier le poids une arête du graphe.\n\n";
+
+static const char * AIDE_AJAR = "\taj, ajouter <sommet> <sommet> <poids>\n\
+\t\tAjouter une arête au graphe.\n\
+\t\tSi l'ajout de cette arête est susceptible\n\
+\t\tde rendre le graphe non connexe, alors l'arête ne sera pas ajoutée.\n\n";
+
+static const char * AIDE_SUPAR = "\tsa, sarete <sommet> <sommet>\n\
+\t\tSupprimer une arête du graphe.\n\
+\t\tSi la suppression de cette arête est\n\
+\t\tsusceptible de rendre le graphe non connexe, alors l'arête ne sera pas\n\
+\t\tsupprimée.\n\n";
+
+static const char * AIDE_SUPSOM = "\tss, ssomet <sommet>\n\
+\t\tSupprimer un somet du graphe.\n\
+\t\tToutes les arêtes incidentes à ce sommet\n\
+\t\tseront supprimées. Si cette opération est susceptible de rendre le graphe\n\
+\t\tnon connexe, alors elle ne sera pas effectuée.\n\n";
+
+static const char * AIDE_CAL = "\tcal, calculer <sommet>\n\
+\t\tCalculer l'arbre couvrant minimum à partir d'un sommet donné.\n\n";
+
+static const char * AIDE_AFF = "\taff, afficher <fichier>\n\
+\t\t« Afficher » le(s) graphe(s).\n\
+\t\tCrée un fichier compilable avec Latex,\n\
+\t\tsous réserve de disponibilité du paquet TikZ, permettant de représenter\n\
+\t\tle graphe actuel. Si un arbre couvrant minimum a été calculé et a été\n\
+\t\tconservé, il sera « affiché » avec le graphe à partir duquel il a été créé.\n\n";
+
+static const char * AIDE_AIDE = "\ta, aide [commande]\n\
+\t\tAfficher l'aide.\n\
+\t\tSans argument, cette commande affiche l'aide pour toutes\n\
+\t\tles commandes. Avec un argument, elle affiche l'aide correspondant à la\n\
+\t\tcommande renseignée.\n\n";
+
+static const char * AIDE_QUIT = "\tq, quit, quitter\n\
+\t\tQuitter. You don't say?\n\n";
+
+static const char * AIDE_INC = "\tAucune aide n'existe pour cette commande car elle n'existe pas\n\n";
+
+static const char * ERR_ARG = "Arguments invalides.\n";
+
 Bool verifier(void)
 {
     char buffer[8] = { '\0' };
 
-    printf("Êtes-vous sûr ?\n? ");
+    printf("Êtes-vous sûr de vouloir quitter le programme ?\n? ");
     fflush(stdout);
     scanf(" %7[^\n]", buffer);
     fflush(stdin);
@@ -32,45 +82,76 @@ int compterMots(const char * chaine)
 {
     int n = 0;
 
-    for (char * m = (char *) chaine; m != NULL; m = strchr(m, ' '));
+    for (char * s = (char *) chaine; s != NULL; s = strchr(s, ' '))
+    {
         n++;
+        s++;
+    }
 
     return n;
 }
 
-void afficherAide(void)
+void afficherAideCommande(PromptCommande pc)
 {
-    printf("Commandes :\n\n"
-            "\tch, charger <fichier>\n"
-            "\t\tCharger un graphe. Le graphe actuel ne sera pas conservé.\n\n"
+    const char * aide = AIDE_INC;
 
-            "\tsv, sauvegarder <fichier>\n"
-            "\t\tSauvegarder un graphe.\n\n"
+    switch (pc)
+    {
+        case PC_CHG :
+            aide = AIDE_CHG;
+            break;
 
-            "\tm, modifier <sommet> <sommet> <poids>\n"
-            "\t\tModifier le poids une arête du graphe.\n\n"
+        case PC_SAV :
+            aide = AIDE_SAV;
+            break;
 
-            "\taj, ajouter <sommet> <sommet>\n"
-            "\t\tAjouter une arête au graphe.\n\n"
+        case PC_MOD :
+            aide = AIDE_MOD;
+            break;
 
-            "\tsa, sarete\n"
-            "\t\tSupprimer une arête du graphe.\n\n"
+        case PC_AJAR :
+            aide = AIDE_AJAR;
+            break;
 
-            "\tss, ssommet\n"
-            "\t\tSupprimer un sommet du graphe.\n\n"
+        case PC_SUPAR :
+            aide = AIDE_SUPAR;
+            break;
 
-            "\tcal, calculer\n"
-            "\t\tCalculer l'arbre couvrant minimum.\n\n"
+        case PC_SUPSOM :
+            aide = AIDE_SUPSOM;
+            break;
 
-            "\taf, afficher"
-            "\t\t« Afficher » le graphe.\n\n"
+        case PC_CAL :
+            aide = AIDE_CAL;
+            break;
 
-            "\tq, quit, quitter\n"
-            "\t\tQuitter. You don't say?\n\n"
-          );
+        case PC_AFF :
+            aide = AIDE_AFF;
+            break;
+
+        case PC_AIDE :
+            aide = AIDE_AIDE;
+            break;
+
+        case PC_QUIT :
+            aide = AIDE_QUIT;
+            break;
+
+        default :
+            break;
+    }
+
+    printf("%s", aide);
 }
 
-MenuCommande rechercherCommande(const char * ligne)
+void afficherAide(void)
+{
+    printf("Aide :\n\n");
+    for (int i = 0; PC_LISTE[i] != PC_INCONNU; i++)
+        afficherAideCommande(PC_LISTE[i]);
+}
+
+PromptCommande rechercherCommande(const char * ligne)
 {
     char commande[32] = { '\0' };
 
@@ -80,46 +161,46 @@ MenuCommande rechercherCommande(const char * ligne)
             commande[i] = tolower(commande[i]);
 
         if (strcmp(commande, "ch") == 0 || strcmp(commande, "charger") == 0)
-            return MC_CHG;
+            return PC_CHG;
         else if (strcmp(commande, "sv") == 0 || strcmp(commande, "sauvegarder") == 0)
-            return MC_SAV;
+            return PC_SAV;
         else if (strcmp(commande, "m") == 0 || strcmp(commande, "modifier") == 0)
-            return MC_MOD;
+            return PC_MOD;
         else if (strcmp(commande, "aj") == 0 || strcmp(commande, "ajouter") == 0)
-            return MC_AJAR;
+            return PC_AJAR;
         else if (strcmp(commande, "sa") == 0 || strcmp(commande, "sarete") == 0)
-            return MC_SUPAR;
+            return PC_SUPAR;
         else if (strcmp(commande, "ss") == 0 || strcmp(commande, "ssomet") == 0)
-            return MC_SUPSOM;
+            return PC_SUPSOM;
         else if (strcmp(commande, "cal") == 0 || strcmp(commande, "calculer") == 0)
-            return MC_CAL;
+            return PC_CAL;
         else if (strcmp(commande, "aff") == 0 || strcmp(commande, "afficher") == 0)
-            return MC_AFF;
-        else if (strcmp(commande, "aide") == 0)
-            return MC_AIDE;
+            return PC_AFF;
+        else if (strcmp(commande, "a") == 0 || strcmp(commande, "aide") == 0)
+            return PC_AIDE;
         else if (strcmp(commande, "q") == 0
                  || strcmp(commande, "quitter") == 0
                  || strcmp(commande, "quit") == 0
                 )
-            return MC_QUIT;
+            return PC_QUIT;
     }
 
-    return MC_INCONNU;
+    return PC_INCONNU;
 }
 
-Donnees * traiterLigneCommande(const char * ligne, MenuCommande mc, Donnees * d)
+Donnees * traiterLigneCommande(const char * ligne, PromptCommande pc, Donnees * d)
 {
     char buffer1[481] = { '\0' };
     char buffer2[100] = { '\0' };
     int poids;
     Bool sur = VRAI;
 
-    switch (mc)
+    switch (pc)
     {
-        case MC_CHG :
+        case PC_CHG :
             if (compterMots(ligne) != 2 || sscanf(ligne, "%*s %480s", buffer1) != 1)
             {
-                printf("Arguments invalides.\n");
+                printf("%s", ERR_ARG);
             }
             else
             {
@@ -140,10 +221,10 @@ Donnees * traiterLigneCommande(const char * ligne, MenuCommande mc, Donnees * d)
             }
             break;
 
-        case MC_SAV :
+        case PC_SAV :
             if (compterMots(ligne) != 2 || sscanf(ligne, "%*s %480s", buffer1) != 1)
             {
-                printf("Arguments invalides.\n");
+                printf("%s", ERR_ARG);
             }
             else
             {
@@ -152,11 +233,11 @@ Donnees * traiterLigneCommande(const char * ligne, MenuCommande mc, Donnees * d)
             }
             break;
 
-        case MC_MOD :
+        case PC_MOD :
             if (compterMots(ligne) != 4
                 || sscanf(ligne, "%*s %99s %99s %d", buffer1, buffer2, &poids) != 3)
             {
-                printf("Arguments invalides.\n");
+                printf("%s", ERR_ARG);
             }
             else
             {
@@ -166,11 +247,11 @@ Donnees * traiterLigneCommande(const char * ligne, MenuCommande mc, Donnees * d)
             }
             break;
 
-        case MC_AJAR :
+        case PC_AJAR :
             if (compterMots(ligne) != 4
                 || sscanf(ligne, "%*s %99s %99s %d", buffer1, buffer2, &poids) != 3)
             {
-                printf("Arguments invalides.\n");
+                printf("%s", ERR_ARG);
             }
             else
             {
@@ -180,11 +261,11 @@ Donnees * traiterLigneCommande(const char * ligne, MenuCommande mc, Donnees * d)
             }
             break;
 
-        case MC_SUPAR :
+        case PC_SUPAR :
             if (compterMots(ligne) != 3
                 || sscanf(ligne, "%*s %99s %99s", buffer1, buffer2) != 2)
             {
-                printf("Arguments invalides.\n");
+                printf("%s", ERR_ARG);
             }
             else
             {
@@ -194,11 +275,11 @@ Donnees * traiterLigneCommande(const char * ligne, MenuCommande mc, Donnees * d)
             }
             break;
 
-        case MC_SUPSOM :
+        case PC_SUPSOM :
             if (compterMots(ligne) != 2
                 || sscanf(ligne, "%*s %99s", buffer1) != 1)
             {
-                printf("Arguments invalides.\n");
+                printf("%s", ERR_ARG);
             }
             else
             {
@@ -208,11 +289,11 @@ Donnees * traiterLigneCommande(const char * ligne, MenuCommande mc, Donnees * d)
             }
             break;
 
-        case MC_CAL :
+        case PC_CAL :
             if (compterMots(ligne) != 1
                 || sscanf(ligne, "%*s %99s", buffer1) != 1)
             {
-                printf("Arguments invalides.\n");
+                printf("%s", ERR_ARG);
             }
             else
             {
@@ -221,11 +302,11 @@ Donnees * traiterLigneCommande(const char * ligne, MenuCommande mc, Donnees * d)
             }
             break;
 
-        case MC_AFF :
+        case PC_AFF :
             if (compterMots(ligne) != 2
                 || sscanf(ligne, "%*s %480s", buffer1) != 1)
             {
-                printf("Arguments invalides.\n");
+                printf("%s", ERR_ARG);
             }
             else
             {
@@ -233,14 +314,19 @@ Donnees * traiterLigneCommande(const char * ligne, MenuCommande mc, Donnees * d)
             }
             break;
 
-        case MC_AIDE :
-            afficherAide();
+        case PC_AIDE :
+            if (sscanf(ligne, "%*s %31s", buffer1) == 1)
+                afficherAideCommande(rechercherCommande(buffer1));
+            else
+                afficherAide();
             break;
 
-        case MC_QUIT :
+        case PC_QUIT :
+            if (d->sauvegarde == FAUX)
+                printf("Le graphe actuel n'a pas été sauvegardé.\n");
             break;
 
-        case MC_INCONNU :
+        case PC_INCONNU :
 
         default :
             sscanf(ligne, "%s", buffer1);
@@ -264,7 +350,7 @@ void prompt(void)
 
     d->graphe = gNouv();
     d->arbre = gNouv();
-    d->sauvegarde = FAUX;
+    d->sauvegarde = VRAI;
 
     Bool continuer = VRAI;
 
@@ -281,10 +367,10 @@ void prompt(void)
 
         if (succes == 1)
         {
-            MenuCommande mc = rechercherCommande(buffer);
+            PromptCommande pc = rechercherCommande(buffer);
 
-            d = traiterLigneCommande(buffer, mc, d);
-            if (mc == MC_QUIT && verifier() == VRAI)
+            d = traiterLigneCommande(buffer, pc, d);
+            if (pc == PC_QUIT && verifier() == VRAI)
             {
                 d->graphe = gLiberer(d->graphe);
                 d->arbre = gLiberer(d->arbre);

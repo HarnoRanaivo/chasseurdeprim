@@ -1,5 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$prim_8h.html" title="Algorithme de Prim (header)" alt="" coords="5,83,107,112"/>
-<area shape="rect" id="node7" href="$filearetetriee_8c.html" title="File triée d&#39;arêtes (code)" alt="" coords="131,83,256,112"/>
-<area shape="rect" id="node5" href="$prim_8c.html" title="Algorithme de Prim (code)" alt="" coords="16,160,96,189"/>
+<area shape="rect" id="node3" href="$prim_8h.html" title="Algorithme de Prim (header)" alt="" coords="113,83,215,112"/>
+<area shape="rect" id="node13" href="$filearetetriee_8c.html" title="File triée d&#39;arêtes (code)" alt="" coords="239,83,364,112"/>
+<area shape="rect" id="node5" href="$prompt_8h.html" title="Prompt (header)" alt="" coords="44,160,161,189"/>
+<area shape="rect" id="node11" href="$prim_8c.html" title="Algorithme de Prim (code)" alt="" coords="185,160,265,189"/>
+<area shape="rect" id="node7" href="$main_8c.html" title="Main." alt="" coords="5,237,88,267"/>
+<area shape="rect" id="node9" href="$prompt_8c.html" title="Prompt (code)" alt="" coords="112,237,205,267"/>
 </map>

@@ -1,5 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$grapheconnexe_8h.html" title="GrapheConnexes connexes (header)" alt="" coords="5,83,171,112"/>
-<area shape="rect" id="node7" href="$parcours_8c.html" title="Parcours d&#39;un graphe (code)" alt="" coords="195,83,299,112"/>
-<area shape="rect" id="node5" href="$grapheconnexe_8c.html" title="GrapheConnexes (code)" alt="" coords="17,160,159,189"/>
+<area shape="rect" id="node3" href="$grapheconnexe_8h.html" title="GrapheConnexes connexes (header)" alt="" coords="96,83,261,112"/>
+<area shape="rect" id="node13" href="$parcours_8c.html" title="Parcours d&#39;un graphe (code)" alt="" coords="285,83,389,112"/>
+<area shape="rect" id="node5" href="$prompt_8h.html" title="Prompt (header)" alt="" coords="44,160,161,189"/>
+<area shape="rect" id="node11" href="$grapheconnexe_8c.html" title="GrapheConnexes (code)" alt="" coords="185,160,327,189"/>
+<area shape="rect" id="node7" href="$main_8c.html" title="Main." alt="" coords="5,237,88,267"/>
+<area shape="rect" id="node9" href="$prompt_8c.html" title="Prompt (code)" alt="" coords="112,237,205,267"/>
 </map>

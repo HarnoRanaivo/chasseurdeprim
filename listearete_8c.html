@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="dir_307baa3f0b4442ad1de385c197155be8.html">src</a>      </li>
+      <li class="navelem"><a class="el" href="dir_f698a076f5ac3ef0691a17cfde4f7ef2.html">src</a>      </li>
     </ul>
   </div>
 </div>
@@ -196,7 +196,7 @@ Fonctions</h2></td></tr>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>(pointeur vers) <a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a>.</dd></dl>
 <p>Ajoute une <a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> dans la liste <em>l</em>. S'il existe déjà une <a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> entre <em>et</em> <b>dans</b> la liste, ou bien en cas d'erreur lors de l'ajout, <em>l</em> reste intacte. </p>
 
-<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00013">13</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00018">18</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (!<a class="code" href="structListeArete.html#ad86e48457c41a61508583fef666992c4" title="Test d&#39;existence d&#39;une arête.">larExisteArete</a>(l, a, b))
     {
@@ -249,7 +249,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>Arête.</dd></dl>
 <p>Retourne un pointeur vers l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> se trouvant en tête de la <a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> <em>l</em>. </p>
 
-<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00091">91</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00096">96</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> l-&gt;<a class="code" href="structListeArete.html#af81f3d6033e744d199ff07a69c6e97ff">arete</a>;
 }
@@ -281,7 +281,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>VRAI si la file est vide, FAUX sinon.</dd></dl>
 <p>La <a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> est vide si <em>l</em> pointe vers <em>NULL</em>. </p>
 
-<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00068">68</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00073">73</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> l == NULL;
 }
@@ -330,7 +330,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 </dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>VRAI si l'arête existe, FAUX sinon. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00073">73</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00078">78</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (<a class="code" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes.">larEstVide</a>(l)) <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="structArete.html#a0356483cd626e097c86d8fa2ba262383" title="Test d&#39;égalité de deux Aretes, sans se préoccuper du poids.">aAreteEgaleS</a>(<a class="code" href="structListeArete.html#a6797b32b731e6988f276ce6a0493cbf6" title="Arête en tête de liste.">larAreteTete</a>(l), a, b)) <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
@@ -373,7 +373,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>NULL</dd></dl>
 <p>Libère la mémoire occuppée par une <a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> : libère aussi les <a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> contenues dans la <a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a>. </p>
 
-<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00112">112</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00117">117</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">while</span> (!<a class="code" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes.">larEstVide</a>(l))
         l = <a class="code" href="structListeArete.html#afd562a9130916110f6c783dbe200fc87" title="Supprimer l&#39;arête en tête de liste.">larSupprimerTete</a>(l);
@@ -416,7 +416,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 </dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>Nombre d'arêtes. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00086">86</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00091">91</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> larNombreAretesAux(l, 0);
 }
@@ -441,7 +441,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <p>Nouvelle liste d'arêtes. </p>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>NULL </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00008">8</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00013">13</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> NULL;
 }
@@ -491,7 +491,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>(pointeur vers) Sous-liste commençant par (a, b)</dd></dl>
 <p>Retourne un pointeur vers la sous-liste de <em>l</em> qui commence par l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> entre <em>a</em> et <em>b</em>. Retourne <em>NULL</em> si l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> n'est pas présente dans <em>l</em>. </p>
 
-<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00104">104</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00109">109</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (<a class="code" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes.">larEstVide</a>(l)) <span class="keywordflow">return</span> NULL;
     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="structArete.html#a0356483cd626e097c86d8fa2ba262383" title="Test d&#39;égalité de deux Aretes, sans se préoccuper du poids.">aAreteEgaleS</a>(<a class="code" href="structListeArete.html#a6797b32b731e6988f276ce6a0493cbf6" title="Arête en tête de liste.">larAreteTete</a>(l), a, b)) <span class="keywordflow">return</span> (<a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> *)l;
@@ -534,7 +534,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>(pointeur vers) Arête suivante.</dd></dl>
 <p>Retourne un pointeur vers la sous-liste de <em>l</em> privée de la tête de <em>l</em>. Peut retourner une liste vide si <em>l</em> ne contient qu'un seul élément. </p>
 
-<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00096">96</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00101">101</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (!<a class="code" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes.">larEstVide</a>(l))
         <span class="keywordflow">return</span> l-&gt;<a class="code" href="structListeArete.html#a80298de757d53b2f7c605b6b38b4aa51">suivante</a>;
@@ -596,7 +596,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>(pointeur vers) <a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a>.</dd></dl>
 <p>Suppression de la liste de l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> entre <em>a</em> et <em>b</em>, si celle-ci y existe. Sinon, <em>l</em> reste intacte. </p>
 
-<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00050">50</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00055">55</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (!<a class="code" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes.">larEstVide</a>(l))
     {
@@ -650,7 +650,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>(pointeur vers) <a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a>.</dd></dl>
 <p>Suppression de l'<a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> en tête de liste, si celle-ci y existe. Sinon, <em>l</em> reste intacte. </p>
 
-<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00029">29</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="listearete_8c_source.html#l00034">34</a> du fichier <a class="el" href="listearete_8c_source.html">listearete.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (!<a class="code" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes.">larEstVide</a>(l))
     {
@@ -692,7 +692,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Vendredi Avril 19 2013 18:08:39 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Samedi Avril 27 2013 23:17:02 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

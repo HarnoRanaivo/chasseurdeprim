@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="dir_d027f5d2eee5f38b54bb3db43d132c50.html">include</a>      </li>
+      <li class="navelem"><a class="el" href="dir_6570b8eaffc1d650912f1c36f17cf20f.html">include</a>      </li>
     </ul>
   </div>
 </div>
@@ -99,27 +99,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="title">sommet.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="sommet_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
-<a name="l00008"></a>00008 <span class="preprocessor">#ifndef __SOMMET_H</span>
-<a name="l00009"></a>00009 <span class="preprocessor"></span><span class="preprocessor">#define __SOMMET_H</span>
-<a name="l00010"></a>00010 <span class="preprocessor"></span>
-<a name="l00011"></a>00011 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
-<a name="l00012"></a>00012 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;string.h&gt;</span>
-<a name="l00014"></a>00014 
-<a name="l00015"></a>00015 <span class="preprocessor">#include &quot;<a class="code" href="base_8h.html" title="Base (header)">base.h</a>&quot;</span>
-<a name="l00016"></a>00016 
-<a name="l00023"></a><a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">00023</a> <span class="keyword">typedef</span> <a class="code" href="base_8h.html#a56ae010f6d70d2740d8a75c28cf8bce4" title="Chaîne de caractères.">Chaine</a> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a>;
-<a name="l00024"></a>00024 
-<a name="l00033"></a>00033 <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a> (<span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * a, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * b);
-<a name="l00034"></a>00034 
-<a name="l00042"></a>00042 <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * <a class="code" href="sommet_8h.html#a98c119f316a62e6ce2b2858f000b8e06" title="Retourne une copie de s, allouée dynamiquement.">copieSommet</a>(<span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s);
-<a name="l00043"></a>00043 
-<a name="l00052"></a>00052 <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * <a class="code" href="sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement.">libererSommet</a>(<a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s);
-<a name="l00053"></a>00053 
-<a name="l00062"></a>00062 <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * <a class="code" href="sommet_8h.html#aaf4781a6a403492e9e136171933aa10c" title="Modifier un Sommet.">modSommet</a>(<a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * t);
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 <span class="preprocessor">#endif </span><span class="comment">/* __SOMMET_H */</span>
+<a href="sommet_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/* This program is free software. It comes WITHOUT ANY WARRANTY, to</span>
+<a name="l00002"></a>00002 <span class="comment">* the extent permitted by applicable law. You can redistribute it</span>
+<a name="l00003"></a>00003 <span class="comment">* and/or modify it under the terms of the Do What The Fuck You Want</span>
+<a name="l00004"></a>00004 <span class="comment">* To Public License, Version 2, as published by Sam Hocevar. See</span>
+<a name="l00005"></a>00005 <span class="comment">* http://wtfpl.net for more details. */</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#ifndef __SOMMET_H</span>
+<a name="l00014"></a>00014 <span class="preprocessor"></span><span class="preprocessor">#define __SOMMET_H</span>
+<a name="l00015"></a>00015 <span class="preprocessor"></span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;string.h&gt;</span>
+<a name="l00019"></a>00019 
+<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="code" href="base_8h.html" title="Base (header)">base.h</a>&quot;</span>
+<a name="l00021"></a>00021 
+<a name="l00028"></a><a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">00028</a> <span class="keyword">typedef</span> <a class="code" href="base_8h.html#a56ae010f6d70d2740d8a75c28cf8bce4" title="Chaîne de caractères.">Chaine</a> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a>;
+<a name="l00029"></a>00029 
+<a name="l00038"></a>00038 <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a> (<span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * a, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * b);
+<a name="l00039"></a>00039 
+<a name="l00047"></a>00047 <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * <a class="code" href="sommet_8h.html#a98c119f316a62e6ce2b2858f000b8e06" title="Retourne une copie de s, allouée dynamiquement.">copieSommet</a>(<span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s);
+<a name="l00048"></a>00048 
+<a name="l00057"></a>00057 <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * <a class="code" href="sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement.">libererSommet</a>(<a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s);
+<a name="l00058"></a>00058 
+<a name="l00067"></a>00067 <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * <a class="code" href="sommet_8h.html#aaf4781a6a403492e9e136171933aa10c" title="Modifier un Sommet.">modSommet</a>(<a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * t);
+<a name="l00068"></a>00068 
+<a name="l00069"></a>00069 <span class="preprocessor">#endif </span><span class="comment">/* __SOMMET_H */</span>
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -138,7 +142,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Vendredi Avril 19 2013 18:08:38 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Samedi Avril 27 2013 23:17:00 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

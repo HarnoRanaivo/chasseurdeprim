@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="dir_d027f5d2eee5f38b54bb3db43d132c50.html">include</a>      </li>
+      <li class="navelem"><a class="el" href="dir_6570b8eaffc1d650912f1c36f17cf20f.html">include</a>      </li>
     </ul>
   </div>
 </div>
@@ -124,7 +124,7 @@ Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier
 <div class="dyncontent">
 <div class="center"><img src="prim_8h__dep__incl.png" border="0" usemap="#include_2prim_8hdep" alt=""/></div>
 <map name="include_2prim_8hdep" id="include_2prim_8hdep">
-<area shape="rect" id="node3" href="prim_8c.html" title="Algorithme de Prim (code)" alt="" coords="16,83,96,112"/></map>
+<area shape="rect" id="node3" href="prompt_8h.html" title="Prompt (header)" alt="" coords="44,83,161,112"/><area shape="rect" id="node9" href="prim_8c.html" title="Algorithme de Prim (code)" alt="" coords="185,83,265,112"/><area shape="rect" id="node5" href="main_8c.html" title="Main." alt="" coords="5,160,88,189"/><area shape="rect" id="node7" href="prompt_8c.html" title="Prompt (code)" alt="" coords="112,160,205,189"/></map>
 </div>
 </div>
 <p><a href="prim_8h_source.html">Aller au code source de ce fichier.</a></p>
@@ -192,7 +192,7 @@ Fonctions</h2></td></tr>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>FileAreteTriee.</dd></dl>
 <p>Ajouter les <a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> incidentes à un <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <em>s</em> dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> <em>g</em> à la <a class="el" href="filearetetriee_8h.html#a119e1365e04fa50917f6de8f1a53de0c" title="File triée par ordre croissant d&#39;arêtes.">FileAreteTriee</a> <em>ft</em>, en ne prenant que les <a class="el" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> d'extrémités <em>s</em> et <em>t</em> pour tout sommet <em>t</em> n'étant pas marqué comme visité dans la <a class="el" href="structCouleursGraphe.html" title="Liste des couleurs des sommets d&#39;un graphe.">CouleursGraphe</a> <em>cg</em>. </p>
 
-<p>Définition à la ligne <a class="el" href="prim_8c_source.html#l00009">9</a> du fichier <a class="el" href="prim_8c_source.html">prim.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="prim_8c_source.html#l00014">14</a> du fichier <a class="el" href="prim_8c_source.html">prim.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l = <a class="code" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet.">gAdjacenceSommet</a>(g, s); !<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(l); l = <a class="code" href="structListeAdjacence.html#a3ff1a663a7b0eb00e5049d2891e2b18a" title="Arête suivante.">lsuiv</a>(l))
     {
@@ -250,7 +250,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 </dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>Arbre Couvrant Minimum </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="prim_8c_source.html#l00021">21</a> du fichier <a class="el" href="prim_8c_source.html">prim.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="prim_8c_source.html#l00026">26</a> du fichier <a class="el" href="prim_8c_source.html">prim.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683" title="Entiers naturels.">Nat</a> aretes = 0;
     <a class="code" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683" title="Entiers naturels.">Nat</a> n = <a class="code" href="structGraphe.html#ae08239d1436fe3268b62c42ab13470d4" title="Nombre de sommets dans un Graphe.">gNombreSommets</a>(g);
@@ -319,7 +319,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Vendredi Avril 19 2013 18:08:38 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Samedi Avril 27 2013 23:17:01 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

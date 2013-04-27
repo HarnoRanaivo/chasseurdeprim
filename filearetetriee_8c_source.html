@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="dir_307baa3f0b4442ad1de385c197155be8.html">src</a>      </li>
+      <li class="navelem"><a class="el" href="dir_f698a076f5ac3ef0691a17cfde4f7ef2.html">src</a>      </li>
     </ul>
   </div>
 </div>
@@ -99,34 +99,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="title">filearetetriee.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="filearetetriee_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="filearetetriee_8h.html" title="File triée d&#39;arêtes (header)">filearetetriee.h</a>&quot;</span>
-<a name="l00008"></a>00008 
-<a name="l00009"></a><a class="code" href="filearetetriee_8c.html#abf1e1b445d665870f25ac3b34ec4d17a">00009</a> <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">FileAreteTriee</a> * <a class="code" href="structListeArete.html#acb9fa39ef00e7f971149a2765c0223aa" title="Nouvelle file triée.">ftNouv</a>(<span class="keywordtype">void</span>)
-<a name="l00010"></a>00010 {
-<a name="l00011"></a>00011     <span class="keywordflow">return</span> NULL;
-<a name="l00012"></a>00012 }
+<a href="filearetetriee_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/* This program is free software. It comes WITHOUT ANY WARRANTY, to</span>
+<a name="l00002"></a>00002 <span class="comment">* the extent permitted by applicable law. You can redistribute it</span>
+<a name="l00003"></a>00003 <span class="comment">* and/or modify it under the terms of the Do What The Fuck You Want</span>
+<a name="l00004"></a>00004 <span class="comment">* To Public License, Version 2, as published by Sam Hocevar. See</span>
+<a name="l00005"></a>00005 <span class="comment">* http://wtfpl.net for more details. */</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="filearetetriee_8h.html" title="File triée d&#39;arêtes (header)">filearetetriee.h</a>&quot;</span>
 <a name="l00013"></a>00013 
-<a name="l00014"></a><a class="code" href="filearetetriee_8c.html#abbcee6e08a35268f0717f345dca55f28">00014</a> <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">FileAreteTriee</a> * <a class="code" href="structListeArete.html#a9e15a5b2d47991095d1a242d41f08b82" title="Ajouter une arête dans la file triée.">ftAjouterArete</a>(<a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">FileAreteTriee</a> * f, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * t, <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> poids)
+<a name="l00014"></a><a class="code" href="filearetetriee_8c.html#abf1e1b445d665870f25ac3b34ec4d17a">00014</a> <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">FileAreteTriee</a> * <a class="code" href="structListeArete.html#acb9fa39ef00e7f971149a2765c0223aa" title="Nouvelle file triée.">ftNouv</a>(<span class="keywordtype">void</span>)
 <a name="l00015"></a>00015 {
-<a name="l00016"></a>00016     <span class="keywordflow">if</span> (!<a class="code" href="structListeArete.html#ad86e48457c41a61508583fef666992c4" title="Test d&#39;existence d&#39;une arête.">larExisteArete</a>(f, s, t))
-<a name="l00017"></a>00017     {
-<a name="l00018"></a>00018         <span class="keywordflow">if</span> (<a class="code" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes.">larEstVide</a>(f) || <a class="code" href="structArete.html#aee57c994798f0be50c557ccdae4c191b" title="Poids de l&#39;Arete.">aPoids</a>(<a class="code" href="structListeArete.html#a6797b32b731e6988f276ce6a0493cbf6" title="Arête en tête de liste.">larAreteTete</a>(f)) &gt;= poids)
-<a name="l00019"></a>00019         {
-<a name="l00020"></a>00020             f = <a class="code" href="structListeArete.html#a2b83d484c2c6e028c18c1b2533c0dc51" title="Ajouter une arête dans la file liste.">larAjouterAreteTete</a>(f, s, t, poids);
-<a name="l00021"></a>00021         }
-<a name="l00022"></a>00022         <span class="keywordflow">else</span>
-<a name="l00023"></a>00023         {
-<a name="l00024"></a>00024             <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">FileAreteTriee</a> * fs = f;
-<a name="l00025"></a>00025 
-<a name="l00026"></a>00026             <span class="keywordflow">while</span> (!<a class="code" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes.">larEstVide</a>(<a class="code" href="structListeArete.html#a36f1394356a54a87aea7ed4b7becc73f" title="Arête suivante dans la liste.">larSuivante</a>(fs)) &amp;&amp; <a class="code" href="structArete.html#aee57c994798f0be50c557ccdae4c191b" title="Poids de l&#39;Arete.">aPoids</a>(<a class="code" href="structListeArete.html#a6797b32b731e6988f276ce6a0493cbf6" title="Arête en tête de liste.">larAreteTete</a>(<a class="code" href="structListeArete.html#a36f1394356a54a87aea7ed4b7becc73f" title="Arête suivante dans la liste.">larSuivante</a>(fs))) &lt; poids)
-<a name="l00027"></a>00027                 fs = <a class="code" href="structListeArete.html#a36f1394356a54a87aea7ed4b7becc73f" title="Arête suivante dans la liste.">larSuivante</a>(fs);
-<a name="l00028"></a>00028             fs-&gt;<a class="code" href="structListeArete.html#a80298de757d53b2f7c605b6b38b4aa51">suivante</a> = <a class="code" href="structListeArete.html#a2b83d484c2c6e028c18c1b2533c0dc51" title="Ajouter une arête dans la file liste.">larAjouterAreteTete</a>(<a class="code" href="structListeArete.html#a36f1394356a54a87aea7ed4b7becc73f" title="Arête suivante dans la liste.">larSuivante</a>(fs), s, t, poids);
-<a name="l00029"></a>00029         }
-<a name="l00030"></a>00030     }
-<a name="l00031"></a>00031 
-<a name="l00032"></a>00032     <span class="keywordflow">return</span> f;
-<a name="l00033"></a>00033 }
+<a name="l00016"></a>00016     <span class="keywordflow">return</span> NULL;
+<a name="l00017"></a>00017 }
+<a name="l00018"></a>00018 
+<a name="l00019"></a><a class="code" href="filearetetriee_8c.html#abbcee6e08a35268f0717f345dca55f28">00019</a> <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">FileAreteTriee</a> * <a class="code" href="structListeArete.html#a9e15a5b2d47991095d1a242d41f08b82" title="Ajouter une arête dans la file triée.">ftAjouterArete</a>(<a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">FileAreteTriee</a> * f, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * t, <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> poids)
+<a name="l00020"></a>00020 {
+<a name="l00021"></a>00021     <span class="keywordflow">if</span> (!<a class="code" href="structListeArete.html#ad86e48457c41a61508583fef666992c4" title="Test d&#39;existence d&#39;une arête.">larExisteArete</a>(f, s, t))
+<a name="l00022"></a>00022     {
+<a name="l00023"></a>00023         <span class="keywordflow">if</span> (<a class="code" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes.">larEstVide</a>(f) || <a class="code" href="structArete.html#aee57c994798f0be50c557ccdae4c191b" title="Poids de l&#39;Arete.">aPoids</a>(<a class="code" href="structListeArete.html#a6797b32b731e6988f276ce6a0493cbf6" title="Arête en tête de liste.">larAreteTete</a>(f)) &gt;= poids)
+<a name="l00024"></a>00024         {
+<a name="l00025"></a>00025             f = <a class="code" href="structListeArete.html#a2b83d484c2c6e028c18c1b2533c0dc51" title="Ajouter une arête dans la file liste.">larAjouterAreteTete</a>(f, s, t, poids);
+<a name="l00026"></a>00026         }
+<a name="l00027"></a>00027         <span class="keywordflow">else</span>
+<a name="l00028"></a>00028         {
+<a name="l00029"></a>00029             <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">FileAreteTriee</a> * fs = f;
+<a name="l00030"></a>00030 
+<a name="l00031"></a>00031             <span class="keywordflow">while</span> (!<a class="code" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes.">larEstVide</a>(<a class="code" href="structListeArete.html#a36f1394356a54a87aea7ed4b7becc73f" title="Arête suivante dans la liste.">larSuivante</a>(fs)) &amp;&amp; <a class="code" href="structArete.html#aee57c994798f0be50c557ccdae4c191b" title="Poids de l&#39;Arete.">aPoids</a>(<a class="code" href="structListeArete.html#a6797b32b731e6988f276ce6a0493cbf6" title="Arête en tête de liste.">larAreteTete</a>(<a class="code" href="structListeArete.html#a36f1394356a54a87aea7ed4b7becc73f" title="Arête suivante dans la liste.">larSuivante</a>(fs))) &lt; poids)
+<a name="l00032"></a>00032                 fs = <a class="code" href="structListeArete.html#a36f1394356a54a87aea7ed4b7becc73f" title="Arête suivante dans la liste.">larSuivante</a>(fs);
+<a name="l00033"></a>00033             fs-&gt;<a class="code" href="structListeArete.html#a80298de757d53b2f7c605b6b38b4aa51">suivante</a> = <a class="code" href="structListeArete.html#a2b83d484c2c6e028c18c1b2533c0dc51" title="Ajouter une arête dans la file liste.">larAjouterAreteTete</a>(<a class="code" href="structListeArete.html#a36f1394356a54a87aea7ed4b7becc73f" title="Arête suivante dans la liste.">larSuivante</a>(fs), s, t, poids);
+<a name="l00034"></a>00034         }
+<a name="l00035"></a>00035     }
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037     <span class="keywordflow">return</span> f;
+<a name="l00038"></a>00038 }
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -145,7 +149,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Vendredi Avril 19 2013 18:08:38 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Samedi Avril 27 2013 23:17:00 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

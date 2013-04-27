@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="dir_307baa3f0b4442ad1de385c197155be8.html">src</a>      </li>
+      <li class="navelem"><a class="el" href="dir_f698a076f5ac3ef0691a17cfde4f7ef2.html">src</a>      </li>
     </ul>
   </div>
 </div>
@@ -99,49 +99,53 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="title">sommet.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="sommet_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="sommet_8h.html" title="Gestion de la sorte Sommet (header)">sommet.h</a>&quot;</span>
-<a name="l00008"></a>00008 
-<a name="l00009"></a><a class="code" href="sommet_8c.html#a1b1972e69c3a1800d854ea6c0687e4a7">00009</a> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a> (<span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * a, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * b){
-<a name="l00010"></a>00010     <span class="keywordflow">if</span> (a == NULL &amp;&amp; b == NULL)
-<a name="l00011"></a>00011         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
-<a name="l00012"></a>00012     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (a == NULL || b == NULL)
-<a name="l00013"></a>00013         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
-<a name="l00014"></a>00014     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(a,b) == 0)
-<a name="l00015"></a>00015         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
-<a name="l00016"></a>00016     <span class="keywordflow">else</span>
-<a name="l00017"></a>00017         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
-<a name="l00018"></a>00018 }
-<a name="l00019"></a>00019 
-<a name="l00020"></a><a class="code" href="sommet_8c.html#a98c119f316a62e6ce2b2858f000b8e06">00020</a> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * <a class="code" href="sommet_8h.html#a98c119f316a62e6ce2b2858f000b8e06" title="Retourne une copie de s, allouée dynamiquement.">copieSommet</a>(<span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s)
-<a name="l00021"></a>00021 {
-<a name="l00022"></a>00022     <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * copie = NULL;
-<a name="l00023"></a>00023 
-<a name="l00024"></a>00024     copie = <a class="code" href="base_8h.html#a66f86b7a62cf1c6c9afeaa47c610b750" title="Allouer un tableau de taille N.">MALLOCN</a>(copie, strlen(s) + 1);
-<a name="l00025"></a>00025     <span class="keywordflow">if</span> (copie != NULL)
-<a name="l00026"></a>00026         copie = strcpy(copie, s);
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028     <span class="keywordflow">return</span> copie;
-<a name="l00029"></a>00029 }
-<a name="l00030"></a>00030 
-<a name="l00031"></a><a class="code" href="sommet_8c.html#abc856b04b4711a2764bbef3778e1d8a1">00031</a> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * <a class="code" href="sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement.">libererSommet</a>(<a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s)
-<a name="l00032"></a>00032 {
-<a name="l00033"></a>00033     free(s);
-<a name="l00034"></a>00034     <span class="keywordflow">return</span> NULL;
-<a name="l00035"></a>00035 }
-<a name="l00036"></a>00036 
-<a name="l00037"></a><a class="code" href="sommet_8c.html#aaf4781a6a403492e9e136171933aa10c">00037</a> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * <a class="code" href="sommet_8h.html#aaf4781a6a403492e9e136171933aa10c" title="Modifier un Sommet.">modSommet</a>(<a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * t)
-<a name="l00038"></a>00038 {
-<a name="l00039"></a>00039     <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * nouveau = NULL;
-<a name="l00040"></a>00040 
-<a name="l00041"></a>00041     nouveau = <a class="code" href="sommet_8h.html#a98c119f316a62e6ce2b2858f000b8e06" title="Retourne une copie de s, allouée dynamiquement.">copieSommet</a>(t);
-<a name="l00042"></a>00042     <span class="keywordflow">if</span> (nouveau != NULL)
-<a name="l00043"></a>00043     {
-<a name="l00044"></a>00044         <a class="code" href="sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement.">libererSommet</a>(s);
-<a name="l00045"></a>00045     }
-<a name="l00046"></a>00046 
-<a name="l00047"></a>00047     <span class="keywordflow">return</span> nouveau;
-<a name="l00048"></a>00048 }
+<a href="sommet_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/* This program is free software. It comes WITHOUT ANY WARRANTY, to</span>
+<a name="l00002"></a>00002 <span class="comment">* the extent permitted by applicable law. You can redistribute it</span>
+<a name="l00003"></a>00003 <span class="comment">* and/or modify it under the terms of the Do What The Fuck You Want</span>
+<a name="l00004"></a>00004 <span class="comment">* To Public License, Version 2, as published by Sam Hocevar. See</span>
+<a name="l00005"></a>00005 <span class="comment">* http://wtfpl.net for more details. */</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="sommet_8h.html" title="Gestion de la sorte Sommet (header)">sommet.h</a>&quot;</span>
+<a name="l00013"></a>00013 
+<a name="l00014"></a><a class="code" href="sommet_8c.html#a1b1972e69c3a1800d854ea6c0687e4a7">00014</a> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a> (<span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * a, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * b){
+<a name="l00015"></a>00015     <span class="keywordflow">if</span> (a == NULL &amp;&amp; b == NULL)
+<a name="l00016"></a>00016         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
+<a name="l00017"></a>00017     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (a == NULL || b == NULL)
+<a name="l00018"></a>00018         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+<a name="l00019"></a>00019     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp(a,b) == 0)
+<a name="l00020"></a>00020         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
+<a name="l00021"></a>00021     <span class="keywordflow">else</span>
+<a name="l00022"></a>00022         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+<a name="l00023"></a>00023 }
+<a name="l00024"></a>00024 
+<a name="l00025"></a><a class="code" href="sommet_8c.html#a98c119f316a62e6ce2b2858f000b8e06">00025</a> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * <a class="code" href="sommet_8h.html#a98c119f316a62e6ce2b2858f000b8e06" title="Retourne une copie de s, allouée dynamiquement.">copieSommet</a>(<span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s)
+<a name="l00026"></a>00026 {
+<a name="l00027"></a>00027     <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * copie = NULL;
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029     copie = <a class="code" href="base_8h.html#a66f86b7a62cf1c6c9afeaa47c610b750" title="Allouer un tableau de taille N.">MALLOCN</a>(copie, strlen(s) + 1);
+<a name="l00030"></a>00030     <span class="keywordflow">if</span> (copie != NULL)
+<a name="l00031"></a>00031         copie = strcpy(copie, s);
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033     <span class="keywordflow">return</span> copie;
+<a name="l00034"></a>00034 }
+<a name="l00035"></a>00035 
+<a name="l00036"></a><a class="code" href="sommet_8c.html#abc856b04b4711a2764bbef3778e1d8a1">00036</a> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * <a class="code" href="sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement.">libererSommet</a>(<a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s)
+<a name="l00037"></a>00037 {
+<a name="l00038"></a>00038     free(s);
+<a name="l00039"></a>00039     <span class="keywordflow">return</span> NULL;
+<a name="l00040"></a>00040 }
+<a name="l00041"></a>00041 
+<a name="l00042"></a><a class="code" href="sommet_8c.html#aaf4781a6a403492e9e136171933aa10c">00042</a> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * <a class="code" href="sommet_8h.html#aaf4781a6a403492e9e136171933aa10c" title="Modifier un Sommet.">modSommet</a>(<a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * t)
+<a name="l00043"></a>00043 {
+<a name="l00044"></a>00044     <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * nouveau = NULL;
+<a name="l00045"></a>00045 
+<a name="l00046"></a>00046     nouveau = <a class="code" href="sommet_8h.html#a98c119f316a62e6ce2b2858f000b8e06" title="Retourne une copie de s, allouée dynamiquement.">copieSommet</a>(t);
+<a name="l00047"></a>00047     <span class="keywordflow">if</span> (nouveau != NULL)
+<a name="l00048"></a>00048     {
+<a name="l00049"></a>00049         <a class="code" href="sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement.">libererSommet</a>(s);
+<a name="l00050"></a>00050     }
+<a name="l00051"></a>00051 
+<a name="l00052"></a>00052     <span class="keywordflow">return</span> nouveau;
+<a name="l00053"></a>00053 }
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -160,7 +164,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Vendredi Avril 19 2013 18:08:38 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Samedi Avril 27 2013 23:17:00 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

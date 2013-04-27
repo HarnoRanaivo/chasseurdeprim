@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="dir_d027f5d2eee5f38b54bb3db43d132c50.html">include</a>      </li>
+      <li class="navelem"><a class="el" href="dir_6570b8eaffc1d650912f1c36f17cf20f.html">include</a>      </li>
     </ul>
   </div>
 </div>
@@ -125,7 +125,7 @@ Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier
 <div class="dyncontent">
 <div class="center"><img src="grapheconnexe_8h__dep__incl.png" border="0" usemap="#include_2grapheconnexe_8hdep" alt=""/></div>
 <map name="include_2grapheconnexe_8hdep" id="include_2grapheconnexe_8hdep">
-<area shape="rect" id="node3" href="grapheconnexe_8c.html" title="GrapheConnexes (code)" alt="" coords="17,83,159,112"/></map>
+<area shape="rect" id="node3" href="prompt_8h.html" title="Prompt (header)" alt="" coords="44,83,161,112"/><area shape="rect" id="node9" href="grapheconnexe_8c.html" title="GrapheConnexes (code)" alt="" coords="185,83,327,112"/><area shape="rect" id="node5" href="main_8c.html" title="Main." alt="" coords="5,160,88,189"/><area shape="rect" id="node7" href="prompt_8c.html" title="Prompt (code)" alt="" coords="112,160,205,189"/></map>
 </div>
 </div>
 <p><a href="grapheconnexe_8h_source.html">Aller au code source de ce fichier.</a></p>
@@ -212,7 +212,7 @@ Fonctions</h2></td></tr>
 <li>Si les deux <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> existent, on peut ajouter l'arête. </li>
 </ul>
 
-<p>Définition à la ligne <a class="el" href="grapheconnexe_8c_source.html#l00021">21</a> du fichier <a class="el" href="grapheconnexe_8c_source.html">grapheconnexe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="grapheconnexe_8c_source.html#l00026">26</a> du fichier <a class="el" href="grapheconnexe_8c_source.html">grapheconnexe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe.">gEstVide</a>(g) || <a class="code" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe.">gExisteSommet</a>(g, a) || <a class="code" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe.">gExisteSommet</a>(g, b))
         g = <a class="code" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe.">gAjouterArete</a>(g, a, b, p);
@@ -267,7 +267,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>GrapheConnexe.</dd></dl>
 <p>N'ajoute le <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> dans le GrapheConnexe <em>g</em> que si le GrapheConnexe reste connexe après l'ajout : n'ajoute le <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> que si <em>g</em> est vide ! (On considère qu'un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> ayant un seul <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> est connexe.) </p>
 
-<p>Définition à la ligne <a class="el" href="grapheconnexe_8c_source.html#l00013">13</a> du fichier <a class="el" href="grapheconnexe_8c_source.html">grapheconnexe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="grapheconnexe_8c_source.html#l00018">18</a> du fichier <a class="el" href="grapheconnexe_8c_source.html">grapheconnexe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe.">gEstVide</a>(g))
         <span class="keywordflow">return</span> <a class="code" href="structGraphe.html#a420bc7f2ad2301c4565dce8c29a14286" title="Ajout d&#39;un sommet dans un Graphe.">gAjouterSommet</a>(g, s);
@@ -336,7 +336,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="pre"><dt><b>Précondition:</b></dt><dd>gestconnexe(g) </dd></dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>grapheconnexe. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="grapheconnexe_8c_source.html#l00058">58</a> du fichier <a class="el" href="grapheconnexe_8c_source.html">grapheconnexe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="grapheconnexe_8c_source.html#l00063">63</a> du fichier <a class="el" href="grapheconnexe_8c_source.html">grapheconnexe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> <a class="code" href="structGraphe.html#a64fd41af976a8447604e9e95d93b71cf" title="Modification d&#39;une arête dans un Graphe.">gModifierArete</a>(g, a, b, p);
 }
@@ -370,7 +370,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <p>Nouveau <a class="el" href="grapheconnexe_8h.html#a35645148e2f7fa8729806f88b12040f1" title="GrapheConnexe.">GrapheConnexe</a>. </p>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>NULL </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="grapheconnexe_8c_source.html#l00008">8</a> du fichier <a class="el" href="grapheconnexe_8c_source.html">grapheconnexe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="grapheconnexe_8c_source.html#l00013">13</a> du fichier <a class="el" href="grapheconnexe_8c_source.html">grapheconnexe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> <a class="code" href="structGraphe.html#aaf6e3b452d5d36e54cdebf1f9bdbdb14" title="Nouveau Graphe.">gNouv</a>();
 }
@@ -430,7 +430,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>GrapheConnexe.</dd></dl>
 <p>Supprime l'arête entre les <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <em>a</em> et <em>b</em>, si et seulement si le <a class="el" href="grapheconnexe_8h.html#a35645148e2f7fa8729806f88b12040f1" title="GrapheConnexe.">GrapheConnexe</a> <em>g</em> reste connexe. </p>
 
-<p>Définition à la ligne <a class="el" href="grapheconnexe_8c_source.html#l00047">47</a> du fichier <a class="el" href="grapheconnexe_8c_source.html">grapheconnexe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="grapheconnexe_8c_source.html#l00052">52</a> du fichier <a class="el" href="grapheconnexe_8c_source.html">grapheconnexe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> p = <a class="code" href="structGraphe.html#a50bed59aba5c8e5843e16932aabcbd2a" title="Poids d&#39;une arête.">gPoidsArete</a>(g, a, b);
     g = <a class="code" href="structGraphe.html#a183405c1312d76628db9de7079b0beaa" title="Suppression d&#39;une arête dans un Graphe.">gSupprimerArete</a>(g, a, b);
@@ -489,7 +489,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>GrapheConnexe.</dd></dl>
 <p>Supprime le <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <em>s</em> du <a class="el" href="grapheconnexe_8h.html#a35645148e2f7fa8729806f88b12040f1" title="GrapheConnexe.">GrapheConnexe</a> <em>g</em>, en supprimant toutes les arêtes incidentes à <em>s</em>, si et seulement si <em>g</em> reste connexe. </p>
 
-<p>Définition à la ligne <a class="el" href="grapheconnexe_8c_source.html#l00029">29</a> du fichier <a class="el" href="grapheconnexe_8c_source.html">grapheconnexe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="grapheconnexe_8c_source.html#l00034">34</a> du fichier <a class="el" href="grapheconnexe_8c_source.html">grapheconnexe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">GrapheConnexe</a> * g0 = <a class="code" href="structGraphe.html#a0aa5aacc4cc9cb1e489a7bb295dcead4" title="Suppression d&#39;un sommet dans un Graphe.">gSupprimerSommet</a>(<a class="code" href="structGraphe.html#a023f0542e3b7c6b7716d3984b0361453" title="Copie d&#39;un Graphe.">gCopier</a>(g), s);
 
@@ -536,7 +536,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Vendredi Avril 19 2013 18:08:38 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Samedi Avril 27 2013 23:17:01 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

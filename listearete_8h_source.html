@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="dir_d027f5d2eee5f38b54bb3db43d132c50.html">include</a>      </li>
+      <li class="navelem"><a class="el" href="dir_6570b8eaffc1d650912f1c36f17cf20f.html">include</a>      </li>
     </ul>
   </div>
 </div>
@@ -99,48 +99,52 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="title">listearete.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="listearete_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
-<a name="l00006"></a>00006 <span class="preprocessor">#ifndef __LISTEARETE_H</span>
-<a name="l00007"></a>00007 <span class="preprocessor"></span><span class="preprocessor">#define __LISTEARETE_H</span>
-<a name="l00008"></a>00008 <span class="preprocessor"></span>
-<a name="l00009"></a>00009 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
-<a name="l00010"></a>00010 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
-<a name="l00011"></a>00011 
-<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="base_8h.html" title="Base (header)">base.h</a>&quot;</span>
-<a name="l00013"></a>00013 <span class="preprocessor">#include &quot;<a class="code" href="sommet_8h.html" title="Gestion de la sorte Sommet (header)">sommet.h</a>&quot;</span>
-<a name="l00014"></a>00014 <span class="preprocessor">#include &quot;<a class="code" href="arete_8h.html" title="Arêtes (header)">arete.h</a>&quot;</span>
-<a name="l00015"></a>00015 
-<a name="l00045"></a><a class="code" href="structListeArete.html">00045</a> <span class="keyword">struct </span><a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a>
-<a name="l00046"></a>00046 {
-<a name="l00047"></a><a class="code" href="structListeArete.html#af81f3d6033e744d199ff07a69c6e97ff">00047</a>     <a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> * <a class="code" href="structListeArete.html#af81f3d6033e744d199ff07a69c6e97ff">arete</a>;                  
-<a name="l00048"></a><a class="code" href="structListeArete.html#a80298de757d53b2f7c605b6b38b4aa51">00048</a>     <span class="keyword">struct </span><a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * <a class="code" href="structListeArete.html#a80298de757d53b2f7c605b6b38b4aa51">suivante</a>;    
-<a name="l00049"></a>00049 };
-<a name="l00050"></a>00050 
-<a name="l00054"></a>00054 <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a>;
+<a href="listearete_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/* This program is free software. It comes WITHOUT ANY WARRANTY, to</span>
+<a name="l00002"></a>00002 <span class="comment">* the extent permitted by applicable law. You can redistribute it</span>
+<a name="l00003"></a>00003 <span class="comment">* and/or modify it under the terms of the Do What The Fuck You Want</span>
+<a name="l00004"></a>00004 <span class="comment">* To Public License, Version 2, as published by Sam Hocevar. See</span>
+<a name="l00005"></a>00005 <span class="comment">* http://wtfpl.net for more details. */</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#ifndef __LISTEARETE_H</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span><span class="preprocessor">#define __LISTEARETE_H</span>
+<a name="l00013"></a>00013 <span class="preprocessor"></span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
+<a name="l00016"></a>00016 
+<a name="l00017"></a>00017 <span class="preprocessor">#include &quot;<a class="code" href="base_8h.html" title="Base (header)">base.h</a>&quot;</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &quot;<a class="code" href="sommet_8h.html" title="Gestion de la sorte Sommet (header)">sommet.h</a>&quot;</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &quot;<a class="code" href="arete_8h.html" title="Arêtes (header)">arete.h</a>&quot;</span>
+<a name="l00020"></a>00020 
+<a name="l00050"></a><a class="code" href="structListeArete.html">00050</a> <span class="keyword">struct </span><a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a>
+<a name="l00051"></a>00051 {
+<a name="l00052"></a><a class="code" href="structListeArete.html#af81f3d6033e744d199ff07a69c6e97ff">00052</a>     <a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> * <a class="code" href="structListeArete.html#af81f3d6033e744d199ff07a69c6e97ff">arete</a>;                  
+<a name="l00053"></a><a class="code" href="structListeArete.html#a80298de757d53b2f7c605b6b38b4aa51">00053</a>     <span class="keyword">struct </span><a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * <a class="code" href="structListeArete.html#a80298de757d53b2f7c605b6b38b4aa51">suivante</a>;    
+<a name="l00054"></a>00054 };
 <a name="l00055"></a>00055 
-<a name="l00061"></a>00061 <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * <a class="code" href="structListeArete.html#a4b3acdc91e28dbbd885968b16a05e57e" title="Nouvelle liste d&#39;arêtes.">larNouv</a>(<span class="keywordtype">void</span>);
-<a name="l00062"></a>00062 
-<a name="l00074"></a>00074 <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * <a class="code" href="structListeArete.html#a2b83d484c2c6e028c18c1b2533c0dc51" title="Ajouter une arête dans la file liste.">larAjouterAreteTete</a>(<a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * l, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * a, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * b, <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> poids);
-<a name="l00075"></a>00075 
-<a name="l00084"></a>00084 <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * <a class="code" href="structListeArete.html#afd562a9130916110f6c783dbe200fc87" title="Supprimer l&#39;arête en tête de liste.">larSupprimerTete</a>(<a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * l);
-<a name="l00085"></a>00085 
-<a name="l00096"></a>00096 <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * <a class="code" href="structListeArete.html#a89de2732f9e53aeba1fd29c645fdaa5d" title="Supprimer une arête dans la liste.">larSupprimerArete</a>(<a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * l, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * a, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * b);
-<a name="l00097"></a>00097 
-<a name="l00106"></a>00106 <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes.">larEstVide</a>(<span class="keyword">const</span> <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * l);
-<a name="l00107"></a>00107 
-<a name="l00116"></a>00116 <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="structListeArete.html#ad86e48457c41a61508583fef666992c4" title="Test d&#39;existence d&#39;une arête.">larExisteArete</a>(<span class="keyword">const</span> <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * l, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * a, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * b);
-<a name="l00117"></a>00117 
-<a name="l00124"></a>00124 <a class="code" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683" title="Entiers naturels.">Nat</a> <a class="code" href="structListeArete.html#aa067d1952e548be91bb2d26bd204db05" title="Nombre d&#39;arêtes dans la liste.">larNombreAretes</a>(<span class="keyword">const</span> <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * l);
-<a name="l00125"></a>00125 
-<a name="l00135"></a>00135 <a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> * <a class="code" href="structListeArete.html#a6797b32b731e6988f276ce6a0493cbf6" title="Arête en tête de liste.">larAreteTete</a>(<span class="keyword">const</span> <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * l);
-<a name="l00136"></a>00136 
-<a name="l00147"></a>00147 <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * <a class="code" href="structListeArete.html#acc89ff07336146ba511fac9bb635268a" title="Pointeur vers la sous-liste commençant par l&#39;arête a,b.">larPArete</a>(<span class="keyword">const</span> <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> *l, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * a, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> *b);
-<a name="l00148"></a>00148 
-<a name="l00157"></a>00157 <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * <a class="code" href="structListeArete.html#a36f1394356a54a87aea7ed4b7becc73f" title="Arête suivante dans la liste.">larSuivante</a>(<span class="keyword">const</span> <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * l);
-<a name="l00158"></a>00158 
-<a name="l00167"></a>00167 <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * <a class="code" href="structListeArete.html#ada58497f99418f22b04c25525485b4be" title="Libérer une liste d&#39;arêtes.">larLiberer</a>(<a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * l);
-<a name="l00168"></a>00168 
-<a name="l00169"></a>00169 <span class="preprocessor">#endif </span><span class="comment">/* __LISTEARETE_H */</span>
+<a name="l00059"></a>00059 <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a>;
+<a name="l00060"></a>00060 
+<a name="l00066"></a>00066 <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * <a class="code" href="structListeArete.html#a4b3acdc91e28dbbd885968b16a05e57e" title="Nouvelle liste d&#39;arêtes.">larNouv</a>(<span class="keywordtype">void</span>);
+<a name="l00067"></a>00067 
+<a name="l00079"></a>00079 <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * <a class="code" href="structListeArete.html#a2b83d484c2c6e028c18c1b2533c0dc51" title="Ajouter une arête dans la file liste.">larAjouterAreteTete</a>(<a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * l, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * a, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * b, <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> poids);
+<a name="l00080"></a>00080 
+<a name="l00089"></a>00089 <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * <a class="code" href="structListeArete.html#afd562a9130916110f6c783dbe200fc87" title="Supprimer l&#39;arête en tête de liste.">larSupprimerTete</a>(<a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * l);
+<a name="l00090"></a>00090 
+<a name="l00101"></a>00101 <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * <a class="code" href="structListeArete.html#a89de2732f9e53aeba1fd29c645fdaa5d" title="Supprimer une arête dans la liste.">larSupprimerArete</a>(<a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * l, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * a, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * b);
+<a name="l00102"></a>00102 
+<a name="l00111"></a>00111 <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes.">larEstVide</a>(<span class="keyword">const</span> <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * l);
+<a name="l00112"></a>00112 
+<a name="l00121"></a>00121 <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="structListeArete.html#ad86e48457c41a61508583fef666992c4" title="Test d&#39;existence d&#39;une arête.">larExisteArete</a>(<span class="keyword">const</span> <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * l, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * a, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * b);
+<a name="l00122"></a>00122 
+<a name="l00129"></a>00129 <a class="code" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683" title="Entiers naturels.">Nat</a> <a class="code" href="structListeArete.html#aa067d1952e548be91bb2d26bd204db05" title="Nombre d&#39;arêtes dans la liste.">larNombreAretes</a>(<span class="keyword">const</span> <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * l);
+<a name="l00130"></a>00130 
+<a name="l00140"></a>00140 <a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> * <a class="code" href="structListeArete.html#a6797b32b731e6988f276ce6a0493cbf6" title="Arête en tête de liste.">larAreteTete</a>(<span class="keyword">const</span> <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * l);
+<a name="l00141"></a>00141 
+<a name="l00152"></a>00152 <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * <a class="code" href="structListeArete.html#acc89ff07336146ba511fac9bb635268a" title="Pointeur vers la sous-liste commençant par l&#39;arête a,b.">larPArete</a>(<span class="keyword">const</span> <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> *l, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * a, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> *b);
+<a name="l00153"></a>00153 
+<a name="l00162"></a>00162 <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * <a class="code" href="structListeArete.html#a36f1394356a54a87aea7ed4b7becc73f" title="Arête suivante dans la liste.">larSuivante</a>(<span class="keyword">const</span> <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * l);
+<a name="l00163"></a>00163 
+<a name="l00172"></a>00172 <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * <a class="code" href="structListeArete.html#ada58497f99418f22b04c25525485b4be" title="Libérer une liste d&#39;arêtes.">larLiberer</a>(<a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * l);
+<a name="l00173"></a>00173 
+<a name="l00174"></a>00174 <span class="preprocessor">#endif </span><span class="comment">/* __LISTEARETE_H */</span>
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -159,7 +163,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Vendredi Avril 19 2013 18:08:38 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Samedi Avril 27 2013 23:17:00 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

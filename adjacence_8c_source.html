@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="dir_307baa3f0b4442ad1de385c197155be8.html">src</a>      </li>
+      <li class="navelem"><a class="el" href="dir_f698a076f5ac3ef0691a17cfde4f7ef2.html">src</a>      </li>
     </ul>
   </div>
 </div>
@@ -99,145 +99,149 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="title">adjacence.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="adjacence_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)">adjacence.h</a>&quot;</span>
-<a name="l00008"></a>00008 
-<a name="l00009"></a><a class="code" href="adjacence_8c.html#aea46a39339f8e90f3e030e08b3f82abb">00009</a> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * <a class="code" href="structListeAdjacence.html#a7dc0752d2383f098164ce927ff814374" title="Crée une nouvelle ListeAdjacence vide.">listnouv</a>(){
-<a name="l00010"></a>00010     <span class="keywordflow">return</span> (<a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> *)NULL;
-<a name="l00011"></a>00011 }
-<a name="l00012"></a>00012 
-<a name="l00013"></a><a class="code" href="adjacence_8c.html#ad070758d1ac3fb3de6ba4c91d42bbf9c">00013</a> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * <a class="code" href="structListeAdjacence.html#a12ebd05a5557ea011da705926c8d8138" title="Ajoute une arête à la liste avec son poids.">lajar</a> (<a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s, <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> x){
-<a name="l00014"></a>00014     <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l1 = NULL;
-<a name="l00015"></a>00015     l1 = (<a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> *)<a class="code" href="base_8h.html#aed83343b5b2cdb908229b4fac27cd282" title="Allouer de la mémoire.">MALLOC</a>(l1);
-<a name="l00016"></a>00016     l1-&gt;<a class="code" href="structListeAdjacence.html#a080b35c0b509cc91591dc1fa5b25e0a3">poids</a> = x;
-<a name="l00017"></a>00017     l1-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a> = <a class="code" href="sommet_8h.html#a98c119f316a62e6ce2b2858f000b8e06" title="Retourne une copie de s, allouée dynamiquement.">copieSommet</a>(s);
-<a name="l00018"></a>00018     l1-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a> = l;
-<a name="l00019"></a>00019     
-<a name="l00020"></a>00020     <span class="keywordflow">return</span> l1;
-<a name="l00021"></a>00021 }
-<a name="l00022"></a>00022 
-<a name="l00023"></a><a class="code" href="adjacence_8c.html#a455c61ae02625f9cf4750d4c3b302266">00023</a> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * <a class="code" href="structListeAdjacence.html#a644fd666d73fd378ea209aa707c99462" title="Supprime une arête de la ListeAdjacence l.">lsupar</a> (<a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s){
-<a name="l00024"></a>00024     <span class="keywordflow">if</span> (!<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(l)){
-<a name="l00025"></a>00025         <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * ln = l;
-<a name="l00026"></a>00026         <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * ls;
-<a name="l00027"></a>00027         
-<a name="l00028"></a>00028         <span class="keywordflow">if</span> (<a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(ln-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>, s)){
-<a name="l00029"></a>00029             l = l-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>;
-<a name="l00030"></a>00030             ln-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a> = <a class="code" href="sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement.">libererSommet</a>(ln-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>);
-<a name="l00031"></a>00031             free(ln);
-<a name="l00032"></a>00032         }
-<a name="l00033"></a>00033         <span class="keywordflow">else</span>{
-<a name="l00034"></a>00034             <span class="keywordflow">while</span> (!<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(ln-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>) &amp;&amp; !<a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(ln-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>, s)){
-<a name="l00035"></a>00035                 ln = ln-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>;
-<a name="l00036"></a>00036             }
-<a name="l00037"></a>00037         
-<a name="l00038"></a>00038             <span class="keywordflow">if</span> (!<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(ln-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>) &amp;&amp; <a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(ln-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>, s)){ 
-<a name="l00039"></a>00039                 ls = ln-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>; 
-<a name="l00040"></a>00040                 ln-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a> = ln-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>;
-<a name="l00041"></a>00041                 ls-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a> = <a class="code" href="sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement.">libererSommet</a>(ls-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>);
-<a name="l00042"></a>00042                 free(ls);
-<a name="l00043"></a>00043             }
-<a name="l00044"></a>00044         
-<a name="l00045"></a>00045         }
-<a name="l00046"></a>00046     }
-<a name="l00047"></a>00047     <span class="keywordflow">return</span> l;
-<a name="l00048"></a>00048 }
-<a name="l00049"></a>00049 
-<a name="l00050"></a><a class="code" href="adjacence_8c.html#a91c09f92f890d967554ef6d4c3a128ed">00050</a> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a> (<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l){ <span class="keywordflow">return</span> l==NULL; }
-<a name="l00051"></a>00051 
-<a name="l00052"></a><a class="code" href="adjacence_8c.html#a1be47cfef3d6c1a3a8bdf0ca0a1d93d9">00052</a> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="structListeAdjacence.html#a1be47cfef3d6c1a3a8bdf0ca0a1d93d9" title="Vérifie l&#39;existence d&#39;une arête.">lexar</a> (<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s){
-<a name="l00053"></a>00053     <span class="keywordflow">while</span> (!<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(l)){
-<a name="l00054"></a>00054         <span class="keywordflow">if</span> (<a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(l-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>, s))
-<a name="l00055"></a>00055             <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
-<a name="l00056"></a>00056         <span class="keywordflow">else</span>
-<a name="l00057"></a>00057             l = l-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>;
-<a name="l00058"></a>00058     }
-<a name="l00059"></a>00059     <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
-<a name="l00060"></a>00060 }
-<a name="l00061"></a>00061 
-<a name="l00062"></a><a class="code" href="adjacence_8c.html#a59b84fdf31dbca03bdc25ba0763d9e84">00062</a> <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> <a class="code" href="structListeAdjacence.html#a59b84fdf31dbca03bdc25ba0763d9e84" title="Renvoie le poids d&#39;une arête.">lpoids</a>(<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s){
-<a name="l00063"></a>00063     <span class="keywordflow">while</span> (!<a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(l-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>, s))
-<a name="l00064"></a>00064         l = l-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>;
-<a name="l00065"></a>00065     <span class="keywordflow">return</span> l-&gt;<a class="code" href="structListeAdjacence.html#a080b35c0b509cc91591dc1fa5b25e0a3">poids</a>;
-<a name="l00066"></a>00066 }
-<a name="l00067"></a>00067 
-<a name="l00068"></a><a class="code" href="adjacence_8c.html#a3732102391b1ae2bc865c55d79d7b2d3">00068</a> <a class="code" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683" title="Entiers naturels.">Nat</a> <a class="code" href="structListeAdjacence.html#a3732102391b1ae2bc865c55d79d7b2d3" title="Retourne le nombre d&#39;arêtes dans la ListeAdjacence l.">ltaille</a> (<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l){
-<a name="l00069"></a>00069     <a class="code" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683" title="Entiers naturels.">Nat</a> cmpt = 0;
-<a name="l00070"></a>00070     
-<a name="l00071"></a>00071     <span class="keywordflow">while</span> (!<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(l)){
-<a name="l00072"></a>00072         cmpt++;
-<a name="l00073"></a>00073         l = l-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>;
-<a name="l00074"></a>00074     }
+<a href="adjacence_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/* This program is free software. It comes WITHOUT ANY WARRANTY, to</span>
+<a name="l00002"></a>00002 <span class="comment">* the extent permitted by applicable law. You can redistribute it</span>
+<a name="l00003"></a>00003 <span class="comment">* and/or modify it under the terms of the Do What The Fuck You Want</span>
+<a name="l00004"></a>00004 <span class="comment">* To Public License, Version 2, as published by Sam Hocevar. See</span>
+<a name="l00005"></a>00005 <span class="comment">* http://wtfpl.net for more details. */</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)">adjacence.h</a>&quot;</span>
+<a name="l00013"></a>00013 
+<a name="l00014"></a><a class="code" href="adjacence_8c.html#aea46a39339f8e90f3e030e08b3f82abb">00014</a> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * <a class="code" href="structListeAdjacence.html#a7dc0752d2383f098164ce927ff814374" title="Crée une nouvelle ListeAdjacence vide.">listnouv</a>(){
+<a name="l00015"></a>00015     <span class="keywordflow">return</span> (<a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> *)NULL;
+<a name="l00016"></a>00016 }
+<a name="l00017"></a>00017 
+<a name="l00018"></a><a class="code" href="adjacence_8c.html#ad070758d1ac3fb3de6ba4c91d42bbf9c">00018</a> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * <a class="code" href="structListeAdjacence.html#a12ebd05a5557ea011da705926c8d8138" title="Ajoute une arête à la liste avec son poids.">lajar</a> (<a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s, <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> x){
+<a name="l00019"></a>00019     <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l1 = NULL;
+<a name="l00020"></a>00020     l1 = (<a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> *)<a class="code" href="base_8h.html#aed83343b5b2cdb908229b4fac27cd282" title="Allouer de la mémoire.">MALLOC</a>(l1);
+<a name="l00021"></a>00021     l1-&gt;<a class="code" href="structListeAdjacence.html#a080b35c0b509cc91591dc1fa5b25e0a3">poids</a> = x;
+<a name="l00022"></a>00022     l1-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a> = <a class="code" href="sommet_8h.html#a98c119f316a62e6ce2b2858f000b8e06" title="Retourne une copie de s, allouée dynamiquement.">copieSommet</a>(s);
+<a name="l00023"></a>00023     l1-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a> = l;
+<a name="l00024"></a>00024     
+<a name="l00025"></a>00025     <span class="keywordflow">return</span> l1;
+<a name="l00026"></a>00026 }
+<a name="l00027"></a>00027 
+<a name="l00028"></a><a class="code" href="adjacence_8c.html#a455c61ae02625f9cf4750d4c3b302266">00028</a> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * <a class="code" href="structListeAdjacence.html#a644fd666d73fd378ea209aa707c99462" title="Supprime une arête de la ListeAdjacence l.">lsupar</a> (<a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s){
+<a name="l00029"></a>00029     <span class="keywordflow">if</span> (!<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(l)){
+<a name="l00030"></a>00030         <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * ln = l;
+<a name="l00031"></a>00031         <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * ls;
+<a name="l00032"></a>00032         
+<a name="l00033"></a>00033         <span class="keywordflow">if</span> (<a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(ln-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>, s)){
+<a name="l00034"></a>00034             l = l-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>;
+<a name="l00035"></a>00035             ln-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a> = <a class="code" href="sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement.">libererSommet</a>(ln-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>);
+<a name="l00036"></a>00036             free(ln);
+<a name="l00037"></a>00037         }
+<a name="l00038"></a>00038         <span class="keywordflow">else</span>{
+<a name="l00039"></a>00039             <span class="keywordflow">while</span> (!<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(ln-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>) &amp;&amp; !<a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(ln-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>, s)){
+<a name="l00040"></a>00040                 ln = ln-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>;
+<a name="l00041"></a>00041             }
+<a name="l00042"></a>00042         
+<a name="l00043"></a>00043             <span class="keywordflow">if</span> (!<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(ln-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>) &amp;&amp; <a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(ln-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>, s)){ 
+<a name="l00044"></a>00044                 ls = ln-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>; 
+<a name="l00045"></a>00045                 ln-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a> = ln-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>;
+<a name="l00046"></a>00046                 ls-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a> = <a class="code" href="sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement.">libererSommet</a>(ls-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>);
+<a name="l00047"></a>00047                 free(ls);
+<a name="l00048"></a>00048             }
+<a name="l00049"></a>00049         
+<a name="l00050"></a>00050         }
+<a name="l00051"></a>00051     }
+<a name="l00052"></a>00052     <span class="keywordflow">return</span> l;
+<a name="l00053"></a>00053 }
+<a name="l00054"></a>00054 
+<a name="l00055"></a><a class="code" href="adjacence_8c.html#a91c09f92f890d967554ef6d4c3a128ed">00055</a> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a> (<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l){ <span class="keywordflow">return</span> l==NULL; }
+<a name="l00056"></a>00056 
+<a name="l00057"></a><a class="code" href="adjacence_8c.html#a1be47cfef3d6c1a3a8bdf0ca0a1d93d9">00057</a> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="structListeAdjacence.html#a1be47cfef3d6c1a3a8bdf0ca0a1d93d9" title="Vérifie l&#39;existence d&#39;une arête.">lexar</a> (<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s){
+<a name="l00058"></a>00058     <span class="keywordflow">while</span> (!<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(l)){
+<a name="l00059"></a>00059         <span class="keywordflow">if</span> (<a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(l-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>, s))
+<a name="l00060"></a>00060             <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
+<a name="l00061"></a>00061         <span class="keywordflow">else</span>
+<a name="l00062"></a>00062             l = l-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>;
+<a name="l00063"></a>00063     }
+<a name="l00064"></a>00064     <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+<a name="l00065"></a>00065 }
+<a name="l00066"></a>00066 
+<a name="l00067"></a><a class="code" href="adjacence_8c.html#a59b84fdf31dbca03bdc25ba0763d9e84">00067</a> <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> <a class="code" href="structListeAdjacence.html#a59b84fdf31dbca03bdc25ba0763d9e84" title="Renvoie le poids d&#39;une arête.">lpoids</a>(<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s){
+<a name="l00068"></a>00068     <span class="keywordflow">while</span> (!<a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(l-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>, s))
+<a name="l00069"></a>00069         l = l-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>;
+<a name="l00070"></a>00070     <span class="keywordflow">return</span> l-&gt;<a class="code" href="structListeAdjacence.html#a080b35c0b509cc91591dc1fa5b25e0a3">poids</a>;
+<a name="l00071"></a>00071 }
+<a name="l00072"></a>00072 
+<a name="l00073"></a><a class="code" href="adjacence_8c.html#a3732102391b1ae2bc865c55d79d7b2d3">00073</a> <a class="code" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683" title="Entiers naturels.">Nat</a> <a class="code" href="structListeAdjacence.html#a3732102391b1ae2bc865c55d79d7b2d3" title="Retourne le nombre d&#39;arêtes dans la ListeAdjacence l.">ltaille</a> (<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l){
+<a name="l00074"></a>00074     <a class="code" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683" title="Entiers naturels.">Nat</a> cmpt = 0;
 <a name="l00075"></a>00075     
-<a name="l00076"></a>00076     <span class="keywordflow">return</span> cmpt;
-<a name="l00077"></a>00077 }
-<a name="l00078"></a>00078 
-<a name="l00079"></a><a class="code" href="adjacence_8c.html#a6a91c8062726a564ae11445a4c3e6a09">00079</a> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * <a class="code" href="structListeAdjacence.html#a12dbe07676e59a2aafe10eb964d07798" title="Libérer une liste d&#39;arêtes.">lliberer</a>(<a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l){
-<a name="l00080"></a>00080     <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l0 = NULL;
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082     <span class="keywordflow">while</span> (l != NULL){
-<a name="l00083"></a>00083         l0 = l-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>;
-<a name="l00084"></a>00084         l-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a> = <a class="code" href="sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement.">libererSommet</a>(l-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>);
-<a name="l00085"></a>00085         free(l);
-<a name="l00086"></a>00086         l = l0;
-<a name="l00087"></a>00087     }
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089     <span class="keywordflow">return</span> l;
-<a name="l00090"></a>00090 }
-<a name="l00091"></a>00091 
-<a name="l00092"></a><a class="code" href="adjacence_8c.html#a53c6c58a154cb503c0f233255e08bf50">00092</a> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * <a class="code" href="structListeAdjacence.html#a9a725aa5315b1dcbbdee6b9657263fdf" title="Copier une liste d&#39;arêtes.">lcopie</a>(<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l){
-<a name="l00093"></a>00093     <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * copie = <a class="code" href="structListeAdjacence.html#a7dc0752d2383f098164ce927ff814374" title="Crée une nouvelle ListeAdjacence vide.">listnouv</a>();
-<a name="l00094"></a>00094 
-<a name="l00095"></a>00095     <span class="keywordflow">while</span> (l != NULL){
-<a name="l00096"></a>00096         copie = <a class="code" href="structListeAdjacence.html#a12ebd05a5557ea011da705926c8d8138" title="Ajoute une arête à la liste avec son poids.">lajar</a>(copie, l-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>, l-&gt;<a class="code" href="structListeAdjacence.html#a080b35c0b509cc91591dc1fa5b25e0a3">poids</a>);
-<a name="l00097"></a>00097         l = l-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>;
-<a name="l00098"></a>00098     }
+<a name="l00076"></a>00076     <span class="keywordflow">while</span> (!<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(l)){
+<a name="l00077"></a>00077         cmpt++;
+<a name="l00078"></a>00078         l = l-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>;
+<a name="l00079"></a>00079     }
+<a name="l00080"></a>00080     
+<a name="l00081"></a>00081     <span class="keywordflow">return</span> cmpt;
+<a name="l00082"></a>00082 }
+<a name="l00083"></a>00083 
+<a name="l00084"></a><a class="code" href="adjacence_8c.html#a6a91c8062726a564ae11445a4c3e6a09">00084</a> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * <a class="code" href="structListeAdjacence.html#a12dbe07676e59a2aafe10eb964d07798" title="Libérer une liste d&#39;arêtes.">lliberer</a>(<a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l){
+<a name="l00085"></a>00085     <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l0 = NULL;
+<a name="l00086"></a>00086 
+<a name="l00087"></a>00087     <span class="keywordflow">while</span> (l != NULL){
+<a name="l00088"></a>00088         l0 = l-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>;
+<a name="l00089"></a>00089         l-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a> = <a class="code" href="sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement.">libererSommet</a>(l-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>);
+<a name="l00090"></a>00090         free(l);
+<a name="l00091"></a>00091         l = l0;
+<a name="l00092"></a>00092     }
+<a name="l00093"></a>00093 
+<a name="l00094"></a>00094     <span class="keywordflow">return</span> l;
+<a name="l00095"></a>00095 }
+<a name="l00096"></a>00096 
+<a name="l00097"></a><a class="code" href="adjacence_8c.html#a53c6c58a154cb503c0f233255e08bf50">00097</a> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * <a class="code" href="structListeAdjacence.html#a9a725aa5315b1dcbbdee6b9657263fdf" title="Copier une liste d&#39;arêtes.">lcopie</a>(<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l){
+<a name="l00098"></a>00098     <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * copie = <a class="code" href="structListeAdjacence.html#a7dc0752d2383f098164ce927ff814374" title="Crée une nouvelle ListeAdjacence vide.">listnouv</a>();
 <a name="l00099"></a>00099 
-<a name="l00100"></a>00100     <span class="keywordflow">return</span> copie;
-<a name="l00101"></a>00101 
-<a name="l00102"></a>00102 }
-<a name="l00103"></a>00103 
-<a name="l00104"></a><a class="code" href="adjacence_8c.html#a48be550950b7e71e834b94ef83b3ee4f">00104</a> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * <a class="code" href="structListeAdjacence.html#a50102d59bc1a65570e1a339caee9cec9" title="Modifier le poids d&#39;une arête.">lmod</a>(<a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s, <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> x){
-<a name="l00105"></a>00105     <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l0 = l;
+<a name="l00100"></a>00100     <span class="keywordflow">while</span> (l != NULL){
+<a name="l00101"></a>00101         copie = <a class="code" href="structListeAdjacence.html#a12ebd05a5557ea011da705926c8d8138" title="Ajoute une arête à la liste avec son poids.">lajar</a>(copie, l-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>, l-&gt;<a class="code" href="structListeAdjacence.html#a080b35c0b509cc91591dc1fa5b25e0a3">poids</a>);
+<a name="l00102"></a>00102         l = l-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>;
+<a name="l00103"></a>00103     }
+<a name="l00104"></a>00104 
+<a name="l00105"></a>00105     <span class="keywordflow">return</span> copie;
 <a name="l00106"></a>00106 
-<a name="l00107"></a>00107     <span class="keywordflow">while</span> (l0 != NULL &amp;&amp; !<a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(l0-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>, s))
-<a name="l00108"></a>00108         l0 = l0-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>;
-<a name="l00109"></a>00109     
-<a name="l00110"></a>00110     <span class="keywordflow">if</span> (<a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(l0-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>, s))
-<a name="l00111"></a>00111         l0-&gt;<a class="code" href="structListeAdjacence.html#a080b35c0b509cc91591dc1fa5b25e0a3">poids</a> = x;
-<a name="l00112"></a>00112 
-<a name="l00113"></a>00113     <span class="keywordflow">return</span> l;
-<a name="l00114"></a>00114 }
-<a name="l00115"></a>00115 
-<a name="l00116"></a><a class="code" href="adjacence_8c.html#ae47d1d9fc13935c2b80e5e69b1fb4d19">00116</a> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="structListeAdjacence.html#ae47d1d9fc13935c2b80e5e69b1fb4d19" title="Teste l&#39;égalité de deux listes d&#39;arêtes.">lega</a>(<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l, <span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * m){
-<a name="l00117"></a>00117     <span class="keywordflow">if</span> (<a class="code" href="structListeAdjacence.html#a3732102391b1ae2bc865c55d79d7b2d3" title="Retourne le nombre d&#39;arêtes dans la ListeAdjacence l.">ltaille</a>(l) != <a class="code" href="structListeAdjacence.html#a3732102391b1ae2bc865c55d79d7b2d3" title="Retourne le nombre d&#39;arêtes dans la ListeAdjacence l.">ltaille</a>(m))
-<a name="l00118"></a>00118         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
-<a name="l00119"></a>00119     <span class="keywordflow">else</span>{
-<a name="l00120"></a>00120         <span class="keywordflow">while</span> (m != NULL){
-<a name="l00121"></a>00121             <span class="keywordflow">if</span> (!<a class="code" href="structListeAdjacence.html#a1be47cfef3d6c1a3a8bdf0ca0a1d93d9" title="Vérifie l&#39;existence d&#39;une arête.">lexar</a>(l, m-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>) || <a class="code" href="structListeAdjacence.html#a59b84fdf31dbca03bdc25ba0763d9e84" title="Renvoie le poids d&#39;une arête.">lpoids</a>(l, m-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>) != m-&gt;<a class="code" href="structListeAdjacence.html#a080b35c0b509cc91591dc1fa5b25e0a3">poids</a>)
-<a name="l00122"></a>00122                 <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
-<a name="l00123"></a>00123             <span class="keywordflow">else</span>
-<a name="l00124"></a>00124                 m = m-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>;
-<a name="l00125"></a>00125         }
-<a name="l00126"></a>00126 
-<a name="l00127"></a>00127         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
-<a name="l00128"></a>00128     }
-<a name="l00129"></a>00129 }
-<a name="l00130"></a>00130 
-<a name="l00131"></a><a class="code" href="adjacence_8c.html#a54fd26ddec3cd7070c16e82b14e2536a">00131</a> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * <a class="code" href="structListeAdjacence.html#a3ff1a663a7b0eb00e5049d2891e2b18a" title="Arête suivante.">lsuiv</a>(<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l){
-<a name="l00132"></a>00132     <span class="keywordflow">if</span> (!<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(l))
-<a name="l00133"></a>00133         <span class="keywordflow">return</span> l-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>;
-<a name="l00134"></a>00134     <span class="keywordflow">else</span>
-<a name="l00135"></a>00135         <span class="keywordflow">return</span> NULL;
-<a name="l00136"></a>00136 }
-<a name="l00137"></a>00137 
-<a name="l00138"></a><a class="code" href="adjacence_8c.html#a2480d39c8e1dc5cc524dbd6d3a18b379">00138</a> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * <a class="code" href="structListeAdjacence.html#a36c937228d06a462ff42df578b3dbe0d" title="Extrémité de l&#39;arête en tête de liste.">lsommet_tete</a>(<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l){
-<a name="l00139"></a>00139     <span class="keywordflow">return</span> l-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>;
-<a name="l00140"></a>00140 }
-<a name="l00141"></a>00141 
-<a name="l00142"></a><a class="code" href="adjacence_8c.html#ae34eced2405c4cf25465290a128d768f">00142</a> <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> <a class="code" href="structListeAdjacence.html#ae34eced2405c4cf25465290a128d768f" title="Poids de l&#39;arête en tête de liste.">lpoids_tete</a>(<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l){
-<a name="l00143"></a>00143     <span class="keywordflow">return</span> l-&gt;<a class="code" href="structListeAdjacence.html#a080b35c0b509cc91591dc1fa5b25e0a3">poids</a>;
-<a name="l00144"></a>00144 }
+<a name="l00107"></a>00107 }
+<a name="l00108"></a>00108 
+<a name="l00109"></a><a class="code" href="adjacence_8c.html#a48be550950b7e71e834b94ef83b3ee4f">00109</a> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * <a class="code" href="structListeAdjacence.html#a50102d59bc1a65570e1a339caee9cec9" title="Modifier le poids d&#39;une arête.">lmod</a>(<a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s, <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> x){
+<a name="l00110"></a>00110     <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l0 = l;
+<a name="l00111"></a>00111 
+<a name="l00112"></a>00112     <span class="keywordflow">while</span> (l0 != NULL &amp;&amp; !<a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(l0-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>, s))
+<a name="l00113"></a>00113         l0 = l0-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>;
+<a name="l00114"></a>00114     
+<a name="l00115"></a>00115     <span class="keywordflow">if</span> (<a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(l0-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>, s))
+<a name="l00116"></a>00116         l0-&gt;<a class="code" href="structListeAdjacence.html#a080b35c0b509cc91591dc1fa5b25e0a3">poids</a> = x;
+<a name="l00117"></a>00117 
+<a name="l00118"></a>00118     <span class="keywordflow">return</span> l;
+<a name="l00119"></a>00119 }
+<a name="l00120"></a>00120 
+<a name="l00121"></a><a class="code" href="adjacence_8c.html#ae47d1d9fc13935c2b80e5e69b1fb4d19">00121</a> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="structListeAdjacence.html#ae47d1d9fc13935c2b80e5e69b1fb4d19" title="Teste l&#39;égalité de deux listes d&#39;arêtes.">lega</a>(<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l, <span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * m){
+<a name="l00122"></a>00122     <span class="keywordflow">if</span> (<a class="code" href="structListeAdjacence.html#a3732102391b1ae2bc865c55d79d7b2d3" title="Retourne le nombre d&#39;arêtes dans la ListeAdjacence l.">ltaille</a>(l) != <a class="code" href="structListeAdjacence.html#a3732102391b1ae2bc865c55d79d7b2d3" title="Retourne le nombre d&#39;arêtes dans la ListeAdjacence l.">ltaille</a>(m))
+<a name="l00123"></a>00123         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+<a name="l00124"></a>00124     <span class="keywordflow">else</span>{
+<a name="l00125"></a>00125         <span class="keywordflow">while</span> (m != NULL){
+<a name="l00126"></a>00126             <span class="keywordflow">if</span> (!<a class="code" href="structListeAdjacence.html#a1be47cfef3d6c1a3a8bdf0ca0a1d93d9" title="Vérifie l&#39;existence d&#39;une arête.">lexar</a>(l, m-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>) || <a class="code" href="structListeAdjacence.html#a59b84fdf31dbca03bdc25ba0763d9e84" title="Renvoie le poids d&#39;une arête.">lpoids</a>(l, m-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>) != m-&gt;<a class="code" href="structListeAdjacence.html#a080b35c0b509cc91591dc1fa5b25e0a3">poids</a>)
+<a name="l00127"></a>00127                 <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+<a name="l00128"></a>00128             <span class="keywordflow">else</span>
+<a name="l00129"></a>00129                 m = m-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>;
+<a name="l00130"></a>00130         }
+<a name="l00131"></a>00131 
+<a name="l00132"></a>00132         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
+<a name="l00133"></a>00133     }
+<a name="l00134"></a>00134 }
+<a name="l00135"></a>00135 
+<a name="l00136"></a><a class="code" href="adjacence_8c.html#a54fd26ddec3cd7070c16e82b14e2536a">00136</a> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * <a class="code" href="structListeAdjacence.html#a3ff1a663a7b0eb00e5049d2891e2b18a" title="Arête suivante.">lsuiv</a>(<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l){
+<a name="l00137"></a>00137     <span class="keywordflow">if</span> (!<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(l))
+<a name="l00138"></a>00138         <span class="keywordflow">return</span> l-&gt;<a class="code" href="structListeAdjacence.html#aa8a04e4cb5e5f34983783a588edb03d7">s</a>;
+<a name="l00139"></a>00139     <span class="keywordflow">else</span>
+<a name="l00140"></a>00140         <span class="keywordflow">return</span> NULL;
+<a name="l00141"></a>00141 }
+<a name="l00142"></a>00142 
+<a name="l00143"></a><a class="code" href="adjacence_8c.html#a2480d39c8e1dc5cc524dbd6d3a18b379">00143</a> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * <a class="code" href="structListeAdjacence.html#a36c937228d06a462ff42df578b3dbe0d" title="Extrémité de l&#39;arête en tête de liste.">lsommet_tete</a>(<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l){
+<a name="l00144"></a>00144     <span class="keywordflow">return</span> l-&gt;<a class="code" href="structListeAdjacence.html#a4dbe81418d513012829f46a0b785dc58">v</a>;
+<a name="l00145"></a>00145 }
+<a name="l00146"></a>00146 
+<a name="l00147"></a><a class="code" href="adjacence_8c.html#ae34eced2405c4cf25465290a128d768f">00147</a> <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> <a class="code" href="structListeAdjacence.html#ae34eced2405c4cf25465290a128d768f" title="Poids de l&#39;arête en tête de liste.">lpoids_tete</a>(<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l){
+<a name="l00148"></a>00148     <span class="keywordflow">return</span> l-&gt;<a class="code" href="structListeAdjacence.html#a080b35c0b509cc91591dc1fa5b25e0a3">poids</a>;
+<a name="l00149"></a>00149 }
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -256,7 +260,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Vendredi Avril 19 2013 18:08:38 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Samedi Avril 27 2013 23:17:00 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

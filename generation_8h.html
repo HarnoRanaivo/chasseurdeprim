@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="dir_d027f5d2eee5f38b54bb3db43d132c50.html">include</a>      </li>
+      <li class="navelem"><a class="el" href="dir_6570b8eaffc1d650912f1c36f17cf20f.html">include</a>      </li>
     </ul>
   </div>
 </div>
@@ -122,15 +122,15 @@ Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier
 <div class="dyncontent">
 <div class="center"><img src="generation_8h__dep__incl.png" border="0" usemap="#include_2generation_8hdep" alt=""/></div>
 <map name="include_2generation_8hdep" id="include_2generation_8hdep">
-<area shape="rect" id="node3" href="generation_8c.html" title="Generation d&#39;un fichier latex (code)" alt="" coords="17,83,132,112"/></map>
+<area shape="rect" id="node3" href="prompt_8h.html" title="Prompt (header)" alt="" coords="84,83,201,112"/><area shape="rect" id="node5" href="main_8c.html" title="Main." alt="" coords="5,160,88,189"/><area shape="rect" id="node9" href="generation_8c.html" title="Generation d&#39;un fichier latex (code)" alt="" coords="225,83,340,112"/><area shape="rect" id="node7" href="prompt_8c.html" title="Prompt (code)" alt="" coords="112,160,205,189"/></map>
 </div>
 </div>
 <p><a href="generation_8h_source.html">Aller au code source de ce fichier.</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="generation_8h.html#a269ebb1a4ff0f28914bf67704fa61d1e">gGenererLatex</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g, const char *destination)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Générer un fichier latex représentant le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> <em>g</em> à l'aide de TikZ.  <a href="#a269ebb1a4ff0f28914bf67704fa61d1e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="generation_8h.html#a0d0ec90a46d0b4618b17c2ea4f6c0d0f">gGenererLatex</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g, const <a class="el" href="structGraphe.html">Graphe</a> *a, const char *destination)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Générer un fichier latex représentant les <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> <em>g</em> et <em>a</em> à l'aide de Latex et TikZ.  <a href="#a0d0ec90a46d0b4618b17c2ea4f6c0d0f"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Description détaillée</h2>
 <div class="textblock"><p>Generation d'un fichier latex (header) </p>
@@ -138,15 +138,21 @@ Fonctions</h2></td></tr>
 
 <p>Définition dans le fichier <a class="el" href="generation_8h_source.html">generation.h</a>.</p>
 </div><hr/><h2>Documentation des fonctions</h2>
-<a class="anchor" id="a269ebb1a4ff0f28914bf67704fa61d1e"></a><!-- doxytag: member="generation.h::gGenererLatex" ref="a269ebb1a4ff0f28914bf67704fa61d1e" args="(const Graphe *g, const char *destination)" -->
+<a class="anchor" id="a0d0ec90a46d0b4618b17c2ea4f6c0d0f"></a><!-- doxytag: member="generation.h::gGenererLatex" ref="a0d0ec90a46d0b4618b17c2ea4f6c0d0f" args="(const Graphe *g, const Graphe *a, const char *destination)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="structGraphe.html#a269ebb1a4ff0f28914bf67704fa61d1e">gGenererLatex</a> </td>
+          <td class="memname">int <a class="el" href="structGraphe.html#a0d0ec90a46d0b4618b17c2ea4f6c0d0f">gGenererLatex</a> </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
           <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -163,24 +169,26 @@ Fonctions</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Générer un fichier latex représentant le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> <em>g</em> à l'aide de TikZ. </p>
+<p>Générer un fichier latex représentant les <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> <em>g</em> et <em>a</em> à l'aide de Latex et TikZ. </p>
 <dl class="params"><dt><b>Paramètres:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> à représenter. </td></tr>
+    <tr><td class="paramname">a</td><td>Second <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> à représenter; </td></tr>
     <tr><td class="paramname">destination</td><td>Chemin vers le fichier de destination. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd><em>0</em> en cas de succès, une valeur négative en cas d'erreur.</dd></dl>
+<p><em>g</em> doit être renseigné, <em>a</em> est optionnel (utiliser NULL).</p>
 <p>Erreurs :</p>
 <ul>
 <li><em>-1</em> : Le fichier de destination n'a pas pu être ouvert.</li>
 <li><em>-2</em> : Il y a eu une erreur lors de l'écriture. </li>
 </ul>
 
-<p>Définition à la ligne <a class="el" href="generation_8c_source.html#l00090">90</a> du fichier <a class="el" href="generation_8c_source.html">generation.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="generation_8c_source.html#l00104">104</a> du fichier <a class="el" href="generation_8c_source.html">generation.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
-    FILE * fichier = fopen(destination, <span class="stringliteral">&quot;w&quot;</span>);
+    FILE * <span class="keyword">const</span> fichier = fopen(destination, <span class="stringliteral">&quot;w&quot;</span>);
 
     <span class="keywordflow">if</span> (fichier == NULL)
     {
@@ -188,19 +196,20 @@ Fonctions</h2></td></tr>
     }
     <span class="keywordflow">else</span>
     {
-        <span class="keywordtype">int</span> erreurs = 0;
+        <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> erreurs = <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
 
-        erreurs += printDebut(fichier);
-        erreurs += printSommets(g, fichier);
-        erreurs += printAretes(g, fichier);
-        erreurs += printFin(fichier);
+        erreurs = printDebut(fichier) == <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> ? <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> : erreurs;
+        erreurs = printGraphe(g, fichier) == <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> ? <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> : erreurs;
+        <span class="keywordflow">if</span> (a != NULL)
+            erreurs = printGraphe(a, fichier) == <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> ? <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> : erreurs;
+        erreurs = printFin(fichier) == <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> ? <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> : erreurs;
 
         fclose(fichier);
 
-        <span class="keywordflow">if</span> (erreurs == 0)
-            <span class="keywordflow">return</span> 0;
+        <span class="keywordflow">if</span> (erreurs)
+            <span class="keywordflow">return</span> -2;
         <span class="keywordflow">else</span>
-            <span class="keywordflow">return</span> erreurs;
+            <span class="keywordflow">return</span> 0;
     }
 }
 </pre></div>
@@ -224,7 +233,7 @@ Fonctions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Vendredi Avril 19 2013 18:08:38 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Samedi Avril 27 2013 23:17:01 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Chasseur de Prim:  Fichier source de include/prompt.h</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Chasseur de Prim
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Généré par Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li><a href="dirs.html"><span>Répertoires</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="dir_6570b8eaffc1d650912f1c36f17cf20f.html">include</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">prompt.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="prompt_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/* This program is free software. It comes WITHOUT ANY WARRANTY, to</span>
+<a name="l00002"></a>00002 <span class="comment">* the extent permitted by applicable law. You can redistribute it</span>
+<a name="l00003"></a>00003 <span class="comment">* and/or modify it under the terms of the Do What The Fuck You Want</span>
+<a name="l00004"></a>00004 <span class="comment">* To Public License, Version 2, as published by Sam Hocevar. See</span>
+<a name="l00005"></a>00005 <span class="comment">* http://wtfpl.net for more details. */</span>
+<a name="l00011"></a>00011 <span class="preprocessor">#ifndef __PROMPT_H</span>
+<a name="l00012"></a>00012 <span class="preprocessor"></span><span class="preprocessor">#define __PROMPT_H</span>
+<a name="l00013"></a>00013 <span class="preprocessor"></span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &lt;string.h&gt;</span>
+<a name="l00017"></a>00017 <span class="preprocessor">#include &lt;ctype.h&gt;</span>
+<a name="l00018"></a>00018 <span class="preprocessor">#include &lt;sysexits.h&gt;</span>
+<a name="l00019"></a>00019 
+<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="code" href="base_8h.html" title="Base (header)">base.h</a>&quot;</span>
+<a name="l00021"></a>00021 <span class="preprocessor">#include &quot;<a class="code" href="graphe_8h.html" title="Graphes (header)">graphe.h</a>&quot;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &quot;<a class="code" href="grapheconnexe_8h.html" title="GrapheConnexes connexes (header)">grapheconnexe.h</a>&quot;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="io_8h.html" title="Entrées/Sorties (header)">io.h</a>&quot;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="prim_8h.html" title="Algorithme de Prim (header)">prim.h</a>&quot;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="generation_8h.html" title="Generation d&#39;un fichier latex (header)">generation.h</a>&quot;</span>
+<a name="l00026"></a>00026 
+<a name="l00031"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3ea">00031</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3ea" title="Alias pour les commandes.">PromptCommande</a>
+<a name="l00032"></a>00032 {
+<a name="l00033"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaacdeef5cde3f80503a88859bad4a3704c">00033</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaacdeef5cde3f80503a88859bad4a3704c">PC_INCONNU</a>,     
+<a name="l00034"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa87749e32e5594f1737f23c9a14f47f0e">00034</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa87749e32e5594f1737f23c9a14f47f0e">PC_CHG</a>,         
+<a name="l00035"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab01f01d01488432aca18e8dd99bbda6b">00035</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab01f01d01488432aca18e8dd99bbda6b">PC_SAV</a>,         
+<a name="l00036"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa40ff0532940fb5149c2dc84f33a1e42f">00036</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa40ff0532940fb5149c2dc84f33a1e42f">PC_MOD</a>,         
+<a name="l00037"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab54edd094180c0250cef139a8faa77e6">00037</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab54edd094180c0250cef139a8faa77e6">PC_AJAR</a>,        
+<a name="l00038"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaaf2e43916177d13b13142c266c8084c96">00038</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaaf2e43916177d13b13142c266c8084c96">PC_SUPAR</a>,       
+<a name="l00039"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab09822296be1a43a17ebc1fe365d95d5">00039</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab09822296be1a43a17ebc1fe365d95d5">PC_SUPSOM</a>,      
+<a name="l00040"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa13fc09e04b2f05e4c1fdf54082f7e396">00040</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa13fc09e04b2f05e4c1fdf54082f7e396">PC_CAL</a>,         
+<a name="l00041"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaaf53a88ef4d4ed39a5e1cf9647e7b8d52">00041</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaaf53a88ef4d4ed39a5e1cf9647e7b8d52">PC_AFF</a>,         
+<a name="l00042"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa7b3b37a3057e294e082fc0dfd1f36e6a">00042</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa7b3b37a3057e294e082fc0dfd1f36e6a">PC_AIDE</a>,        
+<a name="l00043"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa2969aa76987f61e233e9eef321b653d3">00043</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa2969aa76987f61e233e9eef321b653d3">PC_QUIT</a>         
+<a name="l00044"></a>00044 } <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3ea" title="Alias pour les commandes.">PromptCommande</a>;
+<a name="l00045"></a>00045 
+<a name="l00049"></a>00049 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3ea" title="Alias pour les commandes.">PromptCommande</a> PC_LISTE[] =
+<a name="l00050"></a>00050 {
+<a name="l00051"></a>00051     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa87749e32e5594f1737f23c9a14f47f0e">PC_CHG</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab01f01d01488432aca18e8dd99bbda6b">PC_SAV</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa40ff0532940fb5149c2dc84f33a1e42f">PC_MOD</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab54edd094180c0250cef139a8faa77e6">PC_AJAR</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaaf2e43916177d13b13142c266c8084c96">PC_SUPAR</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab09822296be1a43a17ebc1fe365d95d5">PC_SUPSOM</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab54edd094180c0250cef139a8faa77e6">PC_AJAR</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaaf2e43916177d13b13142c266c8084c96">PC_SUPAR</a>,
+<a name="l00052"></a>00052     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab09822296be1a43a17ebc1fe365d95d5">PC_SUPSOM</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa13fc09e04b2f05e4c1fdf54082f7e396">PC_CAL</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaaf53a88ef4d4ed39a5e1cf9647e7b8d52">PC_AFF</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa7b3b37a3057e294e082fc0dfd1f36e6a">PC_AIDE</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa2969aa76987f61e233e9eef321b653d3">PC_QUIT</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaacdeef5cde3f80503a88859bad4a3704c">PC_INCONNU</a>
+<a name="l00053"></a>00053 };
+<a name="l00054"></a>00054 
+<a name="l00059"></a><a class="code" href="structDonnees.html">00059</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structDonnees.html" title="Stockage des données temporaires du programme.">Donnees</a>
+<a name="l00060"></a>00060 {
+<a name="l00061"></a>00061     <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * graphe;
+<a name="l00062"></a>00062     <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * arbre;
+<a name="l00063"></a>00063     <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> sauvegarde;
+<a name="l00064"></a>00064 } <a class="code" href="structDonnees.html" title="Stockage des données temporaires du programme.">Donnees</a>;
+<a name="l00065"></a>00065 
+<a name="l00070"></a>00070 <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="prompt_8h.html#a3b842707d531b4beedc3284f4a38294e" title="Vérification de l&#39;intention de l&#39;utilisateur.">verifier</a>(<span class="keywordtype">void</span>);
+<a name="l00071"></a>00071 
+<a name="l00078"></a>00078 <span class="keywordtype">int</span> <a class="code" href="prompt_8h.html#a6050c74ea164fa2d66afa46d0a6e45fb" title="Compter le nombre de mots dans une chaîne de caractères.">compterMots</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * chaine);
+<a name="l00079"></a>00079 
+<a name="l00085"></a>00085 <span class="keywordtype">void</span> <a class="code" href="prompt_8h.html#ac305603132f5f58b80b4818ab71406dd" title="Afficher l&#39;aide correspondant à une commande.">afficherAideCommande</a>(<a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3ea" title="Alias pour les commandes.">PromptCommande</a> pc);
+<a name="l00086"></a>00086 
+<a name="l00090"></a>00090 <span class="keywordtype">void</span> <a class="code" href="prompt_8h.html#a6c01420aa3b32974d76d5fe198b1a55f" title="Afficher l&#39;aide du programme.">afficherAide</a>(<span class="keywordtype">void</span>);
+<a name="l00091"></a>00091 
+<a name="l00100"></a>00100 <a class="code" href="structDonnees.html" title="Stockage des données temporaires du programme.">Donnees</a> * <a class="code" href="structDonnees.html#a0c2cd4884dfcb60f7661fd887893e577" title="Traiter la ligne de commande entrée par l&#39;utilisateur.">traiterLigneCommande</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * ligne, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3ea" title="Alias pour les commandes.">PromptCommande</a> pc, <a class="code" href="structDonnees.html" title="Stockage des données temporaires du programme.">Donnees</a> * d);
+<a name="l00101"></a>00101 
+<a name="l00105"></a>00105 <span class="keywordtype">void</span> <a class="code" href="prompt_8h.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur.">prompt</a>(<span class="keywordtype">void</span>);
+<a name="l00106"></a>00106 
+<a name="l00107"></a>00107 <span class="preprocessor">#endif </span><span class="comment">/* __PROMPT_H */</span>
+</pre></div></div><!-- contents -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+
+<hr class="footer"/><address class="footer"><small>
+Généré le Samedi Avril 27 2013 23:17:00 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

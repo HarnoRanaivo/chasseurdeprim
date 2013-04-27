@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="dir_307baa3f0b4442ad1de385c197155be8.html">src</a>      </li>
+      <li class="navelem"><a class="el" href="dir_f698a076f5ac3ef0691a17cfde4f7ef2.html">src</a>      </li>
     </ul>
   </div>
 </div>
@@ -157,7 +157,7 @@ Fonctions</h2></td></tr>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>(pointeur vers) la copie de <em>s</em>, <code>NULL</code> en cas d'erreur.</dd></dl>
 <p>La fonction alloue de la mémoire et fait une copie du <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <em>s</em>. En cas d'erreur, un <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> vide est retourné. </p>
 
-<p>Définition à la ligne <a class="el" href="sommet_8c_source.html#l00020">20</a> du fichier <a class="el" href="sommet_8c_source.html">sommet.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="sommet_8c_source.html#l00025">25</a> du fichier <a class="el" href="sommet_8c_source.html">sommet.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * copie = NULL;
 
@@ -215,7 +215,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd><code>VRAI</code> si les <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> sont égaux, <code>FAUX</code> sinon</dd></dl>
 <p>La fonction gère les <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> vides. </p>
 
-<p>Définition à la ligne <a class="el" href="sommet_8c_source.html#l00009">9</a> du fichier <a class="el" href="sommet_8c_source.html">sommet.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="sommet_8c_source.html#l00014">14</a> du fichier <a class="el" href="sommet_8c_source.html">sommet.c</a>.</p>
 <div class="fragment"><pre class="fragment">                                                 {
     <span class="keywordflow">if</span> (a == NULL &amp;&amp; b == NULL)
         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
@@ -263,7 +263,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd><code>NULL</code> </dd></dl>
 <p>Libère la mémoire occupée par un <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> et retourne <code>NULL</code>. Comportement similaire à free : gère les <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> vides, mais pas les <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> déjà libérés. Il faut donc toujours affecter le retour à l'ancien pointeur du <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> qu'on cherche à libérer. </p>
 
-<p>Définition à la ligne <a class="el" href="sommet_8c_source.html#l00031">31</a> du fichier <a class="el" href="sommet_8c_source.html">sommet.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="sommet_8c_source.html#l00036">36</a> du fichier <a class="el" href="sommet_8c_source.html">sommet.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     free(s);
     <span class="keywordflow">return</span> NULL;
@@ -316,7 +316,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>(pointeur vers) le nouveau <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a>. En cas d'erreur, <code>NULL</code>.</dd></dl>
 <p>Comportement similaire à realloc : Si la modification du <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> s a fonctionné, le <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <em>s</em> sera libéré. Sinon, la fonction retourne un <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> vide, et <em>s</em> reste intact. </p>
 
-<p>Définition à la ligne <a class="el" href="sommet_8c_source.html#l00037">37</a> du fichier <a class="el" href="sommet_8c_source.html">sommet.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="sommet_8c_source.html#l00042">42</a> du fichier <a class="el" href="sommet_8c_source.html">sommet.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * nouveau = NULL;
 
@@ -358,7 +358,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Vendredi Avril 19 2013 18:08:39 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Samedi Avril 27 2013 23:17:02 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

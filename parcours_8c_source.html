@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
   <div id="nav-path" class="navpath">
     <ul>
-      <li class="navelem"><a class="el" href="dir_307baa3f0b4442ad1de385c197155be8.html">src</a>      </li>
+      <li class="navelem"><a class="el" href="dir_f698a076f5ac3ef0691a17cfde4f7ef2.html">src</a>      </li>
     </ul>
   </div>
 </div>
@@ -99,102 +99,106 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="title">parcours.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="parcours_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
-<a name="l00007"></a>00007 <span class="preprocessor">#include &quot;<a class="code" href="parcours_8h.html" title="Parcours d&#39;un graphe (header)">parcours.h</a>&quot;</span>
-<a name="l00008"></a>00008 
-<a name="l00009"></a><a class="code" href="parcours_8c.html#abd040d82372961759c0ec9c694131303">00009</a> <a class="code" href="structCouleursGraphe.html" title="Liste des couleurs des sommets d&#39;un graphe.">CouleursGraphe</a> * <a class="code" href="parcours_8h.html#abd040d82372961759c0ec9c694131303" title="Parcours en largeur d&#39;un graphe.">gParcoursLargeur</a>(<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g)
-<a name="l00010"></a>00010 {
-<a name="l00011"></a>00011     <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s1;
-<a name="l00012"></a>00012     <a class="code" href="structCouleursGraphe.html" title="Liste des couleurs des sommets d&#39;un graphe.">CouleursGraphe</a> * cg = <a class="code" href="structCouleursGraphe.html#a5cd274818f796ec1c2984bcfbfa81b07" title="Initialiser les couleurs des sommets d&#39;un graphe à BLANC.">cgInit</a>(g);
+<a href="parcours_8c.html">Aller à la documentation de ce fichier.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/* This program is free software. It comes WITHOUT ANY WARRANTY, to</span>
+<a name="l00002"></a>00002 <span class="comment">* the extent permitted by applicable law. You can redistribute it</span>
+<a name="l00003"></a>00003 <span class="comment">* and/or modify it under the terms of the Do What The Fuck You Want</span>
+<a name="l00004"></a>00004 <span class="comment">* To Public License, Version 2, as published by Sam Hocevar. See</span>
+<a name="l00005"></a>00005 <span class="comment">* http://wtfpl.net for more details. */</span>
+<a name="l00012"></a>00012 <span class="preprocessor">#include &quot;<a class="code" href="parcours_8h.html" title="Parcours d&#39;un graphe (header)">parcours.h</a>&quot;</span>
 <a name="l00013"></a>00013 
-<a name="l00014"></a>00014     <span class="keywordflow">if</span> (!<a class="code" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe.">gEstVide</a>(g))
-<a name="l00015"></a>00015     {
-<a name="l00016"></a>00016         cg = <a class="code" href="structGraphe.html#a27054ead26f2d98f65c717eed6ee8740" title="Modifier un sommet de la liste.">cgModifierSommet</a>(cg, <a class="code" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets.">gSommetTete</a>(g), <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a3e331dfdc8ccad697e22ffbd63d69ce0">GRIS</a>);
-<a name="l00017"></a>00017 
-<a name="l00018"></a>00018         <span class="keywordflow">while</span>((s1 = <a class="code" href="structCouleursGraphe.html#ace215968cb4c8f62feaba64423ae7a86" title="Premier Sommet GRIS dans cg.">cgPremierSommetGris</a>(cg)) != NULL)
-<a name="l00019"></a>00019         {
-<a name="l00020"></a>00020             <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l = <a class="code" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet.">gAdjacenceSommet</a>(g, s1);
-<a name="l00021"></a>00021             <span class="keywordflow">while</span>(!<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(l))
-<a name="l00022"></a>00022             {
-<a name="l00023"></a>00023                 <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s2 = <a class="code" href="structListeAdjacence.html#a36c937228d06a462ff42df578b3dbe0d" title="Extrémité de l&#39;arête en tête de liste.">lsommet_tete</a>(l);
-<a name="l00024"></a>00024                 <span class="keywordflow">if</span> (<a class="code" href="structCouleursGraphe.html#a8f24db15b7e11b1871679300af373a4d" title="Couleur du Sommet s.">cgCouleurSommet</a>(cg, s2) == <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a35653913ced93d8199f0378ec538a0c7">BLANC</a>)
-<a name="l00025"></a>00025                     cg = <a class="code" href="structGraphe.html#a27054ead26f2d98f65c717eed6ee8740" title="Modifier un sommet de la liste.">cgModifierSommet</a>(cg, s2, <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a3e331dfdc8ccad697e22ffbd63d69ce0">GRIS</a>);
-<a name="l00026"></a>00026                 l = <a class="code" href="structListeAdjacence.html#a3ff1a663a7b0eb00e5049d2891e2b18a" title="Arête suivante.">lsuiv</a>(l);
-<a name="l00027"></a>00027             }
-<a name="l00028"></a>00028             cg = <a class="code" href="structGraphe.html#a27054ead26f2d98f65c717eed6ee8740" title="Modifier un sommet de la liste.">cgModifierSommet</a>(cg, s1, <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a59e3323a198f0162330111165caaf367">NOIR</a>);
-<a name="l00029"></a>00029         }
-<a name="l00030"></a>00030     }
-<a name="l00031"></a>00031 
-<a name="l00032"></a>00032     <span class="keywordflow">return</span> cg;
-<a name="l00033"></a>00033 }
-<a name="l00034"></a>00034 
-<a name="l00035"></a><a class="code" href="parcours_8c.html#af2d919b7649b50f315487287fc9fad68">00035</a> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe.">gEstConnexe</a>(<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g)
-<a name="l00036"></a>00036 {
-<a name="l00037"></a>00037     <span class="keywordtype">int</span> n = <a class="code" href="structGraphe.html#ae08239d1436fe3268b62c42ab13470d4" title="Nombre de sommets dans un Graphe.">gNombreSommets</a>(g);
-<a name="l00038"></a>00038 
-<a name="l00039"></a>00039     <span class="keywordflow">if</span> (n == 0)
-<a name="l00040"></a>00040         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
-<a name="l00041"></a>00041     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (n == 1)
-<a name="l00042"></a>00042     {
-<a name="l00043"></a>00043         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
-<a name="l00044"></a>00044     }
-<a name="l00045"></a>00045     <span class="keywordflow">else</span>
-<a name="l00046"></a>00046     {
-<a name="l00047"></a>00047         <span class="keywordtype">int</span> noirs;
-<a name="l00048"></a>00048         <a class="code" href="structCouleursGraphe.html" title="Liste des couleurs des sommets d&#39;un graphe.">CouleursGraphe</a> * cg;
-<a name="l00049"></a>00049 
-<a name="l00050"></a>00050         cg = <a class="code" href="parcours_8h.html#abd040d82372961759c0ec9c694131303" title="Parcours en largeur d&#39;un graphe.">gParcoursLargeur</a>(g);
-<a name="l00051"></a>00051         noirs = <a class="code" href="structCouleursGraphe.html#a3256a9fb9592b47cc839e62119812431" title="Nombre de Sommet NOIR dans cg.">cgNombreSommetsNoirs</a>(cg);
-<a name="l00052"></a>00052         cg = <a class="code" href="structCouleursGraphe.html#aa23bf05908ea1185cb2248b833c68d6e" title="Libérer une liste de couleurs.">cgLiberer</a>(cg);
-<a name="l00053"></a>00053 
-<a name="l00054"></a>00054         <span class="keywordflow">return</span> <a class="code" href="structGraphe.html#ae08239d1436fe3268b62c42ab13470d4" title="Nombre de sommets dans un Graphe.">gNombreSommets</a>(g) == noirs;
-<a name="l00055"></a>00055     }
-<a name="l00056"></a>00056 }
-<a name="l00057"></a>00057 
-<a name="l00058"></a><a class="code" href="parcours_8c.html#a8324bb1764f831e8030db5936b6104d0">00058</a> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="structGraphe.html#a8324bb1764f831e8030db5936b6104d0" title="Test d&#39;existence de cycles dans un graphe.">gACycle</a>(<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g)
-<a name="l00059"></a>00059 {
-<a name="l00060"></a>00060     <span class="keywordtype">int</span> n = <a class="code" href="structGraphe.html#ae08239d1436fe3268b62c42ab13470d4" title="Nombre de sommets dans un Graphe.">gNombreSommets</a>(g);
-<a name="l00061"></a>00061 
-<a name="l00062"></a>00062     <span class="keywordflow">if</span> (n == 0)
-<a name="l00063"></a>00063         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
-<a name="l00064"></a>00064     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (n == 1)
-<a name="l00065"></a>00065     {
-<a name="l00066"></a>00066         <span class="keywordflow">return</span> <a class="code" href="structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe.">gExisteArete</a>(g, <a class="code" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets.">gSommetTete</a>(g), <a class="code" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets.">gSommetTete</a>(g));
-<a name="l00067"></a>00067     }
-<a name="l00068"></a>00068     <span class="keywordflow">else</span>
-<a name="l00069"></a>00069     {
-<a name="l00070"></a>00070         <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s1;
-<a name="l00071"></a>00071         <a class="code" href="structCouleursGraphe.html" title="Liste des couleurs des sommets d&#39;un graphe.">CouleursGraphe</a> * cg = <a class="code" href="structCouleursGraphe.html#a5cd274818f796ec1c2984bcfbfa81b07" title="Initialiser les couleurs des sommets d&#39;un graphe à BLANC.">cgInit</a>(g);
-<a name="l00072"></a>00072 
-<a name="l00073"></a>00073         <span class="keywordflow">while</span> (<a class="code" href="structCouleursGraphe.html#a1a641312a63d41146c473c0cd7f6f1c7" title="Nombre de Sommet BLANC dans cg.">cgNombreSommetsBlancs</a>(cg) &gt; 0)
-<a name="l00074"></a>00074         {
-<a name="l00075"></a>00075             cg = <a class="code" href="structGraphe.html#a27054ead26f2d98f65c717eed6ee8740" title="Modifier un sommet de la liste.">cgModifierSommet</a>(cg, <a class="code" href="structCouleursGraphe.html#a679182337facdf06acae903d4990c189" title="Premier Sommet BLANC dans cg.">cgPremierSommetBlanc</a>(cg), <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a3e331dfdc8ccad697e22ffbd63d69ce0">GRIS</a>);
-<a name="l00076"></a>00076 
-<a name="l00077"></a>00077             <span class="keywordflow">while</span>((s1 = <a class="code" href="structCouleursGraphe.html#ace215968cb4c8f62feaba64423ae7a86" title="Premier Sommet GRIS dans cg.">cgPremierSommetGris</a>(cg)) != NULL)
-<a name="l00078"></a>00078             {
-<a name="l00079"></a>00079                 <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l = <a class="code" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet.">gAdjacenceSommet</a>(g, s1);
-<a name="l00080"></a>00080                 <span class="keywordflow">while</span>(!<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(l))
-<a name="l00081"></a>00081                 {
-<a name="l00082"></a>00082                     <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s2 = <a class="code" href="structListeAdjacence.html#a36c937228d06a462ff42df578b3dbe0d" title="Extrémité de l&#39;arête en tête de liste.">lsommet_tete</a>(l);
-<a name="l00083"></a>00083                     <span class="keywordflow">if</span> (<a class="code" href="structCouleursGraphe.html#a8f24db15b7e11b1871679300af373a4d" title="Couleur du Sommet s.">cgCouleurSommet</a>(cg, s2) == <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a35653913ced93d8199f0378ec538a0c7">BLANC</a>)
-<a name="l00084"></a>00084                         cg = <a class="code" href="structGraphe.html#a27054ead26f2d98f65c717eed6ee8740" title="Modifier un sommet de la liste.">cgModifierSommet</a>(cg, s2, <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a3e331dfdc8ccad697e22ffbd63d69ce0">GRIS</a>);
-<a name="l00085"></a>00085                     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="structCouleursGraphe.html#a8f24db15b7e11b1871679300af373a4d" title="Couleur du Sommet s.">cgCouleurSommet</a>(cg, s2) == <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a3e331dfdc8ccad697e22ffbd63d69ce0">GRIS</a>)
-<a name="l00086"></a>00086                     {
-<a name="l00087"></a>00087                         cg = <a class="code" href="structCouleursGraphe.html#aa23bf05908ea1185cb2248b833c68d6e" title="Libérer une liste de couleurs.">cgLiberer</a>(cg);
-<a name="l00088"></a>00088                         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
-<a name="l00089"></a>00089                     }
-<a name="l00090"></a>00090                     l = <a class="code" href="structListeAdjacence.html#a3ff1a663a7b0eb00e5049d2891e2b18a" title="Arête suivante.">lsuiv</a>(l);
-<a name="l00091"></a>00091                 }
-<a name="l00092"></a>00092                 cg = <a class="code" href="structGraphe.html#a27054ead26f2d98f65c717eed6ee8740" title="Modifier un sommet de la liste.">cgModifierSommet</a>(cg, s1, <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a59e3323a198f0162330111165caaf367">NOIR</a>);
-<a name="l00093"></a>00093             }
-<a name="l00094"></a>00094         }
-<a name="l00095"></a>00095 
-<a name="l00096"></a>00096         cg = <a class="code" href="structCouleursGraphe.html#aa23bf05908ea1185cb2248b833c68d6e" title="Libérer une liste de couleurs.">cgLiberer</a>(cg);
-<a name="l00097"></a>00097 
-<a name="l00098"></a>00098         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
-<a name="l00099"></a>00099     }
+<a name="l00014"></a><a class="code" href="parcours_8c.html#abd040d82372961759c0ec9c694131303">00014</a> <a class="code" href="structCouleursGraphe.html" title="Liste des couleurs des sommets d&#39;un graphe.">CouleursGraphe</a> * <a class="code" href="parcours_8h.html#abd040d82372961759c0ec9c694131303" title="Parcours en largeur d&#39;un graphe.">gParcoursLargeur</a>(<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g)
+<a name="l00015"></a>00015 {
+<a name="l00016"></a>00016     <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s1;
+<a name="l00017"></a>00017     <a class="code" href="structCouleursGraphe.html" title="Liste des couleurs des sommets d&#39;un graphe.">CouleursGraphe</a> * cg = <a class="code" href="structCouleursGraphe.html#a5cd274818f796ec1c2984bcfbfa81b07" title="Initialiser les couleurs des sommets d&#39;un graphe à BLANC.">cgInit</a>(g);
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019     <span class="keywordflow">if</span> (!<a class="code" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe.">gEstVide</a>(g))
+<a name="l00020"></a>00020     {
+<a name="l00021"></a>00021         cg = <a class="code" href="structGraphe.html#a27054ead26f2d98f65c717eed6ee8740" title="Modifier un sommet de la liste.">cgModifierSommet</a>(cg, <a class="code" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets.">gSommetTete</a>(g), <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a3e331dfdc8ccad697e22ffbd63d69ce0">GRIS</a>);
+<a name="l00022"></a>00022 
+<a name="l00023"></a>00023         <span class="keywordflow">while</span>((s1 = <a class="code" href="structCouleursGraphe.html#ace215968cb4c8f62feaba64423ae7a86" title="Premier Sommet GRIS dans cg.">cgPremierSommetGris</a>(cg)) != NULL)
+<a name="l00024"></a>00024         {
+<a name="l00025"></a>00025             <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l = <a class="code" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet.">gAdjacenceSommet</a>(g, s1);
+<a name="l00026"></a>00026             <span class="keywordflow">while</span>(!<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(l))
+<a name="l00027"></a>00027             {
+<a name="l00028"></a>00028                 <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s2 = <a class="code" href="structListeAdjacence.html#a36c937228d06a462ff42df578b3dbe0d" title="Extrémité de l&#39;arête en tête de liste.">lsommet_tete</a>(l);
+<a name="l00029"></a>00029                 <span class="keywordflow">if</span> (<a class="code" href="structCouleursGraphe.html#a8f24db15b7e11b1871679300af373a4d" title="Couleur du Sommet s.">cgCouleurSommet</a>(cg, s2) == <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a35653913ced93d8199f0378ec538a0c7">BLANC</a>)
+<a name="l00030"></a>00030                     cg = <a class="code" href="structGraphe.html#a27054ead26f2d98f65c717eed6ee8740" title="Modifier un sommet de la liste.">cgModifierSommet</a>(cg, s2, <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a3e331dfdc8ccad697e22ffbd63d69ce0">GRIS</a>);
+<a name="l00031"></a>00031                 l = <a class="code" href="structListeAdjacence.html#a3ff1a663a7b0eb00e5049d2891e2b18a" title="Arête suivante.">lsuiv</a>(l);
+<a name="l00032"></a>00032             }
+<a name="l00033"></a>00033             cg = <a class="code" href="structGraphe.html#a27054ead26f2d98f65c717eed6ee8740" title="Modifier un sommet de la liste.">cgModifierSommet</a>(cg, s1, <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a59e3323a198f0162330111165caaf367">NOIR</a>);
+<a name="l00034"></a>00034         }
+<a name="l00035"></a>00035     }
+<a name="l00036"></a>00036 
+<a name="l00037"></a>00037     <span class="keywordflow">return</span> cg;
+<a name="l00038"></a>00038 }
+<a name="l00039"></a>00039 
+<a name="l00040"></a><a class="code" href="parcours_8c.html#af2d919b7649b50f315487287fc9fad68">00040</a> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe.">gEstConnexe</a>(<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g)
+<a name="l00041"></a>00041 {
+<a name="l00042"></a>00042     <span class="keywordtype">int</span> n = <a class="code" href="structGraphe.html#ae08239d1436fe3268b62c42ab13470d4" title="Nombre de sommets dans un Graphe.">gNombreSommets</a>(g);
+<a name="l00043"></a>00043 
+<a name="l00044"></a>00044     <span class="keywordflow">if</span> (n == 0)
+<a name="l00045"></a>00045         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+<a name="l00046"></a>00046     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (n == 1)
+<a name="l00047"></a>00047     {
+<a name="l00048"></a>00048         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
+<a name="l00049"></a>00049     }
+<a name="l00050"></a>00050     <span class="keywordflow">else</span>
+<a name="l00051"></a>00051     {
+<a name="l00052"></a>00052         <span class="keywordtype">int</span> noirs;
+<a name="l00053"></a>00053         <a class="code" href="structCouleursGraphe.html" title="Liste des couleurs des sommets d&#39;un graphe.">CouleursGraphe</a> * cg;
+<a name="l00054"></a>00054 
+<a name="l00055"></a>00055         cg = <a class="code" href="parcours_8h.html#abd040d82372961759c0ec9c694131303" title="Parcours en largeur d&#39;un graphe.">gParcoursLargeur</a>(g);
+<a name="l00056"></a>00056         noirs = <a class="code" href="structCouleursGraphe.html#a3256a9fb9592b47cc839e62119812431" title="Nombre de Sommet NOIR dans cg.">cgNombreSommetsNoirs</a>(cg);
+<a name="l00057"></a>00057         cg = <a class="code" href="structCouleursGraphe.html#aa23bf05908ea1185cb2248b833c68d6e" title="Libérer une liste de couleurs.">cgLiberer</a>(cg);
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059         <span class="keywordflow">return</span> <a class="code" href="structGraphe.html#ae08239d1436fe3268b62c42ab13470d4" title="Nombre de sommets dans un Graphe.">gNombreSommets</a>(g) == noirs;
+<a name="l00060"></a>00060     }
+<a name="l00061"></a>00061 }
+<a name="l00062"></a>00062 
+<a name="l00063"></a><a class="code" href="parcours_8c.html#a8324bb1764f831e8030db5936b6104d0">00063</a> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="structGraphe.html#a8324bb1764f831e8030db5936b6104d0" title="Test d&#39;existence de cycles dans un graphe.">gACycle</a>(<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g)
+<a name="l00064"></a>00064 {
+<a name="l00065"></a>00065     <span class="keywordtype">int</span> n = <a class="code" href="structGraphe.html#ae08239d1436fe3268b62c42ab13470d4" title="Nombre de sommets dans un Graphe.">gNombreSommets</a>(g);
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067     <span class="keywordflow">if</span> (n == 0)
+<a name="l00068"></a>00068         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+<a name="l00069"></a>00069     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (n == 1)
+<a name="l00070"></a>00070     {
+<a name="l00071"></a>00071         <span class="keywordflow">return</span> <a class="code" href="structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe.">gExisteArete</a>(g, <a class="code" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets.">gSommetTete</a>(g), <a class="code" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets.">gSommetTete</a>(g));
+<a name="l00072"></a>00072     }
+<a name="l00073"></a>00073     <span class="keywordflow">else</span>
+<a name="l00074"></a>00074     {
+<a name="l00075"></a>00075         <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s1;
+<a name="l00076"></a>00076         <a class="code" href="structCouleursGraphe.html" title="Liste des couleurs des sommets d&#39;un graphe.">CouleursGraphe</a> * cg = <a class="code" href="structCouleursGraphe.html#a5cd274818f796ec1c2984bcfbfa81b07" title="Initialiser les couleurs des sommets d&#39;un graphe à BLANC.">cgInit</a>(g);
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078         <span class="keywordflow">while</span> (<a class="code" href="structCouleursGraphe.html#a1a641312a63d41146c473c0cd7f6f1c7" title="Nombre de Sommet BLANC dans cg.">cgNombreSommetsBlancs</a>(cg) &gt; 0)
+<a name="l00079"></a>00079         {
+<a name="l00080"></a>00080             cg = <a class="code" href="structGraphe.html#a27054ead26f2d98f65c717eed6ee8740" title="Modifier un sommet de la liste.">cgModifierSommet</a>(cg, <a class="code" href="structCouleursGraphe.html#a679182337facdf06acae903d4990c189" title="Premier Sommet BLANC dans cg.">cgPremierSommetBlanc</a>(cg), <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a3e331dfdc8ccad697e22ffbd63d69ce0">GRIS</a>);
+<a name="l00081"></a>00081 
+<a name="l00082"></a>00082             <span class="keywordflow">while</span>((s1 = <a class="code" href="structCouleursGraphe.html#ace215968cb4c8f62feaba64423ae7a86" title="Premier Sommet GRIS dans cg.">cgPremierSommetGris</a>(cg)) != NULL)
+<a name="l00083"></a>00083             {
+<a name="l00084"></a>00084                 <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l = <a class="code" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet.">gAdjacenceSommet</a>(g, s1);
+<a name="l00085"></a>00085                 <span class="keywordflow">while</span>(!<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(l))
+<a name="l00086"></a>00086                 {
+<a name="l00087"></a>00087                     <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s2 = <a class="code" href="structListeAdjacence.html#a36c937228d06a462ff42df578b3dbe0d" title="Extrémité de l&#39;arête en tête de liste.">lsommet_tete</a>(l);
+<a name="l00088"></a>00088                     <span class="keywordflow">if</span> (<a class="code" href="structCouleursGraphe.html#a8f24db15b7e11b1871679300af373a4d" title="Couleur du Sommet s.">cgCouleurSommet</a>(cg, s2) == <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a35653913ced93d8199f0378ec538a0c7">BLANC</a>)
+<a name="l00089"></a>00089                         cg = <a class="code" href="structGraphe.html#a27054ead26f2d98f65c717eed6ee8740" title="Modifier un sommet de la liste.">cgModifierSommet</a>(cg, s2, <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a3e331dfdc8ccad697e22ffbd63d69ce0">GRIS</a>);
+<a name="l00090"></a>00090                     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="structCouleursGraphe.html#a8f24db15b7e11b1871679300af373a4d" title="Couleur du Sommet s.">cgCouleurSommet</a>(cg, s2) == <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a3e331dfdc8ccad697e22ffbd63d69ce0">GRIS</a>)
+<a name="l00091"></a>00091                     {
+<a name="l00092"></a>00092                         cg = <a class="code" href="structCouleursGraphe.html#aa23bf05908ea1185cb2248b833c68d6e" title="Libérer une liste de couleurs.">cgLiberer</a>(cg);
+<a name="l00093"></a>00093                         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
+<a name="l00094"></a>00094                     }
+<a name="l00095"></a>00095                     l = <a class="code" href="structListeAdjacence.html#a3ff1a663a7b0eb00e5049d2891e2b18a" title="Arête suivante.">lsuiv</a>(l);
+<a name="l00096"></a>00096                 }
+<a name="l00097"></a>00097                 cg = <a class="code" href="structGraphe.html#a27054ead26f2d98f65c717eed6ee8740" title="Modifier un sommet de la liste.">cgModifierSommet</a>(cg, s1, <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a59e3323a198f0162330111165caaf367">NOIR</a>);
+<a name="l00098"></a>00098             }
+<a name="l00099"></a>00099         }
 <a name="l00100"></a>00100 
-<a name="l00101"></a>00101 }
+<a name="l00101"></a>00101         cg = <a class="code" href="structCouleursGraphe.html#aa23bf05908ea1185cb2248b833c68d6e" title="Libérer une liste de couleurs.">cgLiberer</a>(cg);
+<a name="l00102"></a>00102 
+<a name="l00103"></a>00103         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+<a name="l00104"></a>00104     }
+<a name="l00105"></a>00105 
+<a name="l00106"></a>00106 }
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -213,7 +217,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Vendredi Avril 19 2013 18:08:38 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Samedi Avril 27 2013 23:17:00 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

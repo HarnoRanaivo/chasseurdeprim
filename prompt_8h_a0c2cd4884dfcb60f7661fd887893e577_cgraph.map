@@ -1,0 +1,15 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$prompt_8h.html#a6050c74ea164fa2d66afa46d0a6e45fb" title="Compter le nombre de mots dans une chaîne de caractères." alt="" coords="267,5,365,35"/>
+<area shape="rect" id="node5" href="$prompt_8h.html#a3b842707d531b4beedc3284f4a38294e" title="Vérification de l&#39;intention de l&#39;utilisateur." alt="" coords="285,59,347,88"/>
+<area shape="rect" id="node7" href="$structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe." alt="" coords="257,112,375,141"/>
+<area shape="rect" id="node9" href="$structGraphe.html#a1a93b1ef000c27e4d43c871faff3c2a3" title="Permet de charger un graphe dans un fichier texte." alt="" coords="236,165,396,195"/>
+<area shape="rect" id="node11" href="$structGraphe.html#aca158a023def8433061cca3075d09311" title="Permet de sauvegarder le graphe dans un fichier passé en argument." alt="" coords="221,219,411,248"/>
+<area shape="rect" id="node13" href="$structGraphe.html#ac01b4181e185122d26b569dc5d5b0eb9" title="Modification d&#39;une arête dans un GrapheConnexe." alt="" coords="235,272,397,301"/>
+<area shape="rect" id="node15" href="$structGraphe.html#ad7f46b1f66764538930a9ea33a746961" title="Ajout d&#39;une arête dans un graphe connexe." alt="" coords="237,325,395,355"/>
+<area shape="rect" id="node17" href="$structGraphe.html#a426658bb7e74364f25137659827422a2" title="suppression d&#39;une arête dans un graphe connexe." alt="" coords="228,379,404,408"/>
+<area shape="rect" id="node19" href="$structGraphe.html#ac3d2bf2bf83d8206bb018726506e9df2" title="Suppression d&#39;un sommet dans un graphe connexe." alt="" coords="219,432,413,461"/>
+<area shape="rect" id="node21" href="$structGraphe.html#a363d4c3de24663a378322111f71e51cf" title="Calcul de l&#39;arbre couvrant minimum d&#39;un graphe connexe en partant d&#39;un sommet." alt="" coords="208,485,424,515"/>
+<area shape="rect" id="node23" href="$structGraphe.html#a0d0ec90a46d0b4618b17c2ea4f6c0d0f" title="Générer un fichier latex représentant les Graphe g et a à l&#39;aide de Latex et TikZ." alt="" coords="237,539,395,568"/>
+<area shape="rect" id="node25" href="$prompt_8h.html#ac305603132f5f58b80b4818ab71406dd" title="Afficher l&#39;aide correspondant à une commande." alt="" coords="473,617,631,647"/>
+<area shape="rect" id="node27" href="$prompt_8h.html#a6c01420aa3b32974d76d5fe198b1a55f" title="Afficher l&#39;aide du programme." alt="" coords="271,643,361,672"/>
+</map>

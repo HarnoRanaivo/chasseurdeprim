@@ -23,3 +23,6 @@ bin/
 
 # Vim swp files
 *.swp
+
+# Tags
+tags

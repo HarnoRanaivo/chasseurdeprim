@@ -1,3 +1,4 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$io_8c.html#aca158a023def8433061cca3075d09311" title="Permet de sauvegarder le graphe dans un fichier passé en argument." alt="" coords="171,5,309,35"/>
+<area shape="rect" id="node3" href="$io_8c.html#aca158a023def8433061cca3075d09311" title="Permet de sauvegarder le graphe dans un fichier passé en argument." alt="" coords="175,5,313,35"/>
+<area shape="rect" id="node5" href="$io_8c.html#ad6a8e0a2906acb31766e826e35ecb34d" title="Afficher les arêtes d&#39;un graphe." alt="" coords="172,59,316,88"/>
 </map>

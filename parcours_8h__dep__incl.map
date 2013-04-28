@@ -1,8 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$grapheconnexe_8h.html" title="GrapheConnexes connexes (header)" alt="" coords="96,83,261,112"/>
-<area shape="rect" id="node13" href="$parcours_8c.html" title="Parcours d&#39;un graphe (code)" alt="" coords="285,83,389,112"/>
-<area shape="rect" id="node5" href="$prompt_8h.html" title="Prompt (header)" alt="" coords="44,160,161,189"/>
-<area shape="rect" id="node11" href="$grapheconnexe_8c.html" title="GrapheConnexes (code)" alt="" coords="185,160,327,189"/>
-<area shape="rect" id="node7" href="$main_8c.html" title="Main." alt="" coords="5,237,88,267"/>
-<area shape="rect" id="node9" href="$prompt_8c.html" title="Prompt (code)" alt="" coords="112,237,205,267"/>
+<area shape="rect" id="node3" href="$edition_8h.html" title="Prompt mode édition (header)" alt="" coords="29,83,144,112"/>
+<area shape="rect" id="node5" href="$prompt_8h.html" title="Prompt (header)" alt="" coords="123,160,240,189"/>
+<area shape="rect" id="node13" href="$grapheconnexe_8h.html" title="GrapheConnexes connexes (header)" alt="" coords="219,83,384,112"/>
+<area shape="rect" id="node19" href="$parcours_8c.html" title="Parcours d&#39;un graphe (code)" alt="" coords="408,83,512,112"/>
+<area shape="rect" id="node11" href="$edition_8c.html" title="Prompt mode édition (code)" alt="" coords="5,160,99,189"/>
+<area shape="rect" id="node7" href="$main_8c.html" title="Main." alt="" coords="84,237,167,267"/>
+<area shape="rect" id="node9" href="$prompt_8c.html" title="Prompt (code)" alt="" coords="191,237,284,267"/>
+<area shape="rect" id="node16" href="$grapheconnexe_8c.html" title="GrapheConnexes (code)" alt="" coords="264,160,405,189"/>
 </map>

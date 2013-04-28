@@ -119,27 +119,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="io_8h.html" title="Entrées/Sorties (header)">io.h</a>&quot;</span>
 <a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="prim_8h.html" title="Algorithme de Prim (header)">prim.h</a>&quot;</span>
 <a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="generation_8h.html" title="Generation d&#39;un fichier latex (header)">generation.h</a>&quot;</span>
-<a name="l00026"></a>00026 
-<a name="l00031"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3ea">00031</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3ea" title="Alias pour les commandes.">PromptCommande</a>
-<a name="l00032"></a>00032 {
-<a name="l00033"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaacdeef5cde3f80503a88859bad4a3704c">00033</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaacdeef5cde3f80503a88859bad4a3704c">PC_INCONNU</a>,     
-<a name="l00034"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa87749e32e5594f1737f23c9a14f47f0e">00034</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa87749e32e5594f1737f23c9a14f47f0e">PC_CHG</a>,         
-<a name="l00035"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab01f01d01488432aca18e8dd99bbda6b">00035</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab01f01d01488432aca18e8dd99bbda6b">PC_SAV</a>,         
-<a name="l00036"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa40ff0532940fb5149c2dc84f33a1e42f">00036</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa40ff0532940fb5149c2dc84f33a1e42f">PC_MOD</a>,         
-<a name="l00037"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab54edd094180c0250cef139a8faa77e6">00037</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab54edd094180c0250cef139a8faa77e6">PC_AJAR</a>,        
-<a name="l00038"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaaf2e43916177d13b13142c266c8084c96">00038</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaaf2e43916177d13b13142c266c8084c96">PC_SUPAR</a>,       
-<a name="l00039"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab09822296be1a43a17ebc1fe365d95d5">00039</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab09822296be1a43a17ebc1fe365d95d5">PC_SUPSOM</a>,      
-<a name="l00040"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa13fc09e04b2f05e4c1fdf54082f7e396">00040</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa13fc09e04b2f05e4c1fdf54082f7e396">PC_CAL</a>,         
-<a name="l00041"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaaf53a88ef4d4ed39a5e1cf9647e7b8d52">00041</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaaf53a88ef4d4ed39a5e1cf9647e7b8d52">PC_AFF</a>,         
-<a name="l00042"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa7b3b37a3057e294e082fc0dfd1f36e6a">00042</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa7b3b37a3057e294e082fc0dfd1f36e6a">PC_AIDE</a>,        
-<a name="l00043"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa2969aa76987f61e233e9eef321b653d3">00043</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa2969aa76987f61e233e9eef321b653d3">PC_QUIT</a>         
-<a name="l00044"></a>00044 } <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3ea" title="Alias pour les commandes.">PromptCommande</a>;
-<a name="l00045"></a>00045 
-<a name="l00049"></a>00049 <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3ea" title="Alias pour les commandes.">PromptCommande</a> PC_LISTE[] =
-<a name="l00050"></a>00050 {
-<a name="l00051"></a>00051     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa87749e32e5594f1737f23c9a14f47f0e">PC_CHG</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab01f01d01488432aca18e8dd99bbda6b">PC_SAV</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa40ff0532940fb5149c2dc84f33a1e42f">PC_MOD</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab54edd094180c0250cef139a8faa77e6">PC_AJAR</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaaf2e43916177d13b13142c266c8084c96">PC_SUPAR</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab09822296be1a43a17ebc1fe365d95d5">PC_SUPSOM</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab54edd094180c0250cef139a8faa77e6">PC_AJAR</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaaf2e43916177d13b13142c266c8084c96">PC_SUPAR</a>,
-<a name="l00052"></a>00052     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab09822296be1a43a17ebc1fe365d95d5">PC_SUPSOM</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa13fc09e04b2f05e4c1fdf54082f7e396">PC_CAL</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaaf53a88ef4d4ed39a5e1cf9647e7b8d52">PC_AFF</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa7b3b37a3057e294e082fc0dfd1f36e6a">PC_AIDE</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa2969aa76987f61e233e9eef321b653d3">PC_QUIT</a>, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaacdeef5cde3f80503a88859bad4a3704c">PC_INCONNU</a>
-<a name="l00053"></a>00053 };
+<a name="l00026"></a>00026 <span class="preprocessor">#include &quot;<a class="code" href="parcours_8h.html" title="Parcours d&#39;un graphe (header)">parcours.h</a>&quot;</span>
+<a name="l00027"></a>00027 <span class="preprocessor">#include &quot;<a class="code" href="edition_8h.html" title="Prompt mode édition (header)">edition.h</a>&quot;</span>
+<a name="l00028"></a>00028 
+<a name="l00033"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3ea">00033</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3ea" title="Alias pour les commandes du prompt.">PromptCommande</a>
+<a name="l00034"></a>00034 {
+<a name="l00035"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaaa14c7ade18f8a239a8c0a523df624732">00035</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaaa14c7ade18f8a239a8c0a523df624732">PC_NOUV</a>,        
+<a name="l00036"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa87749e32e5594f1737f23c9a14f47f0e">00036</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa87749e32e5594f1737f23c9a14f47f0e">PC_CHG</a>,         
+<a name="l00037"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab01f01d01488432aca18e8dd99bbda6b">00037</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab01f01d01488432aca18e8dd99bbda6b">PC_SAV</a>,         
+<a name="l00038"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa40ff0532940fb5149c2dc84f33a1e42f">00038</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa40ff0532940fb5149c2dc84f33a1e42f">PC_MOD</a>,         
+<a name="l00039"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab54edd094180c0250cef139a8faa77e6">00039</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab54edd094180c0250cef139a8faa77e6">PC_AJAR</a>,        
+<a name="l00040"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaaf2e43916177d13b13142c266c8084c96">00040</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaaf2e43916177d13b13142c266c8084c96">PC_SUPAR</a>,       
+<a name="l00041"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab09822296be1a43a17ebc1fe365d95d5">00041</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab09822296be1a43a17ebc1fe365d95d5">PC_SUPSOM</a>,      
+<a name="l00042"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa13fc09e04b2f05e4c1fdf54082f7e396">00042</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa13fc09e04b2f05e4c1fdf54082f7e396">PC_CAL</a>,         
+<a name="l00043"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaaf53a88ef4d4ed39a5e1cf9647e7b8d52">00043</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaaf53a88ef4d4ed39a5e1cf9647e7b8d52">PC_AFF</a>,         
+<a name="l00044"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab87db2dd5c22d855b95e6f136e0125b7">00044</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab87db2dd5c22d855b95e6f136e0125b7">PC_LSV</a>,         
+<a name="l00045"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa2ccccc80cadcd8b5c366e8d1b2250348">00045</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa2ccccc80cadcd8b5c366e8d1b2250348">PC_LSI</a>,         
+<a name="l00046"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa6c6b748523238f5c720814c426e8fada">00046</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa6c6b748523238f5c720814c426e8fada">PC_LSS</a>,         
+<a name="l00047"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa1a308bf1ace33a955a4eb4f919efa387">00047</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa1a308bf1ace33a955a4eb4f919efa387">PC_LSA</a>,         
+<a name="l00048"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa42565f8bda459341ab4272f4355bd458">00048</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa42565f8bda459341ab4272f4355bd458">PC_EDIT</a>,        
+<a name="l00049"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa7b3b37a3057e294e082fc0dfd1f36e6a">00049</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa7b3b37a3057e294e082fc0dfd1f36e6a">PC_AIDE</a>,        
+<a name="l00050"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa2969aa76987f61e233e9eef321b653d3">00050</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa2969aa76987f61e233e9eef321b653d3">PC_QUIT</a>,        
+<a name="l00051"></a><a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaacdeef5cde3f80503a88859bad4a3704c">00051</a>     <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaacdeef5cde3f80503a88859bad4a3704c">PC_INCONNU</a>,     
+<a name="l00052"></a>00052 } <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3ea" title="Alias pour les commandes du prompt.">PromptCommande</a>;
+<a name="l00053"></a>00053 <span class="comment">/* PC_INCONNU *DOIT* se trouver en dernier. */</span>
 <a name="l00054"></a>00054 
 <a name="l00059"></a><a class="code" href="structDonnees.html">00059</a> <span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structDonnees.html" title="Stockage des données temporaires du programme.">Donnees</a>
 <a name="l00060"></a>00060 {
@@ -148,19 +151,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00063"></a>00063     <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> sauvegarde;
 <a name="l00064"></a>00064 } <a class="code" href="structDonnees.html" title="Stockage des données temporaires du programme.">Donnees</a>;
 <a name="l00065"></a>00065 
-<a name="l00070"></a>00070 <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="prompt_8h.html#a3b842707d531b4beedc3284f4a38294e" title="Vérification de l&#39;intention de l&#39;utilisateur.">verifier</a>(<span class="keywordtype">void</span>);
-<a name="l00071"></a>00071 
-<a name="l00078"></a>00078 <span class="keywordtype">int</span> <a class="code" href="prompt_8h.html#a6050c74ea164fa2d66afa46d0a6e45fb" title="Compter le nombre de mots dans une chaîne de caractères.">compterMots</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * chaine);
-<a name="l00079"></a>00079 
-<a name="l00085"></a>00085 <span class="keywordtype">void</span> <a class="code" href="prompt_8h.html#ac305603132f5f58b80b4818ab71406dd" title="Afficher l&#39;aide correspondant à une commande.">afficherAideCommande</a>(<a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3ea" title="Alias pour les commandes.">PromptCommande</a> pc);
-<a name="l00086"></a>00086 
-<a name="l00090"></a>00090 <span class="keywordtype">void</span> <a class="code" href="prompt_8h.html#a6c01420aa3b32974d76d5fe198b1a55f" title="Afficher l&#39;aide du programme.">afficherAide</a>(<span class="keywordtype">void</span>);
-<a name="l00091"></a>00091 
-<a name="l00100"></a>00100 <a class="code" href="structDonnees.html" title="Stockage des données temporaires du programme.">Donnees</a> * <a class="code" href="structDonnees.html#a0c2cd4884dfcb60f7661fd887893e577" title="Traiter la ligne de commande entrée par l&#39;utilisateur.">traiterLigneCommande</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * ligne, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3ea" title="Alias pour les commandes.">PromptCommande</a> pc, <a class="code" href="structDonnees.html" title="Stockage des données temporaires du programme.">Donnees</a> * d);
-<a name="l00101"></a>00101 
-<a name="l00105"></a>00105 <span class="keywordtype">void</span> <a class="code" href="prompt_8h.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur.">prompt</a>(<span class="keywordtype">void</span>);
-<a name="l00106"></a>00106 
-<a name="l00107"></a>00107 <span class="preprocessor">#endif </span><span class="comment">/* __PROMPT_H */</span>
+<a name="l00071"></a>00071 <span class="keywordtype">void</span> <a class="code" href="prompt_8h.html#a67d900e1179f0fed000632236712f74b" title="Afficher l&#39;aide correspondant à une commande.">afficherAidePromptCommande</a>(<a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3ea" title="Alias pour les commandes du prompt.">PromptCommande</a> pc);
+<a name="l00072"></a>00072 
+<a name="l00076"></a>00076 <span class="keywordtype">void</span> <a class="code" href="prompt_8h.html#af1995b4745ff223779591ed37525a8fb" title="Afficher l&#39;aide du programme.">afficherPromptAide</a>(<span class="keywordtype">void</span>);
+<a name="l00077"></a>00077 
+<a name="l00084"></a>00084 <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3ea" title="Alias pour les commandes du prompt.">PromptCommande</a> <a class="code" href="prompt_8h.html#a32ca0623d7c330e982e97f5352b9cdf7" title="Rechercher la commande correspondante.">rechercherPromptCommande</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * ligne);
+<a name="l00085"></a>00085 
+<a name="l00094"></a>00094 <a class="code" href="structDonnees.html" title="Stockage des données temporaires du programme.">Donnees</a> * <a class="code" href="prompt_8h.html#a0c2cd4884dfcb60f7661fd887893e577" title="Traiter la ligne de commande entrée par l&#39;utilisateur.">traiterLigneCommande</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * ligne, <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3ea" title="Alias pour les commandes du prompt.">PromptCommande</a> pc, <a class="code" href="structDonnees.html" title="Stockage des données temporaires du programme.">Donnees</a> * d);
+<a name="l00095"></a>00095 
+<a name="l00099"></a>00099 <span class="keywordtype">void</span> <a class="code" href="prompt_8h.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur.">prompt</a>(<span class="keywordtype">void</span>);
+<a name="l00100"></a>00100 
+<a name="l00101"></a>00101 <span class="preprocessor">#endif </span><span class="comment">/* __PROMPT_H */</span>
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -179,7 +180,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Samedi Avril 27 2013 23:17:00 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Avril 28 2013 18:05:22 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

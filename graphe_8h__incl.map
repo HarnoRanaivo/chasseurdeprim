@@ -1,7 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node9" href="$base_8h.html" title="Base (header)" alt="" coords="203,315,264,344"/>
-<area shape="rect" id="node13" href="$sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="409,237,489,267"/>
-<area shape="rect" id="node19" href="$adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)" alt="" coords="564,160,655,189"/>
-<area shape="rect" id="node26" href="$listearete_8h.html" title="Liste d&#39;arêtes (header)" alt="" coords="296,83,381,112"/>
-<area shape="rect" id="node32" href="$arete_8h.html" title="Arêtes (header)" alt="" coords="273,160,335,189"/>
+<area shape="rect" id="node9" href="$base_8h.html" title="Base (header)" alt="" coords="264,315,325,344"/>
+<area shape="rect" id="node14" href="$sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="397,237,477,267"/>
+<area shape="rect" id="node20" href="$adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)" alt="" coords="483,160,573,189"/>
+<area shape="rect" id="node27" href="$listearete_8h.html" title="Liste d&#39;arêtes (header)" alt="" coords="216,83,301,112"/>
+<area shape="rect" id="node33" href="$arete_8h.html" title="Arêtes (header)" alt="" coords="195,160,256,189"/>
 </map>

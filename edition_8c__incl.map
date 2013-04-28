@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$edition_8h.html" title="Prompt mode édition (header)" alt="" coords="616,83,685,112"/>
+<area shape="rect" id="node11" href="$base_8h.html" title="Base (header)" alt="" coords="1027,624,1088,653"/>
+<area shape="rect" id="node16" href="$graphe_8h.html" title="Graphes (header)" alt="" coords="643,315,715,344"/>
+<area shape="rect" id="node47" href="$io_8h.html" title="Entrées/Sorties (header)" alt="" coords="325,237,368,267"/>
+<area shape="rect" id="node58" href="$parcours_8h.html" title="Parcours d&#39;un graphe (header)" alt="" coords="711,160,793,189"/>
+<area shape="rect" id="node22" href="$sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="720,547,800,576"/>
+<area shape="rect" id="node28" href="$adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)" alt="" coords="421,469,512,499"/>
+<area shape="rect" id="node35" href="$listearete_8h.html" title="Liste d&#39;arêtes (header)" alt="" coords="895,392,980,421"/>
+<area shape="rect" id="node41" href="$arete_8h.html" title="Arêtes (header)" alt="" coords="941,469,1003,499"/>
+<area shape="rect" id="node65" href="$coloration_8h.html" title="Coloration d&#39;un graphe (header)" alt="" coords="943,237,1031,267"/>
+</map>

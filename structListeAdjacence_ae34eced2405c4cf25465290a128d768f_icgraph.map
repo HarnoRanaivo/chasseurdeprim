@@ -1,5 +1,6 @@
 <map id="G" name="G">
 <area shape="rect" id="node3" href="$graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18" title="Copie d&#39;un Graphe." alt="" coords="289,5,356,35"/>
 <area shape="rect" id="node5" href="$graphe_8c.html#acfcf3da168eac84806f30277b17e8a29" title="Liste des arêtes d&#39;un Graphe." alt="" coords="289,59,356,88"/>
-<area shape="rect" id="node7" href="$prim_8c.html#add200cb199275679a09eb24bfdf3075b" title="Ajouter les arêtes incidentes à un sommet." alt="" coords="239,112,407,141"/>
+<area shape="rect" id="node7" href="$io_8c.html#ace288c4a90377a269c162289a83b2bac" title="Afficher les arêtes incidentes à un sommet." alt="" coords="260,112,385,141"/>
+<area shape="rect" id="node9" href="$prim_8c.html#add200cb199275679a09eb24bfdf3075b" title="Ajouter les arêtes incidentes à un sommet." alt="" coords="239,165,407,195"/>
 </map>

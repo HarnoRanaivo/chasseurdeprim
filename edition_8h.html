@@ -1,0 +1,659 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Chasseur de Prim: Référence du fichier include/edition.h</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Chasseur de Prim
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Généré par Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li><a href="dirs.html"><span>Répertoires</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="dir_6570b8eaffc1d650912f1c36f17cf20f.html">include</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#enum-members">Énumérations</a> &#124;
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier edition.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Prompt mode édition (header)  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &lt;stdlib.h&gt;</code><br/>
+<code>#include &lt;string.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="base_8h_source.html">base.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="graphe_8h_source.html">graphe.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="io_8h_source.html">io.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="parcours_8h_source.html">parcours.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de edition.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="edition_8h__incl.png" border="0" usemap="#include_2edition_8h" alt=""/></div>
+<map name="include_2edition_8h" id="include_2edition_8h">
+<area shape="rect" id="node9" href="base_8h.html" title="Base (header)" alt="" coords="1027,547,1088,576"/><area shape="rect" id="node14" href="graphe_8h.html" title="Graphes (header)" alt="" coords="643,237,715,267"/><area shape="rect" id="node45" href="io_8h.html" title="Entrées/Sorties (header)" alt="" coords="325,160,368,189"/><area shape="rect" id="node56" href="parcours_8h.html" title="Parcours d&#39;un graphe (header)" alt="" coords="711,83,793,112"/><area shape="rect" id="node20" href="sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="720,469,800,499"/><area shape="rect" id="node26" href="adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)" alt="" coords="421,392,512,421"/><area shape="rect" id="node33" href="listearete_8h.html" title="Liste d&#39;arêtes (header)" alt="" coords="895,315,980,344"/><area shape="rect" id="node39" href="arete_8h.html" title="Arêtes (header)" alt="" coords="941,392,1003,421"/><area shape="rect" id="node63" href="coloration_8h.html" title="Coloration d&#39;un graphe (header)" alt="" coords="943,160,1031,189"/></map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
+<div class="dyncontent">
+<div class="center"><img src="edition_8h__dep__incl.png" border="0" usemap="#include_2edition_8hdep" alt=""/></div>
+<map name="include_2edition_8hdep" id="include_2edition_8hdep">
+<area shape="rect" id="node3" href="prompt_8h.html" title="Prompt (header)" alt="" coords="44,83,161,112"/><area shape="rect" id="node9" href="edition_8c.html" title="Prompt mode édition (code)" alt="" coords="185,83,279,112"/><area shape="rect" id="node5" href="main_8c.html" title="Main." alt="" coords="5,160,88,189"/><area shape="rect" id="node7" href="prompt_8c.html" title="Prompt (code)" alt="" coords="112,160,205,189"/></map>
+</div>
+</div>
+<p><a href="edition_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="enum-members"></a>
+Énumérations</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425f">EditCommande</a> { <br/>
+&#160;&#160;<a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa68591f1a1b1d50bc7405184d821ad55b">ED_NOUV</a>, 
+<a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa6c15988c6bd173ce826b1e00a0347f03">ED_AJS</a>, 
+<a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fabf8ec66353280b6e7fa801117e657ddf">ED_AJAR</a>, 
+<a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa30e8d84207f42397fb86f592dbaf43fa">ED_MOD</a>, 
+<br/>
+&#160;&#160;<a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fac3d858f59f7969ce867f55f5a2a3753b">ED_SUPS</a>, 
+<a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa5afaf61f108775c0a14d6fa043e7fa00">ED_SUPAR</a>, 
+<a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa43d16055a0f4a0386c3c675fa05e29be">ED_LSV</a>, 
+<a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa62338215fc6fa91ea4b19b120d76fed1">ED_LSI</a>, 
+<br/>
+&#160;&#160;<a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fac851f0bf0c55f2a90ae2e720ef52efd3">ED_LSS</a>, 
+<a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fac14a742b861c33ee25625d92f9d5028d">ED_LSA</a>, 
+<a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa2335ef7b397173bf5033ecec5fc99281">ED_CNX</a>, 
+<a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa28883a14ea56aa8d37533a9d460b5bfa">ED_AIDE</a>, 
+<br/>
+&#160;&#160;<a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa5f026c3164088c569f2082781b010f4b">ED_QUIT</a>, 
+<a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425faa1e9fceaeddfe419a037e829e227c53b">ED_INCONNU</a>
+<br/>
+ }</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Alias pour les commandes du mode « édition ».  <a href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425f">Plus de détails...</a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="edition_8h.html#a0a2aed0f6bc3f74869b285f780be3046">afficherAideEditCommande</a> (<a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425f">EditCommande</a> ec)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Afficher l'aide correspondant à une commande.  <a href="#a0a2aed0f6bc3f74869b285f780be3046"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8cbf30bc7af47ca33c79fbc305da4f9b"></a><!-- doxytag: member="edition.h::afficherAideEdition" ref="a8cbf30bc7af47ca33c79fbc305da4f9b" args="(void)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="edition_8h.html#a8cbf30bc7af47ca33c79fbc305da4f9b">afficherAideEdition</a> (void)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Afficher l'aide du mode « édition ». <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425f">EditCommande</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="edition_8h.html#a8f05525d05c3c2ae8667e6e185dac69b">rechercherEditCommande</a> (const char *ligne)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Rechercher la commande correspondante.  <a href="#a8f05525d05c3c2ae8667e6e185dac69b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="edition_8h.html#a36eea2bb9710df698c47d1af470f64aa">traiterLigneEdition</a> (const char *ligne, <a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425f">EditCommande</a> ec, <a class="el" href="structGraphe.html">Graphe</a> *g)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Traiter la ligne de commande entrée par l'utilisateur.  <a href="#a36eea2bb9710df698c47d1af470f64aa"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="edition_8h.html#a1770853bacd8106bc52fece08805017f">modeEdition</a> (<a class="el" href="structGraphe.html">Graphe</a> *g)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Afficher le prompt du mode édition, et gérer les entrées utilisateur.  <a href="#a1770853bacd8106bc52fece08805017f"></a><br/></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>Description détaillée</h2>
+<div class="textblock"><p>Prompt mode édition (header) </p>
+<dl class="author"><dt><b>Auteur:</b></dt><dd>Harenome RAZANAJATO </dd></dl>
+
+<p>Définition dans le fichier <a class="el" href="edition_8h_source.html">edition.h</a>.</p>
+</div><hr/><h2>Documentation du type de l'énumération</h2>
+<a class="anchor" id="a4d3e0c9f40b3249bb4cd536ee197425f"></a><!-- doxytag: member="edition.h::EditCommande" ref="a4d3e0c9f40b3249bb4cd536ee197425f" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425f">EditCommande</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Alias pour les commandes du mode « édition ». </p>
+<dl><dt><b>Valeurs énumérées: </b></dt><dd><table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em><a class="anchor" id="a4d3e0c9f40b3249bb4cd536ee197425fa68591f1a1b1d50bc7405184d821ad55b"></a><!-- doxytag: member="ED_NOUV" ref="a4d3e0c9f40b3249bb4cd536ee197425fa68591f1a1b1d50bc7405184d821ad55b" args="" -->ED_NOUV</em>&nbsp;</td><td>
+<ul>
+<li>Nouveau graphe. </li>
+</ul>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a4d3e0c9f40b3249bb4cd536ee197425fa6c15988c6bd173ce826b1e00a0347f03"></a><!-- doxytag: member="ED_AJS" ref="a4d3e0c9f40b3249bb4cd536ee197425fa6c15988c6bd173ce826b1e00a0347f03" args="" -->ED_AJS</em>&nbsp;</td><td>
+<ul>
+<li>Ajouter un sommet. </li>
+</ul>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a4d3e0c9f40b3249bb4cd536ee197425fabf8ec66353280b6e7fa801117e657ddf"></a><!-- doxytag: member="ED_AJAR" ref="a4d3e0c9f40b3249bb4cd536ee197425fabf8ec66353280b6e7fa801117e657ddf" args="" -->ED_AJAR</em>&nbsp;</td><td>
+<ul>
+<li>Ajouter une arête. </li>
+</ul>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a4d3e0c9f40b3249bb4cd536ee197425fa30e8d84207f42397fb86f592dbaf43fa"></a><!-- doxytag: member="ED_MOD" ref="a4d3e0c9f40b3249bb4cd536ee197425fa30e8d84207f42397fb86f592dbaf43fa" args="" -->ED_MOD</em>&nbsp;</td><td>
+<ul>
+<li>Modifier une arête. </li>
+</ul>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a4d3e0c9f40b3249bb4cd536ee197425fac3d858f59f7969ce867f55f5a2a3753b"></a><!-- doxytag: member="ED_SUPS" ref="a4d3e0c9f40b3249bb4cd536ee197425fac3d858f59f7969ce867f55f5a2a3753b" args="" -->ED_SUPS</em>&nbsp;</td><td>
+<ul>
+<li>Supprimer un sommet. </li>
+</ul>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a4d3e0c9f40b3249bb4cd536ee197425fa5afaf61f108775c0a14d6fa043e7fa00"></a><!-- doxytag: member="ED_SUPAR" ref="a4d3e0c9f40b3249bb4cd536ee197425fa5afaf61f108775c0a14d6fa043e7fa00" args="" -->ED_SUPAR</em>&nbsp;</td><td>
+<ul>
+<li>Supprimer une arête. </li>
+</ul>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a4d3e0c9f40b3249bb4cd536ee197425fa43d16055a0f4a0386c3c675fa05e29be"></a><!-- doxytag: member="ED_LSV" ref="a4d3e0c9f40b3249bb4cd536ee197425fa43d16055a0f4a0386c3c675fa05e29be" args="" -->ED_LSV</em>&nbsp;</td><td>
+<ul>
+<li>Afficher la liste des voisins d'un sommet. </li>
+</ul>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a4d3e0c9f40b3249bb4cd536ee197425fa62338215fc6fa91ea4b19b120d76fed1"></a><!-- doxytag: member="ED_LSI" ref="a4d3e0c9f40b3249bb4cd536ee197425fa62338215fc6fa91ea4b19b120d76fed1" args="" -->ED_LSI</em>&nbsp;</td><td>
+<ul>
+<li>Afficher la liste des arêtes incidentes à un sommet. </li>
+</ul>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a4d3e0c9f40b3249bb4cd536ee197425fac851f0bf0c55f2a90ae2e720ef52efd3"></a><!-- doxytag: member="ED_LSS" ref="a4d3e0c9f40b3249bb4cd536ee197425fac851f0bf0c55f2a90ae2e720ef52efd3" args="" -->ED_LSS</em>&nbsp;</td><td>
+<ul>
+<li>Afficher la liste des sommets d'un graphe. </li>
+</ul>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a4d3e0c9f40b3249bb4cd536ee197425fac14a742b861c33ee25625d92f9d5028d"></a><!-- doxytag: member="ED_LSA" ref="a4d3e0c9f40b3249bb4cd536ee197425fac14a742b861c33ee25625d92f9d5028d" args="" -->ED_LSA</em>&nbsp;</td><td>
+<ul>
+<li>Afficher la liste des arêtes du graphe. </li>
+</ul>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a4d3e0c9f40b3249bb4cd536ee197425fa2335ef7b397173bf5033ecec5fc99281"></a><!-- doxytag: member="ED_CNX" ref="a4d3e0c9f40b3249bb4cd536ee197425fa2335ef7b397173bf5033ecec5fc99281" args="" -->ED_CNX</em>&nbsp;</td><td>
+<ul>
+<li>Tester la connexité d'un graphe. </li>
+</ul>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a4d3e0c9f40b3249bb4cd536ee197425fa28883a14ea56aa8d37533a9d460b5bfa"></a><!-- doxytag: member="ED_AIDE" ref="a4d3e0c9f40b3249bb4cd536ee197425fa28883a14ea56aa8d37533a9d460b5bfa" args="" -->ED_AIDE</em>&nbsp;</td><td>
+<ul>
+<li>Aide. </li>
+</ul>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a4d3e0c9f40b3249bb4cd536ee197425fa5f026c3164088c569f2082781b010f4b"></a><!-- doxytag: member="ED_QUIT" ref="a4d3e0c9f40b3249bb4cd536ee197425fa5f026c3164088c569f2082781b010f4b" args="" -->ED_QUIT</em>&nbsp;</td><td>
+<ul>
+<li>Quitter le mode édition. </li>
+</ul>
+</td></tr>
+<tr><td valign="top"><em><a class="anchor" id="a4d3e0c9f40b3249bb4cd536ee197425faa1e9fceaeddfe419a037e829e227c53b"></a><!-- doxytag: member="ED_INCONNU" ref="a4d3e0c9f40b3249bb4cd536ee197425faa1e9fceaeddfe419a037e829e227c53b" args="" -->ED_INCONNU</em>&nbsp;</td><td>
+<ul>
+<li>Commande inconnue. </li>
+</ul>
+</td></tr>
+</table>
+</dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="edition_8h_source.html#l00027">27</a> du fichier <a class="el" href="edition_8h_source.html">edition.h</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa68591f1a1b1d50bc7405184d821ad55b">ED_NOUV</a>,        
+    <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa6c15988c6bd173ce826b1e00a0347f03">ED_AJS</a>,         
+    <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fabf8ec66353280b6e7fa801117e657ddf">ED_AJAR</a>,        
+    <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa30e8d84207f42397fb86f592dbaf43fa">ED_MOD</a>,         
+    <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fac3d858f59f7969ce867f55f5a2a3753b">ED_SUPS</a>,        
+    <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa5afaf61f108775c0a14d6fa043e7fa00">ED_SUPAR</a>,       
+    <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa43d16055a0f4a0386c3c675fa05e29be">ED_LSV</a>,         
+    <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa62338215fc6fa91ea4b19b120d76fed1">ED_LSI</a>,         
+    <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fac851f0bf0c55f2a90ae2e720ef52efd3">ED_LSS</a>,         
+    <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fac14a742b861c33ee25625d92f9d5028d">ED_LSA</a>,         
+    <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa2335ef7b397173bf5033ecec5fc99281">ED_CNX</a>,         
+    <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa28883a14ea56aa8d37533a9d460b5bfa">ED_AIDE</a>,        
+    <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa5f026c3164088c569f2082781b010f4b">ED_QUIT</a>,        
+    <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425faa1e9fceaeddfe419a037e829e227c53b">ED_INCONNU</a>,     
+} <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425f" title="Alias pour les commandes du mode « édition ».">EditCommande</a>;
+</pre></div>
+</div>
+</div>
+<hr/><h2>Documentation des fonctions</h2>
+<a class="anchor" id="a0a2aed0f6bc3f74869b285f780be3046"></a><!-- doxytag: member="edition.h::afficherAideEditCommande" ref="a0a2aed0f6bc3f74869b285f780be3046" args="(EditCommande ec)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="edition_8c.html#a0a2aed0f6bc3f74869b285f780be3046">afficherAideEditCommande</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425f">EditCommande</a>&#160;</td>
+          <td class="paramname"><em>ec</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Afficher l'aide correspondant à une commande. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ec</td><td>Commande. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="edition_8c_source.html#l00129">129</a> du fichier <a class="el" href="edition_8c_source.html">edition.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    printf(<span class="stringliteral">&quot;%s&quot;</span>, EDS[ec].aide);
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="edition_8h_a0a2aed0f6bc3f74869b285f780be3046_icgraph.png" border="0" usemap="#edition_8h_a0a2aed0f6bc3f74869b285f780be3046_icgraph" alt=""/></div>
+<map name="edition_8h_a0a2aed0f6bc3f74869b285f780be3046_icgraph" id="edition_8h_a0a2aed0f6bc3f74869b285f780be3046_icgraph">
+<area shape="rect" id="node3" href="edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="236,5,361,35"/><area shape="rect" id="node5" href="edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="412,5,505,35"/><area shape="rect" id="node7" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="556,5,708,35"/><area shape="rect" id="node9" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="759,5,820,35"/><area shape="rect" id="node11" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="869,5,920,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a1770853bacd8106bc52fece08805017f"></a><!-- doxytag: member="edition.h::modeEdition" ref="a1770853bacd8106bc52fece08805017f" args="(Graphe *g)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structGraphe.html">Graphe</a>* <a class="el" href="edition_8c.html#a1770853bacd8106bc52fece08805017f">modeEdition</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Afficher le prompt du mode édition, et gérer les entrées utilisateur. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> manipulé </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Le nouveau graphe, s'il a été modifié. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="edition_8c_source.html#l00284">284</a> du fichier <a class="el" href="edition_8c_source.html">edition.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> continuer = <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
+
+    <span class="keywordflow">do</span>
+    {
+        <span class="keywordtype">int</span> succes;
+        <span class="keywordtype">char</span> buffer[512] = { <span class="charliteral">&#39;\0&#39;</span> };
+
+        printf(<span class="stringliteral">&quot;# &quot;</span>);
+        fflush(stdout);
+
+        succes = scanf(<span class="stringliteral">&quot; %511[^\n]&quot;</span>, buffer);
+        fflush(stdin);
+
+        <span class="keywordflow">if</span> (succes == 1)
+        {
+            <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425f" title="Alias pour les commandes du mode « édition ».">EditCommande</a> ec = <a class="code" href="edition_8h.html#a8f05525d05c3c2ae8667e6e185dac69b" title="Rechercher la commande correspondante.">rechercherEditCommande</a>(buffer);
+
+            g = <a class="code" href="edition_8h.html#a36eea2bb9710df698c47d1af470f64aa" title="Traiter la ligne de commande entrée par l&#39;utilisateur.">traiterLigneEdition</a>(buffer, ec, g);
+            <span class="keywordflow">if</span> (ec == <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa5f026c3164088c569f2082781b010f4b">ED_QUIT</a> &amp;&amp; <a class="code" href="io_8h.html#a898b3b44a72a0490e4864639d8896b61" title="Vérification de l&#39;intention de l&#39;utilisateur.">verifier</a>(<span class="stringliteral">&quot;de vouloir quitter le mode édition &quot;</span>) == <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>)
+                continuer = <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+        }
+    }
+    <span class="keywordflow">while</span> (continuer);
+
+    <span class="keywordflow">return</span> g;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="edition_8h_a1770853bacd8106bc52fece08805017f_cgraph.png" border="0" usemap="#edition_8h_a1770853bacd8106bc52fece08805017f_cgraph" alt=""/></div>
+<map name="edition_8h_a1770853bacd8106bc52fece08805017f_cgraph" id="edition_8h_a1770853bacd8106bc52fece08805017f_cgraph">
+<area shape="rect" id="node3" href="edition_8h.html#a8f05525d05c3c2ae8667e6e185dac69b" title="Rechercher la commande correspondante." alt="" coords="339,5,512,35"/><area shape="rect" id="node5" href="edition_8h.html#a36eea2bb9710df698c47d1af470f64aa" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="151,379,276,408"/><area shape="rect" id="node7" href="io_8h.html#a898b3b44a72a0490e4864639d8896b61" title="Vérification de l&#39;intention de l&#39;utilisateur." alt="" coords="395,59,456,88"/><area shape="rect" id="node9" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe." alt="" coords="367,432,484,461"/><area shape="rect" id="node11" href="structGraphe.html#aaf6e3b452d5d36e54cdebf1f9bdbdb14" title="Nouveau Graphe." alt="" coords="371,485,480,515"/><area shape="rect" id="node13" href="structGraphe.html#a420bc7f2ad2301c4565dce8c29a14286" title="Ajout d&#39;un sommet dans un Graphe." alt="" coords="341,539,509,568"/><area shape="rect" id="node15" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe." alt="" coords="351,592,500,621"/><area shape="rect" id="node17" href="structGraphe.html#a64fd41af976a8447604e9e95d93b71cf" title="Modification d&#39;une arête dans un Graphe." alt="" coords="348,645,503,675"/><area shape="rect" id="node19" href="structGraphe.html#a0aa5aacc4cc9cb1e489a7bb295dcead4" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="332,699,519,728"/><area shape="rect" id="node21" href="structGraphe.html#a183405c1312d76628db9de7079b0beaa" title="Suppression d&#39;une arête dans un Graphe." alt="" coords="341,752,509,781"/><area shape="rect" id="node23" href="structGraphe.html#a4924edca2ae3d13ce4c71c5fc8cfd917" title="Afficher les voisins d&#39;un sommet." alt="" coords="347,805,504,835"/><area shape="rect" id="node25" href="structGraphe.html#ace288c4a90377a269c162289a83b2bac" title="Afficher les arêtes incidentes à un sommet." alt="" coords="337,112,513,141"/><area shape="rect" id="node27" href="structGraphe.html#a198689c52ffb4178b1b3c154a035d1d1" title="Afficher les sommets d&#39;un graphe." alt="" coords="327,165,524,195"/><area shape="rect" id="node29" href="structGraphe.html#ad6a8e0a2906acb31766e826e35ecb34d" title="Afficher les arêtes d&#39;un graphe." alt="" coords="328,219,523,248"/><area shape="rect" id="node31" href="structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe." alt="" coords="351,272,500,301"/><area shape="rect" id="node33" href="edition_8h.html#a0a2aed0f6bc3f74869b285f780be3046" title="Afficher l&#39;aide correspondant à une commande." alt="" coords="335,325,516,355"/><area shape="rect" id="node36" href="edition_8h.html#a8cbf30bc7af47ca33c79fbc305da4f9b" title="Afficher l&#39;aide du mode « édition »." alt="" coords="360,379,491,408"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="edition_8h_a1770853bacd8106bc52fece08805017f_icgraph.png" border="0" usemap="#edition_8h_a1770853bacd8106bc52fece08805017f_icgraph" alt=""/></div>
+<map name="edition_8h_a1770853bacd8106bc52fece08805017f_icgraph" id="edition_8h_a1770853bacd8106bc52fece08805017f_icgraph">
+<area shape="rect" id="node3" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="151,5,303,35"/><area shape="rect" id="node5" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="353,5,415,35"/><area shape="rect" id="node7" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="464,5,515,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8f05525d05c3c2ae8667e6e185dac69b"></a><!-- doxytag: member="edition.h::rechercherEditCommande" ref="a8f05525d05c3c2ae8667e6e185dac69b" args="(const char *ligne)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425f">EditCommande</a> <a class="el" href="edition_8c.html#a8f05525d05c3c2ae8667e6e185dac69b">rechercherEditCommande</a> </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>ligne</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Rechercher la commande correspondante. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ligne</td><td>Ligne de commande. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>commande correspondante. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="edition_8c_source.html#l00141">141</a> du fichier <a class="el" href="edition_8c_source.html">edition.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordtype">char</span> commande[32] = { <span class="charliteral">&#39;\0&#39;</span> };
+
+    <span class="keywordflow">if</span> (sscanf(ligne, <span class="stringliteral">&quot;%31s&quot;</span>, commande) == 1)
+    {
+        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; commande[i] != <span class="charliteral">&#39;\0&#39;</span>; i++)
+            commande[i] = tolower(commande[i]);
+
+        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425faa1e9fceaeddfe419a037e829e227c53b">ED_INCONNU</a>; i++)
+            <span class="keywordflow">if</span> (rechercherMot(commande, EDS[i].alias))
+                <span class="keywordflow">return</span> EDS[i].commande;
+    }
+
+    <span class="keywordflow">return</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425faa1e9fceaeddfe419a037e829e227c53b">ED_INCONNU</a>;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="edition_8h_a8f05525d05c3c2ae8667e6e185dac69b_icgraph.png" border="0" usemap="#edition_8h_a8f05525d05c3c2ae8667e6e185dac69b_icgraph" alt=""/></div>
+<map name="edition_8h_a8f05525d05c3c2ae8667e6e185dac69b_icgraph" id="edition_8h_a8f05525d05c3c2ae8667e6e185dac69b_icgraph">
+<area shape="rect" id="node3" href="edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="228,5,353,35"/><area shape="rect" id="node5" href="edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="404,32,497,61"/><area shape="rect" id="node7" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="548,32,700,61"/><area shape="rect" id="node9" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="751,32,812,61"/><area shape="rect" id="node11" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="861,32,912,61"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a36eea2bb9710df698c47d1af470f64aa"></a><!-- doxytag: member="edition.h::traiterLigneEdition" ref="a36eea2bb9710df698c47d1af470f64aa" args="(const char *ligne, EditCommande ec, Graphe *g)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structGraphe.html">Graphe</a> * <a class="el" href="edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8">traiterLigneEdition</a> </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>ligne</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425f">EditCommande</a>&#160;</td>
+          <td class="paramname"><em>ec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Traiter la ligne de commande entrée par l'utilisateur. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ligne</td><td>Ligne de commande entrée par l'utilisateur. </td></tr>
+    <tr><td class="paramname">ec</td><td>Commande entrée par l'utilisateur. </td></tr>
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> manipulé. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Le nouveau graphe, s'il a été modifié. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="edition_8c_source.html#l00158">158</a> du fichier <a class="el" href="edition_8c_source.html">edition.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordtype">char</span> buffer1[481] = { <span class="charliteral">&#39;\0&#39;</span> };
+    <span class="keywordtype">char</span> buffer2[100] = { <span class="charliteral">&#39;\0&#39;</span> };
+    <span class="keywordtype">int</span> poids;
+
+    <span class="keywordflow">switch</span> (ec)
+    {
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa68591f1a1b1d50bc7405184d821ad55b">ED_NOUV</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) != 1)
+                printf(<span class="stringliteral">&quot;%s&quot;</span>, ERR_ARG);
+            <span class="keywordflow">else</span>
+            {
+                <span class="keywordflow">if</span> (<a class="code" href="io_8h.html#a898b3b44a72a0490e4864639d8896b61" title="Vérification de l&#39;intention de l&#39;utilisateur.">verifier</a>(<span class="stringliteral">&quot;de vouloir créer un nouveau graphe &quot;</span>))
+                {
+                    g = <a class="code" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe.">gLiberer</a>(g);
+                    g = <a class="code" href="structGraphe.html#aaf6e3b452d5d36e54cdebf1f9bdbdb14" title="Nouveau Graphe.">gNouv</a>();
+                }
+            }
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa6c15988c6bd173ce826b1e00a0347f03">ED_AJS</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) != 2
+                || sscanf(ligne, <span class="stringliteral">&quot;%*s %99s&quot;</span>, buffer1) != 1)
+                printf(<span class="stringliteral">&quot;%s&quot;</span>, ERR_ARG);
+            <span class="keywordflow">else</span>
+                g = <a class="code" href="structGraphe.html#a420bc7f2ad2301c4565dce8c29a14286" title="Ajout d&#39;un sommet dans un Graphe.">gAjouterSommet</a>(g, buffer1);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fabf8ec66353280b6e7fa801117e657ddf">ED_AJAR</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) != 4
+                || sscanf(ligne, <span class="stringliteral">&quot;%*s %99s %99s %d&quot;</span>, buffer1, buffer2, &amp;poids) != 3)
+                printf(<span class="stringliteral">&quot;%s&quot;</span>, ERR_ARG);
+            <span class="keywordflow">else</span>
+                g = <a class="code" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe.">gAjouterArete</a>(g, buffer1, buffer2, poids);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa30e8d84207f42397fb86f592dbaf43fa">ED_MOD</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) != 4
+                || sscanf(ligne, <span class="stringliteral">&quot;%*s %99s %99s %d&quot;</span>, buffer1, buffer2, &amp;poids) != 3)
+                printf(<span class="stringliteral">&quot;%s&quot;</span>, ERR_ARG);
+            <span class="keywordflow">else</span>
+                g = <a class="code" href="structGraphe.html#a64fd41af976a8447604e9e95d93b71cf" title="Modification d&#39;une arête dans un Graphe.">gModifierArete</a>(g, buffer1, buffer2, poids);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fac3d858f59f7969ce867f55f5a2a3753b">ED_SUPS</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) != 2
+                || sscanf(ligne, <span class="stringliteral">&quot;%*s %99s&quot;</span>, buffer1) != 1)
+                printf(<span class="stringliteral">&quot;%s&quot;</span>, ERR_ARG);
+            <span class="keywordflow">else</span>
+                g = <a class="code" href="structGraphe.html#a0aa5aacc4cc9cb1e489a7bb295dcead4" title="Suppression d&#39;un sommet dans un Graphe.">gSupprimerSommet</a>(g, buffer1);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa5afaf61f108775c0a14d6fa043e7fa00">ED_SUPAR</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) != 3
+                || sscanf(ligne, <span class="stringliteral">&quot;%*s %99s %99s&quot;</span>, buffer1, buffer2) != 2)
+                printf(<span class="stringliteral">&quot;%s&quot;</span>, ERR_ARG);
+            <span class="keywordflow">else</span>
+                g = <a class="code" href="structGraphe.html#a183405c1312d76628db9de7079b0beaa" title="Suppression d&#39;une arête dans un Graphe.">gSupprimerArete</a>(g, buffer1, buffer2);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa43d16055a0f4a0386c3c675fa05e29be">ED_LSV</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) != 2
+                || sscanf(ligne, <span class="stringliteral">&quot;%*s %99s&quot;</span>, buffer1) != 1)
+                printf(<span class="stringliteral">&quot;%s&quot;</span>, ERR_ARG);
+            <span class="keywordflow">else</span>
+                <a class="code" href="structGraphe.html#a4924edca2ae3d13ce4c71c5fc8cfd917" title="Afficher les voisins d&#39;un sommet.">afficherVoisins</a>(g, buffer1);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa62338215fc6fa91ea4b19b120d76fed1">ED_LSI</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) != 2
+                || sscanf(ligne, <span class="stringliteral">&quot;%*s %99s&quot;</span>, buffer1) != 1)
+                printf(<span class="stringliteral">&quot;%s&quot;</span>, ERR_ARG);
+            <span class="keywordflow">else</span>
+                <a class="code" href="structGraphe.html#ace288c4a90377a269c162289a83b2bac" title="Afficher les arêtes incidentes à un sommet.">afficherAdjacence</a>(g, buffer1);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fac851f0bf0c55f2a90ae2e720ef52efd3">ED_LSS</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) != 1)
+                printf(<span class="stringliteral">&quot;%s&quot;</span>, ERR_ARG);
+            <span class="keywordflow">else</span>
+                <a class="code" href="structGraphe.html#a198689c52ffb4178b1b3c154a035d1d1" title="Afficher les sommets d&#39;un graphe.">afficherListeSommets</a>(g);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fac14a742b861c33ee25625d92f9d5028d">ED_LSA</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) != 1)
+                printf(<span class="stringliteral">&quot;%s&quot;</span>, ERR_ARG);
+            <span class="keywordflow">else</span>
+                <a class="code" href="structGraphe.html#ad6a8e0a2906acb31766e826e35ecb34d" title="Afficher les arêtes d&#39;un graphe.">afficherAretesGraphe</a>(g);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa2335ef7b397173bf5033ecec5fc99281">ED_CNX</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) != 1)
+                printf(<span class="stringliteral">&quot;%s&quot;</span>, ERR_ARG);
+            <span class="keywordflow">else</span>
+            {
+                <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe.">gEstConnexe</a>(g))
+                    printf(<span class="stringliteral">&quot;Le graphe est connexe.\n&quot;</span>);
+                <span class="keywordflow">else</span>
+                    printf(<span class="stringliteral">&quot;Le graphe n&#39;est pas connexe.\n&quot;</span>);
+            }
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa28883a14ea56aa8d37533a9d460b5bfa">ED_AIDE</a> :
+            <span class="keywordflow">if</span> (sscanf(ligne, <span class="stringliteral">&quot;%*s %31s&quot;</span>, buffer1) == 1)
+                <a class="code" href="edition_8h.html#a0a2aed0f6bc3f74869b285f780be3046" title="Afficher l&#39;aide correspondant à une commande.">afficherAideEditCommande</a>(<a class="code" href="edition_8h.html#a8f05525d05c3c2ae8667e6e185dac69b" title="Rechercher la commande correspondante.">rechercherEditCommande</a>(buffer1));
+            <span class="keywordflow">else</span>
+                <a class="code" href="edition_8h.html#a8cbf30bc7af47ca33c79fbc305da4f9b" title="Afficher l&#39;aide du mode « édition ».">afficherAideEdition</a>();
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa5f026c3164088c569f2082781b010f4b">ED_QUIT</a> :
+            <span class="keywordflow">if</span> (!<a class="code" href="structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe.">gEstConnexe</a>(g))
+            printf(<span class="stringliteral">&quot;Le graphe actuel n&#39;est pas connexe. Il ne sera pas conservé.\n&quot;</span>);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425faa1e9fceaeddfe419a037e829e227c53b">ED_INCONNU</a> :
+
+        <span class="keywordflow">default</span> :
+            sscanf(ligne, <span class="stringliteral">&quot;%s&quot;</span>, buffer1);
+            printf(<span class="stringliteral">&quot;%s : Commande inconnue. Entrez &#39;aide&#39; pour plus d&#39;informations.\n&quot;</span>, buffer1);
+            <span class="keywordflow">break</span>;
+    }
+
+    <span class="keywordflow">return</span> g;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="edition_8h_a36eea2bb9710df698c47d1af470f64aa_cgraph.png" border="0" usemap="#edition_8h_a36eea2bb9710df698c47d1af470f64aa_cgraph" alt=""/></div>
+<map name="edition_8h_a36eea2bb9710df698c47d1af470f64aa_cgraph" id="edition_8h_a36eea2bb9710df698c47d1af470f64aa_cgraph">
+<area shape="rect" id="node3" href="io_8h.html#a898b3b44a72a0490e4864639d8896b61" title="Vérification de l&#39;intention de l&#39;utilisateur." alt="" coords="251,5,312,35"/><area shape="rect" id="node5" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe." alt="" coords="223,59,340,88"/><area shape="rect" id="node7" href="structGraphe.html#aaf6e3b452d5d36e54cdebf1f9bdbdb14" title="Nouveau Graphe." alt="" coords="227,112,336,141"/><area shape="rect" id="node9" href="structGraphe.html#a420bc7f2ad2301c4565dce8c29a14286" title="Ajout d&#39;un sommet dans un Graphe." alt="" coords="197,165,365,195"/><area shape="rect" id="node11" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe." alt="" coords="207,219,356,248"/><area shape="rect" id="node13" href="structGraphe.html#a64fd41af976a8447604e9e95d93b71cf" title="Modification d&#39;une arête dans un Graphe." alt="" coords="204,272,359,301"/><area shape="rect" id="node15" href="structGraphe.html#a0aa5aacc4cc9cb1e489a7bb295dcead4" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="188,325,375,355"/><area shape="rect" id="node17" href="structGraphe.html#a183405c1312d76628db9de7079b0beaa" title="Suppression d&#39;une arête dans un Graphe." alt="" coords="197,379,365,408"/><area shape="rect" id="node19" href="structGraphe.html#a4924edca2ae3d13ce4c71c5fc8cfd917" title="Afficher les voisins d&#39;un sommet." alt="" coords="203,432,360,461"/><area shape="rect" id="node21" href="structGraphe.html#ace288c4a90377a269c162289a83b2bac" title="Afficher les arêtes incidentes à un sommet." alt="" coords="193,485,369,515"/><area shape="rect" id="node23" href="structGraphe.html#a198689c52ffb4178b1b3c154a035d1d1" title="Afficher les sommets d&#39;un graphe." alt="" coords="183,539,380,568"/><area shape="rect" id="node25" href="structGraphe.html#ad6a8e0a2906acb31766e826e35ecb34d" title="Afficher les arêtes d&#39;un graphe." alt="" coords="184,592,379,621"/><area shape="rect" id="node27" href="structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe." alt="" coords="207,645,356,675"/><area shape="rect" id="node29" href="edition_8h.html#a0a2aed0f6bc3f74869b285f780be3046" title="Afficher l&#39;aide correspondant à une commande." alt="" coords="191,699,372,728"/><area shape="rect" id="node31" href="edition_8h.html#a8f05525d05c3c2ae8667e6e185dac69b" title="Rechercher la commande correspondante." alt="" coords="195,752,368,781"/><area shape="rect" id="node33" href="edition_8h.html#a8cbf30bc7af47ca33c79fbc305da4f9b" title="Afficher l&#39;aide du mode « édition »." alt="" coords="216,805,347,835"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="edition_8h_a36eea2bb9710df698c47d1af470f64aa_icgraph.png" border="0" usemap="#edition_8h_a36eea2bb9710df698c47d1af470f64aa_icgraph" alt=""/></div>
+<map name="edition_8h_a36eea2bb9710df698c47d1af470f64aa_icgraph" id="edition_8h_a36eea2bb9710df698c47d1af470f64aa_icgraph">
+<area shape="rect" id="node3" href="edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="183,5,276,35"/><area shape="rect" id="node5" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="327,5,479,35"/><area shape="rect" id="node7" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="529,5,591,35"/><area shape="rect" id="node9" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="640,5,691,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+
+<hr class="footer"/><address class="footer"><small>
+Généré le Dimanche Avril 28 2013 18:05:22 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

@@ -108,6 +108,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a href="#details">Plus de détails...</a></p>
 <div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br/>
 <code>#include &lt;stdio.h&gt;</code><br/>
+<code>#include &lt;string.h&gt;</code><br/>
 </div><div class="textblock"><div class="dynheader">
 Graphe des dépendances par inclusion de base.h:</div>
 <div class="dyncontent">
@@ -120,7 +121,7 @@ Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier
 <div class="dyncontent">
 <div class="center"><img src="base_8h__dep__incl.png" border="0" usemap="#include_2base_8hdep" alt=""/></div>
 <map name="include_2base_8hdep" id="include_2base_8hdep">
-<area shape="rect" id="node3" href="sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="539,83,664,112"/><area shape="rect" id="node7" href="graphe_8h.html" title="Graphes (header)" alt="" coords="688,315,805,344"/><area shape="rect" id="node9" href="coloration_8h.html" title="Coloration d&#39;un graphe (header)" alt="" coords="459,392,592,421"/><area shape="rect" id="node11" href="parcours_8h.html" title="Parcours d&#39;un graphe (header)" alt="" coords="384,469,512,499"/><area shape="rect" id="node13" href="grapheconnexe_8h.html" title="GrapheConnexes connexes (header)" alt="" coords="167,547,332,576"/><area shape="rect" id="node15" href="prompt_8h.html" title="Prompt (header)" alt="" coords="675,624,792,653"/><area shape="rect" id="node25" href="prim_8h.html" title="Algorithme de Prim (header)" alt="" coords="848,469,949,499"/><area shape="rect" id="node32" href="generation_8h.html" title="Generation d&#39;un fichier latex (header)" alt="" coords="1315,392,1453,421"/><area shape="rect" id="node40" href="io_8h.html" title="Entrées/Sorties (header)" alt="" coords="296,392,384,421"/><area shape="rect" id="node53" href="arete_8h.html" title="Arêtes (header)" alt="" coords="1100,160,1207,189"/><area shape="rect" id="node55" href="listearete_8h.html" title="Liste d&#39;arêtes (header)" alt="" coords="957,237,1088,267"/><area shape="rect" id="node58" href="filearetetriee_8h.html" title="File triée d&#39;arêtes (header)" alt="" coords="1061,315,1211,344"/><area shape="rect" id="node5" href="adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)" alt="" coords="360,237,496,267"/><area shape="rect" id="node79" href="sommet_8c.html" title="Gestion de la sorte Sommet (code source)" alt="" coords="411,160,512,189"/><area shape="rect" id="node51" href="adjacence_8c.html" title="Gestion des listes d&#39;adjacence (code source)" alt="" coords="347,315,461,344"/><area shape="rect" id="node47" href="graphe_8c.html" title="Graphes (code)" alt="" coords="717,392,811,421"/><area shape="rect" id="node30" href="coloration_8c.html" title="Coloration d&#39;un graphe (code)" alt="" coords="587,469,696,499"/><area shape="rect" id="node23" href="parcours_8c.html" title="Parcours d&#39;un graphe (code)" alt="" coords="396,547,500,576"/><area shape="rect" id="node21" href="grapheconnexe_8c.html" title="GrapheConnexes (code)" alt="" coords="179,624,320,653"/><area shape="rect" id="node17" href="main_8c.html" title="Main." alt="" coords="1073,701,1156,731"/><area shape="rect" id="node19" href="prompt_8c.html" title="Prompt (code)" alt="" coords="687,701,780,731"/><area shape="rect" id="node28" href="prim_8c.html" title="Algorithme de Prim (code)" alt="" coords="781,547,861,576"/><area shape="rect" id="node35" href="generation_8c.html" title="Generation d&#39;un fichier latex (code)" alt="" coords="1232,469,1347,499"/><area shape="rect" id="node43" href="io_8c.html" title="Entrées/Sorties (code source)" alt="" coords="245,469,309,499"/><area shape="rect" id="node69" href="arete_8c.html" title="Aretes (code)" alt="" coords="1112,237,1195,267"/><area shape="rect" id="node64" href="listearete_8c.html" title="Liste d&#39;arêtes (header)" alt="" coords="931,315,1037,344"/><area shape="rect" id="node61" href="filearetetriee_8c.html" title="File triée d&#39;arêtes (code)" alt="" coords="987,392,1112,421"/></map>
+<area shape="rect" id="node3" href="sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="699,83,824,112"/><area shape="rect" id="node7" href="graphe_8h.html" title="Graphes (header)" alt="" coords="507,315,624,344"/><area shape="rect" id="node9" href="coloration_8h.html" title="Coloration d&#39;un graphe (header)" alt="" coords="259,392,392,421"/><area shape="rect" id="node11" href="parcours_8h.html" title="Parcours d&#39;un graphe (header)" alt="" coords="365,469,493,499"/><area shape="rect" id="node13" href="edition_8h.html" title="Prompt mode édition (header)" alt="" coords="43,547,157,576"/><area shape="rect" id="node15" href="prompt_8h.html" title="Prompt (header)" alt="" coords="657,624,775,653"/><area shape="rect" id="node23" href="grapheconnexe_8h.html" title="GrapheConnexes connexes (header)" alt="" coords="939,547,1104,576"/><area shape="rect" id="node31" href="prim_8h.html" title="Algorithme de Prim (header)" alt="" coords="712,469,813,499"/><area shape="rect" id="node39" href="io_8h.html" title="Entrées/Sorties (header)" alt="" coords="147,392,235,421"/><area shape="rect" id="node46" href="generation_8h.html" title="Generation d&#39;un fichier latex (header)" alt="" coords="1240,392,1379,421"/><area shape="rect" id="node61" href="arete_8h.html" title="Arêtes (header)" alt="" coords="989,160,1096,189"/><area shape="rect" id="node63" href="listearete_8h.html" title="Liste d&#39;arêtes (header)" alt="" coords="1147,237,1277,267"/><area shape="rect" id="node66" href="filearetetriee_8h.html" title="File triée d&#39;arêtes (header)" alt="" coords="939,315,1088,344"/><area shape="rect" id="node5" href="adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)" alt="" coords="627,237,763,267"/><area shape="rect" id="node87" href="sommet_8c.html" title="Gestion de la sorte Sommet (code source)" alt="" coords="481,160,583,189"/><area shape="rect" id="node59" href="adjacence_8c.html" title="Gestion des listes d&#39;adjacence (code source)" alt="" coords="648,315,763,344"/><area shape="rect" id="node55" href="graphe_8c.html" title="Graphes (code)" alt="" coords="619,392,712,421"/><area shape="rect" id="node36" href="coloration_8c.html" title="Coloration d&#39;un graphe (code)" alt="" coords="232,469,341,499"/><area shape="rect" id="node29" href="parcours_8c.html" title="Parcours d&#39;un graphe (code)" alt="" coords="377,547,481,576"/><area shape="rect" id="node21" href="edition_8c.html" title="Prompt mode édition (code)" alt="" coords="53,624,147,653"/><area shape="rect" id="node17" href="main_8c.html" title="Main." alt="" coords="1131,701,1213,731"/><area shape="rect" id="node19" href="prompt_8c.html" title="Prompt (code)" alt="" coords="669,701,763,731"/><area shape="rect" id="node26" href="grapheconnexe_8c.html" title="GrapheConnexes (code)" alt="" coords="951,624,1092,653"/><area shape="rect" id="node34" href="prim_8c.html" title="Algorithme de Prim (code)" alt="" coords="753,547,833,576"/><area shape="rect" id="node43" href="io_8c.html" title="Entrées/Sorties (code source)" alt="" coords="93,469,157,499"/><area shape="rect" id="node49" href="generation_8c.html" title="Generation d&#39;un fichier latex (code)" alt="" coords="1252,469,1367,499"/><area shape="rect" id="node77" href="arete_8c.html" title="Aretes (code)" alt="" coords="1040,237,1123,267"/><area shape="rect" id="node72" href="listearete_8c.html" title="Liste d&#39;arêtes (header)" alt="" coords="1112,315,1219,344"/><area shape="rect" id="node69" href="filearetetriee_8c.html" title="File triée d&#39;arêtes (code)" alt="" coords="1040,392,1165,421"/></map>
 </div>
 </div>
 <p><a href="base_8h_source.html">Aller au code source de ce fichier.</a></p>
@@ -170,7 +171,7 @@ typedef <a class="el" href="base_8h.html#a243ab5e172a862312b8aa5a737f989a1">Car<
 <hr/><a name="details" id="details"></a><h2>Description détaillée</h2>
 <div class="textblock"><p>Base (header) </p>
 <dl class="author"><dt><b>Auteur:</b></dt><dd>Harenome RAZANAJATO </dd></dl>
-<dl class="version"><dt><b>Version:</b></dt><dd>1.3 </dd></dl>
+<dl class="version"><dt><b>Version:</b></dt><dd>1.4 </dd></dl>
 
 <p>Définition dans le fichier <a class="el" href="base_8h_source.html">base.h</a>.</p>
 </div><hr/><h2>Documentation des macros</h2>
@@ -208,7 +209,7 @@ typedef <a class="el" href="base_8h.html#a243ab5e172a862312b8aa5a737f989a1">Car<
   </dd>
 </dl>
 
-<p>Définition à la ligne <a class="el" href="base_8h_source.html#l00108">108</a> du fichier <a class="el" href="base_8h_source.html">base.h</a>.</p>
+<p>Définition à la ligne <a class="el" href="base_8h_source.html#l00109">109</a> du fichier <a class="el" href="base_8h_source.html">base.h</a>.</p>
 
 </div>
 </div>
@@ -235,7 +236,7 @@ typedef <a class="el" href="base_8h.html#a243ab5e172a862312b8aa5a737f989a1">Car<
   </dd>
 </dl>
 
-<p>Définition à la ligne <a class="el" href="base_8h_source.html#l00094">94</a> du fichier <a class="el" href="base_8h_source.html">base.h</a>.</p>
+<p>Définition à la ligne <a class="el" href="base_8h_source.html#l00095">95</a> du fichier <a class="el" href="base_8h_source.html">base.h</a>.</p>
 
 </div>
 </div>
@@ -273,7 +274,7 @@ typedef <a class="el" href="base_8h.html#a243ab5e172a862312b8aa5a737f989a1">Car<
   </dd>
 </dl>
 
-<p>Définition à la ligne <a class="el" href="base_8h_source.html#l00101">101</a> du fichier <a class="el" href="base_8h_source.html">base.h</a>.</p>
+<p>Définition à la ligne <a class="el" href="base_8h_source.html#l00102">102</a> du fichier <a class="el" href="base_8h_source.html">base.h</a>.</p>
 
 </div>
 </div>
@@ -308,7 +309,7 @@ static <span class="keyword">inline</span> T T ## _max(T a, T b) { <span class="
   </dd>
 </dl>
 
-<p>Définition à la ligne <a class="el" href="base_8h_source.html#l00071">71</a> du fichier <a class="el" href="base_8h_source.html">base.h</a>.</p>
+<p>Définition à la ligne <a class="el" href="base_8h_source.html#l00072">72</a> du fichier <a class="el" href="base_8h_source.html">base.h</a>.</p>
 
 </div>
 </div>
@@ -346,7 +347,7 @@ static <span class="keyword">inline</span> T T ## _max(T a, T b) { <span class="
   </dd>
 </dl>
 
-<p>Définition à la ligne <a class="el" href="base_8h_source.html#l00115">115</a> du fichier <a class="el" href="base_8h_source.html">base.h</a>.</p>
+<p>Définition à la ligne <a class="el" href="base_8h_source.html#l00116">116</a> du fichier <a class="el" href="base_8h_source.html">base.h</a>.</p>
 
 </div>
 </div>
@@ -378,7 +379,7 @@ static <span class="keyword">inline</span> T T ## _max(T a, T b) { <span class="
 </dd>
 </dl>
 
-<p>Définition à la ligne <a class="el" href="base_8h_source.html#l00023">23</a> du fichier <a class="el" href="base_8h_source.html">base.h</a>.</p>
+<p>Définition à la ligne <a class="el" href="base_8h_source.html#l00024">24</a> du fichier <a class="el" href="base_8h_source.html">base.h</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>,   
     <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>    
@@ -404,7 +405,7 @@ static <span class="keyword">inline</span> T T ## _max(T a, T b) { <span class="
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Samedi Avril 27 2013 23:17:01 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Avril 28 2013 18:05:22 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

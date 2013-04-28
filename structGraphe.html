@@ -172,6 +172,14 @@ Fonctions associées</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de sauvegarder le graphe dans un fichier passé en argument.  <a href="#aca158a023def8433061cca3075d09311"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGraphe.html#a1a93b1ef000c27e4d43c871faff3c2a3">charger_graphe</a> (const char *source)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de charger un graphe dans un fichier texte.  <a href="#a1a93b1ef000c27e4d43c871faff3c2a3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGraphe.html#ad6a8e0a2906acb31766e826e35ecb34d">afficherAretesGraphe</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Afficher les arêtes d'un graphe.  <a href="#ad6a8e0a2906acb31766e826e35ecb34d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGraphe.html#a198689c52ffb4178b1b3c154a035d1d1">afficherListeSommets</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Afficher les sommets d'un graphe.  <a href="#a198689c52ffb4178b1b3c154a035d1d1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGraphe.html#ace288c4a90377a269c162289a83b2bac">afficherAdjacence</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *s)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Afficher les arêtes incidentes à un sommet.  <a href="#ace288c4a90377a269c162289a83b2bac"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGraphe.html#a4924edca2ae3d13ce4c71c5fc8cfd917">afficherVoisins</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g, const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *s)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Afficher les voisins d'un sommet.  <a href="#a4924edca2ae3d13ce4c71c5fc8cfd917"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGraphe.html#af2d919b7649b50f315487287fc9fad68">gEstConnexe</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Test de connexité d'un graphe.  <a href="#af2d919b7649b50f315487287fc9fad68"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structGraphe.html#a8324bb1764f831e8030db5936b6104d0">gACycle</a> (const <a class="el" href="structGraphe.html">Graphe</a> *g)</td></tr>
@@ -233,6 +241,164 @@ Fonctions associées</h2></td></tr>
 
 <p>Définition à la ligne <a class="el" href="graphe_8h_source.html#l00072">72</a> du fichier <a class="el" href="graphe_8h_source.html">graphe.h</a>.</p>
 </div><hr/><h2>Documentation des fonctions amies et associées</h2>
+<a class="anchor" id="ace288c4a90377a269c162289a83b2bac"></a><!-- doxytag: member="Graphe::afficherAdjacence" ref="ace288c4a90377a269c162289a83b2bac" args="(const Graphe *g, const Sommet *s)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structGraphe.html#ace288c4a90377a269c162289a83b2bac">afficherAdjacence</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [related]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Afficher les arêtes incidentes à un sommet. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+    <tr><td class="paramname">s</td><td>Sommet. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="structGraphe_ace288c4a90377a269c162289a83b2bac_icgraph.png" border="0" usemap="#structGraphe_ace288c4a90377a269c162289a83b2bac_icgraph" alt=""/></div>
+<map name="structGraphe_ace288c4a90377a269c162289a83b2bac_icgraph" id="structGraphe_ace288c4a90377a269c162289a83b2bac_icgraph">
+<area shape="rect" id="node3" href="edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="231,5,356,35"/><area shape="rect" id="node7" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="551,32,703,61"/><area shape="rect" id="node5" href="edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="407,5,500,35"/><area shape="rect" id="node9" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="753,32,815,61"/><area shape="rect" id="node11" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="864,32,915,61"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ad6a8e0a2906acb31766e826e35ecb34d"></a><!-- doxytag: member="Graphe::afficherAretesGraphe" ref="ad6a8e0a2906acb31766e826e35ecb34d" args="(const Graphe *g)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structGraphe.html#ad6a8e0a2906acb31766e826e35ecb34d">afficherAretesGraphe</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em></td><td>)</td>
+          <td><code> [related]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Afficher les arêtes d'un graphe. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="structGraphe_ad6a8e0a2906acb31766e826e35ecb34d_icgraph.png" border="0" usemap="#structGraphe_ad6a8e0a2906acb31766e826e35ecb34d_icgraph" alt=""/></div>
+<map name="structGraphe_ad6a8e0a2906acb31766e826e35ecb34d_icgraph" id="structGraphe_ad6a8e0a2906acb31766e826e35ecb34d_icgraph">
+<area shape="rect" id="node3" href="edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="249,5,375,35"/><area shape="rect" id="node7" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="569,32,721,61"/><area shape="rect" id="node5" href="edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="425,5,519,35"/><area shape="rect" id="node9" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="772,32,833,61"/><area shape="rect" id="node11" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="883,32,933,61"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a198689c52ffb4178b1b3c154a035d1d1"></a><!-- doxytag: member="Graphe::afficherListeSommets" ref="a198689c52ffb4178b1b3c154a035d1d1" args="(const Graphe *g)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structGraphe.html#a198689c52ffb4178b1b3c154a035d1d1">afficherListeSommets</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em></td><td>)</td>
+          <td><code> [related]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Afficher les sommets d'un graphe. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="structGraphe_a198689c52ffb4178b1b3c154a035d1d1_icgraph.png" border="0" usemap="#structGraphe_a198689c52ffb4178b1b3c154a035d1d1_icgraph" alt=""/></div>
+<map name="structGraphe_a198689c52ffb4178b1b3c154a035d1d1_icgraph" id="structGraphe_a198689c52ffb4178b1b3c154a035d1d1_icgraph">
+<area shape="rect" id="node3" href="edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="255,5,380,35"/><area shape="rect" id="node7" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="575,32,727,61"/><area shape="rect" id="node5" href="edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="431,5,524,35"/><area shape="rect" id="node9" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="777,32,839,61"/><area shape="rect" id="node11" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="888,32,939,61"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4924edca2ae3d13ce4c71c5fc8cfd917"></a><!-- doxytag: member="Graphe::afficherVoisins" ref="a4924edca2ae3d13ce4c71c5fc8cfd917" args="(const Graphe *g, const Sommet *s)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="structGraphe.html#a4924edca2ae3d13ce4c71c5fc8cfd917">afficherVoisins</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7">Sommet</a> *&#160;</td>
+          <td class="paramname"><em>s</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [related]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Afficher les voisins d'un sommet. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+    <tr><td class="paramname">s</td><td>Sommet. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="structGraphe_a4924edca2ae3d13ce4c71c5fc8cfd917_icgraph.png" border="0" usemap="#structGraphe_a4924edca2ae3d13ce4c71c5fc8cfd917_icgraph" alt=""/></div>
+<map name="structGraphe_a4924edca2ae3d13ce4c71c5fc8cfd917_icgraph" id="structGraphe_a4924edca2ae3d13ce4c71c5fc8cfd917_icgraph">
+<area shape="rect" id="node3" href="edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="215,5,340,35"/><area shape="rect" id="node7" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="535,32,687,61"/><area shape="rect" id="node5" href="edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="391,5,484,35"/><area shape="rect" id="node9" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="737,32,799,61"/><area shape="rect" id="node11" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="848,32,899,61"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a27054ead26f2d98f65c717eed6ee8740"></a><!-- doxytag: member="Graphe::cgModifierSommet" ref="a27054ead26f2d98f65c717eed6ee8740" args="(CouleursGraphe *cg, const Sommet *s, Couleur c)" -->
 <div class="memitem">
 <div class="memproto">
@@ -383,7 +549,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structGraphe_a1a93b1ef000c27e4d43c871faff3c2a3_icgraph.png" border="0" usemap="#structGraphe_a1a93b1ef000c27e4d43c871faff3c2a3_icgraph" alt=""/></div>
 <map name="structGraphe_a1a93b1ef000c27e4d43c871faff3c2a3_icgraph" id="structGraphe_a1a93b1ef000c27e4d43c871faff3c2a3_icgraph">
-<area shape="rect" id="node3" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="268,5,319,35"/><area shape="rect" id="node5" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="217,59,369,88"/></map>
+<area shape="rect" id="node3" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="531,5,581,35"/><area shape="rect" id="node5" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="217,31,369,60"/><area shape="rect" id="node7" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="420,31,481,60"/></map>
 </div>
 </p>
 
@@ -493,7 +659,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structGraphe_a5bb1a3b2af14cf018755a63731df0f80_icgraph.png" border="0" usemap="#structGraphe_a5bb1a3b2af14cf018755a63731df0f80_icgraph" alt=""/></div>
 <map name="structGraphe_a5bb1a3b2af14cf018755a63731df0f80_icgraph" id="structGraphe_a5bb1a3b2af14cf018755a63731df0f80_icgraph">
-<area shape="rect" id="node3" href="graphe_8c.html#aa81e772015dccea36be07c77cb0f16db" title="Test d&#39;existence de voisins d&#39;un Sommet dans un Graphe." alt="" coords="293,5,363,35"/><area shape="rect" id="node5" href="graphe_8c.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe." alt="" coords="280,59,376,88"/><area shape="rect" id="node7" href="graphe_8c.html#a137c4ea82b8d27f1953a8e4757561e09" title="Nombre de voisins d&#39;un sommet." alt="" coords="269,112,387,141"/><area shape="rect" id="node9" href="graphe_8c.html#a50bed59aba5c8e5843e16932aabcbd2a" title="Poids d&#39;une arête." alt="" coords="281,165,375,195"/><area shape="rect" id="node11" href="parcours_8c.html#abd040d82372961759c0ec9c694131303" title="Parcours en largeur d&#39;un graphe." alt="" coords="267,219,389,248"/><area shape="rect" id="node15" href="parcours_8c.html#a8324bb1764f831e8030db5936b6104d0" title="Test d&#39;existence de cycles dans un graphe." alt="" coords="292,272,364,301"/><area shape="rect" id="node17" href="prim_8c.html#add200cb199275679a09eb24bfdf3075b" title="Ajouter les arêtes incidentes à un sommet." alt="" coords="244,325,412,355"/><area shape="rect" id="node13" href="parcours_8c.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe." alt="" coords="461,219,563,248"/></map>
+<area shape="rect" id="node3" href="graphe_8c.html#aa81e772015dccea36be07c77cb0f16db" title="Test d&#39;existence de voisins d&#39;un Sommet dans un Graphe." alt="" coords="293,5,363,35"/><area shape="rect" id="node5" href="graphe_8c.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe." alt="" coords="280,59,376,88"/><area shape="rect" id="node7" href="graphe_8c.html#a137c4ea82b8d27f1953a8e4757561e09" title="Nombre de voisins d&#39;un sommet." alt="" coords="269,112,387,141"/><area shape="rect" id="node9" href="graphe_8c.html#a50bed59aba5c8e5843e16932aabcbd2a" title="Poids d&#39;une arête." alt="" coords="281,165,375,195"/><area shape="rect" id="node11" href="io_8c.html#ace288c4a90377a269c162289a83b2bac" title="Afficher les arêtes incidentes à un sommet." alt="" coords="265,219,391,248"/><area shape="rect" id="node13" href="io_8c.html#a4924edca2ae3d13ce4c71c5fc8cfd917" title="Afficher les voisins d&#39;un sommet." alt="" coords="275,272,381,301"/><area shape="rect" id="node15" href="parcours_8c.html#abd040d82372961759c0ec9c694131303" title="Parcours en largeur d&#39;un graphe." alt="" coords="267,325,389,355"/><area shape="rect" id="node19" href="parcours_8c.html#a8324bb1764f831e8030db5936b6104d0" title="Test d&#39;existence de cycles dans un graphe." alt="" coords="292,379,364,408"/><area shape="rect" id="node21" href="prim_8c.html#add200cb199275679a09eb24bfdf3075b" title="Ajouter les arêtes incidentes à un sommet." alt="" coords="244,432,412,461"/><area shape="rect" id="node17" href="parcours_8c.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe." alt="" coords="461,325,563,355"/></map>
 </div>
 </p>
 
@@ -554,7 +720,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structGraphe_a9a59a514e3d1dad868582af54862fdf1_icgraph.png" border="0" usemap="#structGraphe_a9a59a514e3d1dad868582af54862fdf1_icgraph" alt=""/></div>
 <map name="structGraphe_a9a59a514e3d1dad868582af54862fdf1_icgraph" id="structGraphe_a9a59a514e3d1dad868582af54862fdf1_icgraph">
-<area shape="rect" id="node3" href="graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18" title="Copie d&#39;un Graphe." alt="" coords="256,5,323,35"/><area shape="rect" id="node5" href="grapheconnexe_8c.html#a064998f9e6af964d70d8e48baad19e77" title="Ajout d&#39;une arête dans un graphe connexe." alt="" coords="236,59,343,88"/><area shape="rect" id="node7" href="grapheconnexe_8c.html#a90dad6597b46ad207a693a3b633f4fbf" title="suppression d&#39;une arête dans un graphe connexe." alt="" coords="227,112,352,141"/><area shape="rect" id="node9" href="io_8c.html#a80d78fef8f986ce18ebdc87fb7c986e6" title="Permet de charger un graphe dans un fichier texte." alt="" coords="235,165,344,195"/><area shape="rect" id="node11" href="prim_8c.html#a146f5763132b19eb63ad6a7ca22d2cef" title="Calcul de l&#39;arbre couvrant minimum d&#39;un graphe connexe en partant d&#39;un sommet." alt="" coords="207,219,372,248"/></map>
+<area shape="rect" id="node3" href="edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="227,5,352,35"/><area shape="rect" id="node13" href="graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18" title="Copie d&#39;un Graphe." alt="" coords="256,59,323,88"/><area shape="rect" id="node15" href="grapheconnexe_8c.html#a064998f9e6af964d70d8e48baad19e77" title="Ajout d&#39;une arête dans un graphe connexe." alt="" coords="236,112,343,141"/><area shape="rect" id="node17" href="grapheconnexe_8c.html#a90dad6597b46ad207a693a3b633f4fbf" title="suppression d&#39;une arête dans un graphe connexe." alt="" coords="227,165,352,195"/><area shape="rect" id="node19" href="io_8c.html#a80d78fef8f986ce18ebdc87fb7c986e6" title="Permet de charger un graphe dans un fichier texte." alt="" coords="235,219,344,248"/><area shape="rect" id="node21" href="prim_8c.html#a146f5763132b19eb63ad6a7ca22d2cef" title="Calcul de l&#39;arbre couvrant minimum d&#39;un graphe connexe en partant d&#39;un sommet." alt="" coords="207,272,372,301"/><area shape="rect" id="node5" href="edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="423,5,516,35"/><area shape="rect" id="node7" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="567,5,719,35"/><area shape="rect" id="node9" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="769,5,831,35"/><area shape="rect" id="node11" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="880,5,931,35"/></map>
 </div>
 </p>
 
@@ -601,7 +767,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structGraphe_a420bc7f2ad2301c4565dce8c29a14286_icgraph.png" border="0" usemap="#structGraphe_a420bc7f2ad2301c4565dce8c29a14286_icgraph" alt=""/></div>
 <map name="structGraphe_a420bc7f2ad2301c4565dce8c29a14286_icgraph" id="structGraphe_a420bc7f2ad2301c4565dce8c29a14286_icgraph">
-<area shape="rect" id="node3" href="graphe_8c.html#aa730f51a75d135905ac1b4c1ec2f72c2" title="Ajout d&#39;une arête dans un Graphe." alt="" coords="257,5,359,35"/><area shape="rect" id="node5" href="graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18" title="Copie d&#39;un Graphe." alt="" coords="275,59,341,88"/><area shape="rect" id="node7" href="grapheconnexe_8c.html#aff062a1149a228a87e0859e64746bb57" title="Ajout d&#39;un sommet dans un graphe connexe." alt="" coords="245,112,371,141"/><area shape="rect" id="node9" href="prim_8c.html#a146f5763132b19eb63ad6a7ca22d2cef" title="Calcul de l&#39;arbre couvrant minimum d&#39;un graphe connexe en partant d&#39;un sommet." alt="" coords="225,165,391,195"/></map>
+<area shape="rect" id="node3" href="edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="245,5,371,35"/><area shape="rect" id="node13" href="graphe_8c.html#aa730f51a75d135905ac1b4c1ec2f72c2" title="Ajout d&#39;une arête dans un Graphe." alt="" coords="257,59,359,88"/><area shape="rect" id="node15" href="graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18" title="Copie d&#39;un Graphe." alt="" coords="275,112,341,141"/><area shape="rect" id="node17" href="grapheconnexe_8c.html#aff062a1149a228a87e0859e64746bb57" title="Ajout d&#39;un sommet dans un graphe connexe." alt="" coords="245,165,371,195"/><area shape="rect" id="node19" href="prim_8c.html#a146f5763132b19eb63ad6a7ca22d2cef" title="Calcul de l&#39;arbre couvrant minimum d&#39;un graphe connexe en partant d&#39;un sommet." alt="" coords="225,219,391,248"/><area shape="rect" id="node5" href="edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="441,5,535,35"/><area shape="rect" id="node7" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="585,5,737,35"/><area shape="rect" id="node9" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="788,5,849,35"/><area shape="rect" id="node11" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="899,5,949,35"/></map>
 </div>
 </p>
 
@@ -647,7 +813,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structGraphe_a363d4c3de24663a378322111f71e51cf_icgraph.png" border="0" usemap="#structGraphe_a363d4c3de24663a378322111f71e51cf_icgraph" alt=""/></div>
 <map name="structGraphe_a363d4c3de24663a378322111f71e51cf_icgraph" id="structGraphe_a363d4c3de24663a378322111f71e51cf_icgraph">
-<area shape="rect" id="node3" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="321,5,372,35"/><area shape="rect" id="node5" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="271,59,423,88"/></map>
+<area shape="rect" id="node3" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="584,5,635,35"/><area shape="rect" id="node5" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="271,31,423,60"/><area shape="rect" id="node7" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="473,31,535,60"/></map>
 </div>
 </p>
 
@@ -683,7 +849,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structGraphe_a6fa9c62a87c903c64daa6282fca731e4_icgraph.png" border="0" usemap="#structGraphe_a6fa9c62a87c903c64daa6282fca731e4_icgraph" alt=""/></div>
 <map name="structGraphe_a6fa9c62a87c903c64daa6282fca731e4_icgraph" id="structGraphe_a6fa9c62a87c903c64daa6282fca731e4_icgraph">
-<area shape="rect" id="node3" href="io_8c.html#aca158a023def8433061cca3075d09311" title="Permet de sauvegarder le graphe dans un fichier passé en argument." alt="" coords="171,5,309,35"/></map>
+<area shape="rect" id="node3" href="io_8c.html#aca158a023def8433061cca3075d09311" title="Permet de sauvegarder le graphe dans un fichier passé en argument." alt="" coords="175,5,313,35"/><area shape="rect" id="node5" href="io_8c.html#ad6a8e0a2906acb31766e826e35ecb34d" title="Afficher les arêtes d&#39;un graphe." alt="" coords="172,59,316,88"/></map>
 </div>
 </p>
 
@@ -750,7 +916,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structGraphe_ad7f46b1f66764538930a9ea33a746961_icgraph.png" border="0" usemap="#structGraphe_ad7f46b1f66764538930a9ea33a746961_icgraph" alt=""/></div>
 <map name="structGraphe_ad7f46b1f66764538930a9ea33a746961_icgraph" id="structGraphe_ad7f46b1f66764538930a9ea33a746961_icgraph">
-<area shape="rect" id="node3" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="215,5,367,35"/></map>
+<area shape="rect" id="node3" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="215,5,367,35"/><area shape="rect" id="node5" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="417,5,479,35"/><area shape="rect" id="node7" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="528,5,579,35"/></map>
 </div>
 </p>
 
@@ -849,7 +1015,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structGraphe_ac01b4181e185122d26b569dc5d5b0eb9_icgraph.png" border="0" usemap="#structGraphe_ac01b4181e185122d26b569dc5d5b0eb9_icgraph" alt=""/></div>
 <map name="structGraphe_ac01b4181e185122d26b569dc5d5b0eb9_icgraph" id="structGraphe_ac01b4181e185122d26b569dc5d5b0eb9_icgraph">
-<area shape="rect" id="node3" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="217,5,369,35"/></map>
+<area shape="rect" id="node3" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="217,5,369,35"/><area shape="rect" id="node5" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="420,5,481,35"/><area shape="rect" id="node7" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="531,5,581,35"/></map>
 </div>
 </p>
 
@@ -905,7 +1071,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structGraphe_a023f0542e3b7c6b7716d3984b0361453_icgraph.png" border="0" usemap="#structGraphe_a023f0542e3b7c6b7716d3984b0361453_icgraph" alt=""/></div>
 <map name="structGraphe_a023f0542e3b7c6b7716d3984b0361453_icgraph" id="structGraphe_a023f0542e3b7c6b7716d3984b0361453_icgraph">
-<area shape="rect" id="node3" href="grapheconnexe_8c.html#a17ac17df5298266d7dfed5f4999964d9" title="Suppression d&#39;un sommet dans un graphe connexe." alt="" coords="171,5,315,35"/></map>
+<area shape="rect" id="node3" href="grapheconnexe_8c.html#a17ac17df5298266d7dfed5f4999964d9" title="Suppression d&#39;un sommet dans un graphe connexe." alt="" coords="176,5,320,35"/><area shape="rect" id="node5" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="172,59,324,88"/><area shape="rect" id="node7" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="375,59,436,88"/><area shape="rect" id="node9" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="485,59,536,88"/></map>
 </div>
 </p>
 
@@ -960,7 +1126,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structGraphe_a426658bb7e74364f25137659827422a2_icgraph.png" border="0" usemap="#structGraphe_a426658bb7e74364f25137659827422a2_icgraph" alt=""/></div>
 <map name="structGraphe_a426658bb7e74364f25137659827422a2_icgraph" id="structGraphe_a426658bb7e74364f25137659827422a2_icgraph">
-<area shape="rect" id="node3" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="231,5,383,35"/></map>
+<area shape="rect" id="node3" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="231,5,383,35"/><area shape="rect" id="node5" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="433,5,495,35"/><area shape="rect" id="node7" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="544,5,595,35"/></map>
 </div>
 </p>
 
@@ -1008,7 +1174,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structGraphe_ac3d2bf2bf83d8206bb018726506e9df2_icgraph.png" border="0" usemap="#structGraphe_ac3d2bf2bf83d8206bb018726506e9df2_icgraph" alt=""/></div>
 <map name="structGraphe_ac3d2bf2bf83d8206bb018726506e9df2_icgraph" id="structGraphe_ac3d2bf2bf83d8206bb018726506e9df2_icgraph">
-<area shape="rect" id="node3" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="249,5,401,35"/></map>
+<area shape="rect" id="node3" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="249,5,401,35"/><area shape="rect" id="node5" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="452,5,513,35"/><area shape="rect" id="node7" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="563,5,613,35"/></map>
 </div>
 </p>
 
@@ -1043,7 +1209,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structGraphe_af2d919b7649b50f315487287fc9fad68_icgraph.png" border="0" usemap="#structGraphe_af2d919b7649b50f315487287fc9fad68_icgraph" alt=""/></div>
 <map name="structGraphe_af2d919b7649b50f315487287fc9fad68_icgraph" id="structGraphe_af2d919b7649b50f315487287fc9fad68_icgraph">
-<area shape="rect" id="node3" href="grapheconnexe_8c.html#a17ac17df5298266d7dfed5f4999964d9" title="Suppression d&#39;un sommet dans un graphe connexe." alt="" coords="205,5,349,35"/><area shape="rect" id="node5" href="grapheconnexe_8c.html#a90dad6597b46ad207a693a3b633f4fbf" title="suppression d&#39;une arête dans un graphe connexe." alt="" coords="215,59,340,88"/><area shape="rect" id="node7" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="252,112,303,141"/></map>
+<area shape="rect" id="node3" href="edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="215,5,340,35"/><area shape="rect" id="node7" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="543,56,695,85"/><area shape="rect" id="node11" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="856,83,907,112"/><area shape="rect" id="node13" href="grapheconnexe_8c.html#a17ac17df5298266d7dfed5f4999964d9" title="Suppression d&#39;un sommet dans un graphe connexe." alt="" coords="205,160,349,189"/><area shape="rect" id="node15" href="grapheconnexe_8c.html#a90dad6597b46ad207a693a3b633f4fbf" title="suppression d&#39;une arête dans un graphe connexe." alt="" coords="215,213,340,243"/><area shape="rect" id="node5" href="edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="399,5,492,35"/><area shape="rect" id="node9" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="745,56,807,85"/></map>
 </div>
 </p>
 
@@ -1079,7 +1245,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structGraphe_a95dd658a8d935309266b77cf7ab2e6a8_icgraph.png" border="0" usemap="#structGraphe_a95dd658a8d935309266b77cf7ab2e6a8_icgraph" alt=""/></div>
 <map name="structGraphe_a95dd658a8d935309266b77cf7ab2e6a8_icgraph" id="structGraphe_a95dd658a8d935309266b77cf7ab2e6a8_icgraph">
-<area shape="rect" id="node3" href="graphe_8c.html#a19862f69a8a5b6bc2734eef29a385d7e" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="180,5,316,35"/><area shape="rect" id="node5" href="graphe_8c.html#a4a707cae33e8b5cc50df8d5ab816a9b0" title="Sommet suivant dans le Graphe." alt="" coords="212,59,284,88"/><area shape="rect" id="node7" href="graphe_8c.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe." alt="" coords="191,112,305,141"/><area shape="rect" id="node9" href="graphe_8c.html#a954fb1b598ce373ec95a813f1b6e84e0" title="Obtenir Un sommet d&#39;un Graphe." alt="" coords="205,165,291,195"/><area shape="rect" id="node11" href="graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18" title="Copie d&#39;un Graphe." alt="" coords="215,219,281,248"/><area shape="rect" id="node13" href="graphe_8c.html#acfcf3da168eac84806f30277b17e8a29" title="Liste des arêtes d&#39;un Graphe." alt="" coords="215,272,281,301"/><area shape="rect" id="node15" href="grapheconnexe_8c.html#aff062a1149a228a87e0859e64746bb57" title="Ajout d&#39;un sommet dans un graphe connexe." alt="" coords="185,325,311,355"/><area shape="rect" id="node17" href="grapheconnexe_8c.html#a064998f9e6af964d70d8e48baad19e77" title="Ajout d&#39;une arête dans un graphe connexe." alt="" coords="195,379,301,408"/><area shape="rect" id="node19" href="parcours_8c.html#abd040d82372961759c0ec9c694131303" title="Parcours en largeur d&#39;un graphe." alt="" coords="187,432,309,461"/><area shape="rect" id="node21" href="parcours_8c.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe." alt="" coords="365,432,467,461"/></map>
+<area shape="rect" id="node3" href="graphe_8c.html#a19862f69a8a5b6bc2734eef29a385d7e" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="185,5,321,35"/><area shape="rect" id="node5" href="graphe_8c.html#a4a707cae33e8b5cc50df8d5ab816a9b0" title="Sommet suivant dans le Graphe." alt="" coords="217,59,289,88"/><area shape="rect" id="node7" href="graphe_8c.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe." alt="" coords="196,112,311,141"/><area shape="rect" id="node9" href="graphe_8c.html#a954fb1b598ce373ec95a813f1b6e84e0" title="Obtenir Un sommet d&#39;un Graphe." alt="" coords="211,165,296,195"/><area shape="rect" id="node11" href="graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18" title="Copie d&#39;un Graphe." alt="" coords="220,219,287,248"/><area shape="rect" id="node13" href="graphe_8c.html#acfcf3da168eac84806f30277b17e8a29" title="Liste des arêtes d&#39;un Graphe." alt="" coords="220,272,287,301"/><area shape="rect" id="node15" href="grapheconnexe_8c.html#aff062a1149a228a87e0859e64746bb57" title="Ajout d&#39;un sommet dans un graphe connexe." alt="" coords="191,325,316,355"/><area shape="rect" id="node17" href="grapheconnexe_8c.html#a064998f9e6af964d70d8e48baad19e77" title="Ajout d&#39;une arête dans un graphe connexe." alt="" coords="200,379,307,408"/><area shape="rect" id="node19" href="io_8c.html#a198689c52ffb4178b1b3c154a035d1d1" title="Afficher les sommets d&#39;un graphe." alt="" coords="179,432,328,461"/><area shape="rect" id="node21" href="parcours_8c.html#abd040d82372961759c0ec9c694131303" title="Parcours en largeur d&#39;un graphe." alt="" coords="192,485,315,515"/><area shape="rect" id="node23" href="parcours_8c.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe." alt="" coords="376,485,477,515"/></map>
 </div>
 </p>
 
@@ -1237,7 +1403,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structGraphe_a0d0ec90a46d0b4618b17c2ea4f6c0d0f_icgraph.png" border="0" usemap="#structGraphe_a0d0ec90a46d0b4618b17c2ea4f6c0d0f_icgraph" alt=""/></div>
 <map name="structGraphe_a0d0ec90a46d0b4618b17c2ea4f6c0d0f_icgraph" id="structGraphe_a0d0ec90a46d0b4618b17c2ea4f6c0d0f_icgraph">
-<area shape="rect" id="node3" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="263,5,313,35"/><area shape="rect" id="node5" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="212,59,364,88"/></map>
+<area shape="rect" id="node3" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="525,5,576,35"/><area shape="rect" id="node5" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="212,31,364,60"/><area shape="rect" id="node7" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="415,31,476,60"/></map>
 </div>
 </p>
 
@@ -1273,7 +1439,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structGraphe_a25eb8124cae0e4d3512ee610eedf3527_icgraph.png" border="0" usemap="#structGraphe_a25eb8124cae0e4d3512ee610eedf3527_icgraph" alt=""/></div>
 <map name="structGraphe_a25eb8124cae0e4d3512ee610eedf3527_icgraph" id="structGraphe_a25eb8124cae0e4d3512ee610eedf3527_icgraph">
-<area shape="rect" id="node3" href="graphe_8c.html#a9834e48c452c65f170140ce2dae32fae" title="Libération d&#39;un Graphe." alt="" coords="217,5,284,35"/><area shape="rect" id="node5" href="grapheconnexe_8c.html#a17ac17df5298266d7dfed5f4999964d9" title="Suppression d&#39;un sommet dans un graphe connexe." alt="" coords="179,59,323,88"/><area shape="rect" id="node7" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="376,164,427,193"/><area shape="rect" id="node9" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="175,163,327,192"/><area shape="rect" id="node11" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="220,216,281,245"/></map>
+<area shape="rect" id="node3" href="edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="183,5,308,35"/><area shape="rect" id="node7" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="511,56,663,85"/><area shape="rect" id="node9" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="713,107,775,136"/><area shape="rect" id="node11" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="824,133,875,163"/><area shape="rect" id="node13" href="graphe_8c.html#a9834e48c452c65f170140ce2dae32fae" title="Libération d&#39;un Graphe." alt="" coords="212,211,279,240"/><area shape="rect" id="node15" href="grapheconnexe_8c.html#a17ac17df5298266d7dfed5f4999964d9" title="Suppression d&#39;un sommet dans un graphe connexe." alt="" coords="173,264,317,293"/><area shape="rect" id="node5" href="edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="367,5,460,35"/></map>
 </div>
 </p>
 
@@ -1334,7 +1500,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structGraphe_a64fd41af976a8447604e9e95d93b71cf_icgraph.png" border="0" usemap="#structGraphe_a64fd41af976a8447604e9e95d93b71cf_icgraph" alt=""/></div>
 <map name="structGraphe_a64fd41af976a8447604e9e95d93b71cf_icgraph" id="structGraphe_a64fd41af976a8447604e9e95d93b71cf_icgraph">
-<area shape="rect" id="node3" href="grapheconnexe_8c.html#a9a4321feb2936b914fb979d5d6b0efbf" title="Modification d&#39;une arête dans un GrapheConnexe." alt="" coords="212,5,324,35"/></map>
+<area shape="rect" id="node3" href="edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="212,5,337,35"/><area shape="rect" id="node13" href="grapheconnexe_8c.html#a9a4321feb2936b914fb979d5d6b0efbf" title="Modification d&#39;une arête dans un GrapheConnexe." alt="" coords="219,59,331,88"/><area shape="rect" id="node5" href="edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="388,5,481,35"/><area shape="rect" id="node7" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="532,5,684,35"/><area shape="rect" id="node9" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="735,5,796,35"/><area shape="rect" id="node11" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="845,5,896,35"/></map>
 </div>
 </p>
 
@@ -1471,7 +1637,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structGraphe_aaf6e3b452d5d36e54cdebf1f9bdbdb14_icgraph.png" border="0" usemap="#structGraphe_aaf6e3b452d5d36e54cdebf1f9bdbdb14_icgraph" alt=""/></div>
 <map name="structGraphe_aaf6e3b452d5d36e54cdebf1f9bdbdb14_icgraph" id="structGraphe_aaf6e3b452d5d36e54cdebf1f9bdbdb14_icgraph">
-<area shape="rect" id="node3" href="graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18" title="Copie d&#39;un Graphe." alt="" coords="216,5,283,35"/><area shape="rect" id="node5" href="grapheconnexe_8c.html#a2746c747f7ca032eb775adf03d09c5c5" title="Nouveau GrapheConnexe." alt="" coords="216,59,283,88"/><area shape="rect" id="node7" href="io_8c.html#a80d78fef8f986ce18ebdc87fb7c986e6" title="Permet de charger un graphe dans un fichier texte." alt="" coords="195,112,304,141"/><area shape="rect" id="node9" href="prim_8c.html#a146f5763132b19eb63ad6a7ca22d2cef" title="Calcul de l&#39;arbre couvrant minimum d&#39;un graphe connexe en partant d&#39;un sommet." alt="" coords="167,165,332,195"/><area shape="rect" id="node11" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="219,219,280,248"/><area shape="rect" id="node13" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="381,219,432,248"/></map>
+<area shape="rect" id="node3" href="edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="187,5,312,35"/><area shape="rect" id="node7" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="527,56,679,85"/><area shape="rect" id="node9" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="729,83,791,112"/><area shape="rect" id="node13" href="graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18" title="Copie d&#39;un Graphe." alt="" coords="216,160,283,189"/><area shape="rect" id="node15" href="grapheconnexe_8c.html#a2746c747f7ca032eb775adf03d09c5c5" title="Nouveau GrapheConnexe." alt="" coords="216,213,283,243"/><area shape="rect" id="node17" href="io_8c.html#a80d78fef8f986ce18ebdc87fb7c986e6" title="Permet de charger un graphe dans un fichier texte." alt="" coords="195,267,304,296"/><area shape="rect" id="node19" href="prim_8c.html#a146f5763132b19eb63ad6a7ca22d2cef" title="Calcul de l&#39;arbre couvrant minimum d&#39;un graphe connexe en partant d&#39;un sommet." alt="" coords="167,320,332,349"/><area shape="rect" id="node5" href="edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="383,5,476,35"/><area shape="rect" id="node11" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="840,83,891,112"/></map>
 </div>
 </p>
 
@@ -1608,7 +1774,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structGraphe_ade040b5a200ae2c2118ba66fa261e299_icgraph.png" border="0" usemap="#structGraphe_ade040b5a200ae2c2118ba66fa261e299_icgraph" alt=""/></div>
 <map name="structGraphe_ade040b5a200ae2c2118ba66fa261e299_icgraph" id="structGraphe_ade040b5a200ae2c2118ba66fa261e299_icgraph">
-<area shape="rect" id="node3" href="graphe_8c.html#a19862f69a8a5b6bc2734eef29a385d7e" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="209,5,345,35"/><area shape="rect" id="node5" href="graphe_8c.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe." alt="" coords="220,59,335,88"/><area shape="rect" id="node7" href="graphe_8c.html#a954fb1b598ce373ec95a813f1b6e84e0" title="Obtenir Un sommet d&#39;un Graphe." alt="" coords="235,112,320,141"/><area shape="rect" id="node9" href="graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18" title="Copie d&#39;un Graphe." alt="" coords="244,165,311,195"/><area shape="rect" id="node11" href="graphe_8c.html#acfcf3da168eac84806f30277b17e8a29" title="Liste des arêtes d&#39;un Graphe." alt="" coords="244,219,311,248"/><area shape="rect" id="node13" href="graphe_8c.html#a9834e48c452c65f170140ce2dae32fae" title="Libération d&#39;un Graphe." alt="" coords="244,272,311,301"/><area shape="rect" id="node15" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="252,325,303,355"/><area shape="rect" id="node17" href="parcours_8c.html#abd040d82372961759c0ec9c694131303" title="Parcours en largeur d&#39;un graphe." alt="" coords="216,379,339,408"/><area shape="rect" id="node21" href="parcours_8c.html#a8324bb1764f831e8030db5936b6104d0" title="Test d&#39;existence de cycles dans un graphe." alt="" coords="241,432,313,461"/><area shape="rect" id="node19" href="parcours_8c.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe." alt="" coords="395,379,496,408"/></map>
+<area shape="rect" id="node3" href="graphe_8c.html#a19862f69a8a5b6bc2734eef29a385d7e" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="215,5,351,35"/><area shape="rect" id="node5" href="graphe_8c.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe." alt="" coords="225,59,340,88"/><area shape="rect" id="node7" href="graphe_8c.html#a954fb1b598ce373ec95a813f1b6e84e0" title="Obtenir Un sommet d&#39;un Graphe." alt="" coords="240,112,325,141"/><area shape="rect" id="node9" href="graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18" title="Copie d&#39;un Graphe." alt="" coords="249,165,316,195"/><area shape="rect" id="node11" href="graphe_8c.html#acfcf3da168eac84806f30277b17e8a29" title="Liste des arêtes d&#39;un Graphe." alt="" coords="249,219,316,248"/><area shape="rect" id="node13" href="graphe_8c.html#a9834e48c452c65f170140ce2dae32fae" title="Libération d&#39;un Graphe." alt="" coords="249,272,316,301"/><area shape="rect" id="node15" href="io_8c.html#a198689c52ffb4178b1b3c154a035d1d1" title="Afficher les sommets d&#39;un graphe." alt="" coords="208,325,357,355"/><area shape="rect" id="node17" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="257,379,308,408"/><area shape="rect" id="node19" href="parcours_8c.html#abd040d82372961759c0ec9c694131303" title="Parcours en largeur d&#39;un graphe." alt="" coords="221,432,344,461"/><area shape="rect" id="node23" href="parcours_8c.html#a8324bb1764f831e8030db5936b6104d0" title="Test d&#39;existence de cycles dans un graphe." alt="" coords="247,485,319,515"/><area shape="rect" id="node21" href="parcours_8c.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe." alt="" coords="405,432,507,461"/></map>
 </div>
 </p>
 
@@ -1644,7 +1810,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structGraphe_acc7056daf175dd4657eb9c52dcbe5d82_icgraph.png" border="0" usemap="#structGraphe_acc7056daf175dd4657eb9c52dcbe5d82_icgraph" alt=""/></div>
 <map name="structGraphe_acc7056daf175dd4657eb9c52dcbe5d82_icgraph" id="structGraphe_acc7056daf175dd4657eb9c52dcbe5d82_icgraph">
-<area shape="rect" id="node3" href="graphe_8c.html#a19862f69a8a5b6bc2734eef29a385d7e" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="177,5,313,35"/><area shape="rect" id="node5" href="graphe_8c.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe." alt="" coords="188,59,303,88"/><area shape="rect" id="node7" href="graphe_8c.html#a954fb1b598ce373ec95a813f1b6e84e0" title="Obtenir Un sommet d&#39;un Graphe." alt="" coords="203,112,288,141"/><area shape="rect" id="node9" href="graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18" title="Copie d&#39;un Graphe." alt="" coords="212,165,279,195"/><area shape="rect" id="node11" href="graphe_8c.html#acfcf3da168eac84806f30277b17e8a29" title="Liste des arêtes d&#39;un Graphe." alt="" coords="212,219,279,248"/><area shape="rect" id="node13" href="graphe_8c.html#a9834e48c452c65f170140ce2dae32fae" title="Libération d&#39;un Graphe." alt="" coords="212,272,279,301"/></map>
+<area shape="rect" id="node3" href="graphe_8c.html#a19862f69a8a5b6bc2734eef29a385d7e" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="183,5,319,35"/><area shape="rect" id="node5" href="graphe_8c.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe." alt="" coords="193,59,308,88"/><area shape="rect" id="node7" href="graphe_8c.html#a954fb1b598ce373ec95a813f1b6e84e0" title="Obtenir Un sommet d&#39;un Graphe." alt="" coords="208,112,293,141"/><area shape="rect" id="node9" href="graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18" title="Copie d&#39;un Graphe." alt="" coords="217,165,284,195"/><area shape="rect" id="node11" href="graphe_8c.html#acfcf3da168eac84806f30277b17e8a29" title="Liste des arêtes d&#39;un Graphe." alt="" coords="217,219,284,248"/><area shape="rect" id="node13" href="graphe_8c.html#a9834e48c452c65f170140ce2dae32fae" title="Libération d&#39;un Graphe." alt="" coords="217,272,284,301"/><area shape="rect" id="node15" href="io_8c.html#a198689c52ffb4178b1b3c154a035d1d1" title="Afficher les sommets d&#39;un graphe." alt="" coords="176,325,325,355"/></map>
 </div>
 </p>
 
@@ -1698,7 +1864,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structGraphe_a183405c1312d76628db9de7079b0beaa_icgraph.png" border="0" usemap="#structGraphe_a183405c1312d76628db9de7079b0beaa_icgraph" alt=""/></div>
 <map name="structGraphe_a183405c1312d76628db9de7079b0beaa_icgraph" id="structGraphe_a183405c1312d76628db9de7079b0beaa_icgraph">
-<area shape="rect" id="node3" href="graphe_8c.html#a19862f69a8a5b6bc2734eef29a385d7e" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="225,5,361,35"/><area shape="rect" id="node5" href="grapheconnexe_8c.html#a90dad6597b46ad207a693a3b633f4fbf" title="suppression d&#39;une arête dans un graphe connexe." alt="" coords="231,59,356,88"/></map>
+<area shape="rect" id="node3" href="edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="231,5,356,35"/><area shape="rect" id="node13" href="graphe_8c.html#a19862f69a8a5b6bc2734eef29a385d7e" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="225,59,361,88"/><area shape="rect" id="node15" href="grapheconnexe_8c.html#a90dad6597b46ad207a693a3b633f4fbf" title="suppression d&#39;une arête dans un graphe connexe." alt="" coords="231,112,356,141"/><area shape="rect" id="node5" href="edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="412,5,505,35"/><area shape="rect" id="node7" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="556,5,708,35"/><area shape="rect" id="node9" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="759,5,820,35"/><area shape="rect" id="node11" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="869,5,920,35"/></map>
 </div>
 </p>
 
@@ -1745,7 +1911,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structGraphe_a0aa5aacc4cc9cb1e489a7bb295dcead4_icgraph.png" border="0" usemap="#structGraphe_a0aa5aacc4cc9cb1e489a7bb295dcead4_icgraph" alt=""/></div>
 <map name="structGraphe_a0aa5aacc4cc9cb1e489a7bb295dcead4_icgraph" id="structGraphe_a0aa5aacc4cc9cb1e489a7bb295dcead4_icgraph">
-<area shape="rect" id="node3" href="grapheconnexe_8c.html#a17ac17df5298266d7dfed5f4999964d9" title="Suppression d&#39;un sommet dans un graphe connexe." alt="" coords="240,5,384,35"/></map>
+<area shape="rect" id="node3" href="edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="249,5,375,35"/><area shape="rect" id="node13" href="grapheconnexe_8c.html#a17ac17df5298266d7dfed5f4999964d9" title="Suppression d&#39;un sommet dans un graphe connexe." alt="" coords="240,59,384,88"/><area shape="rect" id="node5" href="edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="433,5,527,35"/><area shape="rect" id="node7" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="577,5,729,35"/><area shape="rect" id="node9" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="780,5,841,35"/><area shape="rect" id="node11" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="891,5,941,35"/></map>
 </div>
 </p>
 
@@ -1791,7 +1957,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="structGraphe_aca158a023def8433061cca3075d09311_icgraph.png" border="0" usemap="#structGraphe_aca158a023def8433061cca3075d09311_icgraph" alt=""/></div>
 <map name="structGraphe_aca158a023def8433061cca3075d09311_icgraph" id="structGraphe_aca158a023def8433061cca3075d09311_icgraph">
-<area shape="rect" id="node3" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="244,5,396,35"/></map>
+<area shape="rect" id="node3" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="244,5,396,35"/><area shape="rect" id="node5" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="447,5,508,35"/><area shape="rect" id="node7" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="557,5,608,35"/></map>
 </div>
 </p>
 
@@ -1879,7 +2045,7 @@ Voici le graphe des appelants de cette fonction :</div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Samedi Avril 27 2013 23:17:02 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Dimanche Avril 28 2013 18:05:24 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

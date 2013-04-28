@@ -1,8 +1,9 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$graphe_8c.html#a19862f69a8a5b6bc2734eef29a385d7e" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="177,5,313,35"/>
-<area shape="rect" id="node5" href="$graphe_8c.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe." alt="" coords="188,59,303,88"/>
-<area shape="rect" id="node7" href="$graphe_8c.html#a954fb1b598ce373ec95a813f1b6e84e0" title="Obtenir Un sommet d&#39;un Graphe." alt="" coords="203,112,288,141"/>
-<area shape="rect" id="node9" href="$graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18" title="Copie d&#39;un Graphe." alt="" coords="212,165,279,195"/>
-<area shape="rect" id="node11" href="$graphe_8c.html#acfcf3da168eac84806f30277b17e8a29" title="Liste des arêtes d&#39;un Graphe." alt="" coords="212,219,279,248"/>
-<area shape="rect" id="node13" href="$graphe_8c.html#a9834e48c452c65f170140ce2dae32fae" title="Libération d&#39;un Graphe." alt="" coords="212,272,279,301"/>
+<area shape="rect" id="node3" href="$graphe_8c.html#a19862f69a8a5b6bc2734eef29a385d7e" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="183,5,319,35"/>
+<area shape="rect" id="node5" href="$graphe_8c.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe." alt="" coords="193,59,308,88"/>
+<area shape="rect" id="node7" href="$graphe_8c.html#a954fb1b598ce373ec95a813f1b6e84e0" title="Obtenir Un sommet d&#39;un Graphe." alt="" coords="208,112,293,141"/>
+<area shape="rect" id="node9" href="$graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18" title="Copie d&#39;un Graphe." alt="" coords="217,165,284,195"/>
+<area shape="rect" id="node11" href="$graphe_8c.html#acfcf3da168eac84806f30277b17e8a29" title="Liste des arêtes d&#39;un Graphe." alt="" coords="217,219,284,248"/>
+<area shape="rect" id="node13" href="$graphe_8c.html#a9834e48c452c65f170140ce2dae32fae" title="Libération d&#39;un Graphe." alt="" coords="217,272,284,301"/>
+<area shape="rect" id="node15" href="$io_8c.html#a198689c52ffb4178b1b3c154a035d1d1" title="Afficher les sommets d&#39;un graphe." alt="" coords="176,325,325,355"/>
 </map>

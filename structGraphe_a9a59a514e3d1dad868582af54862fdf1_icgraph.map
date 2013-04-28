@@ -1,7 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18" title="Copie d&#39;un Graphe." alt="" coords="256,5,323,35"/>
-<area shape="rect" id="node5" href="$grapheconnexe_8c.html#a064998f9e6af964d70d8e48baad19e77" title="Ajout d&#39;une arête dans un graphe connexe." alt="" coords="236,59,343,88"/>
-<area shape="rect" id="node7" href="$grapheconnexe_8c.html#a90dad6597b46ad207a693a3b633f4fbf" title="suppression d&#39;une arête dans un graphe connexe." alt="" coords="227,112,352,141"/>
-<area shape="rect" id="node9" href="$io_8c.html#a80d78fef8f986ce18ebdc87fb7c986e6" title="Permet de charger un graphe dans un fichier texte." alt="" coords="235,165,344,195"/>
-<area shape="rect" id="node11" href="$prim_8c.html#a146f5763132b19eb63ad6a7ca22d2cef" title="Calcul de l&#39;arbre couvrant minimum d&#39;un graphe connexe en partant d&#39;un sommet." alt="" coords="207,219,372,248"/>
+<area shape="rect" id="node3" href="$edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="227,5,352,35"/>
+<area shape="rect" id="node13" href="$graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18" title="Copie d&#39;un Graphe." alt="" coords="256,59,323,88"/>
+<area shape="rect" id="node15" href="$grapheconnexe_8c.html#a064998f9e6af964d70d8e48baad19e77" title="Ajout d&#39;une arête dans un graphe connexe." alt="" coords="236,112,343,141"/>
+<area shape="rect" id="node17" href="$grapheconnexe_8c.html#a90dad6597b46ad207a693a3b633f4fbf" title="suppression d&#39;une arête dans un graphe connexe." alt="" coords="227,165,352,195"/>
+<area shape="rect" id="node19" href="$io_8c.html#a80d78fef8f986ce18ebdc87fb7c986e6" title="Permet de charger un graphe dans un fichier texte." alt="" coords="235,219,344,248"/>
+<area shape="rect" id="node21" href="$prim_8c.html#a146f5763132b19eb63ad6a7ca22d2cef" title="Calcul de l&#39;arbre couvrant minimum d&#39;un graphe connexe en partant d&#39;un sommet." alt="" coords="207,272,372,301"/>
+<area shape="rect" id="node5" href="$edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="423,5,516,35"/>
+<area shape="rect" id="node7" href="$prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="567,5,719,35"/>
+<area shape="rect" id="node9" href="$prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="769,5,831,35"/>
+<area shape="rect" id="node11" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="880,5,931,35"/>
 </map>

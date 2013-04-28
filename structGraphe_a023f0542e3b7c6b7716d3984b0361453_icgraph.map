@@ -1,3 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$grapheconnexe_8c.html#a17ac17df5298266d7dfed5f4999964d9" title="Suppression d&#39;un sommet dans un graphe connexe." alt="" coords="171,5,315,35"/>
+<area shape="rect" id="node3" href="$grapheconnexe_8c.html#a17ac17df5298266d7dfed5f4999964d9" title="Suppression d&#39;un sommet dans un graphe connexe." alt="" coords="176,5,320,35"/>
+<area shape="rect" id="node5" href="$prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="172,59,324,88"/>
+<area shape="rect" id="node7" href="$prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="375,59,436,88"/>
+<area shape="rect" id="node9" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="485,59,536,88"/>
 </map>

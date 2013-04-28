@@ -1,3 +1,5 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$prim_8c.html#a146f5763132b19eb63ad6a7ca22d2cef" title="Calcul de l&#39;arbre couvrant minimum d&#39;un graphe connexe en partant d&#39;un sommet." alt="" coords="199,5,364,35"/>
+<area shape="rect" id="node3" href="$io_8c.html#aca158a023def8433061cca3075d09311" title="Permet de sauvegarder le graphe dans un fichier passé en argument." alt="" coords="212,5,351,35"/>
+<area shape="rect" id="node5" href="$io_8c.html#ad6a8e0a2906acb31766e826e35ecb34d" title="Afficher les arêtes d&#39;un graphe." alt="" coords="209,59,353,88"/>
+<area shape="rect" id="node7" href="$prim_8c.html#a146f5763132b19eb63ad6a7ca22d2cef" title="Calcul de l&#39;arbre couvrant minimum d&#39;un graphe connexe en partant d&#39;un sommet." alt="" coords="199,112,364,141"/>
 </map>

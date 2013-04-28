@@ -1,5 +1,9 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$grapheconnexe_8c.html#a17ac17df5298266d7dfed5f4999964d9" title="Suppression d&#39;un sommet dans un graphe connexe." alt="" coords="205,5,349,35"/>
-<area shape="rect" id="node5" href="$grapheconnexe_8c.html#a90dad6597b46ad207a693a3b633f4fbf" title="suppression d&#39;une arête dans un graphe connexe." alt="" coords="215,59,340,88"/>
-<area shape="rect" id="node7" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="252,112,303,141"/>
+<area shape="rect" id="node3" href="$edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="215,5,340,35"/>
+<area shape="rect" id="node7" href="$prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="543,56,695,85"/>
+<area shape="rect" id="node11" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="856,83,907,112"/>
+<area shape="rect" id="node13" href="$grapheconnexe_8c.html#a17ac17df5298266d7dfed5f4999964d9" title="Suppression d&#39;un sommet dans un graphe connexe." alt="" coords="205,160,349,189"/>
+<area shape="rect" id="node15" href="$grapheconnexe_8c.html#a90dad6597b46ad207a693a3b633f4fbf" title="suppression d&#39;une arête dans un graphe connexe." alt="" coords="215,213,340,243"/>
+<area shape="rect" id="node5" href="$edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="399,5,492,35"/>
+<area shape="rect" id="node9" href="$prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="745,56,807,85"/>
 </map>

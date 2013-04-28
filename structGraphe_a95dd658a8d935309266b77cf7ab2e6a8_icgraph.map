@@ -1,12 +1,13 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$graphe_8c.html#a19862f69a8a5b6bc2734eef29a385d7e" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="180,5,316,35"/>
-<area shape="rect" id="node5" href="$graphe_8c.html#a4a707cae33e8b5cc50df8d5ab816a9b0" title="Sommet suivant dans le Graphe." alt="" coords="212,59,284,88"/>
-<area shape="rect" id="node7" href="$graphe_8c.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe." alt="" coords="191,112,305,141"/>
-<area shape="rect" id="node9" href="$graphe_8c.html#a954fb1b598ce373ec95a813f1b6e84e0" title="Obtenir Un sommet d&#39;un Graphe." alt="" coords="205,165,291,195"/>
-<area shape="rect" id="node11" href="$graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18" title="Copie d&#39;un Graphe." alt="" coords="215,219,281,248"/>
-<area shape="rect" id="node13" href="$graphe_8c.html#acfcf3da168eac84806f30277b17e8a29" title="Liste des arêtes d&#39;un Graphe." alt="" coords="215,272,281,301"/>
-<area shape="rect" id="node15" href="$grapheconnexe_8c.html#aff062a1149a228a87e0859e64746bb57" title="Ajout d&#39;un sommet dans un graphe connexe." alt="" coords="185,325,311,355"/>
-<area shape="rect" id="node17" href="$grapheconnexe_8c.html#a064998f9e6af964d70d8e48baad19e77" title="Ajout d&#39;une arête dans un graphe connexe." alt="" coords="195,379,301,408"/>
-<area shape="rect" id="node19" href="$parcours_8c.html#abd040d82372961759c0ec9c694131303" title="Parcours en largeur d&#39;un graphe." alt="" coords="187,432,309,461"/>
-<area shape="rect" id="node21" href="$parcours_8c.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe." alt="" coords="365,432,467,461"/>
+<area shape="rect" id="node3" href="$graphe_8c.html#a19862f69a8a5b6bc2734eef29a385d7e" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="185,5,321,35"/>
+<area shape="rect" id="node5" href="$graphe_8c.html#a4a707cae33e8b5cc50df8d5ab816a9b0" title="Sommet suivant dans le Graphe." alt="" coords="217,59,289,88"/>
+<area shape="rect" id="node7" href="$graphe_8c.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe." alt="" coords="196,112,311,141"/>
+<area shape="rect" id="node9" href="$graphe_8c.html#a954fb1b598ce373ec95a813f1b6e84e0" title="Obtenir Un sommet d&#39;un Graphe." alt="" coords="211,165,296,195"/>
+<area shape="rect" id="node11" href="$graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18" title="Copie d&#39;un Graphe." alt="" coords="220,219,287,248"/>
+<area shape="rect" id="node13" href="$graphe_8c.html#acfcf3da168eac84806f30277b17e8a29" title="Liste des arêtes d&#39;un Graphe." alt="" coords="220,272,287,301"/>
+<area shape="rect" id="node15" href="$grapheconnexe_8c.html#aff062a1149a228a87e0859e64746bb57" title="Ajout d&#39;un sommet dans un graphe connexe." alt="" coords="191,325,316,355"/>
+<area shape="rect" id="node17" href="$grapheconnexe_8c.html#a064998f9e6af964d70d8e48baad19e77" title="Ajout d&#39;une arête dans un graphe connexe." alt="" coords="200,379,307,408"/>
+<area shape="rect" id="node19" href="$io_8c.html#a198689c52ffb4178b1b3c154a035d1d1" title="Afficher les sommets d&#39;un graphe." alt="" coords="179,432,328,461"/>
+<area shape="rect" id="node21" href="$parcours_8c.html#abd040d82372961759c0ec9c694131303" title="Parcours en largeur d&#39;un graphe." alt="" coords="192,485,315,515"/>
+<area shape="rect" id="node23" href="$parcours_8c.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe." alt="" coords="376,485,477,515"/>
 </map>

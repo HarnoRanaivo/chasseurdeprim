@@ -1,7 +1,9 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$graphe_8c.html#a9834e48c452c65f170140ce2dae32fae" title="Libération d&#39;un Graphe." alt="" coords="217,5,284,35"/>
-<area shape="rect" id="node5" href="$grapheconnexe_8c.html#a17ac17df5298266d7dfed5f4999964d9" title="Suppression d&#39;un sommet dans un graphe connexe." alt="" coords="179,59,323,88"/>
-<area shape="rect" id="node7" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="376,164,427,193"/>
-<area shape="rect" id="node9" href="$prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="175,163,327,192"/>
-<area shape="rect" id="node11" href="$prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="220,216,281,245"/>
+<area shape="rect" id="node3" href="$edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="183,5,308,35"/>
+<area shape="rect" id="node7" href="$prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="511,56,663,85"/>
+<area shape="rect" id="node9" href="$prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="713,107,775,136"/>
+<area shape="rect" id="node11" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="824,133,875,163"/>
+<area shape="rect" id="node13" href="$graphe_8c.html#a9834e48c452c65f170140ce2dae32fae" title="Libération d&#39;un Graphe." alt="" coords="212,211,279,240"/>
+<area shape="rect" id="node15" href="$grapheconnexe_8c.html#a17ac17df5298266d7dfed5f4999964d9" title="Suppression d&#39;un sommet dans un graphe connexe." alt="" coords="173,264,317,293"/>
+<area shape="rect" id="node5" href="$edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="367,5,460,35"/>
 </map>

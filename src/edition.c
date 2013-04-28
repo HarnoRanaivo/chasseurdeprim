@@ -18,23 +18,26 @@ static const struct
 {
     EditCommande commande;
     const char * aide;
-    const char * alias[3];
+    const char * alias[4];
 } EDS[] =
 {
-    [ED_NOUV] = {
+    [ED_NOUV] =
+    {
         ED_NOUV,
-        "\tn, nouv\n\
+        "\tn, nouv, nouveau\n\
 \t\tCréer un nouveau graphe.\n\n",
-        { "n", "nouv", NULL, }
+        { "n", "nouv", "nouveau", NULL, }
     },
-    [ED_AJS] = {
+    [ED_AJS] =
+    {
         ED_AJS,
         "\tajs, ajoutersommet <sommet>\n\
 \t\tAjouter un sommet au graphe.\n\
 \t\tSi le sommet existe déjà, le graphe reste intact.\n\n",
         { "ajs", "ajoutersommet", NULL, },
     },
-    [ED_AJAR] = {
+    [ED_AJAR] =
+    {
         ED_AJAR,
         "\tajar, ajouterarete <sommet> <sommet> <poids>\n\
 \t\tAjouter une arête au graphe.\n\
@@ -42,49 +45,64 @@ static const struct
 \t\td'ajouter l'arête. Si l'arête existe déjà, le graphe reste intact.\n\n",
         { "ajar", "ajouterarete", NULL, },
     },
-    [ED_MOD] = {
+    [ED_MOD] =
+    {
         ED_MOD,
         "\tmod, modifier <sommet> <sommet> <poids>\n\
 \t\tModifier une arête, si elle existe, du graphe.\n\n",
         { "mod", "modifier", NULL, },
     },
-    [ED_SUPS] = {
+    [ED_SUPS] =
+    {
         ED_SUPS,
         "\tss, sups, supprimersommet <sommet>\n\
 \t\tSupprimer un sommet, si il existe, du graphe.\n\n",
         { "ss", "sups", NULL, },
     },
-    [ED_SUPAR] = {
+    [ED_SUPAR] =
+    {
         ED_SUPAR,
         "\tsa, supar, supprimerarete <sommet> <sommet> <poids>\n\
 \t\tSupprimer une arête, si elle existe, du graphe.\n\n",
         { "sa", "supar", NULL, },
     },
-    [ED_LSV] = {
+    [ED_LSV] =
+    {
         ED_LSV,
-        "\tlsv, listevoisins <sommet>\n\
+        "\tlsv, listeVoisins <sommet>\n\
 \t\tAfficher la liste des voisins d'un sommet.\n\n",
         { "lsv", "listevoisins", NULL, },
     },
-    [ED_LSI] = {
+    [ED_LSI] =
+    {
         ED_LSI,
-        "\tlsi, listeincidence <sommet>\n\
+        "\tlsi, listeIncidence <sommet>\n\
 \t\tAfficher la liste des arêtes incidentes à un sommet.\n\n",
         { "lsi", "listeincidence", NULL, },
     },
-    [ED_LSS] = {
+    [ED_LSS] =
+    {
         ED_LSS,
-        "\tlss, listesommets\n\
+        "\tlss, listeSommets\n\
 \t\tAfficher la liste des sommets du graphe actuel.\n\n",
         { "lss", "listesommets", NULL, },
     },
-    [ED_LSA] = {
+    [ED_LSA] =
+    {
         ED_LSA,
-        "\tlsa, listearetes\n\
+        "\tlsa, listeAretes\n\
 \t\tAfficher la liste des arêtes du graphe actuel.\n\n",
         { "lsa", "listearetes", NULL, },
     },
-    [ED_AIDE] = {
+    [ED_CNX] =
+    {
+        ED_CNX,
+        "\tco, connexe\n\
+\t\tVérifier la connexité du graphe actuel.\n\n",
+        { "co", "connexe", NULL, },
+    },
+    [ED_AIDE] =
+    {
         ED_AIDE,
         "\ta, aide [commande]\n\
 \t\tAfficher l'aide.\n\
@@ -93,13 +111,15 @@ static const struct
 \t\tcommande renseignée.\n\n",
         { "a", "aide", NULL, },
     },
-    [ED_QUIT] = {
+    [ED_QUIT] =
+    {
         ED_QUIT,
         "\tq, quit, quitter\n\
 \t\tQuitter.\n\n",
         { "q", "quit", NULL, },
     },
-    [ED_INCONNU] = {
+    [ED_INCONNU] =
+    {
         ED_INCONNU,
         "\tAucune aide n'existe pour cette commande car elle n'existe pas\n\n",
         { NULL },
@@ -113,7 +133,7 @@ void afficherAideEditCommande(EditCommande ec)
 
 void afficherAideEdition(void)
 {
-    printf("Aide :\n\n");
+    printf("Aide [Mode Édition] :\n\n");
     for (int i = 0; i < ED_INCONNU; i++)
         printf("%s", EDS[i].aide);
 }
@@ -224,6 +244,18 @@ Graphe * traiterLigneEdition(const char * ligne, EditCommande ec, Graphe * g)
                 printf("%s", ERR_ARG);
             else
                 afficherAretesGraphe(g);
+            break;
+
+        case ED_CNX :
+            if (compterMots(ligne) != 1)
+                printf("%s", ERR_ARG);
+            else
+            {
+                if (gEstConnexe(g))
+                    printf("Le graphe est connexe.\n");
+                else
+                    printf("Le graphe n'est pas connexe.\n");
+            }
             break;
 
         case ED_AIDE :

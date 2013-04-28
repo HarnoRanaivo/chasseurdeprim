@@ -12,6 +12,8 @@
 
 static const char * ERR_ARG = "Arguments invalides.\n";
 
+/* Le membre commande de la dernière structure doit absolument contenir
+ * PC_INCONNU. */
 static const struct
 {
     PromptCommande commande;
@@ -51,31 +53,31 @@ static const struct
     [PC_AJAR] =
     {
         PC_AJAR,
-        "\taj, ajouter <sommet> <sommet> <poids>\n\
+        "\tajar, ajouter, ajouterArete <sommet> <sommet> <poids>\n\
 \t\tAjouter une arête au graphe.\n\
 \t\tSi l'ajout de cette arête est susceptible\n\
 \t\tde rendre le graphe non connexe, alors l'arête ne sera pas ajoutée.\n\n",
-        { "aj", "ajouter", NULL, },
+        { "ajar", "ajouter", "ajouterarete", NULL, },
     },
     [PC_SUPAR] =
     {
         PC_SUPAR,
-        "\tsa, sarete, supprimerArete <sommet> <sommet>\n\
+        "\tsa, supar, supprimerArete <sommet> <sommet>\n\
 \t\tSupprimer une arête du graphe.\n\
 \t\tSi la suppression de cette arête est\n\
 \t\tsusceptible de rendre le graphe non connexe, alors l'arête ne sera pas\n\
 \t\tsupprimée.\n\n",
-        { "sa", "sarete", "supprimerarete", NULL, },
+        { "sa", "supar", "supprimerarete", NULL, },
     },
     [PC_SUPSOM] =
     {
         PC_SUPSOM,
-        "\tss, ssommet, supprimerArete <sommet>\n\
+        "\tss, sups, supprimerArete <sommet>\n\
 \t\tSupprimer un somet du graphe.\n\
 \t\tToutes les arêtes incidentes à ce sommet\n\
 \t\tseront supprimées. Si cette opération est susceptible de rendre le graphe\n\
 \t\tnon connexe, alors elle ne sera pas effectuée.\n\n",
-        { "ss", "ssommet", "supprimersommet", NULL, },
+        { "ss", "sups", "supprimersommet", NULL, },
     },
     [PC_CAL] =
     {
@@ -165,7 +167,7 @@ void afficherAidePromptCommande(PromptCommande pc)
 
 void afficherAidePrompt(void)
 {
-    printf("Aide :\n\n");
+    printf("Aide [Mode Normal] :\n\n");
     for (int i = 0; i < PC_INCONNU; i++)
         printf("%s", PCS[i].aide);
 }

@@ -32,6 +32,7 @@ typedef enum EditCommande
     ED_LSI,
     ED_LSS,
     ED_LSA,
+    ED_CNX,
     ED_AIDE,
     ED_QUIT,
     ED_INCONNU

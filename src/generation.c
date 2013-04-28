@@ -57,8 +57,9 @@ static Bool printSommets(const Graphe * g, FILE * const fichier)
 static Bool printAretes(const Graphe * g, FILE * const fichier)
 {
     Bool erreurs = FAUX;
+    ListeArete * liste = gAretes(g);
 
-    for (const ListeArete * l = gAretes(g); !larEstVide(l); l = larSuivante(l))
+    for (const ListeArete * l = liste; !larEstVide(l); l = larSuivante(l))
     {
         const Arete * const a = larAreteTete(l);
         int succes = fprintf(fichier,
@@ -72,6 +73,8 @@ static Bool printAretes(const Graphe * g, FILE * const fichier)
             erreurs = VRAI;
         }
     }
+
+    liste = larLiberer(liste);
 
     return erreurs;
 }

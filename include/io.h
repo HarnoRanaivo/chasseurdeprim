@@ -15,6 +15,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 #include "base.h"
 #include "sommet.h"
@@ -69,5 +70,12 @@ void afficherAdjacence(const Graphe * g, const Sommet * s);
  * \param s Sommet.
  */
 void afficherVoisins(const Graphe * g, const Sommet * s);
+
+/**
+ * \brief Vérification de l'intention de l'utilisateur.
+ * \param chaine Complétion de « Êtes vous sûr %s ».
+ * \return #VRAI si l'utilisateur confirme son choix, #FAUX sinon.
+ */
+Bool verifier(const char * chaine);
 
 #endif /* __IO_H */

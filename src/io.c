@@ -102,3 +102,21 @@ void afficherVoisins(const Graphe * g, const Sommet * s)
         printf("\"%s\" ", lsommet_tete(l));
     printf("\n");
 }
+
+Bool verifier(const char * chaine)
+{
+    char buffer[8] = { '\0' };
+
+    printf("Êtes-vous sûr %s?\n? ", chaine);
+    fflush(stdout);
+    scanf(" %7[^\n]", buffer);
+    fflush(stdin);
+
+    for (int i = 0; buffer[i] != '\0'; i++)
+        buffer[i] = tolower(buffer[i]);
+
+    if (strcmp(buffer, "o") == 0 || strcmp(buffer, "oui") == 0)
+        return VRAI;
+    else
+        return FAUX;
+}

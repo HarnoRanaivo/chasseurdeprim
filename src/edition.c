@@ -28,6 +28,7 @@ static const struct
 \t\tCréer un nouveau graphe.\n\n",
         { "n", "nouv", "nouveau", NULL, }
     },
+
     [ED_AJS] =
     {
         ED_AJS,
@@ -36,6 +37,7 @@ static const struct
 \t\tSi le sommet existe déjà, le graphe reste intact.\n\n",
         { "ajs", "ajoutersommet", NULL, },
     },
+
     [ED_AJAR] =
     {
         ED_AJAR,
@@ -45,6 +47,7 @@ static const struct
 \t\td'ajouter l'arête. Si l'arête existe déjà, le graphe reste intact.\n\n",
         { "ajar", "ajouterarete", NULL, },
     },
+
     [ED_MOD] =
     {
         ED_MOD,
@@ -52,6 +55,7 @@ static const struct
 \t\tModifier une arête, si elle existe, du graphe.\n\n",
         { "mod", "modifier", NULL, },
     },
+
     [ED_SUPS] =
     {
         ED_SUPS,
@@ -59,6 +63,7 @@ static const struct
 \t\tSupprimer un sommet, si il existe, du graphe.\n\n",
         { "ss", "sups", NULL, },
     },
+
     [ED_SUPAR] =
     {
         ED_SUPAR,
@@ -66,6 +71,7 @@ static const struct
 \t\tSupprimer une arête, si elle existe, du graphe.\n\n",
         { "sa", "supar", NULL, },
     },
+
     [ED_LSV] =
     {
         ED_LSV,
@@ -73,6 +79,7 @@ static const struct
 \t\tAfficher la liste des voisins d'un sommet.\n\n",
         { "lsv", "listevoisins", NULL, },
     },
+
     [ED_LSI] =
     {
         ED_LSI,
@@ -80,6 +87,7 @@ static const struct
 \t\tAfficher la liste des arêtes incidentes à un sommet.\n\n",
         { "lsi", "listeincidence", NULL, },
     },
+
     [ED_LSS] =
     {
         ED_LSS,
@@ -87,6 +95,7 @@ static const struct
 \t\tAfficher la liste des sommets du graphe actuel.\n\n",
         { "lss", "listesommets", NULL, },
     },
+
     [ED_LSA] =
     {
         ED_LSA,
@@ -94,6 +103,7 @@ static const struct
 \t\tAfficher la liste des arêtes du graphe actuel.\n\n",
         { "lsa", "listearetes", NULL, },
     },
+
     [ED_CNX] =
     {
         ED_CNX,
@@ -101,6 +111,7 @@ static const struct
 \t\tVérifier la connexité du graphe actuel.\n\n",
         { "co", "connexe", NULL, },
     },
+
     [ED_AIDE] =
     {
         ED_AIDE,
@@ -111,6 +122,7 @@ static const struct
 \t\tcommande renseignée.\n\n",
         { "a", "aide", NULL, },
     },
+
     [ED_QUIT] =
     {
         ED_QUIT,
@@ -118,12 +130,13 @@ static const struct
 \t\tQuitter.\n\n",
         { "q", "quit", NULL, },
     },
+
     [ED_INCONNU] =
     {
         ED_INCONNU,
         "\tAucune aide n'existe pour cette commande car elle n'existe pas\n\n",
         { NULL },
-    }
+    },
 };
 
 void afficherAideEditCommande(EditCommande ec)
@@ -144,8 +157,7 @@ EditCommande rechercherEditCommande(const char * ligne)
 
     if (sscanf(ligne, "%31s", commande) == 1)
     {
-        for (int i = 0; commande[i] != '\0'; i++)
-            commande[i] = tolower(commande[i]);
+        chaineEnMinuscules(commande);
 
         for (int i = 0; i < ED_INCONNU; i++)
             if (rechercherMot(commande, EDS[i].alias))
@@ -293,8 +305,8 @@ Graphe * modeEdition(Graphe * g)
         printf("# ");
         fflush(stdout);
 
-        succes = scanf(" %511[^\n]", buffer);
-        fflush(stdin);
+        succes = scanf("%511[^\n]%*[^\n]", buffer);
+        getchar();
 
         if (succes == 1)
         {

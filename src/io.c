@@ -17,11 +17,13 @@ void sauvegarder_graphe (const Graphe * g, const char* destination){
 
 	if (pfile != NULL)
     {
-        for (const ListeArete * l = gAretes(g); !larEstVide(l); l = larSuivante(l))
+        ListeArete * liste = gAretes(g);
+        for (const ListeArete * l = liste; !larEstVide(l); l = larSuivante(l))
         {
             const Arete * const a = larAreteTete(l);
             fprintf(pfile, "%s\t%d\t%s\n", aA(a), aPoids(a), aB(a));
         }
+        liste = larLiberer(liste);
 
         fclose (pfile); // ferme le fichier
     }

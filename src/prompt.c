@@ -123,6 +123,16 @@ static const struct
 \t\tAfficher la liste des arêtes du graphe actuel.\n\n",
         { "lsa", "listearetes", NULL, },
     },
+    [PC_EDIT] =
+    {
+        PC_EDIT,
+        "\te, edit, editer\n\
+\t\tPasser en mode « édition ».\n\
+\t\tDans ce mode, il est possible d'éditer librement le graphe. Les\n\
+\t\topérations ne conservent pas la connexité du graphe. Le graphe\n\
+\t\tne sera pas conservé à la sortie de ce mode s'il n'est pas connexe.\n\n",
+        { "e", "edit", "editer", NULL, }
+    },
     [PC_AIDE] =
     {
         PC_AIDE,
@@ -358,6 +368,27 @@ Donnees * traiterLigneCommande(const char * ligne, PromptCommande pc, Donnees * 
                 printf("%s", ERR_ARG);
             else
                 afficherAretesGraphe(d->graphe);
+            break;
+
+        case PC_EDIT :
+            if (d->sauvegarde == FAUX)
+            {
+                printf("Le graphe actuel n'a pas été sauvegardé.\n");
+                sur = verifier("de vouloir entrer dans le mode « édition » ");
+            }
+            if (sur)
+            {
+                Graphe * g = modeEdition(gCopier(d->graphe));
+                if (gEstConnexe(g))
+                {
+                    d->graphe = gLiberer(d->graphe);
+                    d->arbre = gLiberer(d->arbre);
+                    d->sauvegarde = FAUX;
+                    d->graphe = g;
+                }
+                else
+                    g = gLiberer(g);
+            }
             break;
 
         case PC_AIDE :

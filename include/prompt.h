@@ -23,6 +23,8 @@
 #include "io.h"
 #include "prim.h"
 #include "generation.h"
+#include "parcours.h"
+#include "edition.h"
 
 /**
  * \enum PromptCommande
@@ -43,6 +45,7 @@ typedef enum PromptCommande
     PC_LSI,         /**<- Afficher la liste des arêtes incidentes à un sommet. */
     PC_LSS,         /**<- Afficher la liste des sommets du graphe. */
     PC_LSA,         /**<- Afficher la liste des arêtes du graphe. */
+    PC_EDIT,        /**<- Entrer en mode « édition ». */
     PC_AIDE,        /**<- Aide. */
     PC_QUIT,        /**<- Quitter. */
     PC_INCONNU,     /**<- Commande inconnue. */

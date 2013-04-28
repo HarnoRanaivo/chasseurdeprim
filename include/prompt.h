@@ -28,7 +28,7 @@
 
 /**
  * \enum PromptCommande
- * \brief Alias pour les commandes.
+ * \brief Alias pour les commandes du prompt.
  */
 typedef enum PromptCommande
 {
@@ -50,7 +50,7 @@ typedef enum PromptCommande
     PC_QUIT,        /**<- Quitter. */
     PC_INCONNU,     /**<- Commande inconnue. */
 } PromptCommande;
-/* PC_INCONNU DOIT se trouver en dernier. */
+/* PC_INCONNU *DOIT* se trouver en dernier. */
 
 /**
  * \struct Donnees
@@ -85,7 +85,7 @@ PromptCommande rechercherPromptCommande(const char * ligne);
 
 /**
  * \brief Traiter la ligne de commande entrée par l'utilisateur.
- * \relatesalso Donnees
+ * \relatesalso PromptCommande
  * \param ligne Ligne de commande entrée par l'utilisateur.
  * \param pc Commande entrée par l'utilisateur.
  * \param d Données du programme.

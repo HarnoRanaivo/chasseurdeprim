@@ -28,6 +28,7 @@ static const struct
 \t\tCréer un nouveau graphe.\n\n",
         { "n", "nouv", "nouveau", NULL, },
     },
+
     [PC_CHG] =
     {
         PC_CHG,
@@ -36,6 +37,7 @@ static const struct
 \t\tLe graphe actuel ne sera pas conservé.\n\n",
         { "ch", "charger", NULL, },
     },
+
     [PC_SAV] =
     {
         PC_SAV,
@@ -43,6 +45,7 @@ static const struct
 \t\tSauvegarder un graphe dans un fichier.\n\n",
         { "sv", "sauvegarder", NULL, },
     },
+
     [PC_MOD] =
     {
         PC_MOD,
@@ -50,6 +53,7 @@ static const struct
 \t\tModifier le poids une arête du graphe.\n\n",
         { "m", "mod", "modifier", NULL, },
     },
+
     [PC_AJAR] =
     {
         PC_AJAR,
@@ -59,6 +63,7 @@ static const struct
 \t\tde rendre le graphe non connexe, alors l'arête ne sera pas ajoutée.\n\n",
         { "ajar", "ajouter", "ajouterarete", NULL, },
     },
+
     [PC_SUPAR] =
     {
         PC_SUPAR,
@@ -69,6 +74,7 @@ static const struct
 \t\tsupprimée.\n\n",
         { "sa", "supar", "supprimerarete", NULL, },
     },
+
     [PC_SUPSOM] =
     {
         PC_SUPSOM,
@@ -79,6 +85,7 @@ static const struct
 \t\tnon connexe, alors elle ne sera pas effectuée.\n\n",
         { "ss", "sups", "supprimersommet", NULL, },
     },
+
     [PC_CAL] =
     {
         PC_CAL,
@@ -86,6 +93,7 @@ static const struct
 \t\tCalculer l'arbre couvrant minimum à partir d'un sommet donné.\n\n",
         { "cal", "calculer", NULL, },
     },
+
     [PC_AFF] =
     {
         PC_AFF,
@@ -97,6 +105,7 @@ static const struct
 \t\tconservé, il sera « affiché » avec le graphe à partir duquel il a été créé.\n\n",
         { "aff", "afficher", NULL, },
     },
+
     [PC_LSV] =
     {
         PC_LSV,
@@ -104,6 +113,7 @@ static const struct
 \t\tAfficher la liste des voisins d'un sommet.\n\n",
         { "lsv", "listevoisins", NULL, },
     },
+
     [PC_LSI] =
     {
         PC_LSI,
@@ -111,6 +121,7 @@ static const struct
 \t\tAfficher la liste des arêtes incidentes à un sommet.\n\n",
         { "lsi", "listeincidence", NULL, },
     },
+
     [PC_LSS] =
     {
         PC_LSS,
@@ -118,6 +129,7 @@ static const struct
 \t\tAfficher la liste des sommets du graphe actuel.\n\n",
         { "lss", "listesommets", NULL, },
     },
+
     [PC_LSA] =
     {
         PC_LSA,
@@ -125,6 +137,7 @@ static const struct
 \t\tAfficher la liste des arêtes du graphe actuel.\n\n",
         { "lsa", "listearetes", NULL, },
     },
+
     [PC_EDIT] =
     {
         PC_EDIT,
@@ -135,6 +148,7 @@ static const struct
 \t\tne sera pas conservé à la sortie de ce mode s'il n'est pas connexe.\n\n",
         { "e", "edit", "editer", NULL, }
     },
+
     [PC_AIDE] =
     {
         PC_AIDE,
@@ -145,6 +159,7 @@ static const struct
 \t\tcommande renseignée.\n\n",
         { "a", "aide", NULL, },
     },
+
     [PC_QUIT] =
     {
         PC_QUIT,
@@ -152,6 +167,7 @@ static const struct
 \t\tQuitter. You don't say?\n\n",
         { "q", "quit", "quitter", NULL, },
     },
+
     [PC_INCONNU] =
     {
         PC_INCONNU,
@@ -178,8 +194,7 @@ PromptCommande rechercherPromptCommande(const char * ligne)
 
     if (sscanf(ligne, "%31s", commande) == 1)
     {
-        for (int i = 0; commande[i] != '\0'; i++)
-            commande[i] = tolower(commande[i]);
+        chaineEnMinuscules(commande);
 
         for (int i = 0; i < PC_INCONNU; i++)
             if (rechercherMot(commande, PCS[i].alias) == VRAI)
@@ -441,8 +456,8 @@ void prompt(void)
         printf("> ");
         fflush(stdout);
 
-        succes = scanf(" %511[^\n]", buffer);
-        fflush(stdin);
+        succes = scanf("%511[^\n]%*[^\n]", buffer);
+        getchar();
 
         if (succes == 1)
         {

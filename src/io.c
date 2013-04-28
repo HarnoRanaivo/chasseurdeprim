@@ -109,11 +109,10 @@ Bool verifier(const char * chaine)
 
     printf("Êtes-vous sûr %s?\n? ", chaine);
     fflush(stdout);
-    scanf(" %7[^\n]", buffer);
-    fflush(stdin);
+    scanf("%7s%*[^\n]", buffer);
+    getchar();
 
-    for (int i = 0; buffer[i] != '\0'; i++)
-        buffer[i] = tolower(buffer[i]);
+    chaineEnMinuscules(buffer);
 
     if (strcmp(buffer, "o") == 0 || strcmp(buffer, "oui") == 0)
         return VRAI;

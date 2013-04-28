@@ -10,148 +10,169 @@
  */
 #include "prompt.h"
 
-static const char * AIDE_CHG = "\tch, charger <fichier>\n\
+static const char * ERR_ARG = "Arguments invalides.\n";
+
+/* Le membre commande de la dernière structure doit absolument contenir
+ * PC_INCONNU. */
+static const struct
+{
+    PromptCommande commande;
+    const char * aide;
+    const char * alias[4];
+} PCS[] =
+{
+    [PC_NOUV] =
+    {
+        PC_NOUV,
+        "\tn, nouv, nouveau\n\
+\t\tCréer un nouveau graphe.\n\n",
+        { "n", "nouv", "nouveau", NULL, },
+    },
+    [PC_CHG] =
+    {
+        PC_CHG,
+        "\tch, charger <fichier>\n\
 \t\tCharger un graphe depuis un fichier.\n\
-\t\tLe graphe actuel ne sera pas conservé.\n\n";
-
-static const char * AIDE_SAV = "\tsv, sauvegarder <fichier>\n\
-\t\tSauvegarder un graphe dans un fichier.\n\n";
-
-static const char * AIDE_MOD = "\tm, modifier <sommet> <sommet> <poids>\n\
-\t\tModifier le poids une arête du graphe.\n\n";
-
-static const char * AIDE_AJAR = "\taj, ajouter <sommet> <sommet> <poids>\n\
+\t\tLe graphe actuel ne sera pas conservé.\n\n",
+        { "ch", "charger", NULL, },
+    },
+    [PC_SAV] =
+    {
+        PC_SAV,
+        "\tsv, sauvegarder <fichier>\n\
+\t\tSauvegarder un graphe dans un fichier.\n\n",
+        { "sv", "sauvegarder", NULL, },
+    },
+    [PC_MOD] =
+    {
+        PC_MOD,
+        "\tm, mod, modifier <sommet> <sommet> <poids>\n\
+\t\tModifier le poids une arête du graphe.\n\n",
+        { "m", "mod", "modifier", NULL, },
+    },
+    [PC_AJAR] =
+    {
+        PC_AJAR,
+        "\tajar, ajouter, ajouterArete <sommet> <sommet> <poids>\n\
 \t\tAjouter une arête au graphe.\n\
 \t\tSi l'ajout de cette arête est susceptible\n\
-\t\tde rendre le graphe non connexe, alors l'arête ne sera pas ajoutée.\n\n";
-
-static const char * AIDE_SUPAR = "\tsa, sarete <sommet> <sommet>\n\
+\t\tde rendre le graphe non connexe, alors l'arête ne sera pas ajoutée.\n\n",
+        { "ajar", "ajouter", "ajouterarete", NULL, },
+    },
+    [PC_SUPAR] =
+    {
+        PC_SUPAR,
+        "\tsa, supar, supprimerArete <sommet> <sommet>\n\
 \t\tSupprimer une arête du graphe.\n\
 \t\tSi la suppression de cette arête est\n\
 \t\tsusceptible de rendre le graphe non connexe, alors l'arête ne sera pas\n\
-\t\tsupprimée.\n\n";
-
-static const char * AIDE_SUPSOM = "\tss, ssomet <sommet>\n\
+\t\tsupprimée.\n\n",
+        { "sa", "supar", "supprimerarete", NULL, },
+    },
+    [PC_SUPSOM] =
+    {
+        PC_SUPSOM,
+        "\tss, sups, supprimerArete <sommet>\n\
 \t\tSupprimer un somet du graphe.\n\
 \t\tToutes les arêtes incidentes à ce sommet\n\
 \t\tseront supprimées. Si cette opération est susceptible de rendre le graphe\n\
-\t\tnon connexe, alors elle ne sera pas effectuée.\n\n";
-
-static const char * AIDE_CAL = "\tcal, calculer <sommet>\n\
-\t\tCalculer l'arbre couvrant minimum à partir d'un sommet donné.\n\n";
-
-static const char * AIDE_AFF = "\taff, afficher <fichier>\n\
+\t\tnon connexe, alors elle ne sera pas effectuée.\n\n",
+        { "ss", "sups", "supprimersommet", NULL, },
+    },
+    [PC_CAL] =
+    {
+        PC_CAL,
+        "\tcal, calculer <sommet>\n\
+\t\tCalculer l'arbre couvrant minimum à partir d'un sommet donné.\n\n",
+        { "cal", "calculer", NULL, },
+    },
+    [PC_AFF] =
+    {
+        PC_AFF,
+        "\taff, afficher <fichier>\n\
 \t\t« Afficher » le(s) graphe(s).\n\
 \t\tCrée un fichier compilable avec Latex,\n\
 \t\tsous réserve de disponibilité du paquet TikZ, permettant de représenter\n\
 \t\tle graphe actuel. Si un arbre couvrant minimum a été calculé et a été\n\
-\t\tconservé, il sera « affiché » avec le graphe à partir duquel il a été créé.\n\n";
-
-static const char * AIDE_AIDE = "\ta, aide [commande]\n\
+\t\tconservé, il sera « affiché » avec le graphe à partir duquel il a été créé.\n\n",
+        { "aff", "afficher", NULL, },
+    },
+    [PC_LSV] =
+    {
+        PC_LSV,
+        "\tlsv, listeVoisins <sommet>\n\
+\t\tAfficher la liste des voisins d'un sommet.\n\n",
+        { "lsv", "listevoisins", NULL, },
+    },
+    [PC_LSI] =
+    {
+        PC_LSI,
+        "\tlsi, listeIncidence <sommet>\n\
+\t\tAfficher la liste des arêtes incidentes à un sommet.\n\n",
+        { "lsi", "listeincidence", NULL, },
+    },
+    [PC_LSS] =
+    {
+        PC_LSS,
+        "\tlss, listeSommets\n\
+\t\tAfficher la liste des sommets du graphe actuel.\n\n",
+        { "lss", "listesommets", NULL, },
+    },
+    [PC_LSA] =
+    {
+        PC_LSA,
+        "\tlsa, listeAretes\n\
+\t\tAfficher la liste des arêtes du graphe actuel.\n\n",
+        { "lsa", "listearetes", NULL, },
+    },
+    [PC_EDIT] =
+    {
+        PC_EDIT,
+        "\te, edit, editer\n\
+\t\tPasser en mode « édition ».\n\
+\t\tDans ce mode, il est possible d'éditer librement le graphe. Les\n\
+\t\topérations ne conservent pas la connexité du graphe. Le graphe\n\
+\t\tne sera pas conservé à la sortie de ce mode s'il n'est pas connexe.\n\n",
+        { "e", "edit", "editer", NULL, }
+    },
+    [PC_AIDE] =
+    {
+        PC_AIDE,
+        "\ta, aide [commande]\n\
 \t\tAfficher l'aide.\n\
 \t\tSans argument, cette commande affiche l'aide pour toutes\n\
 \t\tles commandes. Avec un argument, elle affiche l'aide correspondant à la\n\
-\t\tcommande renseignée.\n\n";
-
-static const char * AIDE_QUIT = "\tq, quit, quitter\n\
-\t\tQuitter. You don't say?\n\n";
-
-static const char * AIDE_INC = "\tAucune aide n'existe pour cette commande car elle n'existe pas\n\n";
-
-static const char * ERR_ARG = "Arguments invalides.\n";
-
-Bool verifier(void)
-{
-    char buffer[8] = { '\0' };
-
-    printf("Êtes-vous sûr de vouloir quitter le programme ?\n? ");
-    fflush(stdout);
-    scanf(" %7[^\n]", buffer);
-    fflush(stdin);
-
-    for (int i = 0; buffer[i] != '\0'; i++)
-        buffer[i] = tolower(buffer[i]);
-
-    if (strcmp(buffer, "o") == 0 || strcmp(buffer, "oui") == 0)
-        return VRAI;
-    else
-        return FAUX;
-}
-
-int compterMots(const char * chaine)
-{
-    int n = 0;
-
-    for (char * s = (char *) chaine; s != NULL; s = strchr(s, ' '))
+\t\tcommande renseignée.\n\n",
+        { "a", "aide", NULL, },
+    },
+    [PC_QUIT] =
     {
-        n++;
-        s++;
-    }
-
-    return n;
-}
-
-void afficherAideCommande(PromptCommande pc)
-{
-    const char * aide = AIDE_INC;
-
-    switch (pc)
+        PC_QUIT,
+        "\tq, quit, quitter\n\
+\t\tQuitter. You don't say?\n\n",
+        { "q", "quit", "quitter", NULL, },
+    },
+    [PC_INCONNU] =
     {
-        case PC_CHG :
-            aide = AIDE_CHG;
-            break;
+        PC_INCONNU,
+        "\tAucune aide n'existe pour cette commande car elle n'existe pas\n\n",
+        { NULL, },
+    },
+};
 
-        case PC_SAV :
-            aide = AIDE_SAV;
-            break;
-
-        case PC_MOD :
-            aide = AIDE_MOD;
-            break;
-
-        case PC_AJAR :
-            aide = AIDE_AJAR;
-            break;
-
-        case PC_SUPAR :
-            aide = AIDE_SUPAR;
-            break;
-
-        case PC_SUPSOM :
-            aide = AIDE_SUPSOM;
-            break;
-
-        case PC_CAL :
-            aide = AIDE_CAL;
-            break;
-
-        case PC_AFF :
-            aide = AIDE_AFF;
-            break;
-
-        case PC_AIDE :
-            aide = AIDE_AIDE;
-            break;
-
-        case PC_QUIT :
-            aide = AIDE_QUIT;
-            break;
-
-        default :
-            break;
-    }
-
-    printf("%s", aide);
-}
-
-void afficherAide(void)
+void afficherAidePromptCommande(PromptCommande pc)
 {
-    printf("Aide :\n\n");
-    for (int i = 0; PC_LISTE[i] != PC_INCONNU; i++)
-        afficherAideCommande(PC_LISTE[i]);
+    printf("%s", PCS[pc].aide);
 }
 
-PromptCommande rechercherCommande(const char * ligne)
+void afficherAidePrompt(void)
+{
+    printf("Aide [Mode Normal] :\n\n");
+    for (int i = 0; i < PC_INCONNU; i++)
+        printf("%s", PCS[i].aide);
+}
+
+PromptCommande rechercherPromptCommande(const char * ligne)
 {
     char commande[32] = { '\0' };
 
@@ -160,29 +181,9 @@ PromptCommande rechercherCommande(const char * ligne)
         for (int i = 0; commande[i] != '\0'; i++)
             commande[i] = tolower(commande[i]);
 
-        if (strcmp(commande, "ch") == 0 || strcmp(commande, "charger") == 0)
-            return PC_CHG;
-        else if (strcmp(commande, "sv") == 0 || strcmp(commande, "sauvegarder") == 0)
-            return PC_SAV;
-        else if (strcmp(commande, "m") == 0 || strcmp(commande, "modifier") == 0)
-            return PC_MOD;
-        else if (strcmp(commande, "aj") == 0 || strcmp(commande, "ajouter") == 0)
-            return PC_AJAR;
-        else if (strcmp(commande, "sa") == 0 || strcmp(commande, "sarete") == 0)
-            return PC_SUPAR;
-        else if (strcmp(commande, "ss") == 0 || strcmp(commande, "ssomet") == 0)
-            return PC_SUPSOM;
-        else if (strcmp(commande, "cal") == 0 || strcmp(commande, "calculer") == 0)
-            return PC_CAL;
-        else if (strcmp(commande, "aff") == 0 || strcmp(commande, "afficher") == 0)
-            return PC_AFF;
-        else if (strcmp(commande, "a") == 0 || strcmp(commande, "aide") == 0)
-            return PC_AIDE;
-        else if (strcmp(commande, "q") == 0
-                 || strcmp(commande, "quitter") == 0
-                 || strcmp(commande, "quit") == 0
-                )
-            return PC_QUIT;
+        for (int i = 0; i < PC_INCONNU; i++)
+            if (rechercherMot(commande, PCS[i].alias) == VRAI)
+                return PCS[i].commande;
     }
 
     return PC_INCONNU;
@@ -197,6 +198,27 @@ Donnees * traiterLigneCommande(const char * ligne, PromptCommande pc, Donnees * 
 
     switch (pc)
     {
+        case PC_NOUV :
+            if (compterMots(ligne) != 1)
+                printf("%s", ERR_ARG);
+            else
+            {
+                if (d->sauvegarde == FAUX)
+                {
+                    printf("Le graphe actuel n'a pas été sauvegardé.\n");
+                    sur = verifier("de vouloir créer un nouveau graphe ");
+                }
+                if (sur)
+                {
+                    d->graphe = gLiberer(d->graphe);
+                    d->arbre = gLiberer(d->arbre);
+                    d->graphe = gNouv();
+                    d->sauvegarde = VRAI;
+                }
+
+            }
+            break;
+
         case PC_CHG :
             if (compterMots(ligne) != 2 || sscanf(ligne, "%*s %480s", buffer1) != 1)
             {
@@ -207,12 +229,10 @@ Donnees * traiterLigneCommande(const char * ligne, PromptCommande pc, Donnees * 
                 if (d->sauvegarde == FAUX)
                 {
                     printf("Le graphe actuel n'a pas été sauvegardé.\n");
-                    sur = verifier();
+                    sur = verifier("de vouloir charger un nouveau graphe ");
                 }
                 if (sur)
                 {
-                    if (compterMots(ligne) != 2
-                        || sscanf(ligne, "%*s %480s", buffer1) != 1)
                     d->graphe = gLiberer(d->graphe);
                     d->arbre = gLiberer(d->arbre);
                     d->graphe = charger_graphe(buffer1);
@@ -314,11 +334,70 @@ Donnees * traiterLigneCommande(const char * ligne, PromptCommande pc, Donnees * 
             }
             break;
 
+        case PC_LSV :
+            if (compterMots(ligne) != 2
+                || sscanf(ligne, "%*s %99s", buffer1) != 1)
+            {
+                printf("%s", ERR_ARG);
+            }
+            else
+            {
+                afficherVoisins(d->graphe, buffer1);
+            }
+            break;
+
+        case PC_LSI :
+            if (compterMots(ligne) != 2
+                || sscanf(ligne, "%*s %99s", buffer1) != 1)
+            {
+                printf("%s", ERR_ARG);
+            }
+            else
+            {
+                afficherAdjacence(d->graphe, buffer1);
+            }
+            break;
+
+        case PC_LSS :
+            if (compterMots(ligne) != 1)
+                printf("%s", ERR_ARG);
+            else
+                afficherListeSommets(d->graphe);
+            break;
+
+        case PC_LSA :
+            if (compterMots(ligne) != 1)
+                printf("%s", ERR_ARG);
+            else
+                afficherAretesGraphe(d->graphe);
+            break;
+
+        case PC_EDIT :
+            if (d->sauvegarde == FAUX)
+            {
+                printf("Le graphe actuel n'a pas été sauvegardé.\n");
+                sur = verifier("de vouloir entrer dans le mode « édition » ");
+            }
+            if (sur)
+            {
+                Graphe * g = modeEdition(gCopier(d->graphe));
+                if (gEstConnexe(g))
+                {
+                    d->graphe = gLiberer(d->graphe);
+                    d->arbre = gLiberer(d->arbre);
+                    d->sauvegarde = FAUX;
+                    d->graphe = g;
+                }
+                else
+                    g = gLiberer(g);
+            }
+            break;
+
         case PC_AIDE :
             if (sscanf(ligne, "%*s %31s", buffer1) == 1)
-                afficherAideCommande(rechercherCommande(buffer1));
+                afficherAidePromptCommande(rechercherPromptCommande(buffer1));
             else
-                afficherAide();
+                afficherAidePrompt();
             break;
 
         case PC_QUIT :
@@ -367,10 +446,10 @@ void prompt(void)
 
         if (succes == 1)
         {
-            PromptCommande pc = rechercherCommande(buffer);
+            PromptCommande pc = rechercherPromptCommande(buffer);
 
             d = traiterLigneCommande(buffer, pc, d);
-            if (pc == PC_QUIT && verifier() == VRAI)
+            if (pc == PC_QUIT && verifier("de vouloir quitter le programme ") == VRAI)
             {
                 d->graphe = gLiberer(d->graphe);
                 d->arbre = gLiberer(d->arbre);

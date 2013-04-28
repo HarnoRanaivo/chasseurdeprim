@@ -13,10 +13,11 @@ vpath %.o obj/
 vpath main bin/
 vpath %.a lib/
 
-main : main.o libgraphes.a libprim.a prompt.o | bin
-	$(CC) $(CFLAGS) $(LFLAGS) -o $(BPATH)main $(OPATH)main.o $(OPATH)prompt.o -lprim -lgraphes
+main : main.o libgraphes.a libprim.a prompt.o edition.o | bin
+	$(CC) $(CFLAGS) $(LFLAGS) -o $(BPATH)main $(OPATH)main.o $(OPATH)prompt.o $(OPATH)edition.o -lprim -lgraphes
 
-prompt.o : prompt.c prompt.h base.h graphe.h grapheconnexe.h io.h prim.h
+edition.o : edition.c edition.h base.h graphe.h io.h parcours.h
+prompt.o : prompt.c prompt.h base.h graphe.h grapheconnexe.h io.h prim.h parcours.h edition.h
 generation.o : generation.c generation.h graphe.h listearete.h arete.h base.h
 io.o : io.c io.h
 prim.o : prim.c prim.h base.h sommet.h graphe.h coloration.h filearetetriee.h
@@ -52,10 +53,10 @@ bin :
 	mkdir bin
 
 clean :
-	rm obj/* bin/*
+	rm -f obj/* bin/* lib/*
 
 cleanall : clean
-	rm -r doc/*
+	rm -rf doc/*
 
 archive :
 	tar -f meyer_razanajato-ProjetSDA2P.tar.gz -cvz src/*.c include/*.h makefile Doxyfile

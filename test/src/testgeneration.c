@@ -15,12 +15,12 @@ int main(int argc, char ** argv)
             Graphe * g1 = charger_graphe(argv[i]);
 
             /* Génération du fichier latex. */
-            char * copie = malloc((strlen(argv[i]) + 5) * sizeof *copie);
-            sprintf(copie, "%s.tex", argv[i]);
-            gGenererLatex(g1, copie);
+            char * tex = malloc((strlen(argv[i]) + 5) * sizeof *tex);
+            sprintf(tex, "%s.tex", argv[i]);
+            gGenererLatex(g1, NULL, tex);
 
             g1 = gLiberer(g1);
-            free(copie);
+            free(tex);
         }
     }
 

@@ -1,3 +1,8 @@
+/* This program is free software. It comes WITHOUT ANY WARRANTY, to
+* the extent permitted by applicable law. You can redistribute it
+* and/or modify it under the terms of the Do What The Fuck You Want
+* To Public License, Version 2, as published by Sam Hocevar. See
+* http://wtfpl.net for more details. */
 /**
  * \file prim.c
  * \brief Algorithme de Prim (code)
@@ -8,9 +13,7 @@
 
 FileAreteTriee * ftAjouterAretesIncidentes(FileAreteTriee * ft, const Graphe * g, const CouleursGraphe * cg, const Sommet * s)
 {
-    ListeAdjacence * l;
-
-    for (l = gAdjacenceSommet(g, s); !lest_vide(l); l = lsuiv(l))
+    for (const ListeAdjacence * l = gAdjacenceSommet(g, s); !lest_vide(l); l = lsuiv(l))
     {
         Sommet * t = lsommet_tete(l);
         if (cgCouleurSommet(cg, t) == BLANC)

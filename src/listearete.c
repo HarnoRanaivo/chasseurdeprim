@@ -1,3 +1,8 @@
+/* This program is free software. It comes WITHOUT ANY WARRANTY, to
+* the extent permitted by applicable law. You can redistribute it
+* and/or modify it under the terms of the Do What The Fuck You Want
+* To Public License, Version 2, as published by Sam Hocevar. See
+* http://wtfpl.net for more details. */
 /**
  * \file listearete.c
  * \brief Liste d'arêtes (header)
@@ -14,7 +19,7 @@ ListeArete * larAjouterAreteTete(ListeArete * l, const Sommet * a, const Sommet 
 {
     if (!larExisteArete(l, a, b))
     {
-        ListeArete * l0 = MALLOC(l0);
+        ListeArete * const l0 = MALLOC(l0);
 
         if (l0 != NULL)
         {

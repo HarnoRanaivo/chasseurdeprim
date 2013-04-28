@@ -28,12 +28,25 @@ Un makefile est fourni, il vous suffit de vous placer à la racine du projet et 
 make
 ````
 
-Branches
---------
-Les versions stables se trouvent dans la branche ````master````, la branche ````dev```` contient la version de développement du projet, la branche ````test```` contient des tests unitaires. Pour passer d'une branche à l'autre :
+Lancer Chasseur de Prim
+-----------------------
+Une fois le programme compilé, il suffit de lancer le binaire disponible dans ```bin``` :
 ````
-git checkout <branche>
+ledit bin/main
 ````
+```ledit``` est optionnel, ce programme permet d'obtenir un prompt plus agréable (historique, complétion des noms de fichiers, ...). Pour obtenir de l'aide, entrez la commande ```aide```. Pour quitter le programme, entrez la commande ```quitter``` ou ```q```, puis confirmez votre décision par ```oui```.
+
+Documentation
+-------------
+Chasseur de Prim est documenté à l'aide de Doxygen. Pour installer doxygen sur Ubuntu :
+````
+apt-get install doxygen
+````
+Un ```Doxyfile``` est déjà présent. Il suffit de lancer ```doxygen``` pour générer la documentation. Celle-ci sera disponible dans le dossier ```doc```.
+````
+doxygen
+````
+La documentation est également disponible [ici](http://remove.github.io/chasseurdeprim "Documentation").
 
 Tests
 -----
@@ -51,6 +64,13 @@ bin/main
 Pour revenir dans la branche principale :
 ````
 git checkout master
+````
+
+Branches
+--------
+Les versions stables se trouvent dans la branche ````master````, la branche ````dev```` contient la version de développement du projet, la branche ````test```` contient des tests unitaires. Pour passer d'une branche à l'autre :
+````
+git checkout <branche>
 ````
 
 License

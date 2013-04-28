@@ -1,3 +1,8 @@
+/* This program is free software. It comes WITHOUT ANY WARRANTY, to
+* the extent permitted by applicable law. You can redistribute it
+* and/or modify it under the terms of the Do What The Fuck You Want
+* To Public License, Version 2, as published by Sam Hocevar. See
+* http://wtfpl.net for more details. */
 /**
  * \file arete.c
  * \brief Aretes (code)
@@ -8,9 +13,9 @@
 
 Arete * aNouv(const Sommet * a, const Sommet * b, Ent poids)
 {
-    Arete * a0 = MALLOC(a0);
+    Arete * const a0 = MALLOC(a0);
 
-    if (a0 != NULL || a == NULL || b == NULL)
+    if (a0 != NULL && a != NULL && b != NULL)
     {
         a0->a = copieSommet(a);
         a0->b = copieSommet(b);

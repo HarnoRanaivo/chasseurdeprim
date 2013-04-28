@@ -290,7 +290,7 @@ Donnees * traiterLigneCommande(const char * ligne, PromptCommande pc, Donnees * 
             break;
 
         case PC_CAL :
-            if (compterMots(ligne) != 1
+            if (compterMots(ligne) != 2
                 || sscanf(ligne, "%*s %99s", buffer1) != 1)
             {
                 printf("%s", ERR_ARG);

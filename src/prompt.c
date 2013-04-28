@@ -31,7 +31,7 @@ static const char * AIDE_SUPAR = "\tsa, sarete <sommet> <sommet>\n\
 \t\tsusceptible de rendre le graphe non connexe, alors l'arête ne sera pas\n\
 \t\tsupprimée.\n\n";
 
-static const char * AIDE_SUPSOM = "\tss, ssomet <sommet>\n\
+static const char * AIDE_SUPSOM = "\tss, ssommet <sommet>\n\
 \t\tSupprimer un somet du graphe.\n\
 \t\tToutes les arêtes incidentes à ce sommet\n\
 \t\tseront supprimées. Si cette opération est susceptible de rendre le graphe\n\
@@ -46,6 +46,18 @@ static const char * AIDE_AFF = "\taff, afficher <fichier>\n\
 \t\tsous réserve de disponibilité du paquet TikZ, permettant de représenter\n\
 \t\tle graphe actuel. Si un arbre couvrant minimum a été calculé et a été\n\
 \t\tconservé, il sera « affiché » avec le graphe à partir duquel il a été créé.\n\n";
+
+static const char * AIDE_LSV = "\tlsv, listevoisins <sommet>\n\
+\t\tAfficher la liste des voisins d'un sommet.\n\n";
+
+static const char * AIDE_LSI = "\tlsi, listeincidence <sommet>\n\
+\t\tAfficher la liste des arêtes incidentes à un sommet.\n\n";
+
+static const char * AIDE_LSS = "\tlss, listesommets\n\
+\t\tAfficher la liste des sommets du graphe actuel.\n\n";
+
+static const char * AIDE_LSA = "\tlsa, listearetes\n\
+\t\tAfficher la liste des arêtes du graphe actuel.\n\n";
 
 static const char * AIDE_AIDE = "\ta, aide [commande]\n\
 \t\tAfficher l'aide.\n\
@@ -82,7 +94,7 @@ int compterMots(const char * chaine)
 {
     int n = 0;
 
-    for (char * s = (char *) chaine; s != NULL; s = strchr(s, ' '))
+    for (const char * s = chaine; s != NULL; s = strchr(s, ' '))
     {
         n++;
         s++;
@@ -127,6 +139,22 @@ void afficherAideCommande(PromptCommande pc)
 
         case PC_AFF :
             aide = AIDE_AFF;
+            break;
+
+        case PC_LSV :
+            aide = AIDE_LSV;
+            break;
+
+        case PC_LSI :
+            aide = AIDE_LSI;
+            break;
+
+        case PC_LSS :
+            aide = AIDE_LSS;
+            break;
+
+        case PC_LSA :
+            aide = AIDE_LSA;
             break;
 
         case PC_AIDE :
@@ -183,6 +211,14 @@ PromptCommande rechercherCommande(const char * ligne)
                  || strcmp(commande, "quit") == 0
                 )
             return PC_QUIT;
+        else if (strcmp(commande, "lsv") == 0 || strcmp(commande, "listevoisins") == 0)
+            return PC_LSV;
+        else if (strcmp(commande, "lsi") == 0 || strcmp(commande, "listeincidence") == 0)
+            return PC_LSI;
+        else if (strcmp(commande, "lss") == 0 || strcmp(commande, "listesommets") == 0)
+            return PC_LSS;
+        else if (strcmp(commande, "lsa") == 0 || strcmp(commande, "listearetes") == 0)
+            return PC_LSA;
     }
 
     return PC_INCONNU;
@@ -312,6 +348,44 @@ Donnees * traiterLigneCommande(const char * ligne, PromptCommande pc, Donnees * 
             {
                 gGenererLatex(d->graphe, d->arbre, buffer1);
             }
+            break;
+
+        case PC_LSV :
+            if (compterMots(ligne) != 2
+                || sscanf(ligne, "%*s %99s", buffer1) != 1)
+            {
+                printf("%s", ERR_ARG);
+            }
+            else
+            {
+                afficherVoisins(d->graphe, buffer1);
+            }
+            break;
+
+        case PC_LSI :
+            if (compterMots(ligne) != 2
+                || sscanf(ligne, "%*s %99s", buffer1) != 1)
+            {
+                printf("%s", ERR_ARG);
+            }
+            else
+            {
+                afficherAdjacence(d->graphe, buffer1);
+            }
+            break;
+
+        case PC_LSS :
+            if (compterMots(ligne) != 1)
+                printf("%s", ERR_ARG);
+            else
+                afficherListeSommets(d->graphe);
+            break;
+
+        case PC_LSA :
+            if (compterMots(ligne) != 1)
+                printf("%s", ERR_ARG);
+            else
+                afficherAretesGraphe(d->graphe);
             break;
 
         case PC_AIDE :

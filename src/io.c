@@ -12,10 +12,10 @@
 #include "io.h"
 
 void sauvegarder_graphe (const Graphe * g, const char* destination){
-	FILE * pfile = NULL;
-	pfile = fopen(destination, "w"); // crée le fichier destination s'il n'existe pas sinon le réécrit
+    FILE * pfile = NULL;
+    pfile = fopen(destination, "w"); // crée le fichier destination s'il n'existe pas sinon le réécrit
 
-	if (pfile != NULL)
+    if (pfile != NULL)
     {
         ListeArete * liste = gAretes(g);
         for (const ListeArete * l = liste; !larEstVide(l); l = larSuivante(l))
@@ -28,15 +28,15 @@ void sauvegarder_graphe (const Graphe * g, const char* destination){
         fclose (pfile); // ferme le fichier
     }
 
-	return;
+    return;
 }
 
 Graphe * charger_graphe (const char* source){
-	FILE * pfile = NULL;
-	pfile = fopen(source, "r"); // lit le fichier source
+    FILE * pfile = NULL;
+    pfile = fopen(source, "r"); // lit le fichier source
 
-	Graphe * g = gNouv();
-	
+    Graphe * g = gNouv();
+
     if (pfile != NULL)
     {
         int retourFs;
@@ -44,7 +44,7 @@ Graphe * charger_graphe (const char* source){
         Ent poids;
         char buffer2[100]; // sommet d'arrivée de 100 caractères maximum
         Bool erreurs = FAUX;
-        
+
         while ((retourFs = fscanf(pfile,"%99s\t%d\t%99s",buffer1,&poids,buffer2)) != EOF){ // vérifie si la ligne n'est pas la fin du fichier
             if (retourFs == 3)
                 g = gAjouterArete(g,buffer1,buffer2,poids); // ajoute l'arc à partir des valeurs de la ligne
@@ -54,9 +54,51 @@ Graphe * charger_graphe (const char* source){
 
         if (erreurs)
             fprintf(stderr, "Le fichier semble contenir des erreurs.\n");
-        
+
         fclose (pfile);
     }
 
-	return g;
+    return g;
+}
+
+static inline void afficherArete(const Arete * a)
+{
+    printf("(%s, %s, %d) ", aA(a), aB(a), aPoids(a));
+}
+
+static inline void afficherListeArete(const ListeArete * lar)
+{
+    for (const ListeArete * l = lar; !larEstVide(l); l = larSuivante(l))
+        afficherArete(larAreteTete(l));
+    printf("\n");
+}
+
+void afficherAretesGraphe(const Graphe * g)
+{
+    ListeArete * liste = gAretes(g);
+
+    afficherListeArete(liste);
+
+    liste = larLiberer(liste);
+}
+
+void afficherListeSommets(const Graphe * g)
+{
+    for (g = g; !gEstVide(g); g = gSuivant(g))
+        printf("\"%s\" ", gSommetTete(g));
+    printf("\n");
+}
+
+void afficherAdjacence(const Graphe * g, const Sommet * s)
+{
+    for (const ListeAdjacence * l = gAdjacenceSommet(g, s); !lest_vide(l); l = lsuiv(l))
+        printf("(%s, %s, %d) ", s, lsommet_tete(l), lpoids_tete(l));
+    printf("\n");
+}
+
+void afficherVoisins(const Graphe * g, const Sommet * s)
+{
+    for (const ListeAdjacence * l = gAdjacenceSommet(g, s); !lest_vide(l); l = lsuiv(l))
+        printf("\"%s\" ", lsommet_tete(l));
+    printf("\n");
 }

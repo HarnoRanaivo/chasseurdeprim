@@ -39,6 +39,10 @@ typedef enum PromptCommande
     PC_SUPSOM,      /**<- Supprimer un sommet. */
     PC_CAL,         /**<- Calculer l'arbre couvrant minimum. */
     PC_AFF,         /**<- « Afficher » le graphe. */
+    PC_LSV,         /**<- Afficher la liste des voisins d'un sommet. */
+    PC_LSI,         /**<- Afficher la liste des arêtes incidentes à un sommet. */
+    PC_LSS,         /**<- Afficher la liste des sommets du graphe. */
+    PC_LSA,         /**<- Afficher la liste des arêtes du graphe. */
     PC_AIDE,        /**<- Aide. */
     PC_QUIT         /**<- Quitter. */
 } PromptCommande;
@@ -48,8 +52,10 @@ typedef enum PromptCommande
  */
 static const PromptCommande PC_LISTE[] =
 {
-    PC_CHG, PC_SAV, PC_MOD, PC_AJAR, PC_SUPAR, PC_SUPSOM, PC_AJAR, PC_SUPAR,
-    PC_SUPSOM, PC_CAL, PC_AFF, PC_AIDE, PC_QUIT, PC_INCONNU
+    /* Le dernier élément doit être PC_INCONNU. */
+    PC_CHG, PC_SAV, PC_MOD, PC_AJAR, PC_SUPAR, PC_SUPSOM, PC_SUPSOM, PC_CAL,
+    PC_AFF, PC_LSV, PC_LSI, PC_LSS, PC_LSA, PC_AIDE, PC_QUIT,
+    PC_INCONNU
 };
 
 /**

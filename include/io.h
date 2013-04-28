@@ -40,5 +40,34 @@ void sauvegarder_graphe (const Graphe * g, const char* destination);
  */
 Graphe * charger_graphe (const char* source);
 
+/**
+ * \brief Afficher les arêtes d'un graphe.
+ * \relatesalso Graphe
+ * \param g Graphe.
+ */
+void afficherAretesGraphe(const Graphe * g);
+
+/**
+ * \brief Afficher les sommets d'un graphe.
+ * \relatesalso Graphe
+ * \param g Graphe.
+ */
+void afficherListeSommets(const Graphe * g);
+
+/**
+ * \brief Afficher les arêtes incidentes à un sommet.
+ * \relatesalso Graphe
+ * \param g Graphe.
+ * \param s Sommet.
+ */
+void afficherAdjacence(const Graphe * g, const Sommet * s);
+
+/**
+ * \brief Afficher les voisins d'un sommet.
+ * \relatesalso Graphe
+ * \param g Graphe.
+ * \param s Sommet.
+ */
+void afficherVoisins(const Graphe * g, const Sommet * s);
 
 #endif /* __IO_H */

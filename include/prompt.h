@@ -23,14 +23,16 @@
 #include "io.h"
 #include "prim.h"
 #include "generation.h"
+#include "parcours.h"
+#include "edition.h"
 
 /**
  * \enum PromptCommande
- * \brief Alias pour les commandes.
+ * \brief Alias pour les commandes du prompt.
  */
 typedef enum PromptCommande
 {
-    PC_INCONNU,     /**<- Commande inconnue. */
+    PC_NOUV,        /**<- Nouveau graphe. */
     PC_CHG,         /**<- Charger un graphe. */
     PC_SAV,         /**<- Sauvegarder le graphe. */
     PC_MOD,         /**<- Modifier une arête. */
@@ -39,18 +41,16 @@ typedef enum PromptCommande
     PC_SUPSOM,      /**<- Supprimer un sommet. */
     PC_CAL,         /**<- Calculer l'arbre couvrant minimum. */
     PC_AFF,         /**<- « Afficher » le graphe. */
+    PC_LSV,         /**<- Afficher la liste des voisins d'un sommet. */
+    PC_LSI,         /**<- Afficher la liste des arêtes incidentes à un sommet. */
+    PC_LSS,         /**<- Afficher la liste des sommets du graphe. */
+    PC_LSA,         /**<- Afficher la liste des arêtes du graphe. */
+    PC_EDIT,        /**<- Entrer en mode « édition ». */
     PC_AIDE,        /**<- Aide. */
-    PC_QUIT         /**<- Quitter. */
+    PC_QUIT,        /**<- Quitter. */
+    PC_INCONNU,     /**<- Commande inconnue. */
 } PromptCommande;
-
-/**
- * \brief Liste des PromptCommande.
- */
-static const PromptCommande PC_LISTE[] =
-{
-    PC_CHG, PC_SAV, PC_MOD, PC_AJAR, PC_SUPAR, PC_SUPSOM, PC_AJAR, PC_SUPAR,
-    PC_SUPSOM, PC_CAL, PC_AFF, PC_AIDE, PC_QUIT, PC_INCONNU
-};
+/* PC_INCONNU *DOIT* se trouver en dernier. */
 
 /**
  * \struct Donnees
@@ -64,34 +64,28 @@ typedef struct Donnees
 } Donnees;
 
 /**
- * \brief Vérification de l'intention de l'utilisateur.
- * \return #VRAI si l'utilisateur confirme son choix, #FAUX sinon.
- */
-Bool verifier(void);
-
-/**
- * \brief Compter le nombre de mots dans une chaîne de caractères.
- * \param chaine Chaîne de caractères.
- * \pre \a chaine est une chaîne de caractères valide terminée par \c '\0'.
- * \return Nombre de mots.
- */
-int compterMots(const char * chaine);
-
-/**
  * \brief Afficher l'aide correspondant à une commande.
  * \relatesalso PromptCommande
  * \param pc Commande.
  */
-void afficherAideCommande(PromptCommande pc);
+void afficherAidePromptCommande(PromptCommande pc);
 
 /**
  * \brief Afficher l'aide du programme.
  */
-void afficherAide(void);
+void afficherPromptAide(void);
+
+/**
+ * \brief Rechercher la commande correspondante.
+ * \relatesalso PromptCommande
+ * \param ligne Ligne de commande.
+ * \return commande correspondante.
+ */
+PromptCommande rechercherPromptCommande(const char * ligne);
 
 /**
  * \brief Traiter la ligne de commande entrée par l'utilisateur.
- * \relatesalso Donnees
+ * \relatesalso PromptCommande
  * \param ligne Ligne de commande entrée par l'utilisateur.
  * \param pc Commande entrée par l'utilisateur.
  * \param d Données du programme.

@@ -7,7 +7,7 @@
  * \file base.h
  * \brief Base (header)
  * \author Harenome RAZANAJATO
- * \version 1.3
+ * \version 1.4
  */
 
 #ifndef __BASE_H
@@ -15,6 +15,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 /**
  * \enum Bool
@@ -114,4 +115,38 @@ OP(Rat)
  */
 #define REALLOC(P, N) realloc((P), (N) * sizeof *(P))
 
+/**
+ * \brief Recherche d'un mot dans un tableau de chaînes de caractères valide.
+ * \param mot Mot.
+ * \param tableau Tableau.
+ * \return #VRAI si le mot se trouve dans le tableau, #FAUX sinon.
+ *
+ * Le tableau doit être terminé par NULL.
+ */
+static inline Bool rechercherMot(const char * mot, const char * const * tableau)
+{
+    for (int i = 0; tableau[i] != NULL; i++)
+        if (strcmp(mot, tableau[i]) == 0) return VRAI;
+
+    return FAUX;
+}
+
+/**
+ * \brief Compter le nombre de mots dans une chaîne de caractères.
+ * \param chaine Chaîne de caractères.
+ * \pre \a chaine est une chaîne de caractères valide terminée par \c '\0'.
+ * \return Nombre de mots.
+ */
+static inline int compterMots(const char * chaine)
+{
+    int n = 0;
+
+    for (const char * s = chaine; s != NULL; s = strchr(s, ' '))
+    {
+        n++;
+        s++;
+    }
+
+    return n;
+}
 #endif /* __BASE_H */

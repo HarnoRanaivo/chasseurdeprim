@@ -16,6 +16,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 /**
  * \enum Bool
@@ -119,9 +120,8 @@ OP(Rat)
  * \brief Recherche d'un mot dans un tableau de chaînes de caractères valide.
  * \param mot Mot.
  * \param tableau Tableau.
+ * \pre \a tableau doit être terminé par NULL.
  * \return #VRAI si le mot se trouve dans le tableau, #FAUX sinon.
- *
- * Le tableau doit être terminé par NULL.
  */
 static inline Bool rechercherMot(const char * mot, const char * const * tableau)
 {
@@ -149,4 +149,16 @@ static inline int compterMots(const char * chaine)
 
     return n;
 }
+
+/**
+ * \brief Changer la casse en minuscules d'une chaine de caractères.
+ * \param chaine Chaîne de caractères.
+ * \pre \a chaine est une chaîne de caractères valide terminée par \c '\0'.
+ */
+static inline void chaineEnMinuscules(char * chaine)
+{
+    for (int i = 0; chaine[i] != '\0'; i++)
+        chaine[i] = tolower(chaine[i]);
+}
+
 #endif /* __BASE_H */

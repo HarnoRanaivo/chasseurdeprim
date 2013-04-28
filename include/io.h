@@ -15,6 +15,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 #include "base.h"
 #include "sommet.h"
@@ -40,5 +41,41 @@ void sauvegarder_graphe (const Graphe * g, const char* destination);
  */
 Graphe * charger_graphe (const char* source);
 
+/**
+ * \brief Afficher les arêtes d'un graphe.
+ * \relatesalso Graphe
+ * \param g Graphe.
+ */
+void afficherAretesGraphe(const Graphe * g);
+
+/**
+ * \brief Afficher les sommets d'un graphe.
+ * \relatesalso Graphe
+ * \param g Graphe.
+ */
+void afficherListeSommets(const Graphe * g);
+
+/**
+ * \brief Afficher les arêtes incidentes à un sommet.
+ * \relatesalso Graphe
+ * \param g Graphe.
+ * \param s Sommet.
+ */
+void afficherAdjacence(const Graphe * g, const Sommet * s);
+
+/**
+ * \brief Afficher les voisins d'un sommet.
+ * \relatesalso Graphe
+ * \param g Graphe.
+ * \param s Sommet.
+ */
+void afficherVoisins(const Graphe * g, const Sommet * s);
+
+/**
+ * \brief Vérification de l'intention de l'utilisateur.
+ * \param chaine Complétion de « Êtes vous sûr %s ».
+ * \return #VRAI si l'utilisateur confirme son choix, #FAUX sinon.
+ */
+Bool verifier(const char * chaine);
 
 #endif /* __IO_H */

@@ -53,10 +53,10 @@ bin :
 	mkdir bin
 
 clean :
-	rm obj/* bin/*
+	rm -f obj/* bin/* lib/*
 
 cleanall : clean
-	rm -r doc/*
+	rm -rf doc/*
 
 archive :
 	tar -f meyer_razanajato-ProjetSDA2P.tar.gz -cvz src/*.c include/*.h makefile Doxyfile

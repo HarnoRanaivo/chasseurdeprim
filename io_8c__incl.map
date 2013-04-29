@@ -1,9 +1,9 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$io_8h.html" title="Entrées/Sorties (header)" alt="" coords="273,83,316,112"/>
-<area shape="rect" id="node13" href="$base_8h.html" title="Base (header)" alt="" coords="213,469,275,499"/>
-<area shape="rect" id="node19" href="$sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="347,392,427,421"/>
-<area shape="rect" id="node25" href="$adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)" alt="" coords="723,315,813,344"/>
-<area shape="rect" id="node32" href="$graphe_8h.html" title="Graphes (header)" alt="" coords="352,160,424,189"/>
-<area shape="rect" id="node40" href="$listearete_8h.html" title="Liste d&#39;arêtes (header)" alt="" coords="401,237,487,267"/>
-<area shape="rect" id="node46" href="$arete_8h.html" title="Arêtes (header)" alt="" coords="448,315,509,344"/>
+<area shape="rect" id="node3" href="$io_8h.html" title="Entrées/Sorties (header)" alt="" coords="351,83,393,112"/>
+<area shape="rect" id="node15" href="$base_8h.html" title="Base (header)" alt="" coords="239,469,300,499"/>
+<area shape="rect" id="node21" href="$sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="372,392,452,421"/>
+<area shape="rect" id="node27" href="$adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)" alt="" coords="748,315,839,344"/>
+<area shape="rect" id="node34" href="$graphe_8h.html" title="Graphes (header)" alt="" coords="441,160,513,189"/>
+<area shape="rect" id="node42" href="$listearete_8h.html" title="Liste d&#39;arêtes (header)" alt="" coords="456,237,541,267"/>
+<area shape="rect" id="node48" href="$arete_8h.html" title="Arêtes (header)" alt="" coords="473,315,535,344"/>
 </map>

@@ -110,7 +110,7 @@ Graphe des dépendances par inclusion de io.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="io_8c__incl.png" border="0" usemap="#src_2io_8c" alt=""/></div>
 <map name="src_2io_8c" id="src_2io_8c">
-<area shape="rect" id="node3" href="io_8h.html" title="Entrées/Sorties (header)" alt="" coords="273,83,316,112"/><area shape="rect" id="node13" href="base_8h.html" title="Base (header)" alt="" coords="213,469,275,499"/><area shape="rect" id="node19" href="sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="347,392,427,421"/><area shape="rect" id="node25" href="adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)" alt="" coords="723,315,813,344"/><area shape="rect" id="node32" href="graphe_8h.html" title="Graphes (header)" alt="" coords="352,160,424,189"/><area shape="rect" id="node40" href="listearete_8h.html" title="Liste d&#39;arêtes (header)" alt="" coords="401,237,487,267"/><area shape="rect" id="node46" href="arete_8h.html" title="Arêtes (header)" alt="" coords="448,315,509,344"/></map>
+<area shape="rect" id="node3" href="io_8h.html" title="Entrées/Sorties (header)" alt="" coords="351,83,393,112"/><area shape="rect" id="node15" href="base_8h.html" title="Base (header)" alt="" coords="239,469,300,499"/><area shape="rect" id="node21" href="sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="372,392,452,421"/><area shape="rect" id="node27" href="adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)" alt="" coords="748,315,839,344"/><area shape="rect" id="node34" href="graphe_8h.html" title="Graphes (header)" alt="" coords="441,160,513,189"/><area shape="rect" id="node42" href="listearete_8h.html" title="Liste d&#39;arêtes (header)" alt="" coords="456,237,541,267"/><area shape="rect" id="node48" href="arete_8h.html" title="Arêtes (header)" alt="" coords="473,315,535,344"/></map>
 </div>
 </div>
 <p><a href="io_8c_source.html">Aller au code source de ce fichier.</a></p>
@@ -131,6 +131,8 @@ Fonctions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Afficher les voisins d'un sommet.  <a href="#a4924edca2ae3d13ce4c71c5fc8cfd917"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io_8c.html#a898b3b44a72a0490e4864639d8896b61">verifier</a> (const char *chaine)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérification de l'intention de l'utilisateur.  <a href="#a898b3b44a72a0490e4864639d8896b61"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io_8c.html#ab82637ef1faa3610fbc796eb71237397">existeFichier</a> (const char *nomfichier)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifier l'existence d'un fichier.  <a href="#ab82637ef1faa3610fbc796eb71237397"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Description détaillée</h2>
 <div class="textblock"><p>Entrées/Sorties (code source) </p>
@@ -392,6 +394,47 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 </div>
 </div>
+<a class="anchor" id="ab82637ef1faa3610fbc796eb71237397"></a><!-- doxytag: member="io.c::existeFichier" ref="ab82637ef1faa3610fbc796eb71237397" args="(const char *nomfichier)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a> <a class="el" href="io_8c.html#ab82637ef1faa3610fbc796eb71237397">existeFichier</a> </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>nomfichier</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Vérifier l'existence d'un fichier. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nomfichier</td><td>nom de fichier </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> si le fichier existe, <a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a> sinon. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="io_8c_source.html#l00123">123</a> du fichier <a class="el" href="io_8c_source.html">io.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keyword">struct </span>stat buffer;
+    <span class="keywordflow">return</span> (stat (nomfichier, &amp;buffer) == 0);
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="io_8c_ab82637ef1faa3610fbc796eb71237397_icgraph.png" border="0" usemap="#io_8c_ab82637ef1faa3610fbc796eb71237397_icgraph" alt=""/></div>
+<map name="io_8c_ab82637ef1faa3610fbc796eb71237397_icgraph" id="io_8c_ab82637ef1faa3610fbc796eb71237397_icgraph">
+<area shape="rect" id="node3" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="151,5,303,35"/><area shape="rect" id="node5" href="prompt_8c.html#a98126e5a7092a7a5921d1bdc3dab2fa2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="352,5,459,35"/><area shape="rect" id="node7" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="507,5,557,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="aca158a023def8433061cca3075d09311"></a><!-- doxytag: member="io.c::sauvegarder_graphe" ref="aca158a023def8433061cca3075d09311" args="(const Graphe *g, const char *destination)" -->
 <div class="memitem">
 <div class="memproto">
@@ -529,7 +572,7 @@ Voici le graphe des appelants de cette fonction :</div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Avril 29 2013 10:27:17 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Lundi Avril 29 2013 11:44:56 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

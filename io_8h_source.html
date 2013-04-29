@@ -111,27 +111,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00016"></a>00016 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
 <a name="l00017"></a>00017 <span class="preprocessor">#include &lt;string.h&gt;</span>
 <a name="l00018"></a>00018 <span class="preprocessor">#include &lt;ctype.h&gt;</span>
-<a name="l00019"></a>00019 
-<a name="l00020"></a>00020 <span class="preprocessor">#include &quot;<a class="code" href="base_8h.html" title="Base (header)">base.h</a>&quot;</span>
-<a name="l00021"></a>00021 <span class="preprocessor">#include &quot;<a class="code" href="sommet_8h.html" title="Gestion de la sorte Sommet (header)">sommet.h</a>&quot;</span>
-<a name="l00022"></a>00022 <span class="preprocessor">#include &quot;<a class="code" href="adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)">adjacence.h</a>&quot;</span>
-<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="graphe_8h.html" title="Graphes (header)">graphe.h</a>&quot;</span>
-<a name="l00024"></a>00024 
-<a name="l00033"></a>00033 <span class="keywordtype">void</span> <a class="code" href="structGraphe.html#aca158a023def8433061cca3075d09311" title="Permet de sauvegarder le graphe dans un fichier passé en argument.">sauvegarder_graphe</a> (<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g, <span class="keyword">const</span> <span class="keywordtype">char</span>* destination);
-<a name="l00034"></a>00034 
-<a name="l00042"></a>00042 <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * <a class="code" href="structGraphe.html#a1a93b1ef000c27e4d43c871faff3c2a3" title="Permet de charger un graphe dans un fichier texte.">charger_graphe</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* source);
-<a name="l00043"></a>00043 
-<a name="l00049"></a>00049 <span class="keywordtype">void</span> <a class="code" href="structGraphe.html#ad6a8e0a2906acb31766e826e35ecb34d" title="Afficher les arêtes d&#39;un graphe.">afficherAretesGraphe</a>(<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g);
-<a name="l00050"></a>00050 
-<a name="l00056"></a>00056 <span class="keywordtype">void</span> <a class="code" href="structGraphe.html#a198689c52ffb4178b1b3c154a035d1d1" title="Afficher les sommets d&#39;un graphe.">afficherListeSommets</a>(<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g);
-<a name="l00057"></a>00057 
-<a name="l00064"></a>00064 <span class="keywordtype">void</span> <a class="code" href="structGraphe.html#ace288c4a90377a269c162289a83b2bac" title="Afficher les arêtes incidentes à un sommet.">afficherAdjacence</a>(<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s);
-<a name="l00065"></a>00065 
-<a name="l00072"></a>00072 <span class="keywordtype">void</span> <a class="code" href="structGraphe.html#a4924edca2ae3d13ce4c71c5fc8cfd917" title="Afficher les voisins d&#39;un sommet.">afficherVoisins</a>(<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s);
-<a name="l00073"></a>00073 
-<a name="l00079"></a>00079 <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="io_8h.html#a898b3b44a72a0490e4864639d8896b61" title="Vérification de l&#39;intention de l&#39;utilisateur.">verifier</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * chaine);
-<a name="l00080"></a>00080 
-<a name="l00081"></a>00081 <span class="preprocessor">#endif </span><span class="comment">/* __IO_H */</span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;sys/stat.h&gt;</span>
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 <span class="preprocessor">#include &quot;<a class="code" href="base_8h.html" title="Base (header)">base.h</a>&quot;</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#include &quot;<a class="code" href="sommet_8h.html" title="Gestion de la sorte Sommet (header)">sommet.h</a>&quot;</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)">adjacence.h</a>&quot;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="graphe_8h.html" title="Graphes (header)">graphe.h</a>&quot;</span>
+<a name="l00025"></a>00025 
+<a name="l00034"></a>00034 <span class="keywordtype">void</span> <a class="code" href="structGraphe.html#aca158a023def8433061cca3075d09311" title="Permet de sauvegarder le graphe dans un fichier passé en argument.">sauvegarder_graphe</a> (<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g, <span class="keyword">const</span> <span class="keywordtype">char</span>* destination);
+<a name="l00035"></a>00035 
+<a name="l00043"></a>00043 <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * <a class="code" href="structGraphe.html#a1a93b1ef000c27e4d43c871faff3c2a3" title="Permet de charger un graphe dans un fichier texte.">charger_graphe</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* source);
+<a name="l00044"></a>00044 
+<a name="l00050"></a>00050 <span class="keywordtype">void</span> <a class="code" href="structGraphe.html#ad6a8e0a2906acb31766e826e35ecb34d" title="Afficher les arêtes d&#39;un graphe.">afficherAretesGraphe</a>(<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g);
+<a name="l00051"></a>00051 
+<a name="l00057"></a>00057 <span class="keywordtype">void</span> <a class="code" href="structGraphe.html#a198689c52ffb4178b1b3c154a035d1d1" title="Afficher les sommets d&#39;un graphe.">afficherListeSommets</a>(<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g);
+<a name="l00058"></a>00058 
+<a name="l00065"></a>00065 <span class="keywordtype">void</span> <a class="code" href="structGraphe.html#ace288c4a90377a269c162289a83b2bac" title="Afficher les arêtes incidentes à un sommet.">afficherAdjacence</a>(<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s);
+<a name="l00066"></a>00066 
+<a name="l00073"></a>00073 <span class="keywordtype">void</span> <a class="code" href="structGraphe.html#a4924edca2ae3d13ce4c71c5fc8cfd917" title="Afficher les voisins d&#39;un sommet.">afficherVoisins</a>(<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s);
+<a name="l00074"></a>00074 
+<a name="l00080"></a>00080 <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="io_8h.html#a898b3b44a72a0490e4864639d8896b61" title="Vérification de l&#39;intention de l&#39;utilisateur.">verifier</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * chaine);
+<a name="l00081"></a>00081 
+<a name="l00087"></a>00087 <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="io_8h.html#ab82637ef1faa3610fbc796eb71237397" title="Vérifier l&#39;existence d&#39;un fichier.">existeFichier</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * nomfichier);
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089 <span class="preprocessor">#endif </span><span class="comment">/* __IO_H */</span>
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -150,7 +153,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Avril 29 2013 10:27:16 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Lundi Avril 29 2013 11:44:54 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

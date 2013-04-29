@@ -108,6 +108,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <code>#include &lt;stdlib.h&gt;</code><br/>
 <code>#include &lt;string.h&gt;</code><br/>
 <code>#include &lt;ctype.h&gt;</code><br/>
+<code>#include &lt;sys/stat.h&gt;</code><br/>
 <code>#include &quot;<a class="el" href="base_8h_source.html">base.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="sommet_8h_source.html">sommet.h</a>&quot;</code><br/>
 <code>#include &quot;<a class="el" href="adjacence_8h_source.html">adjacence.h</a>&quot;</code><br/>
@@ -117,7 +118,7 @@ Graphe des dépendances par inclusion de io.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="io_8h__incl.png" border="0" usemap="#include_2io_8h" alt=""/></div>
 <map name="include_2io_8h" id="include_2io_8h">
-<area shape="rect" id="node11" href="base_8h.html" title="Base (header)" alt="" coords="213,392,275,421"/><area shape="rect" id="node17" href="sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="347,315,427,344"/><area shape="rect" id="node23" href="adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)" alt="" coords="723,237,813,267"/><area shape="rect" id="node30" href="graphe_8h.html" title="Graphes (header)" alt="" coords="352,83,424,112"/><area shape="rect" id="node38" href="listearete_8h.html" title="Liste d&#39;arêtes (header)" alt="" coords="401,160,487,189"/><area shape="rect" id="node44" href="arete_8h.html" title="Arêtes (header)" alt="" coords="448,237,509,267"/></map>
+<area shape="rect" id="node13" href="base_8h.html" title="Base (header)" alt="" coords="239,392,300,421"/><area shape="rect" id="node19" href="sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="372,315,452,344"/><area shape="rect" id="node25" href="adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)" alt="" coords="748,237,839,267"/><area shape="rect" id="node32" href="graphe_8h.html" title="Graphes (header)" alt="" coords="441,83,513,112"/><area shape="rect" id="node40" href="listearete_8h.html" title="Liste d&#39;arêtes (header)" alt="" coords="456,160,541,189"/><area shape="rect" id="node46" href="arete_8h.html" title="Arêtes (header)" alt="" coords="473,237,535,267"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
@@ -145,6 +146,8 @@ Fonctions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Afficher les voisins d'un sommet.  <a href="#a4924edca2ae3d13ce4c71c5fc8cfd917"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io_8h.html#a898b3b44a72a0490e4864639d8896b61">verifier</a> (const char *chaine)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérification de l'intention de l'utilisateur.  <a href="#a898b3b44a72a0490e4864639d8896b61"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="io_8h.html#ab82637ef1faa3610fbc796eb71237397">existeFichier</a> (const char *nomfichier)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifier l'existence d'un fichier.  <a href="#ab82637ef1faa3610fbc796eb71237397"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Description détaillée</h2>
 <div class="textblock"><p>Entrées/Sorties (header) </p>
@@ -406,6 +409,47 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 </div>
 </div>
+<a class="anchor" id="ab82637ef1faa3610fbc796eb71237397"></a><!-- doxytag: member="io.h::existeFichier" ref="ab82637ef1faa3610fbc796eb71237397" args="(const char *nomfichier)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309">Bool</a> <a class="el" href="io_8c.html#ab82637ef1faa3610fbc796eb71237397">existeFichier</a> </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>nomfichier</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Vérifier l'existence d'un fichier. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nomfichier</td><td>nom de fichier </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> si le fichier existe, <a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a> sinon. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="io_8c_source.html#l00123">123</a> du fichier <a class="el" href="io_8c_source.html">io.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keyword">struct </span>stat buffer;
+    <span class="keywordflow">return</span> (stat (nomfichier, &amp;buffer) == 0);
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="io_8h_ab82637ef1faa3610fbc796eb71237397_icgraph.png" border="0" usemap="#io_8h_ab82637ef1faa3610fbc796eb71237397_icgraph" alt=""/></div>
+<map name="io_8h_ab82637ef1faa3610fbc796eb71237397_icgraph" id="io_8h_ab82637ef1faa3610fbc796eb71237397_icgraph">
+<area shape="rect" id="node3" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="151,5,303,35"/><area shape="rect" id="node5" href="prompt_8c.html#a98126e5a7092a7a5921d1bdc3dab2fa2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="352,5,459,35"/><area shape="rect" id="node7" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="507,5,557,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="aca158a023def8433061cca3075d09311"></a><!-- doxytag: member="io.h::sauvegarder_graphe" ref="aca158a023def8433061cca3075d09311" args="(const Graphe *g, const char *destination)" -->
 <div class="memitem">
 <div class="memproto">
@@ -543,7 +587,7 @@ Voici le graphe des appelants de cette fonction :</div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Avril 29 2013 10:27:17 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Lundi Avril 29 2013 11:44:55 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

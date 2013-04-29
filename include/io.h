@@ -16,6 +16,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
+#include <sys/stat.h>
 
 #include "base.h"
 #include "sommet.h"
@@ -77,5 +78,12 @@ void afficherVoisins(const Graphe * g, const Sommet * s);
  * \return #VRAI si l'utilisateur confirme son choix, #FAUX sinon.
  */
 Bool verifier(const char * chaine);
+
+/**
+ * \brief Vérifier l'existence d'un fichier.
+ * \param nomfichier nom de fichier
+ * \return #VRAI si le fichier existe, #FAUX sinon.
+ */
+Bool existeFichier(const char * nomfichier);
 
 #endif /* __IO_H */

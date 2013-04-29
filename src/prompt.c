@@ -19,7 +19,8 @@ static const struct
     PromptCommande commande;
     const char * aide;
     const char * alias[4];
-} PCS[] =
+}
+PCS[] =
 {
     [PC_NOUV] =
     {
@@ -263,8 +264,16 @@ Donnees * traiterLigneCommande(const char * ligne, PromptCommande pc, Donnees * 
             }
             else
             {
-                sauvegarder_graphe(d->graphe, buffer1);
-                d->sauvegarde = VRAI;
+                if (existeFichier(buffer1))
+                {
+                    printf("Le fichier %s existe déjà.\n", buffer1);
+                    sur = verifier("de vouloir écraser le fichier.\n");
+                }
+                if (sur)
+                {
+                    sauvegarder_graphe(d->graphe, buffer1);
+                    d->sauvegarde = VRAI;
+                }
             }
             break;
 
@@ -345,7 +354,13 @@ Donnees * traiterLigneCommande(const char * ligne, PromptCommande pc, Donnees * 
             }
             else
             {
-                gGenererLatex(d->graphe, d->arbre, buffer1);
+                if (existeFichier(buffer1))
+                {
+                    printf("Le fichier %s existe déjà.\n", buffer1);
+                    sur = verifier("de vouloir écraser le fichier ");
+                }
+                if (sur)
+                    gGenererLatex(d->graphe, d->arbre, buffer1);
             }
             break;
 

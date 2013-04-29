@@ -32,7 +32,7 @@ Lancer Chasseur de Prim
 -----------------------
 Une fois le programme compilé, il suffit de lancer le binaire disponible dans ```bin``` :
 ````
-ledit bin/main
+ledit bin/chasseurdeprim
 ````
 ```ledit``` est optionnel, ce programme permet d'obtenir un prompt plus agréable (historique, complétion des noms de fichiers, ...). Pour obtenir de l'aide, entrez la commande ```aide```. Pour quitter le programme, entrez la commande ```quitter``` ou ```q```, puis confirmez votre décision par ```oui```.
 

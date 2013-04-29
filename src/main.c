@@ -41,7 +41,7 @@ int main(int argc, char ** argv)
         }
     }
     else
-        prompt();
+        afficherPrompt();
 
     return 0;
 }

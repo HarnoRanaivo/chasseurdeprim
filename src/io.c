@@ -119,3 +119,9 @@ Bool verifier(const char * chaine)
     else
         return FAUX;
 }
+
+Bool existeFichier(const char * nomfichier)
+{
+    struct stat buffer;
+    return (stat (nomfichier, &buffer) == 0);
+}

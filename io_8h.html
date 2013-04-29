@@ -117,7 +117,7 @@ Graphe des dépendances par inclusion de io.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="io_8h__incl.png" border="0" usemap="#include_2io_8h" alt=""/></div>
 <map name="include_2io_8h" id="include_2io_8h">
-<area shape="rect" id="node11" href="base_8h.html" title="Base (header)" alt="" coords="475,392,536,421"/><area shape="rect" id="node16" href="sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="635,315,715,344"/><area shape="rect" id="node22" href="adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)" alt="" coords="156,237,247,267"/><area shape="rect" id="node29" href="graphe_8h.html" title="Graphes (header)" alt="" coords="637,83,709,112"/><area shape="rect" id="node37" href="listearete_8h.html" title="Liste d&#39;arêtes (header)" alt="" coords="547,160,632,189"/><area shape="rect" id="node43" href="arete_8h.html" title="Arêtes (header)" alt="" coords="525,237,587,267"/></map>
+<area shape="rect" id="node11" href="base_8h.html" title="Base (header)" alt="" coords="213,392,275,421"/><area shape="rect" id="node17" href="sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="347,315,427,344"/><area shape="rect" id="node23" href="adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)" alt="" coords="723,237,813,267"/><area shape="rect" id="node30" href="graphe_8h.html" title="Graphes (header)" alt="" coords="352,83,424,112"/><area shape="rect" id="node38" href="listearete_8h.html" title="Liste d&#39;arêtes (header)" alt="" coords="401,160,487,189"/><area shape="rect" id="node44" href="arete_8h.html" title="Arêtes (header)" alt="" coords="448,237,509,267"/></map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 Ce graphe montre quels fichiers incluent directement ou indirectement ce fichier :</div>
@@ -503,11 +503,10 @@ Voici le graphe d'appel pour cette fonction :</div>
 
     printf(<span class="stringliteral">&quot;Êtes-vous sûr %s?\n? &quot;</span>, chaine);
     fflush(stdout);
-    scanf(<span class="stringliteral">&quot; %7[^\n]&quot;</span>, buffer);
-    fflush(stdin);
+    scanf(<span class="stringliteral">&quot;%7s%*[^\n]&quot;</span>, buffer);
+    getchar();
 
-    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; buffer[i] != <span class="charliteral">&#39;\0&#39;</span>; i++)
-        buffer[i] = tolower(buffer[i]);
+    chaineEnMinuscules(buffer);
 
     <span class="keywordflow">if</span> (strcmp(buffer, <span class="stringliteral">&quot;o&quot;</span>) == 0 || strcmp(buffer, <span class="stringliteral">&quot;oui&quot;</span>) == 0)
         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
@@ -520,7 +519,7 @@ Voici le graphe des appelants de cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="io_8h_a898b3b44a72a0490e4864639d8896b61_icgraph.png" border="0" usemap="#io_8h_a898b3b44a72a0490e4864639d8896b61_icgraph" alt=""/></div>
 <map name="io_8h_a898b3b44a72a0490e4864639d8896b61_icgraph" id="io_8h_a898b3b44a72a0490e4864639d8896b61_icgraph">
-<area shape="rect" id="node3" href="edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="116,5,241,35"/><area shape="rect" id="node5" href="edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="292,56,385,85"/><area shape="rect" id="node7" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="436,107,588,136"/><area shape="rect" id="node9" href="prompt_8c.html#acb99be969a83b88957b842df172b62d2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="639,133,700,163"/><area shape="rect" id="node11" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="749,133,800,163"/></map>
+<area shape="rect" id="node3" href="edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="116,5,241,35"/><area shape="rect" id="node5" href="edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="292,56,385,85"/><area shape="rect" id="node7" href="prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="436,107,588,136"/><area shape="rect" id="node9" href="prompt_8c.html#a98126e5a7092a7a5921d1bdc3dab2fa2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="637,133,744,163"/><area shape="rect" id="node11" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="792,133,843,163"/></map>
 </div>
 </p>
 
@@ -544,7 +543,7 @@ Voici le graphe des appelants de cette fonction :</div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Dimanche Avril 28 2013 18:05:23 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Lundi Avril 29 2013 10:27:17 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

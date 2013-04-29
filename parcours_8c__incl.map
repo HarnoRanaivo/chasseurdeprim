@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$parcours_8h.html" title="Parcours d&#39;un graphe (header)" alt="" coords="693,83,776,112"/>
-<area shape="rect" id="node9" href="$base_8h.html" title="Base (header)" alt="" coords="224,547,285,576"/>
-<area shape="rect" id="node15" href="$sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="307,469,387,499"/>
-<area shape="rect" id="node21" href="$graphe_8h.html" title="Graphes (header)" alt="" coords="267,237,339,267"/>
-<area shape="rect" id="node47" href="$coloration_8h.html" title="Coloration d&#39;un graphe (header)" alt="" coords="597,160,685,189"/>
-<area shape="rect" id="node28" href="$adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)" alt="" coords="635,392,725,421"/>
-<area shape="rect" id="node35" href="$listearete_8h.html" title="Liste d&#39;arêtes (header)" alt="" coords="481,315,567,344"/>
-<area shape="rect" id="node41" href="$arete_8h.html" title="Arêtes (header)" alt="" coords="499,392,560,421"/>
+<area shape="rect" id="node3" href="$parcours_8h.html" title="Parcours d&#39;un graphe (header)" alt="" coords="385,83,468,112"/>
+<area shape="rect" id="node9" href="$base_8h.html" title="Base (header)" alt="" coords="133,547,195,576"/>
+<area shape="rect" id="node17" href="$sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="228,469,308,499"/>
+<area shape="rect" id="node23" href="$graphe_8h.html" title="Graphes (header)" alt="" coords="392,237,464,267"/>
+<area shape="rect" id="node49" href="$coloration_8h.html" title="Coloration d&#39;un graphe (header)" alt="" coords="343,160,431,189"/>
+<area shape="rect" id="node30" href="$adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)" alt="" coords="655,392,745,421"/>
+<area shape="rect" id="node37" href="$listearete_8h.html" title="Liste d&#39;arêtes (header)" alt="" coords="385,315,471,344"/>
+<area shape="rect" id="node43" href="$arete_8h.html" title="Arêtes (header)" alt="" coords="397,392,459,421"/>
 </map>

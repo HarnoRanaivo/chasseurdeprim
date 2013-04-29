@@ -1,10 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node7" href="$base_8h.html" title="Base (header)" alt="" coords="631,469,692,499"/>
-<area shape="rect" id="node13" href="$sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="485,392,565,421"/>
-<area shape="rect" id="node19" href="$graphe_8h.html" title="Graphes (header)" alt="" coords="315,160,387,189"/>
-<area shape="rect" id="node39" href="$arete_8h.html" title="Arêtes (header)" alt="" coords="816,315,877,344"/>
-<area shape="rect" id="node45" href="$coloration_8h.html" title="Coloration d&#39;un graphe (header)" alt="" coords="397,83,485,112"/>
-<area shape="rect" id="node52" href="$filearetetriee_8h.html" title="File triée d&#39;arêtes (header)" alt="" coords="749,160,853,189"/>
-<area shape="rect" id="node26" href="$adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)" alt="" coords="195,315,285,344"/>
-<area shape="rect" id="node33" href="$listearete_8h.html" title="Liste d&#39;arêtes (header)" alt="" coords="628,237,713,267"/>
+<area shape="rect" id="node7" href="$base_8h.html" title="Base (header)" alt="" coords="721,469,783,499"/>
+<area shape="rect" id="node15" href="$sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="459,392,539,421"/>
+<area shape="rect" id="node21" href="$graphe_8h.html" title="Graphes (header)" alt="" coords="340,160,412,189"/>
+<area shape="rect" id="node41" href="$arete_8h.html" title="Arêtes (header)" alt="" coords="765,315,827,344"/>
+<area shape="rect" id="node47" href="$coloration_8h.html" title="Coloration d&#39;un graphe (header)" alt="" coords="475,83,563,112"/>
+<area shape="rect" id="node54" href="$filearetetriee_8h.html" title="File triée d&#39;arêtes (header)" alt="" coords="651,160,755,189"/>
+<area shape="rect" id="node28" href="$adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)" alt="" coords="144,315,235,344"/>
+<area shape="rect" id="node35" href="$listearete_8h.html" title="Liste d&#39;arêtes (header)" alt="" coords="660,237,745,267"/>
 </map>

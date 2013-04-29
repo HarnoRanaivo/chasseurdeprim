@@ -110,57 +110,58 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00016"></a>00016 <span class="preprocessor">#include &lt;stdlib.h&gt;</span>
 <a name="l00017"></a>00017 <span class="preprocessor">#include &lt;stdio.h&gt;</span>
 <a name="l00018"></a>00018 <span class="preprocessor">#include &lt;string.h&gt;</span>
-<a name="l00019"></a>00019 
-<a name="l00024"></a><a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309">00024</a> <span class="keyword">enum</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a>
-<a name="l00025"></a>00025 {
-<a name="l00026"></a><a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">00026</a>     <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>,   
-<a name="l00027"></a><a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">00027</a>     <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>    
-<a name="l00028"></a>00028 };
-<a name="l00029"></a>00029 
-<a name="l00033"></a><a class="code" href="base_8h.html#a1dd386e0aa6c8c13c1f9d1896d7fd75c">00033</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a>;
-<a name="l00034"></a>00034 
-<a name="l00038"></a><a class="code" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683">00038</a> <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683" title="Entiers naturels.">Nat</a>;
-<a name="l00039"></a>00039 
-<a name="l00043"></a><a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c">00043</a> <span class="keyword">typedef</span> <span class="keywordtype">int</span> <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a>;
-<a name="l00044"></a>00044 
-<a name="l00048"></a><a class="code" href="base_8h.html#a2e8f87cefc0f761e3eb7a268e64b8e2a">00048</a> <span class="keyword">typedef</span> <span class="keywordtype">float</span> <a class="code" href="base_8h.html#a2e8f87cefc0f761e3eb7a268e64b8e2a" title="Nombres réels.">Reel</a>;
-<a name="l00049"></a>00049 
-<a name="l00053"></a><a class="code" href="base_8h.html#ace7c149023aead181f2ed07a0fc2d8ab">00053</a> <span class="keyword">typedef</span> <span class="keywordtype">float</span> <a class="code" href="base_8h.html#ace7c149023aead181f2ed07a0fc2d8ab" title="Nombres rationnels.">Rat</a>;
-<a name="l00054"></a>00054 
-<a name="l00058"></a><a class="code" href="base_8h.html#a243ab5e172a862312b8aa5a737f989a1">00058</a> <span class="keyword">typedef</span> <span class="keywordtype">char</span> <a class="code" href="base_8h.html#a243ab5e172a862312b8aa5a737f989a1" title="Caractères.">Car</a>;
-<a name="l00059"></a>00059 
-<a name="l00060"></a>00060 <span class="comment">/* Simplement pour différencier un Caractère d&#39;une Chaîne.</span>
-<a name="l00061"></a>00061 <span class="comment"> * Pas de pointeur dans le typedef : pouvoir utiliser le mot-clé const correctement.</span>
-<a name="l00062"></a>00062 <span class="comment"> */</span>
-<a name="l00066"></a><a class="code" href="base_8h.html#a56ae010f6d70d2740d8a75c28cf8bce4">00066</a> <span class="keyword">typedef</span> <a class="code" href="base_8h.html#a243ab5e172a862312b8aa5a737f989a1" title="Caractères.">Car</a> <a class="code" href="base_8h.html#a56ae010f6d70d2740d8a75c28cf8bce4" title="Chaîne de caractères.">Chaine</a>;
-<a name="l00067"></a>00067 
-<a name="l00072"></a><a class="code" href="base_8h.html#a37c11e7c4dd32c6cedfd023e9457d192">00072</a> <span class="preprocessor">#define OP(T) \</span>
-<a name="l00073"></a>00073 <span class="preprocessor">static inline Bool T ## _eq(T a, T b) { return a == b ? VRAI : FAUX; } \</span>
-<a name="l00074"></a>00074 <span class="preprocessor">static inline Bool T ## _neq(T a, T b) { return !T ## _eq(a, b); } \</span>
-<a name="l00075"></a>00075 <span class="preprocessor">static inline Bool T ## _inf(T a, T b) { return a &lt; b ? VRAI : FAUX; } \</span>
-<a name="l00076"></a>00076 <span class="preprocessor">static inline Bool T ## _supT(T a, T b) { return !T ## _inf(a, b); } \</span>
-<a name="l00077"></a>00077 <span class="preprocessor">static inline Bool T ## _infeq(T a, T b) { return a &lt;= b ? VRAI : FAUX; } \</span>
-<a name="l00078"></a>00078 <span class="preprocessor">static inline Bool T ## _supeq(T a, T b) { return a &gt;= b ? VRAI : FAUX; } \</span>
-<a name="l00079"></a>00079 <span class="preprocessor">static inline T T ## _min(T a, T b) { return a &lt;= b ? a : b; } \</span>
-<a name="l00080"></a>00080 <span class="preprocessor">static inline T T ## _max(T a, T b) { return a &gt;= b ? a : b; }</span>
-<a name="l00081"></a>00081 <span class="preprocessor"></span>
-<a name="l00082"></a>00082 <a class="code" href="base_8h.html#a37c11e7c4dd32c6cedfd023e9457d192" title="Opérations de base pour un type donné.">OP</a>(<span class="keywordtype">int</span>)
-<a name="l00083"></a>00083 <a class="code" href="base_8h.html#a37c11e7c4dd32c6cedfd023e9457d192" title="Opérations de base pour un type donné.">OP</a>(<span class="keywordtype">float</span>)
-<a name="l00084"></a>00084 <a class="code" href="base_8h.html#a37c11e7c4dd32c6cedfd023e9457d192" title="Opérations de base pour un type donné.">OP</a>(<a class="code" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683" title="Entiers naturels.">Nat</a>)
-<a name="l00085"></a>00085 <a class="code" href="base_8h.html#a37c11e7c4dd32c6cedfd023e9457d192" title="Opérations de base pour un type donné.">OP</a>(<a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a>)
-<a name="l00086"></a>00086 <a class="code" href="base_8h.html#a37c11e7c4dd32c6cedfd023e9457d192" title="Opérations de base pour un type donné.">OP</a>(<a class="code" href="base_8h.html#a2e8f87cefc0f761e3eb7a268e64b8e2a" title="Nombres réels.">Reel</a>)
-<a name="l00087"></a>00087 <a class="code" href="base_8h.html#a37c11e7c4dd32c6cedfd023e9457d192" title="Opérations de base pour un type donné.">OP</a>(<a class="code" href="base_8h.html#ace7c149023aead181f2ed07a0fc2d8ab" title="Nombres rationnels.">Rat</a>)
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089 <span class="preprocessor">#undef OP</span>
-<a name="l00090"></a>00090 <span class="preprocessor"></span>
-<a name="l00095"></a><a class="code" href="base_8h.html#aed83343b5b2cdb908229b4fac27cd282">00095</a> <span class="preprocessor">#define MALLOC(P) malloc(sizeof *(P))</span>
-<a name="l00096"></a>00096 <span class="preprocessor"></span>
-<a name="l00102"></a><a class="code" href="base_8h.html#a66f86b7a62cf1c6c9afeaa47c610b750">00102</a> <span class="preprocessor">#define MALLOCN(P, N) malloc((N) * sizeof *(P))</span>
-<a name="l00103"></a>00103 <span class="preprocessor"></span>
-<a name="l00109"></a><a class="code" href="base_8h.html#af922fd327c2210d0370347b9fff379a6">00109</a> <span class="preprocessor">#define CALLOC(P, N) calloc((N), sizeof *(P))</span>
-<a name="l00110"></a>00110 <span class="preprocessor"></span>
-<a name="l00116"></a><a class="code" href="base_8h.html#a0ea8b2de16c878e04660c90bb72be010">00116</a> <span class="preprocessor">#define REALLOC(P, N) realloc((P), (N) * sizeof *(P))</span>
-<a name="l00117"></a>00117 <span class="preprocessor"></span>
+<a name="l00019"></a>00019 <span class="preprocessor">#include &lt;ctype.h&gt;</span>
+<a name="l00020"></a>00020 
+<a name="l00025"></a><a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309">00025</a> <span class="keyword">enum</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a>
+<a name="l00026"></a>00026 {
+<a name="l00027"></a><a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">00027</a>     <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>,   
+<a name="l00028"></a><a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">00028</a>     <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>    
+<a name="l00029"></a>00029 };
+<a name="l00030"></a>00030 
+<a name="l00034"></a><a class="code" href="base_8h.html#a1dd386e0aa6c8c13c1f9d1896d7fd75c">00034</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a>;
+<a name="l00035"></a>00035 
+<a name="l00039"></a><a class="code" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683">00039</a> <span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683" title="Entiers naturels.">Nat</a>;
+<a name="l00040"></a>00040 
+<a name="l00044"></a><a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c">00044</a> <span class="keyword">typedef</span> <span class="keywordtype">int</span> <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a>;
+<a name="l00045"></a>00045 
+<a name="l00049"></a><a class="code" href="base_8h.html#a2e8f87cefc0f761e3eb7a268e64b8e2a">00049</a> <span class="keyword">typedef</span> <span class="keywordtype">float</span> <a class="code" href="base_8h.html#a2e8f87cefc0f761e3eb7a268e64b8e2a" title="Nombres réels.">Reel</a>;
+<a name="l00050"></a>00050 
+<a name="l00054"></a><a class="code" href="base_8h.html#ace7c149023aead181f2ed07a0fc2d8ab">00054</a> <span class="keyword">typedef</span> <span class="keywordtype">float</span> <a class="code" href="base_8h.html#ace7c149023aead181f2ed07a0fc2d8ab" title="Nombres rationnels.">Rat</a>;
+<a name="l00055"></a>00055 
+<a name="l00059"></a><a class="code" href="base_8h.html#a243ab5e172a862312b8aa5a737f989a1">00059</a> <span class="keyword">typedef</span> <span class="keywordtype">char</span> <a class="code" href="base_8h.html#a243ab5e172a862312b8aa5a737f989a1" title="Caractères.">Car</a>;
+<a name="l00060"></a>00060 
+<a name="l00061"></a>00061 <span class="comment">/* Simplement pour différencier un Caractère d&#39;une Chaîne.</span>
+<a name="l00062"></a>00062 <span class="comment"> * Pas de pointeur dans le typedef : pouvoir utiliser le mot-clé const correctement.</span>
+<a name="l00063"></a>00063 <span class="comment"> */</span>
+<a name="l00067"></a><a class="code" href="base_8h.html#a56ae010f6d70d2740d8a75c28cf8bce4">00067</a> <span class="keyword">typedef</span> <a class="code" href="base_8h.html#a243ab5e172a862312b8aa5a737f989a1" title="Caractères.">Car</a> <a class="code" href="base_8h.html#a56ae010f6d70d2740d8a75c28cf8bce4" title="Chaîne de caractères.">Chaine</a>;
+<a name="l00068"></a>00068 
+<a name="l00073"></a><a class="code" href="base_8h.html#a37c11e7c4dd32c6cedfd023e9457d192">00073</a> <span class="preprocessor">#define OP(T) \</span>
+<a name="l00074"></a>00074 <span class="preprocessor">static inline Bool T ## _eq(T a, T b) { return a == b ? VRAI : FAUX; } \</span>
+<a name="l00075"></a>00075 <span class="preprocessor">static inline Bool T ## _neq(T a, T b) { return !T ## _eq(a, b); } \</span>
+<a name="l00076"></a>00076 <span class="preprocessor">static inline Bool T ## _inf(T a, T b) { return a &lt; b ? VRAI : FAUX; } \</span>
+<a name="l00077"></a>00077 <span class="preprocessor">static inline Bool T ## _supT(T a, T b) { return !T ## _inf(a, b); } \</span>
+<a name="l00078"></a>00078 <span class="preprocessor">static inline Bool T ## _infeq(T a, T b) { return a &lt;= b ? VRAI : FAUX; } \</span>
+<a name="l00079"></a>00079 <span class="preprocessor">static inline Bool T ## _supeq(T a, T b) { return a &gt;= b ? VRAI : FAUX; } \</span>
+<a name="l00080"></a>00080 <span class="preprocessor">static inline T T ## _min(T a, T b) { return a &lt;= b ? a : b; } \</span>
+<a name="l00081"></a>00081 <span class="preprocessor">static inline T T ## _max(T a, T b) { return a &gt;= b ? a : b; }</span>
+<a name="l00082"></a>00082 <span class="preprocessor"></span>
+<a name="l00083"></a>00083 <a class="code" href="base_8h.html#a37c11e7c4dd32c6cedfd023e9457d192" title="Opérations de base pour un type donné.">OP</a>(<span class="keywordtype">int</span>)
+<a name="l00084"></a>00084 <a class="code" href="base_8h.html#a37c11e7c4dd32c6cedfd023e9457d192" title="Opérations de base pour un type donné.">OP</a>(<span class="keywordtype">float</span>)
+<a name="l00085"></a>00085 <a class="code" href="base_8h.html#a37c11e7c4dd32c6cedfd023e9457d192" title="Opérations de base pour un type donné.">OP</a>(<a class="code" href="base_8h.html#ace14b382cb20e1aa61ba742ed35b2683" title="Entiers naturels.">Nat</a>)
+<a name="l00086"></a>00086 <a class="code" href="base_8h.html#a37c11e7c4dd32c6cedfd023e9457d192" title="Opérations de base pour un type donné.">OP</a>(<a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a>)
+<a name="l00087"></a>00087 <a class="code" href="base_8h.html#a37c11e7c4dd32c6cedfd023e9457d192" title="Opérations de base pour un type donné.">OP</a>(<a class="code" href="base_8h.html#a2e8f87cefc0f761e3eb7a268e64b8e2a" title="Nombres réels.">Reel</a>)
+<a name="l00088"></a>00088 <a class="code" href="base_8h.html#a37c11e7c4dd32c6cedfd023e9457d192" title="Opérations de base pour un type donné.">OP</a>(<a class="code" href="base_8h.html#ace7c149023aead181f2ed07a0fc2d8ab" title="Nombres rationnels.">Rat</a>)
+<a name="l00089"></a>00089 
+<a name="l00090"></a>00090 <span class="preprocessor">#undef OP</span>
+<a name="l00091"></a>00091 <span class="preprocessor"></span>
+<a name="l00096"></a><a class="code" href="base_8h.html#aed83343b5b2cdb908229b4fac27cd282">00096</a> <span class="preprocessor">#define MALLOC(P) malloc(sizeof *(P))</span>
+<a name="l00097"></a>00097 <span class="preprocessor"></span>
+<a name="l00103"></a><a class="code" href="base_8h.html#a66f86b7a62cf1c6c9afeaa47c610b750">00103</a> <span class="preprocessor">#define MALLOCN(P, N) malloc((N) * sizeof *(P))</span>
+<a name="l00104"></a>00104 <span class="preprocessor"></span>
+<a name="l00110"></a><a class="code" href="base_8h.html#af922fd327c2210d0370347b9fff379a6">00110</a> <span class="preprocessor">#define CALLOC(P, N) calloc((N), sizeof *(P))</span>
+<a name="l00111"></a>00111 <span class="preprocessor"></span>
+<a name="l00117"></a><a class="code" href="base_8h.html#a0ea8b2de16c878e04660c90bb72be010">00117</a> <span class="preprocessor">#define REALLOC(P, N) realloc((P), (N) * sizeof *(P))</span>
+<a name="l00118"></a>00118 <span class="preprocessor"></span>
 <a name="l00126"></a>00126 <span class="keyword">static</span> <span class="keyword">inline</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> rechercherMot(<span class="keyword">const</span> <span class="keywordtype">char</span> * mot, <span class="keyword">const</span> <span class="keywordtype">char</span> * <span class="keyword">const</span> * tableau)
 <a name="l00127"></a>00127 {
 <a name="l00128"></a>00128     <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; tableau[i] != NULL; i++)
@@ -181,7 +182,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00149"></a>00149 
 <a name="l00150"></a>00150     <span class="keywordflow">return</span> n;
 <a name="l00151"></a>00151 }
-<a name="l00152"></a>00152 <span class="preprocessor">#endif </span><span class="comment">/* __BASE_H */</span>
+<a name="l00152"></a>00152 
+<a name="l00158"></a>00158 <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> chaineEnMinuscules(<span class="keywordtype">char</span> * chaine)
+<a name="l00159"></a>00159 {
+<a name="l00160"></a>00160     <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; chaine[i] != <span class="charliteral">&#39;\0&#39;</span>; i++)
+<a name="l00161"></a>00161         chaine[i] = tolower(chaine[i]);
+<a name="l00162"></a>00162 }
+<a name="l00163"></a>00163 
+<a name="l00164"></a>00164 <span class="preprocessor">#endif </span><span class="comment">/* __BASE_H */</span>
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -200,7 +208,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Dimanche Avril 28 2013 18:05:22 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Lundi Avril 29 2013 10:27:16 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

@@ -14,7 +14,7 @@ vpath main bin/
 vpath %.a lib/
 
 main : main.o libgraphes.a libprim.a prompt.o edition.o | bin
-	$(CC) $(CFLAGS) $(LFLAGS) -o $(BPATH)main $(OPATH)main.o $(OPATH)prompt.o $(OPATH)edition.o -lprim -lgraphes
+	$(CC) $(CFLAGS) $(LFLAGS) -o $(BPATH)chasseurdeprim $(OPATH)main.o $(OPATH)prompt.o $(OPATH)edition.o -lprim -lgraphes
 
 edition.o : edition.c edition.h base.h graphe.h io.h parcours.h
 prompt.o : prompt.c prompt.h base.h graphe.h grapheconnexe.h io.h prim.h parcours.h edition.h

@@ -431,7 +431,7 @@ Donnees * traiterLigneCommande(const char * ligne, PromptCommande pc, Donnees * 
     return d;
 }
 
-void prompt(void)
+void afficherPrompt(void)
 {
     Donnees * d = MALLOC(d);
 

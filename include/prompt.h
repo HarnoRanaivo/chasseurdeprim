@@ -96,6 +96,6 @@ Donnees * traiterLigneCommande(const char * ligne, PromptCommande pc, Donnees * 
 /**
  * \brief Afficher un prompt et gérer les entrées de l'utilisateur.
  */
-void prompt(void);
+void afficherPrompt(void);
 
 #endif /* __PROMPT_H */

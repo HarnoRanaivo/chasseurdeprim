@@ -18,6 +18,7 @@ static Bool printDebut(FILE * const fichier)
                         "\\title{Chasseur de Prim}\n"
                         "\\author{Boba Fett}\n"
                         "\\begin{document}\n"
+                        "\\chapter{Graphe}\n"
                         );
     if (succes < 0)
     {
@@ -119,7 +120,10 @@ int gGenererLatex(const Graphe * g, const Graphe * a, const char * destination)
         erreurs = printDebut(fichier) == VRAI ? VRAI : erreurs;
         erreurs = printGraphe(g, fichier) == VRAI ? VRAI : erreurs;
         if (a != NULL)
+        {
+            fprintf(fichier, "\n\n\\chapter{Arbre couvrant minimum}\n");
             erreurs = printGraphe(a, fichier) == VRAI ? VRAI : erreurs;
+        }
         erreurs = printFin(fichier) == VRAI ? VRAI : erreurs;
 
         fclose(fichier);

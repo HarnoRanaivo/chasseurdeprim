@@ -16,6 +16,8 @@ static const char * ERR_ARG = "Arguments invalides.\n";
 static const char * ERR_SOM = "Ce sommet n'existe pas.\n";
 static const char * ERR_ART = "Cette arête n'existe pas.\n";
 static const char * ERR_VID = "Le graphe est vide.\n";
+static const char * ERR_VOI = "Ce sommet n'a pas de voisins.\n";
+static const char * ERR_AIN = "Ce sommet n'a pas d'arêtes incidentes.\n";
 
 /* Le membre commande de la dernière structure doit absolument contenir
  * ED_INCONNU. */
@@ -248,7 +250,12 @@ Graphe * traiterLigneEdition(const char * ligne, EditCommande ec, Graphe * g)
                 || sscanf(ligne, "%*s %99s", buffer1) != 1)
                 printf("%s", ERR_ARG);
             else if (gExisteSommet(g, buffer1))
-                afficherVoisins(g, buffer1);
+            {
+                if (gAArete(g, buffer1))
+                    afficherVoisins(g, buffer1);
+                else
+                    printf("%s", ERR_VOI);
+            }
             else
                 printf("%s", ERR_SOM);
             break;
@@ -258,7 +265,12 @@ Graphe * traiterLigneEdition(const char * ligne, EditCommande ec, Graphe * g)
                 || sscanf(ligne, "%*s %99s", buffer1) != 1)
                 printf("%s", ERR_ARG);
             else if (gExisteSommet(g, buffer1))
-                afficherAdjacence(g, buffer1);
+            {
+                if (gAArete(g, buffer1))
+                    afficherAdjacence(g, buffer1);
+                else
+                    printf("%s", ERR_AIN);
+            }
             else
                 printf("%s", ERR_SOM);
             break;

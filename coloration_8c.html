@@ -222,6 +222,8 @@ Fonctions</h2></td></tr>
             cg0-&gt;<a class="code" href="structCouleursGraphe.html#a2604b640c9510297bf5f01ab0578491d">suivant</a> = cg;
             cg = cg0;
         }
+        <span class="keywordflow">else</span>
+            perror(<span class="stringliteral">&quot;malloc&quot;</span>);
     }
 
     <span class="keywordflow">return</span> cg;
@@ -274,7 +276,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="pre"><dt><b>Précondition:</b></dt><dd>cgExisteSommmet(cg) </dd></dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="coloration_8h.html#a297c7f13df924dd6c731cb40f9fff63c" title="Coloration des sommets d&#39;un graphe.">Couleur</a> de <em>s</em>. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00124">124</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00126">126</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> <a class="code" href="structCouleursGraphe.html#aa2bf64f0592dbade0bcc1dcd4b7c8a90" title="Couleur du Sommet en tête de liste.">cgCouleurTete</a>(<a class="code" href="structCouleursGraphe.html#a3b5e341c98814446f820108cb83b213a" title="Pointeur vers le sommet s.">cgPSommet</a>(cg, s));
 }
@@ -315,7 +317,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="pre"><dt><b>Précondition:</b></dt><dd>!cgEstVide(cg) </dd></dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>Couleur. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00119">119</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00121">121</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> cg-&gt;<a class="code" href="structCouleursGraphe.html#a8ee13ba7bf13d1d0a0d512b4fdbf7835">couleur</a>;
 }
@@ -347,7 +349,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> si la liste est vide, <a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a> sinon.</dd></dl>
 <p>Une liste <a class="el" href="structCouleursGraphe.html" title="Liste des couleurs des sommets d&#39;un graphe.">CouleursGraphe</a> <em>cg</em> est vide si <em>cg</em> pointe vers <em>NULL</em>. </p>
 
-<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00094">94</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00096">96</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> cg == NULL;
 }
@@ -389,7 +391,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 </dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>VRAI si le sommet existe, FAUX sinon. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00099">99</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00101">101</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (<a class="code" href="structCouleursGraphe.html#ad7371656063846775173b8f7c2aba8fb" title="Test de vacuité d&#39;une liste de couleurs.">cgEstVide</a>(cg)) <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(<a class="code" href="structCouleursGraphe.html#a6c295e49a96d150e721f8f24f688987b" title="Sommet en tête de liste.">cgSommetTete</a>(cg), s)) <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
@@ -432,7 +434,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>(pointeur vers) <a class="el" href="structCouleursGraphe.html" title="Liste des couleurs des sommets d&#39;un graphe.">CouleursGraphe</a>.</dd></dl>
 <p>Retourne une liste <a class="el" href="structCouleursGraphe.html" title="Liste des couleurs des sommets d&#39;un graphe.">CouleursGraphe</a> contenant tous les <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> du <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> <em>g</em>, et initialisés à <a class="el" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a35653913ced93d8199f0378ec538a0c7">BLANC</a>. </p>
 
-<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00089">89</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00091">91</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> cgInitAux(<a class="code" href="structGraphe.html#a1498ef589ec604380afb2e6c3752cf06" title="Nouvelle liste.">cgNouv</a>(), g);
 }
@@ -472,7 +474,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 </dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd><em>NULL</em> </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00191">191</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00193">193</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (<a class="code" href="structCouleursGraphe.html#ad7371656063846775173b8f7c2aba8fb" title="Test de vacuité d&#39;une liste de couleurs.">cgEstVide</a>(cg)) <span class="keywordflow">return</span> NULL;
     <span class="keywordflow">else</span> <span class="keywordflow">return</span> <a class="code" href="structCouleursGraphe.html#aa23bf05908ea1185cb2248b833c68d6e" title="Libérer une liste de couleurs.">cgLiberer</a>(<a class="code" href="structCouleursGraphe.html#ae38ccdfcf921634bef31ccfdd212eade" title="Supprimer la tête de liste.">cgSupprimerTete</a>(cg));
@@ -532,7 +534,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>(pointeur vers) <a class="el" href="structCouleursGraphe.html" title="Liste des couleurs des sommets d&#39;un graphe.">CouleursGraphe</a>.</dd></dl>
 <p>Modifie la <a class="el" href="coloration_8h.html#a297c7f13df924dd6c731cb40f9fff63c" title="Coloration des sommets d&#39;un graphe.">Couleur</a> du <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <em>s</em> par <em>c</em>, si le <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> existe dans <em>cg</em>. </p>
 
-<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00073">73</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00075">75</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="structCouleursGraphe.html" title="Liste des couleurs des sommets d&#39;un graphe.">CouleursGraphe</a> * <span class="keyword">const</span> cg0 = <a class="code" href="structCouleursGraphe.html#a3b5e341c98814446f820108cb83b213a" title="Pointeur vers le sommet s.">cgPSommet</a>(cg, s);
 
@@ -577,7 +579,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 </dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>Nombre de <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a>. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00157">157</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00159">159</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> cgNombreSommetsAux(cg, 0);
 }
@@ -608,7 +610,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 </dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>Nombre de <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <a class="el" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a35653913ced93d8199f0378ec538a0c7">BLANC</a>. ommets blancs. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00179">179</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00181">181</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> cgNombreSommetsCouleur(cg, <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a35653913ced93d8199f0378ec538a0c7">BLANC</a>, 0);
 }
@@ -639,7 +641,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 </dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>Nombre de <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <a class="el" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a3e331dfdc8ccad697e22ffbd63d69ce0">GRIS</a>. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00174">174</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00176">176</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> cgNombreSommetsCouleur(cg, <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a3e331dfdc8ccad697e22ffbd63d69ce0">GRIS</a>, 0);
 }
@@ -670,7 +672,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 </dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>Nombre de <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <a class="el" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a59e3323a198f0162330111165caaf367">NOIR</a>. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00169">169</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00171">171</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> cgNombreSommetsCouleur(cg, <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a59e3323a198f0162330111165caaf367">NOIR</a>, 0);
 }
@@ -726,7 +728,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 </dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>Premier <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <a class="el" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a35653913ced93d8199f0378ec538a0c7">BLANC</a>, <em>NULL</em> s'il n'y en a pas. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00146">146</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00148">148</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> cgPremierSommetCouleur(cg, <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a35653913ced93d8199f0378ec538a0c7">BLANC</a>);
 }
@@ -757,7 +759,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 </dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>Premier <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <a class="el" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a3e331dfdc8ccad697e22ffbd63d69ce0">GRIS</a>, <em>NULL</em> s'il n'y en a pas. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00141">141</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00143">143</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> cgPremierSommetCouleur(cg, <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a3e331dfdc8ccad697e22ffbd63d69ce0">GRIS</a>);
 }
@@ -788,7 +790,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 </dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>Premier <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <a class="el" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a59e3323a198f0162330111165caaf367">NOIR</a>, <em>NULL</em> s'il n'y en a pas. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00136">136</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00138">138</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> cgPremierSommetCouleur(cg, <a class="code" href="coloration_8h.html#aa304d0ca681f782b1d7735da33037dd7a59e3323a198f0162330111165caaf367">NOIR</a>);
 }
@@ -830,7 +832,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 </dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>(pointeur vers) le sommet dans la liste, <em>NULL</em> s'il n'existe pas. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00184">184</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00186">186</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (<a class="code" href="structCouleursGraphe.html#ad7371656063846775173b8f7c2aba8fb" title="Test de vacuité d&#39;une liste de couleurs.">cgEstVide</a>(cg)) <span class="keywordflow">return</span> NULL;
     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(<a class="code" href="structCouleursGraphe.html#a6c295e49a96d150e721f8f24f688987b" title="Sommet en tête de liste.">cgSommetTete</a>(cg), s)) <span class="keywordflow">return</span> (<a class="code" href="structCouleursGraphe.html" title="Liste des couleurs des sommets d&#39;un graphe.">CouleursGraphe</a> *)cg;
@@ -873,7 +875,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="pre"><dt><b>Précondition:</b></dt><dd>!cgEstVide(cg) </dd></dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>Sommet. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00114">114</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00116">116</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> cg-&gt;<a class="code" href="structCouleursGraphe.html#aa9b8f4bd6a61a0c4e857dd83ac9ef6d3">sommet</a>;
 }
@@ -905,7 +907,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>(pointeur vers) le sommet suivant dans la liste.</dd></dl>
 <p>Retourne un pointeur vers l'élément suivant dans la liste <em>cg</em>. Peut retourner une liste <a class="el" href="structCouleursGraphe.html" title="Liste des couleurs des sommets d&#39;un graphe.">CouleursGraphe</a> vide. </p>
 
-<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00106">106</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00108">108</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (<a class="code" href="structCouleursGraphe.html#ad7371656063846775173b8f7c2aba8fb" title="Test de vacuité d&#39;une liste de couleurs.">cgEstVide</a>(cg))
         <span class="keywordflow">return</span> NULL;
@@ -960,7 +962,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>(pointeur vers) <a class="el" href="structCouleursGraphe.html" title="Liste des couleurs des sommets d&#39;un graphe.">CouleursGraphe</a>.</dd></dl>
 <p>Supprime le <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <em>s</em>, si celui-ci existe. Si le <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <em>s</em> n'existe pas, <em>cg</em> reste intact. </p>
 
-<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00058">58</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00060">60</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (<a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(<a class="code" href="structCouleursGraphe.html#a6c295e49a96d150e721f8f24f688987b" title="Sommet en tête de liste.">cgSommetTete</a>(cg), s))
         <span class="keywordflow">return</span> <a class="code" href="structCouleursGraphe.html#ae38ccdfcf921634bef31ccfdd212eade" title="Supprimer la tête de liste.">cgSupprimerTete</a>(cg);
@@ -1011,7 +1013,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>(pointeur vers) <a class="el" href="structCouleursGraphe.html" title="Liste des couleurs des sommets d&#39;un graphe.">CouleursGraphe</a>.</dd></dl>
 <p>Supprime la tête de liste, si celle-ci n'est pas vide. Ne fait rien si la liste est déjà vide. </p>
 
-<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00037">37</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="coloration_8c_source.html#l00039">39</a> du fichier <a class="el" href="coloration_8c_source.html">coloration.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (!<a class="code" href="structCouleursGraphe.html#ad7371656063846775173b8f7c2aba8fb" title="Test de vacuité d&#39;une liste de couleurs.">cgEstVide</a>(cg))
     {
@@ -1053,7 +1055,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Avril 29 2013 11:44:56 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mercredi Mai 1 2013 13:36:14 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

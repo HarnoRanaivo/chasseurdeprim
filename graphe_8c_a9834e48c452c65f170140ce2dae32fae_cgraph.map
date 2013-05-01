@@ -1,8 +1,9 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe." alt="" coords="168,5,291,35"/>
-<area shape="rect" id="node5" href="$sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement." alt="" coords="176,59,283,88"/>
-<area shape="rect" id="node7" href="$structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets." alt="" coords="152,112,307,141"/>
-<area shape="rect" id="node9" href="$structListeAdjacence.html#a12dbe07676e59a2aafe10eb964d07798" title="Libérer une liste d&#39;arêtes." alt="" coords="151,165,308,195"/>
-<area shape="rect" id="node11" href="$structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste." alt="" coords="123,219,336,248"/>
-<area shape="rect" id="node13" href="$structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe." alt="" coords="171,272,288,301"/>
+<area shape="rect" id="node3" href="$structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe." alt="" coords="167,5,292,35"/>
+<area shape="rect" id="node5" href="$structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe." alt="" coords="168,59,291,88"/>
+<area shape="rect" id="node7" href="$sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement." alt="" coords="176,112,283,141"/>
+<area shape="rect" id="node9" href="$structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets." alt="" coords="152,165,307,195"/>
+<area shape="rect" id="node11" href="$structListeAdjacence.html#a12dbe07676e59a2aafe10eb964d07798" title="Libérer une liste d&#39;arêtes." alt="" coords="151,219,308,248"/>
+<area shape="rect" id="node13" href="$structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste." alt="" coords="123,272,336,301"/>
+<area shape="rect" id="node15" href="$structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe." alt="" coords="171,325,288,355"/>
 </map>

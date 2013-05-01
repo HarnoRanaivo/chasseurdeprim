@@ -9,8 +9,8 @@
 <area shape="rect" id="node17" href="$structCouleursGraphe.html#ace215968cb4c8f62feaba64423ae7a86" title="Premier Sommet GRIS dans cg." alt="" coords="137,379,393,408"/>
 <area shape="rect" id="node19" href="$structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet." alt="" coords="171,432,360,461"/>
 <area shape="rect" id="node21" href="$structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide." alt="" coords="180,485,351,515"/>
-<area shape="rect" id="node23" href="$structListeAdjacence.html#a36c937228d06a462ff42df578b3dbe0d" title="Extrémité de l&#39;arête en tête de liste." alt="" coords="167,539,364,568"/>
-<area shape="rect" id="node25" href="$structCouleursGraphe.html#a8f24db15b7e11b1871679300af373a4d" title="Couleur du Sommet s." alt="" coords="149,592,381,621"/>
-<area shape="rect" id="node27" href="$structCouleursGraphe.html#aa23bf05908ea1185cb2248b833c68d6e" title="Libérer une liste de couleurs." alt="" coords="177,645,353,675"/>
-<area shape="rect" id="node29" href="$structListeAdjacence.html#a3ff1a663a7b0eb00e5049d2891e2b18a" title="Arête suivante." alt="" coords="192,699,339,728"/>
+<area shape="rect" id="node23" href="$structListeAdjacence.html#a3ff1a663a7b0eb00e5049d2891e2b18a" title="Arête suivante." alt="" coords="192,539,339,568"/>
+<area shape="rect" id="node25" href="$structListeAdjacence.html#a36c937228d06a462ff42df578b3dbe0d" title="Extrémité de l&#39;arête en tête de liste." alt="" coords="167,592,364,621"/>
+<area shape="rect" id="node27" href="$structCouleursGraphe.html#a8f24db15b7e11b1871679300af373a4d" title="Couleur du Sommet s." alt="" coords="149,645,381,675"/>
+<area shape="rect" id="node29" href="$structCouleursGraphe.html#aa23bf05908ea1185cb2248b833c68d6e" title="Libérer une liste de couleurs." alt="" coords="177,699,353,728"/>
 </map>

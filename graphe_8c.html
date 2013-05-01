@@ -205,7 +205,7 @@ Fonctions</h2></td></tr>
 </dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>(booléen) <a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> si le sommet existe et a des voisins dans le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>, <a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a> sinon. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00152">152</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00154">154</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> !<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(<a class="code" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet.">gAdjacenceSommet</a>(g, s));
 }
@@ -257,7 +257,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>Liste d'adjacence du sommet, s'il existe.</dd></dl>
 <p>Retourne la <a class="el" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> associée au <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <em>s</em>. Attention : si ce <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> n'a pas de voisins, la <a class="el" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> sera vide. </p>
 
-<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00162">162</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00164">164</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * <span class="keyword">const</span> g0 = <a class="code" href="structGraphe.html#a301f937afb679ca1a158308c085fee43" title="Obtenir Un sommet d&#39;un Graphe.">gPSommet</a>(g, s);
 
@@ -304,7 +304,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>Liste d'ajacence de la tête.</dd></dl>
 <p>Retourne la <a class="el" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> associée au <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> en tête de liste. Attention : si ce <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> n'a pas de voisins, la <a class="el" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> sera vide. </p>
 
-<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00140">140</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00142">142</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> g-&gt;<a class="code" href="structGraphe.html#a5492f11dad7b7e9b7b2dfbed15fff767">listeadjacence</a>;
 }
@@ -361,7 +361,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a></dd></dl>
 <p>Ajout d'une arête dans le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> <em>g</em>. Si l'un des <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> n'existe pas encore, il est ajouté avant d'ajouter l'arête. Si l'arête entre <em>a</em> et <em>b</em> existe déjà, ou bien en cas d'erreur lors de l'ajout, le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> reste intact. </p>
 
-<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00035">35</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00037">37</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (!<a class="code" href="structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe.">gExisteArete</a>(g, a, b))
     {
@@ -442,6 +442,8 @@ Voici le graphe d'appel pour cette fonction :</div>
             g0-&gt;<a class="code" href="structGraphe.html#aab27941b38d48cde4960f439405226f3">suivant</a> = g;
             g = g0;
         }
+        <span class="keywordflow">else</span>
+            perror(<span class="stringliteral">&quot;malloc&quot;</span>);
     }
 
     <span class="keywordflow">return</span> g;
@@ -483,7 +485,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>Liste des arêtes.</dd></dl>
 <p>Retourne une <a class="el" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> des arêtes d'un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </p>
 
-<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00252">252</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00254">254</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * aretes = <a class="code" href="structListeArete.html#a4b3acdc91e28dbbd885968b16a05e57e" title="Nouvelle liste d&#39;arêtes.">larNouv</a>();
 
@@ -532,7 +534,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>Copie du <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>.</dd></dl>
 <p>Retourne un nouveau <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> égal au <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> <em>g</em>. </p>
 
-<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00234">234</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00236">236</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * copie = <a class="code" href="structGraphe.html#aaf6e3b452d5d36e54cdebf1f9bdbdb14" title="Nouveau Graphe.">gNouv</a>();
 
@@ -597,7 +599,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> si les Graphes sont identiques, à l'ordre des sommets près, <a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a> sinon.</dd></dl>
 <p>Deux Graphes sont considérés égaux s'ils ont le même nombre de sommets, le même nombre d'arêtes, les mêmes <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> et les mêmes arêtes. L'ordre dans lequel sont ordonnés les <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> ou les arêtes n'a pas d'importance. </p>
 
-<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00226">226</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00228">228</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#ae08239d1436fe3268b62c42ab13470d4" title="Nombre de sommets dans un Graphe.">gNombreSommets</a>(g) != <a class="code" href="structGraphe.html#ae08239d1436fe3268b62c42ab13470d4" title="Nombre de sommets dans un Graphe.">gNombreSommets</a>(h) || <a class="code" href="structGraphe.html#a6f09c58349b36721b241fc1c2bda4121" title="Nombre d&#39;arêtes dans un Graphe.">gNombreAretes</a>(g) != <a class="code" href="structGraphe.html#a6f09c58349b36721b241fc1c2bda4121" title="Nombre d&#39;arêtes dans un Graphe.">gNombreAretes</a>(h))
         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
@@ -641,7 +643,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>(booléen) <a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> si le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> est vide, <a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a> sinon.</dd></dl>
 <p>Le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> est vide si <em>g</em> pointe vers <em>NULL</em>. </p>
 
-<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00122">122</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00124">124</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> g == NULL;
 }
@@ -690,7 +692,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 </dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>(booléen) <a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> si l'arête est dans le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>, <a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a> sinon. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00157">157</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00159">159</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> <a class="code" href="structListeAdjacence.html#a1be47cfef3d6c1a3a8bdf0ca0a1d93d9" title="Vérifie l&#39;existence d&#39;une arête.">lexar</a>(<a class="code" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet.">gAdjacenceSommet</a>(g, a), b);
 }
@@ -741,7 +743,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 </dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>(booléen) <a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> si le <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> est dans le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>, <a class="el" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a> sinon. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00145">145</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00147">147</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe.">gEstVide</a>(g)) <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(<a class="code" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets.">gSommetTete</a>(g), s)) <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
@@ -784,9 +786,9 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>NULL</dd></dl>
 <p>Libère la mémoire occupée par un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> : libère tous les <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> ansi que leurs <a class="el" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a>. </p>
 
-<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00265">265</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00267">267</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
-    <span class="keywordflow">if</span> (g == NULL)
+    <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe.">gEstVide</a>(g))
         <span class="keywordflow">return</span> NULL;
     <span class="keywordflow">else</span>
     {
@@ -804,7 +806,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="graphe_8c_a9834e48c452c65f170140ce2dae32fae_cgraph.png" border="0" usemap="#graphe_8c_a9834e48c452c65f170140ce2dae32fae_cgraph" alt=""/></div>
 <map name="graphe_8c_a9834e48c452c65f170140ce2dae32fae_cgraph" id="graphe_8c_a9834e48c452c65f170140ce2dae32fae_cgraph">
-<area shape="rect" id="node3" href="structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe." alt="" coords="168,5,291,35"/><area shape="rect" id="node5" href="sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement." alt="" coords="176,59,283,88"/><area shape="rect" id="node7" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets." alt="" coords="152,112,307,141"/><area shape="rect" id="node9" href="structListeAdjacence.html#a12dbe07676e59a2aafe10eb964d07798" title="Libérer une liste d&#39;arêtes." alt="" coords="151,165,308,195"/><area shape="rect" id="node11" href="structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste." alt="" coords="123,219,336,248"/><area shape="rect" id="node13" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe." alt="" coords="171,272,288,301"/></map>
+<area shape="rect" id="node3" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe." alt="" coords="167,5,292,35"/><area shape="rect" id="node5" href="structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe." alt="" coords="168,59,291,88"/><area shape="rect" id="node7" href="sommet_8h.html#abc856b04b4711a2764bbef3778e1d8a1" title="Libérer un Sommet qui avait été alloué dynamiquement." alt="" coords="176,112,283,141"/><area shape="rect" id="node9" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets." alt="" coords="152,165,307,195"/><area shape="rect" id="node11" href="structListeAdjacence.html#a12dbe07676e59a2aafe10eb964d07798" title="Libérer une liste d&#39;arêtes." alt="" coords="151,219,308,248"/><area shape="rect" id="node13" href="structListeAdjacence.html#aaaced78cf7b0f2b9b84d11cfb42cea25" title="Liste d&#39;adjacence du sommet en tête de liste." alt="" coords="123,272,336,301"/><area shape="rect" id="node15" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe." alt="" coords="171,325,288,355"/></map>
 </div>
 </p>
 
@@ -860,7 +862,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a></dd></dl>
 <p>Modification du poids de l'arête entre <em>a</em> et <em>b</em>. Si l'arête ou au moins l'un des <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> n'exsite pas, le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> reste intact. </p>
 
-<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00108">108</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00110">110</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe.">gExisteArete</a>(g, a, b))
     {
@@ -909,7 +911,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 </dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>Nombre d'arêtes dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00191">191</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00193">193</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> gNombreAretesAux(g, 0) / 2;
 }
@@ -940,7 +942,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 </dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>Nombre de sommets dans un <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00179">179</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00181">181</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> gNombreSommetsAux(g, 0);
 }
@@ -983,7 +985,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="pre"><dt><b>Précondition:</b></dt><dd>gExisteSommet(g, s) </dd></dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>Nombre de voisins d'un sommet. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00196">196</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00198">198</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * <span class="keyword">const</span> adjacence = <a class="code" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet.">gAdjacenceSommet</a>(g, s);
 
@@ -1072,7 +1074,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="pre"><dt><b>Précondition:</b></dt><dd>gExisteArete(g, a, b) </dd></dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>Poids de l'arête (a, b). </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00206">206</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00208">208</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> <a class="code" href="structListeAdjacence.html#a59b84fdf31dbca03bdc25ba0763d9e84" title="Renvoie le poids d&#39;une arête.">lpoids</a>(<a class="code" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet.">gAdjacenceSommet</a>(g, a), b);
 }
@@ -1124,7 +1126,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>(pointeur vers) Sommet s dans le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>.</dd></dl>
 <p>Pointeur vers l'élément de la liste correspondant au <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <em>s</em>. Retourne <em>NULL</em> si <em>s</em> n'existe pas. </p>
 
-<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00211">211</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00213">213</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe.">gEstVide</a>(g)) <span class="keywordflow">return</span> NULL;
     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="sommet_8h.html#a1b1972e69c3a1800d854ea6c0687e4a7" title="Teste l&#39;égalité entre deux Sommet.">egalSom</a>(<a class="code" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets.">gSommetTete</a>(g), s)) <span class="keywordflow">return</span> (<a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> *)g;
@@ -1167,7 +1169,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="pre"><dt><b>Précondition:</b></dt><dd>!gEstVide(g) </dd></dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a>. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00135">135</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00137">137</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> g-&gt;<a class="code" href="structGraphe.html#aec1abb3b903cd11c4ad5ec6af43a5300">sommet</a>;
 }
@@ -1199,7 +1201,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>(pointeur vers) Élément suivant dans le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>.</dd></dl>
 <p>Pointeur vers l'élément suivant dans le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. S'il n'y a plus de Sommet, retourne <em>NULL</em>. </p>
 
-<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00127">127</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00129">129</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (!<a class="code" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe.">gEstVide</a>(g))
         <span class="keywordflow">return</span> g-&gt;<a class="code" href="structGraphe.html#aab27941b38d48cde4960f439405226f3">suivant</a>;
@@ -1261,7 +1263,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a></dd></dl>
 <p>Suppression de l'arête entre <em>a</em> <em>b</em> dans le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> <em>g</em>. Si l'arête ou au moins l'un des <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> n'existe pas, le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> reste intact. </p>
 
-<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00094">94</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00096">96</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe.">gExisteSommet</a>(g, a) &amp;&amp; <a class="code" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe.">gExisteSommet</a>(g, b))
     {
@@ -1322,7 +1324,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a></dd></dl>
 <p>Suppression du <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <em>s</em> dans le <a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> <em>g</em>. La suppression du <a class="el" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> <em>s</em> implique la suppression de toutes les arêtes incidentes à <em>s</em>. </p>
 
-<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00065">65</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="graphe_8c_source.html#l00067">67</a> du fichier <a class="el" href="graphe_8c_source.html">graphe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">if</span> (!<a class="code" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe.">gEstVide</a>(g) &amp;&amp; <a class="code" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe.">gExisteSommet</a>(g, s))
     {
@@ -1380,7 +1382,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Avril 29 2013 11:44:56 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mercredi Mai 1 2013 13:36:14 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

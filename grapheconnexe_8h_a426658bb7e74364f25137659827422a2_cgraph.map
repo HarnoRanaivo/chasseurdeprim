@@ -1,6 +1,7 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$structGraphe.html#a50bed59aba5c8e5843e16932aabcbd2a" title="Poids d&#39;une arête." alt="" coords="196,5,337,35"/>
-<area shape="rect" id="node5" href="$structGraphe.html#a183405c1312d76628db9de7079b0beaa" title="Suppression d&#39;une arête dans un Graphe." alt="" coords="183,59,351,88"/>
-<area shape="rect" id="node7" href="$structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe." alt="" coords="192,112,341,141"/>
-<area shape="rect" id="node9" href="$structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe." alt="" coords="192,165,341,195"/>
+<area shape="rect" id="node3" href="$structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe." alt="" coords="193,5,340,35"/>
+<area shape="rect" id="node5" href="$structGraphe.html#a50bed59aba5c8e5843e16932aabcbd2a" title="Poids d&#39;une arête." alt="" coords="196,59,337,88"/>
+<area shape="rect" id="node7" href="$structGraphe.html#a183405c1312d76628db9de7079b0beaa" title="Suppression d&#39;une arête dans un Graphe." alt="" coords="183,112,351,141"/>
+<area shape="rect" id="node9" href="$structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe." alt="" coords="192,165,341,195"/>
+<area shape="rect" id="node11" href="$structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe." alt="" coords="192,219,341,248"/>
 </map>

@@ -2,17 +2,21 @@
 <area shape="rect" id="node3" href="$io_8h.html#a898b3b44a72a0490e4864639d8896b61" title="Vérification de l&#39;intention de l&#39;utilisateur." alt="" coords="251,5,312,35"/>
 <area shape="rect" id="node5" href="$structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe." alt="" coords="223,59,340,88"/>
 <area shape="rect" id="node7" href="$structGraphe.html#aaf6e3b452d5d36e54cdebf1f9bdbdb14" title="Nouveau Graphe." alt="" coords="227,112,336,141"/>
-<area shape="rect" id="node9" href="$structGraphe.html#a420bc7f2ad2301c4565dce8c29a14286" title="Ajout d&#39;un sommet dans un Graphe." alt="" coords="197,165,365,195"/>
-<area shape="rect" id="node11" href="$structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe." alt="" coords="207,219,356,248"/>
-<area shape="rect" id="node13" href="$structGraphe.html#a64fd41af976a8447604e9e95d93b71cf" title="Modification d&#39;une arête dans un Graphe." alt="" coords="204,272,359,301"/>
-<area shape="rect" id="node15" href="$structGraphe.html#a0aa5aacc4cc9cb1e489a7bb295dcead4" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="188,325,375,355"/>
-<area shape="rect" id="node17" href="$structGraphe.html#a183405c1312d76628db9de7079b0beaa" title="Suppression d&#39;une arête dans un Graphe." alt="" coords="197,379,365,408"/>
-<area shape="rect" id="node19" href="$structGraphe.html#a4924edca2ae3d13ce4c71c5fc8cfd917" title="Afficher les voisins d&#39;un sommet." alt="" coords="203,432,360,461"/>
-<area shape="rect" id="node21" href="$structGraphe.html#ace288c4a90377a269c162289a83b2bac" title="Afficher les arêtes incidentes à un sommet." alt="" coords="193,485,369,515"/>
-<area shape="rect" id="node23" href="$structGraphe.html#a198689c52ffb4178b1b3c154a035d1d1" title="Afficher les sommets d&#39;un graphe." alt="" coords="183,539,380,568"/>
-<area shape="rect" id="node25" href="$structGraphe.html#ad6a8e0a2906acb31766e826e35ecb34d" title="Afficher les arêtes d&#39;un graphe." alt="" coords="184,592,379,621"/>
-<area shape="rect" id="node27" href="$structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe." alt="" coords="207,645,356,675"/>
-<area shape="rect" id="node29" href="$edition_8h.html#a0a2aed0f6bc3f74869b285f780be3046" title="Afficher l&#39;aide correspondant à une commande." alt="" coords="191,699,372,728"/>
-<area shape="rect" id="node31" href="$edition_8h.html#a8f05525d05c3c2ae8667e6e185dac69b" title="Rechercher la commande correspondante." alt="" coords="195,752,368,781"/>
-<area shape="rect" id="node33" href="$edition_8h.html#a8cbf30bc7af47ca33c79fbc305da4f9b" title="Afficher l&#39;aide du mode « édition »." alt="" coords="216,805,347,835"/>
+<area shape="rect" id="node9" href="$structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe." alt="" coords="199,165,364,195"/>
+<area shape="rect" id="node11" href="$structGraphe.html#a420bc7f2ad2301c4565dce8c29a14286" title="Ajout d&#39;un sommet dans un Graphe." alt="" coords="197,219,365,248"/>
+<area shape="rect" id="node13" href="$structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe." alt="" coords="208,272,355,301"/>
+<area shape="rect" id="node15" href="$structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe." alt="" coords="207,325,356,355"/>
+<area shape="rect" id="node17" href="$structGraphe.html#a64fd41af976a8447604e9e95d93b71cf" title="Modification d&#39;une arête dans un Graphe." alt="" coords="204,379,359,408"/>
+<area shape="rect" id="node19" href="$structGraphe.html#a0aa5aacc4cc9cb1e489a7bb295dcead4" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="188,432,375,461"/>
+<area shape="rect" id="node21" href="$structGraphe.html#a183405c1312d76628db9de7079b0beaa" title="Suppression d&#39;une arête dans un Graphe." alt="" coords="197,485,365,515"/>
+<area shape="rect" id="node23" href="$structGraphe.html#aa81e772015dccea36be07c77cb0f16db" title="Test d&#39;existence de voisins d&#39;un Sommet dans un Graphe." alt="" coords="223,539,340,568"/>
+<area shape="rect" id="node25" href="$structGraphe.html#a4924edca2ae3d13ce4c71c5fc8cfd917" title="Afficher les voisins d&#39;un sommet." alt="" coords="203,592,360,621"/>
+<area shape="rect" id="node27" href="$structGraphe.html#ace288c4a90377a269c162289a83b2bac" title="Afficher les arêtes incidentes à un sommet." alt="" coords="193,645,369,675"/>
+<area shape="rect" id="node29" href="$structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe." alt="" coords="219,699,344,728"/>
+<area shape="rect" id="node31" href="$structGraphe.html#a198689c52ffb4178b1b3c154a035d1d1" title="Afficher les sommets d&#39;un graphe." alt="" coords="183,752,380,781"/>
+<area shape="rect" id="node33" href="$structGraphe.html#ad6a8e0a2906acb31766e826e35ecb34d" title="Afficher les arêtes d&#39;un graphe." alt="" coords="184,805,379,835"/>
+<area shape="rect" id="node35" href="$structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe." alt="" coords="207,859,356,888"/>
+<area shape="rect" id="node37" href="$edition_8h.html#a0a2aed0f6bc3f74869b285f780be3046" title="Afficher l&#39;aide correspondant à une commande." alt="" coords="191,912,372,941"/>
+<area shape="rect" id="node39" href="$edition_8h.html#a8f05525d05c3c2ae8667e6e185dac69b" title="Rechercher la commande correspondante." alt="" coords="195,965,368,995"/>
+<area shape="rect" id="node41" href="$edition_8h.html#a8cbf30bc7af47ca33c79fbc305da4f9b" title="Afficher l&#39;aide du mode « édition »." alt="" coords="216,1019,347,1048"/>
 </map>

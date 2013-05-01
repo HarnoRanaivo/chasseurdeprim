@@ -186,7 +186,7 @@ Fonctions</h2></td></tr>
 <li><em>-2</em> : Il y a eu une erreur lors de l'écriture. </li>
 </ul>
 
-<p>Définition à la ligne <a class="el" href="generation_8c_source.html#l00107">107</a> du fichier <a class="el" href="generation_8c_source.html">generation.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="generation_8c_source.html#l00112">112</a> du fichier <a class="el" href="generation_8c_source.html">generation.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     FILE * <span class="keyword">const</span> fichier = fopen(destination, <span class="stringliteral">&quot;w&quot;</span>);
 
@@ -201,7 +201,10 @@ Fonctions</h2></td></tr>
         erreurs = printDebut(fichier) == <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> ? <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> : erreurs;
         erreurs = printGraphe(g, fichier) == <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> ? <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> : erreurs;
         <span class="keywordflow">if</span> (a != NULL)
+        {
+            fprintf(fichier, <span class="stringliteral">&quot;\n\n\\chapter{Arbre couvrant minimum}\n&quot;</span>);
             erreurs = printGraphe(a, fichier) == <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> ? <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> : erreurs;
+        }
         erreurs = printFin(fichier) == <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> ? <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a> : erreurs;
 
         fclose(fichier);
@@ -233,7 +236,7 @@ Fonctions</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Avril 29 2013 11:44:55 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mercredi Mai 1 2013 13:36:13 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

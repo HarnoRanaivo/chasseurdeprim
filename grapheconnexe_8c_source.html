@@ -147,19 +147,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00051"></a>00051 
 <a name="l00052"></a><a class="code" href="grapheconnexe_8c.html#a90dad6597b46ad207a693a3b633f4fbf">00052</a> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">GrapheConnexe</a> * <a class="code" href="structGraphe.html#a426658bb7e74364f25137659827422a2" title="suppression d&#39;une arête dans un graphe connexe.">gcSupprimerArete</a>(<a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">GrapheConnexe</a> * g, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * a, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * b)
 <a name="l00053"></a>00053 {
-<a name="l00054"></a>00054     <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> p = <a class="code" href="structGraphe.html#a50bed59aba5c8e5843e16932aabcbd2a" title="Poids d&#39;une arête.">gPoidsArete</a>(g, a, b);
-<a name="l00055"></a>00055     g = <a class="code" href="structGraphe.html#a183405c1312d76628db9de7079b0beaa" title="Suppression d&#39;une arête dans un Graphe.">gSupprimerArete</a>(g, a, b);
-<a name="l00056"></a>00056 
-<a name="l00057"></a>00057     <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe.">gEstConnexe</a>(g))
-<a name="l00058"></a>00058         <span class="keywordflow">return</span> g;
-<a name="l00059"></a>00059     <span class="keywordflow">else</span>
-<a name="l00060"></a>00060         <span class="keywordflow">return</span> <a class="code" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe.">gAjouterArete</a>(g, a, b, p);
-<a name="l00061"></a>00061 }
-<a name="l00062"></a>00062 
-<a name="l00063"></a><a class="code" href="grapheconnexe_8c.html#a9a4321feb2936b914fb979d5d6b0efbf">00063</a> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">GrapheConnexe</a> * <a class="code" href="structGraphe.html#ac01b4181e185122d26b569dc5d5b0eb9" title="Modification d&#39;une arête dans un GrapheConnexe.">gcModifierArete</a>(<a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">GrapheConnexe</a> * g, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * a, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * b, <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> p)
-<a name="l00064"></a>00064 {
-<a name="l00065"></a>00065     <span class="keywordflow">return</span> <a class="code" href="structGraphe.html#a64fd41af976a8447604e9e95d93b71cf" title="Modification d&#39;une arête dans un Graphe.">gModifierArete</a>(g, a, b, p);
+<a name="l00054"></a>00054     <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe.">gExisteArete</a>(g, a, b))
+<a name="l00055"></a>00055     {
+<a name="l00056"></a>00056         <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> p = <a class="code" href="structGraphe.html#a50bed59aba5c8e5843e16932aabcbd2a" title="Poids d&#39;une arête.">gPoidsArete</a>(g, a, b);
+<a name="l00057"></a>00057         g = <a class="code" href="structGraphe.html#a183405c1312d76628db9de7079b0beaa" title="Suppression d&#39;une arête dans un Graphe.">gSupprimerArete</a>(g, a, b);
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059         <span class="keywordflow">if</span> (!<a class="code" href="structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe.">gEstConnexe</a>(g))
+<a name="l00060"></a>00060             <span class="keywordflow">return</span> <a class="code" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe.">gAjouterArete</a>(g, a, b, p);
+<a name="l00061"></a>00061         <span class="keywordflow">else</span>
+<a name="l00062"></a>00062             <span class="keywordflow">return</span> g;
+<a name="l00063"></a>00063     }
+<a name="l00064"></a>00064     <span class="keywordflow">else</span>
+<a name="l00065"></a>00065         <span class="keywordflow">return</span> g;
 <a name="l00066"></a>00066 }
+<a name="l00067"></a>00067 
+<a name="l00068"></a><a class="code" href="grapheconnexe_8c.html#a9a4321feb2936b914fb979d5d6b0efbf">00068</a> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">GrapheConnexe</a> * <a class="code" href="structGraphe.html#ac01b4181e185122d26b569dc5d5b0eb9" title="Modification d&#39;une arête dans un GrapheConnexe.">gcModifierArete</a>(<a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">GrapheConnexe</a> * g, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * a, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * b, <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> p)
+<a name="l00069"></a>00069 {
+<a name="l00070"></a>00070     <span class="keywordflow">return</span> <a class="code" href="structGraphe.html#a64fd41af976a8447604e9e95d93b71cf" title="Modification d&#39;une arête dans un Graphe.">gModifierArete</a>(g, a, b, p);
+<a name="l00071"></a>00071 }
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -178,7 +183,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Avril 29 2013 11:44:55 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mercredi Mai 1 2013 13:36:12 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

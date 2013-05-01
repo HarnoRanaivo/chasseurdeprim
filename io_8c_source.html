@@ -122,104 +122,102 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00027"></a>00027 
 <a name="l00028"></a>00028         fclose (pfile); <span class="comment">// ferme le fichier</span>
 <a name="l00029"></a>00029     }
-<a name="l00030"></a>00030 
-<a name="l00031"></a>00031     <span class="keywordflow">return</span>;
-<a name="l00032"></a>00032 }
-<a name="l00033"></a>00033 
-<a name="l00034"></a><a class="code" href="io_8c.html#a80d78fef8f986ce18ebdc87fb7c986e6">00034</a> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * <a class="code" href="structGraphe.html#a1a93b1ef000c27e4d43c871faff3c2a3" title="Permet de charger un graphe dans un fichier texte.">charger_graphe</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* source){
-<a name="l00035"></a>00035     FILE * pfile = NULL;
-<a name="l00036"></a>00036     pfile = fopen(source, <span class="stringliteral">&quot;r&quot;</span>); <span class="comment">// lit le fichier source</span>
-<a name="l00037"></a>00037 
-<a name="l00038"></a>00038     <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g = <a class="code" href="structGraphe.html#aaf6e3b452d5d36e54cdebf1f9bdbdb14" title="Nouveau Graphe.">gNouv</a>();
+<a name="l00030"></a>00030     <span class="keywordflow">else</span>
+<a name="l00031"></a>00031         perror(<span class="stringliteral">&quot;fopen&quot;</span>);
+<a name="l00032"></a>00032 
+<a name="l00033"></a>00033     <span class="keywordflow">return</span>;
+<a name="l00034"></a>00034 }
+<a name="l00035"></a>00035 
+<a name="l00036"></a><a class="code" href="io_8c.html#a80d78fef8f986ce18ebdc87fb7c986e6">00036</a> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * <a class="code" href="structGraphe.html#a1a93b1ef000c27e4d43c871faff3c2a3" title="Permet de charger un graphe dans un fichier texte.">charger_graphe</a> (<span class="keyword">const</span> <span class="keywordtype">char</span>* source){
+<a name="l00037"></a>00037     FILE * pfile = NULL;
+<a name="l00038"></a>00038     pfile = fopen(source, <span class="stringliteral">&quot;r&quot;</span>); <span class="comment">// lit le fichier source</span>
 <a name="l00039"></a>00039 
-<a name="l00040"></a>00040     <span class="keywordflow">if</span> (pfile != NULL)
-<a name="l00041"></a>00041     {
-<a name="l00042"></a>00042         <span class="keywordtype">int</span> retourFs;
-<a name="l00043"></a>00043         <span class="keywordtype">char</span> buffer1[100]; <span class="comment">// sommet de départ de 100 caractères maximum</span>
-<a name="l00044"></a>00044         <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> poids;
-<a name="l00045"></a>00045         <span class="keywordtype">char</span> buffer2[100]; <span class="comment">// sommet d&#39;arrivée de 100 caractères maximum</span>
-<a name="l00046"></a>00046         <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> erreurs = <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
-<a name="l00047"></a>00047 
-<a name="l00048"></a>00048         <span class="keywordflow">while</span> ((retourFs = fscanf(pfile,<span class="stringliteral">&quot;%99s\t%d\t%99s&quot;</span>,buffer1,&amp;poids,buffer2)) != EOF){ <span class="comment">// vérifie si la ligne n&#39;est pas la fin du fichier</span>
-<a name="l00049"></a>00049             <span class="keywordflow">if</span> (retourFs == 3)
-<a name="l00050"></a>00050                 g = <a class="code" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe.">gAjouterArete</a>(g,buffer1,buffer2,poids); <span class="comment">// ajoute l&#39;arc à partir des valeurs de la ligne</span>
-<a name="l00051"></a>00051             <span class="keywordflow">else</span> <span class="comment">// cas où la lecture a raté</span>
-<a name="l00052"></a>00052                 erreurs = <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
-<a name="l00053"></a>00053         }
-<a name="l00054"></a>00054 
-<a name="l00055"></a>00055         <span class="keywordflow">if</span> (erreurs)
-<a name="l00056"></a>00056             fprintf(stderr, <span class="stringliteral">&quot;Le fichier semble contenir des erreurs.\n&quot;</span>);
-<a name="l00057"></a>00057 
-<a name="l00058"></a>00058         fclose (pfile);
-<a name="l00059"></a>00059     }
-<a name="l00060"></a>00060 
-<a name="l00061"></a>00061     <span class="keywordflow">return</span> g;
-<a name="l00062"></a>00062 }
-<a name="l00063"></a>00063 
-<a name="l00064"></a>00064 <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> afficherArete(<span class="keyword">const</span> <a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> * a)
-<a name="l00065"></a>00065 {
-<a name="l00066"></a>00066     printf(<span class="stringliteral">&quot;(%s, %s, %d) &quot;</span>, <a class="code" href="structArete.html#a510d26105fec391651847798d4fbaddd" title="Extrémité a de l&#39;Arete.">aA</a>(a), <a class="code" href="structArete.html#ac2c6bcac1f84ddcae438bcb3ab2bf522" title="Extrémité b de l&#39;Arete.">aB</a>(a), <a class="code" href="structArete.html#aee57c994798f0be50c557ccdae4c191b" title="Poids de l&#39;Arete.">aPoids</a>(a));
-<a name="l00067"></a>00067 }
-<a name="l00068"></a>00068 
-<a name="l00069"></a>00069 <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> afficherListeArete(<span class="keyword">const</span> <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * lar)
-<a name="l00070"></a>00070 {
-<a name="l00071"></a>00071     <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * l = lar; !<a class="code" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes.">larEstVide</a>(l); l = <a class="code" href="structListeArete.html#a36f1394356a54a87aea7ed4b7becc73f" title="Arête suivante dans la liste.">larSuivante</a>(l))
-<a name="l00072"></a>00072         afficherArete(<a class="code" href="structListeArete.html#a6797b32b731e6988f276ce6a0493cbf6" title="Arête en tête de liste.">larAreteTete</a>(l));
-<a name="l00073"></a>00073     printf(<span class="stringliteral">&quot;\n&quot;</span>);
-<a name="l00074"></a>00074 }
-<a name="l00075"></a>00075 
-<a name="l00076"></a><a class="code" href="io_8c.html#ad6a8e0a2906acb31766e826e35ecb34d">00076</a> <span class="keywordtype">void</span> <a class="code" href="structGraphe.html#ad6a8e0a2906acb31766e826e35ecb34d" title="Afficher les arêtes d&#39;un graphe.">afficherAretesGraphe</a>(<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g)
-<a name="l00077"></a>00077 {
-<a name="l00078"></a>00078     <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * liste = <a class="code" href="structGraphe.html#a6fa9c62a87c903c64daa6282fca731e4" title="Liste des arêtes d&#39;un Graphe.">gAretes</a>(g);
+<a name="l00040"></a>00040     <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g = <a class="code" href="structGraphe.html#aaf6e3b452d5d36e54cdebf1f9bdbdb14" title="Nouveau Graphe.">gNouv</a>();
+<a name="l00041"></a>00041 
+<a name="l00042"></a>00042     <span class="keywordflow">if</span> (pfile != NULL)
+<a name="l00043"></a>00043     {
+<a name="l00044"></a>00044         <span class="keywordtype">int</span> retourFs;
+<a name="l00045"></a>00045         <span class="keywordtype">char</span> buffer1[100]; <span class="comment">// sommet de départ de 100 caractères maximum</span>
+<a name="l00046"></a>00046         <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> poids;
+<a name="l00047"></a>00047         <span class="keywordtype">char</span> buffer2[100]; <span class="comment">// sommet d&#39;arrivée de 100 caractères maximum</span>
+<a name="l00048"></a>00048 
+<a name="l00049"></a>00049         <span class="comment">// vérifie si la ligne n&#39;est pas la fin du fichier</span>
+<a name="l00050"></a>00050         <span class="keywordflow">while</span> ((retourFs = fscanf(pfile, <span class="stringliteral">&quot;%99s %d %99s&quot;</span>, buffer1, &amp;poids, buffer2)) != EOF)
+<a name="l00051"></a>00051             <span class="keywordflow">if</span> (retourFs == 3)
+<a name="l00052"></a>00052                 g = <a class="code" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe.">gAjouterArete</a>(g,buffer1,buffer2,poids); <span class="comment">// ajoute l&#39;arc à partir des valeurs de la ligne</span>
+<a name="l00053"></a>00053 
+<a name="l00054"></a>00054         fclose (pfile);
+<a name="l00055"></a>00055     }
+<a name="l00056"></a>00056     <span class="keywordflow">else</span>
+<a name="l00057"></a>00057         perror(<span class="stringliteral">&quot;fopen&quot;</span>);
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059     <span class="keywordflow">return</span> g;
+<a name="l00060"></a>00060 }
+<a name="l00061"></a>00061 
+<a name="l00062"></a>00062 <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> afficherArete(<span class="keyword">const</span> <a class="code" href="structArete.html" title="Arête d&#39;extrémités a et b et de poids p.">Arete</a> * a)
+<a name="l00063"></a>00063 {
+<a name="l00064"></a>00064     printf(<span class="stringliteral">&quot;(%s, %s, %d) &quot;</span>, <a class="code" href="structArete.html#a510d26105fec391651847798d4fbaddd" title="Extrémité a de l&#39;Arete.">aA</a>(a), <a class="code" href="structArete.html#ac2c6bcac1f84ddcae438bcb3ab2bf522" title="Extrémité b de l&#39;Arete.">aB</a>(a), <a class="code" href="structArete.html#aee57c994798f0be50c557ccdae4c191b" title="Poids de l&#39;Arete.">aPoids</a>(a));
+<a name="l00065"></a>00065 }
+<a name="l00066"></a>00066 
+<a name="l00067"></a>00067 <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> afficherListeArete(<span class="keyword">const</span> <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * lar)
+<a name="l00068"></a>00068 {
+<a name="l00069"></a>00069     <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * l = lar; !<a class="code" href="structListeArete.html#a93f3be3eac648b91fd055fb44771f9f5" title="Test de vacuité d&#39;une liste d&#39;arêtes.">larEstVide</a>(l); l = <a class="code" href="structListeArete.html#a36f1394356a54a87aea7ed4b7becc73f" title="Arête suivante dans la liste.">larSuivante</a>(l))
+<a name="l00070"></a>00070         afficherArete(<a class="code" href="structListeArete.html#a6797b32b731e6988f276ce6a0493cbf6" title="Arête en tête de liste.">larAreteTete</a>(l));
+<a name="l00071"></a>00071     printf(<span class="stringliteral">&quot;\n&quot;</span>);
+<a name="l00072"></a>00072 }
+<a name="l00073"></a>00073 
+<a name="l00074"></a><a class="code" href="io_8c.html#ad6a8e0a2906acb31766e826e35ecb34d">00074</a> <span class="keywordtype">void</span> <a class="code" href="structGraphe.html#ad6a8e0a2906acb31766e826e35ecb34d" title="Afficher les arêtes d&#39;un graphe.">afficherAretesGraphe</a>(<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g)
+<a name="l00075"></a>00075 {
+<a name="l00076"></a>00076     <a class="code" href="structListeArete.html" title="Liste d&#39;arêtes.">ListeArete</a> * liste = <a class="code" href="structGraphe.html#a6fa9c62a87c903c64daa6282fca731e4" title="Liste des arêtes d&#39;un Graphe.">gAretes</a>(g);
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078     afficherListeArete(liste);
 <a name="l00079"></a>00079 
-<a name="l00080"></a>00080     afficherListeArete(liste);
-<a name="l00081"></a>00081 
-<a name="l00082"></a>00082     liste = <a class="code" href="structListeArete.html#ada58497f99418f22b04c25525485b4be" title="Libérer une liste d&#39;arêtes.">larLiberer</a>(liste);
-<a name="l00083"></a>00083 }
-<a name="l00084"></a>00084 
-<a name="l00085"></a><a class="code" href="io_8c.html#a198689c52ffb4178b1b3c154a035d1d1">00085</a> <span class="keywordtype">void</span> <a class="code" href="structGraphe.html#a198689c52ffb4178b1b3c154a035d1d1" title="Afficher les sommets d&#39;un graphe.">afficherListeSommets</a>(<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g)
-<a name="l00086"></a>00086 {
-<a name="l00087"></a>00087     <span class="keywordflow">for</span> (g = g; !<a class="code" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe.">gEstVide</a>(g); g = <a class="code" href="structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe.">gSuivant</a>(g))
-<a name="l00088"></a>00088         printf(<span class="stringliteral">&quot;\&quot;%s\&quot; &quot;</span>, <a class="code" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets.">gSommetTete</a>(g));
-<a name="l00089"></a>00089     printf(<span class="stringliteral">&quot;\n&quot;</span>);
-<a name="l00090"></a>00090 }
-<a name="l00091"></a>00091 
-<a name="l00092"></a><a class="code" href="io_8c.html#ace288c4a90377a269c162289a83b2bac">00092</a> <span class="keywordtype">void</span> <a class="code" href="structGraphe.html#ace288c4a90377a269c162289a83b2bac" title="Afficher les arêtes incidentes à un sommet.">afficherAdjacence</a>(<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s)
-<a name="l00093"></a>00093 {
-<a name="l00094"></a>00094     <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l = <a class="code" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet.">gAdjacenceSommet</a>(g, s); !<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(l); l = <a class="code" href="structListeAdjacence.html#a3ff1a663a7b0eb00e5049d2891e2b18a" title="Arête suivante.">lsuiv</a>(l))
-<a name="l00095"></a>00095         printf(<span class="stringliteral">&quot;(%s, %s, %d) &quot;</span>, s, <a class="code" href="structListeAdjacence.html#a36c937228d06a462ff42df578b3dbe0d" title="Extrémité de l&#39;arête en tête de liste.">lsommet_tete</a>(l), <a class="code" href="structListeAdjacence.html#ae34eced2405c4cf25465290a128d768f" title="Poids de l&#39;arête en tête de liste.">lpoids_tete</a>(l));
-<a name="l00096"></a>00096     printf(<span class="stringliteral">&quot;\n&quot;</span>);
-<a name="l00097"></a>00097 }
-<a name="l00098"></a>00098 
-<a name="l00099"></a><a class="code" href="io_8c.html#a4924edca2ae3d13ce4c71c5fc8cfd917">00099</a> <span class="keywordtype">void</span> <a class="code" href="structGraphe.html#a4924edca2ae3d13ce4c71c5fc8cfd917" title="Afficher les voisins d&#39;un sommet.">afficherVoisins</a>(<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s)
-<a name="l00100"></a>00100 {
-<a name="l00101"></a>00101     <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l = <a class="code" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet.">gAdjacenceSommet</a>(g, s); !<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(l); l = <a class="code" href="structListeAdjacence.html#a3ff1a663a7b0eb00e5049d2891e2b18a" title="Arête suivante.">lsuiv</a>(l))
-<a name="l00102"></a>00102         printf(<span class="stringliteral">&quot;\&quot;%s\&quot; &quot;</span>, <a class="code" href="structListeAdjacence.html#a36c937228d06a462ff42df578b3dbe0d" title="Extrémité de l&#39;arête en tête de liste.">lsommet_tete</a>(l));
-<a name="l00103"></a>00103     printf(<span class="stringliteral">&quot;\n&quot;</span>);
-<a name="l00104"></a>00104 }
-<a name="l00105"></a>00105 
-<a name="l00106"></a><a class="code" href="io_8c.html#a898b3b44a72a0490e4864639d8896b61">00106</a> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="io_8h.html#a898b3b44a72a0490e4864639d8896b61" title="Vérification de l&#39;intention de l&#39;utilisateur.">verifier</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * chaine)
-<a name="l00107"></a>00107 {
-<a name="l00108"></a>00108     <span class="keywordtype">char</span> buffer[8] = { <span class="charliteral">&#39;\0&#39;</span> };
-<a name="l00109"></a>00109 
-<a name="l00110"></a>00110     printf(<span class="stringliteral">&quot;Êtes-vous sûr %s?\n? &quot;</span>, chaine);
-<a name="l00111"></a>00111     fflush(stdout);
-<a name="l00112"></a>00112     scanf(<span class="stringliteral">&quot;%7s%*[^\n]&quot;</span>, buffer);
-<a name="l00113"></a>00113     getchar();
+<a name="l00080"></a>00080     liste = <a class="code" href="structListeArete.html#ada58497f99418f22b04c25525485b4be" title="Libérer une liste d&#39;arêtes.">larLiberer</a>(liste);
+<a name="l00081"></a>00081 }
+<a name="l00082"></a>00082 
+<a name="l00083"></a><a class="code" href="io_8c.html#a198689c52ffb4178b1b3c154a035d1d1">00083</a> <span class="keywordtype">void</span> <a class="code" href="structGraphe.html#a198689c52ffb4178b1b3c154a035d1d1" title="Afficher les sommets d&#39;un graphe.">afficherListeSommets</a>(<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g)
+<a name="l00084"></a>00084 {
+<a name="l00085"></a>00085     <span class="keywordflow">for</span> (g = g; !<a class="code" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe.">gEstVide</a>(g); g = <a class="code" href="structGraphe.html#acc7056daf175dd4657eb9c52dcbe5d82" title="Sommet suivant dans le Graphe.">gSuivant</a>(g))
+<a name="l00086"></a>00086         printf(<span class="stringliteral">&quot;\&quot;%s\&quot; &quot;</span>, <a class="code" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets.">gSommetTete</a>(g));
+<a name="l00087"></a>00087     printf(<span class="stringliteral">&quot;\n&quot;</span>);
+<a name="l00088"></a>00088 }
+<a name="l00089"></a>00089 
+<a name="l00090"></a><a class="code" href="io_8c.html#ace288c4a90377a269c162289a83b2bac">00090</a> <span class="keywordtype">void</span> <a class="code" href="structGraphe.html#ace288c4a90377a269c162289a83b2bac" title="Afficher les arêtes incidentes à un sommet.">afficherAdjacence</a>(<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s)
+<a name="l00091"></a>00091 {
+<a name="l00092"></a>00092     <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l = <a class="code" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet.">gAdjacenceSommet</a>(g, s); !<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(l); l = <a class="code" href="structListeAdjacence.html#a3ff1a663a7b0eb00e5049d2891e2b18a" title="Arête suivante.">lsuiv</a>(l))
+<a name="l00093"></a>00093         printf(<span class="stringliteral">&quot;(%s, %s, %d) &quot;</span>, s, <a class="code" href="structListeAdjacence.html#a36c937228d06a462ff42df578b3dbe0d" title="Extrémité de l&#39;arête en tête de liste.">lsommet_tete</a>(l), <a class="code" href="structListeAdjacence.html#ae34eced2405c4cf25465290a128d768f" title="Poids de l&#39;arête en tête de liste.">lpoids_tete</a>(l));
+<a name="l00094"></a>00094     printf(<span class="stringliteral">&quot;\n&quot;</span>);
+<a name="l00095"></a>00095 }
+<a name="l00096"></a>00096 
+<a name="l00097"></a><a class="code" href="io_8c.html#a4924edca2ae3d13ce4c71c5fc8cfd917">00097</a> <span class="keywordtype">void</span> <a class="code" href="structGraphe.html#a4924edca2ae3d13ce4c71c5fc8cfd917" title="Afficher les voisins d&#39;un sommet.">afficherVoisins</a>(<span class="keyword">const</span> <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g, <span class="keyword">const</span> <a class="code" href="sommet_8h.html#a0509c3c599f2f436d7afff943977ccb7" title="Sommet dans un Graphe (chaîne de caractères.)">Sommet</a> * s)
+<a name="l00098"></a>00098 {
+<a name="l00099"></a>00099     <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="structListeAdjacence.html" title="Structure des listes d&#39;arêtes par rapport à un sommet.">ListeAdjacence</a> * l = <a class="code" href="structGraphe.html#a5bb1a3b2af14cf018755a63731df0f80" title="Liste d&#39;adjacence d&#39;un sommet.">gAdjacenceSommet</a>(g, s); !<a class="code" href="structListeAdjacence.html#a91c09f92f890d967554ef6d4c3a128ed" title="Vérifie si la ListeAdjacence l est vide.">lest_vide</a>(l); l = <a class="code" href="structListeAdjacence.html#a3ff1a663a7b0eb00e5049d2891e2b18a" title="Arête suivante.">lsuiv</a>(l))
+<a name="l00100"></a>00100         printf(<span class="stringliteral">&quot;\&quot;%s\&quot; &quot;</span>, <a class="code" href="structListeAdjacence.html#a36c937228d06a462ff42df578b3dbe0d" title="Extrémité de l&#39;arête en tête de liste.">lsommet_tete</a>(l));
+<a name="l00101"></a>00101     printf(<span class="stringliteral">&quot;\n&quot;</span>);
+<a name="l00102"></a>00102 }
+<a name="l00103"></a>00103 
+<a name="l00104"></a><a class="code" href="io_8c.html#a898b3b44a72a0490e4864639d8896b61">00104</a> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="io_8h.html#a898b3b44a72a0490e4864639d8896b61" title="Vérification de l&#39;intention de l&#39;utilisateur.">verifier</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * chaine)
+<a name="l00105"></a>00105 {
+<a name="l00106"></a>00106     <span class="keywordtype">char</span> buffer[8] = { <span class="charliteral">&#39;\0&#39;</span> };
+<a name="l00107"></a>00107 
+<a name="l00108"></a>00108     printf(<span class="stringliteral">&quot;Êtes-vous sûr %s?\n? &quot;</span>, chaine);
+<a name="l00109"></a>00109     fflush(stdout);
+<a name="l00110"></a>00110     scanf(<span class="stringliteral">&quot;%7s%*[^\n]&quot;</span>, buffer);
+<a name="l00111"></a>00111     getchar();
+<a name="l00112"></a>00112 
+<a name="l00113"></a>00113     chaineEnMinuscules(buffer);
 <a name="l00114"></a>00114 
-<a name="l00115"></a>00115     chaineEnMinuscules(buffer);
-<a name="l00116"></a>00116 
-<a name="l00117"></a>00117     <span class="keywordflow">if</span> (strcmp(buffer, <span class="stringliteral">&quot;o&quot;</span>) == 0 || strcmp(buffer, <span class="stringliteral">&quot;oui&quot;</span>) == 0)
-<a name="l00118"></a>00118         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
-<a name="l00119"></a>00119     <span class="keywordflow">else</span>
-<a name="l00120"></a>00120         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
-<a name="l00121"></a>00121 }
-<a name="l00122"></a>00122 
-<a name="l00123"></a><a class="code" href="io_8c.html#ab82637ef1faa3610fbc796eb71237397">00123</a> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="io_8h.html#ab82637ef1faa3610fbc796eb71237397" title="Vérifier l&#39;existence d&#39;un fichier.">existeFichier</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * nomfichier)
-<a name="l00124"></a>00124 {
-<a name="l00125"></a>00125     <span class="keyword">struct </span>stat buffer;
-<a name="l00126"></a>00126     <span class="keywordflow">return</span> (stat (nomfichier, &amp;buffer) == 0);
-<a name="l00127"></a>00127 }
+<a name="l00115"></a>00115     <span class="keywordflow">if</span> (strcmp(buffer, <span class="stringliteral">&quot;o&quot;</span>) == 0 || strcmp(buffer, <span class="stringliteral">&quot;oui&quot;</span>) == 0)
+<a name="l00116"></a>00116         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
+<a name="l00117"></a>00117     <span class="keywordflow">else</span>
+<a name="l00118"></a>00118         <span class="keywordflow">return</span> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+<a name="l00119"></a>00119 }
+<a name="l00120"></a>00120 
+<a name="l00121"></a><a class="code" href="io_8c.html#ab82637ef1faa3610fbc796eb71237397">00121</a> <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> <a class="code" href="io_8h.html#ab82637ef1faa3610fbc796eb71237397" title="Vérifier l&#39;existence d&#39;un fichier.">existeFichier</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> * nomfichier)
+<a name="l00122"></a>00122 {
+<a name="l00123"></a>00123     <span class="keyword">struct </span>stat buffer;
+<a name="l00124"></a>00124     <span class="keywordflow">return</span> (stat (nomfichier, &amp;buffer) == 0);
+<a name="l00125"></a>00125 }
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -238,7 +236,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Avril 29 2013 11:44:55 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mercredi Mai 1 2013 13:36:12 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

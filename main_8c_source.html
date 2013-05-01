@@ -106,40 +106,41 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a name="l00008"></a>00008 
 <a name="l00009"></a>00009 <span class="preprocessor">#include &quot;<a class="code" href="generation_8h.html" title="Generation d&#39;un fichier latex (header)">generation.h</a>&quot;</span>
 <a name="l00010"></a>00010 <span class="preprocessor">#include &quot;<a class="code" href="prompt_8h.html" title="Prompt (header)">prompt.h</a>&quot;</span>
-<a name="l00011"></a>00011 
-<a name="l00015"></a><a class="code" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">00015</a> <span class="keywordtype">int</span> <a class="code" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main.">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> ** argv)
-<a name="l00016"></a>00016 {
-<a name="l00017"></a>00017     <span class="keywordflow">if</span> (argc &gt; 1)
-<a name="l00018"></a>00018     {
-<a name="l00019"></a>00019         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; argc; i++)
-<a name="l00020"></a>00020         {
-<a name="l00021"></a>00021             <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g = <a class="code" href="structGraphe.html#a1a93b1ef000c27e4d43c871faff3c2a3" title="Permet de charger un graphe dans un fichier texte.">charger_graphe</a>(argv[i]);
-<a name="l00022"></a>00022 
-<a name="l00023"></a>00023             <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe.">gEstConnexe</a>(g))
-<a name="l00024"></a>00024             {
-<a name="l00025"></a>00025                 <span class="keywordtype">char</span> * affichage = malloc(strlen(argv[i] + 15) * <span class="keyword">sizeof</span> *affichage);
-<a name="l00026"></a>00026                 sprintf(affichage, <span class="stringliteral">&quot;%s_affichage.tex&quot;</span>, argv[i]);
-<a name="l00027"></a>00027 
-<a name="l00028"></a>00028                 <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * a = <a class="code" href="structGraphe.html#a363d4c3de24663a378322111f71e51cf" title="Calcul de l&#39;arbre couvrant minimum d&#39;un graphe connexe en partant d&#39;un sommet.">gArbreCouvrantMinimum</a>(g, <a class="code" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets.">gSommetTete</a>(g));
-<a name="l00029"></a>00029                 <a class="code" href="structGraphe.html#a0d0ec90a46d0b4618b17c2ea4f6c0d0f" title="Générer un fichier latex représentant les Graphe g et a à l&#39;aide de Latex et TikZ.">gGenererLatex</a>(g, a, affichage);
-<a name="l00030"></a>00030 
-<a name="l00031"></a>00031                 a = <a class="code" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe.">gLiberer</a>(g);
-<a name="l00032"></a>00032             }
-<a name="l00033"></a>00033             <span class="keywordflow">else</span>
-<a name="l00034"></a>00034             {
-<a name="l00035"></a>00035                 fprintf(stderr,
-<a name="l00036"></a>00036                         <span class="stringliteral">&quot;Erreur : Le fichier %s ne contient pas un graphe connexe.\n&quot;</span>,
-<a name="l00037"></a>00037                         argv[i]);
-<a name="l00038"></a>00038             }
-<a name="l00039"></a>00039             
-<a name="l00040"></a>00040             g = <a class="code" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe.">gLiberer</a>(g);
-<a name="l00041"></a>00041         }
-<a name="l00042"></a>00042     }
-<a name="l00043"></a>00043     <span class="keywordflow">else</span>
-<a name="l00044"></a>00044         <a class="code" href="prompt_8h.html#a98126e5a7092a7a5921d1bdc3dab2fa2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur.">afficherPrompt</a>();
-<a name="l00045"></a>00045 
-<a name="l00046"></a>00046     <span class="keywordflow">return</span> 0;
-<a name="l00047"></a>00047 }
+<a name="l00011"></a>00011 <span class="preprocessor">#include &quot;<a class="code" href="io_8h.html" title="Entrées/Sorties (header)">io.h</a>&quot;</span>
+<a name="l00012"></a>00012 
+<a name="l00016"></a><a class="code" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">00016</a> <span class="keywordtype">int</span> <a class="code" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main.">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> ** argv)
+<a name="l00017"></a>00017 {
+<a name="l00018"></a>00018     <span class="keywordflow">if</span> (argc &gt; 1)
+<a name="l00019"></a>00019     {
+<a name="l00020"></a>00020         <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 1; i &lt; argc; i++)
+<a name="l00021"></a>00021         {
+<a name="l00022"></a>00022             <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g = <a class="code" href="structGraphe.html#a1a93b1ef000c27e4d43c871faff3c2a3" title="Permet de charger un graphe dans un fichier texte.">charger_graphe</a>(argv[i]);
+<a name="l00023"></a>00023 
+<a name="l00024"></a>00024             <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe.">gEstConnexe</a>(g))
+<a name="l00025"></a>00025             {
+<a name="l00026"></a>00026                 <span class="keywordtype">char</span> * affichage = malloc(strlen(argv[i] + 15) * <span class="keyword">sizeof</span> *affichage);
+<a name="l00027"></a>00027                 sprintf(affichage, <span class="stringliteral">&quot;%s_affichage.tex&quot;</span>, argv[i]);
+<a name="l00028"></a>00028 
+<a name="l00029"></a>00029                 <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * a = <a class="code" href="structGraphe.html#a363d4c3de24663a378322111f71e51cf" title="Calcul de l&#39;arbre couvrant minimum d&#39;un graphe connexe en partant d&#39;un sommet.">gArbreCouvrantMinimum</a>(g, <a class="code" href="structGraphe.html#ade040b5a200ae2c2118ba66fa261e299" title="Premier Sommet dans la liste de sommets.">gSommetTete</a>(g));
+<a name="l00030"></a>00030                 <a class="code" href="structGraphe.html#a0d0ec90a46d0b4618b17c2ea4f6c0d0f" title="Générer un fichier latex représentant les Graphe g et a à l&#39;aide de Latex et TikZ.">gGenererLatex</a>(g, a, affichage);
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032                 a = <a class="code" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe.">gLiberer</a>(a);
+<a name="l00033"></a>00033             }
+<a name="l00034"></a>00034             <span class="keywordflow">else</span>
+<a name="l00035"></a>00035             {
+<a name="l00036"></a>00036                 fprintf(stderr,
+<a name="l00037"></a>00037                         <span class="stringliteral">&quot;Erreur : Le fichier %s ne contient pas un graphe connexe.\n&quot;</span>,
+<a name="l00038"></a>00038                         argv[i]);
+<a name="l00039"></a>00039             }
+<a name="l00040"></a>00040             
+<a name="l00041"></a>00041             g = <a class="code" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe.">gLiberer</a>(g);
+<a name="l00042"></a>00042         }
+<a name="l00043"></a>00043     }
+<a name="l00044"></a>00044     <span class="keywordflow">else</span>
+<a name="l00045"></a>00045         <a class="code" href="prompt_8h.html#a98126e5a7092a7a5921d1bdc3dab2fa2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur.">afficherPrompt</a>();
+<a name="l00046"></a>00046 
+<a name="l00047"></a>00047     <span class="keywordflow">return</span> 0;
+<a name="l00048"></a>00048 }
 </pre></div></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -158,7 +159,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Avril 29 2013 11:44:55 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mercredi Mai 1 2013 13:36:12 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

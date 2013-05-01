@@ -316,7 +316,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <dl class="pre"><dt><b>Précondition:</b></dt><dd>gestconnexe(g) </dd></dl>
 <dl class="return"><dt><b>Renvoie:</b></dt><dd>grapheconnexe. </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="grapheconnexe_8c_source.html#l00063">63</a> du fichier <a class="el" href="grapheconnexe_8c_source.html">grapheconnexe.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="grapheconnexe_8c_source.html#l00068">68</a> du fichier <a class="el" href="grapheconnexe_8c_source.html">grapheconnexe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
     <span class="keywordflow">return</span> <a class="code" href="structGraphe.html#a64fd41af976a8447604e9e95d93b71cf" title="Modification d&#39;une arête dans un Graphe.">gModifierArete</a>(g, a, b, p);
 }
@@ -412,13 +412,18 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 <p>Définition à la ligne <a class="el" href="grapheconnexe_8c_source.html#l00052">52</a> du fichier <a class="el" href="grapheconnexe_8c_source.html">grapheconnexe.c</a>.</p>
 <div class="fragment"><pre class="fragment">{
-    <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> p = <a class="code" href="structGraphe.html#a50bed59aba5c8e5843e16932aabcbd2a" title="Poids d&#39;une arête.">gPoidsArete</a>(g, a, b);
-    g = <a class="code" href="structGraphe.html#a183405c1312d76628db9de7079b0beaa" title="Suppression d&#39;une arête dans un Graphe.">gSupprimerArete</a>(g, a, b);
+    <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe.">gExisteArete</a>(g, a, b))
+    {
+        <a class="code" href="base_8h.html#ac6ac91d0b2f0dea5f9591d7aadce3f2c" title="Entiers relatifs.">Ent</a> p = <a class="code" href="structGraphe.html#a50bed59aba5c8e5843e16932aabcbd2a" title="Poids d&#39;une arête.">gPoidsArete</a>(g, a, b);
+        g = <a class="code" href="structGraphe.html#a183405c1312d76628db9de7079b0beaa" title="Suppression d&#39;une arête dans un Graphe.">gSupprimerArete</a>(g, a, b);
 
-    <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe.">gEstConnexe</a>(g))
-        <span class="keywordflow">return</span> g;
+        <span class="keywordflow">if</span> (!<a class="code" href="structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe.">gEstConnexe</a>(g))
+            <span class="keywordflow">return</span> <a class="code" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe.">gAjouterArete</a>(g, a, b, p);
+        <span class="keywordflow">else</span>
+            <span class="keywordflow">return</span> g;
+    }
     <span class="keywordflow">else</span>
-        <span class="keywordflow">return</span> <a class="code" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe.">gAjouterArete</a>(g, a, b, p);
+        <span class="keywordflow">return</span> g;
 }
 </pre></div>
 <p><div class="dynheader">
@@ -426,7 +431,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 <div class="dyncontent">
 <div class="center"><img src="grapheconnexe_8c_a90dad6597b46ad207a693a3b633f4fbf_cgraph.png" border="0" usemap="#grapheconnexe_8c_a90dad6597b46ad207a693a3b633f4fbf_cgraph" alt=""/></div>
 <map name="grapheconnexe_8c_a90dad6597b46ad207a693a3b633f4fbf_cgraph" id="grapheconnexe_8c_a90dad6597b46ad207a693a3b633f4fbf_cgraph">
-<area shape="rect" id="node3" href="structGraphe.html#a50bed59aba5c8e5843e16932aabcbd2a" title="Poids d&#39;une arête." alt="" coords="196,5,337,35"/><area shape="rect" id="node5" href="structGraphe.html#a183405c1312d76628db9de7079b0beaa" title="Suppression d&#39;une arête dans un Graphe." alt="" coords="183,59,351,88"/><area shape="rect" id="node7" href="structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe." alt="" coords="192,112,341,141"/><area shape="rect" id="node9" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe." alt="" coords="192,165,341,195"/></map>
+<area shape="rect" id="node3" href="structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe." alt="" coords="193,5,340,35"/><area shape="rect" id="node5" href="structGraphe.html#a50bed59aba5c8e5843e16932aabcbd2a" title="Poids d&#39;une arête." alt="" coords="196,59,337,88"/><area shape="rect" id="node7" href="structGraphe.html#a183405c1312d76628db9de7079b0beaa" title="Suppression d&#39;une arête dans un Graphe." alt="" coords="183,112,351,141"/><area shape="rect" id="node9" href="structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe." alt="" coords="192,165,341,195"/><area shape="rect" id="node11" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe." alt="" coords="192,219,341,248"/></map>
 </div>
 </p>
 
@@ -516,7 +521,7 @@ Voici le graphe d'appel pour cette fonction :</div>
 
 
 <hr class="footer"/><address class="footer"><small>
-Généré le Lundi Avril 29 2013 11:44:56 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+Généré le Mercredi Mai 1 2013 13:36:14 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

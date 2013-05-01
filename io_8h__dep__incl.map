@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$edition_8h.html" title="Prompt mode édition (header)" alt="" coords="140,83,255,112"/>
-<area shape="rect" id="node5" href="$prompt_8h.html" title="Prompt (header)" alt="" coords="44,160,161,189"/>
-<area shape="rect" id="node14" href="$io_8c.html" title="Entrées/Sorties (code source)" alt="" coords="279,83,343,112"/>
-<area shape="rect" id="node11" href="$edition_8c.html" title="Prompt mode édition (code)" alt="" coords="185,160,279,189"/>
-<area shape="rect" id="node7" href="$main_8c.html" title="Main." alt="" coords="5,237,88,267"/>
-<area shape="rect" id="node9" href="$prompt_8c.html" title="Prompt (code)" alt="" coords="112,237,205,267"/>
+<area shape="rect" id="node3" href="$edition_8h.html" title="Prompt mode édition (header)" alt="" coords="125,83,240,112"/>
+<area shape="rect" id="node5" href="$prompt_8h.html" title="Prompt (header)" alt="" coords="5,160,123,189"/>
+<area shape="rect" id="node7" href="$main_8c.html" title="Main." alt="" coords="185,237,268,267"/>
+<area shape="rect" id="node14" href="$io_8c.html" title="Entrées/Sorties (code source)" alt="" coords="315,83,379,112"/>
+<area shape="rect" id="node11" href="$edition_8c.html" title="Prompt mode édition (code)" alt="" coords="147,160,240,189"/>
+<area shape="rect" id="node9" href="$prompt_8c.html" title="Prompt (code)" alt="" coords="17,237,111,267"/>
 </map>

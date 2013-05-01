@@ -13,9 +13,10 @@ vpath %.o obj/
 vpath main bin/
 vpath %.a lib/
 
-main : main.o libgraphes.a libprim.a prompt.o edition.o | bin
-	$(CC) $(CFLAGS) $(LFLAGS) -o $(BPATH)chasseurdeprim $(OPATH)main.o $(OPATH)prompt.o $(OPATH)edition.o -lprim -lgraphes
+main : main.o libgraphes.a libprim.a prompt.o edition.o script.o | bin
+	$(CC) $(CFLAGS) $(LFLAGS) -o $(BPATH)chasseurdeprim $(OPATH)main.o $(OPATH)prompt.o $(OPATH)edition.o $(OPATH)script.o -lprim -lgraphes
 
+script.o : script.c script.h edition.h prompt.h
 edition.o : edition.c edition.h base.h graphe.h io.h parcours.h
 prompt.o : prompt.c prompt.h base.h graphe.h grapheconnexe.h io.h prim.h parcours.h edition.h
 generation.o : generation.c generation.h graphe.h listearete.h arete.h base.h
@@ -30,7 +31,7 @@ adjacence.o : adjacence.c adjacence.h base.h sommet.h
 listearete.o : listearete.c listearete.h arete.h sommet.h base.h
 arete.o : arete.c arete.h base.h sommet.h
 sommet.o : sommet.c sommet.h base.h
-main.o : main.c base.h 
+main.o : main.c base.h generation.h prompt.h io.h script.h
 
 %.o : %.c | obj
 	$(CC) $(CFLAGS) -o $(OPATH)$@ -c $< $(IFLAGS)
@@ -59,4 +60,4 @@ cleanall : clean
 	rm -rf doc/*
 
 archive :
-	tar -f meyer_razanajato-ProjetSDA2P.tar.gz -cvz src/*.c include/*.h makefile Doxyfile
+	tar -f meyer_razanajato-ProjetSDA2P.tar.gz -cvz src/*.c include/*.h makefile Doxyfile exemple*

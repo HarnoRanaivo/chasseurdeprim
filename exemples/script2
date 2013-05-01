@@ -1,0 +1,14 @@
+ajar a b 1
+ajar a d 2
+ajar b d 4
+ajar b f 6
+ajar b c 5
+ajar d g 3
+ajar d f 1
+ajar f g 7
+ajar g c 2
+ajar d e 2
+ajar e g 4
+cal g
+aff script2_affichage.tex
+sv graphe4

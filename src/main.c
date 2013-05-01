@@ -11,7 +11,7 @@
 #include "io.h"
 #include "script.h"
 
-static void batchScript(int debut, int fin, char ** argv)
+static inline void batchScript(int debut, int fin, char ** argv)
 {
     for (int i = 2; i < fin; i++)
         if (existeFichier(argv[i]))

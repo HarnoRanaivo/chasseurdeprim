@@ -1,13 +1,17 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="225,5,351,35"/>
-<area shape="rect" id="node7" href="$prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="551,32,703,61"/>
-<area shape="rect" id="node13" href="$graphe_8c.html#ae2c3b24feb6e3b77564fe41b3671ff55" title="Ajout d&#39;un sommet dans un Graphe." alt="" coords="229,109,347,139"/>
-<area shape="rect" id="node15" href="$graphe_8c.html#aa730f51a75d135905ac1b4c1ec2f72c2" title="Ajout d&#39;une arête dans un Graphe." alt="" coords="237,163,339,192"/>
-<area shape="rect" id="node17" href="$graphe_8c.html#a19862f69a8a5b6bc2734eef29a385d7e" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="220,216,356,245"/>
-<area shape="rect" id="node19" href="$graphe_8c.html#a006061dedebd8a37e7aba077756ccf80" title="Suppression d&#39;une arête dans un Graphe." alt="" coords="229,269,347,299"/>
-<area shape="rect" id="node21" href="$graphe_8c.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe." alt="" coords="231,323,345,352"/>
-<area shape="rect" id="node23" href="$grapheconnexe_8c.html#a064998f9e6af964d70d8e48baad19e77" title="Ajout d&#39;une arête dans un graphe connexe." alt="" coords="235,376,341,405"/>
-<area shape="rect" id="node5" href="$edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="407,5,500,35"/>
-<area shape="rect" id="node9" href="$prompt_8c.html#a98126e5a7092a7a5921d1bdc3dab2fa2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="752,32,859,61"/>
-<area shape="rect" id="node11" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="907,32,957,61"/>
+<area shape="rect" id="node3" href="$edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="227,87,352,117"/>
+<area shape="rect" id="node7" href="$prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="573,9,725,38"/>
+<area shape="rect" id="node15" href="$script_8c.html#a8c185d60c29d8b7add1a7bccbea07ad8" title="Traiter la ligne de commande d&#39;un script." alt="" coords="567,113,732,142"/>
+<area shape="rect" id="node19" href="$graphe_8c.html#ae2c3b24feb6e3b77564fe41b3671ff55" title="Ajout d&#39;un sommet dans un Graphe." alt="" coords="231,191,348,221"/>
+<area shape="rect" id="node21" href="$graphe_8c.html#aa730f51a75d135905ac1b4c1ec2f72c2" title="Ajout d&#39;une arête dans un Graphe." alt="" coords="239,245,340,274"/>
+<area shape="rect" id="node23" href="$graphe_8c.html#a19862f69a8a5b6bc2734eef29a385d7e" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="221,298,357,327"/>
+<area shape="rect" id="node25" href="$graphe_8c.html#a006061dedebd8a37e7aba077756ccf80" title="Suppression d&#39;une arête dans un Graphe." alt="" coords="231,351,348,381"/>
+<area shape="rect" id="node27" href="$graphe_8c.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe." alt="" coords="232,405,347,434"/>
+<area shape="rect" id="node29" href="$grapheconnexe_8c.html#a064998f9e6af964d70d8e48baad19e77" title="Ajout d&#39;une arête dans un graphe connexe." alt="" coords="236,458,343,487"/>
+<area shape="rect" id="node33" href="$script_8c.html#a842b1cd50002095ee6aad46d5857ee4f" title="Traiter la ligne de commande d&#39;un script." alt="" coords="220,511,359,541"/>
+<area shape="rect" id="node5" href="$edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="416,34,509,63"/>
+<area shape="rect" id="node13" href="$script_8c.html#a8d481755757d425d078af43e2dd298d8" title="Gérer un script, mode édition." alt="" coords="409,87,516,117"/>
+<area shape="rect" id="node9" href="$prompt_8c.html#a98126e5a7092a7a5921d1bdc3dab2fa2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="781,9,888,38"/>
+<area shape="rect" id="node11" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="936,9,987,38"/>
+<area shape="rect" id="node17" href="$script_8c.html#ae71544ef685175a4d606cd2313654d76" title="Gérer un script." alt="" coords="788,113,881,142"/>
 </map>

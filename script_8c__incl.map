@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$script_8h.html" title="Script (header)" alt="" coords="2015,83,2079,112"/>
+<area shape="rect" id="node15" href="$base_8h.html" title="Base (header)" alt="" coords="2045,779,2107,808"/>
+<area shape="rect" id="node21" href="$graphe_8h.html" title="Graphes (header)" alt="" coords="1837,469,1909,499"/>
+<area shape="rect" id="node52" href="$grapheconnexe_8h.html" title="GrapheConnexes connexes (header)" alt="" coords="1739,237,1859,267"/>
+<area shape="rect" id="node61" href="$parcours_8h.html" title="Parcours d&#39;un graphe (header)" alt="" coords="1780,315,1863,344"/>
+<area shape="rect" id="node75" href="$io_8h.html" title="Entrées/Sorties (header)" alt="" coords="2280,392,2323,421"/>
+<area shape="rect" id="node87" href="$prim_8h.html" title="Algorithme de Prim (header)" alt="" coords="1316,315,1375,344"/>
+<area shape="rect" id="node104" href="$generation_8h.html" title="Generation d&#39;un fichier latex (header)" alt="" coords="841,392,935,421"/>
+<area shape="rect" id="node113" href="$prompt_8h.html" title="Prompt (header)" alt="" coords="1968,160,2040,189"/>
+<area shape="rect" id="node127" href="$edition_8h.html" title="Prompt mode édition (header)" alt="" coords="2064,237,2133,267"/>
+<area shape="rect" id="node27" href="$sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="1395,701,1475,731"/>
+<area shape="rect" id="node33" href="$adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)" alt="" coords="1517,547,1608,576"/>
+<area shape="rect" id="node40" href="$listearete_8h.html" title="Liste d&#39;arêtes (header)" alt="" coords="1101,547,1187,576"/>
+<area shape="rect" id="node46" href="$arete_8h.html" title="Arêtes (header)" alt="" coords="955,624,1016,653"/>
+<area shape="rect" id="node68" href="$coloration_8h.html" title="Coloration d&#39;un graphe (header)" alt="" coords="1568,392,1656,421"/>
+<area shape="rect" id="node95" href="$filearetetriee_8h.html" title="File triée d&#39;arêtes (header)" alt="" coords="1120,469,1224,499"/>
+</map>

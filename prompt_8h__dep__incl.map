@@ -1,4 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$main_8c.html" title="Main." alt="" coords="5,83,88,112"/>
-<area shape="rect" id="node5" href="$prompt_8c.html" title="Prompt (code)" alt="" coords="112,83,205,112"/>
+<area shape="rect" id="node3" href="$script_8h.html" title="Script (header)" alt="" coords="84,83,193,112"/>
+<area shape="rect" id="node5" href="$main_8c.html" title="Main." alt="" coords="5,160,88,189"/>
+<area shape="rect" id="node10" href="$prompt_8c.html" title="Prompt (code)" alt="" coords="217,83,311,112"/>
+<area shape="rect" id="node7" href="$script_8c.html" title="Script (code)" alt="" coords="112,160,197,189"/>
 </map>

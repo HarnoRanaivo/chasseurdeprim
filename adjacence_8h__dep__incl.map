@@ -1,22 +1,24 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$graphe_8h.html" title="Graphes (header)" alt="" coords="505,83,622,112"/>
-<area shape="rect" id="node19" href="$grapheconnexe_8h.html" title="GrapheConnexes connexes (header)" alt="" coords="684,315,849,344"/>
-<area shape="rect" id="node35" href="$io_8h.html" title="Entrées/Sorties (header)" alt="" coords="66,237,154,267"/>
-<area shape="rect" id="node56" href="$adjacence_8c.html" title="Gestion des listes d&#39;adjacence (code source)" alt="" coords="858,83,973,112"/>
-<area shape="rect" id="node5" href="$coloration_8h.html" title="Coloration d&#39;un graphe (header)" alt="" coords="324,160,457,189"/>
-<area shape="rect" id="node7" href="$parcours_8h.html" title="Parcours d&#39;un graphe (header)" alt="" coords="437,237,565,267"/>
-<area shape="rect" id="node9" href="$edition_8h.html" title="Prompt mode édition (header)" alt="" coords="545,315,660,344"/>
-<area shape="rect" id="node11" href="$prompt_8h.html" title="Prompt (header)" alt="" coords="321,392,438,421"/>
-<area shape="rect" id="node27" href="$prim_8h.html" title="Algorithme de Prim (header)" alt="" coords="178,237,280,267"/>
-<area shape="rect" id="node43" href="$generation_8h.html" title="Generation d&#39;un fichier latex (header)" alt="" coords="873,315,1012,344"/>
-<area shape="rect" id="node52" href="$graphe_8c.html" title="Graphes (code)" alt="" coords="690,160,784,189"/>
-<area shape="rect" id="node32" href="$coloration_8c.html" title="Coloration d&#39;un graphe (code)" alt="" coords="304,237,413,267"/>
-<area shape="rect" id="node25" href="$parcours_8c.html" title="Parcours d&#39;un graphe (code)" alt="" coords="417,315,521,344"/>
-<area shape="rect" id="node17" href="$edition_8c.html" title="Prompt mode édition (code)" alt="" coords="556,392,649,421"/>
-<area shape="rect" id="node13" href="$main_8c.html" title="Main." alt="" coords="282,469,365,499"/>
-<area shape="rect" id="node15" href="$prompt_8c.html" title="Prompt (code)" alt="" coords="389,469,482,499"/>
-<area shape="rect" id="node22" href="$grapheconnexe_8c.html" title="GrapheConnexes (code)" alt="" coords="684,392,825,421"/>
-<area shape="rect" id="node30" href="$prim_8c.html" title="Algorithme de Prim (code)" alt="" coords="262,315,342,344"/>
-<area shape="rect" id="node39" href="$io_8c.html" title="Entrées/Sorties (code source)" alt="" coords="22,315,86,344"/>
-<area shape="rect" id="node46" href="$generation_8c.html" title="Generation d&#39;un fichier latex (code)" alt="" coords="900,392,1014,421"/>
+<area shape="rect" id="node3" href="$graphe_8h.html" title="Graphes (header)" alt="" coords="556,83,673,112"/>
+<area shape="rect" id="node25" href="$grapheconnexe_8h.html" title="GrapheConnexes connexes (header)" alt="" coords="616,315,781,344"/>
+<area shape="rect" id="node44" href="$io_8h.html" title="Entrées/Sorties (header)" alt="" coords="857,237,945,267"/>
+<area shape="rect" id="node68" href="$adjacence_8c.html" title="Gestion des listes d&#39;adjacence (code source)" alt="" coords="939,83,1053,112"/>
+<area shape="rect" id="node5" href="$coloration_8h.html" title="Coloration d&#39;un graphe (header)" alt="" coords="252,160,385,189"/>
+<area shape="rect" id="node7" href="$parcours_8h.html" title="Parcours d&#39;un graphe (header)" alt="" coords="365,237,493,267"/>
+<area shape="rect" id="node9" href="$edition_8h.html" title="Prompt mode édition (header)" alt="" coords="427,315,541,344"/>
+<area shape="rect" id="node11" href="$prompt_8h.html" title="Prompt (header)" alt="" coords="600,392,717,421"/>
+<area shape="rect" id="node13" href="$script_8h.html" title="Script (header)" alt="" coords="493,469,603,499"/>
+<area shape="rect" id="node35" href="$prim_8h.html" title="Algorithme de Prim (header)" alt="" coords="107,237,208,267"/>
+<area shape="rect" id="node53" href="$generation_8h.html" title="Generation d&#39;un fichier latex (header)" alt="" coords="1096,315,1235,344"/>
+<area shape="rect" id="node64" href="$graphe_8c.html" title="Graphes (code)" alt="" coords="568,160,661,189"/>
+<area shape="rect" id="node41" href="$coloration_8c.html" title="Coloration d&#39;un graphe (code)" alt="" coords="232,237,341,267"/>
+<area shape="rect" id="node33" href="$parcours_8c.html" title="Parcours d&#39;un graphe (code)" alt="" coords="299,315,403,344"/>
+<area shape="rect" id="node23" href="$edition_8c.html" title="Prompt mode édition (code)" alt="" coords="381,392,475,421"/>
+<area shape="rect" id="node15" href="$main_8c.html" title="Main." alt="" coords="917,547,1000,576"/>
+<area shape="rect" id="node20" href="$prompt_8c.html" title="Prompt (code)" alt="" coords="627,469,720,499"/>
+<area shape="rect" id="node17" href="$script_8c.html" title="Script (code)" alt="" coords="505,547,591,576"/>
+<area shape="rect" id="node29" href="$grapheconnexe_8c.html" title="GrapheConnexes (code)" alt="" coords="741,392,883,421"/>
+<area shape="rect" id="node39" href="$prim_8c.html" title="Algorithme de Prim (code)" alt="" coords="93,315,173,344"/>
+<area shape="rect" id="node49" href="$io_8c.html" title="Entrées/Sorties (code source)" alt="" coords="957,315,1021,344"/>
+<area shape="rect" id="node57" href="$generation_8c.html" title="Generation d&#39;un fichier latex (code)" alt="" coords="1127,392,1241,421"/>
 </map>

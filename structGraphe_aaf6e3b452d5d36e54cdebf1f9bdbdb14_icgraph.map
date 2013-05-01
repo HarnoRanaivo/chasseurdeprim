@@ -1,11 +1,15 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="187,5,312,35"/>
-<area shape="rect" id="node7" href="$prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="527,56,679,85"/>
-<area shape="rect" id="node9" href="$prompt_8c.html#a98126e5a7092a7a5921d1bdc3dab2fa2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="728,83,835,112"/>
-<area shape="rect" id="node13" href="$graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18" title="Copie d&#39;un Graphe." alt="" coords="216,160,283,189"/>
-<area shape="rect" id="node15" href="$grapheconnexe_8c.html#a2746c747f7ca032eb775adf03d09c5c5" title="Nouveau GrapheConnexe." alt="" coords="216,213,283,243"/>
-<area shape="rect" id="node17" href="$io_8c.html#a80d78fef8f986ce18ebdc87fb7c986e6" title="Permet de charger un graphe dans un fichier texte." alt="" coords="195,267,304,296"/>
-<area shape="rect" id="node19" href="$prim_8c.html#a146f5763132b19eb63ad6a7ca22d2cef" title="Calcul de l&#39;arbre couvrant minimum d&#39;un graphe connexe en partant d&#39;un sommet." alt="" coords="167,320,332,349"/>
-<area shape="rect" id="node5" href="$edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="383,5,476,35"/>
-<area shape="rect" id="node11" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="883,83,933,112"/>
+<area shape="rect" id="node3" href="$edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="187,163,312,193"/>
+<area shape="rect" id="node7" href="$prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="547,59,699,89"/>
+<area shape="rect" id="node9" href="$prompt_8c.html#a98126e5a7092a7a5921d1bdc3dab2fa2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="755,34,861,63"/>
+<area shape="rect" id="node15" href="$script_8c.html#a8c185d60c29d8b7add1a7bccbea07ad8" title="Traiter la ligne de commande d&#39;un script." alt="" coords="540,214,705,243"/>
+<area shape="rect" id="node17" href="$script_8c.html#ae71544ef685175a4d606cd2313654d76" title="Gérer un script." alt="" coords="761,239,855,269"/>
+<area shape="rect" id="node19" href="$graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18" title="Copie d&#39;un Graphe." alt="" coords="216,318,283,347"/>
+<area shape="rect" id="node21" href="$grapheconnexe_8c.html#a2746c747f7ca032eb775adf03d09c5c5" title="Nouveau GrapheConnexe." alt="" coords="216,371,283,401"/>
+<area shape="rect" id="node23" href="$io_8c.html#a80d78fef8f986ce18ebdc87fb7c986e6" title="Permet de charger un graphe dans un fichier texte." alt="" coords="195,425,304,454"/>
+<area shape="rect" id="node25" href="$prim_8c.html#a146f5763132b19eb63ad6a7ca22d2cef" title="Calcul de l&#39;arbre couvrant minimum d&#39;un graphe connexe en partant d&#39;un sommet." alt="" coords="167,478,332,507"/>
+<area shape="rect" id="node31" href="$script_8c.html#a842b1cd50002095ee6aad46d5857ee4f" title="Traiter la ligne de commande d&#39;un script." alt="" coords="180,531,319,561"/>
+<area shape="rect" id="node5" href="$edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="389,110,483,139"/>
+<area shape="rect" id="node13" href="$script_8c.html#a8d481755757d425d078af43e2dd298d8" title="Gérer un script, mode édition." alt="" coords="383,163,489,193"/>
+<area shape="rect" id="node11" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="909,34,960,63"/>
 </map>

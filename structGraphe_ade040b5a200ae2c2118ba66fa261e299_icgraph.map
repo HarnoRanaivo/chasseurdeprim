@@ -6,8 +6,7 @@
 <area shape="rect" id="node11" href="$graphe_8c.html#acfcf3da168eac84806f30277b17e8a29" title="Liste des arêtes d&#39;un Graphe." alt="" coords="249,219,316,248"/>
 <area shape="rect" id="node13" href="$graphe_8c.html#a9834e48c452c65f170140ce2dae32fae" title="Libération d&#39;un Graphe." alt="" coords="249,272,316,301"/>
 <area shape="rect" id="node15" href="$io_8c.html#a198689c52ffb4178b1b3c154a035d1d1" title="Afficher les sommets d&#39;un graphe." alt="" coords="208,325,357,355"/>
-<area shape="rect" id="node17" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="257,379,308,408"/>
-<area shape="rect" id="node19" href="$parcours_8c.html#abd040d82372961759c0ec9c694131303" title="Parcours en largeur d&#39;un graphe." alt="" coords="221,432,344,461"/>
-<area shape="rect" id="node23" href="$parcours_8c.html#a8324bb1764f831e8030db5936b6104d0" title="Test d&#39;existence de cycles dans un graphe." alt="" coords="247,485,319,515"/>
-<area shape="rect" id="node21" href="$parcours_8c.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe." alt="" coords="405,432,507,461"/>
+<area shape="rect" id="node17" href="$parcours_8c.html#abd040d82372961759c0ec9c694131303" title="Parcours en largeur d&#39;un graphe." alt="" coords="221,379,344,408"/>
+<area shape="rect" id="node21" href="$parcours_8c.html#a8324bb1764f831e8030db5936b6104d0" title="Test d&#39;existence de cycles dans un graphe." alt="" coords="247,432,319,461"/>
+<area shape="rect" id="node19" href="$parcours_8c.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe." alt="" coords="405,379,507,408"/>
 </map>

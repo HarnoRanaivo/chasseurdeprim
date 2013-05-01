@@ -1,0 +1,731 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Chasseur de Prim: Référence du fichier src/script.c</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Chasseur de Prim
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Généré par Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li><a href="dirs.html"><span>Répertoires</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+  <div id="nav-path" class="navpath">
+    <ul>
+      <li class="navelem"><a class="el" href="dir_f698a076f5ac3ef0691a17cfde4f7ef2.html">src</a>      </li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Fonctions</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier script.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Script (code)  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="script_8h_source.html">script.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de script.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="script_8c__incl.png" border="0" usemap="#src_2script_8c" alt=""/></div>
+<map name="src_2script_8c" id="src_2script_8c">
+<area shape="rect" id="node3" href="script_8h.html" title="Script (header)" alt="" coords="2015,83,2079,112"/><area shape="rect" id="node15" href="base_8h.html" title="Base (header)" alt="" coords="2045,779,2107,808"/><area shape="rect" id="node21" href="graphe_8h.html" title="Graphes (header)" alt="" coords="1837,469,1909,499"/><area shape="rect" id="node52" href="grapheconnexe_8h.html" title="GrapheConnexes connexes (header)" alt="" coords="1739,237,1859,267"/><area shape="rect" id="node61" href="parcours_8h.html" title="Parcours d&#39;un graphe (header)" alt="" coords="1780,315,1863,344"/><area shape="rect" id="node75" href="io_8h.html" title="Entrées/Sorties (header)" alt="" coords="2280,392,2323,421"/><area shape="rect" id="node87" href="prim_8h.html" title="Algorithme de Prim (header)" alt="" coords="1316,315,1375,344"/><area shape="rect" id="node104" href="generation_8h.html" title="Generation d&#39;un fichier latex (header)" alt="" coords="841,392,935,421"/><area shape="rect" id="node113" href="prompt_8h.html" title="Prompt (header)" alt="" coords="1968,160,2040,189"/><area shape="rect" id="node127" href="edition_8h.html" title="Prompt mode édition (header)" alt="" coords="2064,237,2133,267"/><area shape="rect" id="node27" href="sommet_8h.html" title="Gestion de la sorte Sommet (header)" alt="" coords="1395,701,1475,731"/><area shape="rect" id="node33" href="adjacence_8h.html" title="Gestion des listes d&#39;adjacence (header)" alt="" coords="1517,547,1608,576"/><area shape="rect" id="node40" href="listearete_8h.html" title="Liste d&#39;arêtes (header)" alt="" coords="1101,547,1187,576"/><area shape="rect" id="node46" href="arete_8h.html" title="Arêtes (header)" alt="" coords="955,624,1016,653"/><area shape="rect" id="node68" href="coloration_8h.html" title="Coloration d&#39;un graphe (header)" alt="" coords="1568,392,1656,421"/><area shape="rect" id="node95" href="filearetetriee_8h.html" title="File triée d&#39;arêtes (header)" alt="" coords="1120,469,1224,499"/></map>
+</div>
+</div>
+<p><a href="script_8c_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a830b243c907da2fe6cdf0903369abcae"></a><!-- doxytag: member="script.c::ligneIncorrecte" ref="a830b243c907da2fe6cdf0903369abcae" args="(const char *ligne)" -->
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ligneIncorrecte</b> (const char *ligne)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structDonnees.html">Donnees</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="script_8c.html#a8c185d60c29d8b7add1a7bccbea07ad8">traiterLigneCommandeNI</a> (const char *ligne, <a class="el" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3ea">PromptCommande</a> pc, <a class="el" href="structDonnees.html">Donnees</a> *d, FILE *fichier)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Traiter la ligne de commande d'un script.  <a href="#a8c185d60c29d8b7add1a7bccbea07ad8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="script_8c.html#ae71544ef685175a4d606cd2313654d76">traiterFichier</a> (const char *script)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gérer un script.  <a href="#ae71544ef685175a4d606cd2313654d76"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="script_8c.html#a842b1cd50002095ee6aad46d5857ee4f">traiterLigneEditionNI</a> (const char *ligne, <a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425f">EditCommande</a> ec, <a class="el" href="structGraphe.html">Graphe</a> *g)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Traiter la ligne de commande d'un script.  <a href="#a842b1cd50002095ee6aad46d5857ee4f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="script_8c.html#a8d481755757d425d078af43e2dd298d8">modeEditionNI</a> (<a class="el" href="structGraphe.html">Graphe</a> *g, FILE *fichier)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Gérer un script, mode édition.  <a href="#a8d481755757d425d078af43e2dd298d8"></a><br/></td></tr>
+</table>
+<hr/><a name="details" id="details"></a><h2>Description détaillée</h2>
+<div class="textblock"><p>Script (code) </p>
+<dl class="author"><dt><b>Auteur:</b></dt><dd>Harenome RAZANAJATO </dd></dl>
+
+<p>Définition dans le fichier <a class="el" href="script_8c_source.html">script.c</a>.</p>
+</div><hr/><h2>Documentation des fonctions</h2>
+<a class="anchor" id="a8d481755757d425d078af43e2dd298d8"></a><!-- doxytag: member="script.c::modeEditionNI" ref="a8d481755757d425d078af43e2dd298d8" args="(Graphe *g, FILE *fichier)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structGraphe.html">Graphe</a>* <a class="el" href="script_8c.html#a8d481755757d425d078af43e2dd298d8">modeEditionNI</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fichier</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Gérer un script, mode édition. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">script</td><td>Fichier contenant les instructions. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="script_8c_source.html#l00353">353</a> du fichier <a class="el" href="script_8c_source.html">script.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> continuer = <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
+
+    <span class="keywordflow">do</span>
+    {
+        <span class="keywordtype">int</span> succes;
+        <span class="keywordtype">char</span> buffer[512] = { <span class="charliteral">&#39;\0&#39;</span> };
+
+        succes = fscanf(fichier, <span class="stringliteral">&quot;%511[^\n]%*[\n]&quot;</span>, buffer);
+
+        <span class="keywordflow">if</span> (succes == 1)
+        {
+            <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425f" title="Alias pour les commandes du mode « édition ».">EditCommande</a> ec = <a class="code" href="edition_8h.html#a8f05525d05c3c2ae8667e6e185dac69b" title="Rechercher la commande correspondante.">rechercherEditCommande</a>(buffer);
+
+            g = <a class="code" href="edition_8h.html#a36eea2bb9710df698c47d1af470f64aa" title="Traiter la ligne de commande entrée par l&#39;utilisateur.">traiterLigneEdition</a>(buffer, ec, g);
+            <span class="keywordflow">if</span> (ec == <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa5f026c3164088c569f2082781b010f4b">ED_QUIT</a>)
+                continuer = <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+        }
+        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (succes == EOF)
+            continuer = <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+
+        numero++;
+    }
+    <span class="keywordflow">while</span> (continuer);
+
+    <span class="keywordflow">return</span> g;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="script_8c_a8d481755757d425d078af43e2dd298d8_cgraph.png" border="0" usemap="#script_8c_a8d481755757d425d078af43e2dd298d8_cgraph" alt=""/></div>
+<map name="script_8c_a8d481755757d425d078af43e2dd298d8_cgraph" id="script_8c_a8d481755757d425d078af43e2dd298d8_cgraph">
+<area shape="rect" id="node3" href="edition_8h.html#a8f05525d05c3c2ae8667e6e185dac69b" title="Rechercher la commande correspondante." alt="" coords="352,5,525,35"/><area shape="rect" id="node5" href="edition_8h.html#a36eea2bb9710df698c47d1af470f64aa" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="164,485,289,515"/><area shape="rect" id="node7" href="io_8h.html#a898b3b44a72a0490e4864639d8896b61" title="Vérification de l&#39;intention de l&#39;utilisateur." alt="" coords="408,59,469,88"/><area shape="rect" id="node9" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe." alt="" coords="380,112,497,141"/><area shape="rect" id="node11" href="structGraphe.html#aaf6e3b452d5d36e54cdebf1f9bdbdb14" title="Nouveau Graphe." alt="" coords="384,165,493,195"/><area shape="rect" id="node13" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe." alt="" coords="356,219,521,248"/><area shape="rect" id="node15" href="structGraphe.html#a420bc7f2ad2301c4565dce8c29a14286" title="Ajout d&#39;un sommet dans un Graphe." alt="" coords="355,272,523,301"/><area shape="rect" id="node17" href="structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe." alt="" coords="365,325,512,355"/><area shape="rect" id="node19" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe." alt="" coords="364,379,513,408"/><area shape="rect" id="node21" href="structGraphe.html#a64fd41af976a8447604e9e95d93b71cf" title="Modification d&#39;une arête dans un Graphe." alt="" coords="361,432,516,461"/><area shape="rect" id="node23" href="structGraphe.html#a0aa5aacc4cc9cb1e489a7bb295dcead4" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="345,485,532,515"/><area shape="rect" id="node25" href="structGraphe.html#a183405c1312d76628db9de7079b0beaa" title="Suppression d&#39;une arête dans un Graphe." alt="" coords="355,539,523,568"/><area shape="rect" id="node27" href="structGraphe.html#aa81e772015dccea36be07c77cb0f16db" title="Test d&#39;existence de voisins d&#39;un Sommet dans un Graphe." alt="" coords="380,592,497,621"/><area shape="rect" id="node29" href="structGraphe.html#a4924edca2ae3d13ce4c71c5fc8cfd917" title="Afficher les voisins d&#39;un sommet." alt="" coords="360,645,517,675"/><area shape="rect" id="node31" href="structGraphe.html#ace288c4a90377a269c162289a83b2bac" title="Afficher les arêtes incidentes à un sommet." alt="" coords="351,699,527,728"/><area shape="rect" id="node33" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe." alt="" coords="376,752,501,781"/><area shape="rect" id="node35" href="structGraphe.html#a198689c52ffb4178b1b3c154a035d1d1" title="Afficher les sommets d&#39;un graphe." alt="" coords="340,805,537,835"/><area shape="rect" id="node37" href="structGraphe.html#ad6a8e0a2906acb31766e826e35ecb34d" title="Afficher les arêtes d&#39;un graphe." alt="" coords="341,859,536,888"/><area shape="rect" id="node39" href="structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe." alt="" coords="364,912,513,941"/><area shape="rect" id="node41" href="edition_8h.html#a0a2aed0f6bc3f74869b285f780be3046" title="Afficher l&#39;aide correspondant à une commande." alt="" coords="348,965,529,995"/><area shape="rect" id="node44" href="edition_8h.html#a8cbf30bc7af47ca33c79fbc305da4f9b" title="Afficher l&#39;aide du mode « édition »." alt="" coords="373,1019,504,1048"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="script_8c_a8d481755757d425d078af43e2dd298d8_icgraph.png" border="0" usemap="#script_8c_a8d481755757d425d078af43e2dd298d8_icgraph" alt=""/></div>
+<map name="script_8c_a8d481755757d425d078af43e2dd298d8_icgraph" id="script_8c_a8d481755757d425d078af43e2dd298d8_icgraph">
+<area shape="rect" id="node3" href="script_8c.html#a8c185d60c29d8b7add1a7bccbea07ad8" title="Traiter la ligne de commande d&#39;un script." alt="" coords="164,5,329,35"/><area shape="rect" id="node5" href="script_8c.html#ae71544ef685175a4d606cd2313654d76" title="Gérer un script." alt="" coords="380,5,473,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae71544ef685175a4d606cd2313654d76"></a><!-- doxytag: member="script.c::traiterFichier" ref="ae71544ef685175a4d606cd2313654d76" args="(const char *script)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="script_8c.html#ae71544ef685175a4d606cd2313654d76">traiterFichier</a> </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>script</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Gérer un script. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">script</td><td>Fichier contenant les instructions. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="script_8c_source.html#l00194">194</a> du fichier <a class="el" href="script_8c_source.html">script.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <a class="code" href="structDonnees.html" title="Stockage des données temporaires du programme.">Donnees</a> * d;
+    FILE * fichier;
+
+    <span class="comment">/* Le reste du programme ne peut pas fonctionner sans d. */</span>
+    <span class="keywordflow">if</span> ((d = <a class="code" href="base_8h.html#aed83343b5b2cdb908229b4fac27cd282" title="Allouer de la mémoire.">MALLOC</a>(d)) == NULL)
+    {
+        perror(<span class="stringliteral">&quot;malloc&quot;</span>);
+        exit(EX_OSERR);
+    }
+
+    <span class="keywordflow">if</span> ((fichier = fopen(script, <span class="stringliteral">&quot;r&quot;</span>)) == NULL)
+    {
+        free(d);
+        perror(<span class="stringliteral">&quot;fopen&quot;</span>);
+        exit(EX_NOINPUT);
+    }
+
+    d-&gt;graphe = <a class="code" href="structGraphe.html#aaf6e3b452d5d36e54cdebf1f9bdbdb14" title="Nouveau Graphe.">gNouv</a>();
+    d-&gt;arbre = <a class="code" href="structGraphe.html#aaf6e3b452d5d36e54cdebf1f9bdbdb14" title="Nouveau Graphe.">gNouv</a>();
+    d-&gt;sauvegarde = <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
+
+    <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309" title="Simulation des booléens.">Bool</a> continuer = <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
+
+    <span class="keywordflow">do</span>
+    {
+        <span class="keywordtype">int</span> succes;
+        <span class="keywordtype">char</span> buffer[512] = { <span class="charliteral">&#39;\0&#39;</span> };
+        <span class="comment">/* buffer est initialisé à &#39;\0&#39;, car les *scanf ne rajoutent ce &#39;\0&#39;</span>
+<span class="comment">         * que pour le format %s. Avec le format %c ou une expression, ce</span>
+<span class="comment">         * &#39;\0&#39; doit être ajouté ultérieurement, si on souhaite travailler</span>
+<span class="comment">         * sur des chaînes de caractères valides.</span>
+<span class="comment">         */</span>
+
+        <span class="comment">/* Lecture des entrées de l&#39;utilisateur. */</span>
+        succes = fscanf(fichier, <span class="stringliteral">&quot;%511[^\n]%*[\n]&quot;</span>, buffer);
+
+        <span class="keywordflow">if</span> (succes == 1)
+        {
+            <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3ea" title="Alias pour les commandes du prompt.">PromptCommande</a> pc = <a class="code" href="prompt_8h.html#a32ca0623d7c330e982e97f5352b9cdf7" title="Rechercher la commande correspondante.">rechercherPromptCommande</a>(buffer);
+
+            d = <a class="code" href="script_8h.html#a59a9ddeaf09135332e0a9b709746eb5a" title="Traiter la ligne de commande d&#39;un script.">traiterLigneCommandeNI</a>(buffer, pc, d, fichier);
+            <span class="keywordflow">if</span> (pc == <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa2969aa76987f61e233e9eef321b653d3">PC_QUIT</a>)
+            {
+                d-&gt;graphe = <a class="code" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe.">gLiberer</a>(d-&gt;graphe);
+                d-&gt;arbre = <a class="code" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe.">gLiberer</a>(d-&gt;arbre);
+                free(d);
+                continuer = <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+            }
+        }
+        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (succes == EOF)
+            continuer = <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+
+        numero++;
+    }
+    <span class="keywordflow">while</span> (continuer);
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="script_8c_ae71544ef685175a4d606cd2313654d76_cgraph.png" border="0" usemap="#script_8c_ae71544ef685175a4d606cd2313654d76_cgraph" alt=""/></div>
+<map name="script_8c_ae71544ef685175a4d606cd2313654d76_cgraph" id="script_8c_ae71544ef685175a4d606cd2313654d76_cgraph">
+<area shape="rect" id="node3" href="structGraphe.html#aaf6e3b452d5d36e54cdebf1f9bdbdb14" title="Nouveau Graphe." alt="" coords="875,102,984,131"/><area shape="rect" id="node5" href="prompt_8h.html#a32ca0623d7c330e982e97f5352b9cdf7" title="Rechercher la commande correspondante." alt="" coords="149,410,341,439"/><area shape="rect" id="node7" href="script_8h.html#a59a9ddeaf09135332e0a9b709746eb5a" title="Traiter la ligne de commande d&#39;un script." alt="" coords="163,463,328,493"/><area shape="rect" id="node9" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe." alt="" coords="871,1135,988,1165"/><area shape="rect" id="node12" href="structGraphe.html#a1a93b1ef000c27e4d43c871faff3c2a3" title="Permet de charger un graphe dans un fichier texte." alt="" coords="417,463,577,493"/><area shape="rect" id="node14" href="io_8h.html#ab82637ef1faa3610fbc796eb71237397" title="Vérifier l&#39;existence d&#39;un fichier." alt="" coords="449,517,545,546"/><area shape="rect" id="node16" href="structGraphe.html#aca158a023def8433061cca3075d09311" title="Permet de sauvegarder le graphe dans un fichier passé en argument." alt="" coords="403,570,592,599"/><area shape="rect" id="node18" href="structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe." alt="" coords="856,229,1003,258"/><area shape="rect" id="node20" href="structGraphe.html#ac01b4181e185122d26b569dc5d5b0eb9" title="Modification d&#39;une arête dans un GrapheConnexe." alt="" coords="416,677,579,706"/><area shape="rect" id="node22" href="structGraphe.html#ad7f46b1f66764538930a9ea33a746961" title="Ajout d&#39;une arête dans un graphe connexe." alt="" coords="419,730,576,759"/><area shape="rect" id="node24" href="structGraphe.html#a426658bb7e74364f25137659827422a2" title="suppression d&#39;une arête dans un graphe connexe." alt="" coords="409,783,585,813"/><area shape="rect" id="node26" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe." alt="" coords="847,282,1012,311"/><area shape="rect" id="node28" href="structGraphe.html#ac3d2bf2bf83d8206bb018726506e9df2" title="Suppression d&#39;un sommet dans un graphe connexe." alt="" coords="400,887,595,917"/><area shape="rect" id="node30" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe." alt="" coords="867,335,992,365"/><area shape="rect" id="node32" href="structGraphe.html#a363d4c3de24663a378322111f71e51cf" title="Calcul de l&#39;arbre couvrant minimum d&#39;un graphe connexe en partant d&#39;un sommet." alt="" coords="389,50,605,79"/><area shape="rect" id="node34" href="structGraphe.html#a0d0ec90a46d0b4618b17c2ea4f6c0d0f" title="Générer un fichier latex représentant les Graphe g et a à l&#39;aide de Latex et TikZ." alt="" coords="419,154,576,183"/><area shape="rect" id="node36" href="script_8h.html#a8d481755757d425d078af43e2dd298d8" title="Gérer un script, mode édition." alt="" coords="444,623,551,653"/><area shape="rect" id="node69" href="structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe." alt="" coords="855,175,1004,205"/><area shape="rect" id="node76" href="structGraphe.html#a023f0542e3b7c6b7716d3984b0361453" title="Copie d&#39;un Graphe." alt="" coords="439,309,556,338"/><area shape="rect" id="node38" href="edition_8h.html#a8f05525d05c3c2ae8667e6e185dac69b" title="Rechercher la commande correspondante." alt="" coords="843,1082,1016,1111"/><area shape="rect" id="node40" href="edition_8h.html#a36eea2bb9710df698c47d1af470f64aa" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="655,623,780,653"/><area shape="rect" id="node42" href="io_8h.html#a898b3b44a72a0490e4864639d8896b61" title="Vérification de l&#39;intention de l&#39;utilisateur." alt="" coords="899,442,960,471"/><area shape="rect" id="node47" href="structGraphe.html#a420bc7f2ad2301c4565dce8c29a14286" title="Ajout d&#39;un sommet dans un Graphe." alt="" coords="845,495,1013,525"/><area shape="rect" id="node50" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe." alt="" coords="855,549,1004,578"/><area shape="rect" id="node52" href="structGraphe.html#a64fd41af976a8447604e9e95d93b71cf" title="Modification d&#39;une arête dans un Graphe." alt="" coords="852,602,1007,631"/><area shape="rect" id="node54" href="structGraphe.html#a0aa5aacc4cc9cb1e489a7bb295dcead4" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="836,655,1023,685"/><area shape="rect" id="node56" href="structGraphe.html#a183405c1312d76628db9de7079b0beaa" title="Suppression d&#39;une arête dans un Graphe." alt="" coords="845,709,1013,738"/><area shape="rect" id="node58" href="structGraphe.html#aa81e772015dccea36be07c77cb0f16db" title="Test d&#39;existence de voisins d&#39;un Sommet dans un Graphe." alt="" coords="871,762,988,791"/><area shape="rect" id="node60" href="structGraphe.html#a4924edca2ae3d13ce4c71c5fc8cfd917" title="Afficher les voisins d&#39;un sommet." alt="" coords="851,815,1008,845"/><area shape="rect" id="node62" href="structGraphe.html#ace288c4a90377a269c162289a83b2bac" title="Afficher les arêtes incidentes à un sommet." alt="" coords="841,869,1017,898"/><area shape="rect" id="node65" href="structGraphe.html#a198689c52ffb4178b1b3c154a035d1d1" title="Afficher les sommets d&#39;un graphe." alt="" coords="831,922,1028,951"/><area shape="rect" id="node67" href="structGraphe.html#ad6a8e0a2906acb31766e826e35ecb34d" title="Afficher les arêtes d&#39;un graphe." alt="" coords="832,975,1027,1005"/><area shape="rect" id="node71" href="edition_8h.html#a0a2aed0f6bc3f74869b285f780be3046" title="Afficher l&#39;aide correspondant à une commande." alt="" coords="839,1029,1020,1058"/><area shape="rect" id="node74" href="edition_8h.html#a8cbf30bc7af47ca33c79fbc305da4f9b" title="Afficher l&#39;aide du mode « édition »." alt="" coords="864,389,995,418"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a8c185d60c29d8b7add1a7bccbea07ad8"></a><!-- doxytag: member="script.c::traiterLigneCommandeNI" ref="a8c185d60c29d8b7add1a7bccbea07ad8" args="(const char *ligne, PromptCommande pc, Donnees *d, FILE *fichier)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structDonnees.html">Donnees</a>* <a class="el" href="script_8c.html#a8c185d60c29d8b7add1a7bccbea07ad8">traiterLigneCommandeNI</a> </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>ligne</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3ea">PromptCommande</a>&#160;</td>
+          <td class="paramname"><em>pc</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structDonnees.html">Donnees</a> *&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fichier</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Traiter la ligne de commande d'un script. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ligne</td><td>Ligne de commande entrée par l'utilisateur. </td></tr>
+    <tr><td class="paramname">pc</td><td>Commande. </td></tr>
+    <tr><td class="paramname">d</td><td>Données du programme. </td></tr>
+    <tr><td class="paramname">fichier</td><td>Script. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Nouvelles données du programme, si elles ont été modifiées. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="script_8c_source.html#l00022">22</a> du fichier <a class="el" href="script_8c_source.html">script.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordtype">char</span> buffer1[481] = { <span class="charliteral">&#39;\0&#39;</span> };
+    <span class="keywordtype">char</span> buffer2[100] = { <span class="charliteral">&#39;\0&#39;</span> };
+    <span class="keywordtype">int</span> poids;
+
+    <span class="keywordflow">switch</span> (pc)
+    {
+        <span class="keywordflow">case</span> <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaaa14c7ade18f8a239a8c0a523df624732">PC_NOUV</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) == 1)
+            {
+                d-&gt;graphe = <a class="code" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe.">gLiberer</a>(d-&gt;graphe);
+                d-&gt;arbre = <a class="code" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe.">gLiberer</a>(d-&gt;arbre);
+                d-&gt;graphe = <a class="code" href="structGraphe.html#aaf6e3b452d5d36e54cdebf1f9bdbdb14" title="Nouveau Graphe.">gNouv</a>();
+                d-&gt;sauvegarde = <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
+            }
+            <span class="keywordflow">else</span>
+                ligneIncorrecte(ligne);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa87749e32e5594f1737f23c9a14f47f0e">PC_CHG</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) == 2 &amp;&amp; sscanf(ligne, <span class="stringliteral">&quot;%*s %480s&quot;</span>, buffer1) == 1)
+            {
+                d-&gt;graphe = <a class="code" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe.">gLiberer</a>(d-&gt;graphe);
+                d-&gt;arbre = <a class="code" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe.">gLiberer</a>(d-&gt;arbre);
+                d-&gt;graphe = <a class="code" href="structGraphe.html#a1a93b1ef000c27e4d43c871faff3c2a3" title="Permet de charger un graphe dans un fichier texte.">charger_graphe</a>(buffer1);
+                d-&gt;sauvegarde = <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
+            }
+            <span class="keywordflow">else</span>
+                ligneIncorrecte(ligne);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab01f01d01488432aca18e8dd99bbda6b">PC_SAV</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) == 2
+                &amp;&amp; sscanf(ligne, <span class="stringliteral">&quot;%*s %480s&quot;</span>, buffer1) == 1
+                &amp;&amp; !<a class="code" href="io_8h.html#ab82637ef1faa3610fbc796eb71237397" title="Vérifier l&#39;existence d&#39;un fichier.">existeFichier</a>(buffer1)
+               )
+            {
+                <a class="code" href="structGraphe.html#aca158a023def8433061cca3075d09311" title="Permet de sauvegarder le graphe dans un fichier passé en argument.">sauvegarder_graphe</a>(d-&gt;graphe, buffer1);
+                d-&gt;sauvegarde = <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a763723ffe7a348ad0f5c1b58a331b523">VRAI</a>;
+            }
+            <span class="keywordflow">else</span>
+                ligneIncorrecte(ligne);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa40ff0532940fb5149c2dc84f33a1e42f">PC_MOD</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) == 4
+                &amp;&amp; sscanf(ligne, <span class="stringliteral">&quot;%*s %99s %99s %d&quot;</span>, buffer1, buffer2, &amp;poids) == 3
+                &amp;&amp; <a class="code" href="structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe.">gExisteArete</a>(d-&gt;graphe, buffer1, buffer2)
+               )
+            {
+                d-&gt;graphe = <a class="code" href="structGraphe.html#ac01b4181e185122d26b569dc5d5b0eb9" title="Modification d&#39;une arête dans un GrapheConnexe.">gcModifierArete</a>(d-&gt;graphe, buffer1, buffer2, poids);
+                d-&gt;arbre = <a class="code" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe.">gLiberer</a>(d-&gt;arbre);
+                d-&gt;sauvegarde = <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+            }
+            <span class="keywordflow">else</span>
+                ligneIncorrecte(ligne);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab54edd094180c0250cef139a8faa77e6">PC_AJAR</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) == 4
+                &amp;&amp; sscanf(ligne, <span class="stringliteral">&quot;%*s %99s %99s %d&quot;</span>, buffer1, buffer2, &amp;poids) == 3
+                &amp;&amp; !<a class="code" href="structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe.">gExisteArete</a>(d-&gt;graphe, buffer1, buffer2)
+               )
+            {
+                d-&gt;graphe = <a class="code" href="structGraphe.html#ad7f46b1f66764538930a9ea33a746961" title="Ajout d&#39;une arête dans un graphe connexe.">gcAjouterArete</a>(d-&gt;graphe, buffer1, buffer2, poids);
+                d-&gt;arbre = <a class="code" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe.">gLiberer</a>(d-&gt;arbre);
+                d-&gt;sauvegarde = <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+            }
+            <span class="keywordflow">else</span>
+                ligneIncorrecte(ligne);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaaf2e43916177d13b13142c266c8084c96">PC_SUPAR</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) == 3
+                &amp;&amp; sscanf(ligne, <span class="stringliteral">&quot;%*s %99s %99s&quot;</span>, buffer1, buffer2) == 2
+                &amp;&amp; <a class="code" href="structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe.">gExisteArete</a>(d-&gt;graphe, buffer1, buffer2)
+               )
+            {
+                d-&gt;graphe = <a class="code" href="structGraphe.html#a426658bb7e74364f25137659827422a2" title="suppression d&#39;une arête dans un graphe connexe.">gcSupprimerArete</a>(d-&gt;graphe, buffer1, buffer2);
+                d-&gt;arbre = <a class="code" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe.">gLiberer</a>(d-&gt;arbre);
+                d-&gt;sauvegarde = <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+            }
+            <span class="keywordflow">else</span>
+                ligneIncorrecte(ligne);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab09822296be1a43a17ebc1fe365d95d5">PC_SUPSOM</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) == 2
+                &amp;&amp; sscanf(ligne, <span class="stringliteral">&quot;%*s %99s&quot;</span>, buffer1) == 1
+                &amp;&amp; <a class="code" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe.">gExisteSommet</a>(d-&gt;graphe, buffer1)
+               )
+            {
+                d-&gt;graphe = <a class="code" href="structGraphe.html#ac3d2bf2bf83d8206bb018726506e9df2" title="Suppression d&#39;un sommet dans un graphe connexe.">gcSupprimerSommet</a>(d-&gt;graphe, buffer1);
+                d-&gt;arbre = <a class="code" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe.">gLiberer</a>(d-&gt;arbre);
+                d-&gt;sauvegarde = <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+            }
+            <span class="keywordflow">else</span>
+                ligneIncorrecte(ligne);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa13fc09e04b2f05e4c1fdf54082f7e396">PC_CAL</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) == 2
+                &amp;&amp; sscanf(ligne, <span class="stringliteral">&quot;%*s %99s&quot;</span>, buffer1) == 1
+                &amp;&amp; !<a class="code" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe.">gEstVide</a>(d-&gt;graphe)
+                &amp;&amp; <a class="code" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe.">gExisteSommet</a>(d-&gt;graphe, buffer1)
+               )
+            {
+                d-&gt;arbre = <a class="code" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe.">gLiberer</a>(d-&gt;arbre);
+                d-&gt;arbre = <a class="code" href="structGraphe.html#a363d4c3de24663a378322111f71e51cf" title="Calcul de l&#39;arbre couvrant minimum d&#39;un graphe connexe en partant d&#39;un sommet.">gArbreCouvrantMinimum</a>(d-&gt;graphe, buffer1);
+            }
+            <span class="keywordflow">else</span>
+                ligneIncorrecte(ligne);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaaf53a88ef4d4ed39a5e1cf9647e7b8d52">PC_AFF</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) == 2
+                &amp;&amp; sscanf(ligne, <span class="stringliteral">&quot;%*s %480s&quot;</span>, buffer1) == 1
+                &amp;&amp; !<a class="code" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe.">gEstVide</a>(d-&gt;graphe)
+                &amp;&amp; !<a class="code" href="io_8h.html#ab82637ef1faa3610fbc796eb71237397" title="Vérifier l&#39;existence d&#39;un fichier.">existeFichier</a>(buffer1)
+               )
+            {
+                <a class="code" href="structGraphe.html#a0d0ec90a46d0b4618b17c2ea4f6c0d0f" title="Générer un fichier latex représentant les Graphe g et a à l&#39;aide de Latex et TikZ.">gGenererLatex</a>(d-&gt;graphe, d-&gt;arbre, buffer1);
+            }
+            <span class="keywordflow">else</span>
+                ligneIncorrecte(ligne);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaab87db2dd5c22d855b95e6f136e0125b7">PC_LSV</a> :
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa2ccccc80cadcd8b5c366e8d1b2250348">PC_LSI</a> :
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa6c6b748523238f5c720814c426e8fada">PC_LSS</a> :
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa1a308bf1ace33a955a4eb4f919efa387">PC_LSA</a> :
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa42565f8bda459341ab4272f4355bd458">PC_EDIT</a> :
+            {
+                <a class="code" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a> * g = <a class="code" href="script_8h.html#a8d481755757d425d078af43e2dd298d8" title="Gérer un script, mode édition.">modeEditionNI</a>(<a class="code" href="structGraphe.html#a023f0542e3b7c6b7716d3984b0361453" title="Copie d&#39;un Graphe.">gCopier</a>(d-&gt;graphe), fichier);
+                <span class="keywordflow">if</span> (<a class="code" href="structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe.">gEstConnexe</a>(g))
+                {
+                    d-&gt;graphe = <a class="code" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe.">gLiberer</a>(d-&gt;graphe);
+                    d-&gt;arbre = <a class="code" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe.">gLiberer</a>(d-&gt;arbre);
+                    d-&gt;sauvegarde = <a class="code" href="base_8h.html#a39db6982619d623273fad8a383489309a1bb75a30f93b418be2d44aa0eafe9be3">FAUX</a>;
+                    d-&gt;graphe = g;
+                }
+                <span class="keywordflow">else</span>
+                    g = <a class="code" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe.">gLiberer</a>(g);
+            }
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa7b3b37a3057e294e082fc0dfd1f36e6a">PC_AIDE</a> :
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaa2969aa76987f61e233e9eef321b653d3">PC_QUIT</a> :
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="prompt_8h.html#ab00dd87678e7e84a8320ac3092d8a3eaacdeef5cde3f80503a88859bad4a3704c">PC_INCONNU</a> :
+
+        <span class="keywordflow">default</span> :
+            sscanf(ligne, <span class="stringliteral">&quot;%s&quot;</span>, buffer1);
+            printf(<span class="stringliteral">&quot;%s, ligne %d : Commande inconnue.\n&quot;</span>, buffer1, numero);
+            <span class="keywordflow">break</span>;
+    }
+
+    <span class="keywordflow">return</span> d;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="script_8c_a8c185d60c29d8b7add1a7bccbea07ad8_cgraph.png" border="0" usemap="#script_8c_a8c185d60c29d8b7add1a7bccbea07ad8_cgraph" alt=""/></div>
+<map name="script_8c_a8c185d60c29d8b7add1a7bccbea07ad8_cgraph" id="script_8c_a8c185d60c29d8b7add1a7bccbea07ad8_cgraph">
+<area shape="rect" id="node3" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe." alt="" coords="703,27,820,56"/><area shape="rect" id="node5" href="structGraphe.html#aaf6e3b452d5d36e54cdebf1f9bdbdb14" title="Nouveau Graphe." alt="" coords="707,80,816,109"/><area shape="rect" id="node7" href="structGraphe.html#a1a93b1ef000c27e4d43c871faff3c2a3" title="Permet de charger un graphe dans un fichier texte." alt="" coords="249,397,409,427"/><area shape="rect" id="node9" href="io_8h.html#ab82637ef1faa3610fbc796eb71237397" title="Vérifier l&#39;existence d&#39;un fichier." alt="" coords="281,451,377,480"/><area shape="rect" id="node11" href="structGraphe.html#aca158a023def8433061cca3075d09311" title="Permet de sauvegarder le graphe dans un fichier passé en argument." alt="" coords="235,504,424,533"/><area shape="rect" id="node13" href="structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe." alt="" coords="688,133,835,163"/><area shape="rect" id="node15" href="structGraphe.html#ac01b4181e185122d26b569dc5d5b0eb9" title="Modification d&#39;une arête dans un GrapheConnexe." alt="" coords="248,557,411,587"/><area shape="rect" id="node17" href="structGraphe.html#ad7f46b1f66764538930a9ea33a746961" title="Ajout d&#39;une arête dans un graphe connexe." alt="" coords="251,611,408,640"/><area shape="rect" id="node19" href="structGraphe.html#a426658bb7e74364f25137659827422a2" title="suppression d&#39;une arête dans un graphe connexe." alt="" coords="241,664,417,693"/><area shape="rect" id="node21" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe." alt="" coords="679,187,844,216"/><area shape="rect" id="node23" href="structGraphe.html#ac3d2bf2bf83d8206bb018726506e9df2" title="Suppression d&#39;un sommet dans un graphe connexe." alt="" coords="232,717,427,747"/><area shape="rect" id="node25" href="structGraphe.html#a95dd658a8d935309266b77cf7ab2e6a8" title="Test de vacuité d&#39;un Graphe." alt="" coords="699,240,824,269"/><area shape="rect" id="node27" href="structGraphe.html#a363d4c3de24663a378322111f71e51cf" title="Calcul de l&#39;arbre couvrant minimum d&#39;un graphe connexe en partant d&#39;un sommet." alt="" coords="221,771,437,800"/><area shape="rect" id="node29" href="structGraphe.html#a0d0ec90a46d0b4618b17c2ea4f6c0d0f" title="Générer un fichier latex représentant les Graphe g et a à l&#39;aide de Latex et TikZ." alt="" coords="251,824,408,853"/><area shape="rect" id="node31" href="script_8h.html#a8d481755757d425d078af43e2dd298d8" title="Gérer un script, mode édition." alt="" coords="276,293,383,323"/><area shape="rect" id="node64" href="structGraphe.html#af2d919b7649b50f315487287fc9fad68" title="Test de connexité d&#39;un graphe." alt="" coords="687,1040,836,1069"/><area shape="rect" id="node71" href="structGraphe.html#a023f0542e3b7c6b7716d3984b0361453" title="Copie d&#39;un Graphe." alt="" coords="271,877,388,907"/><area shape="rect" id="node33" href="edition_8h.html#a8f05525d05c3c2ae8667e6e185dac69b" title="Rechercher la commande correspondante." alt="" coords="675,293,848,323"/><area shape="rect" id="node35" href="edition_8h.html#a36eea2bb9710df698c47d1af470f64aa" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="487,427,612,456"/><area shape="rect" id="node37" href="io_8h.html#a898b3b44a72a0490e4864639d8896b61" title="Vérification de l&#39;intention de l&#39;utilisateur." alt="" coords="731,773,792,803"/><area shape="rect" id="node42" href="structGraphe.html#a420bc7f2ad2301c4565dce8c29a14286" title="Ajout d&#39;un sommet dans un Graphe." alt="" coords="677,827,845,856"/><area shape="rect" id="node45" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe." alt="" coords="687,880,836,909"/><area shape="rect" id="node47" href="structGraphe.html#a64fd41af976a8447604e9e95d93b71cf" title="Modification d&#39;une arête dans un Graphe." alt="" coords="684,933,839,963"/><area shape="rect" id="node49" href="structGraphe.html#a0aa5aacc4cc9cb1e489a7bb295dcead4" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="668,987,855,1016"/><area shape="rect" id="node51" href="structGraphe.html#a183405c1312d76628db9de7079b0beaa" title="Suppression d&#39;une arête dans un Graphe." alt="" coords="677,347,845,376"/><area shape="rect" id="node53" href="structGraphe.html#aa81e772015dccea36be07c77cb0f16db" title="Test d&#39;existence de voisins d&#39;un Sommet dans un Graphe." alt="" coords="703,400,820,429"/><area shape="rect" id="node55" href="structGraphe.html#a4924edca2ae3d13ce4c71c5fc8cfd917" title="Afficher les voisins d&#39;un sommet." alt="" coords="683,453,840,483"/><area shape="rect" id="node57" href="structGraphe.html#ace288c4a90377a269c162289a83b2bac" title="Afficher les arêtes incidentes à un sommet." alt="" coords="673,507,849,536"/><area shape="rect" id="node60" href="structGraphe.html#a198689c52ffb4178b1b3c154a035d1d1" title="Afficher les sommets d&#39;un graphe." alt="" coords="663,560,860,589"/><area shape="rect" id="node62" href="structGraphe.html#ad6a8e0a2906acb31766e826e35ecb34d" title="Afficher les arêtes d&#39;un graphe." alt="" coords="664,613,859,643"/><area shape="rect" id="node66" href="edition_8h.html#a0a2aed0f6bc3f74869b285f780be3046" title="Afficher l&#39;aide correspondant à une commande." alt="" coords="671,667,852,696"/><area shape="rect" id="node69" href="edition_8h.html#a8cbf30bc7af47ca33c79fbc305da4f9b" title="Afficher l&#39;aide du mode « édition »." alt="" coords="696,720,827,749"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Voici le graphe des appelants de cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="script_8c_a8c185d60c29d8b7add1a7bccbea07ad8_icgraph.png" border="0" usemap="#script_8c_a8c185d60c29d8b7add1a7bccbea07ad8_icgraph" alt=""/></div>
+<map name="script_8c_a8c185d60c29d8b7add1a7bccbea07ad8_icgraph" id="script_8c_a8c185d60c29d8b7add1a7bccbea07ad8_icgraph">
+<area shape="rect" id="node3" href="script_8c.html#ae71544ef685175a4d606cd2313654d76" title="Gérer un script." alt="" coords="223,5,316,35"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a842b1cd50002095ee6aad46d5857ee4f"></a><!-- doxytag: member="script.c::traiterLigneEditionNI" ref="a842b1cd50002095ee6aad46d5857ee4f" args="(const char *ligne, EditCommande ec, Graphe *g)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structGraphe.html">Graphe</a>* <a class="el" href="script_8c.html#a842b1cd50002095ee6aad46d5857ee4f">traiterLigneEditionNI</a> </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>ligne</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425f">EditCommande</a>&#160;</td>
+          <td class="paramname"><em>ec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structGraphe.html">Graphe</a> *&#160;</td>
+          <td class="paramname"><em>g</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Traiter la ligne de commande d'un script. </p>
+<dl class="params"><dt><b>Paramètres:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ligne</td><td>Ligne de commande entrée par l'utilisateur. </td></tr>
+    <tr><td class="paramname">ec</td><td>Commande. </td></tr>
+    <tr><td class="paramname">g</td><td><a class="el" href="structGraphe.html" title="Liste de sommets associés à leurs listes d&#39;adjacence.">Graphe</a>. </td></tr>
+    <tr><td class="paramname">fichier</td><td>Script. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Renvoie:</b></dt><dd>Nouveau graphe. </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="script_8c_source.html#l00253">253</a> du fichier <a class="el" href="script_8c_source.html">script.c</a>.</p>
+<div class="fragment"><pre class="fragment">{
+    <span class="keywordtype">char</span> buffer1[481] = { <span class="charliteral">&#39;\0&#39;</span> };
+    <span class="keywordtype">char</span> buffer2[100] = { <span class="charliteral">&#39;\0&#39;</span> };
+    <span class="keywordtype">int</span> poids;
+
+    <span class="keywordflow">switch</span> (ec)
+    {
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa68591f1a1b1d50bc7405184d821ad55b">ED_NOUV</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) == 1)
+            {
+                g = <a class="code" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe.">gLiberer</a>(g);
+                g = <a class="code" href="structGraphe.html#aaf6e3b452d5d36e54cdebf1f9bdbdb14" title="Nouveau Graphe.">gNouv</a>();
+            }
+            <span class="keywordflow">else</span>
+                ligneIncorrecte(ligne);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa6c15988c6bd173ce826b1e00a0347f03">ED_AJS</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) == 2
+                &amp;&amp; sscanf(ligne, <span class="stringliteral">&quot;%*s %99s&quot;</span>, buffer1) == 1
+                &amp;&amp; !<a class="code" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe.">gExisteSommet</a>(g, buffer1)
+               )
+                g = <a class="code" href="structGraphe.html#a420bc7f2ad2301c4565dce8c29a14286" title="Ajout d&#39;un sommet dans un Graphe.">gAjouterSommet</a>(g, buffer1);
+            <span class="keywordflow">else</span>
+                ligneIncorrecte(ligne);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fabf8ec66353280b6e7fa801117e657ddf">ED_AJAR</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) == 4
+                &amp;&amp; sscanf(ligne, <span class="stringliteral">&quot;%*s %99s %99s %d&quot;</span>, buffer1, buffer2, &amp;poids) == 3
+                &amp;&amp; !<a class="code" href="structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe.">gExisteArete</a>(g, buffer1, buffer2)
+               )
+                g = <a class="code" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe.">gAjouterArete</a>(g, buffer1, buffer2, poids);
+            <span class="keywordflow">else</span>
+                ligneIncorrecte(ligne);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa30e8d84207f42397fb86f592dbaf43fa">ED_MOD</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) == 4
+                &amp;&amp; sscanf(ligne, <span class="stringliteral">&quot;%*s %99s %99s %d&quot;</span>, buffer1, buffer2, &amp;poids) == 3
+                &amp;&amp; <a class="code" href="structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe.">gExisteArete</a>(g, buffer1, buffer2)
+               )
+                g = <a class="code" href="structGraphe.html#a64fd41af976a8447604e9e95d93b71cf" title="Modification d&#39;une arête dans un Graphe.">gModifierArete</a>(g, buffer1, buffer2, poids);
+            <span class="keywordflow">else</span>
+                ligneIncorrecte(ligne);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fac3d858f59f7969ce867f55f5a2a3753b">ED_SUPS</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) == 2
+                &amp;&amp; sscanf(ligne, <span class="stringliteral">&quot;%*s %99s&quot;</span>, buffer1) == 1
+                &amp;&amp; <a class="code" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe.">gExisteSommet</a>(g, buffer1)
+               )
+                g = <a class="code" href="structGraphe.html#a0aa5aacc4cc9cb1e489a7bb295dcead4" title="Suppression d&#39;un sommet dans un Graphe.">gSupprimerSommet</a>(g, buffer1);
+            <span class="keywordflow">else</span>
+                ligneIncorrecte(ligne);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa5afaf61f108775c0a14d6fa043e7fa00">ED_SUPAR</a> :
+            <span class="keywordflow">if</span> (compterMots(ligne) == 3
+                &amp;&amp; sscanf(ligne, <span class="stringliteral">&quot;%*s %99s %99s&quot;</span>, buffer1, buffer2) == 2
+                &amp;&amp; <a class="code" href="structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe.">gExisteArete</a>(g, buffer1, buffer2)
+               )
+                g = <a class="code" href="structGraphe.html#a183405c1312d76628db9de7079b0beaa" title="Suppression d&#39;une arête dans un Graphe.">gSupprimerArete</a>(g, buffer1, buffer2);
+            <span class="keywordflow">else</span>
+                ligneIncorrecte(ligne);
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa43d16055a0f4a0386c3c675fa05e29be">ED_LSV</a> :
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa62338215fc6fa91ea4b19b120d76fed1">ED_LSI</a> :
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fac851f0bf0c55f2a90ae2e720ef52efd3">ED_LSS</a> :
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fac14a742b861c33ee25625d92f9d5028d">ED_LSA</a> :
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa2335ef7b397173bf5033ecec5fc99281">ED_CNX</a> :
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa28883a14ea56aa8d37533a9d460b5bfa">ED_AIDE</a> :
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425fa5f026c3164088c569f2082781b010f4b">ED_QUIT</a> :
+            <span class="keywordflow">break</span>;
+
+        <span class="keywordflow">case</span> <a class="code" href="edition_8h.html#a4d3e0c9f40b3249bb4cd536ee197425faa1e9fceaeddfe419a037e829e227c53b">ED_INCONNU</a> :
+
+        <span class="keywordflow">default</span> :
+            sscanf(ligne, <span class="stringliteral">&quot;%s&quot;</span>, buffer1);
+            printf(<span class="stringliteral">&quot;%s, ligne %d : Commande inconnue.\n&quot;</span>, buffer1, numero);
+            <span class="keywordflow">break</span>;
+    }
+
+    <span class="keywordflow">return</span> g;
+}
+</pre></div>
+<p><div class="dynheader">
+Voici le graphe d'appel pour cette fonction :</div>
+<div class="dyncontent">
+<div class="center"><img src="script_8c_a842b1cd50002095ee6aad46d5857ee4f_cgraph.png" border="0" usemap="#script_8c_a842b1cd50002095ee6aad46d5857ee4f_cgraph" alt=""/></div>
+<map name="script_8c_a842b1cd50002095ee6aad46d5857ee4f_cgraph" id="script_8c_a842b1cd50002095ee6aad46d5857ee4f_cgraph">
+<area shape="rect" id="node3" href="structGraphe.html#a25eb8124cae0e4d3512ee610eedf3527" title="Libération d&#39;un Graphe." alt="" coords="229,5,347,35"/><area shape="rect" id="node5" href="structGraphe.html#aaf6e3b452d5d36e54cdebf1f9bdbdb14" title="Nouveau Graphe." alt="" coords="233,59,343,88"/><area shape="rect" id="node7" href="structGraphe.html#ae8c2549afb375bb18ecfbe2caecd4af3" title="Test d&#39;existence d&#39;un Sommet dans un Graphe." alt="" coords="205,112,371,141"/><area shape="rect" id="node9" href="structGraphe.html#a420bc7f2ad2301c4565dce8c29a14286" title="Ajout d&#39;un sommet dans un Graphe." alt="" coords="204,165,372,195"/><area shape="rect" id="node11" href="structGraphe.html#ae65367d5c27ee9f83eee9f7f0bfdd238" title="Test d&#39;existence d&#39;une arete dans un Graphe." alt="" coords="215,219,361,248"/><area shape="rect" id="node13" href="structGraphe.html#a9a59a514e3d1dad868582af54862fdf1" title="Ajout d&#39;une arête dans un Graphe." alt="" coords="213,272,363,301"/><area shape="rect" id="node15" href="structGraphe.html#a64fd41af976a8447604e9e95d93b71cf" title="Modification d&#39;une arête dans un Graphe." alt="" coords="211,325,365,355"/><area shape="rect" id="node17" href="structGraphe.html#a0aa5aacc4cc9cb1e489a7bb295dcead4" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="195,379,381,408"/><area shape="rect" id="node19" href="structGraphe.html#a183405c1312d76628db9de7079b0beaa" title="Suppression d&#39;une arête dans un Graphe." alt="" coords="204,432,372,461"/></map>
+</div>
+</p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Énumérations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Valeurs énumérées</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+
+<hr class="footer"/><address class="footer"><small>
+Généré le Mercredi Mai 1 2013 21:02:28 pour Chasseur de Prim par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

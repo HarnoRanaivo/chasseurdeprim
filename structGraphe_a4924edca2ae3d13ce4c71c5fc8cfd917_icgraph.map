@@ -1,7 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="215,5,340,35"/>
-<area shape="rect" id="node7" href="$prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="535,32,687,61"/>
-<area shape="rect" id="node5" href="$edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="391,5,484,35"/>
-<area shape="rect" id="node9" href="$prompt_8c.html#a98126e5a7092a7a5921d1bdc3dab2fa2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="736,32,843,61"/>
-<area shape="rect" id="node11" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="891,32,941,61"/>
+<area shape="rect" id="node3" href="$edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="215,59,340,88"/>
+<area shape="rect" id="node7" href="$prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="555,85,707,115"/>
+<area shape="rect" id="node5" href="$edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="397,59,491,88"/>
+<area shape="rect" id="node13" href="$script_8c.html#a8d481755757d425d078af43e2dd298d8" title="Gérer un script, mode édition." alt="" coords="391,5,497,35"/>
+<area shape="rect" id="node9" href="$prompt_8c.html#a98126e5a7092a7a5921d1bdc3dab2fa2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="763,85,869,115"/>
+<area shape="rect" id="node11" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="917,85,968,115"/>
+<area shape="rect" id="node15" href="$script_8c.html#a8c185d60c29d8b7add1a7bccbea07ad8" title="Traiter la ligne de commande d&#39;un script." alt="" coords="548,5,713,35"/>
+<area shape="rect" id="node17" href="$script_8c.html#ae71544ef685175a4d606cd2313654d76" title="Gérer un script." alt="" coords="769,5,863,35"/>
 </map>

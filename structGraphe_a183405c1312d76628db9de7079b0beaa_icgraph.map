@@ -1,9 +1,13 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="231,5,356,35"/>
-<area shape="rect" id="node13" href="$graphe_8c.html#a19862f69a8a5b6bc2734eef29a385d7e" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="225,59,361,88"/>
-<area shape="rect" id="node15" href="$grapheconnexe_8c.html#a90dad6597b46ad207a693a3b633f4fbf" title="suppression d&#39;une arête dans un graphe connexe." alt="" coords="231,112,356,141"/>
-<area shape="rect" id="node5" href="$edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="412,5,505,35"/>
-<area shape="rect" id="node7" href="$prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="556,5,708,35"/>
-<area shape="rect" id="node9" href="$prompt_8c.html#a98126e5a7092a7a5921d1bdc3dab2fa2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="757,5,864,35"/>
-<area shape="rect" id="node11" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="912,5,963,35"/>
+<area shape="rect" id="node3" href="$edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="232,32,357,61"/>
+<area shape="rect" id="node19" href="$graphe_8c.html#a19862f69a8a5b6bc2734eef29a385d7e" title="Suppression d&#39;un sommet dans un Graphe." alt="" coords="227,85,363,115"/>
+<area shape="rect" id="node21" href="$grapheconnexe_8c.html#a90dad6597b46ad207a693a3b633f4fbf" title="suppression d&#39;une arête dans un graphe connexe." alt="" coords="232,139,357,168"/>
+<area shape="rect" id="node23" href="$script_8c.html#a842b1cd50002095ee6aad46d5857ee4f" title="Traiter la ligne de commande d&#39;un script." alt="" coords="225,192,364,221"/>
+<area shape="rect" id="node5" href="$edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="421,5,515,35"/>
+<area shape="rect" id="node13" href="$script_8c.html#a8d481755757d425d078af43e2dd298d8" title="Gérer un script, mode édition." alt="" coords="415,59,521,88"/>
+<area shape="rect" id="node7" href="$prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="579,5,731,35"/>
+<area shape="rect" id="node9" href="$prompt_8c.html#a98126e5a7092a7a5921d1bdc3dab2fa2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="787,5,893,35"/>
+<area shape="rect" id="node11" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="941,5,992,35"/>
+<area shape="rect" id="node15" href="$script_8c.html#a8c185d60c29d8b7add1a7bccbea07ad8" title="Traiter la ligne de commande d&#39;un script." alt="" coords="572,59,737,88"/>
+<area shape="rect" id="node17" href="$script_8c.html#ae71544ef685175a4d606cd2313654d76" title="Gérer un script." alt="" coords="793,59,887,88"/>
 </map>

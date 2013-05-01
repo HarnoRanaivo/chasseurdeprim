@@ -1,12 +1,16 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="227,5,352,35"/>
-<area shape="rect" id="node13" href="$graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18" title="Copie d&#39;un Graphe." alt="" coords="256,59,323,88"/>
-<area shape="rect" id="node15" href="$grapheconnexe_8c.html#a064998f9e6af964d70d8e48baad19e77" title="Ajout d&#39;une arête dans un graphe connexe." alt="" coords="236,112,343,141"/>
-<area shape="rect" id="node17" href="$grapheconnexe_8c.html#a90dad6597b46ad207a693a3b633f4fbf" title="suppression d&#39;une arête dans un graphe connexe." alt="" coords="227,165,352,195"/>
-<area shape="rect" id="node19" href="$io_8c.html#a80d78fef8f986ce18ebdc87fb7c986e6" title="Permet de charger un graphe dans un fichier texte." alt="" coords="235,219,344,248"/>
-<area shape="rect" id="node21" href="$prim_8c.html#a146f5763132b19eb63ad6a7ca22d2cef" title="Calcul de l&#39;arbre couvrant minimum d&#39;un graphe connexe en partant d&#39;un sommet." alt="" coords="207,272,372,301"/>
-<area shape="rect" id="node5" href="$edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="423,5,516,35"/>
-<area shape="rect" id="node7" href="$prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="567,5,719,35"/>
-<area shape="rect" id="node9" href="$prompt_8c.html#a98126e5a7092a7a5921d1bdc3dab2fa2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="768,5,875,35"/>
-<area shape="rect" id="node11" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="923,5,973,35"/>
+<area shape="rect" id="node3" href="$edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="227,32,352,61"/>
+<area shape="rect" id="node19" href="$graphe_8c.html#a11aa64fc8d60cd70be5ca8fd2e116e18" title="Copie d&#39;un Graphe." alt="" coords="256,85,323,115"/>
+<area shape="rect" id="node21" href="$grapheconnexe_8c.html#a064998f9e6af964d70d8e48baad19e77" title="Ajout d&#39;une arête dans un graphe connexe." alt="" coords="236,139,343,168"/>
+<area shape="rect" id="node23" href="$grapheconnexe_8c.html#a90dad6597b46ad207a693a3b633f4fbf" title="suppression d&#39;une arête dans un graphe connexe." alt="" coords="227,192,352,221"/>
+<area shape="rect" id="node25" href="$io_8c.html#a80d78fef8f986ce18ebdc87fb7c986e6" title="Permet de charger un graphe dans un fichier texte." alt="" coords="235,245,344,275"/>
+<area shape="rect" id="node27" href="$prim_8c.html#a146f5763132b19eb63ad6a7ca22d2cef" title="Calcul de l&#39;arbre couvrant minimum d&#39;un graphe connexe en partant d&#39;un sommet." alt="" coords="207,299,372,328"/>
+<area shape="rect" id="node29" href="$script_8c.html#a842b1cd50002095ee6aad46d5857ee4f" title="Traiter la ligne de commande d&#39;un script." alt="" coords="220,352,359,381"/>
+<area shape="rect" id="node5" href="$edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="429,5,523,35"/>
+<area shape="rect" id="node13" href="$script_8c.html#a8d481755757d425d078af43e2dd298d8" title="Gérer un script, mode édition." alt="" coords="423,59,529,88"/>
+<area shape="rect" id="node7" href="$prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="587,5,739,35"/>
+<area shape="rect" id="node9" href="$prompt_8c.html#a98126e5a7092a7a5921d1bdc3dab2fa2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="795,5,901,35"/>
+<area shape="rect" id="node11" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="949,5,1000,35"/>
+<area shape="rect" id="node15" href="$script_8c.html#a8c185d60c29d8b7add1a7bccbea07ad8" title="Traiter la ligne de commande d&#39;un script." alt="" coords="580,59,745,88"/>
+<area shape="rect" id="node17" href="$script_8c.html#ae71544ef685175a4d606cd2313654d76" title="Gérer un script." alt="" coords="801,59,895,88"/>
 </map>

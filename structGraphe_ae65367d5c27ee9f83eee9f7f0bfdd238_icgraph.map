@@ -1,11 +1,15 @@
 <map id="G" name="G">
-<area shape="rect" id="node3" href="$edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="201,5,327,35"/>
-<area shape="rect" id="node7" href="$prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="521,32,673,61"/>
-<area shape="rect" id="node13" href="$graphe_8c.html#aa730f51a75d135905ac1b4c1ec2f72c2" title="Ajout d&#39;une arête dans un Graphe." alt="" coords="213,109,315,139"/>
-<area shape="rect" id="node15" href="$graphe_8c.html#a4ccbbc14f47df1d6f57d31f6884f003b" title="Modification d&#39;une arête dans un Graphe." alt="" coords="211,163,317,192"/>
-<area shape="rect" id="node17" href="$grapheconnexe_8c.html#a90dad6597b46ad207a693a3b633f4fbf" title="suppression d&#39;une arête dans un graphe connexe." alt="" coords="201,216,327,245"/>
-<area shape="rect" id="node19" href="$parcours_8c.html#a8324bb1764f831e8030db5936b6104d0" title="Test d&#39;existence de cycles dans un graphe." alt="" coords="228,269,300,299"/>
-<area shape="rect" id="node5" href="$edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="377,5,471,35"/>
-<area shape="rect" id="node9" href="$prompt_8c.html#a98126e5a7092a7a5921d1bdc3dab2fa2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="723,32,829,61"/>
-<area shape="rect" id="node11" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="877,32,928,61"/>
+<area shape="rect" id="node3" href="$edition_8c.html#a5516cb78e22b847e9d0125d828f84fe8" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="208,84,333,113"/>
+<area shape="rect" id="node7" href="$prompt_8c.html#af9c97fefacc4f668d0c7f862f0b73e9d" title="Traiter la ligne de commande entrée par l&#39;utilisateur." alt="" coords="555,5,707,35"/>
+<area shape="rect" id="node15" href="$script_8c.html#a8c185d60c29d8b7add1a7bccbea07ad8" title="Traiter la ligne de commande d&#39;un script." alt="" coords="548,109,713,139"/>
+<area shape="rect" id="node19" href="$graphe_8c.html#aa730f51a75d135905ac1b4c1ec2f72c2" title="Ajout d&#39;une arête dans un Graphe." alt="" coords="220,188,321,217"/>
+<area shape="rect" id="node21" href="$graphe_8c.html#a4ccbbc14f47df1d6f57d31f6884f003b" title="Modification d&#39;une arête dans un Graphe." alt="" coords="217,241,324,271"/>
+<area shape="rect" id="node23" href="$grapheconnexe_8c.html#a90dad6597b46ad207a693a3b633f4fbf" title="suppression d&#39;une arête dans un graphe connexe." alt="" coords="208,295,333,324"/>
+<area shape="rect" id="node25" href="$parcours_8c.html#a8324bb1764f831e8030db5936b6104d0" title="Test d&#39;existence de cycles dans un graphe." alt="" coords="235,348,307,377"/>
+<area shape="rect" id="node29" href="$script_8c.html#a842b1cd50002095ee6aad46d5857ee4f" title="Traiter la ligne de commande d&#39;un script." alt="" coords="201,401,340,431"/>
+<area shape="rect" id="node5" href="$edition_8c.html#a1770853bacd8106bc52fece08805017f" title="Afficher le prompt du mode édition, et gérer les entrées utilisateur." alt="" coords="397,31,491,60"/>
+<area shape="rect" id="node13" href="$script_8c.html#a8d481755757d425d078af43e2dd298d8" title="Gérer un script, mode édition." alt="" coords="391,84,497,113"/>
+<area shape="rect" id="node9" href="$prompt_8c.html#a98126e5a7092a7a5921d1bdc3dab2fa2" title="Afficher un prompt et gérer les entrées de l&#39;utilisateur." alt="" coords="763,5,869,35"/>
+<area shape="rect" id="node11" href="$main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Main." alt="" coords="917,5,968,35"/>
+<area shape="rect" id="node17" href="$script_8c.html#ae71544ef685175a4d606cd2313654d76" title="Gérer un script." alt="" coords="769,109,863,139"/>
 </map>

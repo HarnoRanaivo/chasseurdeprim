@@ -7,10 +7,15 @@
  * \file edition.c
  * \brief Prompt mode édition (code)
  * \author Harenome RAZANAJATO
+ *
+ * Le fonctionnement de ce fichier est très proche de celui de prompt.c.
  */
 #include "edition.h"
 
 static const char * ERR_ARG = "Arguments invalides.\n";
+static const char * ERR_SOM = "Ce sommet n'existe pas.\n";
+static const char * ERR_ART = "Cette arête n'existe pas.\n";
+static const char * ERR_VID = "Le graphe est vide.\n";
 
 /* Le membre commande de la dernière structure doit absolument contenir
  * ED_INCONNU. */
@@ -192,70 +197,88 @@ Graphe * traiterLigneEdition(const char * ligne, EditCommande ec, Graphe * g)
             if (compterMots(ligne) != 2
                 || sscanf(ligne, "%*s %99s", buffer1) != 1)
                 printf("%s", ERR_ARG);
-            else
+            else if (!gExisteSommet(g, buffer1))
                 g = gAjouterSommet(g, buffer1);
+            else
+                printf("Ce sommet existe déjà.\n");
             break;
 
         case ED_AJAR :
             if (compterMots(ligne) != 4
                 || sscanf(ligne, "%*s %99s %99s %d", buffer1, buffer2, &poids) != 3)
                 printf("%s", ERR_ARG);
-            else
+            else if (!gExisteArete(g, buffer1, buffer2))
                 g = gAjouterArete(g, buffer1, buffer2, poids);
+            else
+                printf("Cette arête existe déjà.\n");
             break;
 
         case ED_MOD :
             if (compterMots(ligne) != 4
                 || sscanf(ligne, "%*s %99s %99s %d", buffer1, buffer2, &poids) != 3)
                 printf("%s", ERR_ARG);
-            else
+            else if (gExisteArete(g, buffer1, buffer2))
                 g = gModifierArete(g, buffer1, buffer2, poids);
+            else
+                printf("%s", ERR_ART);
             break;
 
         case ED_SUPS :
             if (compterMots(ligne) != 2
                 || sscanf(ligne, "%*s %99s", buffer1) != 1)
                 printf("%s", ERR_ARG);
-            else
+            else if (gExisteSommet(g, buffer1))
                 g = gSupprimerSommet(g, buffer1);
+            else
+                printf("%s", ERR_SOM);
             break;
 
         case ED_SUPAR :
             if (compterMots(ligne) != 3
                 || sscanf(ligne, "%*s %99s %99s", buffer1, buffer2) != 2)
                 printf("%s", ERR_ARG);
-            else
+            else if (gExisteArete(g, buffer1, buffer2))
                 g = gSupprimerArete(g, buffer1, buffer2);
+            else
+                printf("%s", ERR_ART);
             break;
 
         case ED_LSV :
             if (compterMots(ligne) != 2
                 || sscanf(ligne, "%*s %99s", buffer1) != 1)
                 printf("%s", ERR_ARG);
-            else
+            else if (gExisteSommet(g, buffer1))
                 afficherVoisins(g, buffer1);
+            else
+                printf("%s", ERR_SOM);
             break;
 
         case ED_LSI :
             if (compterMots(ligne) != 2
                 || sscanf(ligne, "%*s %99s", buffer1) != 1)
                 printf("%s", ERR_ARG);
-            else
+            else if (gExisteSommet(g, buffer1))
                 afficherAdjacence(g, buffer1);
+            else
+                printf("%s", ERR_SOM);
             break;
 
         case ED_LSS :
             if (compterMots(ligne) != 1)
                 printf("%s", ERR_ARG);
-            else
+            else if (!gEstVide(g))
                 afficherListeSommets(g);
+            else
+                printf("%s", ERR_VID);
             break;
 
         case ED_LSA :
             if (compterMots(ligne) != 1)
                 printf("%s", ERR_ARG);
-            else
+            else if (!gEstVide(g))
                 afficherAretesGraphe(g);
+            else
+                printf("%s", ERR_VID);
             break;
 
         case ED_CNX :

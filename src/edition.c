@@ -23,7 +23,7 @@ static const struct
 {
     EditCommande commande;
     const char * aide;
-    const char * alias[4];
+    const char * alias[5];
 } EDS[] =
 {
     [ED_NOUV] =
@@ -133,7 +133,7 @@ static const struct
         ED_QUIT,
         "\tq, quit, quitter\n\
 \t\tQuitter.\n\n",
-        { "q", "quit", NULL, },
+        { "q", "quit", "quitter", "exit", NULL, },
     },
 
     [ED_INCONNU] =

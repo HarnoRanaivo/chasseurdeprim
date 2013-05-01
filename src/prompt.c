@@ -33,7 +33,7 @@ static const struct
 {
     PromptCommande commande;    /* La commande. */
     const char * aide;          /* Le texte d'aide. */
-    const char * alias[4];      /* Les alias possibles pour la commande.*/
+    const char * alias[5];      /* Les alias possibles pour la commande.*/
 }
 PCS[] =
 {
@@ -181,7 +181,7 @@ PCS[] =
         PC_QUIT,
         "\tq, quit, quitter\n\
 \t\tQuitter. You don't say?\n\n",
-        { "q", "quit", "quitter", NULL, },
+        { "q", "quit", "quitter", "exit", NULL, },
     },
 
     [PC_INCONNU] =

@@ -29,6 +29,8 @@ Sommet * copieSommet(const Sommet * s)
     copie = MALLOCN(copie, strlen(s) + 1);
     if (copie != NULL)
         copie = strcpy(copie, s);
+    else
+        perror("malloc");
 
     return copie;
 }

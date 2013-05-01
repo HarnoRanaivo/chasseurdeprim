@@ -60,4 +60,4 @@ cleanall : clean
 	rm -rf doc/*
 
 archive :
-	tar -f meyer_razanajato-ProjetSDA2P.tar.gz -cvz src/*.c include/*.h makefile Doxyfile exemple*
+	tar -f meyer_razanajato-ProjetSDA2P.tar.gz -cvz src/*.c include/*.h makefile Doxyfile exemples/*

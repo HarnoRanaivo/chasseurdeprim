@@ -15,12 +15,17 @@ Arete * aNouv(const Sommet * a, const Sommet * b, Ent poids)
 {
     Arete * const a0 = MALLOC(a0);
 
-    if (a0 != NULL && a != NULL && b != NULL)
+    if (a0 != NULL)
     {
-        a0->a = copieSommet(a);
-        a0->b = copieSommet(b);
-        a0->poids = poids;
+        if (a != NULL && b != NULL)
+        {
+            a0->a = copieSommet(a);
+            a0->b = copieSommet(b);
+            a0->poids = poids;
+        }
     }
+    else
+        perror("malloc");
 
     return a0;
 }

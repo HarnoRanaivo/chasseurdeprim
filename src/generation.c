@@ -15,9 +15,14 @@ static Bool printDebut(FILE * const fichier)
     int succes = fprintf(fichier,
                         "\\documentclass[10pt]{report}\n"
                         "\\usepackage{tikz}\n"
+                        "\\usetikzlibrary{shapes}\n"
                         "\\title{Chasseur de Prim}\n"
                         "\\author{Boba Fett}\n"
                         "\\begin{document}\n"
+                        "\\chapter{Graphe}\n"
+                        "\\tikzset{sommet/.style={draw, circle, fill=blue!25}}\n"
+                        "\\tikzset{etiquette/.style={pos=0.25, thick, auto, above, text=red}}\n"
+                        "\\tikzset{arete/.style={text=black!50}}\n"
                         );
     if (succes < 0)
     {
@@ -39,7 +44,7 @@ static Bool printSommets(const Graphe * g, FILE * const fichier)
         for (int i = 0; !gEstVide(g); g = gSuivant(g), i++)
         {
             int succes = fprintf(fichier,
-                                "\\node[draw] (%s) at (%d:%d) {%s};\n",
+                                "\\node[sommet] (%s) at (%d:%d) {%s};\n",
                                 gSommetTete(g), n*i, 4, gSommetTete(g));
             if (succes < 0)
             {
@@ -63,7 +68,7 @@ static Bool printAretes(const Graphe * g, FILE * const fichier)
     {
         const Arete * const a = larAreteTete(l);
         int succes = fprintf(fichier,
-                            "\\draw (%s) -- (%s) node [pos=0.25, above] {%d};\n",
+                            "\\draw[arete] (%s) -- (%s) node [etiquette] {%d};\n",
                             aA(a), aB(a), aPoids(a));
         if (succes < 0)
         {
@@ -119,7 +124,10 @@ int gGenererLatex(const Graphe * g, const Graphe * a, const char * destination)
         erreurs = printDebut(fichier) == VRAI ? VRAI : erreurs;
         erreurs = printGraphe(g, fichier) == VRAI ? VRAI : erreurs;
         if (a != NULL)
+        {
+            fprintf(fichier, "\n\n\\chapter{Arbre couvrant minimum}\n");
             erreurs = printGraphe(a, fichier) == VRAI ? VRAI : erreurs;
+        }
         erreurs = printFin(fichier) == VRAI ? VRAI : erreurs;
 
         fclose(fichier);

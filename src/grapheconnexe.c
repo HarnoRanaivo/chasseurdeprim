@@ -51,13 +51,18 @@ GrapheConnexe * gcSupprimerSommet(GrapheConnexe * g, const Sommet * s)
 
 GrapheConnexe * gcSupprimerArete(GrapheConnexe * g, const Sommet * a, const Sommet * b)
 {
-    Ent p = gPoidsArete(g, a, b);
-    g = gSupprimerArete(g, a, b);
+    if (gExisteArete(g, a, b))
+    {
+        Ent p = gPoidsArete(g, a, b);
+        g = gSupprimerArete(g, a, b);
 
-    if (gEstConnexe(g))
-        return g;
+        if (!gEstConnexe(g))
+            return gAjouterArete(g, a, b, p);
+        else
+            return g;
+    }
     else
-        return gAjouterArete(g, a, b, p);
+        return g;
 }
 
 GrapheConnexe * gcModifierArete(GrapheConnexe * g, const Sommet * a, const Sommet * b, Ent p)

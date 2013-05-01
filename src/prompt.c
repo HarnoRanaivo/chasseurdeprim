@@ -10,15 +10,30 @@
  */
 #include "prompt.h"
 
+/* Quelques chaînes de caractères utilisées ici. */
 static const char * ERR_ARG = "Arguments invalides.\n";
+static const char * ERR_SOM = "Ce sommet n'existe pas.\n";
+static const char * ERR_ART = "Cette arête n'existe pas.\n";
+static const char * ERR_VID = "Le graphe est vide.\n";
+static const char * ERR_SAV = "Le graphe actuel n'a pas été sauvegardé.\n";
 
-/* Le membre commande de la dernière structure doit absolument contenir
- * PC_INCONNU. */
+/* Ceci est un tableau de structures.
+ * La structure n'est utilisée que dans ce tableau : pas la peine de
+ * la déclarer ailleurs.
+ * De même pour le tableau lui-même, on le déclare et initialise ici
+ * car seules les fonctions de ce fichier en ont besoin, et reposent fortement
+ * sur la façon dont il est initialisé.
+ *
+ * Le membre commande de la dernière structure doit absolument contenir
+ * PC_INCONNU : les parcours de ce tableau se font jusqu'à trouver PC_INCONNU.
+ *
+ * De même, le tableau alias doit absoulement se terminer par NULL.
+ */
 static const struct
 {
-    PromptCommande commande;
-    const char * aide;
-    const char * alias[4];
+    PromptCommande commande;    /* La commande. */
+    const char * aide;          /* Le texte d'aide. */
+    const char * alias[5];      /* Les alias possibles pour la commande.*/
 }
 PCS[] =
 {
@@ -166,7 +181,7 @@ PCS[] =
         PC_QUIT,
         "\tq, quit, quitter\n\
 \t\tQuitter. You don't say?\n\n",
-        { "q", "quit", "quitter", NULL, },
+        { "q", "quit", "quitter", "exit", NULL, },
     },
 
     [PC_INCONNU] =
@@ -221,7 +236,7 @@ Donnees * traiterLigneCommande(const char * ligne, PromptCommande pc, Donnees * 
             {
                 if (d->sauvegarde == FAUX)
                 {
-                    printf("Le graphe actuel n'a pas été sauvegardé.\n");
+                    printf("%s", ERR_SAV);
                     sur = verifier("de vouloir créer un nouveau graphe ");
                 }
                 if (sur)
@@ -244,7 +259,7 @@ Donnees * traiterLigneCommande(const char * ligne, PromptCommande pc, Donnees * 
             {
                 if (d->sauvegarde == FAUX)
                 {
-                    printf("Le graphe actuel n'a pas été sauvegardé.\n");
+                    printf("%s", ERR_SAV);
                     sur = verifier("de vouloir charger un nouveau graphe ");
                 }
                 if (sur)
@@ -267,7 +282,7 @@ Donnees * traiterLigneCommande(const char * ligne, PromptCommande pc, Donnees * 
                 if (existeFichier(buffer1))
                 {
                     printf("Le fichier %s existe déjà.\n", buffer1);
-                    sur = verifier("de vouloir écraser le fichier.\n");
+                    sur = verifier("de vouloir écraser le fichier ");
                 }
                 if (sur)
                 {
@@ -285,9 +300,14 @@ Donnees * traiterLigneCommande(const char * ligne, PromptCommande pc, Donnees * 
             }
             else
             {
-                d->graphe = gcModifierArete(d->graphe, buffer1, buffer2, poids);
-                d->arbre = gLiberer(d->arbre);
-                d->sauvegarde = FAUX;
+                if (gExisteArete(d->graphe, buffer1, buffer2))
+                {
+                    d->graphe = gcModifierArete(d->graphe, buffer1, buffer2, poids);
+                    d->arbre = gLiberer(d->arbre);
+                    d->sauvegarde = FAUX;
+                }
+                else
+                    printf("%s", ERR_ART);
             }
             break;
 
@@ -299,9 +319,14 @@ Donnees * traiterLigneCommande(const char * ligne, PromptCommande pc, Donnees * 
             }
             else
             {
-                d->graphe = gcAjouterArete(d->graphe, buffer1, buffer2, poids);
-                d->arbre = gLiberer(d->arbre);
-                d->sauvegarde = FAUX;
+                if (!gExisteArete(d->graphe, buffer1, buffer2))
+                {
+                    d->graphe = gcAjouterArete(d->graphe, buffer1, buffer2, poids);
+                    d->arbre = gLiberer(d->arbre);
+                    d->sauvegarde = FAUX;
+                }
+                else
+                    printf("Il existe déjà une arête entre %s et %s.\n", buffer1, buffer2);
             }
             break;
 
@@ -313,9 +338,14 @@ Donnees * traiterLigneCommande(const char * ligne, PromptCommande pc, Donnees * 
             }
             else
             {
-                d->graphe = gcSupprimerArete(d->graphe, buffer1, buffer2);
-                d->arbre = gLiberer(d->arbre);
-                d->sauvegarde = FAUX;
+                if (gExisteArete(d->graphe, buffer1, buffer2))
+                {
+                    d->graphe = gcSupprimerArete(d->graphe, buffer1, buffer2);
+                    d->arbre = gLiberer(d->arbre);
+                    d->sauvegarde = FAUX;
+                }
+                else
+                    printf("%s", ERR_ART);
             }
             break;
 
@@ -327,9 +357,14 @@ Donnees * traiterLigneCommande(const char * ligne, PromptCommande pc, Donnees * 
             }
             else
             {
-                d->graphe = gcSupprimerSommet(d->graphe, buffer1);
-                d->arbre = gLiberer(d->arbre);
-                d->sauvegarde = FAUX;
+                if (gExisteSommet(d->graphe, buffer1))
+                {
+                    d->graphe = gcSupprimerSommet(d->graphe, buffer1);
+                    d->arbre = gLiberer(d->arbre);
+                    d->sauvegarde = FAUX;
+                }
+                else
+                    printf("%s", ERR_SOM);
             }
             break;
 
@@ -341,8 +376,18 @@ Donnees * traiterLigneCommande(const char * ligne, PromptCommande pc, Donnees * 
             }
             else
             {
-                d->arbre = gLiberer(d->arbre);
-                d->arbre = gArbreCouvrantMinimum(d->graphe, buffer1);
+                if (!gEstVide(d->graphe))
+                {
+                    if (gExisteSommet(d->graphe, buffer1))
+                    {
+                        d->arbre = gLiberer(d->arbre);
+                        d->arbre = gArbreCouvrantMinimum(d->graphe, buffer1);
+                    }
+                    else
+                        printf("%s", ERR_SOM);
+                }
+                else
+                    printf("%s", ERR_VID);
             }
             break;
 
@@ -354,13 +399,18 @@ Donnees * traiterLigneCommande(const char * ligne, PromptCommande pc, Donnees * 
             }
             else
             {
-                if (existeFichier(buffer1))
+                if (gEstVide(d->graphe))
+                    printf("%s", ERR_VID);
+                else
                 {
-                    printf("Le fichier %s existe déjà.\n", buffer1);
-                    sur = verifier("de vouloir écraser le fichier ");
+                    if (existeFichier(buffer1))
+                    {
+                        printf("Le fichier %s existe déjà.\n", buffer1);
+                        sur = verifier("de vouloir écraser le fichier ");
+                    }
+                    if (sur)
+                        gGenererLatex(d->graphe, d->arbre, buffer1);
                 }
-                if (sur)
-                    gGenererLatex(d->graphe, d->arbre, buffer1);
             }
             break;
 
@@ -372,7 +422,10 @@ Donnees * traiterLigneCommande(const char * ligne, PromptCommande pc, Donnees * 
             }
             else
             {
-                afficherVoisins(d->graphe, buffer1);
+                if (gExisteSommet(d->graphe, buffer1))
+                    afficherVoisins(d->graphe, buffer1);
+                else
+                    printf("%s", ERR_SOM);
             }
             break;
 
@@ -384,28 +437,35 @@ Donnees * traiterLigneCommande(const char * ligne, PromptCommande pc, Donnees * 
             }
             else
             {
-                afficherAdjacence(d->graphe, buffer1);
+                if (gExisteSommet(d->graphe, buffer1))
+                    afficherAdjacence(d->graphe, buffer1);
+                else
+                    printf("%s", ERR_SOM);
             }
             break;
 
         case PC_LSS :
             if (compterMots(ligne) != 1)
                 printf("%s", ERR_ARG);
-            else
+            else if (!gEstVide(d->graphe))
                 afficherListeSommets(d->graphe);
+            else
+                printf("%s", ERR_VID);
             break;
 
         case PC_LSA :
             if (compterMots(ligne) != 1)
                 printf("%s", ERR_ARG);
-            else
+            else if (!gEstVide(d->graphe))
                 afficherAretesGraphe(d->graphe);
+            else
+                printf("%s", ERR_VID);
             break;
 
         case PC_EDIT :
             if (d->sauvegarde == FAUX)
             {
-                printf("Le graphe actuel n'a pas été sauvegardé.\n");
+                printf("%s", ERR_SAV);
                 sur = verifier("de vouloir entrer dans le mode « édition » ");
             }
             if (sur)
@@ -432,7 +492,7 @@ Donnees * traiterLigneCommande(const char * ligne, PromptCommande pc, Donnees * 
 
         case PC_QUIT :
             if (d->sauvegarde == FAUX)
-                printf("Le graphe actuel n'a pas été sauvegardé.\n");
+                printf("%s", ERR_SAV);
             break;
 
         case PC_INCONNU :
@@ -467,10 +527,16 @@ void afficherPrompt(void)
     {
         int succes;
         char buffer[512] = { '\0' };
+        /* buffer est initialisé à '\0', car les *scanf ne rajoutent ce '\0'
+         * que pour le format %s. Avec le format %c ou une expression, ce
+         * '\0' doit être ajouté ultérieurement, si on souhaite travailler
+         * sur des chaînes de caractères valides.
+         */
 
         printf("> ");
         fflush(stdout);
 
+        /* Lecture des entrées de l'utilisateur. */
         succes = scanf("%511[^\n]%*[^\n]", buffer);
         getchar();
 

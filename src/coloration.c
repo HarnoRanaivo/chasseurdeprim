@@ -29,6 +29,8 @@ CouleursGraphe * cgAjouterSommet(CouleursGraphe * cg, const Sommet * s, Couleur 
             cg0->suivant = cg;
             cg = cg0;
         }
+        else
+            perror("malloc");
     }
 
     return cg;

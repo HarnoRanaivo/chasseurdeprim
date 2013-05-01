@@ -20,7 +20,9 @@ static Bool printDebut(FILE * const fichier)
                         "\\author{Boba Fett}\n"
                         "\\begin{document}\n"
                         "\\chapter{Graphe}\n"
-                        "\\tikzset{sommet/.style={draw,circle,fill=blue}}\n"
+                        "\\tikzset{sommet/.style={draw, circle, fill=blue!25}}\n"
+                        "\\tikzset{etiquette/.style={pos=0.25, thick, auto, above, text=red}}\n"
+                        "\\tikzset{arete/.style={text=black!50}}\n"
                         );
     if (succes < 0)
     {
@@ -66,7 +68,7 @@ static Bool printAretes(const Graphe * g, FILE * const fichier)
     {
         const Arete * const a = larAreteTete(l);
         int succes = fprintf(fichier,
-                            "\\draw (%s) -- (%s) node [pos=0.25, auto, above] {%d};\n",
+                            "\\draw[arete] (%s) -- (%s) node [etiquette] {%d};\n",
                             aA(a), aB(a), aPoids(a));
         if (succes < 0)
         {

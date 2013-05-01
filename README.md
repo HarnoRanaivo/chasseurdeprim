@@ -8,69 +8,77 @@ Télécharger et compiler « Chasseur de Prim »
 --------------------------------------------
 ### Pré-requis ###
 Tout d'abord, il vous faudra les outils standards de développement GNU, ainsi que git. Pour Ubuntu :
-````
-apt-get install build-essentials git-core
+````bash
+$ apt-get install build-essentials git-core
 ````
 
 ### Récupérer le projet ###
 Pour récupérer le projet dans le dossier de votre choix :
-````
-git clone git://github.com/remove/chasseurdeprim.git [dossier]
+````bash
+$ git clone git://github.com/remove/chasseurdeprim.git [dossier]
 ````
 Ensuite, pour récupérer les changements :
-````
-git pull
+````bash
+$ git pull
 ````
 
 ### Compiler ###
 Un makefile est fourni, il vous suffit de vous placer à la racine du projet et de lancer make :
-````
-make
+````bash
+$ make
 ````
 
 Lancer Chasseur de Prim
 -----------------------
+### Mode interactif ###
 Une fois le programme compilé, il suffit de lancer le binaire disponible dans ```bin``` :
-````
-ledit bin/chasseurdeprim
+````bash
+$ ledit bin/chasseurdeprim
 ````
 ```ledit``` est optionnel, ce programme permet d'obtenir un prompt plus agréable (historique, complétion des noms de fichiers, ...). Pour obtenir de l'aide, entrez la commande ```aide```. Pour quitter le programme, entrez la commande ```quitter``` ou ```q```, puis confirmez votre décision par ```oui```.
+
+### Mode non interactif ###
+Il est possible de lancer des scripts :
+````bash
+$ bin/chasseurdeprim -s exemples/script1
+````
+Ceux-ci doivent contenir une commande par ligne. Les commandes valides sont toutes celles qui sont disponibles dans le mode interactif. Cependant, aucun affichage n'est réalisé. De plus, l'écriture dans des fichiers ne sera pas faite si le fichier existe déjà.
 
 Documentation
 -------------
 Chasseur de Prim est documenté à l'aide de Doxygen. Pour installer doxygen sur Ubuntu :
-````
-apt-get install doxygen
+````bash
+$ apt-get install doxygen
 ````
 Un ```Doxyfile``` est déjà présent. Il suffit de lancer ```doxygen``` pour générer la documentation. Celle-ci sera disponible dans le dossier ```doc```.
-````
-doxygen
+````bash
+$ doxygen
 ````
 La documentation est également disponible [ici](http://remove.github.io/chasseurdeprim "Documentation").
 
 Tests
 -----
 La branche ````test```` contient des tests unitaires qui nécéssitent la bibliothèque [CUnit](http://cunit.sourceforge.net/ "CUnit Testing Framework for C"). Des paquets sont disponibles dans les dépots d'Ubuntu :
-````
-apt-get install libcunit1 libcunit1-dev libcunit1-doc
+````bash
+$ apt-get install libcunit1 libcunit1-dev libcunit1-doc
 ````
 Pour passer dans la branche ````test````, compiler et éxécuter les tests :
-````
-git checkout test
-cd test
-make
-bin/main
+````bash
+$ git checkout test
+$ cd test
+$ make
+$ bin/main
 ````
 Pour revenir dans la branche principale :
-````
-git checkout master
+````bash
+$ git checkout master
 ````
 
 Branches
 --------
 Les versions stables se trouvent dans la branche ````master````, la branche ````dev```` contient la version de développement du projet, la branche ````test```` contient des tests unitaires. Pour passer d'une branche à l'autre :
-````
-git checkout <branche>
+````bash
+$ git checkout <branche>
 ````
 
 License

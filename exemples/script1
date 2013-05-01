@@ -1,0 +1,10 @@
+ajar a b 1
+ajar a c 3
+ajar a d 2
+ajar b e 2
+ajar e c 1
+ajar d f 5
+ajar c f 4
+cal f
+aff script_1_affichage.tex
+sv graphe3

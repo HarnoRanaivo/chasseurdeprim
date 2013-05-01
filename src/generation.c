@@ -15,10 +15,12 @@ static Bool printDebut(FILE * const fichier)
     int succes = fprintf(fichier,
                         "\\documentclass[10pt]{report}\n"
                         "\\usepackage{tikz}\n"
+                        "\\usetikzlibrary{shapes}\n"
                         "\\title{Chasseur de Prim}\n"
                         "\\author{Boba Fett}\n"
                         "\\begin{document}\n"
                         "\\chapter{Graphe}\n"
+                        "\\tikzset{sommet/.style={draw,circle,fill=blue}}\n"
                         );
     if (succes < 0)
     {
@@ -40,7 +42,7 @@ static Bool printSommets(const Graphe * g, FILE * const fichier)
         for (int i = 0; !gEstVide(g); g = gSuivant(g), i++)
         {
             int succes = fprintf(fichier,
-                                "\\node[draw] (%s) at (%d:%d) {%s};\n",
+                                "\\node[sommet] (%s) at (%d:%d) {%s};\n",
                                 gSommetTete(g), n*i, 4, gSommetTete(g));
             if (succes < 0)
             {
@@ -64,7 +66,7 @@ static Bool printAretes(const Graphe * g, FILE * const fichier)
     {
         const Arete * const a = larAreteTete(l);
         int succes = fprintf(fichier,
-                            "\\draw (%s) -- (%s) node [pos=0.25, above] {%d};\n",
+                            "\\draw (%s) -- (%s) node [pos=0.25, auto, above] {%d};\n",
                             aA(a), aB(a), aPoids(a));
         if (succes < 0)
         {

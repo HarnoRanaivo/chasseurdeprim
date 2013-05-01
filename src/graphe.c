@@ -27,6 +27,8 @@ Graphe * gAjouterSommet(Graphe * g, const Sommet * s)
             g0->suivant = g;
             g = g0;
         }
+        else
+            perror("malloc");
     }
 
     return g;
@@ -217,7 +219,7 @@ Graphe * gPSommet(const Graphe * g, const Sommet * s)
 
 static Bool gEgaliteAux(const Graphe * g, const Graphe * h)
 {
-    if (g == NULL) return VRAI;
+    if (gEstVide(g)) return VRAI;
     else if (!gExisteSommet(h, gSommetTete(g))) return FAUX;
     else if (!lega(gAdjacenceSommet(h, gSommetTete(g)), gAdjacenceTete(g))) return FAUX;
     else return gEgaliteAux(gSuivant(g), h);
@@ -264,7 +266,7 @@ ListeArete * gAretes(const Graphe * g)
 
 Graphe * gLiberer(Graphe * g)
 {
-    if (g == NULL)
+    if (gEstVide(g))
         return NULL;
     else
     {

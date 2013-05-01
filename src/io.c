@@ -27,6 +27,8 @@ void sauvegarder_graphe (const Graphe * g, const char* destination){
 
         fclose (pfile); // ferme le fichier
     }
+    else
+        perror("fopen");
 
     return;
 }
@@ -43,20 +45,16 @@ Graphe * charger_graphe (const char* source){
         char buffer1[100]; // sommet de départ de 100 caractères maximum
         Ent poids;
         char buffer2[100]; // sommet d'arrivée de 100 caractères maximum
-        Bool erreurs = FAUX;
 
-        while ((retourFs = fscanf(pfile,"%99s\t%d\t%99s",buffer1,&poids,buffer2)) != EOF){ // vérifie si la ligne n'est pas la fin du fichier
+        // vérifie si la ligne n'est pas la fin du fichier
+        while ((retourFs = fscanf(pfile, "%99s %d %99s", buffer1, &poids, buffer2)) != EOF)
             if (retourFs == 3)
                 g = gAjouterArete(g,buffer1,buffer2,poids); // ajoute l'arc à partir des valeurs de la ligne
-            else // cas où la lecture a raté
-                erreurs = VRAI;
-        }
-
-        if (erreurs)
-            fprintf(stderr, "Le fichier semble contenir des erreurs.\n");
 
         fclose (pfile);
     }
+    else
+        perror("fopen");
 
     return g;
 }

@@ -27,6 +27,8 @@ ListeArete * larAjouterAreteTete(ListeArete * l, const Sommet * a, const Sommet 
             l0->suivante = l;
             l = l0;
         }
+        else
+            perror("malloc");
     }
     return l;
 }

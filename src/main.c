@@ -8,6 +8,7 @@
 
 #include "generation.h"
 #include "prompt.h"
+#include "io.h"
 
 /**
  * \brief Main.
@@ -28,7 +29,7 @@ int main(int argc, char ** argv)
                 Graphe * a = gArbreCouvrantMinimum(g, gSommetTete(g));
                 gGenererLatex(g, a, affichage);
 
-                a = gLiberer(g);
+                a = gLiberer(a);
             }
             else
             {
